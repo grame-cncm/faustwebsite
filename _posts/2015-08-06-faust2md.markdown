@@ -7,7 +7,7 @@ categories: news
 The tool *faust2md* provides an ultra simple documentation system for Faust.
 It extracts the comments from a Faust file and creates a documentation file based on the lightweight markup language [markdown](https://en.wikipedia.org/wiki/Markdown).
 
-The basic usage is `faust2md [-t 4] [-c] [-f] foo.dsp > foo.md`. The option `-t n` can be used to change the default tab setting. The option `-c` can be used to include the faust code itself into the generated file. The option `-f` add a YAML front matter at the begin of the documentation file.
+The basic usage is `faust2md [-t 4] [-c] [-f] foo.dsp > foo.md`. The option `-t n` can be used to change the default tab setting. The option `-c` can be used to include the faust code itself into the generated file. The option `-f` adds a YAML front matter at the begin of the documentation file.
 
 The structure of the comments to annotate the source code is the following :
 
