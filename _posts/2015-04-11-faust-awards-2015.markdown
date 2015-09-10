@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "Faust Award 2015 to Guitarix"
+date:   2015-04-11 11:10:00
+categories: news
+---
+![Faust Awards 2015](/images/faustaward2015.png)
+
+The Faust Open Source Software Competition aims at promoting innovative high-quality free audio software developed with Faust programming language. The Faust Award 2015 was awarded on April 11 in Mainz to Guitarix (a virtual guitar amplifier by Hermann Meyer and Andreas Degert http://guitarix.sourceforge.net/) by an international committee composed of :
+
++ Albert Graef (Johannes Gutenberg U., Mainz, Germany),
++ Pierre Jouvelot (Ecole des Mines, Paris, France),
++ Victor Lazzarini (Maynooth U., Maynooth, Ireland),
++ Yann Orlarey (Grame, Lyon, France),
++ Laurent Pottier (U. Jean Monnet, Saint Etienne, France),
++ Julius Smith (Stanford U., Palo Alto, USA)
+
+Here are some appreciations made by the committee concerning the [Guitarix project](http://guitarix.sourceforge.net/):
+
++ "Guitarix is an impressive piece of software with an impressive sound quality !"
++ "The maturity, both at the artistic, user-interface and technological levels, of the Guitarix project makes it a top contender for the 2015 Faust Open Source Software Competition."
++ "Guitarix software platform impresses with its intimate knowledge and use of the Faust environment features."
++ "It is an impressive project that uses Faust for production-grade software, and it is not only a fine piece of work, but also the best demonstration of how useful Faust can be for developers."
++ "I can say that I have a high opinion of the guitarix work."
+
+The committee was also very impressed by the quality of three other projects :
+
++ Flauta, a Waveguide based flute model by T. Westkamper, C.Barría, D. Tirado, P. Magron and P. de la Cuadra (https://github.com/timowest/flauta)
++ Voice of Faust, a voice synthesizer/effects machine by Bart Brouns (https://github.com/magnetophon/VoiceOfFaust)
++ PMix, a graphical patcher, preset interpolator and JIT compiler for FAUST by Oliver Larkin (https://github.com/CMRCYork/pMix2)
+
+Many thanks to all the participants, to the members of the committee, and to Albert Gräf and the Linux Audio Conference 2015 organization team.
