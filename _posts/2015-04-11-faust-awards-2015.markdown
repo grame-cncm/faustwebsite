@@ -4,7 +4,7 @@ title:  "Faust Award 2015 to Guitarix"
 date:   2015-04-11 11:10:00
 categories: news
 ---
-![Faust Awards 2015](/images/faustaward2015.png)
+![Faust Awards 2015](/images/faustaward2015.png){: .center-image }
 
 The Faust Open Source Software Competition aims at promoting innovative high-quality free audio software developed with Faust programming language. The Faust Award 2015 was awarded on April 11 in Mainz to Guitarix (a virtual guitar amplifier by Hermann Meyer and Andreas Degert http://guitarix.sourceforge.net/) by an international committee composed of :
 
