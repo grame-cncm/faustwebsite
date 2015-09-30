@@ -8,6 +8,10 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
+h1, h2, h3, h4, {
+    clear:both;
+}
+
 .center-image
 {
     margin: 0 auto;
@@ -44,10 +48,17 @@ ul, ol, dl, figure,
 /**
  * Images
  */
-img {
-    max-width: 100%;
-    vertical-align: middle;
-}
+ img {
+     max-width: 100%;
+     vertical-align: middle;
+ }
+
+.vignette {
+     max-width: 128px;
+     float:left;
+     margin-right: 8px;
+     margin-bottom: 64px;
+ }
 
 
 

@@ -9,3 +9,4 @@ Welcome to Faust's new website. It is a static website build using
 [faustwebsite](https://github.com/grame-cncm/faustwebsite).
 
 Periodically the server do a `git pull`, then rebuild the website using `jekyll build` and copy the generated site using `rsync`.
+Use `jekyll serve` to run the server locally (http://localhost:4000/).
