@@ -11,7 +11,11 @@ In this example we will see how to write a sine oscillator. The main component w
 
 A _phase_ generator produces a periodic signal that goes from `0` to `1` at each period. For example the expression:
 
-    0.1 : (+,1.0:fmod) ~ _;
+    0.1 : (+,1.0:fmod) ~ _
+
+corresponding to the following block-diagram :
+
+![oscillator](/images/phasor.svg){: .center-image }
 
 produces the periodic signal :
 
@@ -23,7 +27,7 @@ By controlling the increment we can control the frequency of the generated signa
 
 We can therefore define our phase generator as:
 
-    phasor(f)   = f/48000 : (+,1.0:fmod) ~ _;
+    phasor(f)   = f/48000 : (+,1.0:fmod) ~ _ ;
 
 ### Sine Oscillator
 
