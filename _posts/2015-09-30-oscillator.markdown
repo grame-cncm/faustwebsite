@@ -43,7 +43,7 @@ We can complete our program with sliders to control the frequency and the level 
 
 Instead of hardcoding the sampling rate we can use the foreign constant fSamplingFreq in the definition of `phasor`. This lead us to the following program.
 
-    phasor(f)   = f/fconstant(int fSamplingFreq, <math.h>) : (+,1.0:fmod) ~ _;
+    phasor(f)   = f/fconstant(int fSamplingFreq, <math.h>) : (+,1.0:fmod) ~ _ ;
     osc(f)      = phasor(f) * 6.28318530718 : sin;
     process     = osc(hslider("freq", 440, 20, 20000, 1)) * hslider("level", 0, 0, 1, 0.01);
 
