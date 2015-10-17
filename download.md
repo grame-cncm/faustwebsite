@@ -8,7 +8,7 @@ permalink: /download/
 The Faust compiler itself comes in two flavors : Faust and Faust2 :
 
 + [Faust (master branch)](https://sourceforge.net/projects/faudiostream/files/faust-0.9.73.tgz/download) is simple to compile and install as it has very few dependencies, but it can only generate C++ programs.
-+ The [faust2 branch](https://sourceforge.net/projects/faudiostream/files/faust-0.9.73.tgz/download) is more general and has backends for C++, C, Java, Javascript, asm.js, LLVM. But is has more dependencies, in particular LLVM. Faust2 is needed to compile FaustLive and other embedded compilers for Max/MSP, Csound and Processing.
++ The [faust2 branch](https://sourceforge.net/projects/faudiostream/files/faust-0.9.73.tgz/download) is more general and has backends for C++, C, Java, Javascript, asm.js, LLVM. But is has more dependencies, in particular LLVM. Faust2 is needed to compile FaustLive and other embedded Faust compilers for [Max/MSP](https://sourceforge.net/projects/faudiostream/files/faustgen-0.87.tgz/download), Csound and [Processing](https://sourceforge.net/projects/faudiostream/files/faustProcessing.zip/download).
 
 You can also clone the git repository with the following command :
 
