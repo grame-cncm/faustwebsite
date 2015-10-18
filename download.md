@@ -11,6 +11,7 @@ FaustLive is the recommended tool to get started with Faust. Thanks to its embed
 + [FaustLive for Windows](https://sourceforge.net/projects/faudiostream/files/FaustLive-Windows-2.30.zip/download)
 + [FaustLive for Windows+jack](https://sourceforge.net/projects/faudiostream/files/FaustLive-Windows-Jack-2.30.zip/download)
 + [FaustLive for Mac](https://sourceforge.net/projects/faudiostream/files/FaustLive-OSX-2.40.dmg/download)
++ [FaustLive for Ubuntu](http://sourceforge.net/projects/faudiostream/files/FaustLive-ubuntu-x86_64-2.43.zip/download)
 + [FaustLive sources (for Linux or Mac)](https://sourceforge.net/projects/faudiostream/files/FaustLive-sources-2.41.tgz/download)
 
 
@@ -18,7 +19,7 @@ FaustLive is the recommended tool to get started with Faust. Thanks to its embed
 The Faust compiler itself comes in two flavors : Faust and Faust2 :
 
 + [Faust (master branch)](https://sourceforge.net/projects/faudiostream/files/faust-0.9.73.tgz/download) is simple to compile and install as it has very few dependencies, but it can only generate C++ programs.
-+ The [faust2 branch](https://sourceforge.net/projects/faudiostream/files/faust-0.9.73.tgz/download) is more general and has backends for C++, C, Java, Javascript, asm.js, LLVM. But is has more dependencies, in particular LLVM. Faust2 is needed to compile FaustLive and other embedded Faust compilers.
++ The [faust2 branch](https://sourceforge.net/projects/faudiostream/files/faust-2.0.a41.tgz/download) is more general and has backends for C++, C, Java, Javascript, asm.js, LLVM. But is has more dependencies, in particular LLVM. Faust2 is needed to compile FaustLive and other embedded Faust compilers.
 
 You can also clone the git repository with the following command :
 
@@ -29,8 +30,9 @@ Faust is easy to compile and to run on Mac and Linux. For Windows users we recom
 ### Embedded Faust compilers ###
 Several embedded Faust compilers are available thanks to libfaust and LLVM (the technology also used in FaustLive), in particular:
 
-+ [Faustgen 1.03 for Max/MSP](https://sourceforge.net/projects/faudiostream/files/faustgen-1.03-LLVM-3.4.mxo.zip/download), allows you to edit, compile and run Faust code from within Max/MSP.
-+ [Faust for Processing](https://sourceforge.net/projects/faudiostream/files/faustProcessing.zip/download) allows you to embed Faust code into your Processing code. Use the power of Processing to build awesome user interfaces to control the audio part!  
++ [Faustgen 1.03 for Max/MSP on Mac](https://sourceforge.net/projects/faudiostream/files/faustgen-1.03-LLVM-3.4.mxo.zip/download), allows you to edit, compile and run Faust code from within Max/MSP.
++ [Faustgen 0.87 for Max/MSP on Windows](http://sourceforge.net/projects/faudiostream/files/faustgen-0.87.tgz/download), allows you to edit, compile and run Faust code from within Max/MSP.
++ [Faust for Processing on Mac](https://sourceforge.net/projects/faudiostream/files/faustProcessing.zip/download) allows you to embed Faust code into your Processing code. Use the power of Processing to build awesome user interfaces to control the audio part!  
 
 Please note that Faust can also be used from [Csound6](http://www.youtube.com/watch?v=y8Hjl_LHHU4) and an experimental version of [Antescofo](https://www.youtube.com/watch?v=HFTw387rJto).
 
