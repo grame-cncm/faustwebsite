@@ -32,10 +32,10 @@ will produce the following code:
 		}
 	}
 
-In order to produce a running application or a plug-in one can use on of the many _faust2xxx_ scripts. For example:
+In order to produce a running application or a plug-in, one can use one of the many _faust2xxx_ scripts. For example:
 
 	faust2jaqt noise.dsp
 
-will produce a ready-to-run standalone application based on Jack and QT. Below you can try a web version of the noise generator:
+will produce a ready-to-run standalone application based on Jack and QT. Here below you can try a web version of the noise generator:
 
 [![noise example](/images/noise.png)](/images/noise/noise.html)
