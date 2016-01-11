@@ -248,7 +248,7 @@ Those UI elements have firstly been defined to have a "graphical meaning", but y
 
 ### Developing your own architecture file ###
 
-Developing your own architecture file typically means implementing a subclass of **audio** and **UI** base classes. For audio you can look at the faust/audio/portaudio-dsp.h file that implements the **portaudio** class using the [PortAudio API](http://portaudio.com) as as simple example. Other files in /faust/audio/ allows to use JACK, NetJack, CoreAudio, RTAudio, Alsa, OpenSL ES, etc API.
+Developing your own architecture file typically means implementing a subclass of **audio** base class (this is usually the case when producing standalone applications, but could possibly be uneeded in the context of a plugin...), and a subclass of **UI** base class. For audio you can look at the faust/audio/portaudio-dsp.h file that implements the **portaudio** class using the [PortAudio API](http://portaudio.com) as as simple example. Other files in /faust/audio/ allows to use JACK, NetJack, CoreAudio, RTAudio, Alsa, OpenSL ES, etc API.
  On the UI side, note that a lot of helper classes (like GUI, MapUI, PathUI, etc.) have already been developed, and may be helpful in your project:
 
 - **PathUI** class builds complete hierarchical path for UI items,
