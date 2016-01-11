@@ -36,7 +36,7 @@ The dsp object is central to the Faust architecture design:
 + **getNumInputs**, **getNumOutputs** provides information about the signal processor,
 + **buildUserInterface** creates the user interface using a given UI class object (see later),
 + **init** is called to initialize the sampling rate, which is typically done by the audio architecture,
-+ **compute** is called by the audio architecture for the signal processing. It takes as a **count** number of samples to process, and **inputs** and **outputs** arrays of non-interleaved float/double data, to be allocated and handled by the audio driver with the required dsp input and ouputs channels (as given by  **getNumInputs**, **getNumOutputs**).
++ **compute** is called by the audio architecture for the signal processing. It takes as a **count** number of samples to process, **inputs** and **outputs** arrays of non-interleaved float/double samples, to be allocated and handled by the audio driver with the required dsp input and ouputs channels (as given by  **getNumInputs**, **getNumOutputs**).
 
 (note that **FAUSTFLOAT** label is typically defined to be the actual type of sample : either float or double using  #define FAUSTFLOAT float in the code for instance).
 
@@ -73,8 +73,8 @@ Here is the C++ code the Faust compiler will produce:
 
 class mydsp : public dsp {
   private:
-	FAUSTFLOAT 	fslider0;
-	float 	fRec0[2];
+	FAUSTFLOAT fslider0;
+	float fRec0[2];
   public:
 	static void metadata(Meta* m) 	{ 
 		m->declare("name", "volume");
@@ -127,6 +127,8 @@ class mydsp : public dsp {
 };
 
 {% endhighlight %}
+
+Note that by default **mydsp** is used as the name of the generate class. You may need to use the **-cn name** Faust compiler parameter to possibly generate another class name, especially if you need to compile several Faust generated C++ classes in a same context.
 
 
 ### The audio class ###
