@@ -40,6 +40,95 @@ The dsp object is central to the Faust architecture design:
 
 (note that **FAUSTFLOAT** label is typically defined to be the actual type of sample : either float or double using  #define FAUSTFLOAT float in the code for instance).
 
+For the following Faust DSP example:
+
+    import("music.lib");
+
+    smooth(c)	= *(1-c) : +~*(c);
+    gain		= vslider("[1]", 0, -70, +4, 0.1) : db2linear : smooth(0.999);
+    process		= *(gain);
+
+Here is the C++ code the Faust compiler will produce:
+
+{% highlight c++ %}
+
+//----------------------------------------------------------
+// name: "volume"
+// version: "1.0"
+// author: "Grame"
+// license: "BSD"
+// copyright: "(c)GRAME 2006"
+//
+// Code generated with Faust 0.9.73 (http://faust.grame.fr)
+//----------------------------------------------------------
+
+/* link with  */
+#ifndef FAUSTFLOAT
+#define FAUSTFLOAT float
+#endif  
+
+#ifndef FAUSTCLASS 
+#define FAUSTCLASS mydsp
+#endif
+
+class mydsp : public dsp {
+  private:
+	FAUSTFLOAT 	fslider0;
+	float 	fRec0[2];
+  public:
+	static void metadata(Meta* m) 	{ 
+		m->declare("name", "volume");
+		m->declare("version", "1.0");
+		m->declare("author", "Grame");
+		m->declare("license", "BSD");
+		m->declare("copyright", "(c)GRAME 2006");
+		m->declare("music.lib/name", "Music Library");
+		m->declare("music.lib/author", "GRAME");
+		m->declare("music.lib/copyright", "GRAME");
+		m->declare("music.lib/version", "1.0");
+		m->declare("music.lib/license", "LGPL with exception");
+		m->declare("math.lib/name", "Math Library");
+		m->declare("math.lib/author", "GRAME");
+		m->declare("math.lib/copyright", "GRAME");
+		m->declare("math.lib/version", "1.0");
+		m->declare("math.lib/license", "LGPL with exception");
+	}
+
+	virtual int getNumInputs() 	{ return 1; }
+	virtual int getNumOutputs() 	{ return 1; }
+	static void classInit(int samplingFreq) {
+	}
+	virtual void instanceInit(int samplingFreq) {
+		fSamplingFreq = samplingFreq;
+		fslider0 = 0.0f;
+		for (int i=0; i<2; i++) fRec0[i] = 0;
+	}
+	virtual void init(int samplingFreq) {
+		classInit(samplingFreq);
+		instanceInit(samplingFreq);
+	}
+	virtual void buildUserInterface(UI* interface) {
+		interface->openVerticalBox("0x00");
+		interface->declare(&fslider0, "1", "");
+		interface->addVerticalSlider("0x00", &fslider0, 0.0f, -7e+01f, 4.0f, 0.1f);
+		interface->closeBox();
+	}
+	virtual void compute (int count, FAUSTFLOAT** input, FAUSTFLOAT** output) {
+		float fSlow0 = (0.001f * powf(10,(0.05f * float(fslider0))));
+		FAUSTFLOAT* input0 = input[0];
+		FAUSTFLOAT* output0 = output[0];
+		for (int i=0; i<count; i++) {
+			fRec0[0] = ((0.999f * fRec0[1]) + fSlow0);
+			output0[i] = (FAUSTFLOAT)((float)input0[i] * fRec0[0]);
+			// post processing
+			fRec0[1] = fRec0[0];
+		}
+	}
+};
+
+{% endhighlight %}
+
+
 ### The audio class ###
 
 Faust audio architecture is a glue between the host audio system and a Faust module. It is responsible to allocate and release the audio channels and to call the Faust **dsp::compute method** to handle incoming audio buffers and/or to produce audio output buffers. It is also responsible to present the audio as non-interleaved float/double data, normalized between -1 and 1.
@@ -123,7 +212,7 @@ class UI
 
 The **FAUSTFLOAT* zone** element is the primary connection point between the control interface and the dsp code. The compiled dsp Faust code will give access to all internal control value addresses used by the dsp code by calling the approriate **addButton**, **addNumEntry** etc. methods (depending of what is described in the original Faust DSP source code). 
 
-The control/UI code keeps those addresses, and will typically change their pointed values each time a control value in the dsp code has to be changed. On the dsp side, all control values are "sampled" once at the beginning of the **dsp::compute** method, so that to keep the same value during the entire audio buffer. Since writing/reading the **FAUSTFLOAT* zone** element is atomic, there is no need of complicated synchronization mechanism between the writer (controller) and the reader (Faust dsp object). 
+The control/UI code keeps those addresses, and will typically change their pointed values each time a control value in the dsp code has to be changed. On the dsp side, all control values are "sampled" once at the beginning of the **dsp::compute** method, so that to keep the same value during the entire audio buffer. Since writing/reading the **FAUSTFLOAT* zone** element is atomic, there is no need of complex synchronization mechanism between the writer (controller) and the reader (Faust dsp object). Look as how the **fslider0** field class of the previously **mydsp** displayed C++ class is used in the **mydsp::compute** method.
 
 
 #### Active widgets ####
