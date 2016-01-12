@@ -35,12 +35,12 @@ The dsp object is central to the Faust architecture design:
 
 + **getNumInputs**, **getNumOutputs** provides information about the signal processor,
 + **buildUserInterface** creates the user interface using a given UI class object (see later),
-+ **init** is called to initialize the sampling rate, which is typically done by the audio architecture,
-+ **compute** is called by the audio architecture for the signal processing. It takes as a **count** number of samples to process, **inputs** and **outputs** arrays of non-interleaved float/double samples, to be allocated and handled by the audio driver with the required dsp input and ouputs channels (as given by  **getNumInputs**, **getNumOutputs**).
++ **init** is called to initialize the sampling rate, which is typically given by the audio architecture,
++ **compute** is called by the audio architecture to execute the actual audio processing. It takes as a **count** number of samples to process, **inputs** and **outputs** arrays of non-interleaved float/double samples, to be allocated and handled by the audio driver with the required dsp input and ouputs channels (as given by  **getNumInputs**, **getNumOutputs**).
 
 (note that **FAUSTFLOAT** label is typically defined to be the actual type of sample : either float or double using  #define FAUSTFLOAT float in the code for instance).
 
-For the following Faust DSP example:
+We can look at what the Faust compiler generates for a given DSP source file. For the following Faust DSP example:
 
     import("music.lib");
 
@@ -128,7 +128,7 @@ class mydsp : public dsp {
 
 {% endhighlight %}
 
-Note that by default **mydsp** is used as the name of the generate class. You may need to use the **-cn name** Faust compiler parameter to possibly generate another class name, especially if you need to compile several Faust generated C++ classes in a same context.
+Note that by default **mydsp** is used as the name of the created class. You may need to use the **-cn name** Faust compiler parameter to possibly generate another class name, especially if you need to compile several Faust generated C++ classes in a same context.
 
 
 ### The audio class ###
@@ -214,7 +214,7 @@ class UI
 
 The **FAUSTFLOAT* zone** element is the primary connection point between the control interface and the dsp code. The compiled dsp Faust code will give access to all internal control value addresses used by the dsp code by calling the approriate **addButton**, **addNumEntry** etc. methods (depending of what is described in the original Faust DSP source code). 
 
-The control/UI code keeps those addresses, and will typically change their pointed values each time a control value in the dsp code has to be changed. On the dsp side, all control values are "sampled" once at the beginning of the **dsp::compute** method, so that to keep the same value during the entire audio buffer. Since writing/reading the **FAUSTFLOAT* zone** element is atomic, there is no need of complex synchronization mechanism between the writer (controller) and the reader (Faust dsp object). Look as how the **fslider0** field class of the previously **mydsp** displayed C++ class is used in the **mydsp::compute** method.
+The control/UI code keeps those addresses, and will typically change their pointed values each time a control value in the dsp code has to be changed. On the dsp side, all control values are "sampled" once at the beginning of the **dsp::compute** method, so that to keep the same value during the entire audio buffer. Since writing/reading the **FAUSTFLOAT* zone** element is atomic, there is no need of complex synchronization mechanism between the writer (controller) and the reader (the Faust dsp object). Look as how the **fslider0** field of the previously **mydsp** displayed C++ class is used in the **mydsp::compute** method.
 
 
 #### Active widgets ####
@@ -248,7 +248,7 @@ Those UI elements have firstly been defined to have a "graphical meaning", but y
 
 ### Developing your own architecture file ###
 
-Developing your own architecture file typically means implementing a subclass of **audio** base class (this is usually the case when producing standalone applications, but could possibly be uneeded in the context of a plugin...), and a subclass of **UI** base class. For audio you can look at the faust/audio/portaudio-dsp.h file that implements the **portaudio** class using the [PortAudio API](http://portaudio.com) as as simple example. Other files in /faust/audio/ allows to use JACK, NetJack, CoreAudio, RTAudio, Alsa, OpenSL ES, etc API.
+Developing your own architecture file typically means implementing a subclass of **audio** base class (this is usually the case when producing standalone applications, but could possibly be uneeded in the context of a plugin, where subclassing a given base "audio node" class is usually sufficient...), and a subclass of **UI** base class. For audio you can look at the faust/audio/portaudio-dsp.h file that implements the **portaudio** class using the [PortAudio API](http://portaudio.com) as as simple example. Other files in /faust/audio/ allows to use JACK, NetJack, CoreAudio, RTAudio, Alsa, OpenSL ES, etc API.
  On the UI side, note that a lot of helper classes (like GUI, MapUI, PathUI, etc.) have already been developed, and may be helpful in your project:
 
 - **PathUI** class builds complete hierarchical path for UI items,
