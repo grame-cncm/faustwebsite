@@ -47,7 +47,7 @@ class llvm_dsp_factory {
 
 Note that that the library keeps an internal cache of all allocated factories so that the compilation of the same DSP code, that is same source code and same set of 'normalized' (= sorted in a canonical order) compilations options, will return the same (reference counted) factory pointer. You will have to explicitly use **deleteDSPFactory** to properly decrement the reference counter when the factory is no more needed. You can get a unique SHA1 key of the created factory using its **getSHAKey** method. 
 
-Next, the **createDSPInstance** function, corresponding to the **new className** of C++, instantiates a **llvm-dsp** pointer to be activated and controlled through its interface, and connected to the audio chain. Use **deleteDSPInstance** to destroy the dsp instance.
+Next, the **createDSPInstance** function, corresponding to the **new className** of C++, instantiates a **llvm-dsp** pointer to be used through its interface, connected to the audio chain and controller interfaces. When finished, use **deleteDSPInstance** to destroy the dsp instance.
 
 
 {% highlight c++ %}
@@ -70,11 +70,11 @@ class llvm_dsp : public dsp {
 
 {% endhighlight %}
 
-Since **llvm_dsp** is a subclass of the **dsp** base class, an object of this type can be used with all already developed audio and UI classes (see ...), in essence reusing all architecture files already developed for the static C++ class compilation scheme (like OSCUI, httpdUI interfaces etc.), see [Developing a new architecture file](http://faust.grame.fr/news/2016/01/11/developing-architecture.html).
+Since **llvm_dsp** is a subclass of the **dsp** base class, an object of this type can be used with all already available audio and UI classes (see ...), in essence reusing all architecture files already developed for the static C++ class compilation scheme (like OSCUI, httpdUI interfaces etc.), see [Developing a new architecture file](http://faust.grame.fr/news/2016/01/11/developing-architecture.html).
 
 #### Saving/restoring the factory ####
 
-As soon as the DSP factory has been compiled, your application or plugin may want to save/restore it in order to save Faust to LLVM IR compilation or even JIT compilation time next time. To get the internal factory compiled code, several functions are available:
+After the DSP factory has been compiled, your application or plugin may want to save/restore it in order to save Faust to LLVM IR compilation or even JIT compilation time at next use. To get the internal factory compiled code, several functions are available:
 
 - **writeDSPFactoryToIR** allows to get the LLVM IR (in textual format) as a string, **writeDSPFactoryToIRFile** allows to save the LLVM IR (in textual format) in a file,
 - **writeDSPFactoryToBitcode** allows to get the LLVM IR (in binary format) as a string, **writeDSPFactoryToBitcodeFile** allows to save the LLVM IR (in binary format) in a file,
