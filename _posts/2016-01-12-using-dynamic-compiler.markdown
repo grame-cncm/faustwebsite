@@ -84,7 +84,7 @@ To re-create a DSP factory from a previously saved code, several functions are a
 
 - **readDSPFactoryFromIR** allows to create a DSP factory from a string containing the LLVM IR (in textual format), **readDSPFactoryFromIRFile** allows to create a DSP factory from a file containing the LLVM IR (in textual format),
 - **readDSPFactoryFromBitcode** allows to create a DSP factory from a string containing the LLVM IR (in binary format), **readDSPFactoryFromBitcodeFile** allows to create a DSP factory from a file containing the LLVM IR (in binary format),
--  **readDSPFactoryFromMachine** allows to create a DSP factory from a string containing the executable machine code, **readDSPFactoryTFromMachineFile** allows to create a DSP factory from a file containing the executable machine code.
+-  **readDSPFactoryFromMachine** allows to create a DSP factory from a string containing the executable machine code, **readDSPFactoryFromMachineFile** allows to create a DSP factory from a file containing the executable machine code.
 
 #### Additional functions ####
 
