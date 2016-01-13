@@ -106,7 +106,7 @@ The dynamic compilation chain has been used in several projects:
 - [Csound6](http://www.youtube.com/watch?v=y8Hjl_LHHU4) 
 - [LibAudioStream](https://github.com/sletz/libaudiostream/tree/inedit_mc2
 ), a framework to manipulate audio ressources through the concept of streams
-- Oliver Larkin did a [JUCE framework integration](http://olilarkin.blogspot.fr/2015/11/juce-summit-presentation.html)
+- Oliver Larkin [JUCE framework integration](http://olilarkin.blogspot.fr/2015/11/juce-summit-presentation.html)
 - an experimental version of [Antescofo](https://www.youtube.com/watch?v=HFTw387rJto)
 - ...
 
