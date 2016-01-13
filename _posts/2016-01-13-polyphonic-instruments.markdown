@@ -27,6 +27,15 @@ Allocation of a polyphonic instrument takes a number of voices as parameter (`po
 
 Note that mydsp_poly class is also ready for MIDI control and can react to `keyon/keyon` and `pitchWheel` messages. You can also add other MIDI control parameters directly in the dsp source code. See [Controlling with MIDI](http://faust.grame.fr/examples/2016/13/01/organ.html) post for more informations.
 
+#### Testing polyphonic instruments ####
+
+Several architecture files and associated scripts have been updated to handle polyphonic instruments:
+
+- use **faustcaqt -poly foo.dsp** to create a polyphonic CoreAudio/QT application on OSX. By default the application will create 4 voices. Use the --poly parameter at runtime to change the value (so **./foo --poly 8** for instance),
+- use **faustcaqt -poly -midi foo.dsp** to create a polyphonic and MIDI controllable CoreAudio/QT application on OSX. By default the application will create 4 voices. Use the --poly parameter at runtime to change the value (so **./foo --poly 8** for instance), 
+- use **faustjaqt -poly  foo.dsp** to create a polyphonic JACK/QT application on Linux and OSX. By default the application will create 4 voices. Use the --poly parameter at runtime to change the value (so **./foo --poly 8** for instance),
+- use **faustjaqt -poly -midi foo.dsp** to create a polyphonic and MIDI controllable JACK/QT application on Linux and OSX. By default the application will create 4 voices. Use the --poly parameter at runtime to change the value (so **./foo --poly 8** for instance). 
+ 
 ### Polyphonic instrument as plugin ###
 
 The previously described polyphonic architecture has been written to develop standalone applications and it still rather basic. Note that much more sophisticated polyphonic aware plugins have already been developed:
