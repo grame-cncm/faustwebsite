@@ -9,7 +9,7 @@ Polyphonic instruments can be created by "combining" several voices using a spec
 
 ### Description of the polyphonic instrument ###
 
-First you'll have to describe the voice in Faust then use the **mydsp_poly** class to combine several voices.
+First you'll have to describe the voice in Faust, then use the **mydsp_poly** class to combine several voices.
 
 #### Programing the instrument voice ####
 

@@ -101,7 +101,7 @@ The libfaust library is part of the Faust2 developement branch. You'll have to [
 
 The dynamic compilation chain has been used in several projects:
 
-- [FaustLive](http://faust.grame.fr/download/), an IDE for Faust development
+- [FaustLive](http://faust.grame.fr/download/), an integrated IDE for Faust development
 - [Faustgen](http://faust.grame.fr/download/), an external object for Cycling Max/MSP language
 - [Csound6](https://csound.github.io/index.html), see this [demo video](http://www.youtube.com/watch?v=y8Hjl_LHHU4) 
 - [LibAudioStream](https://github.com/sletz/libaudiostream/tree/inedit_mc2
