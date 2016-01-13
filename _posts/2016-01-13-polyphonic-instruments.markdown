@@ -17,7 +17,7 @@ By convention Faust architecture files with polyphonic MIDI capabilities expect 
 
 #### Allocating a polyphonic instrument ####
 
-Use the faust/dsp/poly-dsp.h file to wrap the dsp voice into the polyphonic architecture. This file defines the **mydsp_poly** class (a sub-class of base class **dsp**) that maintains and array of **mydsp** objects, manage dynamic voice allocations, control MIDI messages decoding and mapping, and mixing of all running voices (stopping a running voice, when its ouput level decreases below a given treshold). 
+Use the faust/dsp/poly-dsp.h file to wrap the dsp voice into the polyphonic architecture. This file defines the **mydsp_poly** class (a sub-class of base class **dsp**) that maintains and array of **mydsp** objects, manage dynamic voice allocations, control MIDI messages decoding and mapping, and mixing of all running voices (stopping a running voice, when its ouput level decreases below a given threshold). 
 
 As a sub-class of dsp, the mydsp_poly class redefines the **buildUserInterface** method. By convention all allocated voices are groupe in a global "tabgroup", so that a user interface builder may display them separately. Then this dsp object can be used as usual and connected with the wanted audio driver and possibly other UI control objects like OSCUI, httpdUI, etc. Having this UI hierachical view  allows for instance complete OSC control of each single voice and its control parameters. 
 
@@ -29,7 +29,7 @@ Note that mydsp_poly class is also ready for MIDI control and can react to `keyo
 
 ### Polyphonic instrument as plugin ###
 
-The previously described polyphonic architecture have been written to develop standalone applications and it still rather basic. Note that much more sophisticated polyphonic aware plugins have already been developed:
+The previously described polyphonic architecture has been written to develop standalone applications and it still rather basic. Note that much more sophisticated polyphonic aware plugins have already been developed:
 
 - Yan Michalevsky's VSTi support is part of the regular Faust distribution. Look at the **vsp.cpp** architecture file, to be used with the **faust2vsti** script.
 - Albert Graef [LV2](https://bitbucket.org/agraef/faust-lv2) and [VSTi](https://bitbucket.org/agraef/faust-vst)
