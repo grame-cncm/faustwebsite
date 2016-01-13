@@ -35,7 +35,7 @@ The dsp object is central to the Faust architecture design:
 
 + **getNumInputs**, **getNumOutputs** provides information about the signal processor,
 + **buildUserInterface** creates the user interface using a given UI class object (see later),
-+ **init** is called to initialize the sampling rate, which is typically given by the audio architecture,
++ **init** is called to initialize the dsp object with a given sampling rate, typically obtained from the audio architecture,
 + **compute** is called by the audio architecture to execute the actual audio processing. It takes as a **count** number of samples to process, **inputs** and **outputs** arrays of non-interleaved float/double samples, to be allocated and handled by the audio driver with the required dsp input and ouputs channels (as given by  **getNumInputs**, **getNumOutputs**).
 
 (note that **FAUSTFLOAT** label is typically defined to be the actual type of sample : either float or double using  #define FAUSTFLOAT float in the code for instance).
@@ -162,11 +162,11 @@ class audio {
 
 {% endhighlight %}
 
-The API is simple enough to give a great flexibility to audio architectures implementations. The **init** method should initialize the audio underlying driver. The **start** method begins the actual audio processing, until **stop** method is called. A concrete implementation of audio class will typically set buffer size and sample rate driver parameters in it's contructor. So **get_buffer_size** and **get_sample_rate** methods can be used to retrieve those values, or the one actually choosen by the driver.
+The API is simple enough to give a great flexibility to audio architectures implementations. The **init** method should initialize the audio underlying driver. The **start** method begins the actual audio processing, until **stop** method is called. A concrete implementation of audio class will get buffer size and sample rate driver parameters in its contructor. So **get_buffer_size** and **get_sample_rate** methods can be used to retrieve those values, or the one actually choosen by the driver.
 
 ### The UI class ###
 
-A Faust UI architecture is a glue between a host control layer and a Faust module. It is responsible to associate a Faust module parameter to a user interface element and to update the parameter value according to the user actions. This association is triggered by the **dsp::buildUserInterface** call, where the dsp asks a UI object to build the module controllers.
+A Faust UI architecture is a glue between a host control layer and a Faust module. It is responsible to associate a Faust control parameter to a user interface element and to update the parameter value according to the user actions. This association is triggered by the **dsp::buildUserInterface** call, where the dsp asks a UI object to build the module controllers.
 
 Since the interface is basically graphic oriented, the main concepts are widget based: an UI architecture is semantically oriented to handle active widgets, passive widgets and widgets layout.
 
@@ -247,8 +247,11 @@ Those UI elements have firstly been defined to have a "graphical meaning", but y
 
 ### Developing your own architecture file ###
 
-Developing your own architecture file typically means implementing a subclass of **audio** base class (this is usually the case when producing standalone applications, but could possibly be uneeded in the context of a plugin, where subclassing a given base "audio node" class is usually sufficient...), and a subclass of **UI** base class. For audio you can look at the faust/audio/portaudio-dsp.h file that implements the **portaudio** class using the [PortAudio API](http://portaudio.com) as as simple example. Other files in /faust/audio/ allows to use JACK, NetJack, CoreAudio, RTAudio, Alsa, OpenSL ES, etc API.
- On the UI side, note that a lot of helper classes (like GUI, MapUI, PathUI, etc.) have already been developed, and may be helpful in your project:
+Developing your own architecture file typically means implementing a subclass of **audio** base class. This is usually the case when producing standalone applications, but could possibly be uneeded in the context of a plugin, where subclassing a given base "audio node" class is usually sufficient. Then developing a subclass of **UI** base class could also be needed. 
+
+For audio you can look at the faust/audio/portaudio-dsp.h file that implements the **portaudio** class using the [PortAudio API](http://portaudio.com) as as simple example. Other files in /faust/audio/ allows to use JACK, NetJack, CoreAudio, RTAudio, Alsa, OpenSL ES, etc API.
+
+On the UI side, note that a lot of helper classes (like GUI, MapUI, PathUI, etc.) have already been developed, and may be helpful in your project:
 
 - **PathUI** class builds complete hierarchical path for UI items,
 - **MapUI** class creates a map of complete hierarchical path and zones for each UI items,
