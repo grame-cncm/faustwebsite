@@ -16,7 +16,7 @@ To generate various output languages, several backends have been developed: for 
 
 #### LLVM ####
 
-LLVM (formerly Low Level Virtual Machine) is a compiler infrastructure, designed for compile-time, link-time, run-time optimization of programs written in arbitrary programming languages. Executable code is produced dynamically using a “Just In Time” compiler from a specific code representation, called LLVM IR. Clang, the “LLVM native” C/C++/Objective- C compiler is a front-end for LLVM Compiler. It can, for instance, convert a C or C++ source file into LLVM IR code. Domain-specific languages like Faust can easily target the LLVM IR. This has been done by developing a special LLVM IR backend in the Faust compiler.
+[LLVM](http://www.llvm.org)  (formerly Low Level Virtual Machine) is a compiler infrastructure, designed for compile-time, link-time, run-time optimization of programs written in arbitrary programming languages. Executable code is produced dynamically using a “Just In Time” compiler from a specific code representation, called LLVM IR. Clang, the “LLVM native” C/C++/Objective- C compiler is a front-end for LLVM Compiler. It can, for instance, convert a C or C++ source file into LLVM IR code. Domain-specific languages like Faust can easily target the LLVM IR. This has been done by developing a special LLVM IR backend in the Faust compiler.
 
 #### Compiling in memory ####
 
@@ -101,9 +101,9 @@ The libfaust library is part of the Faust2 developement branch. You'll have to [
 
 The dynamic compilation chain has been used in several projects:
 
-- [FaustLive](http://faust.grame.fr/download/) 
-- [Faustgen](http://faust.grame.fr/download/) 
-- [Csound6](http://www.youtube.com/watch?v=y8Hjl_LHHU4) 
+- [FaustLive](http://faust.grame.fr/download/), an IDE for Faust development
+- [Faustgen](http://faust.grame.fr/download/), an external object for Cycling Max/MSP language
+- [Csound6](https://csound.github.io/index.html), see this [demo video](http://www.youtube.com/watch?v=y8Hjl_LHHU4) 
 - [LibAudioStream](https://github.com/sletz/libaudiostream/tree/inedit_mc2
 ), a framework to manipulate audio ressources through the concept of streams
 - Oliver Larkin [JUCE framework integration](http://olilarkin.blogspot.fr/2015/11/juce-summit-presentation.html)
