@@ -74,17 +74,17 @@ Since **llvm_dsp** is a subclass of the **dsp** base class, an object of this ty
 
 #### Saving/restoring the factory ####
 
-As soon as the DSP factory has been compiled, your application or plugin may want to save/restore it in order to save Faust to LLVM IR compilation or even JIT compilation time as the next use. To get the factory code, several functions are available:
+As soon as the DSP factory has been compiled, your application or plugin may want to save/restore it in order to save Faust to LLVM IR compilation or even JIT compilation time next time. To get the internal factory compiled code, several functions are available:
 
 - **writeDSPFactoryToIR** allows to get the LLVM IR (in textual format) as a string, **writeDSPFactoryToIRFile** allows to save the LLVM IR (in textual format) in a file,
 - **writeDSPFactoryToBitcode** allows to get the LLVM IR (in binary format) as a string, **writeDSPFactoryToBitcodeFile** allows to save the LLVM IR (in binary format) in a file,
--  **writeDSPFactoryToMachine** allows to get the executable machine code as a string,  **writeDSPFactoryToMachineFile** allows to save the executable machine code in a file.
+-  **writeDSPFactoryToMachine** allows to get the executable machine code as a string, **writeDSPFactoryToMachineFile** allows to save the executable machine code in a file.
 
-To create a DSP factory from a previously saved code, several functions are available:
+To re-create a DSP factory from a previously saved code, several functions are available:
 
 - **readDSPFactoryFromIR** allows to create a DSP factory from a string containing the LLVM IR (in textual format), **readDSPFactoryFromIRFile** allows to create a DSP factory from a file containing the LLVM IR (in textual format),
 - **readDSPFactoryFromBitcode** allows to create a DSP factory from a string containing the LLVM IR (in binary format), **readDSPFactoryFromBitcodeFile** allows to create a DSP factory from a file containing the LLVM IR (in binary format),
--  **readDSPFactoryFromMachine** allows to create a DSP factory from a string containing the executable machine code, **readDSPFactoryTFromMachineFile** allows to create a DSP factory from a file containing executable machine code.
+-  **readDSPFactoryFromMachine** allows to create a DSP factory from a string containing the executable machine code, **readDSPFactoryTFromMachineFile** allows to create a DSP factory from a file containing the executable machine code.
 
 #### Additional functions ####
 
@@ -95,7 +95,7 @@ Some additional functions are available in the API:
 
 #### Using libfaust library ####
 
-The libfaust library is part of the Faust2 developement branch. You'll have to [compile and install it](http://faust.grame.fr/download/). Then look at the installed faust/dsp/llvm-dsp.h header for a complete description of the  API. Note that faust/dsp/llvm-c-dsp.h is a pure C version of the same API.
+The libfaust library is part of the Faust2 developement branch. You'll have to [compile and install it](http://faust.grame.fr/download/). Then look at the installed faust/dsp/llvm-dsp.h header for a complete description of the API. Note that faust/dsp/llvm-c-dsp.h is a pure C version of the same API.
 
 ### Use case examples ###
 
