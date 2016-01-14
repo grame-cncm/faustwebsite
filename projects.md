@@ -4,7 +4,7 @@ title: Projects
 permalink: /projects/
 ---
 
-Some interesting projects using Faust:
+Some interesting applications or projects using Faust:
 
 - [FaustWorks](http://www.grame.fr/logiciels/faustworks)
 - [FaustLive](https://sourceforge.net/projects/faudiostream/files/)
@@ -18,6 +18,7 @@ Some interesting projects using Faust:
 - [faust-vst project](https://bitbucket.org/agraef/faust-vst)
 - [faust-lv2 project](https://bitbucket.org/agraef/faust-lv2)
 - [OWL effect pedal](http://hoxtonowl.com)
-- [Marc Lavallée Ambisonic on the WEB](http://ambisonic.xyz)
+- [Marc Lavallée Ambisonic on the Web](http://ambisonic.xyz)
 - [moForte Guitar](http://www.moforte.com/moforte-guitar-app/)
 - [moForte GeoShred (in partnership with Wizdom Music)](http://www.moforte.com/geo-shred-spring-2015/)
+- [Oliver Larkin pMix2 project](https://github.com/CMRCYork/pMix2)

@@ -21,7 +21,15 @@ Use the faust/dsp/poly-dsp.h file to wrap the dsp voice into the polyphonic arch
 
 As a sub-class of dsp, the mydsp_poly class redefines the **buildUserInterface** method. By convention all allocated voices are groupe in a global "tabgroup", so that a user interface builder may display them separately. Then this dsp object can be used as usual and connected with the wanted audio driver and possibly other UI control objects like OSCUI, httpdUI, etc. Having this UI hierachical view  allows for instance complete OSC control of each single voice and its control parameters. 
 
-Allocation of a polyphonic instrument takes a number of voices as parameter (`poly` parameter in `DSP = new mydsp_poly(poly, true);` expression). The second parameter here activates dynamic voice allocation control. Note that a polyphonic instrument may be used outside of a MIDI control context with the `DSP = new mydsp_poly(poly, false);` expression, so that all voices would be always running.
+Allocation of a polyphonic instrument takes a number of voices as parameter, `poly` parameter in the following expression;
+
+    DSP = new mydsp_poly(poly, true);
+    
+The second parameter here activates dynamic voice allocation control. Note that a polyphonic instrument may be used outside of a MIDI control context with the expression:
+
+    DSP = new mydsp_poly(poly, false);
+    
+so that all voices would be always running.
 
 #### Controlling the polyphonic instrument ####
 
@@ -35,6 +43,8 @@ Several architecture files and associated scripts have been updated to handle po
 - use **faustcaqt -poly -midi foo.dsp** to create a polyphonic and MIDI controllable CoreAudio/QT application on OSX. By default the application will create 4 voices. Use the --poly parameter at runtime to change the value (so **./foo --poly 8** for instance), 
 - use **faustjaqt -poly  foo.dsp** to create a polyphonic JACK/QT application on Linux and OSX. By default the application will create 4 voices. Use the --poly parameter at runtime to change the value (so **./foo --poly 8** for instance),
 - use **faustjaqt -poly -midi foo.dsp** to create a polyphonic and MIDI controllable JACK/QT application on Linux and OSX. By default the application will create 4 voices. Use the --poly parameter at runtime to change the value (so **./foo --poly 8** for instance). 
+- use **faustios -poly  foo.dsp** to create a polyphonic iOS application. By default the application will create 4 voices,
+- use **faustios -poly -midi foo.dsp** to create a polyphonic and MIDI controllable iOS application. By default the application will create 4 voices. 
  
 ### Polyphonic instrument as plugin ###
 

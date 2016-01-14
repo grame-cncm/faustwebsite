@@ -22,7 +22,7 @@ MIDI control messages are described as metadata in UI elements. They are decoded
 
 #### Activating the MIDI interface ####
 
-For multi-platform support, the MidiUI class uses the [RTMidi](https://www.music.mcgill.ca/~gary/rtmidi/) framework. Add the following line into your code to get is compiled:
+For multi-platform support, the MidiUI class uses the [RTMidi](https://www.music.mcgill.ca/~gary/rtmidi/) framework. Add the following line into your code to get it compiled:
 
     #include "faust/midi/RtMidi.cpp"
 
@@ -37,5 +37,6 @@ Several architecture files and associated scripts have been updated to handle MI
 
 - use **faustcaqt -midi foo.dsp** to create a MIDI aware CoreAudio/QT application on OSX,
 - use **faustjaqt -midi foo.dsp** to create a MIDI aware JACK/QT application on Linux and OSX. 
+- use **faustios -midi foo.dsp** to create a MIDI aware iOS application. 
  
 Note that the **buildUserInterface** method for polyphonic instruments (defined using the **mydsp_poly** class) called with a MidiUI object, will automatically connect to the MIDI system, to be ready to handle incoming keyOn/keyOff MIDI messages and so on. See [Creating polyphonic instruments](http://faust.grame.fr/news/2016/01/13/polyphonic-instruments.html) page for more informations.

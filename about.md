@@ -28,7 +28,6 @@ will produce the following code:
 			iRec0[0] = (12345 + (1103515245 * iRec0[1]));
 			output0[i] = FAUSTFLOAT((fSlow0 * float(iRec0[0])));
 			iRec0[1] = iRec0[0];
-
 		}
 	}
 

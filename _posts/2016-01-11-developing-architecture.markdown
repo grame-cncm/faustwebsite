@@ -128,12 +128,11 @@ class mydsp : public dsp {
 
 {% endhighlight %}
 
-Note that by default **mydsp** is used as the name of the created class. You may need to use the **-cn name** Faust compiler parameter to possibly generate another class name, especially if you need to compile several Faust generated C++ classes in a same context.
-
+Note that by default **mydsp** is used as the name of the created class. You may need to use the **-cn name** Faust compiler parameter to possibly generate another class name, especially if you need to compile several Faust generated C++ classes in a same context and avoid name clashes.
 
 ### The audio class ###
 
-Faust audio architecture is a glue between the host audio system and a Faust module. It is responsible to allocate and release the audio channels and to call the Faust **dsp::compute method** to handle incoming audio buffers and/or to produce audio output buffers. It is also responsible to present the audio as non-interleaved float/double data, normalized between -1 and 1.
+Faust audio architecture is a glue between the host audio system and a Faust module. It is responsible to allocate and release audio channels and to call the Faust **dsp::compute method** to handle incoming audio buffers and/or to produce audio output buffers. It is also responsible to present the audio as non-interleaved float/double data, normalized between -1 and 1.
 
 A Faust audio architecture derives the following audio class:
 
@@ -162,7 +161,7 @@ class audio {
 
 {% endhighlight %}
 
-The API is simple enough to give a great flexibility to audio architectures implementations. The **init** method should initialize the audio underlying driver. The **start** method begins the actual audio processing, until **stop** method is called. A concrete implementation of audio class will get buffer size and sample rate driver parameters in its contructor. So **get_buffer_size** and **get_sample_rate** methods can be used to retrieve those values, or the one actually choosen by the driver.
+The API is simple enough to give a great flexibility to audio architectures implementations. The **init** method should initialize the audio underlying driver. The **start** method begins the actual audio processing, until **stop** method is called. A concrete implementation of audio class will typically get buffer size and sample rate driver parameters in its contructor. So **get_buffer_size** and **get_sample_rate** methods can be used to retrieve those values, or the one actually choosen by the driver.
 
 ### The UI class ###
 
@@ -211,19 +210,19 @@ class UI
 
 #### Controlling the dsp  ####
 
-The **FAUSTFLOAT* zone** element is the primary connection point between the control interface and the dsp code. The compiled dsp Faust code will give access to all internal control value addresses used by the dsp code by calling the approriate **addButton**, **addNumEntry** etc. methods (depending of what is described in the original Faust DSP source code). 
+The **FAUSTFLOAT* zone** element is the primary connection point between the control interface and the dsp code. The compiled dsp Faust code will give access to all internal control value addresses used by the dsp code by calling the approriate **addButton**, **addVerticalSlider**, **addNumEntry** etc. methods (depending of what is described in the original Faust DSP source code). 
 
-The control/UI code keeps those addresses, and will typically change their pointed values each time a control value in the dsp code has to be changed. On the dsp side, all control values are "sampled" once at the beginning of the **dsp::compute** method, so that to keep the same value during the entire audio buffer. Since writing/reading the **FAUSTFLOAT* zone** element is atomic, there is no need of complex synchronization mechanism between the writer (controller) and the reader (the Faust dsp object). Look as how the **fslider0** field of the previously **mydsp** displayed C++ class is used in the **mydsp::compute** method.
+The control/UI code keeps those addresses, and will typically change their pointed values each time a control value in the dsp code has to be changed. On the dsp side, all control values are "sampled" once at the beginning of the **dsp::compute** method, so that to keep the same value during the entire audio buffer. Since writing/reading the **FAUSTFLOAT* zone** element is atomic, there is no need of complex synchronization mechanism between the writer (controller) and the reader (the Faust dsp object). Look as how the **fslider0** field of the previously **mydsp** displayed C++ class is used in the **mydsp::compute** method, and how its value is read and kept in a local variable, before entering the actual sample computation loop.
 
 
 #### Active widgets ####
 
-Active widgets are graphical elements that control a parameter value. They are initialized with the widget name and a pointer to the linked value. The widget currently considered are Button, CheckButton, VerticalSlider, HorizontalSlider and NumEntry.
+Active widgets are graphical elements that control a parameter value. They are initialized with the widget name and a pointer to the linked value. The widget currently considered are **Button**, **CheckButton**, **VerticalSlider**, **HorizontalSlider** and **NumEntry**.
 A GUI architecture must implement a method **addxxx(const char* name, FAUSTFLOAT* zone, ...)** for each active widget. Additional parameters are available to Slider and NumEntry: the init value, the min and max values and the step.
 
 #### Passive widgets ####
 
-Passive widgets are graphical elements that reflect values. Similarly to active widgets, they are initialized with the widget name and a pointer to the linked value. The widget currently considered are HorizontalBarGraph and VerticalBarGraph.
+Passive widgets are graphical elements that reflect values. Similarly to active widgets, they are initialized with the widget name and a pointer to the linked value. The widget currently considered are **HorizontalBarGraph** and **VerticalBarGraph**.
 A UI architecture must implement a method **addxxx(const char* name, FAUSTFLOAT* zone, ...)** for each passive widget. Additional parameters are available, depending on the passive widget type.
 
 #### Widgets layout ####
@@ -239,11 +238,11 @@ Note that all the widgets are added to the current box.
 
 #### Metadata ####
 
-The FAUST language allows widget labels to contain metadata enclosed in square brackets. These metadata are handled at GUI level by a declare method taking as argument, a pointer to the widget associated value, the metadata key and value: **declare(FAUSTFLOAT*, const char*, const char*)**.
+The FAUST language allows widget labels to contain metadata enclosed in square brackets. These metadata are handled at GUI level by a declare method taking as argument, a pointer to the widget associated value, the metadata key and value: **declare(FAUSTFLOAT*, const char*, const char*)**. They are used to add specific informations to be decoded by specialized UI interfaces (like OSCUI, MidiUI...).
 
 #### Non grapical interface controllers ####
 
-Those UI elements have firstly been defined to have a "graphical meaning", but you can perfectly decide to control the dsp with a pure non-graphical controller. OSC (see faust/gui/OSCUI.h file) and HTTP (see faust/gui/httpdUI.h file) controllers are good examples of that approach.   
+Those UI elements have firstly been defined to have a "graphical meaning", but you can perfectly decide to control the dsp with a **pure non-graphical controller**. OSC (see faust/gui/OSCUI.h file) and HTTP (see faust/gui/httpdUI.h file) controllers are good examples of that approach.   
 
 ### Developing your own architecture file ###
 
