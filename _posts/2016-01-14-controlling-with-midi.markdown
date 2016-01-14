@@ -22,7 +22,11 @@ MIDI control messages are described as metadata in UI elements. They are decoded
 
 #### Activating the MIDI interface ####
 
-For multi-platform support, the MidiUI class uses the [RTMidi](https://www.music.mcgill.ca/~gary/rtmidi/) framework. As with other UI objects, MidiUI is to be given as parameter to the dsp **buildUserInterface** method:
+For multi-platform support, the MidiUI class uses the [RTMidi](https://www.music.mcgill.ca/~gary/rtmidi/) framework. Add the following line into your code to get is compiled:
+
+    #include "faust/midi/RtMidi.cpp"
+
+As with other UI objects, MidiUI is to be given as parameter to the dsp **buildUserInterface** method:
 
     MidiUI midiinterface(name);
     DSP->buildUserInterface(&midiinterface);
