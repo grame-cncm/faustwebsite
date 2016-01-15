@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Docs
-permalink: /docs/
+title: Documentation
+permalink: /Documentation/
 ---
 
 ### Faust Quick Reference
