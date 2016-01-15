@@ -21,19 +21,17 @@ Use the faust/dsp/poly-dsp.h file to wrap the dsp voice into the polyphonic arch
 
 As a sub-class of dsp, the mydsp_poly class redefines the **buildUserInterface** method. By convention all allocated voices are groupe in a global "tabgroup", so that a user interface builder may display them separately. Then this dsp object can be used as usual and connected with the wanted audio driver and possibly other UI control objects like OSCUI, httpdUI, etc. Having this UI hierachical view  allows for instance complete OSC control of each single voice and its control parameters. 
 
-Allocation of a polyphonic instrument takes a number of voices as parameter, `poly` parameter in the following expression;
+Allocation of a polyphonic instrument takes the wanted number of voices as first parameter, and dynamic voice allocation control state as second:
 
     DSP = new mydsp_poly(poly, true);
     
-The second parameter here activates dynamic voice allocation control. Note that a polyphonic instrument may be used outside of a MIDI control context with the expression:
+With the following the code, note that a polyphonic instrument may be used outside of a MIDI control context, so that all voices will be always running:
 
     DSP = new mydsp_poly(poly, false);
-    
-so that all voices would be always running.
 
 #### Controlling the polyphonic instrument ####
 
-Note that mydsp_poly class is also ready for MIDI control and can react to `keyon/keyon` and `pitchWheel` messages. You can also add other MIDI control parameters directly in the dsp source code. See [Controlling with MIDI](http://faust.grame.fr/examples/2016/13/01/organ.html) post for more informations.
+Note that mydsp_poly class is also ready for MIDI control and can react to `keyon/keyon` and `pitchWheel` messages. You can also add other MIDI control parameters directly in the dsp source code. See [Controlling with MIDI](http://faust.grame.fr/news/2016/01/14/controlling-with-midi.html) post for more informations.
 
 #### Testing the polyphonic instrument ####
 
