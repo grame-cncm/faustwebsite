@@ -132,7 +132,7 @@ Note that by default **mydsp** is used as the name of the created class. You may
 
 ### The audio class ###
 
-Faust audio architecture is a glue between the host audio system and a Faust module. It is responsible to allocate and release audio channels and to call the Faust **dsp::compute method** to handle incoming audio buffers and/or to produce audio output buffers. It is also responsible to present the audio as non-interleaved float/double data, normalized between -1 and 1.
+Faust audio architecture is a glue between the host audio system and a Faust module. It is responsible to allocate and release audio channels and to call the Faust **dsp::compute** method to handle incoming audio buffers and/or to produce audio output buffers. It is also responsible to present the audio as non-interleaved float/double data, normalized between -1 and 1.
 
 A Faust audio architecture derives the following audio class:
 
@@ -246,7 +246,9 @@ Those UI elements have firstly been defined to have a "graphical meaning", but y
 
 ### Developing your own architecture file ###
 
-Developing your own architecture file typically means implementing a subclass of **audio** base class. This is usually the case when producing standalone applications, but could possibly be uneeded in the context of a plugin, where subclassing a given base "audio node" class is usually sufficient. Then developing a subclass of **UI** base class could also be needed. 
+Developing your own architecture file typically means thinking on what part of your system is going to handle the dsp control state (by changing the value of each UI element), and what part is going to activate the actual dsp computation (by calling the **dsp::compute** method). Handling the dsp state can be done by a regular User Interface or a network based controler for instance. Dsp computation is usually trigerred by the real-time audio chain in a standalone application or plugin, but could be also be done in a pure deferred time context. 
+
+Implementing a subclass of **audio** base class is usually done when producing standalone applications. In the context of a plugin, subclassing a given base "audio node" class part of the host audio chain is usually sufficient. Then developing a subclass of **UI** base class could also be needed. 
 
 For audio you can look at the faust/audio/portaudio-dsp.h file that implements the **portaudio** class using the [PortAudio API](http://portaudio.com) as as simple example. Other files in /faust/audio/ allows to use JACK, NetJack, CoreAudio, RTAudio, Alsa, OpenSL ES, etc API.
 
