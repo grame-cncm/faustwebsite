@@ -18,8 +18,10 @@ Some interesting applications or projects using Faust:
 - [faust-vst project](https://bitbucket.org/agraef/faust-vst)
 - [faust-lv2 project](https://bitbucket.org/agraef/faust-lv2)
 - [OWL effect pedal](http://hoxtonowl.com)
-- [Ambisonic on the Web](http://ambisonic.xyz)
 - [moForte Guitar](http://www.moforte.com/moforte-guitar-app/)
 - [moForte GeoShred (in partnership with Wizdom Music)](http://www.moforte.com/geo-shred-spring-2015/)
 - [pMix2 project](https://github.com/CMRCYork/pMix2)
-- [Faust wrapper for Python](https://github.com/marcecj/faust_python).
+- [Faust wrapper for Python](https://github.com/marcecj/faust_python)
+- [Ambisonic on the Web](http://ambisonic.xyz)
+- [Ambisonic Decoder Toolbox](https://bitbucket.org/ambidecodertoolbox/adt.git)
+- [High Order Ambisonics Library](http://www.mshparisnord.fr/hoalibrary/)
