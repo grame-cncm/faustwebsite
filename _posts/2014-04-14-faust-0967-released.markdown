@@ -13,18 +13,17 @@ This release provides many bug fixes and improvements in several architectures (
 
 This tool, based on developments by Myles Borins at CCRMA, and by Mike Solomon and Stephane Letz at GRAME, allows to make realtime audio applications in a web browser ! faust2webaudioasm uses emscripten to translate Faust programs to efficient Javascript code (asm.js) embedded in a single HTML page. Check some examples (best results with firefox 29):
 
-- [http://faust.grame.fr/www/vumeters.html](http://faust.grame.fr/www/vumeters.html)
-- [http://faust.grame.fr/www/compressor.html](http://faust.grame.fr/www/compressor.html)
-- [http://faust.grame.fr/www/freeverb.html](http://faust.grame.fr/www/freeverb.html)
-- [http://faust.grame.fr/www/harpe.html](http://faust.grame.fr/www/harpe.html)
-- [http://faust.grame.fr/www/kisana.html](http://faust.grame.fr/www/kisana.html)
-- [http://faust.grame.fr/www/wahwah.html](http://faust.grame.fr/www/wahwah.html)
-- [http://faust.grame.fr/www/guitarixlite.html](http://faust.grame.fr/www/guitarixlite.html)
+- [http://faust.grame.fr/webaudio/vumeters.html](http://faust.grame.fr/webaudio/vumeters.html)
+- [http://faust.grame.fr/webaudio/compressor.html](http://faust.grame.fr/webaudio/compressor.html)
+- [http://faust.grame.fr/webaudio/freeverb.html](http://faust.grame.fr/webaudio/freeverb.html)
+- [http://faust.grame.fr/webaudio/harpe.html](http://faust.grame.fr/webaudio/harpe.html)
+- [http://faust.grame.fr/webaudio/kisana.html](http://faust.grame.fr/webaudio/kisana.html)
+- [http://faust.grame.fr/webaudio/wahwah.html](http://faust.grame.fr/webaudio/wahwah.html)
  
-The two following ones are polyphonic instruments that can be controlled with MIDI. Check them with Chrome (don't forget to active  Web MIDI API).
+The two following ones are polyphonic instruments that can be controlled with MIDI. Check them with Chrome (don't forget to activate Web MIDI API).
 
-- [http://faust.grame.fr/www/piano.html](http://faust.grame.fr/www/piano.html)
-- [http://faust.grame.fr/www/harpsi.html](http://faust.grame.fr/www/harpsi.html)
+- [http://faust.grame.fr/webaudio/piano.html](http://faust.grame.fr/webaudio/piano.html)
+- [http://faust.grame.fr/webaudio/harpsi.html](http://faust.grame.fr/webaudio/harpsi.html)
 
 #### faust2owl ####
 
