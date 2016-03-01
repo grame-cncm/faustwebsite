@@ -13,20 +13,20 @@ MIDI control messages are described as metadata in UI elements. They are decoded
 
 #### Description of the possible standard MIDI messages ####
 
-- **[midi:ctrl num]** in a slider of bargraph will map the UI element value to (0,127) range. When used with a button, 1 will be mapped to 127, 0 will be mapped to 0,
-- **[midi:keyon pitch]** in a slider of bargraph will map the UI element value to note velocity in the (0,127) range. When used with a button, 1 will be mapped to 127, 0 will be mapped to 0,
-- **[midi:keypress key]** in a slider of bargraph will map the UI element value to keypress value in the (0,127) range. When used with a button, 1 will be mapped to 127, 0 will be mapped to 0,
-- **[midi:pgm num]** in a slider of bargraph will map the UI element value to the progchange value, so "progchange" message with the same "num" value will be sent. When used with a button, 1 will send the "progchange" message with "num" value, 0 will send nothing,
-- **[midi:chanpress num]** in a slider of bargraph will map the UI element value to the chanpress value, so "chanpress" message with the same "num" value will be sent. When used with a button, 1 will send the "chanpress" message with "num" value, 0 will send nothing,
-- **[midi:pitchwheel]** in a slider of bargraph will map the UI element value to (0,16383) range. When used with a button, 1 will be mapped to 16383, 0 will be mapped to 0.
+- **[midi:ctrl num]** in a slider of bargraph will map the UI element value to (0,127) range. When used with a button or checkbox, 1 will be mapped to 127, 0 will be mapped to 0,
+- **[midi:keyon pitch]** in a slider of bargraph will map the UI element value to note velocity in the (0,127) range. When used with a button or checkbox, 1 will be mapped to 127, 0 will be mapped to 0,
+- **[midi:keypress key]** in a slider of bargraph will map the UI element value to keypress value in the (0,127) range. When used with a button or checkbox, 1 will be mapped to 127, 0 will be mapped to 0,
+- **[midi:pgm num]** in a slider of bargraph will map the UI element value to the progchange value, so "progchange" message with the same "num" value will be sent. When used with a button or checkbox, 1 will send the "progchange" message with "num" value, 0 will send nothing,
+- **[midi:chanpress num]** in a slider of bargraph will map the UI element value to the chanpress value, so "chanpress" message with the same "num" value will be sent. When used with a button or checkbox, 1 will send the "chanpress" message with "num" value, 0 will send nothing,
+- **[midi:pitchwheel]** in a slider of bargraph will map the UI element value to (0,16383) range. When used with a button or checkbox, 1 will be mapped to 16383, 0 will be mapped to 0.
 
 #### MIDI synchronization ####
 
 MIDI clock based synchronization can be used to *slave* a given Faust program. The following three messages need to be used:
 
-- **[midi:start]** in a checkbox will trigger a value of 1 when a *start* MIDI message is received
-- **[midi:stop]** in a checkbox will trigger a value of 0 when a *stop* MIDI message is received
-- **[midi:clock]** in a checkbox will trigger a stream of 1 and 0 each time a *clock* MIDI message is received, thus delivering a square command signal.
+- **[midi:start]** in a button or checkbox will trigger a value of 1 when a *start* MIDI message is received
+- **[midi:stop]** in a button or checkbox will trigger a value of 0 when a *stop* MIDI message is received
+- **[midi:clock]** in a button or checkbox will trigger a stream of 1 and 0 each time a *clock* MIDI message is received, thus delivering a square command signal.
 
 A typical Faust program will then use the MIDI clock stream to possibly compute the BPM information, or for any synchronization need it may have. Here is a simple example of a sinusoide generated which a frequency controlled by the  MIDI clock stream, and starting/stopping when receiving the MIDI start/stop messages:
 
