@@ -9,7 +9,7 @@ echo "Installing Faust dependencies..."
 $SUDO apt-get install -y build-essential pkg-config git libmicrohttpd-dev llvm-3.6 libssl-dev ncurses-dev libsndfile-dev
 
 # Install all the needed SDK
-$SUDO apt-get install -y libgtk2.0-dev libasound2-dev jackd2 libjack-jackd2-dev
+$SUDO apt-get install -y libgtk2.0-dev libasound2-dev jackd2 libjack-jackd2-dev libqrencode-dev
 $SUDO apt-get install -y qt4-default libcsound64-dev  dssi-dev lv2-dev puredata-dev supercollider-dev wget unzip
 $SUDO apt-get install -y inkscape graphviz
 
