@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-$SUDO=`which $SUDO`
+$SUDO=`which sudo`
 
 echo "Updating packages..."
 $SUDO apt-get -y update
