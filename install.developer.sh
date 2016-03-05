@@ -11,7 +11,7 @@ function installfaust {
 
 	# Install all the needed SDK
 	$SUDO apt-get install -y libgtk2.0-dev libasound2-dev jackd2 libjack-jackd2-dev libqrencode-dev
-	$SUDO apt-get install -y qt4-default libcsound64-devdssi-dev lv2-dev puredata-dev supercollider-dev wget unzip
+	$SUDO apt-get install -y qt4-default libcsound64-dev dssi-dev lv2-dev puredata-dev supercollider-dev wget unzip libboost1.54-dev
 	$SUDO apt-get install -y inkscape graphviz
 
 	# Install faust2pd from Albert Greaf Pure-lang PPA
@@ -31,7 +31,7 @@ function installfaust {
 	# Install MaxMSP SDK
 	wget https://cycling74.com/download/max-sdk-7.1.0.zip
 	unzip max-sdk-7.1.0.zip
-	cp -r max-sdk-7.1.0/source/c74support /usr/local/include/
+	$SUDO cp -r max-sdk-7.1.0/source/c74support /usr/local/include/
 
 	# Install Faust
 	git clone git://git.code.sf.net/p/faudiostream/code faust
