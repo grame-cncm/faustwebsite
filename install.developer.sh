@@ -33,6 +33,12 @@ function installfaust {
 	unzip max-sdk-7.1.0.zip
 	$SUDO cp -r max-sdk-7.1.0/source/c74support /usr/local/include/
 
+	# Install ROS Indigo
+	$SUDO sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+	$SUDO apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key 0xB01FA116
+	$SUDO apt-get -y update
+	$SUDO apt-get install -y ros-indigo-ros-base
+
 	# Install Faust
 	git clone git://git.code.sf.net/p/faudiostream/code faust
 	cd faust
@@ -111,6 +117,6 @@ function testfaust {
 	testscript faust2supercollider
 }
 
-#installfaust
+installfaust
 testfaust
 
