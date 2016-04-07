@@ -23,41 +23,41 @@ The JavaScript code alone can be produced using the following script to produce 
 
 #### Using DSP instances ####
 
-When "faust.karplus" class is defined, instances can be created and used as regular Web Audio API nodes with the following code (assuming 'DSP2' is another Faust defined node):
+When "faust.karplus" class is defined, instances can be created and used as regular Web Audio API nodes with the following code (assuming 'dsp2' is another Faust defined node):
 
-    var DSP = faust.karplus(audio_context, buffer_size);
-    DSP.start();
-    DSP.scriptProcessor.connect(DSP2.scriptProcessor);
+    var dsp = faust.karplus(audio_context, buffer_size);
+    dsp.start();
+    dsp.scriptProcessor.connect(dsp2.scriptProcessor);
  
 
 The parameter 'audio_context' will be retrieved using the Web Audio API, and the given 'buffer_size' will be used to create the internal ScripProcessor JavaScript node running the actual asm.js generated DSP code. 
 
 The list of all input controls can be retrieved with the following code:
 
-    var control_list = DSP.controls();
+    var control_list = dsp.controls();
 
 The user interface can change the value of any control using the following code, where 'path_to_control' denotes a complete path to the control (retrieved using 'controls' function), and 'value' the value to be changed:  
 
-    DSP.setValue(path_to_control, value);
+    dsp.setValue(path_to_control, value);
 
 The paramter value can ge read using the following code:
 
-    var value = DSP.getValue(path_to_control);
+    var value = dsp.getValue(path_to_control);
 
 A user interface may have to be periodically updated when output controls (typically bargraphs) have changed. You can use the following code to setup a handler callback:
 
-    DSP.setHandler(update_handler);
+    dsp.setHandler(update_handler);
   
 Where 'update_handler' is a function with a prototype (path_to_control, value) that will be called once at each audio cycle with output control values.
 
 The JSON description of the DSP can be retrieved and typically parsed by the user interface builder with the following code : 
 
-    var json = DSP.json();
+    var json = dsp.json();
 
 For DSP with inputs, the client glue code would typically have to open the audio_context audio input and connect it with the node : 
 
     var audio_input = audio_context.createMediaStreamSource(device);
-    audio_input.connect(DSP.scriptProcessor);
+    audio_input.connect(dsp.scriptProcessor);
  
 
 Note that the -comb parameter allows to generate several Faust DSP in a single JavaScript file (named comb.js), thus sharing a single Emscripten runtime when compiled in Emscripten mode:
@@ -71,16 +71,16 @@ Another script can be used to generate a fully working HTML page with a SVG base
 
 #### Polyphonic instruments ####
 
-Polyphonic instruments can be produced. Starting from a monophonic DSP, an when using Emscripten, a polyphonic voice manager coded in C++ allocates voices, instantiates several DSP instances and is compiled in asm.js using the Emscripten chain. When using the internal asm.js backend, the polyphonic code is written in JavaScript. Web MIDI inputs are connected and used to trigger the sound generation. Only keyOn and keyOff events are handled right now. Use the following command to generate a polyphonic version :
+Polyphonic instruments can be produced. Starting from a monophonic DSP, an when using Emscripten, a polyphonic voice manager coded in C++ allocates voices, instantiates several DSP instances and is compiled in asm.js using the Emscripten chain. When using the internal asm.js backend, the polyphonic code is written in JavaScript. Web MIDI inputs are connected and used to trigger the sound generation. Only **keyOn** and **keyOff** events are handled right now. Use the following command to generate a polyphonic version :
 
     faust2webaudioasm -poly piano.dsp 
  
 The DSP has to be allocated and used with the following kind of code:
 
-    var DSP = faust.piano_poly(audio_context, buffer_size);
-    DSP.start();
-    DSP.keyOn(channel, pitch, velocity);
-    DSP.keyOff(channel, pitch);
+    var dsp = faust.piano_poly(audio_context, buffer_size);
+    dsp.start();
+    dsp.keyOn(channel, pitch, velocity);
+    dsp.keyOff(channel, pitch);
 
 The JavaScript code can possibly be controlled using the [Web MIDI API](https://www.w3.org/TR/webmidi/).
 
