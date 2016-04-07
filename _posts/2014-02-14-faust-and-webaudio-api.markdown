@@ -1,11 +1,13 @@
 ---
 layout: post
-title:  "Faust and the Web Audio API"
+title:  "Faust and the Web Audio API (2)"
 date:   2014-02-14 15:10:00
 categories: news
 ---
 
 We are happy to publish a new and improved version of the Faust to Web Audio API development.
+
+### Compiling DSP to JavaScript (asm.js) ###
 
 Using the asm.js based technology, Faust DSP programs can now be compiled in efficient code to be deployed on the Web. Asm.js is an highly optimizable, low-level subset of JavaScript, that can be automatically produced from C/C++ code using the LLVM based [Emscripten](http://kripken.github.io/emscripten-site/) compiler. Starting from the C++ class produced by the regular Faust compiler, the asm.js code is wrapped using additional C++ and JavaScript code to appear as a ScripProcessor (a pure JavaScript node in Web Audio API terminology) to be connected to other JavaScript or native audio nodes.
 
@@ -13,11 +15,15 @@ While **faust1**  version (= master branch on GIT) [Emscripten SDK](http://kripk
 
 Whith **faust2** development branch, a internal asm.js backend has been developed to directly generate the code starting from the DSP source. So you will be able to either generate the asm.js code using Emscripten (by adding the -emcc parameter in the following described commands), or using the internal asm.js backend.
 
+
 The JavaScript code alone can be produced using the following script to produce a foo.js file containing the Emscripten runtime, some glue code and the "faust.foo" class.
 
     faust2asmjs karplus.dsp
 
-When "faust.karplus" class is defined, instances can be created and used as regular Web Audio API nodes with the following code:
+
+#### Using DSP instances ####
+
+When "faust.karplus" class is defined, instances can be created and used as regular Web Audio API nodes with the following code (assuming 'DSP2' is another Faust defined node):
 
     var DSP = faust.karplus(audio_context, buffer_size);
     DSP.start();
@@ -63,6 +69,8 @@ Another script can be used to generate a fully working HTML page with a SVG base
     faust2webaudioasm karplus.dsp 
 
 
+#### Polyphonic instruments ####
+
 Polyphonic instruments can be produced. Starting from a monophonic DSP, an when using Emscripten, a polyphonic voice manager coded in C++ allocates voices, instantiates several DSP instances and is compiled in asm.js using the Emscripten chain. When using the internal asm.js backend, the polyphonic code is written in JavaScript. Web MIDI inputs are connected and used to trigger the sound generation. Only keyOn and keyOff events are handled right now. Use the following command to generate a polyphonic version :
 
     faust2webaudioasm -poly piano.dsp 
@@ -73,3 +81,6 @@ The DSP has to be allocated and used with the following kind of code:
     DSP.start();
     DSP.keyOn(channel, pitch, velocity);
     DSP.keyOff(channel, pitch);
+
+The JavaScript code can possibly be controlled using the [Web MIDI API](https://www.w3.org/TR/webmidi/).
+
