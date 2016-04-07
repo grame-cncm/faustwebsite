@@ -69,6 +69,8 @@ To be used with JACK MIDI, use the **jackaudio_midi** class (instead of the stan
     ....
     midiinterface.run();
 
+#### Activating the MIDI interface (for users) ####
+
 Several architecture files and associated scripts have been updated to handle MIDI aware dsp code:
 
 - use **faustcaqt -midi foo.dsp** to create a MIDI aware CoreAudio/QT application on OSX
