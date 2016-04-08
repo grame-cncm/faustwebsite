@@ -24,11 +24,11 @@ When no more used, you'll have to explicitly use the following code the dealloca
 
     faust.deleteDSPFactory(factory);
 
-Your application may want to save the already compiled asm.js/JavaScript code to speed-up possible restore at later time:
+Your application may want to save the already compiled factory as asm.js/JavaScript code to speed-up possible restore at later time:
 
     var machine_code = faust.writeDSPFactoryToMachine(factory);
 
-And restore with the follwing code:
+And restore the factory with the following code:
 
     var factory = faust.readDSPFactoryFromMachine(machine_code);
 
