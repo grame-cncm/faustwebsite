@@ -21,7 +21,7 @@ Some interesting applications or projects using Faust:
 - [moForte Guitar](http://www.moforte.com/moforte-guitar-app/)
 - [moForte PowerStomp](http://www.moforte.com/powerstomp-spring-2015/)
 - [moForte GeoShred (in partnership with Wizdom Music)](http://www.moforte.com/geo-shred-spring-2015/)
-- [pMix2 project](https://github.com/CMRCYork/pMix2)
+- [pMix2 project](https://github.com/olilarkin/pMix2)
 - [Faust wrapper for Python](https://github.com/marcecj/faust_python)
 - [Ambisonic on the Web](http://ambisonic.xyz)
 - [Ambisonic Decoder Toolbox](https://bitbucket.org/ambidecodertoolbox/adt.git)
