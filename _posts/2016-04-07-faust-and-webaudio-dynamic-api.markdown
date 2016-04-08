@@ -13,12 +13,15 @@ The libfaust.js exported function **createAsmCDSPFactoryFromString(...)** allows
 
 Then calling JavaScript 'eval' function on this string compiles it in the browser. The dynamically created asm.js module and additional pure JavaScript methods can then be used.
 
-This internal code in then wrapped with additional JavaScript code. A DSP “factory” will be created from the DSP source code with the following code:
+This internal code in then wrapped with additional JavaScript code. A DSP “factory” will be created from the DSP source code with the following code (if using the 'libfaust.js' library):
 
     var factory = faust.createDSPFactory(code, arguments);
 
-where 'code' is the DSP source as a string, and 'arguments' is an array of parameters to be given to the Faust compiler (like '-vec', '-vs 512'...).
+Or possibly (if using the 'libfaustworker.js' library):
+    
+    faust.createDSPFactory(code, arguments, callback);
 
+where 'code' is the DSP source as a string, and 'arguments' is an array of parameters to be given to the Faust compiler (like '-vec', '-vs 512'...), and 'callback' is a function taken the created 'factory' as argment.
 
 When no more used, you'll have to explicitly use the following code the deallocate the factory: 
 
@@ -51,3 +54,17 @@ Polyphonic instruments can be produced. For a given 'factory' the following code
     var dsp = faust.createPolyDSPInstance(factory, audio_context, buffer_size, 16);
 
 This instance can be used like the statically compiled one, as previously described in [this page](http://faust.grame.fr/news/2014/02/14/faust-and-webaudio-api.html).
+
+
+#### Using Faust JavaScript library  ####
+
+The Emscripten compiled Faust library can be used in two flavors. Either using the 'libfaust.js' library:
+    
+    <script src="libfaust.js"></script>
+    <script src="webaudio-asm-wrapper.js"></script>
+
+or if using worker mode with the following code which loads the 'libfaustworker.js' library:
+
+    <script src="webaudio/webaudio-asm-worker-wrapper.js"></script>
+
+
