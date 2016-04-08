@@ -26,3 +26,4 @@ Some interesting applications or projects using Faust:
 - [Ambisonic on the Web](http://ambisonic.xyz)
 - [Ambisonic Decoder Toolbox](https://bitbucket.org/ambidecodertoolbox/adt.git)
 - [High Order Ambisonics Library](http://www.mshparisnord.fr/hoalibrary/)
+- [Bela embedded platform for ultra low-latency audio](http://bela.io)
