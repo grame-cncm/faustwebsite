@@ -17,11 +17,11 @@ This internal code in then wrapped with additional JavaScript code. A DSP “fac
 
     var factory = faust.createDSPFactory(code, arguments);
 
-Or possibly (if using the 'libfaustworker.js' library):
+or possibly (if using the 'libfaustworker.js' library):
     
     faust.createDSPFactory(code, arguments, callback);
 
-where 'code' is the DSP source as a string, and 'arguments' is an array of parameters to be given to the Faust compiler (like '-vec', '-vs 512'...), and 'callback' is a function taken the created 'factory' as argment.
+where 'code' is the DSP source as a string, and 'arguments' is an array of parameters to be given to the Faust compiler (like '-vec', '-vs 512'...), and 'callback' is a function taking the created 'factory' as argment.
 
 When no more used, you'll have to explicitly use the following code the deallocate the factory: 
 
@@ -58,7 +58,7 @@ This instance can be used like the statically compiled one, as previously descri
 
 #### Using Faust JavaScript library  ####
 
-The Emscripten compiled Faust library can be used in two flavors. Either using the 'libfaust.js' library:
+The Emscripten compiled Faust library can be used in two ways. Either using the 'libfaust.js' library:
     
     <script src="libfaust.js"></script>
     <script src="webaudio-asm-wrapper.js"></script>
