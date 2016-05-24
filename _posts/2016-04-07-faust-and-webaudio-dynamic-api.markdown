@@ -13,15 +13,15 @@ The libfaust.js exported function **createAsmCDSPFactoryFromString(...)** allows
 
 Then calling JavaScript 'eval' function on this string compiles it in the browser. The dynamically created asm.js module and additional pure JavaScript methods can then be used.
 
-This internal code in then wrapped with additional JavaScript code. A DSP “factory” will be created from the DSP source code with the following code (if using the 'libfaust.js' library):
+This internal code in then wrapped with additional JavaScript code. A DSP “factory” will be created from the DSP source code with the following 'synchronous' code (if using the 'libfaust.js' library):
 
     var factory = faust.createDSPFactory(code, arguments);
 
-or possibly (if using the 'libfaustworker.js' library):
+or possibly (if using the 'libfaustworker.js' library in the 'asynchronous' model):
     
     faust.createDSPFactory(code, arguments, callback);
 
-where 'code' is the DSP source as a string, and 'arguments' is an array of parameters to be given to the Faust compiler (like '-vec', '-vs 512'...), and 'callback' is a function taking the created 'factory' as argment.
+where 'code' is the DSP source as a string, and 'arguments' is an array of parameters to be given to the Faust compiler (like '-vec', '-vs 512'...), and 'callback' is a function taking the created 'factory' as argument.
 
 When no more used, you'll have to explicitly use the following code the deallocate the factory: 
 
@@ -41,7 +41,7 @@ A fully working DSP “instance” as a Web Audio node is then created with the 
 
     var dsp = faust.createDSPInstance(factory, audio_context, buffer_size);
 
-When no more used, you'll have to explicitly use the following code the deallocate the instance: 
+When no more used, you'll have to explicitly use the following code to deallocate the instance: 
 
     faust.deleteDSPInstance(dsp);
 
@@ -49,7 +49,7 @@ This instance can be used like the statically compiled one, as previously descri
 
 #### Polyphonic instruments ####
  
-Polyphonic instruments can be produced. For a given 'factory' the following code with create a 16 voices polyphonic instance:
+Polyphonic instruments can be produced. For a given 'factory' the following code will create a 16 voices polyphonic instance:
 
     var dsp = faust.createPolyDSPInstance(factory, audio_context, buffer_size, 16);
 
