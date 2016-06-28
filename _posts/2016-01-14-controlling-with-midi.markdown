@@ -9,7 +9,7 @@ Faust programs can be controlled using MIDI messages. Thanks to the metadata mec
 
 ### Adding MIDI messages description in the dsp source code ###
 
-MIDI control messages are described as metadata in UI elements. They are decoded by a new **MidiUI** class that will parse incoming MIDI messages and update the appropriate dsp parameters, or send MIDI when the UI elements (sliders, buttons....) are moved.
+MIDI control messages are described as metadata in UI elements. They are decoded by a new **MidiUI** class that will parse incoming MIDI messages and update the appropriate control parameters, or send MIDI when the UI elements (sliders, buttons....) are moved.
 
 #### Description of the possible standard MIDI messages ####
 
