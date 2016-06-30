@@ -5,16 +5,14 @@ date:   2016-06-30 15:10:00
 categories: news
 ---
 
-A new 'interpreter' backend has been added in the faust2 development branch. It allows to execute Faust DSPs without using the LLVM dynamic compiler chain.
+A new 'interpreter' backend has been added in the faust2 development branch. It allows to execute Faust programs without using the LLVM dynamic compiler chain.
 
 ### Interpreter compilation chain ###
 
-The dynamic compilation chain allows developers to embed the Faust compiler technology directly in their application or plugins. Faust2 development branch uses an intermediate FIR
-representation (Faust Imperative Representation), which can be translated to several output languages. An LLVM backend has been previously developed to allows applications to
-compile a DSP source into executable code in memory, bypassing the external compiler requirement. 
+The dynamic compilation chain allows developers to embed the Faust compiler technology directly in their application or plugins. Faust2 development branch uses an intermediate FIR representation (Faust Imperative Representation), which can be translated to several output languages. An LLVM backend has been previously developed to allows applications to compile a DSP source into executable code in memory, bypassing the external compiler requirement. 
 
 
-In some specific situations, embeding the LLVM chain is not possible : for instance Apple does not allow to deploy dynamic compilers on iOS. Thus having an interpreter
+In some specific situations, embedding the LLVM chain is not possible : for instance Apple does not allow to deploy dynamic compilers on iOS. Thus having an interpreter
 backend allows to get around this problem and still make Faust code run on those platforms. 
 
 #### Interpreter backend ####
@@ -22,11 +20,9 @@ backend allows to get around this problem and still make Faust code run on those
 The interpreter backend translates the FIR intermediate language into instructions for a virtual machine. A pure C++ interpreter for this instruction set has been
 implemented. 
 
-#### Running and perfomances ####
+#### Running and performances ####
 
-The interpreter backend translates the FIR intermediate language into instructions for a virtual machine. A pure C++ interpreter for this instruction set has been
-implemented. It allows to run programs about **4 to 5 slower than native speed**. Moreover this interpreter can be compiled in a special 'trace' mode to
-automatically detect various execution errors : invalid heap access, mathematical errors or warnings (division by zero, interger overloading....) which helps us to check the compiler semantic and code generation quality.
+The interpreter backend translates the FIR intermediate language into instructions for a virtual machine. It allows to run programs about **4 to 5 slower than native speed**. Moreover this interpreter can be compiled in a special 'trace' mode to automatically detect various execution errors : invalid heap access, mathematical errors or warnings (division by zero, integer overloading....) which helps us to check the compiler semantic and code generation quality.
 
 #### Deployment ####
 
