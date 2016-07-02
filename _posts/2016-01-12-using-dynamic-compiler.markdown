@@ -45,7 +45,7 @@ class llvm_dsp_factory {
 
 {% endhighlight %}
 
-Note that that the library keeps an internal cache of all allocated factories so that the compilation of the same DSP code, that is same source code and same set of 'normalized' (= sorted in a canonical order) compilations options, will return the same (reference counted) factory pointer. You will have to explicitly use **deleteDSPFactory** to properly decrement the reference counter when the factory is no more needed. You can get a unique SHA1 key of the created factory using its **getSHAKey** method. 
+Note that the library keeps an internal cache of all allocated factories so that the compilation of the same DSP code, that is same source code and same set of 'normalized' (= sorted in a canonical order) compilations options, will return the same (reference counted) factory pointer. You will have to explicitly use **deleteDSPFactory** to properly decrement the reference counter when the factory is no more needed. You can get a unique SHA1 key of the created factory using its **getSHAKey** method. 
 
 Next, the **createDSPInstance** function, corresponding to the **new className** of C++, instantiates a **llvm-dsp** pointer to be used through its interface, connected to the audio chain and controller interfaces. When finished, use **deleteDSPInstance** to destroy the dsp instance.
 

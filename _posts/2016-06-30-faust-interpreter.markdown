@@ -22,9 +22,9 @@ implemented.
 
 #### Running and performances ####
 
-The interpreter backend translates the FIR intermediate language into instructions for a virtual machine. It allows to run programs about **4 to 5 slower than native speed**. Moreover this interpreter can be compiled in a special 'trace' mode to automatically detect various execution errors : invalid heap access, mathematical errors or warnings (division by zero, integer overloading....) which helps us to check the compiler semantic and code generation quality.
+The interpreter backend translates the FIR intermediate language into bytecode for a virtual machine. It allows to run programs about **4 to 5 slower than native speed**. Moreover this interpreter can be compiled in a special 'trace' mode to automatically detect various execution errors : invalid heap access, mathematical errors or warnings (division by zero, integer overloading....) which helps us to check the compiler semantic and code generation quality.
 
-#### Deployment ####
+#### Deployment for developers ####
 
 Given a Faust source code (as a file or a string), calling the **createInterpreterDSPFactoryXXX** function runs the compilation chain (Faust + interpreter) and generates the “prototype” of the class, as a **interpreter-dsp-factory** pointer.
 
@@ -49,7 +49,7 @@ class interpreter_dsp_factory : public dsp_factory {
 
 {% endhighlight %}
 
-Note that that the library keeps an internal cache of all allocated factories so that the compilation of the same DSP code, that is same source code and same set of 'normalized' (= sorted in a canonical order) compilations options, will return the same (reference counted) factory pointer. You will have to explicitly use **deleteInterpreterDSPFactory** to properly decrement the reference counter when the factory is no more needed. You can get a unique SHA1 key of the created factory using its **getSHAKey** method. 
+Note that the library keeps an internal cache of all allocated factories so that the compilation of the same DSP code, that is same source code and same set of 'normalized' (= sorted in a canonical order) compilations options, will return the same (reference counted) factory pointer. You will have to explicitly use **deleteInterpreterDSPFactory** to properly decrement the reference counter when the factory is no more needed. You can get a unique SHA1 key of the created factory using its **getSHAKey** method. 
 
 Next, the **createDSPInstance** function, corresponding to the **new className** of C++, instantiates a **interpreter-dsp** pointer to be used through its interface, connected to the audio chain and controller interfaces. When finished, simply use **delete** to destroy the dsp instance.
 
