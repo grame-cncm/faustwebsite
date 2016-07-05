@@ -25,6 +25,7 @@ Some interesting applications or projects using Faust:
 - [Faust wrapper for Python](https://github.com/marcecj/faust_python)
 - [Ambisonic on the Web](http://ambisonic.xyz)
 - [Ambisonic Decoder Toolbox](https://bitbucket.org/ambidecodertoolbox/adt.git)
+- [Ambitools](http://www.sekisushai.net/ambitools/)
 - [High Order Ambisonics Library](http://www.mshparisnord.fr/hoalibrary/)
 - [Bela embedded platform for ultra low-latency audio](http://bela.io)
 - [Radium, a music editor with a new type of interface](http://users.notam02.no/~kjetism/radium/)
