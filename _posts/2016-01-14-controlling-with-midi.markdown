@@ -9,12 +9,13 @@ Faust programs can be controlled using MIDI messages. Thanks to the metadata mec
 
 ### Adding MIDI messages description in the dsp source code ###
 
-MIDI control messages are described as metadata in UI elements. They are decoded by a new **MidiUI** class that will parse incoming MIDI messages and update the appropriate dsp parameters, or send MIDI when the UI elements (sliders, buttons....) are moved.
+MIDI control messages are described as metadata in UI elements. They are decoded by a new **MidiUI** class that will parse incoming MIDI messages and update the appropriate control parameters, or send MIDI when the UI elements (sliders, buttons....) are moved.
 
 #### Description of the possible standard MIDI messages ####
 
 - **[midi:ctrl num]** in a slider of bargraph will map the UI element value to (0,127) range. When used with a button or checkbox, 1 will be mapped to 127, 0 will be mapped to 0,
-- **[midi:keyon pitch]** in a slider of bargraph will map the UI element value to note velocity in the (0,127) range. When used with a button or checkbox, 1 will be mapped to 127, 0 will be mapped to 0,
+- **[midi:keyon pitch]** in a slider of bargraph will map the UI element value to note-on velocity in the (0,127) range. When used with a button or checkbox, 1 will be mapped to 127, 0 will be mapped to 0,
+- **[midi:keyoff pitch]** in a slider of bargraph will map the UI element value to note-off velocity in the (0,127) range. When used with a button or checkbox, 1 will be mapped to 127, 0 will be mapped to 0,
 - **[midi:keypress key]** in a slider of bargraph will map the UI element value to keypress value in the (0,127) range. When used with a button or checkbox, 1 will be mapped to 127, 0 will be mapped to 0,
 - **[midi:pgm num]** in a slider of bargraph will map the UI element value to the progchange value, so "progchange" message with the same "num" value will be sent. When used with a button or checkbox, 1 will send the "progchange" message with "num" value, 0 will send nothing,
 - **[midi:chanpress num]** in a slider of bargraph will map the UI element value to the chanpress value, so "chanpress" message with the same "num" value will be sent. When used with a button or checkbox, 1 will send the "chanpress" message with "num" value, 0 will send nothing,
@@ -69,12 +70,14 @@ To be used with JACK MIDI, use the **jackaudio_midi** class (instead of the stan
     ....
     midiinterface.run();
 
+#### Activating the MIDI interface (for users) ####
+
 Several architecture files and associated scripts have been updated to handle MIDI aware dsp code:
 
-- use **faustcaqt -midi foo.dsp** to create a MIDI aware CoreAudio/QT application on OSX
-- use **faustjaqt -midi foo.dsp** to create a MIDI aware JACK/QT application on Linux and OSX
-- use **faustios -midi foo.dsp** to create a MIDI aware iOS application
-- use **faustalsa -midi foo.dsp** to create a MIDI aware ALSA/GTK application on Linux
-- use **faustalqt -midi foo.dsp** to create a MIDI aware ALSA/QT application on Linux.
+- use **faust2caqt -midi foo.dsp** to create a MIDI aware CoreAudio/QT application on OSX
+- use **faust2jaqt -midi foo.dsp** to create a MIDI aware JACK/QT application on Linux and OSX
+- use **faust2ios -midi foo.dsp** to create a MIDI aware iOS application
+- use **faust2alsa -midi foo.dsp** to create a MIDI aware ALSA/GTK application on Linux
+- use **faust2alqt -midi foo.dsp** to create a MIDI aware ALSA/QT application on Linux.
  
 Note that the **buildUserInterface** method for polyphonic instruments (defined using the **mydsp_poly** class) called with a MidiUI object, will automatically connect to the MIDI system, to be ready to handle incoming keyOn/keyOff MIDI messages and so on. See [Creating polyphonic instruments](http://faust.grame.fr/news/2016/01/13/polyphonic-instruments.html) page for more informations.

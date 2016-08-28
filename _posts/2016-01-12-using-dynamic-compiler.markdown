@@ -45,7 +45,7 @@ class llvm_dsp_factory {
 
 {% endhighlight %}
 
-Note that that the library keeps an internal cache of all allocated factories so that the compilation of the same DSP code, that is same source code and same set of 'normalized' (= sorted in a canonical order) compilations options, will return the same (reference counted) factory pointer. You will have to explicitly use **deleteDSPFactory** to properly decrement the reference counter when the factory is no more needed. You can get a unique SHA1 key of the created factory using its **getSHAKey** method. 
+Note that the library keeps an internal cache of all allocated factories so that the compilation of the same DSP code, that is same source code and same set of 'normalized' (= sorted in a canonical order) compilations options, will return the same (reference counted) factory pointer. You will have to explicitly use **deleteDSPFactory** to properly decrement the reference counter when the factory is no more needed. You can get a unique SHA1 key of the created factory using its **getSHAKey** method. 
 
 Next, the **createDSPInstance** function, corresponding to the **new className** of C++, instantiates a **llvm-dsp** pointer to be used through its interface, connected to the audio chain and controller interfaces. When finished, use **deleteDSPInstance** to destroy the dsp instance.
 
@@ -70,7 +70,7 @@ class llvm_dsp : public dsp {
 
 {% endhighlight %}
 
-Since **llvm_dsp** is a subclass of the **dsp** base class, an object of this type can be used with all already available audio and UI classes (see ...), in essence reusing all architecture files already developed for the static C++ class compilation scheme (like OSCUI, httpdUI interfaces etc.), see [Developing a new architecture file](http://faust.grame.fr/news/2016/01/11/developing-architecture.html).
+Since **llvm_dsp** is a subclass of the **dsp** base class, an object of this type can be used with all already available audio and UI classes, in essence reusing all architecture files already developed for the static C++ class compilation scheme (like OSCUI, httpdUI interfaces etc.), see [Developing a new architecture file](http://faust.grame.fr/news/2016/01/11/developing-architecture.html).
 
 #### Saving/restoring the factory ####
 
@@ -95,7 +95,7 @@ Some additional functions are available in the API:
 
 #### Using libfaust library ####
 
-The libfaust library is part of the Faust2 developement branch. You'll have to [compile and install it](http://faust.grame.fr/download/). Then look at the installed faust/dsp/llvm-dsp.h header for a complete description of the API. Note that faust/dsp/llvm-c-dsp.h is a pure C version of the same API.
+The libfaust library is part of the Faust2 development branch. You'll have to [compile and install it](http://faust.grame.fr/download/). Then look at the installed faust/dsp/llvm-dsp.h header for a complete description of the API. Note that faust/dsp/llvm-c-dsp.h is a pure C version of the same API.
 
 ### Use case examples ###
 
@@ -108,6 +108,7 @@ The dynamic compilation chain has been used in several projects:
 ), a framework to manipulate audio ressources through the concept of streams
 - Oliver Larkin [JUCE framework integration](http://olilarkin.blogspot.fr/2015/11/juce-summit-presentation.html)
 - an experimental version of [Antescofo](https://www.youtube.com/watch?v=HFTw387rJto)
+- FaucK : the combination of the [Chuck language and Faust](https://youtu.be/7ZnmpC7wsPU) 
 - ...
 
 

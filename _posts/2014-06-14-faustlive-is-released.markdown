@@ -17,7 +17,7 @@ On FaustLive’s windows you can drop your Faust code as a file, a string or a u
 
 Depending on your Operation System, you will have different drivers available…
 
-- on OSX : Coreaudio,JACK and NetJack
+- on OSX : Coreaudio, JACK and NetJack
 - on Linux : JACK and NetJack
 - on Windows : Portaudio
 
