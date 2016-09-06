@@ -29,3 +29,4 @@ Some interesting applications or projects using Faust:
 - [High Order Ambisonics Library](http://www.mshparisnord.fr/hoalibrary/)
 - [Bela embedded platform for ultra low-latency audio](http://bela.io)
 - [Radium, a music editor with a new type of interface](http://users.notam02.no/~kjetism/radium/)
+- [AudioKit, an audio plugins development using Xcode's Swift Playgrounds. ](http://audiokit.io)
