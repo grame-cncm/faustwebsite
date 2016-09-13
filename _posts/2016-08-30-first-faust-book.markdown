@@ -6,7 +6,7 @@ categories: news
 ---
 ![faust book cover](/images/faust-book-cover.jpg){: .center-image }
 
-“**Sound Programming using FAUST**”, written by _Jin-Wook Chae_, an experimented audio developer and sound engineer (right) and _Hyun-Hoo Jung_ (left), is the very first book ever published on FAUST. 
+“**Sound Programming using FAUST**”, written by _Jin-Wook Chae_, an experienced audio developer and sound engineer (right) and _Hyun-Hoo Jung_ (left), is the very first book ever published on FAUST. 
 
 ![faust book authors](/images/faust-book-authors.jpg){: .center-image }
 
