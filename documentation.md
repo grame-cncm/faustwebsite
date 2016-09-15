@@ -7,7 +7,7 @@ permalink: /Documentation/
 ### Standard Libraries
 
 [![Faust libraries](/images/gear.png){: .vignette}](/library.html)
-Full description of the standard libraries: delays, filters, oscillators, etc. ([pdf](/library.pdf))
+Full description of the standard libraries: delays, filters, oscillators, etc. ([html](/library.html), [pdf](/library.pdf))
 
 
 ### Faust Quick Reference
