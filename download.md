@@ -8,8 +8,8 @@ permalink: /download/
 ### FaustLive ###
 FaustLive is the recommended tool to get started with Faust. Thanks to its embedded Faust compiler, FaustLive provides an ultra-short _edit-compile-run_ cycle. Moreover FaustLive is multi-platform and doesn't require any additional compiler or development tool (beside a simple code editor).
 
-+ [FaustLive for Windows](https://sourceforge.net/projects/faudiostream/files/FaustLive-Windows-2.44.zip/download)
-+ [FaustLive for Windows+JACK](https://sourceforge.net/projects/faudiostream/files/FaustLive-Windows-Jack-2.44.zip/download)
++ [FaustLive for Windows](https://sourceforge.net/projects/faudiostream/files/FaustLive-Windows-2.44.rar/download)
++ [FaustLive for Windows+JACK](https://sourceforge.net/projects/faudiostream/files/FaustLive-Windows-Jack-2.44.rar/download)
 + [FaustLive for OSX](https://sourceforge.net/projects/faudiostream/files/FaustLive-OSX-2.44.dmg/download)
 + [FaustLive for Ubuntu](http://sourceforge.net/projects/faudiostream/files/FaustLive-ubuntu-x86_64-2.43.zip/download)
 + [FaustLive sources (for Linux or Mac)](https://sourceforge.net/projects/faudiostream/files/FaustLive-sources-2.41.tgz/download)
