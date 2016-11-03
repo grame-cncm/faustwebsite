@@ -1,10 +1,11 @@
 ---
 layout: post
 title:  "Faust Workshop at LOOP 2016 !"
-date:   2016-11-04 15:10:00
+date:   2016-11-03 00:00:00
 categories: news
 ---
-*Examples of the Faust Workshop at LOOP, November 4, 2016.*
+
+*Examples for the Faust Workshop at LOOP, November 4, 2016.*
 
 ## Simple volume control
 

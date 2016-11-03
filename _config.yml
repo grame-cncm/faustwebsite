@@ -11,4 +11,4 @@ github_username:  orlarey
 markdown: kramdown
 
 exclude: [modules]
-incremental: true
+incremental: false
