@@ -21,9 +21,9 @@ The Faust compiler itself comes in two flavors, Faust and Faust2:
 + [Faust (master branch)](https://sourceforge.net/projects/faudiostream/files/faust-0.9.80.tgz/download) is simple to compile and install as it has very few dependencies, but it can only generate C++ programs.
 + The [faust2 branch](https://sourceforge.net/projects/faudiostream/files/faust-2.0.a49.tgz/download) is more general and has backends for C++, C, Java, Javascript, asm.js, LLVM and Interpreter. But is has more dependencies, in particular LLVM. Faust2 is needed to compile FaustLive and other embedded Faust compilers.
 
-You can also clone the git repository with the following command :
+You can also clone the github repository with the following command :
 
-	git clone git://git.code.sf.net/p/faudiostream/code faust
+	git clone git@github.com:grame-cncm/faust.git faust
 
 Faust is easy to compile and to run on Mac and Linux. For Windows users we recommend to use [FaustLive](https://sourceforge.net/projects/faudiostream/files/FaustLive-Windows-Jack-2.30.zip/download).
 
