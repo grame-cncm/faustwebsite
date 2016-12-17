@@ -41,9 +41,11 @@ We can complete our program with sliders to control the frequency and the level 
 
 ### Final program
 
-Instead of hardcoding the sampling rate we can use the foreign constant fSamplingFreq in the definition of `phasor`. This lead us to the following program.
+Instead of hardcoding the sampling rate, we can use the `SR` primitive defined in the  math.lib library (as a foreign constant to be setup with the actual sample rate by the architecture file) in the definition of `phasor`. This lead us to the following program.
 
-    phasor(f)   = f/fconstant(int fSamplingFreq, <math.h>) : (+,1.0:fmod) ~ _ ;
+    import("stdfaust.lib");
+
+    phasor(f)   = f/ma.SR : (+,1.0:fmod) ~ _ ;
     osc(f)      = phasor(f) * 6.28318530718 : sin;
     process     = osc(hslider("freq", 440, 20, 20000, 1)) * hslider("level", 0, 0, 1, 0.01);
 

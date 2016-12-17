@@ -37,6 +37,8 @@ All it remains is to connect our organ voice to the MIDI control and add a gener
 You can try the code on the [online compiler](http://faust.grame.fr/onlinecompiler) by dragging [this url]({{site.url }}/images/organ.dsp) or pasting the following lines
 
     // Simple Organ
+    import("stdfaust.lib");
+
     midigate	= button ("gate");                             	// MIDI keyon-keyoff
     midifreq	= hslider("freq[unit:Hz]", 440, 20, 20000, 1); 	// MIDI keyon key
     midigain	= hslider("gain", 0.5, 0, 10, 0.01);	       	// MIDI keyon velocity
@@ -45,7 +47,7 @@ You can try the code on the [online compiler](http://faust.grame.fr/onlinecompil
 
     // Implementation
 
-    phasor(f)   = f/fconstant(int fSamplingFreq, <math.h>) : (+,1.0:fmod) ~ _ ;
+    phasor(f)   = f/ma.SR : (+,1.0:fmod) ~ _ ;
     osc(f)      = phasor(f) * 6.28318530718 : sin;
 
     timbre(freq)= osc(freq) + 0.5*osc(2.0*freq) + 0.25*osc(3.0*freq);

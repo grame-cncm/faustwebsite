@@ -1,4 +1,5 @@
 // Simple Organ
+import("stdfaust.lib");
 
 // Midi interface
 midigate	= button ("gate");                             	// MIDI keyon-keyoff
@@ -7,10 +8,9 @@ midigain	= hslider("gain", 0.5, 0, 10, 0.01);	       	// MIDI keyon velocity
 
 process 	= voice(midigate, midigain, midifreq) * hslider("volume", 0.5, 0, 1, 0.01);
 
-
 // Implementation
 
-phasor(f)   	= f/fconstant(int fSamplingFreq, <math.h>) : (+,1.0:fmod) ~ _ ;
+phasor(f)   	= f/ma.SR : (+,1.0:fmod) ~ _ ;
 
 osc(f)      	= phasor(f) * 6.28318530718 : sin;
 
