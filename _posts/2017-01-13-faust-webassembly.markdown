@@ -7,13 +7,13 @@ categories: news
 
 [WebAssembly](http://webassembly.org) was born with the premise of creating a safe, portable and fast to load and execute format suitable for the web. WebAssembly its not a programing language but a compilation target which a text and binary specs. That means that other low level languages like C/C++, Rust, Swift, etc. can compile to WebAssembly. 
 
-Specified and developed by main browsers compagnies (Google, Mozilla, Microsoft and Apple), this new format aims to finally replace the more hackish "asm.js" format initialy developed by Mozilla. 
+Specified and developed by principal browser compagnies (Google, Mozilla, Microsoft and Apple), this new format aims to finally replace the more hackish "asm.js" format initialy developed by Mozilla. 
 
-Developement versions of Chrome and Firefox can already execute it. To get an early preview of this experimental technology, at your own risk:
+Development versions of Chrome and Firefox can already execute it. To get an early preview of this experimental technology, at your own risk:
 
-- on [Chrome Canary](https://www.google.com/chrome/browser/canary.html), open **chrome://flags/#enable-webassembly** and enable the switch.
+- on [Chrome Canary](https://www.google.com/chrome/browser/canary.html), open **chrome://flags/#enable-webassembly** and enable the switch
 
-- on [Firefox Nightly](https://nightly.mozilla.org/), open **about:config** and set **javascript.options.wasm** to true.
+- on [Firefox Nightly](https://nightly.mozilla.org/), open **about:config** and set **javascript.options.wasm** to true
 
 See a [preview](http://blogs.windows.com/msedgedev/2016/03/15/previewing-webassembly-experiments) of [Microsoft Edge](https://www.microsoft.com/en-us/windows/microsoft-edge) support and follow [Safari](http://www.apple.com/safari/) support on WebKit’s [feature status](https://www.microsoft.com/en-us/windows/microsoft-edge).
 
