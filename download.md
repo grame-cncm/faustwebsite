@@ -20,8 +20,7 @@ Faust is easy to compile and to run on Mac and Linux. For Windows users we recom
 ### Projects using the embedded Faust compiler ###
 Several projects using the embedded Faust compiler are available thanks to `libfaust` and `LLVM` (the technology also used in FaustLive), in particular:
 
-+ [Faustgen 1.10 for Max/MSP on OSX (32/64 bits) and Windows (32 bits)](https://sourceforge.net/projects/faudiostream/files/faustgen-1.10.zip/download), allows you to edit, compile and run Faust code from within Max/MSP.
-+ [Faustgen 1.09 for Max/MSP on OSX (32/64 bits) and Windows (32 bits)](https://sourceforge.net/projects/faudiostream/files/faustgen-1.09.zip/download), allows you to edit, compile and run Faust code from within Max/MSP (using older library model).
++ [Faustgen 1.12 for Max/MSP on OSX (32/64 bits) and Windows (32 bits)](https://sourceforge.net/projects/faudiostream/files/faustgen-1.12.zip/download), allows you to edit, compile and run Faust code from within Max/MSP.
 + [Faust for Processing on OSX](https://sourceforge.net/projects/faudiostream/files/faustProcessing.zip/download) allows you to embed Faust code into your Processing code. Use the power of Processing to build awesome user interfaces to control the audio part!  
 
 Please note that Faust can also be used from [Csound6](http://www.youtube.com/watch?v=y8Hjl_LHHU4) and an experimental version of [Antescofo](https://www.youtube.com/watch?v=HFTw387rJto).
