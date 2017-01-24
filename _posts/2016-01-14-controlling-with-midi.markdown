@@ -31,19 +31,21 @@ MIDI clock based synchronization can be used to *slave* a given Faust program. T
 
 A typical Faust program will then use the MIDI clock stream to possibly compute the BPM information, or for any synchronization need it may have. Here is a simple example of a sinusoide generated which a frequency controlled by the  MIDI clock stream, and starting/stopping when receiving the MIDI start/stop messages:
 
-    import("music.lib");
-    
+    import("stdfaust.lib");
+
     // square signal (1/0), changing state at each received clock
     clocker   = checkbox("MIDI clock[midi:clock]");    
+
     // ON/OFF button controlled with MIDI start/stop messages
     play      = checkbox("ON/OFF [midi:start] [midi:stop]");    
 
     // detect front
     front(x)  = (x-x') != 0.0;      
+
     // count number of peaks during one second
-    freq(x)   = (x-x@SR) : + ~ _;   
-   
-    process   = osc(8*freq(front(clocker))) * play;
+    freq(x)   = (x-x@ma.SR) : + ~ _;   
+
+    process   = os.osc(8*freq(front(clocker))) * play;
 
 #### Activating the MIDI interface (for developers) ####
 
