@@ -11,9 +11,9 @@ Polyphonic instruments can be created by "combining" several voices using a spec
 
 First you'll have to describe the voice in Faust, then use the **mydsp_poly** class to combine several voices.
 
-#### Programing the instrument voice ####
+#### Programming the instrument voice ####
 
-By convention Faust architecture files with polyphonic capabilities expect to find a user interface parameter with the following `freq`, `gain` and a `gate` names. 
+By convention Faust architecture files with polyphonic capabilities expect to find a user interface parameters with the following `freq`, `gain` and `gate` names. 
 
 In case of MIDI control, the `freq` (which should be a frequency) will be automatically mapped to MIDI note numbers, `gain` (which should be a value between 0 and 1) to velocity and `freq` to note-on / note-off events. Thus, gate can be used as a trigger signal for any envelope generator, etc.
 
