@@ -5,7 +5,7 @@ date:   2016-01-13 11:10:00
 categories: news
 ---
 
-Polyphonic instruments can be created by "combining" several voices using a specific architecture file, with the single voice described by a Faust DSP program. The architecture file takes care of dynamic voice allocations and control MIDI messages decoding and mapping.
+Polyphonic instruments can be created by "combining" several voices using a specific architecture file, with the single voice described by a Faust DSP program. The architecture file takes care of dynamic voice allocation and control MIDI messages decoding and mapping.
 
 ### Description of the polyphonic instrument ###
 
@@ -21,7 +21,7 @@ Look at the [A Simple Organ](http://faust.grame.fr/examples/2015/10/01/organ.htm
 
 #### Allocating the polyphonic instrument ####
 
-Use the **faust/dsp/poly-dsp.h** file to wrap the dsp voice into the polyphonic architecture. This file defines the **mydsp_poly** class (a sub-class of base class **dsp**) that maintains and array of **dsp** objects, manage dynamic voice allocations, control MIDI messages decoding and mapping, and mixing of all running voices (stopping a running voice, when its output level decreases below a given threshold). 
+Use the **faust/dsp/poly-dsp.h** file to wrap the dsp voice into the polyphonic architecture. This file defines the **mydsp_poly** class (a sub-class of base class **dsp**) that maintains and array of **dsp** objects, manage dynamic voice allocation, control MIDI messages decoding and mapping, and mixing of all running voices (stopping a running voice, when its output level decreases below a given threshold). 
 
 As a sub-class of dsp, the mydsp_poly class redefines the **buildUserInterface** method. By convention all allocated voices are grouped in a global "tabgroup", so that a user interface builder may display them separately. The first tab contains an 'All voices' group that can be used to change parameters on all voices at the same time. A "Panic" button can be used to stop running voices.
 
