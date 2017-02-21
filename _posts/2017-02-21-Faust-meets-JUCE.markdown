@@ -13,7 +13,15 @@ categories: news
 
 #### Using the online compiler #### 
 
-The Faust [online compiler](http://faust.grame.fr/onlinecompiler/) has been update to provide new 'juce' targets. Note that only some of the possible compilation options are availble for now. Directly using **faust2juce** provides the full control of the generated target.  
+The Faust [online compiler](http://faust.grame.fr/onlinecompiler/) has been updated to provide new 'juce' targets. Note that only some of the possible compilation options are availble for now: 
+
+- the **application** target produces a standalone MIDI controlable application (using Faust polyphonic code if the Faust source code is polyphonic aware) 
+
+- the **plug-in** target produces a MIDI controlable mono  or polyphonic plugin (using Faust polyphonic code if the Faust source code is polyphonic aware) 
+
+- the **jsynth** target produces a MIDI controlable mono or polyphonic plugin (using JUCE polyphonic Synthesizer if the Faust source code is polyphonic aware) 
+
+Directly using **faust2juce** provides the full control of the generated target with access to all possible compilation parameters. 
 
 #### Graph of Faust generated plugins #### 
 
