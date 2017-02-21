@@ -7,6 +7,8 @@ categories: news
 
 [JUCE](http://www.juce.com)  is an open-source cross-platform C++ application framework, used for the development of desktop and mobile applications. JUCE is used in particular for its GUI and plugins libraries. A set of architecture files have been developed to deploy standalone or plugins built from Faust code. Polyphonic intruments are supported, MIDI and OSC control can be used. 
 
+The architecture files are then combined to produce ready to compile JUCE applications or plugins. Tools to achieve that are part of the Faust distribution, but can also be accessed using the Faust online compiler.
+
 ### faust2juce script ###
 
 **faust2juce** transforms a Faust DSP program into a fully working JUCE standalone application or plugin, which can possibly be controlled with MIDI or OSC messages. Read its complete description [here](https://github.com/grame-cncm/faust/tree/master-dev/architecture/juce). You'll have to get a recent github version of Faust tree to use it.
