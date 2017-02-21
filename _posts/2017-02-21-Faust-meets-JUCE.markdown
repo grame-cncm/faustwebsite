@@ -5,7 +5,9 @@ date:   2017-02-21 10:00:00
 categories: news
 ---
 
-[JUCE](http://www.juce.com)  is an open-source cross-platform C++ application framework, used for the development of desktop and mobile applications. JUCE is used in particular for its GUI and plugins libraries. A set of architecture files have been developed to deploy standalone or plugins built from Faust code. Polyphonic intruments are supported, MIDI and OSC control can be used. 
+[JUCE](http://www.juce.com)  is an open-source cross-platform C++ application framework, used for the development of desktop and mobile applications. JUCE is used in particular for its GUI and plugins libraries. 
+
+A set of architecture files have been developed to deploy standalone or plugins built from Faust code. Polyphonic intruments are supported, MIDI and OSC control can be used. 
 
 The architecture files are then combined to produce ready to compile JUCE applications or plugins. Tools to achieve that are part of the Faust distribution, but can also be accessed using the Faust online compiler.
 
