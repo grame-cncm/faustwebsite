@@ -36,6 +36,6 @@ Here is an example of three Faust generated plugins running in JUCE plugin host:
 
 #### Using libfaust and LLVM #### 
 
-An alternative of the Faust to JUCE static compilation model done in faust2juce is to use **Oliver Larkin** [juce_faustllvm](https://github.com/olilarkin/juce_faustllvm/tree/master) module. Note that juce_faustllvm module is used in Oliver [pMix2 tool](https://github.com/olilarkin/pMix2). 
+An alternative to **faust2juce** static-compilation model, is to use Oliver Larkin's [juce_faustllvm](https://github.com/olilarkin/juce_faustllvm/tree/master) module, also used in his [pMix2 tool](https://github.com/olilarkin/pMix2). 
 
 
