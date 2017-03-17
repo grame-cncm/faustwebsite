@@ -5,7 +5,7 @@ date:   2017-01-13 10:00:00
 categories: news
 ---
 
-[WebAssembly](http://webassembly.org) was born with the premise of creating a safe, portable and fast to load and execute format suitable for the web. WebAssembly its not a programing language but a compilation target which a text and binary specs. That means that other low level languages like C/C++, Rust, Swift, etc. can compile to WebAssembly. 
+[WebAssembly](http://webassembly.org) was born with the premise of creating a safe, portable and fast to load and execute format suitable for the web. WebAssembly its not a programing language but a compilation target with a text and binary specs. That means that other low level languages like C/C++, Rust, Swift, etc. can compile to WebAssembly. 
 
 Specified and developed by principal browser compagnies (Google, Mozilla, Microsoft and Apple), this new format aims to finally replace the more hackish "asm.js" format initialy developed by Mozilla. 
 
