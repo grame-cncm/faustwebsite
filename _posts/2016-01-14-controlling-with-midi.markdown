@@ -27,7 +27,8 @@ MIDI clock based synchronization can be used to *slave* a given Faust program. T
 
 - **[midi:start]** in a button or checkbox will trigger a value of 1 when a *start* MIDI message is received
 - **[midi:stop]** in a button or checkbox will trigger a value of 0 when a *stop* MIDI message is received
-- **[midi:clock]** in a button or checkbox will trigger a stream of 1 and 0 each time a *clock* MIDI message is received, thus delivering a square command signal.
+- **[midi:clock]** in a button or checkbox will deliver a sequence of successive 1 and 0 values each time a *clock* MIDI message is received, seen by seen by Faust code as a square command signal, to be used to compute higher level information.
+.
 
 A typical Faust program will then use the MIDI clock stream to possibly compute the BPM information, or for any synchronization need it may have. Here is a simple example of a sinusoide generated which a frequency controlled by the  MIDI clock stream, and starting/stopping when receiving the MIDI start/stop messages:
 
