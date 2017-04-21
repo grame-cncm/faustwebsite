@@ -14,8 +14,8 @@ MIDI control messages are described as metadata in UI elements. They are decoded
 #### Description of the possible standard MIDI messages ####
 
 - **[midi:ctrl num]** in a slider or bargraph will map the UI element value to (0,127) range. When used with a button or checkbox, 1 will be mapped to 127, 0 will be mapped to 0,
-- **[midi:keyon pitch]** in a slider or bargraph will map the UI element value to note-on velocity in the (0,127) range. When used with a button or checkbox, 1 will be mapped to 127, 0 will be mapped to 0,
-- **[midi:keyoff pitch]** in a slider or bargraph will map the UI element value to note-off velocity in the (0,127) range. When used with a button or checkbox, 1 will be mapped to 127, 0 will be mapped to 0,
+- **[midi:keyon key]** in a slider or bargraph will register the UI element's state-variable to be driven by MIDI note-on velocity (an integer between 0 and 127) of the specified key between 0 and 127. When used with a button or checkbox, 1 will be mapped to 127, 0 will be mapped to 0,
+- **[midi:keyoff key]** in a slider or bargraph will register the UI element's state-variable to be driven by MIDI note-on velocity (an integer between 0 and 127) of the specified key between 0 and 127. When used with a button or checkbox, 1 will be mapped to 127, 0 will be mapped to 0,
 - **[midi:keypress key]** in a slider or bargraph will map the UI element value to keypress value in the (0,127) range. When used with a button or checkbox, 1 will be mapped to 127, 0 will be mapped to 0,
 - **[midi:pgm num]** in a slider or bargraph will map the UI element value to the progchange value, so "progchange" message with the same "num" value will be sent. When used with a button or checkbox, 1 will send the "progchange" message with "num" value, 0 will send nothing,
 - **[midi:chanpress num]** in a slider or bargraph will map the UI element value to the chanpress value, so "chanpress" message with the same "num" value will be sent. When used with a button or checkbox, 1 will send the "chanpress" message with "num" value, 0 will send nothing,
