@@ -12,7 +12,8 @@ if [ -d "$1" ]; then
 		cd "$CWD"
 		cd "$1"
 		git pull
-		jekyll build --incremental
+		rm -f _site/index.html
+		jekyll build
 		# update the production website
 		rsync -a _site/ "$DSTD"
 	else
