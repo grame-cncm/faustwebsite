@@ -5,10 +5,7 @@ date:   2017-04-26 15:10:00
 categories: news
 ---
 
-The Faust compiler has as lot of different compilation parameters to play with. 
-Discovering the best Faust compilation parameters for a given DSP program is something that can be automated. A **measure_dsp** class is available for developers to measure DSP CPU use directly in their code.
-
-Two more friendly **faustbench** and **faustbench-llvm** tools have been developed using this class. They allow to discover the best Faust compiler parameters, to be used later on with  **faust2xx** scripts or FaustLive.
+The Faust compiler has as lot of different compilation parameters to play with. Discovering them for a given DSP program is something that can be automated. A **measure_dsp** class is available for developers to measure DSP CPU use directly in their code. Two more friendly **faustbench** and **faustbench-llvm** tools have been developed using this class. They allow to discover the best Faust compiler parameters, to be used later on with  **faust2xx** scripts or FaustLive.
 
 ### The measure_dsp DSP decorator class ###
 
@@ -61,7 +58,7 @@ Best value is : 136.235 with -vec -lv 0 -vs 512
 
 ### Using the faustbench-llvm tool ###
 
-Available in the **faust2** branch only, the **faustbench-llvm** tool uses the libfaust library and its LLVM backend to dynamically compile DSP objects produced with different Faust compiler options, and then measure their DSP CPU. Here is a trace of its use:
+Available in the **faust2** branch only, the **faustbench-llvm** tool uses the libfaust library and its LLVM backend to dynamically compile DSP objects produced with different Faust compiler options, and then measure their DSP CPU. In the main Faust folder, use **make bench && sudo make install** to build and install the tool. Here is a trace of its use:
 
 {% highlight c++ %}
 
