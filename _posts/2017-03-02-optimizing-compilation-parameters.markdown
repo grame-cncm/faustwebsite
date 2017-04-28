@@ -12,7 +12,7 @@ The Faust compiler has as lot of different compilation parameters to play with. 
 The measure_dsp class defined in the **faust/dsp/dsp-bench.h** file allows to decorate a given DSP object and measure its **compute** method CPU consumption. Results are given in Megabytes/seconds (higher is better). Here is a C++ code example of its use: 
 
 {% highlight c++ %}
-static double bench(dsp* dsp, const string& name)
+static void bench(dsp* dsp, const string& name)
 {
     // Init the DSP
     dsp->init(48000);
@@ -29,7 +29,7 @@ Only part of the Faust2 branch and defined in the **faust/dsp/dsp-optimizer.h** 
 
 {% highlight c++ %}
 
-static double dynamic_bench(dsp* dsp)
+static void dynamic_bench(dsp* dsp)
 {
     // Init the DSP optimizer
     dsp_optimizer optimizer(dsp, "/usr/local/share/faust", "", 1024);
