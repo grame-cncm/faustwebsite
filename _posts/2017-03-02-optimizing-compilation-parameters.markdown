@@ -5,11 +5,11 @@ date:   2017-04-26 15:10:00
 categories: news
 ---
 
-The Faust compiler has as lot of different compilation parameters to play with. Discovering them for a given DSP program is something that can be automated. A **measure_dsp** class is available for developers to measure DSP CPU use directly in their code. Two more friendly **faustbench** and **faustbench-llvm** tools have been developed using this class. They allow to discover the best Faust compiler parameters, to be used later on with  **faust2xx** scripts or FaustLive.
+The Faust compiler has as lot of different compilation parameters to play with. Discovering them for a given DSP program is something that can be automated. Two **measure_dsp** and **dsp_optimizer** classes are available for developers to measure DSP CPU use directly in their code. Two more friendly **faustbench** and **faustbench-llvm** tools have been developed using them. They allow to discover the best Faust compiler parameters, to be used later on with  **faust2xx** scripts or FaustLive.
 
-### The measure_dsp DSP decorator class ###
+### The measure_dsp and dsp_optimizer DSP decorator classes ###
 
-This class defined in the **faust/dsp/dsp-bench.h** file allows to decorate a given DSP object and measure its **compute** method CPU consumption. Results are given in Megabytes/seconds (higher is better). Here is a C++ code example of its use: 
+The measure_dsp class defined in the **faust/dsp/dsp-bench.h** file allows to decorate a given DSP object and measure its **compute** method CPU consumption. Results are given in Megabytes/seconds (higher is better). Here is a C++ code example of its use: 
 
 {% highlight c++ %}
 static double bench(dsp* dsp, const string& name)
@@ -18,10 +18,30 @@ static double bench(dsp* dsp, const string& name)
     dsp->init(48000);
     // Wraps it with a 'measure_dsp' decorator
     measure_dsp mes(dsp, 1024, 5);
-    // Mesure the CPU use
+    // Measure the CPU use
     mes.measure();
     // Print the stats
     cout << name << " CPU use : " << mes.getStats() << endl;
+}
+{% endhighlight %}
+
+Only part of the Faust2 branch and defined in the **faust/dsp/dsp-optimizer.h** file, the dsp_optimizer class allows to decorate a given DSP object, uses the libfaust library and its LLVM backend to dynamically compile DSP objects produced with different Faust compiler options, and then measure their DSP CPU. Here is a C++ code example of its use: 
+
+{% highlight c++ %}
+
+static double dynamic_bench(dsp* dsp)
+{
+    // Init the DSP optimizer
+    dsp_optimizer optimizer(dsp, "/usr/local/share/faust", "", 1024);
+    double value;
+    // Discover the best set of parameters
+    vector<string> options = optimizer.findOptimizedParameters(value);
+    // Print the result
+    cout << "Best value is for '" << argv[1] << "' is : " << value << " with ";
+    for (int i = 0; i < options.size(); i++) {
+        cout << options[i] << " ";
+    }
+    cout << endl;
 }
 {% endhighlight %}
 
