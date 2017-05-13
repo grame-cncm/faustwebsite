@@ -91,7 +91,7 @@ To re-create a DSP factory from a previously saved code, several functions are a
 Some additional functions are available in the API:
 
 - **expandDSPFromString/expandDSPFromFile** creates a 'self-contained' DSP source string where all needed librairies have been included. All compilations options are 'normalized' and included as a comment in the expanded string,
-- **generateAuxFilesFromString/generateAuxFilesFromFile**: from a DSP source string or file, generates auxiliary files : SVG, XML, ps... depending of the 'argv' parameters.
+- **generateAuxFilesFromString/generateAuxFilesFromFile**: from a DSP source string or file, generates auxiliary files: SVG, XML, ps... depending of the 'argv' parameters.
 
 #### Using libfaust library ####
 
@@ -106,9 +106,9 @@ The dynamic compilation chain has been used in several projects:
 - [Csound6](https://csound.github.io/index.html), see this [demo video](http://www.youtube.com/watch?v=y8Hjl_LHHU4) 
 - [LibAudioStream](https://github.com/sletz/libaudiostream/tree/inedit_mc2
 ), a framework to manipulate audio ressources through the concept of streams
-- Oliver Larkin [JUCE framework integration](http://olilarkin.blogspot.fr/2015/11/juce-summit-presentation.html)
+- Oliver Larkin [JUCE framework integration](http://olilarkin.blogspot.fr/2015/11/juce-summit-presentation.html) and [pMix2 project](https://github.com/olilarkin/pMix2)
 - an experimental version of [Antescofo](https://www.youtube.com/watch?v=HFTw387rJto)
-- FaucK : the combination of the [Chuck language and Faust](https://youtu.be/7ZnmpC7wsPU) 
+- FaucK: the combination of the [Chuck language and Faust](https://ccrma.stanford.edu/~rmichon/fauck/) 
 - ...
 
 
