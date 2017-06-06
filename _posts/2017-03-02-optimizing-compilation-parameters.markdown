@@ -5,7 +5,7 @@ date:   2017-04-26 15:10:00
 categories: news
 ---
 
-The Faust compiler has as lot of different compilation parameters to play with. Discovering them for a given DSP program is something that can be automated. Two **measure_dsp** and **dsp_optimizer** classes are available for developers to measure DSP CPU use directly in their code. Two more friendly **faustbench** and **faustbench-llvm** tools have been developed using them. They allow to discover the best Faust compiler parameters, to be used later on with  **faust2xx** scripts or FaustLive.
+The Faust compiler has as lot of different compilation parameters to play with. Discovering them for a given DSP program is something that can be automated. Two **measure_dsp** and **dsp_optimizer** classes are available for developers to measure DSP CPU use directly in their code. Two more friendly **faustbench** and **faustbench-llvm** tools have been developed using them. They allow to discover the best Faust compiler parameters, to be used later on with **faust2xx** scripts, **faustgen~** Max/MSP external or **FaustLive**.
 
 ### The measure_dsp and dsp_optimizer DSP decorator classes ###
 
