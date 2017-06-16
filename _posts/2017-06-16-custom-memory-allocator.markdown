@@ -7,11 +7,11 @@ categories: news
 
 From a DSP source file, the Faust compiler typically generates a C++ class. When a **rdtable** item is used on the source code, the C++ class will contain a table shared by all instances of the class. By default, this table is generated as a static class array, and so allocated in the application global static memory. 
 
-In some specific case (usually in more constrained deployment cases), managing where this data is allocated is crucial. By extension this post explains how a custom memory allocator can be used to precisely control how the DSP memory allocation.
+In some specific case (usually in more constrained deployment cases), managing where this data is allocated is crucial. By extension this post explains how a custom memory allocator can be used to precisely control the DSP memory allocation.
 
 ### Faust -mem option to control memory related code generation ###
 
-A new **-mem** compiler parameter has been added starting from the 0.9.102 version (or 2.1.0 in Faust2). This parameter will change the way static shared tables are generated. The table is allocated as a class static pointer allocated using a **custom memory allocator**, which has the following propotype: 
+A new **-mem** compiler parameter has been added in the Faust compiler, starting from the 0.9.102 version (or 2.1.0 in Faust2 branch). This parameter will change the way static shared tables are generated. The table is allocated as a class static pointer allocated using a **custom memory allocator**, which has the following propotype: 
 
 {% highlight c++ %}
 struct dsp_memory_manager {
@@ -30,9 +30,7 @@ process = (waveform {10,20,30,40,50,60,70}, %(7)~+(3) : rdtable),
           (waveform {1.1,2.2,3.3,4.4,5.5,6.6,7.7}, %(7)~+(3) : rdtable);
 {% endhighlight %}
 
-#### Generated code in default mode ####
-
-Look at the generated code in default mode:
+Here is the generated code in default mode:
 
 {% highlight c++ %}
 ...
@@ -61,11 +59,9 @@ virtual void instanceInit(int samplingFreq) {
 ...
 {% endhighlight %}
 
-The two **itbl0** and **ftbl0** tables are static class arrays. They are filled in the **classInit** method. The architecture code will typically call the **init** method (wich calls **classInit**) on a given DSP to allocate class related arrays and the DSP itself. If several DSP are going to be allocated, calling **classInit** only once then the **instanceInit** method on each allocated DSP is the way to go.
+The two **itbl0** and **ftbl0** tables are static class arrays. They are filled in the **classInit** method. The architecture code will typically call the **init** method (which calls **classInit**) on a given DSP, to allocate class related arrays and the DSP itself. If several DSP are going to be allocated, calling **classInit** only once then the **instanceInit** method on each allocated DSP is the way to go.
 
-#### Generated code in -mem mode ####
-
-In the new -mem mode, the generated C++ code is now:
+In the new **-mem** mode, the generated C++ code is now:
 
 {% highlight c++ %}
 ...
