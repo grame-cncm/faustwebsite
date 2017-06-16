@@ -11,7 +11,7 @@ In some specific case (usually in more constrained deployment cases), managing w
 
 ### Faust -mem option to control memory related code generation ###
 
-A new **-mem** compiler parameter has been added starting from the 0.9.102 version (or 2.1.0 in Faust2). This parameter will change the way static shared tables are generated. The table is then allocated as a class static pointer to be allocated using a architecture given **custom memory allocator**, which has the following propotype: 
+A new **-mem** compiler parameter has been added starting from the 0.9.102 version (or 2.1.0 in Faust2). This parameter will change the way static shared tables are generated. The table is allocated as a class static pointer allocated using a **custom memory allocator**, which has the following propotype: 
 
 {% highlight c++ %}
 struct dsp_memory_manager {
@@ -61,7 +61,7 @@ virtual void instanceInit(int samplingFreq) {
 ...
 {% endhighlight %}
 
-The two **itbl0** and **ftbl0** tables are static class arrays. They are filled in **classInit** method. The architecture code willl typically call the **init** method on a given DSP to allocate class related arrays and the DSP itself. If several DSP are going to be allocated, calling **classInit** only once then the **instanceInit** method on each allocated DSP is the way to go.
+The two **itbl0** and **ftbl0** tables are static class arrays. They are filled in the **classInit** method. The architecture code will typically call the **init** method (wich calls **classInit**) on a given DSP to allocate class related arrays and the DSP itself. If several DSP are going to be allocated, calling **classInit** only once then the **instanceInit** method on each allocated DSP is the way to go.
 
 #### Generated code in -mem mode ####
 
@@ -98,7 +98,7 @@ virtual void instanceInit(int samplingFreq) {
 ...
 {% endhighlight %}
 
-The two **itbl0** and **ftbl0** tables are generated a class static pointers. The **classInit** method takes the additional **dsp_memory_manager** object to be used to allocate tables. A new **classDestroy** method must be used to deallocate the tables. Finally the **init** method is now empty, since the architecure file is supposed to use the **classInit/classDestroy** once to allocate and deallocate static tables, and the **instanceInit** method on each allocated DSP.
+The two **itbl0** and **ftbl0** tables are generated a class static pointers. The **classInit** method takes the additional **dsp_memory_manager** object used to allocate tables. A new **classDestroy** method is available to deallocate the tables. Finally the **init** method is now empty, since the architecure file is supposed to use the **classInit/classDestroy** method once to allocate and deallocate static tables, and the **instanceInit** method on each allocated DSP.
 
 ### Full control of the DSP memory allocation ###
 
