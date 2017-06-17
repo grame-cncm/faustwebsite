@@ -160,7 +160,7 @@ Full control the DSP memory allocation can be done using [C++ placement new](htt
 malloc_memory_manager manager; 
 
 // Placement new using the custom allocator
-mydsp* dsp = new (manager.allocate(sizeof(mydsp))) mydsp();
+mydsp* dsp = new(manager.allocate(sizeof(mydsp))) mydsp();
 
 // Allocate static tables using the custom memory allocator
 mydsp::classInit(48000, &manager);
