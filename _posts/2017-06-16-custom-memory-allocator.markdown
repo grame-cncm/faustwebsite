@@ -67,21 +67,22 @@ In the new **-mem** mode, the generated C++ code is now:
 ...
 int* mydsp::itbl0 = 0;
 float* mydsp::ftbl0 = 0;
+dsp_memory_manager* mydsp::fManager = 0;
 
-static void classInit(int samplingFreq, dsp_memory_manager* manager) {
+static void classInit(int samplingFreq) {
     SIG0 sig0;
-    itbl0 = static_cast<int*>(manager->allocate(sizeof(int) * 7));
+    itbl0 = static_cast<int*>(fManager->allocate(sizeof(int) * 7));
     sig0.init(samplingFreq);
     sig0.fill(7,itbl0);
     SIG1 sig1;
-    ftbl0 = static_cast<float*>(manager->allocate(sizeof(float) * 7));
+    ftbl0 = static_cast<float*>(fManager->allocate(sizeof(float) * 7));
     sig1.init(samplingFreq);
     sig1.fill(7,ftbl0);
 }
 
-static void classDestroy(dsp_memory_manager* manager) {
-    manager->destroy(itbl0);
-    manager->destroy(ftbl0);
+static void classDestroy() {
+    fManager->destroy(itbl0);
+    fManager->destroy(ftbl0);
 }
 
 virtual void init(int samplingFreq) {}
@@ -130,11 +131,14 @@ To control table memory allocation, the architecture file will have to do:
 // Allocate a custom memory allocator
 malloc_memory_manager manager; 
 
+// Setup manager for the class
+mydsp::fManager = &manager;
+
 // Allocate the dsp instance using regular C++ new
 mydsp* dsp = new mydsp();
 
-// Allocate static tables using the custom memory allocator
-mydsp::classInit(48000, &manager);
+// Allocate static tables (using the custom memory allocator)
+mydsp::classInit(48000);
 
 // Initialise the given instance
 dsp->instanceInit(48000);
@@ -145,8 +149,8 @@ dsp->instanceInit(48000);
 // Deallocate the dsp instance using regular C++ delete
 delete dsp;
 
-// Deallocate static tables using the custom memory allocator
-mydsp::classDestroy(&manager);
+// Deallocate static tables (using the custom memory allocator)
+mydsp::classDestroy();
 
 {% endhighlight %}
 
@@ -159,11 +163,14 @@ Full control the DSP memory allocation can be done using [C++ placement new](htt
 // Allocate a custom memory allocator
 malloc_memory_manager manager; 
 
+// Setup manager for the class
+mydsp::fManager = &manager;
+
 // Placement new using the custom allocator
 mydsp* dsp = new(manager.allocate(sizeof(mydsp))) mydsp();
 
-// Allocate static tables using the custom memory allocator
-mydsp::classInit(48000, &manager);
+// Allocate static tables (using the custom memory allocator)
+mydsp::classInit(48000);
 
 // Initialise the given instance
 dsp->instanceInit(48000);
@@ -177,8 +184,8 @@ dsp->~mydsp();
 // Deallocate the pointer itself using the custom memory allocator
 manager.destroy(dsp);
 
-// Deallocate static tables using the custom memory allocator
-mydsp::classDestroy(&manager);
+// Deallocate static tables (using the custom memory allocator)
+mydsp::classDestroy();
 
 {% endhighlight %}
 
