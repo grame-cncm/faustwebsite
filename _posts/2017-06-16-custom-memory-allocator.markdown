@@ -96,7 +96,7 @@ virtual void instanceInit(int samplingFreq) {
 
 The two **itbl0** and **ftbl0** tables are generated a class static pointers. The **classInit** method takes the additional **dsp_memory_manager** object used to allocate tables. A new **classDestroy** method is available to deallocate the tables. Finally the **init** method is now empty, since the architecure file is supposed to use the **classInit/classDestroy** method once to allocate and deallocate static tables, and the **instanceInit** method on each allocated DSP.
 
-### Full control of the DSP memory allocation ###
+### Control of the DSP memory allocation ###
 
 An architecture file can now define its custom memory manager by subclassing the **dsp_memory_manager**  abstract base class, and implement the two required **allocate** and **destroy** methods. Here is an example of a simple heap allocating manager:
 
@@ -133,7 +133,7 @@ malloc_memory_manager manager;
 // Allocate the dsp instance using regular C++ new
 mydsp* dsp = new mydsp();
 
-// Allocate static tables using custom memory allocator
+// Allocate static tables using the custom memory allocator
 mydsp::classInit(48000, &manager);
 
 // Initialise the given instance
@@ -145,7 +145,7 @@ dsp->instanceInit(48000);
 // Deallocate the dsp instance using regular C++ delete
 delete dsp;
 
-// Deallocate static tables using custom memory allocator
+// Deallocate static tables using the custom memory allocator
 mydsp::classDestroy(&manager);
 
 {% endhighlight %}
@@ -159,10 +159,10 @@ Full control the DSP memory allocation can be done using [C++ placement new](htt
 // Allocate a custom memory allocator
 malloc_memory_manager manager; 
 
-// Placement new here is the custom allocator
+// Placement new using the custom allocator
 mydsp* dsp = new (manager.allocate(sizeof(mydsp))) mydsp();
 
-// Allocate static tables using custom memory allocator
+// Allocate static tables using the custom memory allocator
 mydsp::classInit(48000, &manager);
 
 // Initialise the given instance
@@ -174,14 +174,13 @@ dsp->instanceInit(48000);
 // Calling the destructor
 dsp->~mydsp();
 
-// Deallocate the pointer itself using custom memory allocator
+// Deallocate the pointer itself using the custom memory allocator
 manager.destroy(dsp);
 
-// Deallocate static tables using custom memory allocator
+// Deallocate static tables using the custom memory allocator
 mydsp::classDestroy(&manager);
 
 {% endhighlight %}
-
 
 More complex custom memory allocators can be developed by refining this **malloc_memory_manager** example, possibly defining real-time memory allocators...etc... The OWL architecture file already uses this new custom memory allocator model.
 
