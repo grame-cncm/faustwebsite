@@ -11,7 +11,7 @@ In some specific case (usually in more constrained deployment cases), managing w
 
 ### Faust -mem option to control memory related code generation ###
 
-A new **-mem** compiler parameter has been added in the Faust compiler, starting from the 0.9.102 version (or 2.1.0 in Faust2 branch). This parameter will change the way static shared tables are generated. The table is allocated as a class static pointer allocated using a **custom memory allocator**, which has the following propotype: 
+A new **-mem** compiler parameter has been added in the Faust compiler, starting from the 0.9.103 version (or 2.1.4 in Faust2 branch). This parameter will change the way static shared tables are generated. The table is allocated as a class static pointer allocated using a **custom memory allocator**, which has the following propotype: 
 
 {% highlight c++ %}
 struct dsp_memory_manager {
