@@ -191,5 +191,9 @@ mydsp::classDestroy();
 
 More complex custom memory allocators can be developed by refining this **malloc_memory_manager** example, possibly defining real-time memory allocators...etc... The OWL architecture file already uses this new custom memory allocator model.
 
-Note that this model is still not supported yet beside the C++ backend (in particular in the Faust2 branch).
+This is a work in progress: 
+
+ - in the Faust2 branch, this model is still not supported yet beside the C++ backend 
+ - custom memory allocator is not yet supported is additional DSP classes (like the **mydsp_poly** defined in the achitecture/faust/dsp/poly-dsp.h header).
+
 
