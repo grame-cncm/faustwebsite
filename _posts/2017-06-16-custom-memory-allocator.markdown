@@ -124,7 +124,6 @@ struct malloc_memory_manager : public dsp_memory_manager {
 
 #### Controlling the table memory allocation ####
 
-
 To control table memory allocation, the architecture file will have to do:
 
 {% highlight c++ %}
@@ -160,6 +159,9 @@ mydsp::classDestroy();
 Full control the DSP memory allocation can be done using [C++ placement new](https://en.wikipedia.org/wiki/Placement_syntax):
 
 {% highlight c++ %}
+
+#include <new>
+
 // Allocate a custom memory allocator
 malloc_memory_manager manager; 
 
