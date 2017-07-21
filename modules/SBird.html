@@ -5845,11 +5845,47 @@ $(document).ready(function() { _f4u$t.main_loop(); });
 
 
 
-/* ------------------------------------------------------------
-author: "Pierre Cochard"
-name: "bird"
-Code generated with Faust 2.0.a41 (http://faust.grame.fr)
------------------------------------------------------------- */
+
+/*
+Helper code generated with FAUST version 2.3.3
+Compilation options: -scal -ftz 0
+*/
+
+function getSizeSBird() {
+	return 279172;
+}
+
+function getPathTableSBird() {
+	var pathTable = [];
+	pathTable["/Bird/Speed_(Granulator)"] = 262200;
+	pathTable["/Bird/Probability_(Granulator)"] = 262228;
+	return pathTable;
+}
+
+function getJSONSBird() {
+	return "{  \"name\": \"bird\",  \"inputs\": \"0\",  \"outputs\": \"2\",  \"meta\": [    { \"author\": \"Pierre Cochard\" },   { \"basics.lib/name\": \"Faust Basic Element Library\" },   { \"basics.lib/version\": \"0.0\" },   { \"filters.lib/name\": \"Faust Filters Library\" },   { \"filters.lib/version\": \"0.0\" },   { \"maths.lib/author\": \"GRAME\" },   { \"maths.lib/copyright\": \"GRAME\" },   { \"maths.lib/license\": \"LGPL with exception\" },   { \"maths.lib/name\": \"Faust Math Library\" },   { \"maths.lib/version\": \"2.0\" },   { \"name\": \"bird\" },   { \"noises.lib/name\": \"Faust Noise Generator Library\" },   { \"noises.lib/version\": \"0.0\" },   { \"oscillators.lib/name\": \"Faust Oscillator Library\" },   { \"oscillators.lib/version\": \"0.0\" },   { \"signals.lib/name\": \"Faust Signal Routing Library\" },   { \"signals.lib/version\": \"0.0\" }  ],  \"ui\": [    {    \"type\": \"hgroup\",    \"label\": \"Bird\",    \"items\": [      {      \"type\": \"hslider\",      \"label\": \"Speed (Granulator)\",      \"address\": \"/Bird/Speed_(Granulator)\",      \"meta\": [       { \"1\": \"\" },       { \"acc\": \"0 1 -10 0 10\" },       { \"style\": \"knob\" }      ],      \"init\": \"240\",      \"min\": \"120\",      \"max\": \"480\",      \"step\": \"0.1\"     },     {      \"type\": \"hslider\",      \"label\": \"Probability (Granulator)\",      \"address\": \"/Bird/Probability_(Granulator)\",      \"meta\": [       { \"2\": \"\" },       { \"acc\": \"0 1 -10 0 10\" },       { \"style\": \"knob\" },       { \"unit\": \"%\" }      ],      \"init\": \"50\",      \"min\": \"25\",      \"max\": \"100\",      \"step\": \"1\"     }    ]   }  ] } ";
+}
+
+function metadataSBird(m) {
+	m.declare("author", "Pierre Cochard");
+	m.declare("basics.lib/name", "Faust Basic Element Library");
+	m.declare("basics.lib/version", "0.0");
+	m.declare("filters.lib/name", "Faust Filters Library");
+	m.declare("filters.lib/version", "0.0");
+	m.declare("maths.lib/author", "GRAME");
+	m.declare("maths.lib/copyright", "GRAME");
+	m.declare("maths.lib/license", "LGPL with exception");
+	m.declare("maths.lib/name", "Faust Math Library");
+	m.declare("maths.lib/version", "2.0");
+	m.declare("name", "bird");
+	m.declare("noises.lib/name", "Faust Noise Generator Library");
+	m.declare("noises.lib/version", "0.0");
+	m.declare("oscillators.lib/name", "Faust Oscillator Library");
+	m.declare("oscillators.lib/version", "0.0");
+	m.declare("signals.lib/name", "Faust Signal Routing Library");
+	m.declare("signals.lib/version", "0.0");
+}
+
 /*
  faust2webaudio
  
@@ -5863,1019 +5899,134 @@ Code generated with Faust 2.0.a41 (http://faust.grame.fr)
  Choose the license that best suits your project. The text of the MIT and GPL
  licenses are at the root directory.
  
- Additional code : GRAME 2014
- 
- */
+ Additional code : GRAME 2014-2017
+*/
  
 'use strict';
 
 var faust = faust || {};
 
+// Monophonic Faust SBird
 
+/** 
+* Constructor
+*
+* @param instance - the wasm instance
+* @param context - the Web Audio context
+* @param buffer_size - the buffer_size in frames
+* 
+* @return a valid SBird object or null 
+*/
+faust.SBird = function (instance, context, buffer_size) {
 
-function SBirdModule(global, foreign, buffer) {
-	
-	'use asm';
-	
-	var HEAP32 = new global.Int32Array(buffer);
-	var HEAPF32 = new global.Float32Array(buffer);
-	
-	var imul = global.Math.imul;
-	var log = global.Math.log;
-	
-	var fabsf = global.Math.abs;
-	var floorf = global.Math.floor;
-	var max = global.Math.max;
-	var min = global.Math.min;
-	var powf = global.Math.pow;
-	var sinf = global.Math.sin;
-	var tanf = global.Math.tan;
-	function faustpower2_f(value) {
-		value = +(value);
-		return +((value * value));
-		
-	}
-	
-	function faustpower3_f(value) {
-		value = +(value);
-		return +(((value * value) * value));
-		
-	}
-	
-	function fmodf(x, y) { x = +x; y = +y; return +(x % y); }
-	function log10f(a) { a = +a; return +(+log(a) / +log(10.)); }
-
-	function getNumInputsSBirdSIG0(dsp) {
-		dsp = dsp | 0;
-		return 0;
-	}
-	
-	function getNumOutputsSBirdSIG0(dsp) {
-		dsp = dsp | 0;
-		return 1;
-	}
-	
-	function instanceInitSBirdSIG0(dsp, samplingFreq) {
-		dsp = dsp | 0;
-		samplingFreq = samplingFreq | 0;
-		var i1 = 0;
-		for (i1 = 0; (((i1 | 0) < 2) | 0); i1 = (((i1 | 0) + 1) | 0)) {
-			HEAP32[dsp + 278856 + ((i1 | 0) << 2) >> 2] = 0;
-			
-		}
-		
-	}
-	
-	function fillSBirdSIG0(dsp, count, output) {
-		dsp = dsp | 0;
-		count = count | 0;
-		output = output | 0;
-		var i = 0;
-		for (i = 0; (((i | 0) < (count | 0)) | 0); i = (((i | 0) + 1) | 0)) {
-			HEAP32[dsp + 278856 + (0 << 2) >> 2] = ((1 + (HEAP32[dsp + 278856 + (1 << 2) >> 2] | 0)) | 0);
-			HEAPF32[output + ((i | 0) << 2) >> 2] = +(sinf(+(9.58738e-05 * +((((HEAP32[dsp + 278856 + (0 << 2) >> 2] | 0) - 1) | 0)))));
-			HEAP32[dsp + 278856 + (1 << 2) >> 2] = (HEAP32[dsp + 278856 + (0 << 2) >> 2] | 0);
-			
-		}
-		
-	}
-	
-	function getNumInputs(dsp) {
-		dsp = dsp | 0;
-		return 0;
-	}
-	
-	function getNumOutputs(dsp) {
-		dsp = dsp | 0;
-		return 2;
-	}
-	
-	function classInit(dsp, samplingFreq) {
-		dsp = dsp | 0;
-		samplingFreq = samplingFreq | 0;
-		instanceInitSBirdSIG0(dsp, (samplingFreq | 0));
-		fillSBirdSIG0(dsp, 65537, (dsp + 0 | 0));
-		
-	}
-	
-	function instanceInit(dsp, samplingFreq) {
-		dsp = dsp | 0;
-		samplingFreq = samplingFreq | 0;
-		var i0 = 0;
-		var i2 = 0;
-		var i3 = 0;
-		var i4 = 0;
-		var i5 = 0;
-		var i6 = 0;
-		var i7 = 0;
-		var i8 = 0;
-		var i9 = 0;
-		var i10 = 0;
-		var i11 = 0;
-		var i12 = 0;
-		var i13 = 0;
-		var i14 = 0;
-		var i15 = 0;
-		var i16 = 0;
-		var i17 = 0;
-		var i18 = 0;
-		var i19 = 0;
-		var i20 = 0;
-		var i21 = 0;
-		var i22 = 0;
-		var i23 = 0;
-		var i24 = 0;
-		var i25 = 0;
-		var i26 = 0;
-		var i27 = 0;
-		var i28 = 0;
-		var i29 = 0;
-		var i30 = 0;
-		var i31 = 0;
-		var i32 = 0;
-		var i33 = 0;
-		var i34 = 0;
-		var i35 = 0;
-		var i36 = 0;
-		var i37 = 0;
-		HEAP32[dsp + 278864 >> 2] = (samplingFreq | 0);
-		for (i0 = 0; (((i0 | 0) < 3) | 0); i0 = (((i0 | 0) + 1) | 0)) {
-			HEAP32[dsp + 278596 + ((i0 | 0) << 2) >> 2] = 0;
-			
-		}
-		HEAP32[dsp + 278868 >> 2] = ((min(192000, ((max(1, (HEAP32[dsp + 278864 >> 2] | 0))) | 0))) | 0);
-		HEAPF32[dsp + 278872 >> 2] = +(1. / +(tanf(+(7853.98 / +((HEAP32[dsp + 278868 >> 2] | 0))))));
-		HEAPF32[dsp + 278876 >> 2] = +(1. + +(HEAPF32[dsp + 278872 >> 2]));
-		HEAPF32[dsp + 278880 >> 2] = +(1. / +(HEAPF32[dsp + 278876 >> 2]));
-		HEAPF32[dsp + 278884 >> 2] = +((HEAP32[dsp + 278868 >> 2] | 0));
-		HEAPF32[dsp + 278888 >> 2] = +(1. / +(HEAPF32[dsp + 278884 >> 2]));
-		HEAPF32[dsp + 278892 >> 2] = +(359.251 / +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 278896 >> 2] = +(faustpower2_f(+(HEAPF32[dsp + 278884 >> 2])));
-		HEAPF32[dsp + 278900 >> 2] = +(1. / +(tanf(+(9424.78 / +((HEAP32[dsp + 278868 >> 2] | 0))))));
-		HEAPF32[dsp + 278904 >> 2] = +(+(HEAPF32[dsp + 278900 >> 2]) + 1.);
-		HEAPF32[dsp + 278908 >> 2] = +(1. / +(HEAPF32[dsp + 278904 >> 2]));
-		HEAPF32[dsp + 278912 >> 2] = +(0.001 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAP32[dsp + 278916 >> 2] = (imul(60, (HEAP32[dsp + 278868 >> 2] | 0)) | 0);
-		HEAPF32[dsp + 278920 >> 2] = +(240.);
-		for (i2 = 0; (((i2 | 0) < 2) | 0); i2 = (((i2 | 0) + 1) | 0)) {
-			HEAPF32[dsp + 278608 + ((i2 | 0) << 2) >> 2] = 0.;
-			
-		}
-		for (i3 = 0; (((i3 | 0) < 2) | 0); i3 = (((i3 | 0) + 1) | 0)) {
-			HEAP32[dsp + 278616 + ((i3 | 0) << 2) >> 2] = 0;
-			
-		}
-		for (i4 = 0; (((i4 | 0) < 2) | 0); i4 = (((i4 | 0) + 1) | 0)) {
-			HEAP32[dsp + 278624 + ((i4 | 0) << 2) >> 2] = 0;
-			
-		}
-		HEAPF32[dsp + 278924 >> 2] = +(50.);
-		for (i5 = 0; (((i5 | 0) < 2) | 0); i5 = (((i5 | 0) + 1) | 0)) {
-			HEAPF32[dsp + 278632 + ((i5 | 0) << 2) >> 2] = 0.;
-			
-		}
-		for (i6 = 0; (((i6 | 0) < 2) | 0); i6 = (((i6 | 0) + 1) | 0)) {
-			HEAP32[dsp + 278640 + ((i6 | 0) << 2) >> 2] = 0;
-			
-		}
-		for (i7 = 0; (((i7 | 0) < 2) | 0); i7 = (((i7 | 0) + 1) | 0)) {
-			HEAPF32[dsp + 278648 + ((i7 | 0) << 2) >> 2] = 0.;
-			
-		}
-		for (i8 = 0; (((i8 | 0) < 4) | 0); i8 = (((i8 | 0) + 1) | 0)) {
-			HEAPF32[dsp + 278532 + ((i8 | 0) << 2) >> 2] = 0.;
-			
-		}
-		for (i9 = 0; (((i9 | 0) < 2) | 0); i9 = (((i9 | 0) + 1) | 0)) {
-			HEAPF32[dsp + 278656 + ((i9 | 0) << 2) >> 2] = 0.;
-			
-		}
-		for (i10 = 0; (((i10 | 0) < 2) | 0); i10 = (((i10 | 0) + 1) | 0)) {
-			HEAP32[dsp + 278664 + ((i10 | 0) << 2) >> 2] = 0;
-			
-		}
-		for (i11 = 0; (((i11 | 0) < 2) | 0); i11 = (((i11 | 0) + 1) | 0)) {
-			HEAP32[dsp + 278672 + ((i11 | 0) << 2) >> 2] = 0;
-			
-		}
-		HEAPF32[dsp + 278928 >> 2] = +(0.0017 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		for (i12 = 0; (((i12 | 0) < 4) | 0); i12 = (((i12 | 0) + 1) | 0)) {
-			HEAPF32[dsp + 278548 + ((i12 | 0) << 2) >> 2] = 0.;
-			
-		}
-		for (i13 = 0; (((i13 | 0) < 2) | 0); i13 = (((i13 | 0) + 1) | 0)) {
-			HEAPF32[dsp + 278680 + ((i13 | 0) << 2) >> 2] = 0.;
-			
-		}
-		for (i14 = 0; (((i14 | 0) < 2) | 0); i14 = (((i14 | 0) + 1) | 0)) {
-			HEAP32[dsp + 278688 + ((i14 | 0) << 2) >> 2] = 0;
-			
-		}
-		HEAPF32[dsp + 278932 >> 2] = +(0.00164659 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 278936 >> 2] = +(0.00130522 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 278940 >> 2] = +(2929.42 / +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 278944 >> 2] = +(0.000865 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 278948 >> 2] = +(2271.59 / +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 278952 >> 2] = +(0.000863454 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 278956 >> 2] = +(646830. / +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 278960 >> 2] = +(567.488 / +((HEAP32[dsp + 278868 >> 2] | 0)));
-		for (i15 = 0; (((i15 | 0) < 2) | 0); i15 = (((i15 | 0) + 1) | 0)) {
-			HEAPF32[dsp + 278696 + ((i15 | 0) << 2) >> 2] = 0.;
-			
-		}
-		HEAPF32[dsp + 278964 >> 2] = +(0. - +(+(1. - +(HEAPF32[dsp + 278900 >> 2])) / +(HEAPF32[dsp + 278904 >> 2])));
-		for (i16 = 0; (((i16 | 0) < 2) | 0); i16 = (((i16 | 0) + 1) | 0)) {
-			HEAPF32[dsp + 278704 + ((i16 | 0) << 2) >> 2] = 0.;
-			
-		}
-		for (i17 = 0; (((i17 | 0) < 4) | 0); i17 = (((i17 | 0) + 1) | 0)) {
-			HEAPF32[dsp + 278564 + ((i17 | 0) << 2) >> 2] = 0.;
-			
-		}
-		for (i18 = 0; (((i18 | 0) < 2) | 0); i18 = (((i18 | 0) + 1) | 0)) {
-			HEAPF32[dsp + 278712 + ((i18 | 0) << 2) >> 2] = 0.;
-			
-		}
-		for (i19 = 0; (((i19 | 0) < 2) | 0); i19 = (((i19 | 0) + 1) | 0)) {
-			HEAPF32[dsp + 278720 + ((i19 | 0) << 2) >> 2] = 0.;
-			
-		}
-		for (i20 = 0; (((i20 | 0) < 2) | 0); i20 = (((i20 | 0) + 1) | 0)) {
-			HEAPF32[dsp + 278728 + ((i20 | 0) << 2) >> 2] = 0.;
-			
-		}
-		for (i21 = 0; (((i21 | 0) < 2) | 0); i21 = (((i21 | 0) + 1) | 0)) {
-			HEAPF32[dsp + 278736 + ((i21 | 0) << 2) >> 2] = 0.;
-			
-		}
-		HEAP32[dsp + 278968 >> 2] = 0;
-		for (i22 = 0; (((i22 | 0) < 4096) | 0); i22 = (((i22 | 0) + 1) | 0)) {
-			HEAPF32[dsp + 262148 + ((i22 | 0) << 2) >> 2] = 0.;
-			
-		}
-		HEAPF32[dsp + 278972 >> 2] = +(0.5 * +(HEAPF32[dsp + 278884 >> 2]));
-		for (i23 = 0; (((i23 | 0) < 2) | 0); i23 = (((i23 | 0) + 1) | 0)) {
-			HEAPF32[dsp + 278744 + ((i23 | 0) << 2) >> 2] = 0.;
-			
-		}
-		HEAPF32[dsp + 278976 >> 2] = +(0.00055 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		for (i24 = 0; (((i24 | 0) < 2) | 0); i24 = (((i24 | 0) + 1) | 0)) {
-			HEAP32[dsp + 278752 + ((i24 | 0) << 2) >> 2] = 0;
-			
-		}
-		HEAPF32[dsp + 278980 >> 2] = +(0.000502068 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 278984 >> 2] = +(0.000240964 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 278988 >> 2] = +(3829.89 / +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 278992 >> 2] = +(2299.1 / +((HEAP32[dsp + 278868 >> 2] | 0)));
-		for (i25 = 0; (((i25 | 0) < 2) | 0); i25 = (((i25 | 0) + 1) | 0)) {
-			HEAPF32[dsp + 278760 + ((i25 | 0) << 2) >> 2] = 0.;
-			
-		}
-		for (i26 = 0; (((i26 | 0) < 2) | 0); i26 = (((i26 | 0) + 1) | 0)) {
-			HEAPF32[dsp + 278768 + ((i26 | 0) << 2) >> 2] = 0.;
-			
-		}
-		HEAPF32[dsp + 278996 >> 2] = +(0.000943 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		for (i27 = 0; (((i27 | 0) < 2) | 0); i27 = (((i27 | 0) + 1) | 0)) {
-			HEAP32[dsp + 278776 + ((i27 | 0) << 2) >> 2] = 0;
-			
-		}
-		HEAPF32[dsp + 279000 >> 2] = +(0.000829679 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279004 >> 2] = +(0.000943333 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		for (i28 = 0; (((i28 | 0) < 4) | 0); i28 = (((i28 | 0) + 1) | 0)) {
-			HEAPF32[dsp + 278580 + ((i28 | 0) << 2) >> 2] = 0.;
-			
-		}
-		for (i29 = 0; (((i29 | 0) < 2) | 0); i29 = (((i29 | 0) + 1) | 0)) {
-			HEAPF32[dsp + 278784 + ((i29 | 0) << 2) >> 2] = 0.;
-			
-		}
-		HEAPF32[dsp + 279008 >> 2] = +(8798.63 / +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279012 >> 2] = +(0.000806948 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279016 >> 2] = +(43992.8 / +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279020 >> 2] = +(0.000716024 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279024 >> 2] = +(10998.2 / +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279028 >> 2] = +(0.000659197 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279032 >> 2] = +(17597.3 / +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279036 >> 2] = +(0.000613735 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279040 >> 2] = +(21996.4 / +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279044 >> 2] = +(0.000488715 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279048 >> 2] = +(7998.72 / +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279052 >> 2] = +(0.000431888 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279056 >> 2] = +(7637.21 / +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279060 >> 2] = +(0.000318233 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279064 >> 2] = +(8798.56 / +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279068 >> 2] = +(0.000193213 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279072 >> 2] = +(7.99872 / +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279076 >> 2] = +(0.000147751 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279080 >> 2] = +(21996.4 / +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279084 >> 2] = +(6768.14 / +((HEAP32[dsp + 278868 >> 2] | 0)));
-		for (i30 = 0; (((i30 | 0) < 2) | 0); i30 = (((i30 | 0) + 1) | 0)) {
-			HEAPF32[dsp + 278792 + ((i30 | 0) << 2) >> 2] = 0.;
-			
-		}
-		for (i31 = 0; (((i31 | 0) < 2) | 0); i31 = (((i31 | 0) + 1) | 0)) {
-			HEAPF32[dsp + 278800 + ((i31 | 0) << 2) >> 2] = 0.;
-			
-		}
-		for (i32 = 0; (((i32 | 0) < 2) | 0); i32 = (((i32 | 0) + 1) | 0)) {
-			HEAPF32[dsp + 278808 + ((i32 | 0) << 2) >> 2] = 0.;
-			
-		}
-		HEAPF32[dsp + 279088 >> 2] = +(0.00251 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		for (i33 = 0; (((i33 | 0) < 2) | 0); i33 = (((i33 | 0) + 1) | 0)) {
-			HEAP32[dsp + 278816 + ((i33 | 0) << 2) >> 2] = 0;
-			
-		}
-		HEAPF32[dsp + 279092 >> 2] = +(0.00218875 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279096 >> 2] = +(0.00208835 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279100 >> 2] = +(0.00182731 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279104 >> 2] = +(0.00174699 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279108 >> 2] = +(0.0015261 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279112 >> 2] = +(0.00134538 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279116 >> 2] = +(0.00106426 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279120 >> 2] = +(0.000983936 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279124 >> 2] = +(0.000682731 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279128 >> 2] = +(3320. / +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279132 >> 2] = +(0.000582329 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279136 >> 2] = +(9959.96 / +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279140 >> 2] = +(0.000461847 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279144 >> 2] = +(7702.4 / +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279148 >> 2] = +(6.0241e-05 * +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279152 >> 2] = +(2490. / +((HEAP32[dsp + 278868 >> 2] | 0)));
-		HEAPF32[dsp + 279156 >> 2] = +(16600. / +((HEAP32[dsp + 278868 >> 2] | 0)));
-		for (i34 = 0; (((i34 | 0) < 2) | 0); i34 = (((i34 | 0) + 1) | 0)) {
-			HEAPF32[dsp + 278824 + ((i34 | 0) << 2) >> 2] = 0.;
-			
-		}
-		for (i35 = 0; (((i35 | 0) < 2) | 0); i35 = (((i35 | 0) + 1) | 0)) {
-			HEAPF32[dsp + 278832 + ((i35 | 0) << 2) >> 2] = 0.;
-			
-		}
-		for (i36 = 0; (((i36 | 0) < 2) | 0); i36 = (((i36 | 0) + 1) | 0)) {
-			HEAPF32[dsp + 278840 + ((i36 | 0) << 2) >> 2] = 0.;
-			
-		}
-		HEAPF32[dsp + 279160 >> 2] = +(0. - +(+(1. - +(HEAPF32[dsp + 278872 >> 2])) / +(HEAPF32[dsp + 278876 >> 2])));
-		for (i37 = 0; (((i37 | 0) < 2) | 0); i37 = (((i37 | 0) + 1) | 0)) {
-			HEAPF32[dsp + 278848 + ((i37 | 0) << 2) >> 2] = 0.;
-			
-		}
-		
-	}
-	
-	function init(dsp, samplingFreq) {
-		dsp = dsp | 0;
-		samplingFreq = samplingFreq | 0;
-		classInit(dsp, samplingFreq);
-		instanceInit(dsp, samplingFreq);
-	}
-	
-	function setValue(dsp, offset, value) {
-		dsp = dsp | 0;
-		offset = offset | 0;
-		value = +value;
-		HEAPF32[dsp + offset >> 2] = value;
-	}
-	
-	function getValue(dsp, offset) {
-		dsp = dsp | 0;
-		offset = offset | 0;
-		return +HEAPF32[dsp + offset >> 2];
-	}
-	
-	function compute(dsp, count, inputs, outputs) {
-		dsp = dsp | 0;
-		count = count | 0;
-		inputs = inputs | 0;
-		outputs = outputs | 0;
-		var output0 = 0;
-		var output1 = 0;
-		var fSlow0 = 0.;
-		var fSlow1 = 0.;
-		var i = 0;
-		var iTemp0 = 0;
-		var iTemp1 = 0;
-		var fSel0 = 0.;
-		var iTemp2 = 0;
-		var fTemp3 = 0.;
-		var iTemp4 = 0;
-		var fTemp5 = 0.;
-		var iTemp6 = 0;
-		var fTemp7 = 0.;
-		var iTemp8 = 0;
-		var fTemp9 = 0.;
-		var iTemp10 = 0;
-		var fSel1 = 0.;
-		var fSel2 = 0.;
-		var fSel3 = 0.;
-		var fSel4 = 0.;
-		var fTemp11 = 0.;
-		var fSel5 = 0.;
-		var fTemp12 = 0.;
-		var fTemp13 = 0.;
-		var fTemp14 = 0.;
-		var fTemp15 = 0.;
-		var fTemp16 = 0.;
-		var fTemp17 = 0.;
-		var fTemp18 = 0.;
-		var iTemp19 = 0;
-		var iTemp20 = 0;
-		var iTemp21 = 0;
-		var fTemp22 = 0.;
-		var iTemp23 = 0;
-		var fSel6 = 0.;
-		var fSel7 = 0.;
-		var fTemp24 = 0.;
-		var iTemp25 = 0;
-		var fTemp26 = 0.;
-		var fTemp27 = 0.;
-		var fTemp28 = 0.;
-		var fTemp29 = 0.;
-		var iTemp30 = 0;
-		var fTemp31 = 0.;
-		var fSel8 = 0.;
-		var fTemp32 = 0.;
-		var iTemp33 = 0;
-		var fTemp34 = 0.;
-		var fTemp35 = 0.;
-		var iTemp36 = 0;
-		var fSel9 = 0.;
-		var fTemp37 = 0.;
-		var iTemp38 = 0;
-		var fTemp39 = 0.;
-		var iTemp40 = 0;
-		var fSel10 = 0.;
-		var fTemp41 = 0.;
-		var iTemp42 = 0;
-		var fTemp43 = 0.;
-		var iTemp44 = 0;
-		var fTemp45 = 0.;
-		var iTemp46 = 0;
-		var fSel11 = 0.;
-		var fTemp47 = 0.;
-		var iTemp48 = 0;
-		var fSel12 = 0.;
-		var fSel13 = 0.;
-		var fSel14 = 0.;
-		var fSel15 = 0.;
-		var fSel16 = 0.;
-		var fSel17 = 0.;
-		var fSel18 = 0.;
-		var fTemp49 = 0.;
-		var fTemp50 = 0.;
-		var iTemp51 = 0;
-		var iTemp52 = 0;
-		var fTemp53 = 0.;
-		var iTemp54 = 0;
-		var fTemp55 = 0.;
-		var iTemp56 = 0;
-		var fTemp57 = 0.;
-		var iTemp58 = 0;
-		var fTemp59 = 0.;
-		var iTemp60 = 0;
-		var fSel19 = 0.;
-		var fSel20 = 0.;
-		var fSel21 = 0.;
-		var fSel22 = 0.;
-		var fSel23 = 0.;
-		var fTemp61 = 0.;
-		var fTemp62 = 0.;
-		var j0 = 3;
-		var j1 = 3;
-		var j2 = 3;
-		var j3 = 3;
-		output0 = (HEAP32[outputs + (0 << 2) >> 2] | 0);
-		output1 = (HEAP32[outputs + (1 << 2) >> 2] | 0);
-		fSlow0 = +(0.001 * +(+(HEAPF32[dsp + 278920 >> 2])));
-		fSlow1 = +(1.e-05 * +(+(HEAPF32[dsp + 278924 >> 2])));
-		for (i = 0; (((i | 0) < (count | 0)) | 0); i = (((i | 0) + 1) | 0)) {
-			HEAP32[dsp + 278596 + (0 << 2) >> 2] = 1;
-			HEAPF32[dsp + 278608 + (0 << 2) >> 2] = +(+(0.999 * +(HEAPF32[dsp + 278608 + (1 << 2) >> 2])) + +(fSlow0));
-			HEAP32[dsp + 278616 + (0 << 2) >> 2] = ((((1 + (HEAP32[dsp + 278616 + (1 << 2) >> 2] | 0)) | 0) % ~~(+(+((HEAP32[dsp + 278916 >> 2] | 0)) / +(HEAPF32[dsp + 278608 + (0 << 2) >> 2])))) | 0);
-			HEAP32[dsp + 278624 + (0 << 2) >> 2] = ((12345 + (imul(1103515245, (HEAP32[dsp + 278624 + (1 << 2) >> 2] | 0)) | 0)) | 0);
-			HEAPF32[dsp + 278632 + (0 << 2) >> 2] = +(+(0.999 * +(HEAPF32[dsp + 278632 + (1 << 2) >> 2])) + +(fSlow1));
-			iTemp0 = (imul((((HEAP32[dsp + 278616 + (0 << 2) >> 2] | 0) == 0) | 0), ((+(fabsf(+(4.65661e-10 * +((HEAP32[dsp + 278624 + (0 << 2) >> 2] | 0))))) <= +(HEAPF32[dsp + 278632 + (0 << 2) >> 2])) | 0)) | 0);
-			HEAP32[dsp + 278640 + (0 << 2) >> 2] = (iTemp0 | 0);
-			HEAPF32[dsp + 278648 + (0 << 2) >> 2] = +(+(+(HEAPF32[dsp + 278648 + (1 << 2) >> 2]) + +(((+((((iTemp0 | 0) - (HEAP32[dsp + 278640 + (1 << 2) >> 2] | 0)) | 0)) > 0.) | 0))) - +(0.0208333 * +(((+(HEAPF32[dsp + 278648 + (1 << 2) >> 2]) > 0.) | 0))));
-			iTemp1 = ((+(HEAPF32[dsp + 278648 + (0 << 2) >> 2]) > 0.) | 0);
-			HEAPF32[dsp + 278532 + (0 << 2) >> 2] = +(fmodf(+(((38125 + ~~(+(2994.23 * +(+(HEAPF32[dsp + 278532 + (2 << 2) >> 2]) + +(HEAPF32[dsp + 278532 + (3 << 2) >> 2]))))) | 0)), 2900.));
-			fSel0 = 0.;
-			if (((iTemp1 | 0) != 0) | 0) {
-				fSel0 = +(100. + +(HEAPF32[dsp + 278532 + (0 << 2) >> 2]));
-				
-			} else {
-				fSel0 = +(HEAPF32[dsp + 278656 + (1 << 2) >> 2]);
-				
-			}
-			HEAPF32[dsp + 278656 + (0 << 2) >> 2] = +(fSel0);
-			iTemp2 = ~~(+(+(HEAPF32[dsp + 278912 >> 2]) * +(fabsf(+(+(HEAPF32[dsp + 278656 + (0 << 2) >> 2]) - 1.)))));
-			HEAP32[dsp + 278664 + (0 << 2) >> 2] = (iTemp2 | 0);
-			HEAP32[dsp + 278672 + (0 << 2) >> 2] = (imul((((iTemp2 | 0) == (HEAP32[dsp + 278664 + (1 << 2) >> 2] | 0)) | 0), ((1 + (HEAP32[dsp + 278672 + (1 << 2) >> 2] | 0)) | 0)) | 0);
-			HEAPF32[dsp + 278548 + (0 << 2) >> 2] = +(fmodf(+(((38125 + ~~(+(2994.23 * +(+(HEAPF32[dsp + 278548 + (2 << 2) >> 2]) + +(HEAPF32[dsp + 278548 + (3 << 2) >> 2]))))) | 0)), 2000.));
-			HEAPF32[dsp + 278680 + (0 << 2) >> 2] = +((iTemp1 | 0)?+(HEAPF32[dsp + 278548 + (0 << 2) >> 2]):+(HEAPF32[dsp + 278680 + (1 << 2) >> 2]));
-			fTemp3 = +(fabsf(+(+(HEAPF32[dsp + 278680 + (0 << 2) >> 2]) - 1.)));
-			HEAP32[dsp + 278688 + (0 << 2) >> 2] = ((((+((HEAP32[dsp + 278672 + (0 << 2) >> 2] | 0)) < +(+(HEAPF32[dsp + 278928 >> 2]) * +(fTemp3))) | 0)?(HEAP32[dsp + 278672 + (0 << 2) >> 2] | 0):(HEAP32[dsp + 278688 + (1 << 2) >> 2] | 0)) | 0);
-			iTemp4 = ((+((HEAP32[dsp + 278688 + (0 << 2) >> 2] | 0)) < +(+(HEAPF32[dsp + 278932 >> 2]) * +(fTemp3))) | 0);
-			fTemp5 = +(+(HEAPF32[dsp + 278936 >> 2]) * +(fTemp3));
-			iTemp6 = ((+((HEAP32[dsp + 278688 + (0 << 2) >> 2] | 0)) < +(fTemp5)) | 0);
-			fTemp7 = +(+(HEAPF32[dsp + 278944 >> 2]) * +(fTemp3));
-			iTemp8 = ((+((HEAP32[dsp + 278688 + (0 << 2) >> 2] | 0)) < +(fTemp7)) | 0);
-			fTemp9 = +(+(HEAPF32[dsp + 278952 >> 2]) * +(fTemp3));
-			iTemp10 = ((+((HEAP32[dsp + 278688 + (0 << 2) >> 2] | 0)) < +(fTemp9)) | 0);
-			fSel1 = 0.;
-			if (((((HEAP32[dsp + 278688 + (0 << 2) >> 2] | 0) < 0) | 0) != 0) | 0) {
-				fSel1 = 0.;
-				
-			} else {
-				fSel1 = +((iTemp10 | 0)?+(+(HEAPF32[dsp + 278960 >> 2]) * +(+((HEAP32[dsp + 278688 + (0 << 2) >> 2] | 0)) / +(fTemp3))):0.49);
-				
-			}
-			fSel2 = 0.;
-			if (((iTemp10 | 0) != 0) | 0) {
-				fSel2 = +(fSel1);
-				
-			} else {
-				fSel2 = +((iTemp8 | 0)?+(0.49 + +(+(HEAPF32[dsp + 278956 >> 2]) * +(+(0. - +(0.49 * +(+((HEAP32[dsp + 278688 + (0 << 2) >> 2] | 0)) - +(fTemp9)))) / +(fTemp3)))):0.);
-				
-			}
-			fSel3 = 0.;
-			if (((iTemp8 | 0) != 0) | 0) {
-				fSel3 = +(fSel2);
-				
-			} else {
-				fSel3 = +((iTemp6 | 0)?+(+(HEAPF32[dsp + 278948 >> 2]) * +(+(+((HEAP32[dsp + 278688 + (0 << 2) >> 2] | 0)) - +(fTemp7)) / +(fTemp3))):1.);
-				
-			}
-			fSel4 = 0.;
-			if (((iTemp6 | 0) != 0) | 0) {
-				fSel4 = +(fSel3);
-				
-			} else {
-				fSel4 = +((iTemp4 | 0)?+(1. + +(+(HEAPF32[dsp + 278940 >> 2]) * +(+(0. - +(+((HEAP32[dsp + 278688 + (0 << 2) >> 2] | 0)) - +(fTemp5))) / +(fTemp3)))):0.);
-				
-			}
-			HEAPF32[dsp + 278696 + (0 << 2) >> 2] = +(+(0.999 * +(HEAPF32[dsp + 278696 + (1 << 2) >> 2])) + +(0.001 * +((iTemp4 | 0)?+(fSel4):0.)));
-			HEAPF32[dsp + 278704 + (0 << 2) >> 2] = +(+(+(HEAPF32[dsp + 278908 >> 2]) * +(+(HEAPF32[dsp + 278696 + (0 << 2) >> 2]) + +(HEAPF32[dsp + 278696 + (1 << 2) >> 2]))) + +(+(HEAPF32[dsp + 278964 >> 2]) * +(HEAPF32[dsp + 278704 + (1 << 2) >> 2])));
-			fTemp11 = +(1. + +(HEAPF32[dsp + 278704 + (0 << 2) >> 2]));
-			HEAPF32[dsp + 278564 + (0 << 2) >> 2] = +(fmodf(+(((38125 + ~~(+(2994.23 * +(+(HEAPF32[dsp + 278564 + (2 << 2) >> 2]) + +(HEAPF32[dsp + 278564 + (3 << 2) >> 2]))))) | 0)), 22.));
-			fSel5 = 0.;
-			if (((iTemp1 | 0) != 0) | 0) {
-				fSel5 = +(72. + +(HEAPF32[dsp + 278564 + (0 << 2) >> 2]));
-				
-			} else {
-				fSel5 = +(HEAPF32[dsp + 278712 + (1 << 2) >> 2]);
-				
-			}
-			HEAPF32[dsp + 278712 + (0 << 2) >> 2] = +(fSel5);
-			fTemp12 = +(powf(2., +(0.0833333 * +(+(fabsf(+(+(HEAPF32[dsp + 278712 + (0 << 2) >> 2]) - 1.))) - 69.))));
-			fTemp13 = +(max(+(27.72 * +(+(fTemp11) * +(fTemp12))), 23.4489));
-			HEAPF32[dsp + 278720 + (0 << 2) >> 2] = +(fmodf(+(+(HEAPF32[dsp + 278720 + (1 << 2) >> 2]) + +(+(HEAPF32[dsp + 278888 >> 2]) * +(fTemp13))), 1.));
-			fTemp14 = +(2. * +(HEAPF32[dsp + 278720 + (0 << 2) >> 2]));
-			fTemp15 = +(1. + +(faustpower3_f(+(+(fTemp14) - 1.))));
-			HEAPF32[dsp + 278728 + (0 << 2) >> 2] = +(+(fTemp15) - +(fTemp14));
-			fTemp16 = +(+(+(fTemp15) - +(+(fTemp14) + +(HEAPF32[dsp + 278728 + (1 << 2) >> 2]))) / +(fTemp13));
-			HEAPF32[dsp + 278736 + (0 << 2) >> 2] = +(fTemp16);
-			fTemp17 = +(+(+((HEAP32[dsp + 278596 + (2 << 2) >> 2] | 0)) * +(+(0.5 * +(fTemp16)) - +(0.5 * +(HEAPF32[dsp + 278736 + (1 << 2) >> 2])))) / +(fTemp13));
-			HEAPF32[dsp + 262148 + ((((HEAP32[dsp + 278968 >> 2] | 0) & 4095) | 0) << 2) >> 2] = +(fTemp17);
-			fTemp18 = +(max(0., +(min(2047., +(+(HEAPF32[dsp + 278972 >> 2]) / +(fTemp13))))));
-			iTemp19 = ~~(+(fTemp18));
-			iTemp20 = ((1 + (iTemp19 | 0)) | 0);
-			HEAPF32[dsp + 278744 + (0 << 2) >> 2] = +(+(0.999 * +(HEAPF32[dsp + 278744 + (1 << 2) >> 2])) + +(+(HEAPF32[dsp + 278896 >> 2]) * +(+(+(0.0833333 * +(fTemp17)) - +(0.0833333 * +(+(HEAPF32[dsp + 262148 + ((((((HEAP32[dsp + 278968 >> 2] | 0) - (iTemp19 | 0)) | 0) & 4095) | 0) << 2) >> 2]) * +(+((iTemp20 | 0)) - +(fTemp18))))) - +(0.0833333 * +(+(+(fTemp18) - +((iTemp19 | 0))) * +(HEAPF32[dsp + 262148 + ((((((HEAP32[dsp + 278968 >> 2] | 0) - (iTemp20 | 0)) | 0) & 4095) | 0) << 2) >> 2]))))));
-			HEAP32[dsp + 278752 + (0 << 2) >> 2] = ((((+((HEAP32[dsp + 278672 + (0 << 2) >> 2] | 0)) < +(+(HEAPF32[dsp + 278976 >> 2]) * +(fTemp3))) | 0)?(HEAP32[dsp + 278672 + (0 << 2) >> 2] | 0):(HEAP32[dsp + 278752 + (1 << 2) >> 2] | 0)) | 0);
-			iTemp21 = ((+((HEAP32[dsp + 278752 + (0 << 2) >> 2] | 0)) < +(+(HEAPF32[dsp + 278980 >> 2]) * +(fTemp3))) | 0);
-			fTemp22 = +(+(HEAPF32[dsp + 278984 >> 2]) * +(fTemp3));
-			iTemp23 = ((+((HEAP32[dsp + 278752 + (0 << 2) >> 2] | 0)) < +(fTemp22)) | 0);
-			fSel6 = 0.;
-			if (((((HEAP32[dsp + 278752 + (0 << 2) >> 2] | 0) < 0) | 0) != 0) | 0) {
-				fSel6 = 0.;
-				
-			} else {
-				fSel6 = +((iTemp23 | 0)?+(+(HEAPF32[dsp + 278992 >> 2]) * +(+((HEAP32[dsp + 278752 + (0 << 2) >> 2] | 0)) / +(fTemp3))):0.554);
-				
-			}
-			fSel7 = 0.;
-			if (((iTemp23 | 0) != 0) | 0) {
-				fSel7 = +(fSel6);
-				
-			} else {
-				fSel7 = +((iTemp21 | 0)?+(0.554 + +(+(HEAPF32[dsp + 278988 >> 2]) * +(+(0. - +(0.554 * +(+((HEAP32[dsp + 278752 + (0 << 2) >> 2] | 0)) - +(fTemp22)))) / +(fTemp3)))):0.);
-				
-			}
-			HEAPF32[dsp + 278760 + (0 << 2) >> 2] = +(+(0.001 * +((iTemp21 | 0)?+(fSel7):0.)) + +(0.999 * +(HEAPF32[dsp + 278760 + (1 << 2) >> 2])));
-			HEAPF32[dsp + 278768 + (0 << 2) >> 2] = +(+(+(HEAPF32[dsp + 278908 >> 2]) * +(+(HEAPF32[dsp + 278760 + (0 << 2) >> 2]) + +(HEAPF32[dsp + 278760 + (1 << 2) >> 2]))) + +(+(HEAPF32[dsp + 278964 >> 2]) * +(HEAPF32[dsp + 278768 + (1 << 2) >> 2])));
-			HEAP32[dsp + 278776 + (0 << 2) >> 2] = ((((+((HEAP32[dsp + 278672 + (0 << 2) >> 2] | 0)) < +(+(HEAPF32[dsp + 278996 >> 2]) * +(fTemp3))) | 0)?(HEAP32[dsp + 278672 + (0 << 2) >> 2] | 0):(HEAP32[dsp + 278776 + (1 << 2) >> 2] | 0)) | 0);
-			fTemp24 = +(+(HEAPF32[dsp + 279000 >> 2]) * +(fTemp3));
-			iTemp25 = ((+((HEAP32[dsp + 278776 + (0 << 2) >> 2] | 0)) < +(fTemp24)) | 0);
-			HEAPF32[dsp + 278580 + (0 << 2) >> 2] = +(fmodf(+(((38125 + ~~(+(2994.23 * +(+(HEAPF32[dsp + 278580 + (2 << 2) >> 2]) + +(HEAPF32[dsp + 278580 + (3 << 2) >> 2]))))) | 0)), 1000.));
-			HEAPF32[dsp + 278784 + (0 << 2) >> 2] = +((iTemp1 | 0)?+(HEAPF32[dsp + 278580 + (0 << 2) >> 2]):+(HEAPF32[dsp + 278784 + (1 << 2) >> 2]));
-			fTemp26 = +(fabsf(+(+(HEAPF32[dsp + 278784 + (0 << 2) >> 2]) - 1.)));
-			fTemp27 = +(0.001 * +(fTemp26));
-			fTemp28 = +(0. - +(fTemp27));
-			fTemp29 = +(+(HEAPF32[dsp + 279012 >> 2]) * +(fTemp3));
-			iTemp30 = ((+((HEAP32[dsp + 278776 + (0 << 2) >> 2] | 0)) < +(fTemp29)) | 0);
-			fTemp31 = +(+(fTemp27) - 1.);
-			fSel8 = 0.;
-			if (((iTemp25 | 0) != 0) | 0) {
-				fSel8 = +(1. + +(+(HEAPF32[dsp + 279016 >> 2]) * +(+(+(+((HEAP32[dsp + 278776 + (0 << 2) >> 2] | 0)) - +(fTemp29)) * +(fTemp31)) / +(fTemp3))));
-				
-			} else {
-				fSel8 = +(fTemp27);
-				
-			}
-			fTemp32 = +(+(HEAPF32[dsp + 279020 >> 2]) * +(fTemp3));
-			iTemp33 = ((+((HEAP32[dsp + 278776 + (0 << 2) >> 2] | 0)) < +(fTemp32)) | 0);
-			fTemp34 = +(1. - +(fTemp27));
-			fTemp35 = +(+(HEAPF32[dsp + 279028 >> 2]) * +(fTemp3));
-			iTemp36 = ((+((HEAP32[dsp + 278776 + (0 << 2) >> 2] | 0)) < +(fTemp35)) | 0);
-			fSel9 = 0.;
-			if (((iTemp33 | 0) != 0) | 0) {
-				fSel9 = +(1. + +(+(HEAPF32[dsp + 279032 >> 2]) * +(+(+(fTemp31) * +(+((HEAP32[dsp + 278776 + (0 << 2) >> 2] | 0)) - +(fTemp35))) / +(fTemp3))));
-				
-			} else {
-				fSel9 = +(fTemp27);
-				
-			}
-			fTemp37 = +(+(HEAPF32[dsp + 279036 >> 2]) * +(fTemp3));
-			iTemp38 = ((+((HEAP32[dsp + 278776 + (0 << 2) >> 2] | 0)) < +(fTemp37)) | 0);
-			fTemp39 = +(+(HEAPF32[dsp + 279044 >> 2]) * +(fTemp3));
-			iTemp40 = ((+((HEAP32[dsp + 278776 + (0 << 2) >> 2] | 0)) < +(fTemp39)) | 0);
-			fSel10 = 0.;
-			if (((iTemp38 | 0) != 0) | 0) {
-				fSel10 = +(0.434 + +(+(HEAPF32[dsp + 279048 >> 2]) * +(+(+(+((HEAP32[dsp + 278776 + (0 << 2) >> 2] | 0)) - +(fTemp39)) * +(+(fTemp27) - 0.434)) / +(fTemp3))));
-				
-			} else {
-				fSel10 = +(fTemp27);
-				
-			}
-			fTemp41 = +(+(HEAPF32[dsp + 279052 >> 2]) * +(fTemp3));
-			iTemp42 = ((+((HEAP32[dsp + 278776 + (0 << 2) >> 2] | 0)) < +(fTemp41)) | 0);
-			fTemp43 = +(+(HEAPF32[dsp + 279060 >> 2]) * +(fTemp3));
-			iTemp44 = ((+((HEAP32[dsp + 278776 + (0 << 2) >> 2] | 0)) < +(fTemp43)) | 0);
-			fTemp45 = +(+(HEAPF32[dsp + 279068 >> 2]) * +(fTemp3));
-			iTemp46 = ((+((HEAP32[dsp + 278776 + (0 << 2) >> 2] | 0)) < +(fTemp45)) | 0);
-			fSel11 = 0.;
-			if (((iTemp44 | 0) != 0) | 0) {
-				fSel11 = +(+(HEAPF32[dsp + 279072 >> 2]) * +(+(+(+((HEAP32[dsp + 278776 + (0 << 2) >> 2] | 0)) - +(fTemp45)) * +(fTemp26)) / +(fTemp3)));
-				
-			} else {
-				fSel11 = +(fTemp27);
-				
-			}
-			fTemp47 = +(+(HEAPF32[dsp + 279076 >> 2]) * +(fTemp3));
-			iTemp48 = ((+((HEAP32[dsp + 278776 + (0 << 2) >> 2] | 0)) < +(fTemp47)) | 0);
-			fSel12 = 0.;
-			if (((((HEAP32[dsp + 278776 + (0 << 2) >> 2] | 0) < 0) | 0) != 0) | 0) {
-				fSel12 = 0.;
-				
-			} else {
-				fSel12 = +((iTemp48 | 0)?+(+(HEAPF32[dsp + 279084 >> 2]) * +(+((HEAP32[dsp + 278776 + (0 << 2) >> 2] | 0)) / +(fTemp3))):1.);
-				
-			}
-			fSel13 = 0.;
-			if (((iTemp48 | 0) != 0) | 0) {
-				fSel13 = +(fSel12);
-				
-			} else {
-				fSel13 = +((iTemp46 | 0)?+(1. + +(+(HEAPF32[dsp + 279080 >> 2]) * +(+(0. - +(+((HEAP32[dsp + 278776 + (0 << 2) >> 2] | 0)) - +(fTemp47))) / +(fTemp3)))):0.);
-				
-			}
-			fSel14 = 0.;
-			if (((iTemp44 | 0) != 0) | 0) {
-				fSel14 = +((iTemp46 | 0)?+(fSel13):+(fSel11));
-				
-			} else {
-				fSel14 = +((iTemp42 | 0)?+(+(fTemp27) + +(+(HEAPF32[dsp + 279064 >> 2]) * +(+(+(fTemp28) * +(+((HEAP32[dsp + 278776 + (0 << 2) >> 2] | 0)) - +(fTemp43))) / +(fTemp3)))):0.);
-				
-			}
-			fSel15 = 0.;
-			if (((iTemp42 | 0) != 0) | 0) {
-				fSel15 = +(fSel14);
-				
-			} else {
-				fSel15 = +((iTemp40 | 0)?+(+(HEAPF32[dsp + 279056 >> 2]) * +(+(+((HEAP32[dsp + 278776 + (0 << 2) >> 2] | 0)) - +(fTemp41)) / +(fTemp3))):0.434);
-				
-			}
-			fSel16 = 0.;
-			if (((iTemp38 | 0) != 0) | 0) {
-				fSel16 = +((iTemp40 | 0)?+(fSel15):+(fSel10));
-				
-			} else {
-				fSel16 = +((iTemp36 | 0)?+(+(fTemp27) + +(+(HEAPF32[dsp + 279040 >> 2]) * +(+(+(fTemp34) * +(+((HEAP32[dsp + 278776 + (0 << 2) >> 2] | 0)) - +(fTemp37))) / +(fTemp3)))):1.);
-				
-			}
-			fSel17 = 0.;
-			if (((iTemp33 | 0) != 0) | 0) {
-				fSel17 = +((iTemp36 | 0)?+(fSel16):+(fSel9));
-				
-			} else {
-				fSel17 = +((iTemp30 | 0)?+(+(fTemp27) + +(+(HEAPF32[dsp + 279024 >> 2]) * +(+(+(+((HEAP32[dsp + 278776 + (0 << 2) >> 2] | 0)) - +(fTemp32)) * +(fTemp34)) / +(fTemp3)))):1.);
-				
-			}
-			fSel18 = 0.;
-			if (((iTemp25 | 0) != 0) | 0) {
-				fSel18 = +((iTemp30 | 0)?+(fSel17):+(fSel8));
-				
-			} else {
-				fSel18 = +(((+((HEAP32[dsp + 278776 + (0 << 2) >> 2] | 0)) < +(+(HEAPF32[dsp + 279004 >> 2]) * +(fTemp3))) | 0)?+(+(fTemp27) + +(+(HEAPF32[dsp + 279008 >> 2]) * +(+(+(+((HEAP32[dsp + 278776 + (0 << 2) >> 2] | 0)) - +(fTemp24)) * +(fTemp28)) / +(fTemp3)))):0.);
-				
-			}
-			HEAPF32[dsp + 278792 + (0 << 2) >> 2] = +(+(0.999 * +(HEAPF32[dsp + 278792 + (1 << 2) >> 2])) + +(0.001 * +(fSel18)));
-			HEAPF32[dsp + 278800 + (0 << 2) >> 2] = +(+(+(HEAPF32[dsp + 278964 >> 2]) * +(HEAPF32[dsp + 278800 + (1 << 2) >> 2])) + +(+(HEAPF32[dsp + 278908 >> 2]) * +(+(HEAPF32[dsp + 278792 + (1 << 2) >> 2]) + +(HEAPF32[dsp + 278792 + (0 << 2) >> 2]))));
-			fTemp49 = +(+(+(HEAPF32[dsp + 278888 >> 2]) * +(+(+(440. + +(+(HEAPF32[dsp + 278892 >> 2]) * +(+(+(HEAPF32[dsp + 278744 + (0 << 2) >> 2]) * +(fTemp11)) * +(1. + +(HEAPF32[dsp + 278768 + (0 << 2) >> 2]))))) * +(1. + +(HEAPF32[dsp + 278800 + (0 << 2) >> 2]))) * +(fTemp12))) + +(HEAPF32[dsp + 278808 + (1 << 2) >> 2]));
-			HEAPF32[dsp + 278808 + (0 << 2) >> 2] = +(+(fTemp49) - +(floorf(+(fTemp49))));
-			fTemp50 = +(65536. * +(HEAPF32[dsp + 278808 + (0 << 2) >> 2]));
-			iTemp51 = ~~(+(fTemp50));
-			HEAP32[dsp + 278816 + (0 << 2) >> 2] = ((((+((HEAP32[dsp + 278672 + (0 << 2) >> 2] | 0)) < +(+(HEAPF32[dsp + 279088 >> 2]) * +(fTemp3))) | 0)?(HEAP32[dsp + 278672 + (0 << 2) >> 2] | 0):(HEAP32[dsp + 278816 + (1 << 2) >> 2] | 0)) | 0);
-			iTemp52 = ((+((HEAP32[dsp + 278816 + (0 << 2) >> 2] | 0)) < +(+(HEAPF32[dsp + 279120 >> 2]) * +(fTemp3))) | 0);
-			fTemp53 = +(+(HEAPF32[dsp + 279124 >> 2]) * +(fTemp3));
-			iTemp54 = ((+((HEAP32[dsp + 278816 + (0 << 2) >> 2] | 0)) < +(fTemp53)) | 0);
-			fTemp55 = +(+(HEAPF32[dsp + 279132 >> 2]) * +(fTemp3));
-			iTemp56 = ((+((HEAP32[dsp + 278816 + (0 << 2) >> 2] | 0)) < +(fTemp55)) | 0);
-			fTemp57 = +(+(HEAPF32[dsp + 279140 >> 2]) * +(fTemp3));
-			iTemp58 = ((+((HEAP32[dsp + 278816 + (0 << 2) >> 2] | 0)) < +(fTemp57)) | 0);
-			fTemp59 = +(+(HEAPF32[dsp + 279148 >> 2]) * +(fTemp3));
-			iTemp60 = ((+((HEAP32[dsp + 278816 + (0 << 2) >> 2] | 0)) < +(fTemp59)) | 0);
-			fSel19 = 0.;
-			if (((((HEAP32[dsp + 278816 + (0 << 2) >> 2] | 0) < 0) | 0) != 0) | 0) {
-				fSel19 = 0.;
-				
-			} else {
-				fSel19 = +((iTemp60 | 0)?+(+(HEAPF32[dsp + 279156 >> 2]) * +(+((HEAP32[dsp + 278816 + (0 << 2) >> 2] | 0)) / +(fTemp3))):1.);
-				
-			}
-			fSel20 = 0.;
-			if (((iTemp60 | 0) != 0) | 0) {
-				fSel20 = +(fSel19);
-				
-			} else {
-				fSel20 = +((iTemp58 | 0)?+(1. + +(+(HEAPF32[dsp + 279152 >> 2]) * +(+(0. - +(+((HEAP32[dsp + 278816 + (0 << 2) >> 2] | 0)) - +(fTemp59))) / +(fTemp3)))):0.);
-				
-			}
-			fSel21 = 0.;
-			if (((iTemp58 | 0) != 0) | 0) {
-				fSel21 = +(fSel20);
-				
-			} else {
-				fSel21 = +((iTemp56 | 0)?+(+(HEAPF32[dsp + 279144 >> 2]) * +(+(+((HEAP32[dsp + 278816 + (0 << 2) >> 2] | 0)) - +(fTemp57)) / +(fTemp3))):0.928);
-				
-			}
-			fSel22 = 0.;
-			if (((iTemp56 | 0) != 0) | 0) {
-				fSel22 = +(fSel21);
-				
-			} else {
-				fSel22 = +((iTemp54 | 0)?+(0.928 + +(+(HEAPF32[dsp + 279136 >> 2]) * +(+(0. - +(0.428 * +(+((HEAP32[dsp + 278816 + (0 << 2) >> 2] | 0)) - +(fTemp55)))) / +(fTemp3)))):0.5);
-				
-			}
-			fSel23 = 0.;
-			if (((iTemp54 | 0) != 0) | 0) {
-				fSel23 = +(fSel22);
-				
-			} else {
-				fSel23 = +((iTemp52 | 0)?+(0.5 + +(+(HEAPF32[dsp + 279128 >> 2]) * +(+(0. - +(0.5 * +(+((HEAP32[dsp + 278816 + (0 << 2) >> 2] | 0)) - +(fTemp53)))) / +(fTemp3)))):0.);
-				
-			}
-			HEAPF32[dsp + 278824 + (0 << 2) >> 2] = +(+(0.999 * +(HEAPF32[dsp + 278824 + (1 << 2) >> 2])) + +(0.001 * +(((+((HEAP32[dsp + 278816 + (0 << 2) >> 2] | 0)) < +(+(HEAPF32[dsp + 279092 >> 2]) * +(fTemp3))) | 0)?+(((+((HEAP32[dsp + 278816 + (0 << 2) >> 2] | 0)) < +(+(HEAPF32[dsp + 279096 >> 2]) * +(fTemp3))) | 0)?+(((+((HEAP32[dsp + 278816 + (0 << 2) >> 2] | 0)) < +(+(HEAPF32[dsp + 279100 >> 2]) * +(fTemp3))) | 0)?+(((+((HEAP32[dsp + 278816 + (0 << 2) >> 2] | 0)) < +(+(HEAPF32[dsp + 279104 >> 2]) * +(fTemp3))) | 0)?+(((+((HEAP32[dsp + 278816 + (0 << 2) >> 2] | 0)) < +(+(HEAPF32[dsp + 279108 >> 2]) * +(fTemp3))) | 0)?+(((+((HEAP32[dsp + 278816 + (0 << 2) >> 2] | 0)) < +(+(HEAPF32[dsp + 279112 >> 2]) * +(fTemp3))) | 0)?+(((+((HEAP32[dsp + 278816 + (0 << 2) >> 2] | 0)) < +(+(HEAPF32[dsp + 279116 >> 2]) * +(fTemp3))) | 0)?+((iTemp52 | 0)?+(fSel23):0.):0.):0.):0.):0.):0.):0.):0.)));
-			HEAPF32[dsp + 278832 + (0 << 2) >> 2] = +(+(+(HEAPF32[dsp + 278964 >> 2]) * +(HEAPF32[dsp + 278832 + (1 << 2) >> 2])) + +(+(HEAPF32[dsp + 278908 >> 2]) * +(+(HEAPF32[dsp + 278824 + (1 << 2) >> 2]) + +(HEAPF32[dsp + 278824 + (0 << 2) >> 2]))));
-			fTemp61 = +(+(+(HEAPF32[dsp + 0 + ((iTemp51 | 0) << 2) >> 2]) + +(+(+(fTemp50) - +(floorf(+(fTemp50)))) * +(+(HEAPF32[dsp + 0 + (((1 + (iTemp51 | 0)) | 0) << 2) >> 2]) - +(HEAPF32[dsp + 0 + ((iTemp51 | 0) << 2) >> 2])))) * +(HEAPF32[dsp + 278832 + (0 << 2) >> 2]));
-			HEAPF32[dsp + 278840 + (0 << 2) >> 2] = +(fTemp61);
-			HEAPF32[dsp + 278848 + (0 << 2) >> 2] = +(+(+(HEAPF32[dsp + 278880 >> 2]) * +(+(fTemp61) + +(HEAPF32[dsp + 278840 + (1 << 2) >> 2]))) + +(+(HEAPF32[dsp + 279160 >> 2]) * +(HEAPF32[dsp + 278848 + (1 << 2) >> 2])));
-			fTemp62 = +(0.8 * +(HEAPF32[dsp + 278848 + (0 << 2) >> 2]));
-			HEAPF32[output0 + ((i | 0) << 2) >> 2] = +(+(fTemp62));
-			HEAPF32[output1 + ((i | 0) << 2) >> 2] = +(+(fTemp62));
-			HEAP32[dsp + 278596 + (2 << 2) >> 2] = (HEAP32[dsp + 278596 + (1 << 2) >> 2] | 0);
-			HEAP32[dsp + 278596 + (1 << 2) >> 2] = (HEAP32[dsp + 278596 + (0 << 2) >> 2] | 0);
-			HEAPF32[dsp + 278608 + (1 << 2) >> 2] = +(HEAPF32[dsp + 278608 + (0 << 2) >> 2]);
-			HEAP32[dsp + 278616 + (1 << 2) >> 2] = (HEAP32[dsp + 278616 + (0 << 2) >> 2] | 0);
-			HEAP32[dsp + 278624 + (1 << 2) >> 2] = (HEAP32[dsp + 278624 + (0 << 2) >> 2] | 0);
-			HEAPF32[dsp + 278632 + (1 << 2) >> 2] = +(HEAPF32[dsp + 278632 + (0 << 2) >> 2]);
-			HEAP32[dsp + 278640 + (1 << 2) >> 2] = (HEAP32[dsp + 278640 + (0 << 2) >> 2] | 0);
-			HEAPF32[dsp + 278648 + (1 << 2) >> 2] = +(HEAPF32[dsp + 278648 + (0 << 2) >> 2]);
-			for (j0 = 3; (((j0 | 0) > 0) | 0); j0 = (((j0 | 0) - 1) | 0)) {
-				HEAPF32[dsp + 278532 + ((j0 | 0) << 2) >> 2] = +(HEAPF32[dsp + 278532 + ((((j0 | 0) - 1) | 0) << 2) >> 2]);
-				
-			}
-			HEAPF32[dsp + 278656 + (1 << 2) >> 2] = +(HEAPF32[dsp + 278656 + (0 << 2) >> 2]);
-			HEAP32[dsp + 278664 + (1 << 2) >> 2] = (HEAP32[dsp + 278664 + (0 << 2) >> 2] | 0);
-			HEAP32[dsp + 278672 + (1 << 2) >> 2] = (HEAP32[dsp + 278672 + (0 << 2) >> 2] | 0);
-			for (j1 = 3; (((j1 | 0) > 0) | 0); j1 = (((j1 | 0) - 1) | 0)) {
-				HEAPF32[dsp + 278548 + ((j1 | 0) << 2) >> 2] = +(HEAPF32[dsp + 278548 + ((((j1 | 0) - 1) | 0) << 2) >> 2]);
-				
-			}
-			HEAPF32[dsp + 278680 + (1 << 2) >> 2] = +(HEAPF32[dsp + 278680 + (0 << 2) >> 2]);
-			HEAP32[dsp + 278688 + (1 << 2) >> 2] = (HEAP32[dsp + 278688 + (0 << 2) >> 2] | 0);
-			HEAPF32[dsp + 278696 + (1 << 2) >> 2] = +(HEAPF32[dsp + 278696 + (0 << 2) >> 2]);
-			HEAPF32[dsp + 278704 + (1 << 2) >> 2] = +(HEAPF32[dsp + 278704 + (0 << 2) >> 2]);
-			for (j2 = 3; (((j2 | 0) > 0) | 0); j2 = (((j2 | 0) - 1) | 0)) {
-				HEAPF32[dsp + 278564 + ((j2 | 0) << 2) >> 2] = +(HEAPF32[dsp + 278564 + ((((j2 | 0) - 1) | 0) << 2) >> 2]);
-				
-			}
-			HEAPF32[dsp + 278712 + (1 << 2) >> 2] = +(HEAPF32[dsp + 278712 + (0 << 2) >> 2]);
-			HEAPF32[dsp + 278720 + (1 << 2) >> 2] = +(HEAPF32[dsp + 278720 + (0 << 2) >> 2]);
-			HEAPF32[dsp + 278728 + (1 << 2) >> 2] = +(HEAPF32[dsp + 278728 + (0 << 2) >> 2]);
-			HEAPF32[dsp + 278736 + (1 << 2) >> 2] = +(HEAPF32[dsp + 278736 + (0 << 2) >> 2]);
-			HEAP32[dsp + 278968 >> 2] = (((HEAP32[dsp + 278968 >> 2] | 0) + 1) | 0);
-			HEAPF32[dsp + 278744 + (1 << 2) >> 2] = +(HEAPF32[dsp + 278744 + (0 << 2) >> 2]);
-			HEAP32[dsp + 278752 + (1 << 2) >> 2] = (HEAP32[dsp + 278752 + (0 << 2) >> 2] | 0);
-			HEAPF32[dsp + 278760 + (1 << 2) >> 2] = +(HEAPF32[dsp + 278760 + (0 << 2) >> 2]);
-			HEAPF32[dsp + 278768 + (1 << 2) >> 2] = +(HEAPF32[dsp + 278768 + (0 << 2) >> 2]);
-			HEAP32[dsp + 278776 + (1 << 2) >> 2] = (HEAP32[dsp + 278776 + (0 << 2) >> 2] | 0);
-			for (j3 = 3; (((j3 | 0) > 0) | 0); j3 = (((j3 | 0) - 1) | 0)) {
-				HEAPF32[dsp + 278580 + ((j3 | 0) << 2) >> 2] = +(HEAPF32[dsp + 278580 + ((((j3 | 0) - 1) | 0) << 2) >> 2]);
-				
-			}
-			HEAPF32[dsp + 278784 + (1 << 2) >> 2] = +(HEAPF32[dsp + 278784 + (0 << 2) >> 2]);
-			HEAPF32[dsp + 278792 + (1 << 2) >> 2] = +(HEAPF32[dsp + 278792 + (0 << 2) >> 2]);
-			HEAPF32[dsp + 278800 + (1 << 2) >> 2] = +(HEAPF32[dsp + 278800 + (0 << 2) >> 2]);
-			HEAPF32[dsp + 278808 + (1 << 2) >> 2] = +(HEAPF32[dsp + 278808 + (0 << 2) >> 2]);
-			HEAP32[dsp + 278816 + (1 << 2) >> 2] = (HEAP32[dsp + 278816 + (0 << 2) >> 2] | 0);
-			HEAPF32[dsp + 278824 + (1 << 2) >> 2] = +(HEAPF32[dsp + 278824 + (0 << 2) >> 2]);
-			HEAPF32[dsp + 278832 + (1 << 2) >> 2] = +(HEAPF32[dsp + 278832 + (0 << 2) >> 2]);
-			HEAPF32[dsp + 278840 + (1 << 2) >> 2] = +(HEAPF32[dsp + 278840 + (0 << 2) >> 2]);
-			HEAPF32[dsp + 278848 + (1 << 2) >> 2] = +(HEAPF32[dsp + 278848 + (0 << 2) >> 2]);
-			
-		}
-		
-	}
-	
-	return { getNumInputs : getNumInputs, getNumOutputs : getNumOutputs, classInit : classInit, instanceInit : instanceInit, init : init, setValue : setValue, getValue : getValue, compute : compute };
-}
-
-function getSizeSBird() {
-	return 279164;
-}
-
-function getPathTableSBird() {
-	
-	var pathTable = [];
-	pathTable["/Bird/Speed_(Granulator)"] = 278920;
-	pathTable["/Bird/Probability_(Granulator)"] = 278924;
-	return pathTable;
-}
-
-function getJSONSBird() {
-	return "{  \"name\": \"bird\",  \"outputs\": \"2\",  \"meta\": [    { \"author\": \"Pierre Cochard\" },   { \"effect.lib/author\": \"Julius O. Smith (jos at ccrma.stanford.edu)\" },   { \"effect.lib/copyright\": \"Julius O. Smith III\" },   { \"effect.lib/exciter_author\": \"Priyanka Shekar (pshekar@ccrma.stanford.edu)\" },   { \"effect.lib/exciter_copyright\": \"Copyright (c) 2013 Priyanka Shekar\" },   { \"effect.lib/exciter_license\": \"MIT License (MIT)\" },   { \"effect.lib/exciter_name\": \"Harmonic Exciter\" },   { \"effect.lib/exciter_version\": \"1.0\" },   { \"effect.lib/license\": \"STK-4.3\" },   { \"effect.lib/name\": \"Faust Audio Effect Library\" },   { \"effect.lib/version\": \"1.33\" },   { \"filter.lib/author\": \"Julius O. Smith (jos at ccrma.stanford.edu)\" },   { \"filter.lib/copyright\": \"Julius O. Smith III\" },   { \"filter.lib/license\": \"STK-4.3\" },   { \"filter.lib/name\": \"Faust Filter Library\" },   { \"filter.lib/reference\": \"https://ccrma.stanford.edu/~jos/filters/\" },   { \"filter.lib/version\": \"1.29\" },   { \"math.lib/author\": \"GRAME\" },   { \"math.lib/copyright\": \"GRAME\" },   { \"math.lib/license\": \"LGPL with exception\" },   { \"math.lib/name\": \"Math Library\" },   { \"math.lib/version\": \"1.0\" },   { \"music.lib/author\": \"GRAME\" },   { \"music.lib/copyright\": \"GRAME\" },   { \"music.lib/license\": \"LGPL with exception\" },   { \"music.lib/name\": \"Music Library\" },   { \"music.lib/version\": \"1.0\" },   { \"name\": \"bird\" },   { \"oscillator.lib/author\": \"Julius O. Smith (jos at ccrma.stanford.edu)\" },   { \"oscillator.lib/copyright\": \"Julius O. Smith III\" },   { \"oscillator.lib/license\": \"STK-4.3\" },   { \"oscillator.lib/name\": \"Faust Oscillator Library\" },   { \"oscillator.lib/version\": \"1.11\" }  ],  \"ui\": [    {    \"type\": \"hgroup\",    \"label\": \"Bird\",    \"items\": [      {      \"type\": \"hslider\",      \"label\": \"Speed (Granulator)\",      \"address\": \"/Bird/Speed_(Granulator)\",      \"meta\": [       { \"1\": \"\" },       { \"acc\": \"0 0 -10 0 10\" },       { \"style\": \"knob\" }      ],      \"init\": \"240\",      \"min\": \"120\",      \"max\": \"480\",      \"step\": \"0.1\"     },     {      \"type\": \"hslider\",      \"label\": \"Probability (Granulator)\",      \"address\": \"/Bird/Probability_(Granulator)\",      \"meta\": [       { \"2\": \"\" },       { \"acc\": \"0 0 -10 0 10\" },       { \"style\": \"knob\" },       { \"unit\": \"%\" }      ],      \"init\": \"50\",      \"min\": \"25\",      \"max\": \"100\",      \"step\": \"1\"     }    ]   }  ] } ";
-}
-
-function metadataSBird(m) {
-	m.declare("author", "Pierre Cochard");
-	m.declare("effect.lib/author", "Julius O. Smith (jos at ccrma.stanford.edu)");
-	m.declare("effect.lib/copyright", "Julius O. Smith III");
-	m.declare("effect.lib/exciter_author", "Priyanka Shekar (pshekar@ccrma.stanford.edu)");
-	m.declare("effect.lib/exciter_copyright", "Copyright (c) 2013 Priyanka Shekar");
-	m.declare("effect.lib/exciter_license", "MIT License (MIT)");
-	m.declare("effect.lib/exciter_name", "Harmonic Exciter");
-	m.declare("effect.lib/exciter_version", "1.0");
-	m.declare("effect.lib/license", "STK-4.3");
-	m.declare("effect.lib/name", "Faust Audio Effect Library");
-	m.declare("effect.lib/version", "1.33");
-	m.declare("filter.lib/author", "Julius O. Smith (jos at ccrma.stanford.edu)");
-	m.declare("filter.lib/copyright", "Julius O. Smith III");
-	m.declare("filter.lib/license", "STK-4.3");
-	m.declare("filter.lib/name", "Faust Filter Library");
-	m.declare("filter.lib/reference", "https://ccrma.stanford.edu/~jos/filters/");
-	m.declare("filter.lib/version", "1.29");
-	m.declare("math.lib/author", "GRAME");
-	m.declare("math.lib/copyright", "GRAME");
-	m.declare("math.lib/license", "LGPL with exception");
-	m.declare("math.lib/name", "Math Library");
-	m.declare("math.lib/version", "1.0");
-	m.declare("music.lib/author", "GRAME");
-	m.declare("music.lib/copyright", "GRAME");
-	m.declare("music.lib/license", "LGPL with exception");
-	m.declare("music.lib/name", "Music Library");
-	m.declare("music.lib/version", "1.0");
-	m.declare("name", "bird");
-	m.declare("oscillator.lib/author", "Julius O. Smith (jos at ccrma.stanford.edu)");
-	m.declare("oscillator.lib/copyright", "Julius O. Smith III");
-	m.declare("oscillator.lib/license", "STK-4.3");
-	m.declare("oscillator.lib/name", "Faust Oscillator Library");
-	m.declare("oscillator.lib/version", "1.11");
-}
-
-
-// Standard Faust SBird
-
-faust.SBird = function (context, buffer_size) {
-
-    var handler = null;
-    var ins, outs;
-    var numIn, numOut;
-    
-    var scriptProcessor;
-    
-    var dspInChannnels = [];
-    var dspOutChannnels = [];
-   
     // Keep JSON parsed object
     var jon_object = JSON.parse(getJSONSBird());
     
-    function getNumInputsAux () 
+    function getNumInputsAux ()
     {
         return (jon_object.inputs !== undefined) ? parseInt(jon_object.inputs) : 0;
     }
     
-    function getNumOutputsAux () 
+    function getNumOutputsAux ()
     {
         return (jon_object.outputs !== undefined) ? parseInt(jon_object.outputs) : 0;
     }
+
+    var sp = context.createScriptProcessor(buffer_size, getNumInputsAux(), getNumOutputsAux());
+    sp.jon_object = jon_object;
+    
+    sp.handler = null;
+    sp.ins = null;
+    sp.outs = null;
+    
+    sp.dspInChannnels = [];
+    sp.dspOutChannnels = [];
+    
+    sp.numIn = getNumInputsAux();
+    sp.numOut = getNumOutputsAux();
      
     // Memory allocator
-    var ptr_size = 4; 
-    var sample_size = 4;
+    sp.ptr_size = 4;
+    sp.sample_size = 4;
     
-    function pow2limit (x)
-    {
-        var n = 2;
-        while (n < x) { n = 2 * n; }
-        return (n < 65536) ? 65536 : n; // Minimum = 64 kB
-    }
+    sp.factory = instance.exports;
+    sp.HEAP = instance.exports.memory.buffer;
+    sp.HEAP32 = new Int32Array(sp.HEAP);
+    sp.HEAPF32 = new Float32Array(sp.HEAP);
      
-    var memory_size = pow2limit(getSizeSBird() + (getNumInputsAux() + getNumOutputsAux()) * (ptr_size + (buffer_size * sample_size)));
-   
-    var HEAP = new ArrayBuffer(memory_size);
-    var HEAP32 = new Int32Array(HEAP);
-    var HEAPF32 = new Float32Array(HEAP);
-     
-    console.log(HEAP);
-    console.log(HEAP32);
-    console.log(HEAPF32);
+    console.log(sp.HEAP);
+    console.log(sp.HEAP32);
+    console.log(sp.HEAPF32);
  
     // bargraph
-    var ouputs_timer = 5;
-    var ouputs_items = [];
+    sp.outputs_timer = 5;
+    sp.outputs_items = [];
      
     // input items
-    var inputs_items = [];
+    sp.inputs_items = [];
      
     // Start of HEAP index
-    var audio_heap_ptr = 0;
-     
+    
+    // SBird is placed first with index 0. Audio buffer start at the end od SBird.
+    sp.audio_heap_ptr = getSizeSBird();
+
     // Setup pointers offset
-    var audio_heap_ptr_inputs = audio_heap_ptr; 
-    var audio_heap_ptr_outputs = audio_heap_ptr_inputs + (getNumInputsAux() * ptr_size);
+    sp.audio_heap_ptr_inputs = sp.audio_heap_ptr;
+    sp.audio_heap_ptr_outputs = sp.audio_heap_ptr_inputs + (sp.numIn * sp.ptr_size);
      
     // Setup buffer offset
-    var audio_heap_inputs = audio_heap_ptr_outputs + (getNumOutputsAux() * ptr_size);
-    var audio_heap_outputs = audio_heap_inputs + (getNumInputsAux() * buffer_size * sample_size);
+    sp.audio_heap_inputs = sp.audio_heap_ptr_outputs + (sp.numOut * sp.ptr_size);
+    sp.audio_heap_outputs = sp.audio_heap_inputs + (sp.numIn * buffer_size * sp.sample_size);
     
-    // Setup SBird offset
-    var dsp_start = audio_heap_outputs + (getNumOutputsAux() * buffer_size * sample_size);
-     
-    // Start of SBird memory
-    var dsp = dsp_start;
+    // Start of SBird memory : SBird is placed first with index 0
+    sp.dsp = 0;
  
-    // ASM module
-    var factory = SBirdModule(window, null, HEAP);
-    console.log(factory);
- 
-    var pathTable = getPathTableSBird();
+    sp.pathTable = getPathTableSBird();
     
-    // Allocate table for 'setValue'
-    var value_table = [];
+    // Allocate table for 'setParamValue'
+    sp.value_table = [];
         
-    function update_outputs () 
+    sp.update_outputs = function ()
     {
-        if (ouputs_items.length > 0 && handler && ouputs_timer-- === 0) {
-            ouputs_timer = 5;
-            for (var i = 0; i < ouputs_items.length; i++) {
-                handler(ouputs_items[i], factory.getValue(dsp, pathTable[ouputs_items[i]]));
+        if (sp.outputs_items.length > 0 && sp.handler && sp.outputs_timer-- === 0) {
+            sp.outputs_timer = 5;
+            for (var i = 0; i < sp.outputs_items.length; i++) {
+                sp.handler(sp.outputs_items[i], sp.factory.getParamValue(sp.dsp, sp.pathTable[sp.outputs_items[i]]));
             }
         }
     }
     
-    function compute (e) 
+    sp.compute = function (e)
     {
         var i, j;
         
         // Read inputs
-        for (i = 0; i < numIn; i++) {
+        for (i = 0; i < sp.numIn; i++) {
             var input = e.inputBuffer.getChannelData(i);
-            var dspInput = dspInChannnels[i];
+            var dspInput = sp.dspInChannnels[i];
             for (j = 0; j < input.length; j++) {
                 dspInput[j] = input[j];
             }
         }
         
         // Update control state
-        for (i = 0; i < inputs_items.length; i++) {
-            var path = inputs_items[i];
-            var values = value_table[path];
-            factory.setValue(dsp, pathTable[path], values[0]);
+        for (i = 0; i < sp.inputs_items.length; i++) {
+            var path = sp.inputs_items[i];
+            var values = sp.value_table[path];
+            sp.factory.setParamValue(sp.dsp, sp.pathTable[path], values[0]);
             values[0] = values[1];
         }
         
         // Compute
-        factory.compute(dsp, buffer_size, ins, outs);
+        sp.factory.compute(sp.dsp, buffer_size, sp.ins, sp.outs);
        
         // Update bargraph
-        update_outputs();
+        sp.update_outputs();
         
         // Write outputs
-        for (i = 0; i < numOut; i++) {
+        for (i = 0; i < sp.numOut; i++) {
             var output = e.outputBuffer.getChannelData(i);
-            var dspOutput = dspOutChannnels[i];
+            var dspOutput = sp.dspOutChannnels[i];
             for (j = 0; j < output.length; j++) {
                 output[j] = dspOutput[j];
             }
@@ -6883,195 +6034,273 @@ faust.SBird = function (context, buffer_size) {
     };
          
     // JSON parsing
-    function parse_ui (ui) 
+    sp.parse_ui = function (ui)
     {
         for (var i = 0; i < ui.length; i++) {
-            console.log(ui[i]);
-            parse_group(ui[i]);
+            sp.parse_group(ui[i]);
         }
     }
     
-    function parse_group (group) 
+    sp.parse_group = function (group)
     {
         if (group.items) {
-            parse_items(group.items);
+            sp.parse_items(group.items);
         }
     }
     
-    function parse_items (items) 
+    sp.parse_items = function (items)
     {
         var i;
         for (i = 0; i < items.length; i++) {
-            parse_item(items[i]);
+            sp.parse_item(items[i]);
         }
     }
     
-    function parse_item (item) 
+    sp.parse_item = function (item)
     {
         if (item.type === "vgroup" || item.type === "hgroup" || item.type === "tgroup") {
-            parse_items(item.items);
+            sp.parse_items(item.items);
         } else if (item.type === "hbargraph" || item.type === "vbargraph") {
             // Keep bargraph adresses
-            ouputs_items.push(item.address);
+            sp.outputs_items.push(item.address);
         } else if (item.type === "vslider" || item.type === "hslider" || item.type === "button" || item.type === "checkbox" || item.type === "nentry") {
             // Keep inputs adresses
-            inputs_items.push(item.address);
+            sp.inputs_items.push(item.address);
         }
     }
       
-    function init ()
+    sp.initAux = function ()
     {
         var i;
-        
-        // Get input / output counts
-        numIn = getNumInputsAux();
-        numOut = getNumOutputsAux();
          
         // Setup web audio context
         console.log("buffer_size %d", buffer_size);
-        scriptProcessor = context.createScriptProcessor(buffer_size, numIn, numOut);
-        scriptProcessor.onaudioprocess = compute;
+        sp.onaudioprocess = sp.compute;
         
-        if (numIn > 0) {
-            ins = audio_heap_ptr_inputs; 
-            for (i = 0; i < numIn; i++) { 
-                HEAP32[(ins >> 2) + i] = audio_heap_inputs + ((buffer_size * sample_size) * i);
+        if (sp.numIn > 0) {
+            sp.ins = sp.audio_heap_ptr_inputs;
+            for (i = 0; i < sp.numIn; i++) {
+                sp.HEAP32[(sp.ins >> 2) + i] = sp.audio_heap_inputs + ((buffer_size * sp.sample_size) * i);
             }
      
-            var dspInChans = HEAP32.subarray(ins >> 2, (ins + numIn * ptr_size) >> 2);
-            for (i = 0; i < numIn; i++) {
-                dspInChannnels[i] = HEAPF32.subarray(dspInChans[i] >> 2, (dspInChans[i] + buffer_size * sample_size) >> 2);
+            // Prepare Ins buffer tables
+            var dspInChans = sp.HEAP32.subarray(sp.ins >> 2, (sp.ins + sp.numIn * sp.ptr_size) >> 2);
+            for (i = 0; i < sp.numIn; i++) {
+                sp.dspInChannnels[i] = sp.HEAPF32.subarray(dspInChans[i] >> 2, (dspInChans[i] + buffer_size * sp.sample_size) >> 2);
             }
         }
         
-        if (numOut > 0) {
-            outs = audio_heap_ptr_outputs; 
-            for (i = 0; i < numOut; i++) { 
-                HEAP32[(outs >> 2) + i] = audio_heap_outputs + ((buffer_size * sample_size) * i);
+        if (sp.numOut > 0) {
+            sp.outs = sp.audio_heap_ptr_outputs;
+            for (i = 0; i < sp.numOut; i++) {
+                sp.HEAP32[(sp.outs >> 2) + i] = sp.audio_heap_outputs + ((buffer_size * sp.sample_size) * i);
             }
           
-            var dspOutChans = HEAP32.subarray(outs >> 2, (outs + numOut * ptr_size) >> 2);
-            for (i = 0; i < numOut; i++) {
-                dspOutChannnels[i] = HEAPF32.subarray(dspOutChans[i] >> 2, (dspOutChans[i] + buffer_size * sample_size) >> 2);
+            // Prepare Out buffer tables
+            var dspOutChans = sp.HEAP32.subarray(sp.outs >> 2, (sp.outs + sp.numOut * sp.ptr_size) >> 2);
+            for (i = 0; i < sp.numOut; i++) {
+                sp.dspOutChannnels[i] = sp.HEAPF32.subarray(dspOutChans[i] >> 2, (dspOutChans[i] + buffer_size * sp.sample_size) >> 2);
             }
         }
                                 
         // bargraph
-        parse_ui(jon_object.ui);
+        sp.parse_ui(sp.jon_object.ui);
         
         // Init SBird
-        factory.init(dsp, context.sampleRate);
+        sp.factory.init(sp.dsp, context.sampleRate);
         
         // Init 'value' table
-        for (i = 0; i < inputs_items.length; i++) {
-            var path = inputs_items[i];
+        for (i = 0; i < sp.inputs_items.length; i++) {
+            var path = sp.inputs_items[i];
             var values = new Float32Array(2);
-            values[0] = values[1] = factory.getValue(dsp, pathTable[path]);
-            value_table[path] = values;
+            values[0] = values[1] = sp.factory.getParamValue(sp.dsp, sp.pathTable[path]);
+            sp.value_table[path] = values;
         }
     }
     
-    init();
+    /*
+     Public API to be used to control the SBird.
+    */
     
-    // External API
-    return {
+    /* Return current sample rate */
+    sp.getSampleRate = function ()
+    {
+        return context.sampleRate;
+    }
     
-        getNumInputs : function () 
-        {
-            return getNumInputsAux();
-        },
-        
-        getNumOutputs : function() 
-        {
-            return getNumOutputsAux();
-        },
+    /* Return instance number of audio inputs. */
+    sp.getNumInputs = function ()
+    {
+        return getNumInputsAux();
+    }
     
-        destroy : function  ()
-        {
-            // Nothing to do
-        },
-        
-        // Connect/disconnect to another node
-        connect : function (node) 
-        {
-            if (node.getProcessor !== undefined) {
-                scriptProcessor.connect(node.getProcessor());
-            } else {
-                scriptProcessor.connect(node);
-            }
-        },
+    /* Return instance number of audio outputs. */
+    sp.getNumOutputs = function ()
+    {
+        return getNumOutputsAux();
+    }
+    
+    /**
+     * Global init, doing the following initialization:
+     * - static tables initialization
+     * - call 'instanceInit': constants and instance state initialisation
+     *
+     * @param sample_rate - the sampling rate in Herz
+     */
+    sp.init = function (sample_rate)
+    {
+        sp.factory.init(sp.dsp, sample_rate);
+    }
+    
+    /** 
+     * Init instance state.
+     *
+     * @param sample_rate - the sampling rate in Hertz
+     */
+    sp.instanceInit = function (sample_rate)
+    {
+        sp.factory.instanceInit(sp.dsp, sample_rate);
+    }
+    
+    /** 
+     * Init instance constant state.
+     *
+     * @param sample_rate - the sampling rate in Hertz
+     */
+    sp.instanceConstants = function (sample_rate)
+    {
+        sp.factory.instanceConstants(sp.dsp, sample_rate);
+    }
+    
+    /* Init default control parameters values. */
+    sp.instanceResetUserInterface = function ()
+    {
+        sp.factory.instanceResetUserInterface(sp.dsp);
+    }
+    
+    /* Init instance state (delay lines...).*/
+    sp.instanceClear = function ()
+    {
+        sp.factory.instanceClear(sp.dsp);
+    }
 
-        disconnect : function (node) 
-        {
-            if (node.getProcessor !== undefined) {
-                scriptProcessor.disconnect(node.getProcessor());
-            } else {
-                scriptProcessor.disconnect(node);
-            }
-        },
-        
-        setHandler : function (hd)
-        {
-            handler = hd;
-        },
-        
-        start : function () 
-        {
-            scriptProcessor.connect(context.destination);
-        },
+    /**
+     * Setup a control output handler with a function of type (path_to_control, value)
+     * to be used on each generated output value. This handlet will be called
+     * each audio cycle at the end of the 'compute' method.
+     *
+     * @param hd - a function of type function(path_to_control, value)
+     */
+    sp.setHandler = function (hd)
+    {
+        sp.handler = hd;
+    }
 
-        stop : function () 
-        {
-            scriptProcessor.disconnect(context.destination);
-        },
+    /**
+     * Set control value.
+     *
+     * @param path - the path to the wanted control (retrieved using 'controls' method)
+     * @param val - the float value for the wanted control
+     */
+    sp.setParamValue = function (path, val)
+    {
+        var values = sp.value_table[path];
+        if (values) {
+            if (sp.factory.getParamValue(sp.dsp, sp.pathTable[path]) === values[0]) {
+                values[0] = val;
+            } 
+            values[1] = val;
+        }
+    }
 
-        setValue : function (path, val) 
-        {
-            var values = value_table[path];
-            if (values) {
-                if (factory.getValue(dsp, pathTable[path]) == values[0]) {
-                    values[0] = val;
-                } 
-                values[1] = val;
-            }
-        },
+    /**
+     * Get control value.
+     *
+     * @param path - the path to the wanted control (retrieved using 'controls' method)
+     *
+     * @return the float value
+     */
+    sp.getParamValue = function (path)
+    {
+        return sp.factory.getParamValue(sp.dsp, sp.pathTable[path]);
+    }
+    
+    /**
+     * Get the table of all control paths.
+     *
+     * @return the table of all control paths
+     */
+    sp.controls = function()
+    {
+        return sp.inputs_items;
+    }
+    
+    /**
+     * Get SBird JSON description with its UI and metadata
+     *
+     * @return  SBird JSON description
+     */
+    sp.json = function ()
+    {
+        return getJSONSBird();
+    }
 
-        getValue : function (path) 
-        {
-            return factory.getValue(dsp, pathTable[path]);
+    // Init resulting SBird
+    sp.initAux();
+
+    return sp;
+};
+
+/** 
+* Create a SBird object from a wasm filename
+*
+* @param filename - the wasm filename
+* @param context - the Web Audio context
+* @param buffer_size - the buffer_size in frames
+* @param callback - a callback taking the allocated SBird as parameter
+*/
+faust.createSBird = function(filename, context, buffer_size, callback)
+{
+    var asm2wasm = { // special asm2wasm imports
+        "fmod": function(x, y) {
+            return x % y;
         },
-        
-        controls : function()
-        {
-            return inputs_items;
+        "log10": function(x) {
+            return window.Math.log(x) / window.Math.log(10);
         },
-        
-        json : function ()
-        {
-            return getJSONSBird();
-        },
-        
-        getProcessor : function ()
-        {
-            return scriptProcessor;
+        "remainder": function(x, y) {
+            return x - window.Math.round(x/y) * y;
         }
     };
-};
+    
+    var importObject = { imports: { print: arg => console.log(arg) } }
+    
+    importObject["global.Math"] = window.Math;
+    importObject["asm2wasm"] = asm2wasm;
+    
+    fetch(filename)
+    .then(dsp_file => dsp_file.arrayBuffer())
+    .then(dsp_bytes => WebAssembly.instantiate(dsp_bytes, importObject))
+    .then(dsp_module => { callback(faust.SBird(dsp_module.instance, context, buffer_size)); });
+}
 
 </script>
 </head>
 <body>
-<div style="text-align:center;height:20px"> <style> a:link {font-family:Arial; font-size:12px; color:#3D3C3A; text-decoration:none} a:visited {font-family:Arial; font-size:12px; color:#3D3C3A; text-decoration:none} a:hover {font-family:Arial; font-size:12px; color:white; text-decoration:none} </style> <a href="SBird.dsp" target="_blank">source</a> <a href="SBird-svg/process.svg" target="_blank">diagram</a> </div>
 
 
 <script>
+    
+'use strict';
+
+// Faust part
 
 var isWebKitAudio = (typeof (webkitAudioContext) !== "undefined");
+var isWasm = (typeof (WebAssembly) !== "undefined");
 var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
 var audio_input = null;
 var SBird = null;
 var faustsvg = null;
-var dsp_code = null;
 
 function changeBufferSize(buffer_size)
 {
@@ -7079,7 +6308,7 @@ function changeBufferSize(buffer_size)
     console.log(new_buffer_size);
     startNewSBird(new_buffer_size);
 }
- 
+
 // Audio input handling
 
 function activateAudioInput()
@@ -7087,42 +6316,42 @@ function activateAudioInput()
     if (!navigator.getUserMedia) {
         navigator.getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
     }
-   
+    
     if (navigator.getUserMedia) {
         navigator.getUserMedia({audio:true}, getDevice, function(e) {
-                alert('Error getting audio input');
-                console.log(e);
-        });
+                               alert('Error getting audio input');
+                               console.log(e);
+                               });
     } else {
         alert('Audio input API not available');
     }
 }
 
-function getDevice(device) 
+function getDevice(device)
 {
     // Create an AudioNode from the stream.
     audio_input = audio_context.createMediaStreamSource(device);
     
     // Connect it to the destination.
-    audio_input.connect(SBird.getProcessor());
+    audio_input.connect(SBird);
 }
 
-function startSBirdAux(buffer_size) 
+function startSBirdAux(dsp)
 {
-    console.log("startSBird %d", buffer_size);
     if (SBird) {
         if (audio_input) {
-            audio_input.disconnect(SBird.getProcessor());
+            audio_input.disconnect(SBird);
         }
+        SBird.disconnect(audio_context.destination);
         _f4u$t.hard_delete(faustsvg);
-        SBird.stop();
-        SBird.destroy();
     }
-    SBird = faust.SBird(audio_context, buffer_size);
+    
+    SBird = dsp;
     if (SBird.getNumInputs() > 0) {
         activateAudioInput();
     }
-    SBird.start();
+    SBird.connect(audio_context.destination);
+    
     console.log(SBird.json());
     console.log(SBird.controls());
     
@@ -7131,356 +6360,60 @@ function startSBirdAux(buffer_size)
     
     faustsvg = $('<div />');
     $('body').append(faustsvg);
-    var handler = _f4u$t.main(SBird.json(), faustsvg, SBird.setValue);
+    var handler = _f4u$t.main(SBird.json(), faustsvg, SBird.setParamValue);
     SBird.setHandler(handler);
 }
 
-function startSBird() 
+function startSBird()
 {
-    startSBirdAux(1024);
+    startNewSBird(1024);
 }
 
-function startNewSBird(buffer_size) 
+function startNewSBird(buffer_size)
 {
-    startSBirdAux(buffer_size);
+    if (isWasm) {
+        faust.createSBird('SBird.wasm', audio_context, buffer_size, startSBirdAux);
+    }  else {
+        alert("WebAssembly is not supported in this browser !")
+    }
 }
 
 // To activate audio on iOS
 window.addEventListener('touchstart', function() {
-
-	// create empty buffer
-	var buffer = audio_context.createBuffer(1, 1, 22050);
-	var source = audio_context.createBufferSource();
-	source.buffer = buffer;
-
-	// connect to output (your speakers)
-	source.connect(audio_context.destination);
-
-	// play the file
-	source.noteOn(0);
-
-}, false);
-
-// General
-
-$(startSBird);
-
+                        
+                        // create empty buffer
+                        var buffer = audio_context.createBuffer(1, 1, 22050);
+                        var source = audio_context.createBufferSource();
+                        source.buffer = buffer;
+                        
+                        // connect to output (your speakers)
+                        source.connect(audio_context.destination);
+                        
+                        // play the file
+                        source.noteOn(0);
+                        
+                        }, false);
+                        
+                        // General
+                        
+                        $(startSBird);
+                        
 </script>
 
 <P>
 <center>
-<form method="POST" name="menu" >
-  <select name="selectedBuffer" 
-    onChange="changeBufferSize(this.form.selectedBuffer)">
-    <option value = 256> 256 </option>
-    <option value = 512> 512 </option>
-    <option selected value = 1024> 1024 </option>
-    <option value = 2048> 2048 </option>
-    <option value = 4096> 4096 </option>
-    <option value = 8192> 8192 </option>
-  </select>
-</form>
+    <form method="POST" name="menu" >
+        <select name="selectedBuffer" 
+            onChange="changeBufferSize(this.form.selectedBuffer)">
+            <option value = 256> 256 </option>
+            <option value = 512> 512 </option>
+            <option selected value = 1024> 1024 </option>
+            <option value = 2048> 2048 </option>
+            <option value = 4096> 4096 </option>
+            <option value = 8192> 8192 </option>
+        </select>
+    </form>
 </center>
 
-<!-- Add FaustWeb Compilation service to Page -->
-<div id="export" style="color:white; position: absolute; width:400px; padding:2px 2px 2px 2px; background-color:7F7F7F; visibility:hidden; ">
-
-<div id="centerDiv" style="position:relative; margin-right:auto; margin-left:auto; text-align:center;">
-<input id="exportUrl" style="color:white; border:0px; text-align:center; font-size:16px; background-color:transparent; outline: 0px solid transparent; position:relative; margin-left:auto; maring-right: auto; text-align:center;" contenteditable="true" value="http://faustservice.grame.fr" onkeyup="onEnterKey()"/>
-</br>
-</br>
-</br>
-  <div id="refreshButton" style="position:absolute; left:10px; top:46px;">
-	<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-	 width="50.000000pt" height="50.000000pt" viewBox="0 0 50.000000 50.000000"
-	 preserveAspectRatio="xMidYMid meet">
-	<g transform="translate(0.000000,50.000000) scale(0.100000,-0.100000)"
-	fill="#000000" stroke="none">
-	<path d="M186 309 c-37 -29 -37 -89 0 -118 28 -22 69 -27 93 -12 23 15 3 30
-	-33 24 -29 -4 -37 -1 -51 21 -16 24 -16 28 -1 51 18 27 63 34 84 13 17 -17 15
-	-31 -3 -24 -20 7 -19 1 6 -28 l22 -25 18 24 c20 25 25 40 9 30 -5 -3 -16 7
-	-24 23 -25 47 -75 56 -120 21z"/>
-	</g>
-	</svg>
-</div>
-  <select id="Platform" style="width:250px;" onChange="changeArchs()">
-  </select>
-  </br>
-    <select id="Architecture" style="width:250px;">
-  </select>
-  </br>
-  </br>
-  <input id="exportButton" type="button" value="Export" onclick="getFaustSource()" style="border: 2px solid white; border-radius:8px; color:white; font-size:16px;  background-color:transparent;"/>
-	</br>
-  </br>
-  <div id="qrDiv">
-  
-  <div id="loader" style="visibility:hidden;">
-  <svg width='50px' height='50px' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ring">
-  <rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect>
-  <defs>
-    <filter id="uil-ring-shadow" x="-100%" y="-100%" width="300%" height="300%">
-      <feOffset result="offOut" in="SourceGraphic" dx="0" dy="0"></feOffset>
-      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="0"></feGaussianBlur>
-      <feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend>
-    </filter>
-  </defs>
-  <path d="M10,50c0,0,0,0.5,0.1,1.4c0,0.5,0.1,1,0.2,1.7c0,0.3,0.1,0.7,0.1,1.1c0.1,0.4,0.1,0.8,0.2,1.2c0.2,0.8,0.3,1.8,0.5,2.8 c0.3,1,0.6,2.1,0.9,3.2c0.3,1.1,0.9,2.3,1.4,3.5c0.5,1.2,1.2,2.4,1.8,3.7c0.3,0.6,0.8,1.2,1.2,1.9c0.4,0.6,0.8,1.3,1.3,1.9 c1,1.2,1.9,2.6,3.1,3.7c2.2,2.5,5,4.7,7.9,6.7c3,2,6.5,3.4,10.1,4.6c3.6,1.1,7.5,1.5,11.2,1.6c4-0.1,7.7-0.6,11.3-1.6 c3.6-1.2,7-2.6,10-4.6c3-2,5.8-4.2,7.9-6.7c1.2-1.2,2.1-2.5,3.1-3.7c0.5-0.6,0.9-1.3,1.3-1.9c0.4-0.6,0.8-1.3,1.2-1.9 c0.6-1.3,1.3-2.5,1.8-3.7c0.5-1.2,1-2.4,1.4-3.5c0.3-1.1,0.6-2.2,0.9-3.2c0.2-1,0.4-1.9,0.5-2.8c0.1-0.4,0.1-0.8,0.2-1.2 c0-0.4,0.1-0.7,0.1-1.1c0.1-0.7,0.1-1.2,0.2-1.7C90,50.5,90,50,90,50s0,0.5,0,1.4c0,0.5,0,1,0,1.7c0,0.3,0,0.7,0,1.1 c0,0.4-0.1,0.8-0.1,1.2c-0.1,0.9-0.2,1.8-0.4,2.8c-0.2,1-0.5,2.1-0.7,3.3c-0.3,1.2-0.8,2.4-1.2,3.7c-0.2,0.7-0.5,1.3-0.8,1.9 c-0.3,0.7-0.6,1.3-0.9,2c-0.3,0.7-0.7,1.3-1.1,2c-0.4,0.7-0.7,1.4-1.2,2c-1,1.3-1.9,2.7-3.1,4c-2.2,2.7-5,5-8.1,7.1 c-0.8,0.5-1.6,1-2.4,1.5c-0.8,0.5-1.7,0.9-2.6,1.3L66,87.7l-1.4,0.5c-0.9,0.3-1.8,0.7-2.8,1c-3.8,1.1-7.9,1.7-11.8,1.8L47,90.8 c-1,0-2-0.2-3-0.3l-1.5-0.2l-0.7-0.1L41.1,90c-1-0.3-1.9-0.5-2.9-0.7c-0.9-0.3-1.9-0.7-2.8-1L34,87.7l-1.3-0.6 c-0.9-0.4-1.8-0.8-2.6-1.3c-0.8-0.5-1.6-1-2.4-1.5c-3.1-2.1-5.9-4.5-8.1-7.1c-1.2-1.2-2.1-2.7-3.1-4c-0.5-0.6-0.8-1.4-1.2-2 c-0.4-0.7-0.8-1.3-1.1-2c-0.3-0.7-0.6-1.3-0.9-2c-0.3-0.7-0.6-1.3-0.8-1.9c-0.4-1.3-0.9-2.5-1.2-3.7c-0.3-1.2-0.5-2.3-0.7-3.3 c-0.2-1-0.3-2-0.4-2.8c-0.1-0.4-0.1-0.8-0.1-1.2c0-0.4,0-0.7,0-1.1c0-0.7,0-1.2,0-1.7C10,50.5,10,50,10,50z" fill="white" filter="url(#uil-ring-shadow)">
-    <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" repeatCount="indefinite" dur="1.5s"></animateTransform>
-  </path>
-</svg>
-</div>
-  </div>
-</div>
-  </br>
-</div>
-
-
-<div id="plusImg" style="position: absolute; z-index=4; visibility:visible;">
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="50.000000pt" height="51.000000pt" viewBox="0 0 50.000000 51.000000"
- preserveAspectRatio="xMidYMid meet">
-<g transform="translate(0.000000,51.000000) scale(0.100000,-0.100000)"
-fill="#f9be0d" stroke="none">
-<path d="M205 481 c-89 -22 -153 -85 -175 -174 -25 -96 28 -204 122 -251 84
--42 166 -31 239 33 126 107 95 315 -56 376 -43 18 -95 24 -130 16z m153 -54
-c58 -38 97 -120 89 -188 -7 -60 -36 -109 -84 -146 -51 -39 -154 -45 -212 -12
--116 65 -137 235 -39 326 64 60 173 69 246 20z"/>
-<path d="M190 373 l0 -53 -55 0 -55 0 0 -60 0 -60 55 0 55 0 0 -55 0 -55 60 0
-60 0 0 55 0 55 53 0 53 0 0 60 -1 60 -52 0 -52 0 -3 52 -3 51 -58 1 -57 1 0
--52z m100 -18 l0 -55 50 0 50 0 0 -40 0 -40 -50 0 -50 0 0 -55 0 -55 -40 0
--40 0 0 55 0 55 -55 0 -55 0 0 40 0 40 55 0 55 0 0 55 0 55 40 0 40 0 0 -55z"/>
-</g>
-</svg>
-</div>
-<div id="moinsImg" style="position: absolute; z-index=4; visibility:hidden;">
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="50.000000pt" height="51.000000pt" viewBox="0 0 50.000000 51.000000"
- preserveAspectRatio="xMidYMid meet" >
-<g transform="translate(0.000000,51.000000) scale(0.100000,-0.100000)"
-fill="#f9be0d" stroke="none">
-<path d="M187 466 c-92 -34 -157 -123 -157 -217 0 -100 79 -196 180 -218 143
--31 270 72 270 219 0 66 -16 107 -59 153 -57 62 -161 90 -234 63z m162 -36
-c78 -39 118 -115 107 -204 -19 -167 -227 -236 -342 -114 -46 48 -57 76 -58
-139 -1 74 39 142 103 176 56 29 136 31 190 3z"/>
-<path d="M90 250 l0 -60 170 0 170 0 0 60 0 60 -170 0 -170 0 0 -60z m320 0
-l0 -40 -150 0 -150 0 0 40 0 40 150 0 150 0 0 -40z"/>
-</g>
-</svg>
-</div>
-
-<script src="http://faust.grame.fr/webaudio/ExportLib.js"></script>
-<script src="http://faust.grame.fr/webaudio/qrcode.js"></script>
-
-<script >
-
-function onEnterKey(e)
-{
-	if (!e) { var e = window.event; } 
-	
-	if (e.keyCode == 13) { 
-		e.preventDefault(); 
-		updateFWTargets();
-	}
-}
-
-function openExport()
-{
-	document.getElementById("plusImg").style.visibility = "hidden";
-	document.getElementById("moinsImg").style.visibility = "visible";
-	document.getElementById("export").style.visibility = "visible";
-}
-
-function closeExport(event)
-{
-	if (!event) { event = window.event; } 
-
-	var target = event.target
-	while(target && target != document.getElementById("export") && target != document.getElementById("plusImg") )
-		target= target.parentNode;
-
-	if (!target) {
-		document.getElementById("plusImg").style.visibility = "visible";
-		document.getElementById("moinsImg").style.visibility = "hidden";
-		document.getElementById("export").style.visibility = "hidden";	
-	}
-}
-
-function updateQrCode(sha)
-{
-    // Empty Div before adding new qrcode
-	var toEmpty = document.getElementById("qrDiv");
-
-	document.getElementById("loader").style.visibility = "hidden";
-	
-	for (var i = toEmpty.children.length-1; i >= 0;  i--) {
-		if (toEmpty.children[i].id != "loader") {
-	    	toEmpty.removeChild(toEmpty.children[i]);
-        }
-	}
-	
-	var plateform = document.getElementById("Platform").options[document.getElementById("Platform").selectedIndex].value;
-	var architecture = document.getElementById("Architecture").options[document.getElementById("Architecture").selectedIndex].value;
-	var output = "binary.zip";
-	
-	if (plateform == "android") {
-		output = "binary.apk";
-    }
-	
-	var link = document.createElement('a');
-	link.href = document.getElementById("exportUrl").value + "/" + sha + "/" + plateform + "/" + architecture + "/" + output;
-
-	// 	Delete existing content if existing
-	var qrcodeSpan = document.getElementById('qrcodeDiv');
-	if (qrcodeSpan) {
-		qrcodeSpan.parentNode.removeChild(qrcodeSpan);
-    }
-	
-	var myWhiteDiv = getQrCode(document.getElementById("exportUrl").value, sha, plateform, architecture, output, 130);
-
-	document.getElementById("qrDiv").appendChild(link);
-	link.appendChild(myWhiteDiv);
-}
-
-function cancelLoader()
-{
-	document.getElementById("loader").style.visibility = "hidden";
-}
-
-function getFaustSource()
-{
-    document.getElementById("loader").style.visibility = "visible";
-    
-    if (dsp_code == null) {
-
-        var url = window.location.href.split('.html').shift() + ".dsp";
-        var filename = url.toString().split( '/' ).pop();
-        filename = filename.toString().split('.').shift();
-        var xmlhttp = new XMLHttpRequest();
-
-        xmlhttp.onreadystatechange=function(){
-            if (xmlhttp.readyState==4 && xmlhttp.status == 200) {
-                var dsp_code = xmlhttp.responseText;
-                getSHAKey(document.getElementById("exportUrl").value, filename, dsp_code, updateQrCode, cancelLoader);
-            }
-        }
-        xmlhttp.open("GET", url, false );
-        xmlhttp.send(); 
-    } else {
-        // Global 'dsp_code', so use it
-        getSHAKey(document.getElementById("exportUrl").value, "FaustSBird", dsp_code, updateQrCode, cancelLoader);
-    }
-}
-
-function cleanComboBox(id)
-{
-	while(document.getElementById(id).childNodes.length > 0) {
-		document.getElementById(id).removeChild(document.getElementById(id).childNodes[0]);
-	}
-}
-
-function changeArchs()
-{
-    // CLEAN COMBOBOX BEFORE ADDING NEW OPTIONS
-	cleanComboBox("Architecture");
-
-	var plat = document.getElementById("Platform").options[document.getElementById("Platform").selectedIndex].value;
-	var archs = getArchitectures(window.json, plat);
-		
-	for (var j = 0; j < archs.length; j++) {
-        var a = document.createElement('option');
-		a.text = archs[j];
-		document.getElementById("Architecture").options.add(a);
-	}
-}
-
-function updateFWTargets()
-{
-    // CLEAN COMBOBOX BEFORE ADDING NEW OPTIONS
-	cleanComboBox("Platform");
-	cleanComboBox("Architecture");
-
-	getTargets(document.getElementById("exportUrl").value, function(json) {
-	
-		window.json = json;
-		var plats = getPlatforms(json);	
-		for (var i = 0; i < plats.length; i++) {
-			var o = document.createElement('option');
-			o.text = plats[i];
-			document.getElementById("Platform").options.add(o);
-		}
-		
-        changeArchs();
-	}, function(){});
-}
-
-function changeOrientation(orientation)
-{
-	if (orientation == "topright") {
-		document.getElementById("plusImg").style.top = "0px";
-		document.getElementById("plusImg").style.right = "0px";		
-		document.getElementById("moinsImg").style.top = "0px";
-		document.getElementById("moinsImg").style.right = "0px";		
-		
-		document.getElementById("export").style.top = "0%";
-		document.getElementById("export").style.right = "0%";
-		document.getElementById("export").style.boxShadow ="0px 2px 2px 0px white";
-		document.getElementById("export").style.borderRadius ="0px 0px 0px 25px";
-		document.getElementById("export").style.borderBottom = "3px solid white";
-		document.getElementById("export").style.borderLeft ="3px solid white";
-	} else if(orientation == "bottomright") {
-	
-		document.getElementById("plusImg").style.bottom = "0px";
-		document.getElementById("plusImg").style.right = "0px";			
-		document.getElementById("moinsImg").style.bottom = "0px";
-		document.getElementById("moinsImg").style.right = "0px";			
-		
-		document.getElementById("export").style.bottom = "0%";
-		document.getElementById("export").style.right = "0%";
-		document.getElementById("export").style.boxShadow ="2px 2px 0px px white";
-		document.getElementById("export").style.borderRadius ="25px 0px 0px 0px";
-		document.getElementById("export").style.borderTop = "3px solid white";
-		document.getElementById("export").style.borderLeft ="3px solid white";
-	} else if(orientation == "bottomleft") {
-		document.getElementById("plusImg").style.bottom = "0px";
-		document.getElementById("plusImg").style.left = "0px";		
-		document.getElementById("moinsImg").style.bottom = "0px";
-		document.getElementById("moinsImg").style.left = "0px";
-		
-		document.getElementById("export").style.bottom = "0%";
-		document.getElementById("export").style.left = "0%";
-		document.getElementById("export").style.boxShadow ="2px 0px 2px 0px white";
-		document.getElementById("export").style.borderRadius ="0px 25px 0px 0px";
-		document.getElementById("export").style.borderTop = "3px solid white";
-		document.getElementById("export").style.borderRight ="3px solid white";		
-	} else if(orientation == "topleft") {
-		document.getElementById("plusImg").style.top = "0px";
-		document.getElementById("plusImg").style.left = "0px";		
-		document.getElementById("moinsImg").style.top = "0px";
-		document.getElementById("moinsImg").style.left = "0px";
-
-		document.getElementById("export").style.top = "0%";
-		document.getElementById("export").style.left = "0%";
-		document.getElementById("export").style.boxShadow ="0px 0px 2px 2px white";
-		document.getElementById("export").style.borderRadius ="0px 0px 25px 0px";
-		document.getElementById("export").style.borderBottom = "3px solid white";
-		document.getElementById("export").style.borderRight ="3px solid white";		
-	}
-}
-
-changeOrientation("topright");
-// changeOrientation("bottomright");
-// changeOrientation("bottomleft");
-// changeOrientation("topleft");
-
-updateFWTargets();
-
-document.getElementById("refreshButton").onclick=updateFWTargets;
-document.getElementById("plusImg").onclick=openExport;
-document.getElementById("moinsImg").onclick=closeExport;
-document.body.addEventListener("click", closeExport, false);
-</script>
-
-<!-- End FaustWeb Compilation Service -->
 </body>
 </html>
