@@ -5,10 +5,7 @@ declare license     "BSD";
 declare copyright   "(c) GRAME 2006";
 declare reference   "https://ccrma.stanford.edu/~jos/pasp/Freeverb.html";
 
-import("music.lib");
-import("filter.lib");
-
-
+import("stdfaust.lib");
 
 /* Description : 
 
@@ -47,7 +44,6 @@ freezemode  = 0.5;
 stereospread= 23;
 allpassfeed = 0.5; //feedback of the delays used in allpass filters
 
-
 // Filter Parameters
 //------------------
 
@@ -65,7 +61,6 @@ allpasstuningL2 = 441;
 allpasstuningL3 = 341;
 allpasstuningL4 = 225;
 
-
 // Control Sliders
 //--------------------
 // Damp : filters the high frequencies of the echoes (especially active for great values of RoomSize)
@@ -76,10 +71,9 @@ allpasstuningL4 = 225;
 //dampSlider      = hslider("Damp",0.5, 0, 1, 0.025)*scaledamp;
 
 dampSlider 		= 0.7*scaledamp;
-roomsizeSlider  = hslider("Reverberation Room Size[acc:1 0 -10 0 10]", 0.5, 0.1, 0.9, 0.025) : smooth(0.999) : min(0.9) :max(0.1) *scaleroom + offsetroom;
-wetSlider       = hslider("Reverberation Intensity[acc:1 0 -10 0 10]", 0.3333, 0.1, 0.9, 0.025) : smooth(0.999) : min(0.9) :max(0.1);
+roomsizeSlider  = hslider("Reverberation Room Size[acc:1 1 -10 0 10]", 0.5, 0.1, 0.9, 0.025) : si.smooth(0.999) : min(0.9) :max(0.1) *scaleroom + offsetroom;
+wetSlider       = hslider("Reverberation Intensity[acc:1 1 -10 0 10]", 0.3333, 0.1, 0.9, 0.025) : si.smooth(0.999) : min(0.9) :max(0.1);
 combfeed        = roomsizeSlider;
-
 
 // Comb and Allpass filters
 //-------------------------
@@ -87,7 +81,6 @@ combfeed        = roomsizeSlider;
 allpass(dt,fb) = (_,_ <: (*(fb),_:+:@(dt)), -) ~ _ : (!,_);
 
 comb(dt, fb, damp) = (+:@(dt)) ~ (*(1-damp) : (+ ~ *(damp)) : *(fb));
-
 
 // Reverb components
 //------------------
@@ -110,7 +103,6 @@ monoReverb(fb1, fb2, damp, spread)
 
 stereoReverb(fb1, fb2, damp, spread)
     = + <:  monoReverb(fb1, fb2, damp, 0), monoReverb(fb1, fb2, damp, spread);
-
 
 // fxctrl : add an input gain and a wet-dry control to a stereo FX
 //----------------------------------------------------------------

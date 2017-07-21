@@ -1,9 +1,8 @@
 declare name "C Major Flute";
 declare author "ER";// Adapted from  "Nonlinear WaveGuide Flute" by Romain Michon (rmichon@ccrma.stanford.edu)";
 
-import("music.lib");
-import("instrument.lib");
-import("effect.lib");
+import("stdfaust.lib");
+instrument=library("instruments.lib");
 
 /* =============== DESCRIPTION ================= :
 
@@ -55,7 +54,6 @@ freq(d)	 = freq(d-7)*2;
 
 //==================== SIGNAL PROCESSING ================
 
-
 //----------------------- Synthesis parameters computing and functions declaration ----------------------------
 
 //Loops feedbacks gains
@@ -63,34 +61,33 @@ feedBack1 = 0.4;
 feedBack2 = 0.4;
 
 //Delay Lines
-embouchureDelayLength(f) = (SR/f)/2-2;
-boreDelayLength(f) = SR/f-2;
-embouchureDelay(f) = fdelay(4096,embouchureDelayLength(f));
-boreDelay(f) = fdelay(4096,boreDelayLength(f));
+embouchureDelayLength(f) = (ma.SR/f)/2-2;
+boreDelayLength(f) = ma.SR/f-2;
+embouchureDelay(f) = de.fdelay(4096,embouchureDelayLength(f));
+boreDelay(f) = de.fdelay(4096,boreDelayLength(f));
 
 //Polinomial
 poly = _ <: _ - _*_*_;
 
 //jet filter is a lowwpass filter (declared in filter.lib)
-reflexionFilter = lowpass(1,2000);
+reflexionFilter = fi.lowpass(1,2000);
 
 //----------------------- Algorithm implementation ----------------------------
 
 //Pressure envelope
-env1(t) = adsr(env1Attack,env1Decay,90,env1Release,(t | pressureEnvelope))*pressure*1.1; 
+env1(t) = en.adsr(env1Attack,env1Decay,90,env1Release,(t | pressureEnvelope))*pressure*1.1; 
 
 //Global envelope
-env2(t) = asr(env2Attack,100,env2Release,t)*0.5;
+env2(t) = en.asr(env2Attack,100,env2Release,t)*0.5;
 
 //Vibrato Envelope
-vibratoEnvelope(t) = envVibrato(vibratoBegin,vibratoAttack,100,vibratoRelease,t)*vibratoGain; 
+vibratoEnvelope(t) = instrument.envVibrato(vibratoBegin,vibratoAttack,100,vibratoRelease,t)*vibratoGain; 
 
-vibrato(t) = osc(vibratoFreq)*vibratoEnvelope(t);
+vibrato(t) = os.osc(vibratoFreq)*vibratoEnvelope(t);
 
-breath(t) = noise*env1(t);
+breath(t) = no.noise*env1(t);
 
 flow(t) = env1(t) + breath(t)*breathAmp + vibrato(t);
-
 
 //------------------------- Enveloppe Trigger --------------------------------------------
 
@@ -99,12 +96,12 @@ trigger(n) = position(n): trig
 	upfront(x) 	= (x-x') > 0;
 	decay(n,x)	= x - (x>0.0)/n;
 	release(n)	= + ~ decay(n);
-	noteDuration = hslider("h:[1]/[3]Note Duration[unit:s][style:knob][acc:2 0 -10 0 10]", 0.166, 0.1, 0.25, 0.01)*44100 : min(11025) : max(4410):int;
+	noteDuration = hslider("h:[1]/[3]Note Duration[unit:s][style:knob][acc:2 1 -10 0 10]", 0.166, 0.1, 0.25, 0.01)*44100 : min(11025) : max(4410):int;
 	trig = upfront : release(noteDuration) : >(0.0);
 	};
 
 position(n) = abs(hand - n) < 0.5;
-hand = hslider("h:[1]/[1]Instrument Hand[acc:0 0 -12 0 10]", 9, 0, N, 1): automat(bps, 15, 0.0)// => gate
+hand = hslider("h:[1]/[1]Instrument Hand[acc:0 1 -12 0 10]", 9, 0, N, 1): ba.automat(bps, 15, 0.0)// => gate
 		with{
-		bps = hslider("h:[1]/[2]Speed[style:knob][acc:0 0 -10 0 10]", 480, 180, 720, 1):smooth(0.999) : min(720) : max(180) : int;
+		bps = hslider("h:[1]/[2]Speed[style:knob][acc:0 1 -10 0 10]", 480, 180, 720, 1):si.smooth(0.999) : min(720) : max(180) : int;
 		};

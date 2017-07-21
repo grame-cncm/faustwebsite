@@ -14,8 +14,8 @@ declare author "ER";//From "Tuned Bar" by Romain Michon (rmichon@ccrma.stanford.
 
 */
  
-import("music.lib");
-import("instrument.lib");
+import("stdfaust.lib");
+instrument = library("instruments.lib");
 
 //==================== INSTRUMENT =======================
 
@@ -32,15 +32,14 @@ tunedBar(h,n,e) =
 
 //==================== GUI SPECIFICATION ================
 
-
 gain = 0.8;
 gate(h,n) = position(h,n) : upfront;
-hand(0) = vslider("Instrument Hand[acc:1 1 -10 0 18]", 0, 0, 5, 1):int:automat(120, 15, 0.0);
-hand(1) = vslider("Instrument Hand[acc:1 1 -10 0 18]", 0, 0, 5, 1):int:automat(120, 15, 0.0);
-hand(2) = vslider("Instrument Hand[acc:1 1 -10 0 14]", 2, 0, 5, 1):int:automat(240, 15, 0.0);
-hand(3) = vslider("Instrument Hand[acc:1 1 -10 0 14]", 2, 0, 5, 1):int:automat(240, 15, 0.0);
-hand(4) = vslider("Instrument Hand[acc:1 1 -10 0 10]", 4, 0, 5, 1):int:automat(480, 15, 0.0);
-hand(5) = vslider("Instrument Hand[acc:1 1 -10 0 10]", 4, 0, 5, 1):int:automat(480, 15, 0.0);
+hand(0) = vslider("Instrument Hand[acc:1 0 -10 0 18]", 0, 0, 5, 1):int:ba.automat(120, 15, 0.0);
+hand(1) = vslider("Instrument Hand[acc:1 0 -10 0 18]", 0, 0, 5, 1):int:ba.automat(120, 15, 0.0);
+hand(2) = vslider("Instrument Hand[acc:1 0 -10 0 14]", 2, 0, 5, 1):int:ba.automat(240, 15, 0.0);
+hand(3) = vslider("Instrument Hand[acc:1 0 -10 0 14]", 2, 0, 5, 1):int:ba.automat(240, 15, 0.0);
+hand(4) = vslider("Instrument Hand[acc:1 0 -10 0 10]", 4, 0, 5, 1):int:ba.automat(480, 15, 0.0);
+hand(5) = vslider("Instrument Hand[acc:1 0 -10 0 10]", 4, 0, 5, 1):int:ba.automat(480, 15, 0.0);
 
 position(h,n) = abs(hand(h) - n) < 0.5;
 upfront(x) = x>x';
@@ -49,9 +48,7 @@ select = 1;
 integrationConstant = 0;
 baseGain = 1;
 
-
 //----------------------- Frequency Table --------------------
-
 
 freq(0) = 92.49;
 freq(1) = 103.82;
@@ -96,23 +93,19 @@ nlfOrder = 6;
 //the number of modes depends on the preset being used
 nModes = nMode(preset);
 
-
-
-delayLengthBase(f) = SR/f;
+delayLengthBase(f) = ma.SR/f;
 
 //delay lengths in number of samples
 delayLength(x,f) = delayLengthBase(f)/modes(preset,x);
 
 //delay lines
-delayLine(x,f) = delay(4096,delayLength(x,f));
+delayLine(x,f) = de.delay(4096,delayLength(x,f));
 
-//Filter bank: bandpass filters (declared in instrument.lib)
-radius = 1 - PI*32/SR;
-bandPassFilter(x,f) = bandPass(f*modes(preset,x),radius);
-
+//Filter bank: fi.bandpass filters (declared in instrument.lib)
+radius = 1 - ma.PI*32/ma.SR;
+bandPassFilter(x,f) = instrument.bandPass(f*modes(preset,x),radius);
 
 //----------------------- Algorithm implementation ----------------------------
-
 
 //One resonance
 resonance(x,f,g) = + : + (excitation(preset,x,g)*select) : delayLine(x,f) : *(basegains(preset,x)) : bandPassFilter(x,f);
