@@ -5852,7 +5852,7 @@ Compilation options: -scal -ftz 2
 */
 
 function getSizeChromaticSoftHarp() {
-	return 1022944;
+	return 1022948;
 }
 
 function getPathTableChromaticSoftHarp() {
@@ -5860,8 +5860,8 @@ function getPathTableChromaticSoftHarp() {
 	pathTable["/Chromatic_Soft_Harp/0x00/Speed"] = 124;
 	pathTable["/Chromatic_Soft_Harp/0x00/Instrument_Hand"] = 152;
 	pathTable["/Chromatic_Soft_Harp/Reverb/Resonance_(InstrReverb)"] = 4308;
-	pathTable["/Chromatic_Soft_Harp/Reverb/Reverberation_Volume_(InstrReverb)"] = 178616;
-	pathTable["/Chromatic_Soft_Harp/Reverb/Reverberation_Room_Size_(InstrReverb)"] = 178644;
+	pathTable["/Chromatic_Soft_Harp/Reverb/Reverberation_Volume_(InstrReverb)"] = 178620;
+	pathTable["/Chromatic_Soft_Harp/Reverb/Reverberation_Room_Size_(InstrReverb)"] = 178648;
 	return pathTable;
 }
 
@@ -5931,16 +5931,16 @@ faust.getErrorMessage = function() { return faust.error_msg; };
 faust.ChromaticSoftHarp = function (instance, context, buffer_size) {
 
     // Keep JSON parsed object
-    var jon_object = JSON.parse(getJSONChromaticSoftHarp());
+    var json_object = JSON.parse(getJSONChromaticSoftHarp());
     
     function getNumInputsAux ()
     {
-        return (jon_object.inputs !== undefined) ? parseInt(jon_object.inputs) : 0;
+        return (json_object.inputs !== undefined) ? parseInt(json_object.inputs) : 0;
     }
     
     function getNumOutputsAux ()
     {
-        return (jon_object.outputs !== undefined) ? parseInt(jon_object.outputs) : 0;
+        return (json_object.outputs !== undefined) ? parseInt(json_object.outputs) : 0;
     }
 
     var sp;
@@ -5951,9 +5951,9 @@ faust.ChromaticSoftHarp = function (instance, context, buffer_size) {
         return null;
     }
     
-    sp.jon_object = jon_object;
+    sp.json_object = json_object;
     
-    sp.handler = null;
+   sp.output_handler = null;
     sp.ins = null;
     sp.outs = null;
     
@@ -5985,7 +5985,7 @@ faust.ChromaticSoftHarp = function (instance, context, buffer_size) {
      
     // Start of HEAP index
     
-    // ChromaticSoftHarp is placed first with index 0. Audio buffer start at the end od ChromaticSoftHarp.
+    // ChromaticSoftHarp is placed first with index 0. Audio buffer start at the end of ChromaticSoftHarp.
     sp.audio_heap_ptr = getSizeChromaticSoftHarp();
 
     // Setup pointers offset
@@ -6006,10 +6006,10 @@ faust.ChromaticSoftHarp = function (instance, context, buffer_size) {
         
     sp.update_outputs = function ()
     {
-        if (sp.outputs_items.length > 0 && sp.handler && sp.outputs_timer-- === 0) {
+        if (sp.outputs_items.length > 0 && sp.output_handler && sp.outputs_timer-- === 0) {
             sp.outputs_timer = 5;
             for (var i = 0; i < sp.outputs_items.length; i++) {
-                sp.handler(sp.outputs_items[i], sp.factory.getParamValue(sp.dsp, sp.pathTable[sp.outputs_items[i]]));
+                sp.output_handler(sp.outputs_items[i], sp.factory.getParamValue(sp.dsp, sp.pathTable[sp.outputs_items[i]]));
             }
         }
     }
@@ -6122,7 +6122,7 @@ faust.ChromaticSoftHarp = function (instance, context, buffer_size) {
         }
                                 
         // bargraph
-        sp.parse_ui(sp.jon_object.ui);
+        sp.parse_ui(sp.json_object.ui);
         
         // Init ChromaticSoftHarp
         sp.factory.init(sp.dsp, context.sampleRate);
@@ -6207,17 +6207,25 @@ faust.ChromaticSoftHarp = function (instance, context, buffer_size) {
      * to be used on each generated output value. This handler will be called
      * each audio cycle at the end of the 'compute' method.
      *
-     * @param hd - a function of type function(path_to_control, value)
+     * @param handler - a function of type function(path, value)
      */
-    sp.setHandler = function (hd)
+    sp.setOutputParamHandler = function (handler)
     {
-        sp.handler = hd;
+        sp.output_handler = handler;
+    }
+    
+     /**
+     * Get the current output handler.
+     */
+    sp.getOutputParamHandler = function ()
+    {
+        return sp.output_handler;
     }
 
     /**
      * Set control value.
      *
-     * @param path - the path to the wanted control (retrieved using 'controls' method)
+     * @param path - the path to the wanted control (retrieved using 'getParams' method)
      * @param val - the float value for the wanted control
      */
     sp.setParamValue = function (path, val)
@@ -6246,9 +6254,9 @@ faust.ChromaticSoftHarp = function (instance, context, buffer_size) {
     /**
      * Get the table of all control paths.
      *
-     * @return the table of all control paths
+     * @return the table of all input parameters paths
      */
-    sp.controls = function()
+    sp.getParams = function()
     {
         return sp.inputs_items;
     }
@@ -6258,7 +6266,7 @@ faust.ChromaticSoftHarp = function (instance, context, buffer_size) {
      *
      * @return ChromaticSoftHarp JSON description
      */
-    sp.json = function ()
+    sp.getJSON = function ()
     {
         return getJSONChromaticSoftHarp();
     }
@@ -6376,16 +6384,16 @@ function startChromaticSoftHarpAux(dsp)
     }
     ChromaticSoftHarp.connect(audio_context.destination);
     
-    console.log(ChromaticSoftHarp.json());
-    console.log(ChromaticSoftHarp.controls());
+    console.log(ChromaticSoftHarp.getJSON());
+    console.log(ChromaticSoftHarp.getParams());
     
     // kludge...ideally, this needs to not be part of the imported JS
     _f4u$t.main_loop = function() {}
     
     faustsvg = $('<div />');
     $('body').append(faustsvg);
-    var handler = _f4u$t.main(ChromaticSoftHarp.json(), faustsvg, ChromaticSoftHarp.setParamValue);
-    ChromaticSoftHarp.setHandler(handler);
+    var handler = _f4u$t.main(ChromaticSoftHarp.getJSON(), faustsvg, ChromaticSoftHarp.setParamValue);
+    ChromaticSoftHarp.setOutputParamHandler(handler);
 }
 
 function startChromaticSoftHarp()

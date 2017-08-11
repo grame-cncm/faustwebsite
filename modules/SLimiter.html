@@ -5906,16 +5906,16 @@ faust.getErrorMessage = function() { return faust.error_msg; };
 faust.SLimiter = function (instance, context, buffer_size) {
 
     // Keep JSON parsed object
-    var jon_object = JSON.parse(getJSONSLimiter());
+    var json_object = JSON.parse(getJSONSLimiter());
     
     function getNumInputsAux ()
     {
-        return (jon_object.inputs !== undefined) ? parseInt(jon_object.inputs) : 0;
+        return (json_object.inputs !== undefined) ? parseInt(json_object.inputs) : 0;
     }
     
     function getNumOutputsAux ()
     {
-        return (jon_object.outputs !== undefined) ? parseInt(jon_object.outputs) : 0;
+        return (json_object.outputs !== undefined) ? parseInt(json_object.outputs) : 0;
     }
 
     var sp;
@@ -5926,9 +5926,9 @@ faust.SLimiter = function (instance, context, buffer_size) {
         return null;
     }
     
-    sp.jon_object = jon_object;
+    sp.json_object = json_object;
     
-    sp.handler = null;
+   sp.output_handler = null;
     sp.ins = null;
     sp.outs = null;
     
@@ -5960,7 +5960,7 @@ faust.SLimiter = function (instance, context, buffer_size) {
      
     // Start of HEAP index
     
-    // SLimiter is placed first with index 0. Audio buffer start at the end od SLimiter.
+    // SLimiter is placed first with index 0. Audio buffer start at the end of SLimiter.
     sp.audio_heap_ptr = getSizeSLimiter();
 
     // Setup pointers offset
@@ -5981,10 +5981,10 @@ faust.SLimiter = function (instance, context, buffer_size) {
         
     sp.update_outputs = function ()
     {
-        if (sp.outputs_items.length > 0 && sp.handler && sp.outputs_timer-- === 0) {
+        if (sp.outputs_items.length > 0 && sp.output_handler && sp.outputs_timer-- === 0) {
             sp.outputs_timer = 5;
             for (var i = 0; i < sp.outputs_items.length; i++) {
-                sp.handler(sp.outputs_items[i], sp.factory.getParamValue(sp.dsp, sp.pathTable[sp.outputs_items[i]]));
+                sp.output_handler(sp.outputs_items[i], sp.factory.getParamValue(sp.dsp, sp.pathTable[sp.outputs_items[i]]));
             }
         }
     }
@@ -6097,7 +6097,7 @@ faust.SLimiter = function (instance, context, buffer_size) {
         }
                                 
         // bargraph
-        sp.parse_ui(sp.jon_object.ui);
+        sp.parse_ui(sp.json_object.ui);
         
         // Init SLimiter
         sp.factory.init(sp.dsp, context.sampleRate);
@@ -6182,17 +6182,25 @@ faust.SLimiter = function (instance, context, buffer_size) {
      * to be used on each generated output value. This handler will be called
      * each audio cycle at the end of the 'compute' method.
      *
-     * @param hd - a function of type function(path_to_control, value)
+     * @param handler - a function of type function(path, value)
      */
-    sp.setHandler = function (hd)
+    sp.setOutputParamHandler = function (handler)
     {
-        sp.handler = hd;
+        sp.output_handler = handler;
+    }
+    
+     /**
+     * Get the current output handler.
+     */
+    sp.getOutputParamHandler = function ()
+    {
+        return sp.output_handler;
     }
 
     /**
      * Set control value.
      *
-     * @param path - the path to the wanted control (retrieved using 'controls' method)
+     * @param path - the path to the wanted control (retrieved using 'getParams' method)
      * @param val - the float value for the wanted control
      */
     sp.setParamValue = function (path, val)
@@ -6221,9 +6229,9 @@ faust.SLimiter = function (instance, context, buffer_size) {
     /**
      * Get the table of all control paths.
      *
-     * @return the table of all control paths
+     * @return the table of all input parameters paths
      */
-    sp.controls = function()
+    sp.getParams = function()
     {
         return sp.inputs_items;
     }
@@ -6233,7 +6241,7 @@ faust.SLimiter = function (instance, context, buffer_size) {
      *
      * @return SLimiter JSON description
      */
-    sp.json = function ()
+    sp.getJSON = function ()
     {
         return getJSONSLimiter();
     }
@@ -6351,16 +6359,16 @@ function startSLimiterAux(dsp)
     }
     SLimiter.connect(audio_context.destination);
     
-    console.log(SLimiter.json());
-    console.log(SLimiter.controls());
+    console.log(SLimiter.getJSON());
+    console.log(SLimiter.getParams());
     
     // kludge...ideally, this needs to not be part of the imported JS
     _f4u$t.main_loop = function() {}
     
     faustsvg = $('<div />');
     $('body').append(faustsvg);
-    var handler = _f4u$t.main(SLimiter.json(), faustsvg, SLimiter.setParamValue);
-    SLimiter.setHandler(handler);
+    var handler = _f4u$t.main(SLimiter.getJSON(), faustsvg, SLimiter.setParamValue);
+    SLimiter.setOutputParamHandler(handler);
 }
 
 function startSLimiter()

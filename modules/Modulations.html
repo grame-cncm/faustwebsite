@@ -5857,16 +5857,16 @@ function getSizeModulations() {
 
 function getPathTableModulations() {
 	var pathTable = [];
-	pathTable["/Modulations/Instrument/General_Volume"] = 262148;
-	pathTable["/Modulations/Reverb/Reverberation_Room_Size(InstrReverb)"] = 262192;
-	pathTable["/Modulations/Instrument/Modulating_Frequency"] = 393344;
-	pathTable["/Modulations/Modulations/Play_Modulation_3_(ASR_Envelope)"] = 393372;
-	pathTable["/Modulations/Instrument/Frequency"] = 393420;
-	pathTable["/Modulations/Modulations/Play_Modulation_0_(ASR_Envelope)"] = 393488;
-	pathTable["/Modulations/Modulations/Play_Modulation_1_(ASR_Envelope)"] = 393572;
-	pathTable["/Modulations/Modulations/Play_Modulation_2_(ASR_Envelope)"] = 393648;
-	pathTable["/Modulations/Instrument/Oscillator_Volume"] = 393740;
-	pathTable["/Modulations/Reverb/Reverberation_Volume(InstrReverb)"] = 393752;
+	pathTable["/Modulations/Reverb/Reverberation_Room_Size(InstrReverb)"] = 262172;
+	pathTable["/Modulations/Instrument/Modulating_Frequency"] = 393332;
+	pathTable["/Modulations/Modulations/Play_Modulation_3_(ASR_Envelope)"] = 393360;
+	pathTable["/Modulations/Instrument/Frequency"] = 393408;
+	pathTable["/Modulations/Modulations/Play_Modulation_0_(ASR_Envelope)"] = 393476;
+	pathTable["/Modulations/Modulations/Play_Modulation_1_(ASR_Envelope)"] = 393560;
+	pathTable["/Modulations/Modulations/Play_Modulation_2_(ASR_Envelope)"] = 393636;
+	pathTable["/Modulations/Instrument/Oscillator_Volume"] = 393728;
+	pathTable["/Modulations/Reverb/Reverberation_Volume(InstrReverb)"] = 393740;
+	pathTable["/Modulations/Instrument/General_Volume"] = 1106932;
 	return pathTable;
 }
 
@@ -5945,16 +5945,16 @@ faust.getErrorMessage = function() { return faust.error_msg; };
 faust.Modulations = function (instance, context, buffer_size) {
 
     // Keep JSON parsed object
-    var jon_object = JSON.parse(getJSONModulations());
+    var json_object = JSON.parse(getJSONModulations());
     
     function getNumInputsAux ()
     {
-        return (jon_object.inputs !== undefined) ? parseInt(jon_object.inputs) : 0;
+        return (json_object.inputs !== undefined) ? parseInt(json_object.inputs) : 0;
     }
     
     function getNumOutputsAux ()
     {
-        return (jon_object.outputs !== undefined) ? parseInt(jon_object.outputs) : 0;
+        return (json_object.outputs !== undefined) ? parseInt(json_object.outputs) : 0;
     }
 
     var sp;
@@ -5965,9 +5965,9 @@ faust.Modulations = function (instance, context, buffer_size) {
         return null;
     }
     
-    sp.jon_object = jon_object;
+    sp.json_object = json_object;
     
-    sp.handler = null;
+   sp.output_handler = null;
     sp.ins = null;
     sp.outs = null;
     
@@ -5999,7 +5999,7 @@ faust.Modulations = function (instance, context, buffer_size) {
      
     // Start of HEAP index
     
-    // Modulations is placed first with index 0. Audio buffer start at the end od Modulations.
+    // Modulations is placed first with index 0. Audio buffer start at the end of Modulations.
     sp.audio_heap_ptr = getSizeModulations();
 
     // Setup pointers offset
@@ -6020,10 +6020,10 @@ faust.Modulations = function (instance, context, buffer_size) {
         
     sp.update_outputs = function ()
     {
-        if (sp.outputs_items.length > 0 && sp.handler && sp.outputs_timer-- === 0) {
+        if (sp.outputs_items.length > 0 && sp.output_handler && sp.outputs_timer-- === 0) {
             sp.outputs_timer = 5;
             for (var i = 0; i < sp.outputs_items.length; i++) {
-                sp.handler(sp.outputs_items[i], sp.factory.getParamValue(sp.dsp, sp.pathTable[sp.outputs_items[i]]));
+                sp.output_handler(sp.outputs_items[i], sp.factory.getParamValue(sp.dsp, sp.pathTable[sp.outputs_items[i]]));
             }
         }
     }
@@ -6136,7 +6136,7 @@ faust.Modulations = function (instance, context, buffer_size) {
         }
                                 
         // bargraph
-        sp.parse_ui(sp.jon_object.ui);
+        sp.parse_ui(sp.json_object.ui);
         
         // Init Modulations
         sp.factory.init(sp.dsp, context.sampleRate);
@@ -6221,17 +6221,25 @@ faust.Modulations = function (instance, context, buffer_size) {
      * to be used on each generated output value. This handler will be called
      * each audio cycle at the end of the 'compute' method.
      *
-     * @param hd - a function of type function(path_to_control, value)
+     * @param handler - a function of type function(path, value)
      */
-    sp.setHandler = function (hd)
+    sp.setOutputParamHandler = function (handler)
     {
-        sp.handler = hd;
+        sp.output_handler = handler;
+    }
+    
+     /**
+     * Get the current output handler.
+     */
+    sp.getOutputParamHandler = function ()
+    {
+        return sp.output_handler;
     }
 
     /**
      * Set control value.
      *
-     * @param path - the path to the wanted control (retrieved using 'controls' method)
+     * @param path - the path to the wanted control (retrieved using 'getParams' method)
      * @param val - the float value for the wanted control
      */
     sp.setParamValue = function (path, val)
@@ -6260,9 +6268,9 @@ faust.Modulations = function (instance, context, buffer_size) {
     /**
      * Get the table of all control paths.
      *
-     * @return the table of all control paths
+     * @return the table of all input parameters paths
      */
-    sp.controls = function()
+    sp.getParams = function()
     {
         return sp.inputs_items;
     }
@@ -6272,7 +6280,7 @@ faust.Modulations = function (instance, context, buffer_size) {
      *
      * @return Modulations JSON description
      */
-    sp.json = function ()
+    sp.getJSON = function ()
     {
         return getJSONModulations();
     }
@@ -6390,16 +6398,16 @@ function startModulationsAux(dsp)
     }
     Modulations.connect(audio_context.destination);
     
-    console.log(Modulations.json());
-    console.log(Modulations.controls());
+    console.log(Modulations.getJSON());
+    console.log(Modulations.getParams());
     
     // kludge...ideally, this needs to not be part of the imported JS
     _f4u$t.main_loop = function() {}
     
     faustsvg = $('<div />');
     $('body').append(faustsvg);
-    var handler = _f4u$t.main(Modulations.json(), faustsvg, Modulations.setParamValue);
-    Modulations.setHandler(handler);
+    var handler = _f4u$t.main(Modulations.getJSON(), faustsvg, Modulations.setParamValue);
+    Modulations.setOutputParamHandler(handler);
 }
 
 function startModulations()

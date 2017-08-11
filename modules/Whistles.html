@@ -5857,17 +5857,17 @@ function getSizeWhistles() {
 
 function getPathTableWhistles() {
 	var pathTable = [];
-	pathTable["/Whistles/Freeverb/Reverberation_Intensity_(Freeverb)"] = 8;
-	pathTable["/Whistles/Whistles/Envelope_ON/OFF_0"] = 656;
-	pathTable["/Whistles/Freeverb/Reverberation_Room_Size_(Freeverb)"] = 591416;
-	pathTable["/Whistles/Whistles/Volume_0"] = 696;
-	pathTable["/Whistles/Whistles/Frequency_0"] = 748;
-	pathTable["/Whistles/Whistles/Envelope_ON/OFF_1"] = 197640;
-	pathTable["/Whistles/Whistles/Volume_1"] = 197668;
-	pathTable["/Whistles/Whistles/Frequency_1"] = 197680;
-	pathTable["/Whistles/Whistles/Envelope_ON/OFF_2"] = 394524;
-	pathTable["/Whistles/Whistles/Volume_2"] = 394552;
-	pathTable["/Whistles/Whistles/Frequency_2"] = 394564;
+	pathTable["/Whistles/Whistles/Frequency_1"] = 684;
+	pathTable["/Whistles/Whistles/Envelope_ON/OFF_1"] = 131868;
+	pathTable["/Whistles/Freeverb/Reverberation_Intensity_(Freeverb)"] = 741232;
+	pathTable["/Whistles/Whistles/Volume_1"] = 131908;
+	pathTable["/Whistles/Whistles/Envelope_ON/OFF_0"] = 131920;
+	pathTable["/Whistles/Whistles/Volume_0"] = 131948;
+	pathTable["/Whistles/Whistles/Frequency_0"] = 131960;
+	pathTable["/Whistles/Whistles/Envelope_ON/OFF_2"] = 394512;
+	pathTable["/Whistles/Whistles/Volume_2"] = 394540;
+	pathTable["/Whistles/Whistles/Frequency_2"] = 394552;
+	pathTable["/Whistles/Freeverb/Reverberation_Room_Size_(Freeverb)"] = 591404;
 	return pathTable;
 }
 
@@ -5938,16 +5938,16 @@ faust.getErrorMessage = function() { return faust.error_msg; };
 faust.Whistles = function (instance, context, buffer_size) {
 
     // Keep JSON parsed object
-    var jon_object = JSON.parse(getJSONWhistles());
+    var json_object = JSON.parse(getJSONWhistles());
     
     function getNumInputsAux ()
     {
-        return (jon_object.inputs !== undefined) ? parseInt(jon_object.inputs) : 0;
+        return (json_object.inputs !== undefined) ? parseInt(json_object.inputs) : 0;
     }
     
     function getNumOutputsAux ()
     {
-        return (jon_object.outputs !== undefined) ? parseInt(jon_object.outputs) : 0;
+        return (json_object.outputs !== undefined) ? parseInt(json_object.outputs) : 0;
     }
 
     var sp;
@@ -5958,9 +5958,9 @@ faust.Whistles = function (instance, context, buffer_size) {
         return null;
     }
     
-    sp.jon_object = jon_object;
+    sp.json_object = json_object;
     
-    sp.handler = null;
+   sp.output_handler = null;
     sp.ins = null;
     sp.outs = null;
     
@@ -5992,7 +5992,7 @@ faust.Whistles = function (instance, context, buffer_size) {
      
     // Start of HEAP index
     
-    // Whistles is placed first with index 0. Audio buffer start at the end od Whistles.
+    // Whistles is placed first with index 0. Audio buffer start at the end of Whistles.
     sp.audio_heap_ptr = getSizeWhistles();
 
     // Setup pointers offset
@@ -6013,10 +6013,10 @@ faust.Whistles = function (instance, context, buffer_size) {
         
     sp.update_outputs = function ()
     {
-        if (sp.outputs_items.length > 0 && sp.handler && sp.outputs_timer-- === 0) {
+        if (sp.outputs_items.length > 0 && sp.output_handler && sp.outputs_timer-- === 0) {
             sp.outputs_timer = 5;
             for (var i = 0; i < sp.outputs_items.length; i++) {
-                sp.handler(sp.outputs_items[i], sp.factory.getParamValue(sp.dsp, sp.pathTable[sp.outputs_items[i]]));
+                sp.output_handler(sp.outputs_items[i], sp.factory.getParamValue(sp.dsp, sp.pathTable[sp.outputs_items[i]]));
             }
         }
     }
@@ -6129,7 +6129,7 @@ faust.Whistles = function (instance, context, buffer_size) {
         }
                                 
         // bargraph
-        sp.parse_ui(sp.jon_object.ui);
+        sp.parse_ui(sp.json_object.ui);
         
         // Init Whistles
         sp.factory.init(sp.dsp, context.sampleRate);
@@ -6214,17 +6214,25 @@ faust.Whistles = function (instance, context, buffer_size) {
      * to be used on each generated output value. This handler will be called
      * each audio cycle at the end of the 'compute' method.
      *
-     * @param hd - a function of type function(path_to_control, value)
+     * @param handler - a function of type function(path, value)
      */
-    sp.setHandler = function (hd)
+    sp.setOutputParamHandler = function (handler)
     {
-        sp.handler = hd;
+        sp.output_handler = handler;
+    }
+    
+     /**
+     * Get the current output handler.
+     */
+    sp.getOutputParamHandler = function ()
+    {
+        return sp.output_handler;
     }
 
     /**
      * Set control value.
      *
-     * @param path - the path to the wanted control (retrieved using 'controls' method)
+     * @param path - the path to the wanted control (retrieved using 'getParams' method)
      * @param val - the float value for the wanted control
      */
     sp.setParamValue = function (path, val)
@@ -6253,9 +6261,9 @@ faust.Whistles = function (instance, context, buffer_size) {
     /**
      * Get the table of all control paths.
      *
-     * @return the table of all control paths
+     * @return the table of all input parameters paths
      */
-    sp.controls = function()
+    sp.getParams = function()
     {
         return sp.inputs_items;
     }
@@ -6265,7 +6273,7 @@ faust.Whistles = function (instance, context, buffer_size) {
      *
      * @return Whistles JSON description
      */
-    sp.json = function ()
+    sp.getJSON = function ()
     {
         return getJSONWhistles();
     }
@@ -6383,16 +6391,16 @@ function startWhistlesAux(dsp)
     }
     Whistles.connect(audio_context.destination);
     
-    console.log(Whistles.json());
-    console.log(Whistles.controls());
+    console.log(Whistles.getJSON());
+    console.log(Whistles.getParams());
     
     // kludge...ideally, this needs to not be part of the imported JS
     _f4u$t.main_loop = function() {}
     
     faustsvg = $('<div />');
     $('body').append(faustsvg);
-    var handler = _f4u$t.main(Whistles.json(), faustsvg, Whistles.setParamValue);
-    Whistles.setHandler(handler);
+    var handler = _f4u$t.main(Whistles.getJSON(), faustsvg, Whistles.setParamValue);
+    Whistles.setOutputParamHandler(handler);
 }
 
 function startWhistles()

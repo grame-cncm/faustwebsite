@@ -5858,11 +5858,11 @@ function getSizeTibetanBowlMulti() {
 function getPathTableTibetanBowlMulti() {
 	var pathTable = [];
 	pathTable["/Tibetan_Bowl/Reverb/Reverberation_Room_Size_(InstrReverb)"] = 32;
-	pathTable["/Tibetan_Bowl/Reverb/Reverberation_Volume_(InstrReverb)"] = 131156;
-	pathTable["/Tibetan_Bowl/Play"] = 131180;
-	pathTable["/Tibetan_Bowl/Frequency"] = 131444;
-	pathTable["/Tibetan_Bowl/Modulation"] = 155568;
-	pathTable["/Tibetan_Bowl/Modulation_Frequency"] = 155584;
+	pathTable["/Tibetan_Bowl/Play"] = 131168;
+	pathTable["/Tibetan_Bowl/Frequency"] = 131432;
+	pathTable["/Tibetan_Bowl/Modulation"] = 155556;
+	pathTable["/Tibetan_Bowl/Modulation_Frequency"] = 155572;
+	pathTable["/Tibetan_Bowl/Reverb/Reverberation_Volume_(InstrReverb)"] = 157700;
 	return pathTable;
 }
 
@@ -5940,16 +5940,16 @@ faust.getErrorMessage = function() { return faust.error_msg; };
 faust.TibetanBowlMulti = function (instance, context, buffer_size) {
 
     // Keep JSON parsed object
-    var jon_object = JSON.parse(getJSONTibetanBowlMulti());
+    var json_object = JSON.parse(getJSONTibetanBowlMulti());
     
     function getNumInputsAux ()
     {
-        return (jon_object.inputs !== undefined) ? parseInt(jon_object.inputs) : 0;
+        return (json_object.inputs !== undefined) ? parseInt(json_object.inputs) : 0;
     }
     
     function getNumOutputsAux ()
     {
-        return (jon_object.outputs !== undefined) ? parseInt(jon_object.outputs) : 0;
+        return (json_object.outputs !== undefined) ? parseInt(json_object.outputs) : 0;
     }
 
     var sp;
@@ -5960,9 +5960,9 @@ faust.TibetanBowlMulti = function (instance, context, buffer_size) {
         return null;
     }
     
-    sp.jon_object = jon_object;
+    sp.json_object = json_object;
     
-    sp.handler = null;
+   sp.output_handler = null;
     sp.ins = null;
     sp.outs = null;
     
@@ -5994,7 +5994,7 @@ faust.TibetanBowlMulti = function (instance, context, buffer_size) {
      
     // Start of HEAP index
     
-    // TibetanBowlMulti is placed first with index 0. Audio buffer start at the end od TibetanBowlMulti.
+    // TibetanBowlMulti is placed first with index 0. Audio buffer start at the end of TibetanBowlMulti.
     sp.audio_heap_ptr = getSizeTibetanBowlMulti();
 
     // Setup pointers offset
@@ -6015,10 +6015,10 @@ faust.TibetanBowlMulti = function (instance, context, buffer_size) {
         
     sp.update_outputs = function ()
     {
-        if (sp.outputs_items.length > 0 && sp.handler && sp.outputs_timer-- === 0) {
+        if (sp.outputs_items.length > 0 && sp.output_handler && sp.outputs_timer-- === 0) {
             sp.outputs_timer = 5;
             for (var i = 0; i < sp.outputs_items.length; i++) {
-                sp.handler(sp.outputs_items[i], sp.factory.getParamValue(sp.dsp, sp.pathTable[sp.outputs_items[i]]));
+                sp.output_handler(sp.outputs_items[i], sp.factory.getParamValue(sp.dsp, sp.pathTable[sp.outputs_items[i]]));
             }
         }
     }
@@ -6131,7 +6131,7 @@ faust.TibetanBowlMulti = function (instance, context, buffer_size) {
         }
                                 
         // bargraph
-        sp.parse_ui(sp.jon_object.ui);
+        sp.parse_ui(sp.json_object.ui);
         
         // Init TibetanBowlMulti
         sp.factory.init(sp.dsp, context.sampleRate);
@@ -6216,17 +6216,25 @@ faust.TibetanBowlMulti = function (instance, context, buffer_size) {
      * to be used on each generated output value. This handler will be called
      * each audio cycle at the end of the 'compute' method.
      *
-     * @param hd - a function of type function(path_to_control, value)
+     * @param handler - a function of type function(path, value)
      */
-    sp.setHandler = function (hd)
+    sp.setOutputParamHandler = function (handler)
     {
-        sp.handler = hd;
+        sp.output_handler = handler;
+    }
+    
+     /**
+     * Get the current output handler.
+     */
+    sp.getOutputParamHandler = function ()
+    {
+        return sp.output_handler;
     }
 
     /**
      * Set control value.
      *
-     * @param path - the path to the wanted control (retrieved using 'controls' method)
+     * @param path - the path to the wanted control (retrieved using 'getParams' method)
      * @param val - the float value for the wanted control
      */
     sp.setParamValue = function (path, val)
@@ -6255,9 +6263,9 @@ faust.TibetanBowlMulti = function (instance, context, buffer_size) {
     /**
      * Get the table of all control paths.
      *
-     * @return the table of all control paths
+     * @return the table of all input parameters paths
      */
-    sp.controls = function()
+    sp.getParams = function()
     {
         return sp.inputs_items;
     }
@@ -6267,7 +6275,7 @@ faust.TibetanBowlMulti = function (instance, context, buffer_size) {
      *
      * @return TibetanBowlMulti JSON description
      */
-    sp.json = function ()
+    sp.getJSON = function ()
     {
         return getJSONTibetanBowlMulti();
     }
@@ -6385,16 +6393,16 @@ function startTibetanBowlMultiAux(dsp)
     }
     TibetanBowlMulti.connect(audio_context.destination);
     
-    console.log(TibetanBowlMulti.json());
-    console.log(TibetanBowlMulti.controls());
+    console.log(TibetanBowlMulti.getJSON());
+    console.log(TibetanBowlMulti.getParams());
     
     // kludge...ideally, this needs to not be part of the imported JS
     _f4u$t.main_loop = function() {}
     
     faustsvg = $('<div />');
     $('body').append(faustsvg);
-    var handler = _f4u$t.main(TibetanBowlMulti.json(), faustsvg, TibetanBowlMulti.setParamValue);
-    TibetanBowlMulti.setHandler(handler);
+    var handler = _f4u$t.main(TibetanBowlMulti.getJSON(), faustsvg, TibetanBowlMulti.setParamValue);
+    TibetanBowlMulti.setOutputParamHandler(handler);
 }
 
 function startTibetanBowlMulti()

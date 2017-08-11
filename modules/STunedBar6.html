@@ -5857,12 +5857,12 @@ function getSizeSTunedBar6() {
 
 function getPathTableSTunedBar6() {
 	var pathTable = [];
-	pathTable["/tunedBars/0x00/Bar_5/Instrument_Hand"] = 112;
-	pathTable["/tunedBars/0x00/Bar_0/Instrument_Hand"] = 708;
-	pathTable["/tunedBars/0x00/Bar_1/Instrument_Hand"] = 70008;
-	pathTable["/tunedBars/0x00/Bar_2/Instrument_Hand"] = 105016;
-	pathTable["/tunedBars/0x00/Bar_3/Instrument_Hand"] = 122860;
-	pathTable["/tunedBars/0x00/Bar_4/Instrument_Hand"] = 132044;
+	pathTable["/tunedBars/0x00/Bar_0/Instrument_Hand"] = 112;
+	pathTable["/tunedBars/0x00/Bar_1/Instrument_Hand"] = 69424;
+	pathTable["/tunedBars/0x00/Bar_2/Instrument_Hand"] = 104432;
+	pathTable["/tunedBars/0x00/Bar_3/Instrument_Hand"] = 122276;
+	pathTable["/tunedBars/0x00/Bar_4/Instrument_Hand"] = 131480;
+	pathTable["/tunedBars/0x00/Bar_5/Instrument_Hand"] = 136356;
 	return pathTable;
 }
 
@@ -5929,16 +5929,16 @@ faust.getErrorMessage = function() { return faust.error_msg; };
 faust.STunedBar6 = function (instance, context, buffer_size) {
 
     // Keep JSON parsed object
-    var jon_object = JSON.parse(getJSONSTunedBar6());
+    var json_object = JSON.parse(getJSONSTunedBar6());
     
     function getNumInputsAux ()
     {
-        return (jon_object.inputs !== undefined) ? parseInt(jon_object.inputs) : 0;
+        return (json_object.inputs !== undefined) ? parseInt(json_object.inputs) : 0;
     }
     
     function getNumOutputsAux ()
     {
-        return (jon_object.outputs !== undefined) ? parseInt(jon_object.outputs) : 0;
+        return (json_object.outputs !== undefined) ? parseInt(json_object.outputs) : 0;
     }
 
     var sp;
@@ -5949,9 +5949,9 @@ faust.STunedBar6 = function (instance, context, buffer_size) {
         return null;
     }
     
-    sp.jon_object = jon_object;
+    sp.json_object = json_object;
     
-    sp.handler = null;
+   sp.output_handler = null;
     sp.ins = null;
     sp.outs = null;
     
@@ -5983,7 +5983,7 @@ faust.STunedBar6 = function (instance, context, buffer_size) {
      
     // Start of HEAP index
     
-    // STunedBar6 is placed first with index 0. Audio buffer start at the end od STunedBar6.
+    // STunedBar6 is placed first with index 0. Audio buffer start at the end of STunedBar6.
     sp.audio_heap_ptr = getSizeSTunedBar6();
 
     // Setup pointers offset
@@ -6004,10 +6004,10 @@ faust.STunedBar6 = function (instance, context, buffer_size) {
         
     sp.update_outputs = function ()
     {
-        if (sp.outputs_items.length > 0 && sp.handler && sp.outputs_timer-- === 0) {
+        if (sp.outputs_items.length > 0 && sp.output_handler && sp.outputs_timer-- === 0) {
             sp.outputs_timer = 5;
             for (var i = 0; i < sp.outputs_items.length; i++) {
-                sp.handler(sp.outputs_items[i], sp.factory.getParamValue(sp.dsp, sp.pathTable[sp.outputs_items[i]]));
+                sp.output_handler(sp.outputs_items[i], sp.factory.getParamValue(sp.dsp, sp.pathTable[sp.outputs_items[i]]));
             }
         }
     }
@@ -6120,7 +6120,7 @@ faust.STunedBar6 = function (instance, context, buffer_size) {
         }
                                 
         // bargraph
-        sp.parse_ui(sp.jon_object.ui);
+        sp.parse_ui(sp.json_object.ui);
         
         // Init STunedBar6
         sp.factory.init(sp.dsp, context.sampleRate);
@@ -6205,17 +6205,25 @@ faust.STunedBar6 = function (instance, context, buffer_size) {
      * to be used on each generated output value. This handler will be called
      * each audio cycle at the end of the 'compute' method.
      *
-     * @param hd - a function of type function(path_to_control, value)
+     * @param handler - a function of type function(path, value)
      */
-    sp.setHandler = function (hd)
+    sp.setOutputParamHandler = function (handler)
     {
-        sp.handler = hd;
+        sp.output_handler = handler;
+    }
+    
+     /**
+     * Get the current output handler.
+     */
+    sp.getOutputParamHandler = function ()
+    {
+        return sp.output_handler;
     }
 
     /**
      * Set control value.
      *
-     * @param path - the path to the wanted control (retrieved using 'controls' method)
+     * @param path - the path to the wanted control (retrieved using 'getParams' method)
      * @param val - the float value for the wanted control
      */
     sp.setParamValue = function (path, val)
@@ -6244,9 +6252,9 @@ faust.STunedBar6 = function (instance, context, buffer_size) {
     /**
      * Get the table of all control paths.
      *
-     * @return the table of all control paths
+     * @return the table of all input parameters paths
      */
-    sp.controls = function()
+    sp.getParams = function()
     {
         return sp.inputs_items;
     }
@@ -6256,7 +6264,7 @@ faust.STunedBar6 = function (instance, context, buffer_size) {
      *
      * @return STunedBar6 JSON description
      */
-    sp.json = function ()
+    sp.getJSON = function ()
     {
         return getJSONSTunedBar6();
     }
@@ -6374,16 +6382,16 @@ function startSTunedBar6Aux(dsp)
     }
     STunedBar6.connect(audio_context.destination);
     
-    console.log(STunedBar6.json());
-    console.log(STunedBar6.controls());
+    console.log(STunedBar6.getJSON());
+    console.log(STunedBar6.getParams());
     
     // kludge...ideally, this needs to not be part of the imported JS
     _f4u$t.main_loop = function() {}
     
     faustsvg = $('<div />');
     $('body').append(faustsvg);
-    var handler = _f4u$t.main(STunedBar6.json(), faustsvg, STunedBar6.setParamValue);
-    STunedBar6.setHandler(handler);
+    var handler = _f4u$t.main(STunedBar6.getJSON(), faustsvg, STunedBar6.setParamValue);
+    STunedBar6.setOutputParamHandler(handler);
 }
 
 function startSTunedBar6()
