@@ -5928,7 +5928,7 @@ faust.SLimiter = function (instance, context, buffer_size) {
     
     sp.json_object = json_object;
     
-   sp.output_handler = null;
+    sp.output_handler = null;
     sp.ins = null;
     sp.outs = null;
     
@@ -6114,25 +6114,25 @@ faust.SLimiter = function (instance, context, buffer_size) {
     /*
      Public API to be used to control the SLimiter.
     */
-    
+
     /* Return current sample rate */
     sp.getSampleRate = function ()
     {
         return context.sampleRate;
     }
-    
+
     /* Return instance number of audio inputs. */
     sp.getNumInputs = function ()
     {
         return getNumInputsAux();
     }
-    
+
     /* Return instance number of audio outputs. */
     sp.getNumOutputs = function ()
     {
         return getNumOutputsAux();
     }
-    
+
     /**
      * Global init, doing the following initialization:
      * - static tables initialization
@@ -6144,7 +6144,7 @@ faust.SLimiter = function (instance, context, buffer_size) {
     {
         sp.factory.init(sp.dsp, sample_rate);
     }
-    
+
     /** 
      * Init instance state.
      *
@@ -6154,7 +6154,7 @@ faust.SLimiter = function (instance, context, buffer_size) {
     {
         sp.factory.instanceInit(sp.dsp, sample_rate);
     }
-    
+
     /** 
      * Init instance constant state.
      *
@@ -6164,13 +6164,13 @@ faust.SLimiter = function (instance, context, buffer_size) {
     {
         sp.factory.instanceConstants(sp.dsp, sample_rate);
     }
-    
+
     /* Init default control parameters values. */
     sp.instanceResetUserInterface = function ()
     {
         sp.factory.instanceResetUserInterface(sp.dsp);
     }
-    
+
     /* Init instance state (delay lines...).*/
     sp.instanceClear = function ()
     {
@@ -6184,24 +6184,24 @@ faust.SLimiter = function (instance, context, buffer_size) {
      *
      * @param handler - a function of type function(path, value)
      */
-    sp.setOutputParamHandler = function (handler)
-    {
-        sp.output_handler = handler;
-    }
-    
+     sp.setOutputParamHandler = function (handler)
+     {
+         sp.output_handler = handler;
+     }
+
      /**
      * Get the current output handler.
      */
-    sp.getOutputParamHandler = function ()
-    {
-        return sp.output_handler;
-    }
+     sp.getOutputParamHandler = function ()
+     {
+         return sp.output_handler;
+     }
 
     /**
      * Set control value.
      *
      * @param path - the path to the wanted control (retrieved using 'getParams' method)
-     * @param val - the float value for the wanted control
+     * @param val - the float value for the wanted parameter
      */
     sp.setParamValue = function (path, val)
     {
@@ -6227,9 +6227,9 @@ faust.SLimiter = function (instance, context, buffer_size) {
     }
     
     /**
-     * Get the table of all control paths.
+     * Get the table of all input parameters paths.
      *
-     * @return the table of all input parameters paths
+     * @return the table of all input parameter paths.
      */
     sp.getParams = function()
     {
@@ -6303,6 +6303,7 @@ var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContex
 var audio_input = null;
 var SLimiter = null;
 var faustsvg = null;
+var output_handler = null;
 
 function changeBufferSize(buffer_size)
 {
@@ -6338,6 +6339,32 @@ function getDevice(device)
     audio_input.connect(SLimiter);
 }
 
+// Save/Load functions using local storage
+function saveSLimiter()
+{
+    if (typeof(Storage) !== "undefined") {
+        var params = SLimiter.getParams();
+        for (var i = 0; i < params.length; i++) {
+            localStorage.setItem(params[i], SLimiter.getParamValue(params[i]));
+        }
+    }
+}
+
+function loadSLimiter()
+{
+    if (typeof(Storage) !== "undefined") {
+        var params = SLimiter.getParams();
+        for (var i = 0; i < params.length; i++) {
+            if (localStorage.getItem(params[i])) {
+                // Restore SLimiter state
+                SLimiter.setParamValue(params[i], Number(localStorage.getItem(params[i])));
+                // Restore GUI state
+                output_handler(params[i], Number(localStorage.getItem(params[i])));
+            }
+        }
+    }
+}
+
 function startSLimiterAux(dsp)
 {
     if (SLimiter) {
@@ -6354,6 +6381,7 @@ function startSLimiterAux(dsp)
     }
     
     SLimiter = dsp;
+    
     if (SLimiter.getNumInputs() > 0) {
         activateAudioInput();
     }
@@ -6367,8 +6395,11 @@ function startSLimiterAux(dsp)
     
     faustsvg = $('<div />');
     $('body').append(faustsvg);
-    var handler = _f4u$t.main(SLimiter.getJSON(), faustsvg, SLimiter.setParamValue);
-    SLimiter.setOutputParamHandler(handler);
+    output_handler = _f4u$t.main(SLimiter.getJSON(), faustsvg, SLimiter.setParamValue);
+    SLimiter.setOutputParamHandler(output_handler);
+    
+    // Load SLimiter state from local storage
+    loadSLimiter();
 }
 
 function startSLimiter()
@@ -6402,8 +6433,10 @@ window.addEventListener('touchstart', function() {
                         }, false);
                         
                         // General
-                        
                         $(startSLimiter);
+                        
+// Save SLimiter state to local storage
+setInterval(function() { saveSLimiter(); }, 1000);
                         
 </script>
 

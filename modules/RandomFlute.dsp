@@ -4,7 +4,6 @@ declare author "ER";//Adapted from "Nonlinear WaveGuide Flute" by Romain Michon 
 import("stdfaust.lib");
 instrument = library("instruments.lib"); 
 
-
 /* ============== DESCRIPTION ================
 
 - Random frequency flute
@@ -20,7 +19,6 @@ instrument = library("instruments.lib");
 flute = (_ <: (flow + *(feedBack1) : embouchureDelay: poly) + *(feedBack2) : reflexionFilter)~(boreDelay) : NLFM : *(env2)*gain:_;
 
 process = flute : echo <: instrReverbFlute;
-
 
 //==================== GUI SPECIFICATION ================
 
@@ -93,7 +91,7 @@ envelopeMod = en.asr(nonLinAttack,100,0.1,gate);
 
 //nonLinearModultor is declared in instrument.lib, it adapts allpassnn from filter.lib
 //for using it with waveguide instruments
-NLFM =  instrument.nonLinearModulator((nonLinearity : si.smooth(0.999)),envelopeMod,freq,
+NLFM = instrument.nonLinearModulator((nonLinearity : si.smooth(0.999)),envelopeMod,freq,
      typeModulation,(frequencyMod : si.smooth(0.999)),nlfOrder);
 
 //----------------------- Synthesis parameters computing and functions declaration ----------------------------
@@ -114,7 +112,6 @@ poly = _ <: _ - _*_*_;
 //jet filter is a lowwpass filter (declared in filter.lib)
 reflexionFilter = fi.lowpass(1,2000);
 
-
 //----------------------- Algorithm implementation ----------------------------
 
 //Pressure envelope
@@ -131,7 +128,6 @@ vibrato = os.osc(vibratoFreq)*vibratoEnvelope;
 breath = no.noise*env1;
 
 flow = env1 + breath*breathAmp + vibrato;
-
 
 instrReverbFlute = re.zita_rev1_stereo(rdel,f1,f2,t60dc,t60m,fsmax),_,_ <: _,!,_,!,!,_,!,_ : +,+
     with {

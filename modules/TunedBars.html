@@ -5857,11 +5857,11 @@ function getSizeTunedBars() {
 
 function getPathTableTunedBars() {
 	var pathTable = [];
-	pathTable["/Tuned_Bars/Reverb/Reverberation_Room_Size_(InstrReverb)"] = 32;
-	pathTable["/Tuned_Bars/Speed"] = 131236;
-	pathTable["/Tuned_Bars/Instrument_Hand"] = 131264;
-	pathTable["/Tuned_Bars/Hight"] = 139504;
-	pathTable["/Tuned_Bars/Echo_Intensity"] = 292000;
+	pathTable["/Tuned_Bars/Echo_Intensity"] = 8;
+	pathTable["/Tuned_Bars/Speed"] = 112;
+	pathTable["/Tuned_Bars/Instrument_Hand"] = 140;
+	pathTable["/Tuned_Bars/Hight"] = 16576;
+	pathTable["/Tuned_Bars/Reverb/Reverberation_Room_Size_(InstrReverb)"] = 291964;
 	return pathTable;
 }
 
@@ -5955,7 +5955,7 @@ faust.TunedBars = function (instance, context, buffer_size) {
     
     sp.json_object = json_object;
     
-   sp.output_handler = null;
+    sp.output_handler = null;
     sp.ins = null;
     sp.outs = null;
     
@@ -6141,25 +6141,25 @@ faust.TunedBars = function (instance, context, buffer_size) {
     /*
      Public API to be used to control the TunedBars.
     */
-    
+
     /* Return current sample rate */
     sp.getSampleRate = function ()
     {
         return context.sampleRate;
     }
-    
+
     /* Return instance number of audio inputs. */
     sp.getNumInputs = function ()
     {
         return getNumInputsAux();
     }
-    
+
     /* Return instance number of audio outputs. */
     sp.getNumOutputs = function ()
     {
         return getNumOutputsAux();
     }
-    
+
     /**
      * Global init, doing the following initialization:
      * - static tables initialization
@@ -6171,7 +6171,7 @@ faust.TunedBars = function (instance, context, buffer_size) {
     {
         sp.factory.init(sp.dsp, sample_rate);
     }
-    
+
     /** 
      * Init instance state.
      *
@@ -6181,7 +6181,7 @@ faust.TunedBars = function (instance, context, buffer_size) {
     {
         sp.factory.instanceInit(sp.dsp, sample_rate);
     }
-    
+
     /** 
      * Init instance constant state.
      *
@@ -6191,13 +6191,13 @@ faust.TunedBars = function (instance, context, buffer_size) {
     {
         sp.factory.instanceConstants(sp.dsp, sample_rate);
     }
-    
+
     /* Init default control parameters values. */
     sp.instanceResetUserInterface = function ()
     {
         sp.factory.instanceResetUserInterface(sp.dsp);
     }
-    
+
     /* Init instance state (delay lines...).*/
     sp.instanceClear = function ()
     {
@@ -6211,24 +6211,24 @@ faust.TunedBars = function (instance, context, buffer_size) {
      *
      * @param handler - a function of type function(path, value)
      */
-    sp.setOutputParamHandler = function (handler)
-    {
-        sp.output_handler = handler;
-    }
-    
+     sp.setOutputParamHandler = function (handler)
+     {
+         sp.output_handler = handler;
+     }
+
      /**
      * Get the current output handler.
      */
-    sp.getOutputParamHandler = function ()
-    {
-        return sp.output_handler;
-    }
+     sp.getOutputParamHandler = function ()
+     {
+         return sp.output_handler;
+     }
 
     /**
      * Set control value.
      *
      * @param path - the path to the wanted control (retrieved using 'getParams' method)
-     * @param val - the float value for the wanted control
+     * @param val - the float value for the wanted parameter
      */
     sp.setParamValue = function (path, val)
     {
@@ -6254,9 +6254,9 @@ faust.TunedBars = function (instance, context, buffer_size) {
     }
     
     /**
-     * Get the table of all control paths.
+     * Get the table of all input parameters paths.
      *
-     * @return the table of all input parameters paths
+     * @return the table of all input parameter paths.
      */
     sp.getParams = function()
     {
@@ -6330,6 +6330,7 @@ var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContex
 var audio_input = null;
 var TunedBars = null;
 var faustsvg = null;
+var output_handler = null;
 
 function changeBufferSize(buffer_size)
 {
@@ -6365,6 +6366,32 @@ function getDevice(device)
     audio_input.connect(TunedBars);
 }
 
+// Save/Load functions using local storage
+function saveTunedBars()
+{
+    if (typeof(Storage) !== "undefined") {
+        var params = TunedBars.getParams();
+        for (var i = 0; i < params.length; i++) {
+            localStorage.setItem(params[i], TunedBars.getParamValue(params[i]));
+        }
+    }
+}
+
+function loadTunedBars()
+{
+    if (typeof(Storage) !== "undefined") {
+        var params = TunedBars.getParams();
+        for (var i = 0; i < params.length; i++) {
+            if (localStorage.getItem(params[i])) {
+                // Restore TunedBars state
+                TunedBars.setParamValue(params[i], Number(localStorage.getItem(params[i])));
+                // Restore GUI state
+                output_handler(params[i], Number(localStorage.getItem(params[i])));
+            }
+        }
+    }
+}
+
 function startTunedBarsAux(dsp)
 {
     if (TunedBars) {
@@ -6381,6 +6408,7 @@ function startTunedBarsAux(dsp)
     }
     
     TunedBars = dsp;
+    
     if (TunedBars.getNumInputs() > 0) {
         activateAudioInput();
     }
@@ -6394,8 +6422,11 @@ function startTunedBarsAux(dsp)
     
     faustsvg = $('<div />');
     $('body').append(faustsvg);
-    var handler = _f4u$t.main(TunedBars.getJSON(), faustsvg, TunedBars.setParamValue);
-    TunedBars.setOutputParamHandler(handler);
+    output_handler = _f4u$t.main(TunedBars.getJSON(), faustsvg, TunedBars.setParamValue);
+    TunedBars.setOutputParamHandler(output_handler);
+    
+    // Load TunedBars state from local storage
+    loadTunedBars();
 }
 
 function startTunedBars()
@@ -6429,8 +6460,10 @@ window.addEventListener('touchstart', function() {
                         }, false);
                         
                         // General
-                        
                         $(startTunedBars);
+                        
+// Save TunedBars state to local storage
+setInterval(function() { saveTunedBars(); }, 1000);
                         
 </script>
 

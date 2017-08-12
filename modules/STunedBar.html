@@ -5949,7 +5949,7 @@ faust.STunedBar = function (instance, context, buffer_size) {
     
     sp.json_object = json_object;
     
-   sp.output_handler = null;
+    sp.output_handler = null;
     sp.ins = null;
     sp.outs = null;
     
@@ -6135,25 +6135,25 @@ faust.STunedBar = function (instance, context, buffer_size) {
     /*
      Public API to be used to control the STunedBar.
     */
-    
+
     /* Return current sample rate */
     sp.getSampleRate = function ()
     {
         return context.sampleRate;
     }
-    
+
     /* Return instance number of audio inputs. */
     sp.getNumInputs = function ()
     {
         return getNumInputsAux();
     }
-    
+
     /* Return instance number of audio outputs. */
     sp.getNumOutputs = function ()
     {
         return getNumOutputsAux();
     }
-    
+
     /**
      * Global init, doing the following initialization:
      * - static tables initialization
@@ -6165,7 +6165,7 @@ faust.STunedBar = function (instance, context, buffer_size) {
     {
         sp.factory.init(sp.dsp, sample_rate);
     }
-    
+
     /** 
      * Init instance state.
      *
@@ -6175,7 +6175,7 @@ faust.STunedBar = function (instance, context, buffer_size) {
     {
         sp.factory.instanceInit(sp.dsp, sample_rate);
     }
-    
+
     /** 
      * Init instance constant state.
      *
@@ -6185,13 +6185,13 @@ faust.STunedBar = function (instance, context, buffer_size) {
     {
         sp.factory.instanceConstants(sp.dsp, sample_rate);
     }
-    
+
     /* Init default control parameters values. */
     sp.instanceResetUserInterface = function ()
     {
         sp.factory.instanceResetUserInterface(sp.dsp);
     }
-    
+
     /* Init instance state (delay lines...).*/
     sp.instanceClear = function ()
     {
@@ -6205,24 +6205,24 @@ faust.STunedBar = function (instance, context, buffer_size) {
      *
      * @param handler - a function of type function(path, value)
      */
-    sp.setOutputParamHandler = function (handler)
-    {
-        sp.output_handler = handler;
-    }
-    
+     sp.setOutputParamHandler = function (handler)
+     {
+         sp.output_handler = handler;
+     }
+
      /**
      * Get the current output handler.
      */
-    sp.getOutputParamHandler = function ()
-    {
-        return sp.output_handler;
-    }
+     sp.getOutputParamHandler = function ()
+     {
+         return sp.output_handler;
+     }
 
     /**
      * Set control value.
      *
      * @param path - the path to the wanted control (retrieved using 'getParams' method)
-     * @param val - the float value for the wanted control
+     * @param val - the float value for the wanted parameter
      */
     sp.setParamValue = function (path, val)
     {
@@ -6248,9 +6248,9 @@ faust.STunedBar = function (instance, context, buffer_size) {
     }
     
     /**
-     * Get the table of all control paths.
+     * Get the table of all input parameters paths.
      *
-     * @return the table of all input parameters paths
+     * @return the table of all input parameter paths.
      */
     sp.getParams = function()
     {
@@ -6324,6 +6324,7 @@ var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContex
 var audio_input = null;
 var STunedBar = null;
 var faustsvg = null;
+var output_handler = null;
 
 function changeBufferSize(buffer_size)
 {
@@ -6359,6 +6360,32 @@ function getDevice(device)
     audio_input.connect(STunedBar);
 }
 
+// Save/Load functions using local storage
+function saveSTunedBar()
+{
+    if (typeof(Storage) !== "undefined") {
+        var params = STunedBar.getParams();
+        for (var i = 0; i < params.length; i++) {
+            localStorage.setItem(params[i], STunedBar.getParamValue(params[i]));
+        }
+    }
+}
+
+function loadSTunedBar()
+{
+    if (typeof(Storage) !== "undefined") {
+        var params = STunedBar.getParams();
+        for (var i = 0; i < params.length; i++) {
+            if (localStorage.getItem(params[i])) {
+                // Restore STunedBar state
+                STunedBar.setParamValue(params[i], Number(localStorage.getItem(params[i])));
+                // Restore GUI state
+                output_handler(params[i], Number(localStorage.getItem(params[i])));
+            }
+        }
+    }
+}
+
 function startSTunedBarAux(dsp)
 {
     if (STunedBar) {
@@ -6375,6 +6402,7 @@ function startSTunedBarAux(dsp)
     }
     
     STunedBar = dsp;
+    
     if (STunedBar.getNumInputs() > 0) {
         activateAudioInput();
     }
@@ -6388,8 +6416,11 @@ function startSTunedBarAux(dsp)
     
     faustsvg = $('<div />');
     $('body').append(faustsvg);
-    var handler = _f4u$t.main(STunedBar.getJSON(), faustsvg, STunedBar.setParamValue);
-    STunedBar.setOutputParamHandler(handler);
+    output_handler = _f4u$t.main(STunedBar.getJSON(), faustsvg, STunedBar.setParamValue);
+    STunedBar.setOutputParamHandler(output_handler);
+    
+    // Load STunedBar state from local storage
+    loadSTunedBar();
 }
 
 function startSTunedBar()
@@ -6423,8 +6454,10 @@ window.addEventListener('touchstart', function() {
                         }, false);
                         
                         // General
-                        
                         $(startSTunedBar);
+                        
+// Save STunedBar state to local storage
+setInterval(function() { saveSTunedBar(); }, 1000);
                         
 </script>
 

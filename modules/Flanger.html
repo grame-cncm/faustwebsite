@@ -5944,7 +5944,7 @@ faust.Flanger = function (instance, context, buffer_size) {
     
     sp.json_object = json_object;
     
-   sp.output_handler = null;
+    sp.output_handler = null;
     sp.ins = null;
     sp.outs = null;
     
@@ -6130,25 +6130,25 @@ faust.Flanger = function (instance, context, buffer_size) {
     /*
      Public API to be used to control the Flanger.
     */
-    
+
     /* Return current sample rate */
     sp.getSampleRate = function ()
     {
         return context.sampleRate;
     }
-    
+
     /* Return instance number of audio inputs. */
     sp.getNumInputs = function ()
     {
         return getNumInputsAux();
     }
-    
+
     /* Return instance number of audio outputs. */
     sp.getNumOutputs = function ()
     {
         return getNumOutputsAux();
     }
-    
+
     /**
      * Global init, doing the following initialization:
      * - static tables initialization
@@ -6160,7 +6160,7 @@ faust.Flanger = function (instance, context, buffer_size) {
     {
         sp.factory.init(sp.dsp, sample_rate);
     }
-    
+
     /** 
      * Init instance state.
      *
@@ -6170,7 +6170,7 @@ faust.Flanger = function (instance, context, buffer_size) {
     {
         sp.factory.instanceInit(sp.dsp, sample_rate);
     }
-    
+
     /** 
      * Init instance constant state.
      *
@@ -6180,13 +6180,13 @@ faust.Flanger = function (instance, context, buffer_size) {
     {
         sp.factory.instanceConstants(sp.dsp, sample_rate);
     }
-    
+
     /* Init default control parameters values. */
     sp.instanceResetUserInterface = function ()
     {
         sp.factory.instanceResetUserInterface(sp.dsp);
     }
-    
+
     /* Init instance state (delay lines...).*/
     sp.instanceClear = function ()
     {
@@ -6200,24 +6200,24 @@ faust.Flanger = function (instance, context, buffer_size) {
      *
      * @param handler - a function of type function(path, value)
      */
-    sp.setOutputParamHandler = function (handler)
-    {
-        sp.output_handler = handler;
-    }
-    
+     sp.setOutputParamHandler = function (handler)
+     {
+         sp.output_handler = handler;
+     }
+
      /**
      * Get the current output handler.
      */
-    sp.getOutputParamHandler = function ()
-    {
-        return sp.output_handler;
-    }
+     sp.getOutputParamHandler = function ()
+     {
+         return sp.output_handler;
+     }
 
     /**
      * Set control value.
      *
      * @param path - the path to the wanted control (retrieved using 'getParams' method)
-     * @param val - the float value for the wanted control
+     * @param val - the float value for the wanted parameter
      */
     sp.setParamValue = function (path, val)
     {
@@ -6243,9 +6243,9 @@ faust.Flanger = function (instance, context, buffer_size) {
     }
     
     /**
-     * Get the table of all control paths.
+     * Get the table of all input parameters paths.
      *
-     * @return the table of all input parameters paths
+     * @return the table of all input parameter paths.
      */
     sp.getParams = function()
     {
@@ -6319,6 +6319,7 @@ var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContex
 var audio_input = null;
 var Flanger = null;
 var faustsvg = null;
+var output_handler = null;
 
 function changeBufferSize(buffer_size)
 {
@@ -6354,6 +6355,32 @@ function getDevice(device)
     audio_input.connect(Flanger);
 }
 
+// Save/Load functions using local storage
+function saveFlanger()
+{
+    if (typeof(Storage) !== "undefined") {
+        var params = Flanger.getParams();
+        for (var i = 0; i < params.length; i++) {
+            localStorage.setItem(params[i], Flanger.getParamValue(params[i]));
+        }
+    }
+}
+
+function loadFlanger()
+{
+    if (typeof(Storage) !== "undefined") {
+        var params = Flanger.getParams();
+        for (var i = 0; i < params.length; i++) {
+            if (localStorage.getItem(params[i])) {
+                // Restore Flanger state
+                Flanger.setParamValue(params[i], Number(localStorage.getItem(params[i])));
+                // Restore GUI state
+                output_handler(params[i], Number(localStorage.getItem(params[i])));
+            }
+        }
+    }
+}
+
 function startFlangerAux(dsp)
 {
     if (Flanger) {
@@ -6370,6 +6397,7 @@ function startFlangerAux(dsp)
     }
     
     Flanger = dsp;
+    
     if (Flanger.getNumInputs() > 0) {
         activateAudioInput();
     }
@@ -6383,8 +6411,11 @@ function startFlangerAux(dsp)
     
     faustsvg = $('<div />');
     $('body').append(faustsvg);
-    var handler = _f4u$t.main(Flanger.getJSON(), faustsvg, Flanger.setParamValue);
-    Flanger.setOutputParamHandler(handler);
+    output_handler = _f4u$t.main(Flanger.getJSON(), faustsvg, Flanger.setParamValue);
+    Flanger.setOutputParamHandler(output_handler);
+    
+    // Load Flanger state from local storage
+    loadFlanger();
 }
 
 function startFlanger()
@@ -6418,8 +6449,10 @@ window.addEventListener('touchstart', function() {
                         }, false);
                         
                         // General
-                        
                         $(startFlanger);
+                        
+// Save Flanger state to local storage
+setInterval(function() { saveFlanger(); }, 1000);
                         
 </script>
 

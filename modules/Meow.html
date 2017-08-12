@@ -5857,14 +5857,14 @@ function getSizeMeow() {
 
 function getPathTableMeow() {
 	var pathTable = [];
-	pathTable["/MEOW/Wah_Wah"] = 100;
-	pathTable["/MEOW/Instrument/Gain/Volume_1"] = 152;
-	pathTable["/MEOW/Instrument/Frequencies/Frequency_1"] = 160;
-	pathTable["/MEOW/ON/OFF"] = 172;
-	pathTable["/MEOW/Instrument/Gain/Volume_2"] = 33112;
-	pathTable["/MEOW/Instrument/Frequencies/Frequency_2"] = 33116;
-	pathTable["/MEOW/Instrument/Gain/Volume_3"] = 65968;
-	pathTable["/MEOW/Instrument/Frequencies/Frequency_3"] = 65972;
+	pathTable["/MEOW/Instrument/Gain/Volume_2"] = 28;
+	pathTable["/MEOW/Instrument/Frequencies/Frequency_2"] = 36;
+	pathTable["/MEOW/ON/OFF"] = 48;
+	pathTable["/MEOW/Instrument/Gain/Volume_3"] = 33012;
+	pathTable["/MEOW/Instrument/Frequencies/Frequency_3"] = 33016;
+	pathTable["/MEOW/Instrument/Gain/Volume_1"] = 65864;
+	pathTable["/MEOW/Instrument/Frequencies/Frequency_1"] = 65868;
+	pathTable["/MEOW/Wah_Wah"] = 98772;
 	return pathTable;
 }
 
@@ -5964,7 +5964,7 @@ faust.Meow = function (instance, context, buffer_size) {
     
     sp.json_object = json_object;
     
-   sp.output_handler = null;
+    sp.output_handler = null;
     sp.ins = null;
     sp.outs = null;
     
@@ -6150,25 +6150,25 @@ faust.Meow = function (instance, context, buffer_size) {
     /*
      Public API to be used to control the Meow.
     */
-    
+
     /* Return current sample rate */
     sp.getSampleRate = function ()
     {
         return context.sampleRate;
     }
-    
+
     /* Return instance number of audio inputs. */
     sp.getNumInputs = function ()
     {
         return getNumInputsAux();
     }
-    
+
     /* Return instance number of audio outputs. */
     sp.getNumOutputs = function ()
     {
         return getNumOutputsAux();
     }
-    
+
     /**
      * Global init, doing the following initialization:
      * - static tables initialization
@@ -6180,7 +6180,7 @@ faust.Meow = function (instance, context, buffer_size) {
     {
         sp.factory.init(sp.dsp, sample_rate);
     }
-    
+
     /** 
      * Init instance state.
      *
@@ -6190,7 +6190,7 @@ faust.Meow = function (instance, context, buffer_size) {
     {
         sp.factory.instanceInit(sp.dsp, sample_rate);
     }
-    
+
     /** 
      * Init instance constant state.
      *
@@ -6200,13 +6200,13 @@ faust.Meow = function (instance, context, buffer_size) {
     {
         sp.factory.instanceConstants(sp.dsp, sample_rate);
     }
-    
+
     /* Init default control parameters values. */
     sp.instanceResetUserInterface = function ()
     {
         sp.factory.instanceResetUserInterface(sp.dsp);
     }
-    
+
     /* Init instance state (delay lines...).*/
     sp.instanceClear = function ()
     {
@@ -6220,24 +6220,24 @@ faust.Meow = function (instance, context, buffer_size) {
      *
      * @param handler - a function of type function(path, value)
      */
-    sp.setOutputParamHandler = function (handler)
-    {
-        sp.output_handler = handler;
-    }
-    
+     sp.setOutputParamHandler = function (handler)
+     {
+         sp.output_handler = handler;
+     }
+
      /**
      * Get the current output handler.
      */
-    sp.getOutputParamHandler = function ()
-    {
-        return sp.output_handler;
-    }
+     sp.getOutputParamHandler = function ()
+     {
+         return sp.output_handler;
+     }
 
     /**
      * Set control value.
      *
      * @param path - the path to the wanted control (retrieved using 'getParams' method)
-     * @param val - the float value for the wanted control
+     * @param val - the float value for the wanted parameter
      */
     sp.setParamValue = function (path, val)
     {
@@ -6263,9 +6263,9 @@ faust.Meow = function (instance, context, buffer_size) {
     }
     
     /**
-     * Get the table of all control paths.
+     * Get the table of all input parameters paths.
      *
-     * @return the table of all input parameters paths
+     * @return the table of all input parameter paths.
      */
     sp.getParams = function()
     {
@@ -6339,6 +6339,7 @@ var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContex
 var audio_input = null;
 var Meow = null;
 var faustsvg = null;
+var output_handler = null;
 
 function changeBufferSize(buffer_size)
 {
@@ -6374,6 +6375,32 @@ function getDevice(device)
     audio_input.connect(Meow);
 }
 
+// Save/Load functions using local storage
+function saveMeow()
+{
+    if (typeof(Storage) !== "undefined") {
+        var params = Meow.getParams();
+        for (var i = 0; i < params.length; i++) {
+            localStorage.setItem(params[i], Meow.getParamValue(params[i]));
+        }
+    }
+}
+
+function loadMeow()
+{
+    if (typeof(Storage) !== "undefined") {
+        var params = Meow.getParams();
+        for (var i = 0; i < params.length; i++) {
+            if (localStorage.getItem(params[i])) {
+                // Restore Meow state
+                Meow.setParamValue(params[i], Number(localStorage.getItem(params[i])));
+                // Restore GUI state
+                output_handler(params[i], Number(localStorage.getItem(params[i])));
+            }
+        }
+    }
+}
+
 function startMeowAux(dsp)
 {
     if (Meow) {
@@ -6390,6 +6417,7 @@ function startMeowAux(dsp)
     }
     
     Meow = dsp;
+    
     if (Meow.getNumInputs() > 0) {
         activateAudioInput();
     }
@@ -6403,8 +6431,11 @@ function startMeowAux(dsp)
     
     faustsvg = $('<div />');
     $('body').append(faustsvg);
-    var handler = _f4u$t.main(Meow.getJSON(), faustsvg, Meow.setParamValue);
-    Meow.setOutputParamHandler(handler);
+    output_handler = _f4u$t.main(Meow.getJSON(), faustsvg, Meow.setParamValue);
+    Meow.setOutputParamHandler(output_handler);
+    
+    // Load Meow state from local storage
+    loadMeow();
 }
 
 function startMeow()
@@ -6438,8 +6469,10 @@ window.addEventListener('touchstart', function() {
                         }, false);
                         
                         // General
-                        
                         $(startMeow);
+                        
+// Save Meow state to local storage
+setInterval(function() { saveMeow(); }, 1000);
                         
 </script>
 

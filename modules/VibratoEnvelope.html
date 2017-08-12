@@ -5858,8 +5858,8 @@ function getSizeVibratoEnvelope() {
 function getPathTableVibratoEnvelope() {
 	var pathTable = [];
 	pathTable["/Vibrato/0x00/ON/OFF_Slider"] = 0;
-	pathTable["/Vibrato/Vibrato_Intensity"] = 56;
-	pathTable["/Vibrato/Vibrato_Frequency"] = 72;
+	pathTable["/Vibrato/Vibrato_Frequency"] = 60;
+	pathTable["/Vibrato/Vibrato_Intensity"] = 88;
 	return pathTable;
 }
 
@@ -5948,7 +5948,7 @@ faust.VibratoEnvelope = function (instance, context, buffer_size) {
     
     sp.json_object = json_object;
     
-   sp.output_handler = null;
+    sp.output_handler = null;
     sp.ins = null;
     sp.outs = null;
     
@@ -6134,25 +6134,25 @@ faust.VibratoEnvelope = function (instance, context, buffer_size) {
     /*
      Public API to be used to control the VibratoEnvelope.
     */
-    
+
     /* Return current sample rate */
     sp.getSampleRate = function ()
     {
         return context.sampleRate;
     }
-    
+
     /* Return instance number of audio inputs. */
     sp.getNumInputs = function ()
     {
         return getNumInputsAux();
     }
-    
+
     /* Return instance number of audio outputs. */
     sp.getNumOutputs = function ()
     {
         return getNumOutputsAux();
     }
-    
+
     /**
      * Global init, doing the following initialization:
      * - static tables initialization
@@ -6164,7 +6164,7 @@ faust.VibratoEnvelope = function (instance, context, buffer_size) {
     {
         sp.factory.init(sp.dsp, sample_rate);
     }
-    
+
     /** 
      * Init instance state.
      *
@@ -6174,7 +6174,7 @@ faust.VibratoEnvelope = function (instance, context, buffer_size) {
     {
         sp.factory.instanceInit(sp.dsp, sample_rate);
     }
-    
+
     /** 
      * Init instance constant state.
      *
@@ -6184,13 +6184,13 @@ faust.VibratoEnvelope = function (instance, context, buffer_size) {
     {
         sp.factory.instanceConstants(sp.dsp, sample_rate);
     }
-    
+
     /* Init default control parameters values. */
     sp.instanceResetUserInterface = function ()
     {
         sp.factory.instanceResetUserInterface(sp.dsp);
     }
-    
+
     /* Init instance state (delay lines...).*/
     sp.instanceClear = function ()
     {
@@ -6204,24 +6204,24 @@ faust.VibratoEnvelope = function (instance, context, buffer_size) {
      *
      * @param handler - a function of type function(path, value)
      */
-    sp.setOutputParamHandler = function (handler)
-    {
-        sp.output_handler = handler;
-    }
-    
+     sp.setOutputParamHandler = function (handler)
+     {
+         sp.output_handler = handler;
+     }
+
      /**
      * Get the current output handler.
      */
-    sp.getOutputParamHandler = function ()
-    {
-        return sp.output_handler;
-    }
+     sp.getOutputParamHandler = function ()
+     {
+         return sp.output_handler;
+     }
 
     /**
      * Set control value.
      *
      * @param path - the path to the wanted control (retrieved using 'getParams' method)
-     * @param val - the float value for the wanted control
+     * @param val - the float value for the wanted parameter
      */
     sp.setParamValue = function (path, val)
     {
@@ -6247,9 +6247,9 @@ faust.VibratoEnvelope = function (instance, context, buffer_size) {
     }
     
     /**
-     * Get the table of all control paths.
+     * Get the table of all input parameters paths.
      *
-     * @return the table of all input parameters paths
+     * @return the table of all input parameter paths.
      */
     sp.getParams = function()
     {
@@ -6323,6 +6323,7 @@ var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContex
 var audio_input = null;
 var VibratoEnvelope = null;
 var faustsvg = null;
+var output_handler = null;
 
 function changeBufferSize(buffer_size)
 {
@@ -6358,6 +6359,32 @@ function getDevice(device)
     audio_input.connect(VibratoEnvelope);
 }
 
+// Save/Load functions using local storage
+function saveVibratoEnvelope()
+{
+    if (typeof(Storage) !== "undefined") {
+        var params = VibratoEnvelope.getParams();
+        for (var i = 0; i < params.length; i++) {
+            localStorage.setItem(params[i], VibratoEnvelope.getParamValue(params[i]));
+        }
+    }
+}
+
+function loadVibratoEnvelope()
+{
+    if (typeof(Storage) !== "undefined") {
+        var params = VibratoEnvelope.getParams();
+        for (var i = 0; i < params.length; i++) {
+            if (localStorage.getItem(params[i])) {
+                // Restore VibratoEnvelope state
+                VibratoEnvelope.setParamValue(params[i], Number(localStorage.getItem(params[i])));
+                // Restore GUI state
+                output_handler(params[i], Number(localStorage.getItem(params[i])));
+            }
+        }
+    }
+}
+
 function startVibratoEnvelopeAux(dsp)
 {
     if (VibratoEnvelope) {
@@ -6374,6 +6401,7 @@ function startVibratoEnvelopeAux(dsp)
     }
     
     VibratoEnvelope = dsp;
+    
     if (VibratoEnvelope.getNumInputs() > 0) {
         activateAudioInput();
     }
@@ -6387,8 +6415,11 @@ function startVibratoEnvelopeAux(dsp)
     
     faustsvg = $('<div />');
     $('body').append(faustsvg);
-    var handler = _f4u$t.main(VibratoEnvelope.getJSON(), faustsvg, VibratoEnvelope.setParamValue);
-    VibratoEnvelope.setOutputParamHandler(handler);
+    output_handler = _f4u$t.main(VibratoEnvelope.getJSON(), faustsvg, VibratoEnvelope.setParamValue);
+    VibratoEnvelope.setOutputParamHandler(output_handler);
+    
+    // Load VibratoEnvelope state from local storage
+    loadVibratoEnvelope();
 }
 
 function startVibratoEnvelope()
@@ -6422,8 +6453,10 @@ window.addEventListener('touchstart', function() {
                         }, false);
                         
                         // General
-                        
                         $(startVibratoEnvelope);
+                        
+// Save VibratoEnvelope state to local storage
+setInterval(function() { saveVibratoEnvelope(); }, 1000);
                         
 </script>
 
