@@ -5847,7 +5847,7 @@ $(document).ready(function() { _f4u$t.main_loop(); });
 
 
 /*
-Code generated with Faust version 2.3.5
+Code generated with Faust version 2.3.6
 Compilation options: -scal -ftz 2
 */
 
@@ -5857,14 +5857,14 @@ function getSizeMeow() {
 
 function getPathTableMeow() {
 	var pathTable = [];
-	pathTable["/MEOW/Wah_Wah"] = 100;
-	pathTable["/MEOW/Instrument/Gain/Volume_1"] = 152;
-	pathTable["/MEOW/Instrument/Frequencies/Frequency_1"] = 160;
-	pathTable["/MEOW/ON/OFF"] = 172;
-	pathTable["/MEOW/Instrument/Gain/Volume_2"] = 33112;
-	pathTable["/MEOW/Instrument/Frequencies/Frequency_2"] = 33116;
-	pathTable["/MEOW/Instrument/Gain/Volume_3"] = 65968;
-	pathTable["/MEOW/Instrument/Frequencies/Frequency_3"] = 65972;
+	pathTable["/MEOW/Instrument/Gain/Volume_1"] = 32;
+	pathTable["/MEOW/Instrument/Frequencies/Frequency_1"] = 40;
+	pathTable["/MEOW/ON/OFF"] = 52;
+	pathTable["/MEOW/Instrument/Gain/Volume_2"] = 32992;
+	pathTable["/MEOW/Instrument/Frequencies/Frequency_2"] = 32996;
+	pathTable["/MEOW/Instrument/Gain/Volume_3"] = 65848;
+	pathTable["/MEOW/Instrument/Frequencies/Frequency_3"] = 65852;
+	pathTable["/MEOW/Wah_Wah"] = 98772;
 	return pathTable;
 }
 
@@ -5933,13 +5933,13 @@ faust.getErrorMessage = function() { return faust.error_msg; };
 /** 
 * Constructor
 *
-* @param instance - the wasm instance
+* @param dsp_instance - the wasm instance
 * @param context - the Web Audio context
 * @param buffer_size - the buffer_size in frames
 * 
-* @return a valid Meow object or null 
+* @return a valid WebAudio ScriptProcessorNode object or null
 */
-faust.Meow = function (instance, context, buffer_size) {
+faust.Meow = function (dsp_instance, context, buffer_size) {
 
     // Keep JSON parsed object
     var json_object = JSON.parse(getJSONMeow());
@@ -5978,8 +5978,8 @@ faust.Meow = function (instance, context, buffer_size) {
     sp.ptr_size = 4;
     sp.sample_size = 4;
     
-    sp.factory = instance.exports;
-    sp.HEAP = instance.exports.memory.buffer;
+    sp.factory = dsp_instance.exports;
+    sp.HEAP = dsp_instance.exports.memory.buffer;
     sp.HEAP32 = new Int32Array(sp.HEAP);
     sp.HEAPF32 = new Float32Array(sp.HEAP);
      
@@ -6212,6 +6212,16 @@ faust.Meow = function (instance, context, buffer_size) {
     {
         sp.factory.instanceClear(sp.dsp);
     }
+    
+    /**
+     * Trigger the Meta handler with instance specific calls to 'declare' (key, value) metadata.
+     *
+     * @param handler - the Meta handler as a 'declare' function of type (key, value)
+     */
+    sp.metadata = function (handler)
+    {
+        metadataMeow(handler);
+    }
 
     /**
      * Setup a control output handler with a function of type (path, value)
@@ -6294,7 +6304,7 @@ faust.Meow = function (instance, context, buffer_size) {
 * @param filename - the wasm filename
 * @param context - the Web Audio context
 * @param buffer_size - the buffer_size in frames
-* @param callback - a callback taking the allocated Meow as parameter
+* @param callback - a callback taking the created ScriptProcessorNode as parameter
 */
 faust.createMeow = function(filename, context, buffer_size, callback)
 {
@@ -6424,6 +6434,7 @@ function startMeowAux(dsp)
     Meow.connect(audio_context.destination);
     
     console.log(Meow.getJSON());
+    Meow.metadata({ declare: function(key, value) { console.log("key = " + key + " value = " + value); }});
     console.log(Meow.getParams());
     
     // kludge...ideally, this needs to not be part of the imported JS
@@ -6472,8 +6483,8 @@ window.addEventListener('touchstart', function() {
                         $(startMeow);
                         
 // Save Meow state to local storage
-setInterval(function() { saveMeow(); }, 1000);
-                        
+setInterval(function() { if (Meow) saveMeow(); }, 1000);
+ 
 </script>
 
 <P>

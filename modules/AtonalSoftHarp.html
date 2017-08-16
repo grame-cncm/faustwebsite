@@ -5847,12 +5847,12 @@ $(document).ready(function() { _f4u$t.main_loop(); });
 
 
 /*
-Code generated with Faust version 2.3.5
+Code generated with Faust version 2.3.6
 Compilation options: -scal -ftz 2
 */
 
 function getSizeAtonalSoftHarp() {
-	return 913332;
+	return 913328;
 }
 
 function getPathTableAtonalSoftHarp() {
@@ -5861,7 +5861,7 @@ function getPathTableAtonalSoftHarp() {
 	pathTable["/Atonal_Soft_Harp/Reverberation/Reverberation_Volume_(InstrReverb)"] = 131160;
 	pathTable["/Atonal_Soft_Harp/0x00/Speed"] = 131280;
 	pathTable["/Atonal_Soft_Harp/0x00/Instrument_Hand"] = 131308;
-	pathTable["/Atonal_Soft_Harp/Reverberation/Resonance"] = 132388;
+	pathTable["/Atonal_Soft_Harp/Reverberation/Resonance"] = 131616;
 	return pathTable;
 }
 
@@ -5921,13 +5921,13 @@ faust.getErrorMessage = function() { return faust.error_msg; };
 /** 
 * Constructor
 *
-* @param instance - the wasm instance
+* @param dsp_instance - the wasm instance
 * @param context - the Web Audio context
 * @param buffer_size - the buffer_size in frames
 * 
-* @return a valid AtonalSoftHarp object or null 
+* @return a valid WebAudio ScriptProcessorNode object or null
 */
-faust.AtonalSoftHarp = function (instance, context, buffer_size) {
+faust.AtonalSoftHarp = function (dsp_instance, context, buffer_size) {
 
     // Keep JSON parsed object
     var json_object = JSON.parse(getJSONAtonalSoftHarp());
@@ -5966,8 +5966,8 @@ faust.AtonalSoftHarp = function (instance, context, buffer_size) {
     sp.ptr_size = 4;
     sp.sample_size = 4;
     
-    sp.factory = instance.exports;
-    sp.HEAP = instance.exports.memory.buffer;
+    sp.factory = dsp_instance.exports;
+    sp.HEAP = dsp_instance.exports.memory.buffer;
     sp.HEAP32 = new Int32Array(sp.HEAP);
     sp.HEAPF32 = new Float32Array(sp.HEAP);
      
@@ -6200,6 +6200,16 @@ faust.AtonalSoftHarp = function (instance, context, buffer_size) {
     {
         sp.factory.instanceClear(sp.dsp);
     }
+    
+    /**
+     * Trigger the Meta handler with instance specific calls to 'declare' (key, value) metadata.
+     *
+     * @param handler - the Meta handler as a 'declare' function of type (key, value)
+     */
+    sp.metadata = function (handler)
+    {
+        metadataAtonalSoftHarp(handler);
+    }
 
     /**
      * Setup a control output handler with a function of type (path, value)
@@ -6282,7 +6292,7 @@ faust.AtonalSoftHarp = function (instance, context, buffer_size) {
 * @param filename - the wasm filename
 * @param context - the Web Audio context
 * @param buffer_size - the buffer_size in frames
-* @param callback - a callback taking the allocated AtonalSoftHarp as parameter
+* @param callback - a callback taking the created ScriptProcessorNode as parameter
 */
 faust.createAtonalSoftHarp = function(filename, context, buffer_size, callback)
 {
@@ -6412,6 +6422,7 @@ function startAtonalSoftHarpAux(dsp)
     AtonalSoftHarp.connect(audio_context.destination);
     
     console.log(AtonalSoftHarp.getJSON());
+    AtonalSoftHarp.metadata({ declare: function(key, value) { console.log("key = " + key + " value = " + value); }});
     console.log(AtonalSoftHarp.getParams());
     
     // kludge...ideally, this needs to not be part of the imported JS
@@ -6460,8 +6471,8 @@ window.addEventListener('touchstart', function() {
                         $(startAtonalSoftHarp);
                         
 // Save AtonalSoftHarp state to local storage
-setInterval(function() { saveAtonalSoftHarp(); }, 1000);
-                        
+setInterval(function() { if (AtonalSoftHarp) saveAtonalSoftHarp(); }, 1000);
+ 
 </script>
 
 <P>
