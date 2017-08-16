@@ -583,10 +583,10 @@
                     ftz_flag = (localStorage.getItem("ftz_flag") ? localStorage.getItem("ftz_flag") : 2);
                     
                     // Restore menus
-                    restoreMenu("selectedBuffer", ((buffer_size) ? buffer_size : 1024));
-                    restoreMenu("selectedPoly", ((poly_flag) ? poly_flag : "OFF"));
-                    restoreMenu("polyVoices", ((poly_nvoices) ? poly_nvoices : 16));
-                    restoreMenu("selectedFTZ", ((ftz_flag) ? ftz_flag : 2));
+                    restoreMenu("selectedBuffer", buffer_size);
+                    restoreMenu("selectedPoly", poly_flag);
+                    restoreMenu("polyVoices", poly_nvoices);
+                    restoreMenu("selectedFTZ", ftz_flag);
                 }
             }
             
