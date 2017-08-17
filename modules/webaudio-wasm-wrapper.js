@@ -208,13 +208,14 @@ faust.asm2wasm = {
     }
 };
 
+// Low-level API
 faust.createWasmCDSPFactoryFromString = faust_module.cwrap('createWasmCDSPFactoryFromString', 'number', ['number', 'number', 'number', 'number', 'number', 'number']);
 faust.expandCDSPFromString = faust_module.cwrap('expandCDSPFromString', 'number', ['number', 'number', 'number', 'number', 'number', 'number']);
 faust.getCLibFaustVersion = faust_module.cwrap('getCLibFaustVersion', 'number', []);
 faust.getWasmCModule = faust_module.cwrap('getWasmCModule', 'number', ['number']);
 faust.getWasmCModuleSize = faust_module.cwrap('getWasmCModuleSize', 'number', ['number']);
 faust.getWasmCHelpers = faust_module.cwrap('getWasmCHelpers', 'number', ['number']);
-faust.freeCWasmModule = faust_module.cwrap('freeCWasmModule', null, ['number']);
+faust.freeWasmCModule = faust_module.cwrap('freeWasmCModule', null, ['number']);
 faust.freeCMemory = faust_module.cwrap('freeCMemory', null, ['number']);
 faust.cleanupAfterException = faust_module.cwrap('cleanupAfterException', null, []);
 faust.getErrorAfterException = faust_module.cwrap('getErrorAfterException', 'number', []);
@@ -306,7 +307,7 @@ faust.createDSPFactoryAux = function (code, argv, internal_memory, callback) {
             faust_module._free(error_msg_ptr);
             
             // Free C allocated wasm module
-            faust.freeCWasmModule(module_code_ptr);
+            faust.freeWasmCModule(module_code_ptr);
             
             // Free 'argv' C side array
             for (var i = 0; i < argv.length; i++) {
@@ -365,7 +366,7 @@ faust.expandDSP = function (code, argv) {
    
     console.log("libfaust.js version : " + faust.getLibFaustVersion());
     
-    // Force "ajs" compilation
+    // Force "wasm" compilation
     argv.push("-lang");
     argv.push("wasm");
     
@@ -403,7 +404,7 @@ faust.expandDSP = function (code, argv) {
     faust_module._free(sha_key_ptr);
     faust_module._free(error_msg_ptr);
     
-    // Free C allocated asm.js module
+    // Free C allocated expanded string
     faust.freeCMemory(expand_dsp_ptr);
     
     // Free 'argv' C side array
@@ -460,7 +461,6 @@ faust.readDSPFactoryFromMachineAux = function (factory_name, factory_code, helpe
       var d2 = new Date();
       var time2 = d2.getTime();
       console.log("WASM compilation duration : " + (time2 - time1));
-     
     
       var factory = {};
       
@@ -492,7 +492,7 @@ faust.deleteDSPFactory = function (factory) { faust.factory_table[factory.sha_ke
 // 'mono' DSP
 
 /*
-	Memory layout for monophonic DSP : DSP struct, audio buffers pointers, audio buffers 
+    Memory layout for monophonic DSP : DSP struct, audio buffers pointers, audio buffers
 	
     dsp = 0;
     size = factory.getSize()
@@ -896,8 +896,8 @@ faust.deleteDSPInstance = function (dsp) {}
 	-----------
 	audio_heap_ptr = audio_heap_ptr_inputs = 0
 		getNumInputsAux ==> size = getNumInputsAux * ptr_size
-			---
-			---
+            ---
+            ---
 	audio_heap_ptr_outputs	
 		getNumOutputsAux ==> size = getNumOutputsAux * ptr_size
 			---
@@ -908,7 +908,7 @@ faust.deleteDSPInstance = function (dsp) {}
 			---
 	---------------
 	audio_buffers:
-    --------------
+    ---------------
 	audio_heap_inputs 
 		getNumInputsAux ==> size = getNumInputsAux * buffer_size * sample_size
 			---
