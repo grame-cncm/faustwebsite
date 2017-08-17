@@ -455,6 +455,17 @@ faust.readDSPFactoryFromMachineAux = function (factory_name, factory_code, helpe
     var d1 = new Date();
     var time1 = d1.getTime();
     
+    try {
+        var binaryen_module = Binaryen.readBinary(factory_code);
+        console.log("Binaryen based optimisation");
+        binaryen_module.optimize();
+        //console.log(binaryen_module.emitText());
+        factory_code = binaryen_module.emitBinary();
+        binaryen_module.dispose();
+    } catch(e) {
+        console.log("Binaryen not avalaible, no optimisation...");
+    }
+        
     WebAssembly.compile(factory_code)
     .then(module => {
           
@@ -823,8 +834,8 @@ faust.createDSPInstance = function (factory, context, buffer_size, callback) {
          * Get the current output handler.
          */
         sp.getOutputParamHandler = function ()
-   		{
-        	return sp.output_handler;
+        {
+            return sp.output_handler;
     	}
         
         /**
@@ -906,7 +917,7 @@ faust.deleteDSPInstance = function (dsp) {}
 		getNumOutputsAux ==> size = getNumOutputsAux * ptr_size
 			---
 			---
-	---------------
+    ---------------
 	audio_buffers:
     ---------------
 	audio_heap_inputs 
@@ -984,7 +995,7 @@ faust.createPolyDSPInstance = function (factory, context, buffer_size, max_polyp
     var importObject = { imports: { print: arg => console.log(arg) } }
     importObject["global.Math"] = window.Math;
     importObject["asm2wasm"] = faust.asm2wasm;
-    importObject["memory"] = { "memory": memory};
+    importObject["memory"] = { "memory": memory };
     
     fetch('mixer32.wasm')
     .then(mix_res => mix_res.arrayBuffer())
@@ -1304,7 +1315,7 @@ faust.createPolyDSPInstance = function (factory, context, buffer_size, max_polyp
               
               var dspOutChans = sp.HEAP32.subarray(sp.outs >> 2, (sp.outs + sp.numOut * sp.ptr_size) >> 2);
               for (i = 0; i < sp.numOut; i++) {
-                    sp.dspOutChannnels[i] = sp.HEAPF32.subarray(dspOutChans[i] >> 2, (dspOutChans[i] + buffer_size * sp.sample_size) >> 2);
+                sp.dspOutChannnels[i] = sp.HEAPF32.subarray(dspOutChans[i] >> 2, (dspOutChans[i] + buffer_size * sp.sample_size) >> 2);
               }
             }
        
@@ -1434,7 +1445,7 @@ faust.createPolyDSPInstance = function (factory, context, buffer_size, max_polyp
         */
       	sp.getOutputParamHandler = function ()
     	{
-        	return sp.output_handler;
+            return sp.output_handler;
     	}
 
        /**
