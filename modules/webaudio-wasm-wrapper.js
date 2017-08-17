@@ -463,7 +463,7 @@ faust.readDSPFactoryFromMachineAux = function (factory_name, factory_code, helpe
         factory_code = binaryen_module.emitBinary();
         binaryen_module.dispose();
     } catch(e) {
-        console.log("Binaryen not avalaible, no optimisation...");
+        console.log("Binaryen not available, no optimisation...");
     }
         
     WebAssembly.compile(factory_code)

@@ -727,6 +727,15 @@
                     window.alert("This object is not Faust code...");
                 }
             }
+            
+            function checkPolyphonicDSP(json)
+            {
+                if (!((json.indexOf("/freq") !== -1)
+                    && (json.indexOf("/gain") !== -1)
+                    && (json.indexOf("/gate") !== -1))) {
+                    alert("Faust DSP code is not Polyphonic, it will probably not work correctly in this mode...")
+                }
+            }
 
             function compileDSP()
             {
@@ -781,8 +790,10 @@
                                                                                         alert(faust.getErrorMessage());
                                                                                         return;
                                                                                     }
+                                                                                    checkPolyphonicDSP(dsp.getJSON());
 
                                                                                     DSP = dsp;
+                                                                                
                                                                                     if (DSP.getNumInputs() > 0) {
                                                                                         activateAudioInput();
                                                                                     } else {
