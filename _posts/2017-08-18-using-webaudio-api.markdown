@@ -280,7 +280,7 @@ function startosc()
 
 {% endhighlight %}
 
-Look at the [Dynamic OSC](http://faust.grame.fr/modules/dynamic-osc-wasm.html) online page for the complete code of dynamic version of the OSC example seen before. Look at the [Dynamic Faust compiler](http://faust.grame.fr/modules/faustlive-wasm.html) page for a more complete use-case of the dynamic compiler.
+Look at the [Dynamic OSC](http://faust.grame.fr/modules/dynamic-osc-wasm.html) page for the dynamic OSC complete code (based on example seen before). Look at the [Dynamic Faust compiler](http://faust.grame.fr/modules/faustlive-wasm.html) page for a more complete use-case of the dynamic compiler.
 
 ### Float denormal handling ###
 
