@@ -9,7 +9,7 @@ Some interesting applications or projects using Faust:
 - [FaustWorks](http://www.grame.fr/logiciels/faustworks)
 - [FaustLive](https://sourceforge.net/projects/faudiostream/files/)
 - [Guitarix](http://guitarix.org)
-- [Pure programing language](https://purelang.bitbucket.org) 
+- [Pure programing language](https://purelang.bitbucket.io)
 - [Snd-rt](http://www.notam02.no/arkiv/doc/snd-rt/)
 - [ASTREE: Analysis and Synthesis of Real-Time Sound Processing](http://web4.ircam.fr/308.html?&L=1&tx_ircamprojects_pi1%5BshowUid%5D=46&tx_ircamprojects_pi1%5BpType%5D=p&cHash=fbaaca84d1304ad93ca9e9b48d97a319)
 - [foo-yc20](http://foo-yc20.codeforcode.com)
