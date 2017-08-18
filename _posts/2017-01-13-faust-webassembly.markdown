@@ -29,7 +29,6 @@ Use the following command to generate the textual output in the terminal for a g
 
     faust -lang wast foo.dsp
 
-
 The following command:
 
     faust -lang wast foo.dsp -o foo.wast
