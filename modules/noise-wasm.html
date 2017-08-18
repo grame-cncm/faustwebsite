@@ -11,6 +11,10 @@
 <script src="noise.js"></script>
 
 <script>
+    
+if (typeof (WebAssembly) === "undefined") {
+    alert("WebAssembly is not supported in this browser, the page will not work !")
+}
 
 var isWebKitAudio = (typeof (webkitAudioContext) !== "undefined");
 var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
@@ -32,7 +36,7 @@ function startnoise()
                       function (node) {
                             noise = node;
                             console.log(noise.getJSON());
-                            // Prints path to be used with 'setParamValue'
+                            // Print path to be used with 'setParamValue'
                             console.log(noise.getParams());
                             // Connect it to output as a regular WebAudio node
                             noise.connect(audio_context.destination);

@@ -32,7 +32,7 @@ faust.createosc = function(context, buffer_size, callback)
 
 The resulting object is an extended ScriptProcessorNode, to be used as a regular node (like connected to other WebAudio nodes), but which also adds the Faust specific API as defined in the equivalent C++ generated **dsp** class (see the **architecture/faust/dsp/dsp.h** header for more technical details), as well as JavaScript more specific functions. For instance the following functions will have to be used to control the node:
 
-    var paths = node.getParams(); // get the set of path to read/write input control parameters
+    var paths = node.getParams(); // get the set of paths to read/write input control parameters
 
 Then knowing the path for a given parameter, the following function is used to change the parameter value:
     
