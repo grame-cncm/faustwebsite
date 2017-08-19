@@ -9,11 +9,11 @@ Using latest developments done for the Web (the new **WebAssembly backends** and
 
 ### Deploying statically compiled Faust WebAudio nodes ###
 
-JavaScript and the associated WebAssembly files can be produced with the following script:
+From a **foo.dsp** source file, JavaScript and the associated WebAssembly files can be produced with the following script:
 
     faust2wasm foo.dsp 
 
-This will generate a **foo.wasm** file containig the WebAssembly module as binary code, as well as a **foo.js** wrapper file which contains the code needed to turn the Faust DSP in a fully working WebAudio node (using an extended **ScriptProcessor** node). The name of the Faust DSP code file is used to define the final ScriptProcessorNode constructor name. So for instance if **osc.dsp** file is compiled, the following **faust.createosc** function will be generated:
+This will generate a **foo.wasm** file containing the WebAssembly module as binary code, as well as a **foo.js** wrapper file containing the code needed to turn the Faust DSP in a fully working WebAudio node (using an extended **ScriptProcessor** node). The name of the Faust DSP code file is used to define the final ScriptProcessorNode constructor name. So for instance if **osc.dsp** file is compiled, the following **faust.createosc** function will be generated:
 
 {% highlight javascript %}
 
@@ -56,7 +56,7 @@ A slider to control the noise volume parameter is defined with:
     <P> Noise volume:
     <input type="range" oninput="changeVolume(event) "min="0" max="1" value="0.5" step="0.01"/>
 
-The WebAudio context is created and the noise slide hander is defined:
+The WebAudio context is created and the noise slide hander is defined with:
 
 {% highlight javascript %}
 
@@ -72,7 +72,7 @@ function changeVolume(event)
 
 {% endhighlight %}
 
-A *startnoise* function that creates the Faust WebAudio node is defined:
+A *startnoise* function that creates the Faust WebAudio node is defined with:
 
 {% highlight javascript %}
 
@@ -164,7 +164,7 @@ The **faust2wasm** tool can be used with the **-comb** parameter to compile seve
 
 #### Generating fully working self-contained HTML pages ####
 
-The **faust2webaudiowasm** script can be used to generate a fully working self-contained HTML page, with a SVG/CSS a Graphical User Interface. From the osc.dsp Faust DSP source file, it will generate an osc.html file:
+The **faust2webaudiowasm** script can be used to generate a fully working self-contained HTML page, with a SVG/CSS a Graphical User Interface. From the **osc.dsp** Faust DSP source file, it will generate an **osc.html** file:
 
     faust2webaudiowasm osc.dsp
 
