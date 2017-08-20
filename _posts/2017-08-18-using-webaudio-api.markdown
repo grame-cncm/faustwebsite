@@ -72,7 +72,7 @@ function changeVolume(event)
 
 {% endhighlight %}
 
-A *startnoise* function that creates the Faust WebAudio node is defined with:
+A **startnoise** function which creates the Faust WebAudio node is defined with:
 
 {% highlight javascript %}
 
@@ -172,10 +172,11 @@ Assuming that the compiled Faust DSP file is polyphonic ready, the **-poly** par
 
 The **-links** generates the  DSP processor SVG representation, and links to the original DSP file as well as generated SVG files, so that the HTML page can possibly be deployed as a reusable Faust DSP resource. 
 
+Several pages generetd with the **faust2webaudiowasm** tool can be seen [here](http://faust.grame.fr/modules/).
+
 #### WebAssembly module optimization ####
 
-The **faust2wasm** and **faust2webaudiowasm** scripts can take an additional **-opt** parameter to allow WebAssembly module optimization, assuming that you have [Binaryen tools](https://github.com/WebAssembly/binaryen) installed on your machine.
-
+Assuming that you have [Binaryen tools](https://github.com/WebAssembly/binaryen) installed on your machine, the **faust2wasm** and **faust2webaudiowasm** scripts can take an additional **-opt** parameter to allow WebAssembly module optimization.
 
 ### Deploying dynamically compiled Faust WebAudio nodes ###
 
@@ -300,10 +301,9 @@ Use for example the following line to active software denormal handing when usin
 
     faust2wasm -ftz 2 foo.dsp 
 
-The same for **faust2webaudiowasm** tool:
+The same for the **faust2webaudiowasm** tool:
 
     faust2webaudiowasm -ftz 2 foo.dsp 
-
 
 For dynamic compilation, the **-ftz v** flag will have to be added in the *argv* parameter in **faust.createDSPFactory** or **faust.createPolyDSPFactory**, like for instance:
 
