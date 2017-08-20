@@ -428,8 +428,8 @@
             var ftz_flag = "2";
             var poly_nvoices = 16;
             var output_handler = null;
-            var libraries_url1 = "http://127.0.0.1:8000/libraries/";
-            var libraries_url2 = "http://faust.grame.fr/modules/libraries/";
+            //var libraries_url = "http://127.0.0.1:8000/libraries/";
+            var libraries_url = "http://faust.grame.fr/modules/libraries/";
 
             function setBufferSize(bs_item)
             {
@@ -763,10 +763,8 @@
                 argv.push("-ftz");
                 argv.push(ftz_flag);
                 argv.push("-I");
-                argv.push(libraries_url1);
-                argv.push("-I");
-                argv.push(libraries_url2);
-           
+                argv.push(libraries_url);
+
                 console.log(argv);
 
                 if (poly_flag === "ON") {

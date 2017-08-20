@@ -23,21 +23,19 @@ var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContex
 var organ = null;
 var midi_input = [];
 
-var dsp_code_url1 = "http://faust.grame.fr/images/organ.dsp";
-var dsp_code_url2 = "http://127.0.0.1:8000/organ.dsp";
+var dsp_code_url = "http://faust.grame.fr/images/organ.dsp";
+//var dsp_code_url = "http://127.0.0.1:8000/organ.dsp";
 
-var libraries_url1 = "http://127.0.0.1:8000/libraries/";
-var libraries_url2 = "http://faust.grame.fr/modules/libraries/";
+var libraries_url = "http://faust.grame.fr/modules/libraries/";
+//var libraries_url = "http://127.0.0.1:8000/libraries/";
 
 // Slider handler to change the 'noise' volume
 function changeVolume(event)
 {
-    if (organ) {
-        var val = event.target.value;
-        val = parseFloat(val);
-        console.log(val);
-        organ.setParamValue("/FaustDSP/volume", val);
-    }
+    var val = event.target.value;
+    val = parseFloat(val);
+    console.log(val);
+    organ.setParamValue("/FaustDSP/volume", val);
 }
 
 // MIDI input handling
@@ -127,54 +125,41 @@ function activateMIDIInput()
     }
 }
 
-function loadURL(url)
+function startorgan()
 {
     // Prepare argv list
     var argv = [];
     argv.push("-ftz");
     argv.push("2");
     argv.push("-I");
-    argv.push(libraries_url1);
-    argv.push("-I");
-    argv.push(libraries_url2);
+    argv.push(libraries_url);
     
     var xmlhttp = new XMLHttpRequest();
     
     xmlhttp.onreadystatechange = function() {
+        
         if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
             // Dynamically create the Faust generated node from an URL
             faust.createPolyDSPFactory(xmlhttp.responseText,
-                                       argv,
-                                       function (factory) {
-                                       faust.createPolyDSPInstance(factory, audio_context, 256, 16,
-                                                                   function (node) {
-                                                                   organ = node;
-                                                                   console.log(organ.getJSON());
-                                                                   // Print paths to be used with 'setParamValue'
-                                                                   console.log(organ.getParams());
-                                                                   // Connect it to output as a regular WebAudio node
-                                                                   organ.connect(audio_context.destination);
-                                                                   
-                                                                   activateMIDIInput();
-                                                                   
-                                                                   });});
+                                   argv,
+                                   function (factory) {
+                                   faust.createPolyDSPInstance(factory, audio_context, 256, 16,
+                                                           function (node) {
+                                                           organ = node;
+                                                           console.log(organ.getJSON());
+                                                           // Print paths to be used with 'setParamValue'
+                                                           console.log(organ.getParams());
+                                                           // Connect it to output as a regular WebAudio node
+                                                           organ.connect(audio_context.destination);
+                                                           
+                                                           activateMIDIInput();
+                                                           
+                                                           });});
         }
     }
     
-    xmlhttp.open("GET", url, false);
+    xmlhttp.open("GET", dsp_code_url, false);
     xmlhttp.send();
-}
-
-function startorgan()
-{
-    // Try to load either local of server version of the DSP code
-    try {
-        loadURL(dsp_code_url1);
-    } catch (e) {
-        try {
-            loadURL(dsp_code_url2);
-        } catch (e) {}
-    }
 }
 
 // Load handler which call 'startorgan' when 'libfaust-wasm.js' is properly loaded
