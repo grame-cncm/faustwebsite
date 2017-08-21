@@ -13,7 +13,7 @@ From a **foo.dsp** source file, JavaScript and the associated WebAssembly files 
 
     faust2wasm foo.dsp 
 
-This will generate a **foo.wasm** file containing the WebAssembly module as binary code, as well as a **foo.js** wrapper file containing the code needed to turn the Faust DSP in a fully working WebAudio node (using an extended **ScriptProcessor** node). The name of the Faust DSP code file is used to define the final ScriptProcessorNode constructor name. So for instance if **osc.dsp** file is compiled, the following **faust.createosc** function will be generated:
+This will generate a **foo.wasm** file with the WebAssembly module as binary code, as well as a **foo.js** wrapper file containing the code needed to turn the Faust DSP in a fully working WebAudio node (using an extended **ScriptProcessor** node). The name of the Faust DSP code file is used to define the final ScriptProcessorNode constructor name. So for instance if **osc.dsp** file is compiled, the following **faust.createosc** function will be generated:
 
 {% highlight javascript %}
 
@@ -30,7 +30,7 @@ faust.createosc = function(context, buffer_size, callback)
 
 {% endhighlight %}
 
-The resulting object is an extended ScriptProcessorNode, to be used as a regular node (like connected to other WebAudio nodes), but which also adds the Faust specific API as defined in the equivalent C++ generated **dsp** class (see the **architecture/faust/dsp/dsp.h** header for more technical details), as well as JavaScript more specific functions. For instance the following functions will have to be used to control the node:
+The resulting object is an extended ScriptProcessorNode, to be used as a regular node (like connected to other WebAudio nodes), but which also adds the Faust specific API as defined in the equivalent C++ generated **dsp** class (see the **architecture/faust/dsp/dsp.h** header for more technical details), as well as JavaScript more specific functions. For instance the following ones will have to be used to control the node:
 
     var paths = node.getParams(); // get the set of paths to read/write input control parameters
 
