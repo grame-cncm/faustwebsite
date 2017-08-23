@@ -5,6 +5,8 @@ date:   2017-08-18 12:00:00
 categories: news
 ---
 
+**EDIT : we are at the Web Audio conference 2017, and it appears that the way we currently extend the ScripProcessorNode with Faust code is not the Right Way... Part of the post concerning the exposed API will probably change a bit in the near future...**
+
 Using latest developments done for the Web (the new **WebAssembly backends** and **libfaust** library compiled in WebAssembly with Emscripten), statically and dynamically Faust generated WebAudio nodes can be easily produced and deployed on the Web.
 
 ### Deploying statically compiled Faust WebAudio nodes ###
