@@ -273,13 +273,11 @@ faust.createDSPFactoryAux = function (code, argv, internal_memory, callback) {
     }
     
     try {
-    	var d1 = new Date();
-    	var time1 = d1.getTime();
+    	var time1 = performance.now();
     
         var module_code_ptr = faust.createWasmCDSPFactoryFromString(name_ptr, code_ptr, argv.length, argv_ptr, error_msg_ptr, internal_memory);
         
-        var d2 = new Date();
-        var time2 = d2.getTime();
+        var time2 = performance.now();
         console.log("Faust compilation duration : " + (time2 - time1));
 
         faust.error_msg = faust_module.Pointer_stringify(error_msg_ptr);
@@ -452,8 +450,7 @@ faust.readDSPFactoryFromMachine = function (machine, callback)
 
 faust.readDSPFactoryFromMachineAux = function (factory_name, factory_code, helpers_code, sha_key, callback)
 {
-    var d1 = new Date();
-    var time1 = d1.getTime();
+	var time1 = performance.now();
     
     try {
         var binaryen_module = Binaryen.readBinary(factory_code);
@@ -469,8 +466,8 @@ faust.readDSPFactoryFromMachineAux = function (factory_name, factory_code, helpe
     WebAssembly.compile(factory_code)
     .then(module => {
           
-      var d2 = new Date();
-      var time2 = d2.getTime();
+      var time2 = performance.now();
+      
       console.log("WASM compilation duration : " + (time2 - time1));
     
       var factory = {};
@@ -546,14 +543,12 @@ faust.createDSPInstance = function (factory, context, buffer_size, callback) {
     importObject["global.Math"] = window.Math;
     importObject["asm2wasm"] = faust.asm2wasm;
     
-    var d1 = new Date();
-    var time1 = d1.getTime();
+  	var time1 = performance.now();
     
     WebAssembly.instantiate(factory.module, importObject)
     .then(dsp_instance => {
     
-        var d2 = new Date();
-        var time2 = d2.getTime();
+        var time2 = performance.now();
         console.log("Instantiation duration : " + (time2 - time1));
 
         var sp;
@@ -735,7 +730,13 @@ faust.createDSPInstance = function (factory, context, buffer_size, callback) {
             }
           
             // bargraph
-            sp.parse_ui(JSON.parse(factory.getJSON()).ui);
+            try {
+                sp.parse_ui(JSON.parse(factory.getJSON()).ui);
+            } catch (e) {
+                faust.error_msg = "Error in JSON.parse: " + e;
+                callback(null);
+                throw true;
+            }
         
             // Init DSP
             sp.factory.init(sp.dsp, context.sampleRate);
@@ -961,7 +962,13 @@ faust.createMemory = function (factory, buffer_size, polyphony) {
     }
     
     // Keep JSON parsed object
-    var json_object = JSON.parse(factory.getJSON());
+    var json_object = null;
+    try {
+        json_object = JSON.parse(factory.getJSON());
+    } catch (e) {
+        faust.error_msg = "Error in JSON.parse: " + e;
+        return null;
+    }
     
     function getNumInputsAux ()
     {
@@ -993,8 +1000,7 @@ faust.createPolyDSPInstance = function (factory, context, buffer_size, polyphony
     
     var memory = faust.createMemory(factory, buffer_size, polyphony);
     
-    var d1 = new Date();
-    var time1 = d1.getTime();
+	var time1 = performance.now();
     
     var mixObject = { imports: { print: arg => console.log(arg) } }
     mixObject["memory"] = { "memory": memory};
@@ -1012,12 +1018,18 @@ faust.createPolyDSPInstance = function (factory, context, buffer_size, polyphony
         WebAssembly.instantiate(factory.module, importObject)
         .then(dsp_instance => {
         
-        var d2 = new Date();
-        var time2 = d2.getTime();
+        var time2 = performance.now();
         console.log("Instantiation duration : " + (time2 - time1));
 
         // Keep JSON parsed object
-        var json_object = JSON.parse(factory.getJSON());
+        var json_object = null;
+        try {
+            json_object = JSON.parse(factory.getJSON());
+        } catch (e) {
+            faust.error_msg = "Error in JSON.parse: " + e;
+            callback(null);
+            return;
+        }
           
         function getNumInputsAux ()
         {
