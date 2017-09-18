@@ -296,7 +296,7 @@ A specific problem occurs when audio computation produces denormal float values,
 
 Thus an automatic software strategy which consists in adding FTZ code in all recursive loops has been implemented in the Faust compiler. To activate it, the **-ftz** compilation parameter must be used at compilation time. 
 
-The **-ftz 1** mode adds a test in each recursive loop which uses the *fabs* function and a treshold to detect subnormal samples (slower). The **-ftz 2** mode adds a test in each recursive loop which uses a mask to detect subnormal samples (faster). 
+The **-ftz 1** mode adds a test in each recursive loop which uses the *fabs* function and a threshold to detect subnormal samples (slower). The **-ftz 2** mode adds a test in each recursive loop which uses a mask to detect subnormal samples (faster). 
 
 
 Use for example the following line to active software denormal handing when using **faust2wasm** tool:
