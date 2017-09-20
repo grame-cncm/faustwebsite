@@ -4,10 +4,10 @@
 karplus32 <br></H1>
 <H4>
 MBytes/sec :
-<input id="megapersec" "type="text">
+<input id="megapersec" "type="text" "value="">
 <br>
-CPU load % :
-<input id="cpu" "type="text">
+CPU load (in % of a 1024 frames audio buffer) :
+<input id="cpu" "type="text" "value="">
 <script>
 
 /*
@@ -21,19 +21,19 @@ function getSizekarplus32() {
 
 function getPathTablekarplus32() {
 	var pathTable = [];
-	pathTable["/karplus32/excitator/play"] = 24;
+	pathTable["/karplus32/excitator/play"] = 20;
 	pathTable["/karplus32/output_volume"] = 0;
 	pathTable["/karplus32/resonator_x32/polyphony"] = 4;
-	pathTable["/karplus32/resonator_x32/attenuation"] = 8;
-	pathTable["/karplus32/noise_generator/level"] = 12;
-	pathTable["/karplus32/excitator/excitation_(samples)"] = 36;
-	pathTable["/karplus32/resonator_x32/duration_(samples)"] = 2100;
-	pathTable["/karplus32/resonator_x32/detune"] = 10308;
+	pathTable["/karplus32/noise_generator/level"] = 8;
+	pathTable["/karplus32/excitator/excitation_(samples)"] = 32;
+	pathTable["/karplus32/resonator_x32/attenuation"] = 44;
+	pathTable["/karplus32/resonator_x32/detune"] = 32820;
+	pathTable["/karplus32/resonator_x32/duration_(samples)"] = 32824;
 	return pathTable;
 }
 
 function getJSONkarplus32() {
-	return "{\"name\":\"karplus32\",\"version\":\"2.3.17\",\"options\":\"-scal -ftz 2\",\"size\":\"874944\",\"inputs\":\"0\",\"outputs\":\"2\",\"meta\":[{\"author\":\"Grame\"},{\"copyright\":\"(c)GRAME 2006\"},{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"license\":\"BSD\"},{\"name\":\"karplus32\"},{\"noises.lib/name\":\"Faust Noise Generator Library\"},{\"noises.lib/version\":\"0.0\"},{\"version\":\"1.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"karplus32\",\"items\":[{\"type\":\"vgroup\",\"label\":\"excitator\",\"items\":[{\"type\":\"hslider\",\"label\":\"excitation (samples)\",\"address\":\"/karplus32/excitator/excitation_(samples)\",\"index\":\"36\",\"init\":\"128\",\"min\":\"2\",\"max\":\"512\",\"step\":\"1\"},{\"type\":\"button\",\"label\":\"play\",\"address\":\"/karplus32/excitator/play\",\"index\":\"24\"}]},{\"type\":\"vgroup\",\"label\":\"noise generator\",\"items\":[{\"type\":\"hslider\",\"label\":\"level\",\"address\":\"/karplus32/noise_generator/level\",\"index\":\"12\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.1\"}]},{\"type\":\"hslider\",\"label\":\"output volume\",\"address\":\"/karplus32/output_volume\",\"index\":\"0\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.1\"},{\"type\":\"vgroup\",\"label\":\"resonator x32\",\"items\":[{\"type\":\"hslider\",\"label\":\"attenuation\",\"address\":\"/karplus32/resonator_x32/attenuation\",\"index\":\"8\",\"init\":\"0.1\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"detune\",\"address\":\"/karplus32/resonator_x32/detune\",\"index\":\"10308\",\"init\":\"32\",\"min\":\"0\",\"max\":\"512\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"duration (samples)\",\"address\":\"/karplus32/resonator_x32/duration_(samples)\",\"index\":\"2100\",\"init\":\"128\",\"min\":\"2\",\"max\":\"512\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"polyphony\",\"address\":\"/karplus32/resonator_x32/polyphony\",\"index\":\"4\",\"init\":\"1\",\"min\":\"0\",\"max\":\"32\",\"step\":\"1\"}]}]}]}";
+	return "{\"name\":\"karplus32\",\"version\":\"2.3.17\",\"options\":\"-scal -ftz 2\",\"size\":\"874944\",\"inputs\":\"0\",\"outputs\":\"2\",\"meta\":[{\"author\":\"Grame\"},{\"copyright\":\"(c)GRAME 2006\"},{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"license\":\"BSD\"},{\"name\":\"karplus32\"},{\"noises.lib/name\":\"Faust Noise Generator Library\"},{\"noises.lib/version\":\"0.0\"},{\"version\":\"1.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"karplus32\",\"items\":[{\"type\":\"vgroup\",\"label\":\"excitator\",\"items\":[{\"type\":\"hslider\",\"label\":\"excitation (samples)\",\"address\":\"/karplus32/excitator/excitation_(samples)\",\"index\":\"32\",\"init\":\"128\",\"min\":\"2\",\"max\":\"512\",\"step\":\"1\"},{\"type\":\"button\",\"label\":\"play\",\"address\":\"/karplus32/excitator/play\",\"index\":\"20\"}]},{\"type\":\"vgroup\",\"label\":\"noise generator\",\"items\":[{\"type\":\"hslider\",\"label\":\"level\",\"address\":\"/karplus32/noise_generator/level\",\"index\":\"8\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.1\"}]},{\"type\":\"hslider\",\"label\":\"output volume\",\"address\":\"/karplus32/output_volume\",\"index\":\"0\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.1\"},{\"type\":\"vgroup\",\"label\":\"resonator x32\",\"items\":[{\"type\":\"hslider\",\"label\":\"attenuation\",\"address\":\"/karplus32/resonator_x32/attenuation\",\"index\":\"44\",\"init\":\"0.1\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"detune\",\"address\":\"/karplus32/resonator_x32/detune\",\"index\":\"32820\",\"init\":\"32\",\"min\":\"0\",\"max\":\"512\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"duration (samples)\",\"address\":\"/karplus32/resonator_x32/duration_(samples)\",\"index\":\"32824\",\"init\":\"128\",\"min\":\"2\",\"max\":\"512\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"polyphony\",\"address\":\"/karplus32/resonator_x32/polyphony\",\"index\":\"4\",\"init\":\"1\",\"min\":\"0\",\"max\":\"32\",\"step\":\"1\"}]}]}]}";
 }
 
 function metadatakarplus32(m) {
@@ -435,7 +435,7 @@ function benchOne(dsp, run)
 function megapersec(frames, chans, dur)
 {
 	// Use 4 bytes for samples
-    return (frames * chans * 4) / (1024 * 1024 * dur);
+	return (frames * chans * 4) / (1024 * 1024 * dur);
 }
 
 function bench(instance, display_handler)
@@ -455,14 +455,14 @@ function bench(instance, display_handler)
 
 	for (var i = 0; i < bench_num; i++) {
  		// Do the bench and keep result
-    	var duration = benchOne(karplus32, run);
-    	var cpu = (duration * sample_rate) / (run * buffer_size * 10);
-  		var mega = megapersec(buffer_size, (karplus32.getNumInputs() + karplus32.getNumOutputs()), duration/run/1000);
+		var duration = benchOne(karplus32, run);
+		var cpu = (duration * sample_rate) / (run * buffer_size * 10);
+		var mega = megapersec(buffer_size, (karplus32.getNumInputs() + karplus32.getNumOutputs()), duration/run/1000);
     	if (display_handler) {
     		display_handler(mega, cpu);
     	}
-    	console.log("MBytes/sec : " + mega);
-   		console.log("karplus32 CPU % : " + cpu);
+		console.log("MBytes/sec : " + mega);
+		console.log("karplus32 CPU % : " + cpu);
     }
 }
 

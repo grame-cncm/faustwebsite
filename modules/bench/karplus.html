@@ -4,10 +4,10 @@
 karplus <br></H1>
 <H4>
 MBytes/sec :
-<input id="megapersec" "type="text">
+<input id="megapersec" "type="text" "value="">
 <br>
-CPU load % :
-<input id="cpu" "type="text">
+CPU load (in % of a 1024 frames audio buffer) :
+<input id="cpu" "type="text" "value="">
 <script>
 
 /*
@@ -441,7 +441,7 @@ function benchOne(dsp, run)
 function megapersec(frames, chans, dur)
 {
 	// Use 4 bytes for samples
-    return (frames * chans * 4) / (1024 * 1024 * dur);
+	return (frames * chans * 4) / (1024 * 1024 * dur);
 }
 
 function bench(instance, display_handler)
@@ -461,14 +461,14 @@ function bench(instance, display_handler)
 
 	for (var i = 0; i < bench_num; i++) {
  		// Do the bench and keep result
-    	var duration = benchOne(karplus, run);
-    	var cpu = (duration * sample_rate) / (run * buffer_size * 10);
-  		var mega = megapersec(buffer_size, (karplus.getNumInputs() + karplus.getNumOutputs()), duration/run/1000);
+		var duration = benchOne(karplus, run);
+		var cpu = (duration * sample_rate) / (run * buffer_size * 10);
+		var mega = megapersec(buffer_size, (karplus.getNumInputs() + karplus.getNumOutputs()), duration/run/1000);
     	if (display_handler) {
     		display_handler(mega, cpu);
     	}
-    	console.log("MBytes/sec : " + mega);
-   		console.log("karplus CPU % : " + cpu);
+		console.log("MBytes/sec : " + mega);
+		console.log("karplus CPU % : " + cpu);
     }
 }
 

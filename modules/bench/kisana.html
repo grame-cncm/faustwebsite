@@ -4,10 +4,10 @@
 kisana <br></H1>
 <H4>
 MBytes/sec :
-<input id="megapersec" "type="text">
+<input id="megapersec" "type="text" "value="">
 <br>
-CPU load % :
-<input id="cpu" "type="text">
+CPU load (in % of a 1024 frames audio buffer) :
+<input id="cpu" "type="text" "value="">
 <script>
 
 /*
@@ -21,16 +21,16 @@ function getSizekisana() {
 
 function getPathTablekisana() {
 	var pathTable = [];
-	pathTable["/Kisana/Resonance"] = 0;
-	pathTable["/Kisana/Brightness"] = 104;
-	pathTable["/Kisana/Instrument_Hands/1_(Note_48)"] = 224;
-	pathTable["/Kisana/Instrument_Hands/2_(Note_60)"] = 2444;
-	pathTable["/Kisana/Instrument_Hands/3_(Note_72)"] = 20268;
+	pathTable["/Kisana/Resonance"] = 152;
+	pathTable["/Kisana/Brightness"] = 240;
+	pathTable["/Kisana/Instrument_Hands/3_(Note_72)"] = 108;
+	pathTable["/Kisana/Instrument_Hands/1_(Note_48)"] = 3848;
+	pathTable["/Kisana/Instrument_Hands/2_(Note_60)"] = 6576;
 	return pathTable;
 }
 
 function getJSONkisana() {
-	return "{\"name\":\"Kisana\",\"version\":\"2.3.17\",\"options\":\"-scal -ftz 2\",\"size\":\"23804\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"Yann Orlarey\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Kisana\"},{\"noises.lib/name\":\"Faust Noise Generator Library\"},{\"noises.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Kisana\",\"items\":[{\"type\":\"hgroup\",\"label\":\"Instrument Hands\",\"meta\":[{\"1\":\"\"}],\"items\":[{\"type\":\"vslider\",\"label\":\"1 (Note 48)\",\"address\":\"/Kisana/Instrument_Hands/1_(Note_48)\",\"index\":\"224\",\"meta\":[{\"acc\":\"1 0 -10 0 14\"},{\"unit\":\"pk\"}],\"init\":\"0\",\"min\":\"0\",\"max\":\"11\",\"step\":\"1\"},{\"type\":\"vslider\",\"label\":\"2 (Note 60)\",\"address\":\"/Kisana/Instrument_Hands/2_(Note_60)\",\"index\":\"2444\",\"meta\":[{\"acc\":\"1 0 -10 0 14\"},{\"unit\":\"pk\"}],\"init\":\"2\",\"min\":\"0\",\"max\":\"11\",\"step\":\"1\"},{\"type\":\"vslider\",\"label\":\"3 (Note 72)\",\"address\":\"/Kisana/Instrument_Hands/3_(Note_72)\",\"index\":\"20268\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"unit\":\"pk\"}],\"init\":\"4\",\"min\":\"0\",\"max\":\"11\",\"step\":\"1\"}]},{\"type\":\"hslider\",\"label\":\"Brightness\",\"address\":\"/Kisana/Brightness\",\"index\":\"104\",\"meta\":[{\"2\":\"\"},{\"acc\":\"0 1 -10 0 10\"}],\"init\":\"0.2\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"Resonance\",\"address\":\"/Kisana/Resonance\",\"index\":\"0\",\"meta\":[{\"3\":\"\"},{\"acc\":\"2 1 -10 0 12\"}],\"init\":\"4\",\"min\":\"0.1\",\"max\":\"10\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"Kisana\",\"version\":\"2.3.17\",\"options\":\"-scal -ftz 2\",\"size\":\"23804\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"Yann Orlarey\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Kisana\"},{\"noises.lib/name\":\"Faust Noise Generator Library\"},{\"noises.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Kisana\",\"items\":[{\"type\":\"hgroup\",\"label\":\"Instrument Hands\",\"meta\":[{\"1\":\"\"}],\"items\":[{\"type\":\"vslider\",\"label\":\"1 (Note 48)\",\"address\":\"/Kisana/Instrument_Hands/1_(Note_48)\",\"index\":\"3848\",\"meta\":[{\"acc\":\"1 0 -10 0 14\"},{\"unit\":\"pk\"}],\"init\":\"0\",\"min\":\"0\",\"max\":\"11\",\"step\":\"1\"},{\"type\":\"vslider\",\"label\":\"2 (Note 60)\",\"address\":\"/Kisana/Instrument_Hands/2_(Note_60)\",\"index\":\"6576\",\"meta\":[{\"acc\":\"1 0 -10 0 14\"},{\"unit\":\"pk\"}],\"init\":\"2\",\"min\":\"0\",\"max\":\"11\",\"step\":\"1\"},{\"type\":\"vslider\",\"label\":\"3 (Note 72)\",\"address\":\"/Kisana/Instrument_Hands/3_(Note_72)\",\"index\":\"108\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"unit\":\"pk\"}],\"init\":\"4\",\"min\":\"0\",\"max\":\"11\",\"step\":\"1\"}]},{\"type\":\"hslider\",\"label\":\"Brightness\",\"address\":\"/Kisana/Brightness\",\"index\":\"240\",\"meta\":[{\"2\":\"\"},{\"acc\":\"0 1 -10 0 10\"}],\"init\":\"0.2\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"Resonance\",\"address\":\"/Kisana/Resonance\",\"index\":\"152\",\"meta\":[{\"3\":\"\"},{\"acc\":\"2 1 -10 0 12\"}],\"init\":\"4\",\"min\":\"0.1\",\"max\":\"10\",\"step\":\"0.01\"}]}]}";
 }
 
 function metadatakisana(m) {
@@ -434,7 +434,7 @@ function benchOne(dsp, run)
 function megapersec(frames, chans, dur)
 {
 	// Use 4 bytes for samples
-    return (frames * chans * 4) / (1024 * 1024 * dur);
+	return (frames * chans * 4) / (1024 * 1024 * dur);
 }
 
 function bench(instance, display_handler)
@@ -454,14 +454,14 @@ function bench(instance, display_handler)
 
 	for (var i = 0; i < bench_num; i++) {
  		// Do the bench and keep result
-    	var duration = benchOne(kisana, run);
-    	var cpu = (duration * sample_rate) / (run * buffer_size * 10);
-  		var mega = megapersec(buffer_size, (kisana.getNumInputs() + kisana.getNumOutputs()), duration/run/1000);
+		var duration = benchOne(kisana, run);
+		var cpu = (duration * sample_rate) / (run * buffer_size * 10);
+		var mega = megapersec(buffer_size, (kisana.getNumInputs() + kisana.getNumOutputs()), duration/run/1000);
     	if (display_handler) {
     		display_handler(mega, cpu);
     	}
-    	console.log("MBytes/sec : " + mega);
-   		console.log("kisana CPU % : " + cpu);
+		console.log("MBytes/sec : " + mega);
+		console.log("kisana CPU % : " + cpu);
     }
 }
 
