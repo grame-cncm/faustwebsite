@@ -1,0 +1,511 @@
+<html>
+<body>
+<H1>
+frenchBell <br></H1>
+<H4>
+MBytes/sec :
+<input id="megapersec" "type="text">
+<br>
+CPU load % :
+<input id="cpu" "type="text">
+<script>
+
+/*
+Code generated with Faust version 2.3.17
+Compilation options: -scal -ftz 2
+*/
+
+function getSizefrenchBell() {
+	return 4132;
+}
+
+function getPathTablefrenchBell() {
+	var pathTable = [];
+	pathTable["/frenchBell/gate"] = 1484;
+	pathTable["/frenchBell/strikePosition"] = 1400;
+	pathTable["/frenchBell/gain"] = 1404;
+	pathTable["/frenchBell/strikeCutOff"] = 1420;
+	pathTable["/frenchBell/strikeSharpness"] = 1500;
+	return pathTable;
+}
+
+function getJSONfrenchBell() {
+	return "{\"name\":\"FrenchChurchBell\",\"version\":\"2.3.17\",\"options\":\"-scal -ftz 2\",\"size\":\"4132\",\"inputs\":\"0\",\"outputs\":\"2\",\"meta\":[{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"copyright\":\"(c)Romain Michon, CCRMA (Stanford University), GRAME\"},{\"description\":\"French church bell physical model.\"},{\"envelopes.lib/author\":\"GRAME\"},{\"envelopes.lib/copyright\":\"GRAME\"},{\"envelopes.lib/license\":\"LGPL with exception\"},{\"envelopes.lib/name\":\"Faust Envelope Library\"},{\"envelopes.lib/version\":\"0.0\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"license\":\"MIT\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"FrenchChurchBell\"},{\"noises.lib/name\":\"Faust Noise Generator Library\"},{\"noises.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"frenchBell\",\"items\":[{\"type\":\"nentry\",\"label\":\"strikePosition\",\"address\":\"/frenchBell/strikePosition\",\"index\":\"1400\",\"meta\":[{\"0\":\"\"}],\"init\":\"0\",\"min\":\"0\",\"max\":\"4\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"strikeCutOff\",\"address\":\"/frenchBell/strikeCutOff\",\"index\":\"1420\",\"meta\":[{\"1\":\"\"}],\"init\":\"6500\",\"min\":\"20\",\"max\":\"20000\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"strikeSharpness\",\"address\":\"/frenchBell/strikeSharpness\",\"index\":\"1500\",\"meta\":[{\"2\":\"\"}],\"init\":\"0.5\",\"min\":\"0.01\",\"max\":\"5\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"gain\",\"address\":\"/frenchBell/gain\",\"index\":\"1404\",\"meta\":[{\"3\":\"\"}],\"init\":\"1\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"button\",\"label\":\"gate\",\"address\":\"/frenchBell/gate\",\"index\":\"1484\",\"meta\":[{\"4\":\"\"}]}]}]}";
+}
+
+function metadatafrenchBell(m) {
+	m.declare("basics.lib/name", "Faust Basic Element Library");
+	m.declare("basics.lib/version", "0.0");
+	m.declare("copyright", "(c)Romain Michon, CCRMA (Stanford University), GRAME");
+	m.declare("description", "French church bell physical model.");
+	m.declare("envelopes.lib/author", "GRAME");
+	m.declare("envelopes.lib/copyright", "GRAME");
+	m.declare("envelopes.lib/license", "LGPL with exception");
+	m.declare("envelopes.lib/name", "Faust Envelope Library");
+	m.declare("envelopes.lib/version", "0.0");
+	m.declare("filters.lib/name", "Faust Filters Library");
+	m.declare("filters.lib/version", "0.0");
+	m.declare("license", "MIT");
+	m.declare("maths.lib/author", "GRAME");
+	m.declare("maths.lib/copyright", "GRAME");
+	m.declare("maths.lib/license", "LGPL with exception");
+	m.declare("maths.lib/name", "Faust Math Library");
+	m.declare("maths.lib/version", "2.1");
+	m.declare("name", "FrenchChurchBell");
+	m.declare("noises.lib/name", "Faust Noise Generator Library");
+	m.declare("noises.lib/version", "0.0");
+}
+
+
+'use strict';
+
+var faust = faust || {};
+
+// Standard Faust frenchBell
+faust.frenchBell = function (instance, context, buffer_size, sample_rate) {
+
+    var output_handler = null;
+    var ins, outs;
+    
+    var dspInChannnels = [];
+    var dspOutChannnels = [];
+   
+    // Keep JSON parsed object
+    var json_object = JSON.parse(getJSONfrenchBell());
+      
+    var numIn = parseInt(json_object.inputs);
+    var numOut = parseInt(json_object.outputs);
+     
+    // Memory allocator
+    var ptr_size = 8;
+    var sample_size = 8;  // double
+    
+    function pow2limit (x)
+    {
+        var n = 65536; // Minimum = 64 kB
+        while (n < x) { n = 2 * n; }
+        return n;
+    }
+     
+    var memory_size = pow2limit(getSizefrenchBell() + (numIn + numOut) * (ptr_size + (buffer_size * sample_size)));
+   
+    var factory = instance.exports;
+    
+    var HEAP = instance.exports.memory.buffer;
+    var HEAP32 = new Int32Array(HEAP);
+    var HEAPF = new Float64Array(HEAP);
+  
+    // bargraph
+    var ouputs_timer = 5;
+    var ouputs_items = [];
+     
+    // input items
+    var inputs_items = [];
+    
+    // buttons items
+    var buttons_items = [];
+    
+    // default values
+    var default_values = [];
+    
+    // frenchBell is placed first with index 0. Audio buffer start at the end of frenchBell.
+    var audio_heap_ptr = getSizefrenchBell();
+  
+    // Setup pointers offset
+    var audio_heap_ptr_inputs = audio_heap_ptr; 
+    var audio_heap_ptr_outputs = audio_heap_ptr_inputs + (numIn * ptr_size);
+     
+    // Setup buffer offset
+    var audio_heap_inputs = audio_heap_ptr_outputs + (numOut * ptr_size);
+    var audio_heap_outputs = audio_heap_inputs + (numIn * buffer_size * sample_size);
+    
+    // Start of frenchBell memory : frenchBell is placed first with index 0
+    var dsp = 0;
+    
+    var pathTable = getPathTablefrenchBell();
+    
+    // Allocate table for 'setParamValue'
+    var value_table = [];
+        
+    function update_outputs () 
+    {
+        if (ouputs_items.length > 0 && output_handler && ouputs_timer-- === 0) {
+            ouputs_timer = 5;
+            for (var i = 0; i < ouputs_items.length; i++) {
+                output_handler(ouputs_items[i], factory.getParamValue(dsp, pathTable[ouputs_items[i]]));
+            }
+        }
+    }
+    
+    function computeAux (inputs, outputs)
+    {
+        var i, j;
+        
+        // Read inputs
+        for (i = 0; i < numIn; i++) {
+            var input = inputs[i];
+            var dspInput = dspInChannnels[i];
+            for (j = 0; j < buffer_size; j++) {
+                dspInput[j] = input[j];
+            }
+        }
+        
+        // Update control state
+        for (i = 0; i < inputs_items.length; i++) {
+            var path = inputs_items[i];
+            var values = value_table[path];
+            factory.setParamValue(dsp, pathTable[path], values[0]);
+            values[0] = values[1];
+        }
+        
+        // Compute
+        factory.compute(dsp, buffer_size, ins, outs);
+       
+        // Update bargraph
+        update_outputs();
+        
+        // Write outputs
+        for (i = 0; i < numOut; i++) {
+            var output = outputs[i];
+            var dspOutput = dspOutChannnels[i];
+            for (j = 0; j < buffer_size; j++) {
+                output[j] = dspOutput[j];
+            }
+        }
+    };
+         
+    // JSON parsing
+    function parse_ui (ui) 
+    {
+        for (var i = 0; i < ui.length; i++) {
+            parse_group(ui[i]);
+        }
+    }
+    
+    function parse_group (group) 
+    {
+        if (group.items) {
+            parse_items(group.items);
+        }
+    }
+    
+    function parse_items (items) 
+    {
+        var i;
+        for (i = 0; i < items.length; i++) {
+            parse_item(items[i]);
+        }
+    }
+    
+    function parse_item (item) 
+    {
+        if (item.type === "vgroup" 
+        	|| item.type === "hgroup" 
+        	|| item.type === "tgroup") {
+            parse_items(item.items);
+        } else if (item.type === "hbargraph" 
+        	|| item.type === "vbargraph") {
+            // Keep bargraph adresses
+            ouputs_items.push(item.address);
+        } else if (item.type === "vslider" 
+        	|| item.type === "hslider" 
+        	|| item.type === "button" 
+        	|| item.type === "checkbox" 
+        	|| item.type === "nentry") {
+            // Keep inputs adresses
+            inputs_items.push(item.address);
+            if (item.type === "button") {
+                buttons_items.push(item.address);
+                default_values.push(0);
+            } else if (item.type === "checkbox") {
+            	default_values.push(0);
+            } else {
+                default_values.push(parseFloat(item.init));
+            }
+        }
+    }
+      
+    function init ()
+    {
+        var i;
+        
+        if (numIn > 0) {
+            ins = audio_heap_ptr_inputs; 
+            for (i = 0; i < numIn; i++) { 
+                HEAP32[(ins >> 2) + i] = audio_heap_inputs + ((buffer_size * sample_size) * i);
+           }
+     
+            // Prepare Ins buffer tables
+            var dspInChans = HEAP32.subarray(ins >> 2, (ins + numIn * ptr_size) >> 2);
+            for (i = 0; i < numIn; i++) {
+                dspInChannnels[i] = HEAPF.subarray(dspInChans[i] >> 3, (dspInChans[i] + buffer_size * sample_size) >> 3);
+            }
+        }
+        
+        if (numOut > 0) {
+            outs = audio_heap_ptr_outputs; 
+            for (i = 0; i < numOut; i++) { 
+                HEAP32[(outs >> 2) + i] = audio_heap_outputs + ((buffer_size * sample_size) * i);
+            }
+          
+            // Prepare Out buffer tables
+            var dspOutChans = HEAP32.subarray(outs >> 2, (outs + numOut * ptr_size) >> 2);
+            for (i = 0; i < numOut; i++) {
+                dspOutChannnels[i] = HEAPF.subarray(dspOutChans[i] >> 3, (dspOutChans[i] + buffer_size * sample_size) >> 3);
+            }
+        }
+                                
+        // bargraph
+        parse_ui(json_object.ui);
+        
+        // Init frenchBell
+        factory.init(dsp, sample_rate);
+        
+        // Init 'value' table
+        for (i = 0; i < inputs_items.length; i++) {
+            var path = inputs_items[i];
+            var values = new Float64Array(2);
+            values[0] = values[1] = factory.getParamValue(dsp, pathTable[path]);
+            value_table[path] = values;
+        }
+    }
+    
+	function setParamValueAux (path, val) 
+	{
+		var values = value_table[path];
+		if (values) {
+			// relaxing the test
+			//if (factory.getParamValue(dsp, pathTable[path]) === values[0]) {
+				values[0] = val;
+			//} 
+			values[1] = val;
+		}
+	}
+    
+    init();
+    
+    // External API
+    return {
+     	
+        getSampleRate : function () 
+        {
+            return factory.getSampleRate(dsp);
+        },
+        
+        getNumInputs : function () 
+        {
+            return parseInt(json_object.inputs);
+        },
+        
+        getNumOutputs : function () 
+        {
+            return parseInt(json_object.outputs);
+        },
+               
+        init : function (sample_rate) 
+        {
+            factory.init(dsp, sample_rate);
+        },
+        
+        instanceInit : function (sample_rate) 
+        {
+            factory.instanceInit(dsp, sample_rate);
+        },
+        
+        instanceConstants : function (sample_rate) 
+        {
+            factory.instanceConstants(dsp, sample_rate);
+        },
+        
+        instanceResetUserInterface : function () 
+        {
+            factory.instanceResetUserInterface(dsp);
+        },
+        
+        instanceClear : function () 
+        {
+            factory.instanceClear(dsp);
+        },
+        
+        setOutputParamHandler : function (handler)
+        {
+            output_handler = handler;
+        },
+        
+        getOutputParamHandler : function ()
+        {
+            return output_handler;
+        },
+        
+        setParamValue : function (path, val) 
+        {
+        	setParamValueAux(path, val);
+        },
+        
+        setParamValue1 : function (path, val)
+        {
+            factory.setParamValue(dsp, pathTable[path], val);
+        },
+
+        getParamValue : function (path) 
+        {
+            return factory.getParamValue(dsp, pathTable[path]);
+        },
+        
+        getParams : function()
+        {
+            return inputs_items;
+        },
+        
+        getButtonsParams : function()
+        {
+            return buttons_items;
+        },
+        
+        getJSON : function ()
+        {
+            return getJSONfrenchBell();
+        },
+        
+        compute : function (inputs, outputs)
+        {
+            computeAux(inputs, outputs);
+        },
+        
+        checkDefaults : function ()
+		{
+			for (var i = 0; i < default_values.length; i++) {
+				if (default_values[i] !== factory.getParamValue(dsp, pathTable[inputs_items[i]])) return false;
+			}
+			return true;
+		},
+	
+		initRandom : function ()
+		{
+			for (var i = 0; i < default_values.length; i++) {
+                factory.setParamValue(dsp, pathTable[inputs_items[i]], 0.123456789);
+			}
+		}
+    };
+};
+
+// Bench code
+var buffer_size = 1024;
+var sample_rate = 44100;
+var inputs = [];
+var outputs = [];
+var run = -1;
+var bench_num = 1;
+
+var NV = 4096;
+var input_index = 0;
+var output_index = 0;
+
+var createBuffers = function(ins, outs)
+{
+    console.log("Allocate ins/outs buffers");
+	for (var i = 0; i < ins; i++) {
+		var input = new Float64Array(buffer_size * NV);
+		// Init input with noise
+		for (var j = 0; j < buffer_size * NV; j++) {
+			input[j] = (Math.random() * 2) - 1.0;
+		}
+		inputs.push(input);
+	}
+	for (var i = 0; i < outs; i++) {
+		outputs.push(new Float64Array(buffer_size * NV));
+	}
+}
+
+function benchOne(dsp, run)
+{
+   var time1 = new Date().getTime();
+
+    // Bench frenchBell
+    while (run-- > 0) {
+		var ins_slice = [];
+		var outs_slice = [];
+		for (var i = 0; i < dsp.getNumInputs(); i++) {
+			ins_slice.push(inputs[i].subarray(input_index * buffer_size, (input_index + 1) * buffer_size));
+			input_index = (1 + input_index) % NV;
+		}
+		for (var i = 0; i < dsp.getNumOutputs(); i++) {
+			outs_slice.push(outputs[i].subarray(output_index * buffer_size, (output_index + 1) * buffer_size));
+			output_index = (1 + output_index) % NV;
+		}
+		dsp.compute(ins_slice, outs_slice);
+    }
+
+    var time2 = new Date().getTime();
+    return (time2 - time1);
+}
+
+function megapersec(frames, chans, dur)
+{
+	// Use 4 bytes for samples
+    return (frames * chans * 4) / (1024 * 1024 * dur);
+}
+
+function bench(instance, display_handler)
+{
+    // Creates frenchBell 
+    var frenchBell = faust.frenchBell(instance, null, buffer_size, sample_rate);
+
+    // First call : create buffers and estimate z proper 'run' value 
+    if (run === -1) {
+        // Setup buffers
+        createBuffers(frenchBell.getNumInputs(), frenchBell.getNumOutputs(), buffer_size);
+        // Setup a good value for 'run'
+        var delta = benchOne(frenchBell, 1000);
+        console.log("Delta : " + delta);
+        run = (1000 / delta) * 5000;
+    }
+
+	for (var i = 0; i < bench_num; i++) {
+ 		// Do the bench and keep result
+    	var duration = benchOne(frenchBell, run);
+    	var cpu = (duration * sample_rate) / (run * buffer_size * 10);
+  		var mega = megapersec(buffer_size, (frenchBell.getNumInputs() + frenchBell.getNumOutputs()), duration/run/1000);
+    	if (display_handler) {
+    		display_handler(mega, cpu);
+    	}
+    	console.log("MBytes/sec : " + mega);
+   		console.log("frenchBell CPU % : " + cpu);
+    }
+}
+
+faust.createfrenchBell = function(display_handler)
+{
+    var asm2wasm = { // special asm2wasm imports
+        "fmod": function(x, y) {
+            return x % y;
+        },
+        "log10": function(x) {
+            return window.Math.log(x) / window.Math.log(10);
+        },
+        "remainder": function(x, y) {
+            return x - window.Math.round(x/y) * y;
+        }
+    };
+    
+    var importObject = { imports: { print: arg => console.log(arg) } }
+    
+    importObject["global.Math"] = window.Math;
+    importObject["asm2wasm"] = asm2wasm;
+    
+    fetch('frenchBell.wasm')
+    .then(dsp_file => dsp_file.arrayBuffer())
+    .then(dsp_bytes => WebAssembly.instantiate(dsp_bytes, importObject))
+    .then(dsp_module => bench(dsp_module.instance, display_handler))
+    .catch(function() { faust.error_msg = "Faust frenchBell cannot be loaded or compiled"; });
+}
+
+// Startup
+var cpu_id = document.getElementById("cpu");
+var megapersec_id = document.getElementById("megapersec");
+
+faust.createfrenchBell(function(v1, v2) { megapersec_id.value = v1.toFixed(2); cpu_id.value = v2.toFixed(2); });
+
+</script>
+</body>
+</html>
