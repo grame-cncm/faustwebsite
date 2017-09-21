@@ -4401,7 +4401,9 @@ _f4u$t.initiate_bargraph = function(axis, fullid, weakaxis, strongaxis, minval, 
   _f4u$t.IDS_TO_ATTRIBUTES[id]["step"] = step;
   _f4u$t.IDS_TO_ATTRIBUTES[id]["init"] = init;
   _f4u$t.IDS_TO_ATTRIBUTES[id]["unit"] = unit;
-  _f4u$t.IDS_TO_ATTRIBUTES[id]["label"] = label;
+  _f4u$t.IDS_TO_ATTRIBUTES[id]["integer"] = false;
+  _f4u$t.IDS_TO_ATTRIBUTES[id]["ndec"] = (maxval-minval) <= 10 ? 2 : (maxval-minval) <= 100 ? 1 : 0;;
+ _f4u$t.IDS_TO_ATTRIBUTES[id]["label"] = label;
   _f4u$t.IDS_TO_ATTRIBUTES[id]["address"] = address;
   _f4u$t.path_to_id(address, fullid);
 }
@@ -4693,7 +4695,7 @@ _f4u$t.touched = function(id) {
         && (_f4u$t._I[identifier].id.indexOf(id) != -1)) {
       return true;
     }
-  } 
+  }
   return false;
 }
 
@@ -4742,7 +4744,7 @@ _f4u$t.moveSliderViaAccelerometer = function(e, longid) {
   if (_f4u$t.IDS_TO_ATTRIBUTES[id].orientationmode == 'relative') {
     var nudge = (orientation - prev_orientation) * (length - sliderlen) / (_f4u$t.IDS_TO_ATTRIBUTES[id].orientation.high - _f4u$t.IDS_TO_ATTRIBUTES[id].orientation.low);
     aval = transform[0][axis + 1] + nudge;
-    
+
   } else {
     aval = _f4u$t.remap(orientation,
                         _f4u$t.IDS_TO_ATTRIBUTES[id].orientation.low,
@@ -5847,7 +5849,7 @@ $(document).ready(function() { _f4u$t.main_loop(); });
 
 
 /*
-Code generated with Faust version 2.3.6
+Code generated with Faust version 2.3.17
 Compilation options: -scal -ftz 2
 */
 
@@ -5863,7 +5865,7 @@ function getPathTableInstrReverb() {
 }
 
 function getJSONInstrReverb() {
-	return "{  \"name\": \"InstrReverb\",  \"inputs\": \"1\",  \"outputs\": \"1\",  \"meta\": [    { \"basics.lib/name\": \"Faust Basic Element Library\" },   { \"basics.lib/version\": \"0.0\" },   { \"delays.lib/name\": \"Faust Delay Library\" },   { \"delays.lib/version\": \"0.0\" },   { \"filters.lib/name\": \"Faust Filters Library\" },   { \"filters.lib/version\": \"0.0\" },   { \"maths.lib/author\": \"GRAME\" },   { \"maths.lib/copyright\": \"GRAME\" },   { \"maths.lib/license\": \"LGPL with exception\" },   { \"maths.lib/name\": \"Faust Math Library\" },   { \"maths.lib/version\": \"2.0\" },   { \"name\": \"InstrReverb\" },   { \"reverbs.lib/name\": \"Faust Reverb Library\" },   { \"reverbs.lib/version\": \"0.0\" },   { \"routes.lib/name\": \"Faust Signal Routing Library\" },   { \"routes.lib/version\": \"0.0\" },   { \"signals.lib/name\": \"Faust Signal Routing Library\" },   { \"signals.lib/version\": \"0.0\" }  ],  \"ui\": [    {    \"type\": \"vgroup\",    \"label\": \"Reverb\",    \"items\": [      {      \"type\": \"hslider\",      \"label\": \"Reverberation Room Size\",      \"address\": \"/Reverb/Reverberation_Room_Size\",      \"meta\": [       { \"acc\": \"1 1 -10 0 10\" }      ],      \"init\": \"0.1\",      \"min\": \"0.05\",      \"max\": \"2\",      \"step\": \"0.01\"     },     {      \"type\": \"hslider\",      \"label\": \"Reverberation Volume\",      \"address\": \"/Reverb/Reverberation_Volume\",      \"meta\": [       { \"acc\": \"1 1 -10 0 10\" }      ],      \"init\": \"0.1\",      \"min\": \"0.05\",      \"max\": \"1\",      \"step\": \"0.01\"     }    ]   }  ] } ";
+	return "{\"name\":\"InstrReverb\",\"version\":\"2.3.17\",\"options\":\"-scal -ftz 2\",\"size\":\"844340\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"InstrReverb\"},{\"reverbs.lib/name\":\"Faust Reverb Library\"},{\"reverbs.lib/version\":\"0.0\"},{\"routes.lib/name\":\"Faust Signal Routing Library\"},{\"routes.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Reverb\",\"items\":[{\"type\":\"hslider\",\"label\":\"Reverberation Room Size\",\"address\":\"/Reverb/Reverberation_Room_Size\",\"index\":\"36\",\"meta\":[{\"acc\":\"1 1 -10 0 10\"}],\"init\":\"0.1\",\"min\":\"0.05\",\"max\":\"2\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"Reverberation Volume\",\"address\":\"/Reverb/Reverberation_Volume\",\"index\":\"0\",\"meta\":[{\"acc\":\"1 1 -10 0 10\"}],\"init\":\"0.1\",\"min\":\"0.05\",\"max\":\"1\",\"step\":\"0.01\"}]}]}";
 }
 
 function metadataInstrReverb(m) {
@@ -5877,7 +5879,7 @@ function metadataInstrReverb(m) {
 	m.declare("maths.lib/copyright", "GRAME");
 	m.declare("maths.lib/license", "LGPL with exception");
 	m.declare("maths.lib/name", "Faust Math Library");
-	m.declare("maths.lib/version", "2.0");
+	m.declare("maths.lib/version", "2.1");
 	m.declare("name", "InstrReverb");
 	m.declare("reverbs.lib/name", "Faust Reverb Library");
 	m.declare("reverbs.lib/version", "0.0");
@@ -5910,6 +5912,16 @@ var faust = faust || {};
 faust.error_msg = null;
 faust.getErrorMessage = function() { return faust.error_msg; };
 
+function Heap2Str(buf)
+{
+    var str = "";
+    var i = 0;
+    while (buf[i] !== 0) {
+        str += String.fromCharCode(buf[i++]);
+    }
+    return str;
+}
+
 // Monophonic Faust InstrReverb
 
 /** 
@@ -5924,21 +5936,17 @@ faust.getErrorMessage = function() { return faust.error_msg; };
 faust.InstrReverb = function (dsp_instance, context, buffer_size) {
 
     // Keep JSON parsed object
-    var json_object = JSON.parse(getJSONInstrReverb());
-    
-    function getNumInputsAux ()
-    {
-        return (json_object.inputs !== undefined) ? parseInt(json_object.inputs) : 0;
+    var json_object = null;
+    try {
+        json_object = JSON.parse(getJSONInstrReverb());
+    } catch (e) {
+        faust.error_msg = "Error in JSON.parse: " + e;
+        return null;
     }
     
-    function getNumOutputsAux ()
-    {
-        return (json_object.outputs !== undefined) ? parseInt(json_object.outputs) : 0;
-    }
-
     var sp;
     try {
-        sp = context.createScriptProcessor(buffer_size, getNumInputsAux(), getNumOutputsAux());
+        sp = context.createScriptProcessor(buffer_size, parseInt(json_object.inputs), parseInt(json_object.outputs));
     } catch (e) {
         faust.error_msg = "Error in createScriptProcessor: " + e;
         return null;
@@ -5953,8 +5961,8 @@ faust.InstrReverb = function (dsp_instance, context, buffer_size) {
     sp.dspInChannnels = [];
     sp.dspOutChannnels = [];
     
-    sp.numIn = getNumInputsAux();
-    sp.numOut = getNumOutputsAux();
+    sp.numIn = parseInt(json_object.inputs);
+    sp.numOut = parseInt(json_object.outputs);
      
     // Memory allocator
     sp.ptr_size = 4;
@@ -5964,7 +5972,13 @@ faust.InstrReverb = function (dsp_instance, context, buffer_size) {
     sp.HEAP = dsp_instance.exports.memory.buffer;
     sp.HEAP32 = new Int32Array(sp.HEAP);
     sp.HEAPF32 = new Float32Array(sp.HEAP);
-     
+    
+    // JSON is as offset 0
+    /*
+    var HEAPU8 = new Uint8Array(sp.HEAP);
+    console.log(Heap2Str(HEAPU8));
+    */
+    
     console.log(sp.HEAP);
     console.log(sp.HEAP32);
     console.log(sp.HEAPF32);
@@ -5979,7 +5993,7 @@ faust.InstrReverb = function (dsp_instance, context, buffer_size) {
     // Start of HEAP index
     
     // InstrReverb is placed first with index 0. Audio buffer start at the end of InstrReverb.
-    sp.audio_heap_ptr = getSizeInstrReverb();
+    sp.audio_heap_ptr = parseInt(json_object.size);
 
     // Setup pointers offset
     sp.audio_heap_ptr_inputs = sp.audio_heap_ptr;
@@ -5992,7 +6006,7 @@ faust.InstrReverb = function (dsp_instance, context, buffer_size) {
     // Start of InstrReverb memory : InstrReverb is placed first with index 0
     sp.dsp = 0;
  
-    sp.pathTable = getPathTableInstrReverb();
+    sp.pathTable = [];
     
     // Allocate table for 'setParamValue'
     sp.value_table = [];
@@ -6069,14 +6083,23 @@ faust.InstrReverb = function (dsp_instance, context, buffer_size) {
     
     sp.parse_item = function (item)
     {
-        if (item.type === "vgroup" || item.type === "hgroup" || item.type === "tgroup") {
+        if (item.type === "vgroup" 
+        	|| item.type === "hgroup" 
+        	|| item.type === "tgroup") {
             sp.parse_items(item.items);
-        } else if (item.type === "hbargraph" || item.type === "vbargraph") {
+        } else if (item.type === "hbargraph" 
+        	|| item.type === "vbargraph") {
             // Keep bargraph adresses
             sp.outputs_items.push(item.address);
-        } else if (item.type === "vslider" || item.type === "hslider" || item.type === "button" || item.type === "checkbox" || item.type === "nentry") {
+            sp.pathTable[item.address] = parseInt(item.index);
+        } else if (item.type === "vslider" 
+        	|| item.type === "hslider" 
+        	|| item.type === "button" 
+        	|| item.type === "checkbox" 
+        	|| item.type === "nentry") {
             // Keep inputs adresses
             sp.inputs_items.push(item.address);
+            sp.pathTable[item.address] = parseInt(item.index);
         }
     }
       
@@ -6114,7 +6137,7 @@ faust.InstrReverb = function (dsp_instance, context, buffer_size) {
             }
         }
                                 
-        // bargraph
+        // Parse JSON UI part
         sp.parse_ui(sp.json_object.ui);
         
         // Init InstrReverb
@@ -6130,7 +6153,7 @@ faust.InstrReverb = function (dsp_instance, context, buffer_size) {
     }
     
     /*
-     Public API to be used to control the InstrReverb.
+    	Public API to be used to control the WebAudio node.
     */
 
     /* Return current sample rate */
@@ -6142,13 +6165,13 @@ faust.InstrReverb = function (dsp_instance, context, buffer_size) {
     /* Return instance number of audio inputs. */
     sp.getNumInputs = function ()
     {
-        return getNumInputsAux();
+        return sp.numIn;
     }
 
     /* Return instance number of audio outputs. */
     sp.getNumOutputs = function ()
     {
-        return getNumOutputsAux();
+        return sp.numOut;
     }
 
     /**
@@ -6202,7 +6225,11 @@ faust.InstrReverb = function (dsp_instance, context, buffer_size) {
      */
     sp.metadata = function (handler)
     {
-        metadataInstrReverb(handler);
+    	if (json_object.meta) {
+    		json_object.meta.forEach(function(meta) { 
+    			handler.declare(Object.keys(meta)[0], Object.values(meta)[0]); 
+    		});
+       	}
     }
 
     /**
@@ -6281,14 +6308,14 @@ faust.InstrReverb = function (dsp_instance, context, buffer_size) {
 };
 
 /** 
-* Create a InstrReverb object from a wasm filename
+* Create a ScriptProcessorNode Web Audio object 
+* by loading and compiling the Faust wasm file
 *
-* @param filename - the wasm filename
 * @param context - the Web Audio context
 * @param buffer_size - the buffer_size in frames
-* @param callback - a callback taking the created ScriptProcessorNode as parameter
+* @param callback - a callback taking the created ScriptProcessorNode as parameter, or null in case of error
 */
-faust.createInstrReverb = function(filename, context, buffer_size, callback)
+faust.createInstrReverb = function(context, buffer_size, callback)
 {
     var asm2wasm = { // special asm2wasm imports
         "fmod": function(x, y) {
@@ -6307,7 +6334,7 @@ faust.createInstrReverb = function(filename, context, buffer_size, callback)
     importObject["global.Math"] = window.Math;
     importObject["asm2wasm"] = asm2wasm;
     
-    fetch(filename)
+    fetch('InstrReverb.wasm')
     .then(dsp_file => dsp_file.arrayBuffer())
     .then(dsp_bytes => WebAssembly.instantiate(dsp_bytes, importObject))
     .then(dsp_module => callback(faust.InstrReverb(dsp_module.instance, context, buffer_size)))
@@ -6325,8 +6352,8 @@ faust.createInstrReverb = function(filename, context, buffer_size, callback)
 
 // Faust part
 
-var isWebKitAudio = (typeof (webkitAudioContext) !== "undefined");
-var isWasm = (typeof (WebAssembly) !== "undefined");
+var isWebKitAudio = (typeof(webkitAudioContext) !== "undefined");
+var isWasm = (typeof(WebAssembly) !== "undefined");
 var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
 var audio_input = null;
 var InstrReverb = null;
@@ -6416,10 +6443,12 @@ function startInstrReverbAux(dsp)
     InstrReverb.connect(audio_context.destination);
     
     console.log(InstrReverb.getJSON());
-    InstrReverb.metadata({ declare: function(key, value) { console.log("key = " + key + " value = " + value); }});
+    
+    // TODO: emcc
+    //InstrReverb.metadata({ declare: function(key, value) { console.log("key = " + key + " value = " + value); }});
     console.log(InstrReverb.getParams());
     
-    // kludge...ideally, this needs to not be part of the imported JS
+    // No polling from the server needed, so use an empty loop
     _f4u$t.main_loop = function() {}
     
     faustsvg = $('<div />');
@@ -6439,7 +6468,7 @@ function startInstrReverb()
 function startNewInstrReverb(buffer_size)
 {
     if (isWasm) {
-        faust.createInstrReverb('InstrReverb.wasm', audio_context, buffer_size, startInstrReverbAux);
+        faust.createInstrReverb(audio_context, buffer_size, startInstrReverbAux);
     }  else {
         alert("WebAssembly is not supported in this browser !")
     }
@@ -6461,9 +6490,15 @@ window.addEventListener('touchstart', function() {
                         
                         }, false);
                         
-                        // General
-                        $(startInstrReverb);
-                        
+// Start monophonic instrument
+if (typeof (Module) !== "undefined") {
+    console.log("Compiled with EMCC");
+    Module['onRuntimeInitialized'] = startInstrReverb;
+} else {
+    console.log("Compiled with WASM backend");
+    startInstrReverb();
+}
+
 // Save InstrReverb state to local storage
 setInterval(function() { if (InstrReverb) saveInstrReverb(); }, 1000);
  

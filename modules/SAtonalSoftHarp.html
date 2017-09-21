@@ -4401,7 +4401,9 @@ _f4u$t.initiate_bargraph = function(axis, fullid, weakaxis, strongaxis, minval, 
   _f4u$t.IDS_TO_ATTRIBUTES[id]["step"] = step;
   _f4u$t.IDS_TO_ATTRIBUTES[id]["init"] = init;
   _f4u$t.IDS_TO_ATTRIBUTES[id]["unit"] = unit;
-  _f4u$t.IDS_TO_ATTRIBUTES[id]["label"] = label;
+  _f4u$t.IDS_TO_ATTRIBUTES[id]["integer"] = false;
+  _f4u$t.IDS_TO_ATTRIBUTES[id]["ndec"] = (maxval-minval) <= 10 ? 2 : (maxval-minval) <= 100 ? 1 : 0;;
+ _f4u$t.IDS_TO_ATTRIBUTES[id]["label"] = label;
   _f4u$t.IDS_TO_ATTRIBUTES[id]["address"] = address;
   _f4u$t.path_to_id(address, fullid);
 }
@@ -4693,7 +4695,7 @@ _f4u$t.touched = function(id) {
         && (_f4u$t._I[identifier].id.indexOf(id) != -1)) {
       return true;
     }
-  } 
+  }
   return false;
 }
 
@@ -4742,7 +4744,7 @@ _f4u$t.moveSliderViaAccelerometer = function(e, longid) {
   if (_f4u$t.IDS_TO_ATTRIBUTES[id].orientationmode == 'relative') {
     var nudge = (orientation - prev_orientation) * (length - sliderlen) / (_f4u$t.IDS_TO_ATTRIBUTES[id].orientation.high - _f4u$t.IDS_TO_ATTRIBUTES[id].orientation.low);
     aval = transform[0][axis + 1] + nudge;
-    
+
   } else {
     aval = _f4u$t.remap(orientation,
                         _f4u$t.IDS_TO_ATTRIBUTES[id].orientation.low,
@@ -5847,7 +5849,7 @@ $(document).ready(function() { _f4u$t.main_loop(); });
 
 
 /*
-Code generated with Faust version 2.3.6
+Code generated with Faust version 2.3.17
 Compilation options: -scal -ftz 2
 */
 
@@ -5859,12 +5861,12 @@ function getPathTableSAtonalSoftHarp() {
 	var pathTable = [];
 	pathTable["/Atonal_Soft_Harp/0x00/Speed"] = 124;
 	pathTable["/Atonal_Soft_Harp/0x00/Instrument_Hand"] = 152;
-	pathTable["/Atonal_Soft_Harp/Reverberation/Resonance"] = 720;
+	pathTable["/Atonal_Soft_Harp/Reverberation/Resonance"] = 2260;
 	return pathTable;
 }
 
 function getJSONSAtonalSoftHarp() {
-	return "{  \"name\": \"Atonal Soft Harp\",  \"inputs\": \"0\",  \"outputs\": \"1\",  \"meta\": [    { \"author\": \"ER\" },   { \"basics.lib/name\": \"Faust Basic Element Library\" },   { \"basics.lib/version\": \"0.0\" },   { \"delays.lib/name\": \"Faust Delay Library\" },   { \"delays.lib/version\": \"0.0\" },   { \"filters.lib/name\": \"Faust Filters Library\" },   { \"filters.lib/version\": \"0.0\" },   { \"maths.lib/author\": \"GRAME\" },   { \"maths.lib/copyright\": \"GRAME\" },   { \"maths.lib/license\": \"LGPL with exception\" },   { \"maths.lib/name\": \"Faust Math Library\" },   { \"maths.lib/version\": \"2.0\" },   { \"name\": \"Atonal Soft Harp\" },   { \"noises.lib/name\": \"Faust Noise Generator Library\" },   { \"noises.lib/version\": \"0.0\" },   { \"signals.lib/name\": \"Faust Signal Routing Library\" },   { \"signals.lib/version\": \"0.0\" }  ],  \"ui\": [    {    \"type\": \"vgroup\",    \"label\": \"Atonal Soft Harp\",    \"items\": [      {      \"type\": \"hgroup\",      \"label\": \"0x00\",       \"meta\": [        { \"1\": \"\" }       ],      \"items\": [        {        \"type\": \"hslider\",        \"label\": \"Instrument Hand\",        \"address\": \"/Atonal_Soft_Harp/0x00/Instrument_Hand\",        \"meta\": [         { \"acc\": \"0 1 -10 0 10\" }        ],        \"init\": \"10\",        \"min\": \"0\",        \"max\": \"20\",        \"step\": \"1\"       },       {        \"type\": \"hslider\",        \"label\": \"Speed\",        \"address\": \"/Atonal_Soft_Harp/0x00/Speed\",        \"meta\": [         { \"acc\": \"0 1 -10 0 10\" },         { \"style\": \"knob\" }        ],        \"init\": \"480\",        \"min\": \"180\",        \"max\": \"720\",        \"step\": \"1\"       }      ]     },     {      \"type\": \"hgroup\",      \"label\": \"Reverberation\",       \"meta\": [        { \"2\": \"\" }       ],      \"items\": [        {        \"type\": \"hslider\",        \"label\": \"Resonance\",        \"address\": \"/Atonal_Soft_Harp/Reverberation/Resonance\",        \"meta\": [         { \"acc\": \"2 1 -10 0 10\" },         { \"unit\": \"s\" }        ],        \"init\": \"5\",        \"min\": \"0.5\",        \"max\": \"10\",        \"step\": \"0.01\"       }      ]     }    ]   }  ] } ";
+	return "{\"name\":\"Atonal Soft Harp\",\"version\":\"2.3.17\",\"options\":\"-scal -ftz 2\",\"size\":\"69000\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"ER\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Atonal Soft Harp\"},{\"noises.lib/name\":\"Faust Noise Generator Library\"},{\"noises.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Atonal Soft Harp\",\"items\":[{\"type\":\"hgroup\",\"label\":\"0x00\",\"meta\":[{\"1\":\"\"}],\"items\":[{\"type\":\"hslider\",\"label\":\"Instrument Hand\",\"address\":\"/Atonal_Soft_Harp/0x00/Instrument_Hand\",\"index\":\"152\",\"meta\":[{\"acc\":\"0 1 -10 0 10\"}],\"init\":\"10\",\"min\":\"0\",\"max\":\"20\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Speed\",\"address\":\"/Atonal_Soft_Harp/0x00/Speed\",\"index\":\"124\",\"meta\":[{\"acc\":\"0 1 -10 0 10\"},{\"style\":\"knob\"}],\"init\":\"480\",\"min\":\"180\",\"max\":\"720\",\"step\":\"1\"}]},{\"type\":\"hgroup\",\"label\":\"Reverberation\",\"meta\":[{\"2\":\"\"}],\"items\":[{\"type\":\"hslider\",\"label\":\"Resonance\",\"address\":\"/Atonal_Soft_Harp/Reverberation/Resonance\",\"index\":\"2260\",\"meta\":[{\"acc\":\"2 1 -10 0 10\"},{\"unit\":\"s\"}],\"init\":\"5\",\"min\":\"0.5\",\"max\":\"10\",\"step\":\"0.01\"}]}]}]}";
 }
 
 function metadataSAtonalSoftHarp(m) {
@@ -5879,7 +5881,7 @@ function metadataSAtonalSoftHarp(m) {
 	m.declare("maths.lib/copyright", "GRAME");
 	m.declare("maths.lib/license", "LGPL with exception");
 	m.declare("maths.lib/name", "Faust Math Library");
-	m.declare("maths.lib/version", "2.0");
+	m.declare("maths.lib/version", "2.1");
 	m.declare("name", "Atonal Soft Harp");
 	m.declare("noises.lib/name", "Faust Noise Generator Library");
 	m.declare("noises.lib/version", "0.0");
@@ -5910,6 +5912,16 @@ var faust = faust || {};
 faust.error_msg = null;
 faust.getErrorMessage = function() { return faust.error_msg; };
 
+function Heap2Str(buf)
+{
+    var str = "";
+    var i = 0;
+    while (buf[i] !== 0) {
+        str += String.fromCharCode(buf[i++]);
+    }
+    return str;
+}
+
 // Monophonic Faust SAtonalSoftHarp
 
 /** 
@@ -5924,21 +5936,17 @@ faust.getErrorMessage = function() { return faust.error_msg; };
 faust.SAtonalSoftHarp = function (dsp_instance, context, buffer_size) {
 
     // Keep JSON parsed object
-    var json_object = JSON.parse(getJSONSAtonalSoftHarp());
-    
-    function getNumInputsAux ()
-    {
-        return (json_object.inputs !== undefined) ? parseInt(json_object.inputs) : 0;
+    var json_object = null;
+    try {
+        json_object = JSON.parse(getJSONSAtonalSoftHarp());
+    } catch (e) {
+        faust.error_msg = "Error in JSON.parse: " + e;
+        return null;
     }
     
-    function getNumOutputsAux ()
-    {
-        return (json_object.outputs !== undefined) ? parseInt(json_object.outputs) : 0;
-    }
-
     var sp;
     try {
-        sp = context.createScriptProcessor(buffer_size, getNumInputsAux(), getNumOutputsAux());
+        sp = context.createScriptProcessor(buffer_size, parseInt(json_object.inputs), parseInt(json_object.outputs));
     } catch (e) {
         faust.error_msg = "Error in createScriptProcessor: " + e;
         return null;
@@ -5953,8 +5961,8 @@ faust.SAtonalSoftHarp = function (dsp_instance, context, buffer_size) {
     sp.dspInChannnels = [];
     sp.dspOutChannnels = [];
     
-    sp.numIn = getNumInputsAux();
-    sp.numOut = getNumOutputsAux();
+    sp.numIn = parseInt(json_object.inputs);
+    sp.numOut = parseInt(json_object.outputs);
      
     // Memory allocator
     sp.ptr_size = 4;
@@ -5964,7 +5972,13 @@ faust.SAtonalSoftHarp = function (dsp_instance, context, buffer_size) {
     sp.HEAP = dsp_instance.exports.memory.buffer;
     sp.HEAP32 = new Int32Array(sp.HEAP);
     sp.HEAPF32 = new Float32Array(sp.HEAP);
-     
+    
+    // JSON is as offset 0
+    /*
+    var HEAPU8 = new Uint8Array(sp.HEAP);
+    console.log(Heap2Str(HEAPU8));
+    */
+    
     console.log(sp.HEAP);
     console.log(sp.HEAP32);
     console.log(sp.HEAPF32);
@@ -5979,7 +5993,7 @@ faust.SAtonalSoftHarp = function (dsp_instance, context, buffer_size) {
     // Start of HEAP index
     
     // SAtonalSoftHarp is placed first with index 0. Audio buffer start at the end of SAtonalSoftHarp.
-    sp.audio_heap_ptr = getSizeSAtonalSoftHarp();
+    sp.audio_heap_ptr = parseInt(json_object.size);
 
     // Setup pointers offset
     sp.audio_heap_ptr_inputs = sp.audio_heap_ptr;
@@ -5992,7 +6006,7 @@ faust.SAtonalSoftHarp = function (dsp_instance, context, buffer_size) {
     // Start of SAtonalSoftHarp memory : SAtonalSoftHarp is placed first with index 0
     sp.dsp = 0;
  
-    sp.pathTable = getPathTableSAtonalSoftHarp();
+    sp.pathTable = [];
     
     // Allocate table for 'setParamValue'
     sp.value_table = [];
@@ -6069,14 +6083,23 @@ faust.SAtonalSoftHarp = function (dsp_instance, context, buffer_size) {
     
     sp.parse_item = function (item)
     {
-        if (item.type === "vgroup" || item.type === "hgroup" || item.type === "tgroup") {
+        if (item.type === "vgroup" 
+        	|| item.type === "hgroup" 
+        	|| item.type === "tgroup") {
             sp.parse_items(item.items);
-        } else if (item.type === "hbargraph" || item.type === "vbargraph") {
+        } else if (item.type === "hbargraph" 
+        	|| item.type === "vbargraph") {
             // Keep bargraph adresses
             sp.outputs_items.push(item.address);
-        } else if (item.type === "vslider" || item.type === "hslider" || item.type === "button" || item.type === "checkbox" || item.type === "nentry") {
+            sp.pathTable[item.address] = parseInt(item.index);
+        } else if (item.type === "vslider" 
+        	|| item.type === "hslider" 
+        	|| item.type === "button" 
+        	|| item.type === "checkbox" 
+        	|| item.type === "nentry") {
             // Keep inputs adresses
             sp.inputs_items.push(item.address);
+            sp.pathTable[item.address] = parseInt(item.index);
         }
     }
       
@@ -6114,7 +6137,7 @@ faust.SAtonalSoftHarp = function (dsp_instance, context, buffer_size) {
             }
         }
                                 
-        // bargraph
+        // Parse JSON UI part
         sp.parse_ui(sp.json_object.ui);
         
         // Init SAtonalSoftHarp
@@ -6130,7 +6153,7 @@ faust.SAtonalSoftHarp = function (dsp_instance, context, buffer_size) {
     }
     
     /*
-     Public API to be used to control the SAtonalSoftHarp.
+    	Public API to be used to control the WebAudio node.
     */
 
     /* Return current sample rate */
@@ -6142,13 +6165,13 @@ faust.SAtonalSoftHarp = function (dsp_instance, context, buffer_size) {
     /* Return instance number of audio inputs. */
     sp.getNumInputs = function ()
     {
-        return getNumInputsAux();
+        return sp.numIn;
     }
 
     /* Return instance number of audio outputs. */
     sp.getNumOutputs = function ()
     {
-        return getNumOutputsAux();
+        return sp.numOut;
     }
 
     /**
@@ -6202,7 +6225,11 @@ faust.SAtonalSoftHarp = function (dsp_instance, context, buffer_size) {
      */
     sp.metadata = function (handler)
     {
-        metadataSAtonalSoftHarp(handler);
+    	if (json_object.meta) {
+    		json_object.meta.forEach(function(meta) { 
+    			handler.declare(Object.keys(meta)[0], Object.values(meta)[0]); 
+    		});
+       	}
     }
 
     /**
@@ -6281,14 +6308,14 @@ faust.SAtonalSoftHarp = function (dsp_instance, context, buffer_size) {
 };
 
 /** 
-* Create a SAtonalSoftHarp object from a wasm filename
+* Create a ScriptProcessorNode Web Audio object 
+* by loading and compiling the Faust wasm file
 *
-* @param filename - the wasm filename
 * @param context - the Web Audio context
 * @param buffer_size - the buffer_size in frames
-* @param callback - a callback taking the created ScriptProcessorNode as parameter
+* @param callback - a callback taking the created ScriptProcessorNode as parameter, or null in case of error
 */
-faust.createSAtonalSoftHarp = function(filename, context, buffer_size, callback)
+faust.createSAtonalSoftHarp = function(context, buffer_size, callback)
 {
     var asm2wasm = { // special asm2wasm imports
         "fmod": function(x, y) {
@@ -6307,7 +6334,7 @@ faust.createSAtonalSoftHarp = function(filename, context, buffer_size, callback)
     importObject["global.Math"] = window.Math;
     importObject["asm2wasm"] = asm2wasm;
     
-    fetch(filename)
+    fetch('SAtonalSoftHarp.wasm')
     .then(dsp_file => dsp_file.arrayBuffer())
     .then(dsp_bytes => WebAssembly.instantiate(dsp_bytes, importObject))
     .then(dsp_module => callback(faust.SAtonalSoftHarp(dsp_module.instance, context, buffer_size)))
@@ -6325,8 +6352,8 @@ faust.createSAtonalSoftHarp = function(filename, context, buffer_size, callback)
 
 // Faust part
 
-var isWebKitAudio = (typeof (webkitAudioContext) !== "undefined");
-var isWasm = (typeof (WebAssembly) !== "undefined");
+var isWebKitAudio = (typeof(webkitAudioContext) !== "undefined");
+var isWasm = (typeof(WebAssembly) !== "undefined");
 var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
 var audio_input = null;
 var SAtonalSoftHarp = null;
@@ -6416,10 +6443,12 @@ function startSAtonalSoftHarpAux(dsp)
     SAtonalSoftHarp.connect(audio_context.destination);
     
     console.log(SAtonalSoftHarp.getJSON());
-    SAtonalSoftHarp.metadata({ declare: function(key, value) { console.log("key = " + key + " value = " + value); }});
+    
+    // TODO: emcc
+    //SAtonalSoftHarp.metadata({ declare: function(key, value) { console.log("key = " + key + " value = " + value); }});
     console.log(SAtonalSoftHarp.getParams());
     
-    // kludge...ideally, this needs to not be part of the imported JS
+    // No polling from the server needed, so use an empty loop
     _f4u$t.main_loop = function() {}
     
     faustsvg = $('<div />');
@@ -6439,7 +6468,7 @@ function startSAtonalSoftHarp()
 function startNewSAtonalSoftHarp(buffer_size)
 {
     if (isWasm) {
-        faust.createSAtonalSoftHarp('SAtonalSoftHarp.wasm', audio_context, buffer_size, startSAtonalSoftHarpAux);
+        faust.createSAtonalSoftHarp(audio_context, buffer_size, startSAtonalSoftHarpAux);
     }  else {
         alert("WebAssembly is not supported in this browser !")
     }
@@ -6461,9 +6490,15 @@ window.addEventListener('touchstart', function() {
                         
                         }, false);
                         
-                        // General
-                        $(startSAtonalSoftHarp);
-                        
+// Start monophonic instrument
+if (typeof (Module) !== "undefined") {
+    console.log("Compiled with EMCC");
+    Module['onRuntimeInitialized'] = startSAtonalSoftHarp;
+} else {
+    console.log("Compiled with WASM backend");
+    startSAtonalSoftHarp();
+}
+
 // Save SAtonalSoftHarp state to local storage
 setInterval(function() { if (SAtonalSoftHarp) saveSAtonalSoftHarp(); }, 1000);
  

@@ -4401,7 +4401,9 @@ _f4u$t.initiate_bargraph = function(axis, fullid, weakaxis, strongaxis, minval, 
   _f4u$t.IDS_TO_ATTRIBUTES[id]["step"] = step;
   _f4u$t.IDS_TO_ATTRIBUTES[id]["init"] = init;
   _f4u$t.IDS_TO_ATTRIBUTES[id]["unit"] = unit;
-  _f4u$t.IDS_TO_ATTRIBUTES[id]["label"] = label;
+  _f4u$t.IDS_TO_ATTRIBUTES[id]["integer"] = false;
+  _f4u$t.IDS_TO_ATTRIBUTES[id]["ndec"] = (maxval-minval) <= 10 ? 2 : (maxval-minval) <= 100 ? 1 : 0;;
+ _f4u$t.IDS_TO_ATTRIBUTES[id]["label"] = label;
   _f4u$t.IDS_TO_ATTRIBUTES[id]["address"] = address;
   _f4u$t.path_to_id(address, fullid);
 }
@@ -4693,7 +4695,7 @@ _f4u$t.touched = function(id) {
         && (_f4u$t._I[identifier].id.indexOf(id) != -1)) {
       return true;
     }
-  } 
+  }
   return false;
 }
 
@@ -4742,7 +4744,7 @@ _f4u$t.moveSliderViaAccelerometer = function(e, longid) {
   if (_f4u$t.IDS_TO_ATTRIBUTES[id].orientationmode == 'relative') {
     var nudge = (orientation - prev_orientation) * (length - sliderlen) / (_f4u$t.IDS_TO_ATTRIBUTES[id].orientation.high - _f4u$t.IDS_TO_ATTRIBUTES[id].orientation.low);
     aval = transform[0][axis + 1] + nudge;
-    
+
   } else {
     aval = _f4u$t.remap(orientation,
                         _f4u$t.IDS_TO_ATTRIBUTES[id].orientation.low,
@@ -5847,7 +5849,7 @@ $(document).ready(function() { _f4u$t.main_loop(); });
 
 
 /*
-Code generated with Faust version 2.3.6
+Code generated with Faust version 2.3.17
 Compilation options: -scal -ftz 2
 */
 
@@ -5857,19 +5859,19 @@ function getSizeMeow() {
 
 function getPathTableMeow() {
 	var pathTable = [];
-	pathTable["/MEOW/Instrument/Gain/Volume_1"] = 32;
-	pathTable["/MEOW/Instrument/Frequencies/Frequency_1"] = 40;
-	pathTable["/MEOW/ON/OFF"] = 52;
-	pathTable["/MEOW/Instrument/Gain/Volume_2"] = 32992;
-	pathTable["/MEOW/Instrument/Frequencies/Frequency_2"] = 32996;
-	pathTable["/MEOW/Instrument/Gain/Volume_3"] = 65848;
-	pathTable["/MEOW/Instrument/Frequencies/Frequency_3"] = 65852;
-	pathTable["/MEOW/Wah_Wah"] = 98772;
+	pathTable["/MEOW/Wah_Wah"] = 100;
+	pathTable["/MEOW/Instrument/Gain/Volume_1"] = 152;
+	pathTable["/MEOW/Instrument/Frequencies/Frequency_1"] = 160;
+	pathTable["/MEOW/ON/OFF"] = 172;
+	pathTable["/MEOW/Instrument/Gain/Volume_2"] = 33112;
+	pathTable["/MEOW/Instrument/Frequencies/Frequency_2"] = 33116;
+	pathTable["/MEOW/Instrument/Gain/Volume_3"] = 65968;
+	pathTable["/MEOW/Instrument/Frequencies/Frequency_3"] = 65972;
 	return pathTable;
 }
 
 function getJSONMeow() {
-	return "{  \"name\": \"Meow\",  \"inputs\": \"0\",  \"outputs\": \"1\",  \"meta\": [    { \"author\": \"ER\" },   { \"basics.lib/name\": \"Faust Basic Element Library\" },   { \"basics.lib/version\": \"0.0\" },   { \"delays.lib/name\": \"Faust Delay Library\" },   { \"delays.lib/version\": \"0.0\" },   { \"description\": \"WaveGuide Brass instrument from STK\" },   { \"envelopes.lib/author\": \"GRAME\" },   { \"envelopes.lib/copyright\": \"GRAME\" },   { \"envelopes.lib/license\": \"LGPL with exception\" },   { \"envelopes.lib/name\": \"Faust Envelope Library\" },   { \"envelopes.lib/version\": \"0.0\" },   { \"filters.lib/name\": \"Faust Filters Library\" },   { \"filters.lib/version\": \"0.0\" },   { \"instruments.lib/author\": \"Romain Michon (rmichon@ccrma.stanford.edu)\" },   { \"instruments.lib/copyright\": \"Romain Michon\" },   { \"instruments.lib/licence\": \"STK-4.3\" },   { \"instruments.lib/name\": \"Faust-STK Tools Library\" },   { \"instruments.lib/version\": \"1.0\" },   { \"maths.lib/author\": \"GRAME\" },   { \"maths.lib/copyright\": \"GRAME\" },   { \"maths.lib/license\": \"LGPL with exception\" },   { \"maths.lib/name\": \"Faust Math Library\" },   { \"maths.lib/version\": \"2.0\" },   { \"name\": \"Meow\" },   { \"oscillators.lib/name\": \"Faust Oscillator Library\" },   { \"oscillators.lib/version\": \"0.0\" },   { \"signals.lib/name\": \"Faust Signal Routing Library\" },   { \"signals.lib/version\": \"0.0\" },   { \"vaeffects.lib/name\": \"Faust Virtual Analog Filter Effect Library\" },   { \"vaeffects.lib/version\": \"0.0\" }  ],  \"ui\": [    {    \"type\": \"vgroup\",    \"label\": \"MEOW\",    \"items\": [      {      \"type\": \"hslider\",      \"label\": \"ON/OFF\",      \"address\": \"/MEOW/ON/OFF\",      \"init\": \"0\",      \"min\": \"0\",      \"max\": \"1\",      \"step\": \"1\"     },     {      \"type\": \"hgroup\",      \"label\": \"Instrument\",      \"items\": [        {        \"type\": \"vgroup\",        \"label\": \"Frequencies\",        \"items\": [          {          \"type\": \"hslider\",          \"label\": \"Frequency 1\",          \"address\": \"/MEOW/Instrument/Frequencies/Frequency_1\",          \"meta\": [           { \"acc\": \"1 0 -10 0 10\" },           { \"tooltip\": \"Tone frequency\" },           { \"unit\": \"Hz\" }          ],          \"init\": \"370\",          \"min\": \"280\",          \"max\": \"380\",          \"step\": \"0.01\"         },         {          \"type\": \"hslider\",          \"label\": \"Frequency 2\",          \"address\": \"/MEOW/Instrument/Frequencies/Frequency_2\",          \"meta\": [           { \"acc\": \"0 0 -10 0 10\" },           { \"tooltip\": \"Tone frequency\" },           { \"unit\": \"Hz\" }          ],          \"init\": \"440\",          \"min\": \"380\",          \"max\": \"550\",          \"step\": \"0.01\"         },         {          \"type\": \"hslider\",          \"label\": \"Frequency 3\",          \"address\": \"/MEOW/Instrument/Frequencies/Frequency_3\",          \"meta\": [           { \"acc\": \"2 1 -10 0 12\" },           { \"tooltip\": \"Tone frequency\" },           { \"unit\": \"Hz\" }          ],          \"init\": \"587.32\",          \"min\": \"550\",          \"max\": \"700\",          \"step\": \"0.01\"         }        ]       },       {        \"type\": \"vgroup\",        \"label\": \"Gain\",        \"items\": [          {          \"type\": \"hslider\",          \"label\": \"Volume 1\",          \"address\": \"/MEOW/Instrument/Gain/Volume_1\",          \"meta\": [           { \"acc\": \"1 1 -12 0 12\" },           { \"style\": \"knob\" },           { \"tooltip\": \"Gain (value between 0 and 1)\" }          ],          \"init\": \"0.5\",          \"min\": \"0\",          \"max\": \"1\",          \"step\": \"0.01\"         },         {          \"type\": \"hslider\",          \"label\": \"Volume 2\",          \"address\": \"/MEOW/Instrument/Gain/Volume_2\",          \"meta\": [           { \"acc\": \"0 1 -12 0 12\" },           { \"style\": \"knob\" },           { \"tooltip\": \"Gain (value between 0 and 1)\" }          ],          \"init\": \"0.5\",          \"min\": \"0\",          \"max\": \"1\",          \"step\": \"0.01\"         },         {          \"type\": \"hslider\",          \"label\": \"Volume 3\",          \"address\": \"/MEOW/Instrument/Gain/Volume_3\",          \"meta\": [           { \"acc\": \"2 0 -12 0 10\" },           { \"style\": \"knob\" },           { \"tooltip\": \"Gain (value between 0 and 1)\" }          ],          \"init\": \"0.5\",          \"min\": \"0\",          \"max\": \"0.5\",          \"step\": \"0.01\"         }        ]       }      ]     },     {      \"type\": \"hslider\",      \"label\": \"Wah Wah\",      \"address\": \"/MEOW/Wah_Wah\",      \"meta\": [       { \"acc\": \"0 0 -15 10 0\" }      ],      \"init\": \"0.5\",      \"min\": \"0\",      \"max\": \"1\",      \"step\": \"0.01\"     }    ]   }  ] } ";
+	return "{\"name\":\"Meow\",\"version\":\"2.3.17\",\"options\":\"-scal -ftz 2\",\"size\":\"98844\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"ER\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"description\":\"WaveGuide Brass instrument from STK\"},{\"envelopes.lib/author\":\"GRAME\"},{\"envelopes.lib/copyright\":\"GRAME\"},{\"envelopes.lib/license\":\"LGPL with exception\"},{\"envelopes.lib/name\":\"Faust Envelope Library\"},{\"envelopes.lib/version\":\"0.0\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"instruments.lib/author\":\"Romain Michon (rmichon@ccrma.stanford.edu)\"},{\"instruments.lib/copyright\":\"Romain Michon\"},{\"instruments.lib/licence\":\"STK-4.3\"},{\"instruments.lib/name\":\"Faust-STK Tools Library\"},{\"instruments.lib/version\":\"1.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Meow\"},{\"oscillators.lib/name\":\"Faust Oscillator Library\"},{\"oscillators.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"},{\"vaeffects.lib/name\":\"Faust Virtual Analog Filter Effect Library\"},{\"vaeffects.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"MEOW\",\"items\":[{\"type\":\"hslider\",\"label\":\"ON/OFF\",\"address\":\"/MEOW/ON/OFF\",\"index\":\"172\",\"init\":\"0\",\"min\":\"0\",\"max\":\"1\",\"step\":\"1\"},{\"type\":\"hgroup\",\"label\":\"Instrument\",\"items\":[{\"type\":\"vgroup\",\"label\":\"Frequencies\",\"items\":[{\"type\":\"hslider\",\"label\":\"Frequency 1\",\"address\":\"/MEOW/Instrument/Frequencies/Frequency_1\",\"index\":\"160\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"tooltip\":\"Tone frequency\"},{\"unit\":\"Hz\"}],\"init\":\"370\",\"min\":\"280\",\"max\":\"380\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"Frequency 2\",\"address\":\"/MEOW/Instrument/Frequencies/Frequency_2\",\"index\":\"33116\",\"meta\":[{\"acc\":\"0 0 -10 0 10\"},{\"tooltip\":\"Tone frequency\"},{\"unit\":\"Hz\"}],\"init\":\"440\",\"min\":\"380\",\"max\":\"550\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"Frequency 3\",\"address\":\"/MEOW/Instrument/Frequencies/Frequency_3\",\"index\":\"65972\",\"meta\":[{\"acc\":\"2 1 -10 0 12\"},{\"tooltip\":\"Tone frequency\"},{\"unit\":\"Hz\"}],\"init\":\"587.32\",\"min\":\"550\",\"max\":\"700\",\"step\":\"0.01\"}]},{\"type\":\"vgroup\",\"label\":\"Gain\",\"items\":[{\"type\":\"hslider\",\"label\":\"Volume 1\",\"address\":\"/MEOW/Instrument/Gain/Volume_1\",\"index\":\"152\",\"meta\":[{\"acc\":\"1 1 -12 0 12\"},{\"style\":\"knob\"},{\"tooltip\":\"Gain (value between 0 and 1)\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"Volume 2\",\"address\":\"/MEOW/Instrument/Gain/Volume_2\",\"index\":\"33112\",\"meta\":[{\"acc\":\"0 1 -12 0 12\"},{\"style\":\"knob\"},{\"tooltip\":\"Gain (value between 0 and 1)\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"Volume 3\",\"address\":\"/MEOW/Instrument/Gain/Volume_3\",\"index\":\"65968\",\"meta\":[{\"acc\":\"2 0 -12 0 10\"},{\"style\":\"knob\"},{\"tooltip\":\"Gain (value between 0 and 1)\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"0.5\",\"step\":\"0.01\"}]}]},{\"type\":\"hslider\",\"label\":\"Wah Wah\",\"address\":\"/MEOW/Wah_Wah\",\"index\":\"100\",\"meta\":[{\"acc\":\"0 0 -15 10 0\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"}]}]}";
 }
 
 function metadataMeow(m) {
@@ -5895,7 +5897,7 @@ function metadataMeow(m) {
 	m.declare("maths.lib/copyright", "GRAME");
 	m.declare("maths.lib/license", "LGPL with exception");
 	m.declare("maths.lib/name", "Faust Math Library");
-	m.declare("maths.lib/version", "2.0");
+	m.declare("maths.lib/version", "2.1");
 	m.declare("name", "Meow");
 	m.declare("oscillators.lib/name", "Faust Oscillator Library");
 	m.declare("oscillators.lib/version", "0.0");
@@ -5928,6 +5930,16 @@ var faust = faust || {};
 faust.error_msg = null;
 faust.getErrorMessage = function() { return faust.error_msg; };
 
+function Heap2Str(buf)
+{
+    var str = "";
+    var i = 0;
+    while (buf[i] !== 0) {
+        str += String.fromCharCode(buf[i++]);
+    }
+    return str;
+}
+
 // Monophonic Faust Meow
 
 /** 
@@ -5942,21 +5954,17 @@ faust.getErrorMessage = function() { return faust.error_msg; };
 faust.Meow = function (dsp_instance, context, buffer_size) {
 
     // Keep JSON parsed object
-    var json_object = JSON.parse(getJSONMeow());
-    
-    function getNumInputsAux ()
-    {
-        return (json_object.inputs !== undefined) ? parseInt(json_object.inputs) : 0;
+    var json_object = null;
+    try {
+        json_object = JSON.parse(getJSONMeow());
+    } catch (e) {
+        faust.error_msg = "Error in JSON.parse: " + e;
+        return null;
     }
     
-    function getNumOutputsAux ()
-    {
-        return (json_object.outputs !== undefined) ? parseInt(json_object.outputs) : 0;
-    }
-
     var sp;
     try {
-        sp = context.createScriptProcessor(buffer_size, getNumInputsAux(), getNumOutputsAux());
+        sp = context.createScriptProcessor(buffer_size, parseInt(json_object.inputs), parseInt(json_object.outputs));
     } catch (e) {
         faust.error_msg = "Error in createScriptProcessor: " + e;
         return null;
@@ -5971,8 +5979,8 @@ faust.Meow = function (dsp_instance, context, buffer_size) {
     sp.dspInChannnels = [];
     sp.dspOutChannnels = [];
     
-    sp.numIn = getNumInputsAux();
-    sp.numOut = getNumOutputsAux();
+    sp.numIn = parseInt(json_object.inputs);
+    sp.numOut = parseInt(json_object.outputs);
      
     // Memory allocator
     sp.ptr_size = 4;
@@ -5982,7 +5990,13 @@ faust.Meow = function (dsp_instance, context, buffer_size) {
     sp.HEAP = dsp_instance.exports.memory.buffer;
     sp.HEAP32 = new Int32Array(sp.HEAP);
     sp.HEAPF32 = new Float32Array(sp.HEAP);
-     
+    
+    // JSON is as offset 0
+    /*
+    var HEAPU8 = new Uint8Array(sp.HEAP);
+    console.log(Heap2Str(HEAPU8));
+    */
+    
     console.log(sp.HEAP);
     console.log(sp.HEAP32);
     console.log(sp.HEAPF32);
@@ -5997,7 +6011,7 @@ faust.Meow = function (dsp_instance, context, buffer_size) {
     // Start of HEAP index
     
     // Meow is placed first with index 0. Audio buffer start at the end of Meow.
-    sp.audio_heap_ptr = getSizeMeow();
+    sp.audio_heap_ptr = parseInt(json_object.size);
 
     // Setup pointers offset
     sp.audio_heap_ptr_inputs = sp.audio_heap_ptr;
@@ -6010,7 +6024,7 @@ faust.Meow = function (dsp_instance, context, buffer_size) {
     // Start of Meow memory : Meow is placed first with index 0
     sp.dsp = 0;
  
-    sp.pathTable = getPathTableMeow();
+    sp.pathTable = [];
     
     // Allocate table for 'setParamValue'
     sp.value_table = [];
@@ -6087,14 +6101,23 @@ faust.Meow = function (dsp_instance, context, buffer_size) {
     
     sp.parse_item = function (item)
     {
-        if (item.type === "vgroup" || item.type === "hgroup" || item.type === "tgroup") {
+        if (item.type === "vgroup" 
+        	|| item.type === "hgroup" 
+        	|| item.type === "tgroup") {
             sp.parse_items(item.items);
-        } else if (item.type === "hbargraph" || item.type === "vbargraph") {
+        } else if (item.type === "hbargraph" 
+        	|| item.type === "vbargraph") {
             // Keep bargraph adresses
             sp.outputs_items.push(item.address);
-        } else if (item.type === "vslider" || item.type === "hslider" || item.type === "button" || item.type === "checkbox" || item.type === "nentry") {
+            sp.pathTable[item.address] = parseInt(item.index);
+        } else if (item.type === "vslider" 
+        	|| item.type === "hslider" 
+        	|| item.type === "button" 
+        	|| item.type === "checkbox" 
+        	|| item.type === "nentry") {
             // Keep inputs adresses
             sp.inputs_items.push(item.address);
+            sp.pathTable[item.address] = parseInt(item.index);
         }
     }
       
@@ -6132,7 +6155,7 @@ faust.Meow = function (dsp_instance, context, buffer_size) {
             }
         }
                                 
-        // bargraph
+        // Parse JSON UI part
         sp.parse_ui(sp.json_object.ui);
         
         // Init Meow
@@ -6148,7 +6171,7 @@ faust.Meow = function (dsp_instance, context, buffer_size) {
     }
     
     /*
-     Public API to be used to control the Meow.
+    	Public API to be used to control the WebAudio node.
     */
 
     /* Return current sample rate */
@@ -6160,13 +6183,13 @@ faust.Meow = function (dsp_instance, context, buffer_size) {
     /* Return instance number of audio inputs. */
     sp.getNumInputs = function ()
     {
-        return getNumInputsAux();
+        return sp.numIn;
     }
 
     /* Return instance number of audio outputs. */
     sp.getNumOutputs = function ()
     {
-        return getNumOutputsAux();
+        return sp.numOut;
     }
 
     /**
@@ -6220,7 +6243,11 @@ faust.Meow = function (dsp_instance, context, buffer_size) {
      */
     sp.metadata = function (handler)
     {
-        metadataMeow(handler);
+    	if (json_object.meta) {
+    		json_object.meta.forEach(function(meta) { 
+    			handler.declare(Object.keys(meta)[0], Object.values(meta)[0]); 
+    		});
+       	}
     }
 
     /**
@@ -6299,14 +6326,14 @@ faust.Meow = function (dsp_instance, context, buffer_size) {
 };
 
 /** 
-* Create a Meow object from a wasm filename
+* Create a ScriptProcessorNode Web Audio object 
+* by loading and compiling the Faust wasm file
 *
-* @param filename - the wasm filename
 * @param context - the Web Audio context
 * @param buffer_size - the buffer_size in frames
-* @param callback - a callback taking the created ScriptProcessorNode as parameter
+* @param callback - a callback taking the created ScriptProcessorNode as parameter, or null in case of error
 */
-faust.createMeow = function(filename, context, buffer_size, callback)
+faust.createMeow = function(context, buffer_size, callback)
 {
     var asm2wasm = { // special asm2wasm imports
         "fmod": function(x, y) {
@@ -6325,7 +6352,7 @@ faust.createMeow = function(filename, context, buffer_size, callback)
     importObject["global.Math"] = window.Math;
     importObject["asm2wasm"] = asm2wasm;
     
-    fetch(filename)
+    fetch('Meow.wasm')
     .then(dsp_file => dsp_file.arrayBuffer())
     .then(dsp_bytes => WebAssembly.instantiate(dsp_bytes, importObject))
     .then(dsp_module => callback(faust.Meow(dsp_module.instance, context, buffer_size)))
@@ -6343,8 +6370,8 @@ faust.createMeow = function(filename, context, buffer_size, callback)
 
 // Faust part
 
-var isWebKitAudio = (typeof (webkitAudioContext) !== "undefined");
-var isWasm = (typeof (WebAssembly) !== "undefined");
+var isWebKitAudio = (typeof(webkitAudioContext) !== "undefined");
+var isWasm = (typeof(WebAssembly) !== "undefined");
 var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
 var audio_input = null;
 var Meow = null;
@@ -6434,10 +6461,12 @@ function startMeowAux(dsp)
     Meow.connect(audio_context.destination);
     
     console.log(Meow.getJSON());
-    Meow.metadata({ declare: function(key, value) { console.log("key = " + key + " value = " + value); }});
+    
+    // TODO: emcc
+    //Meow.metadata({ declare: function(key, value) { console.log("key = " + key + " value = " + value); }});
     console.log(Meow.getParams());
     
-    // kludge...ideally, this needs to not be part of the imported JS
+    // No polling from the server needed, so use an empty loop
     _f4u$t.main_loop = function() {}
     
     faustsvg = $('<div />');
@@ -6457,7 +6486,7 @@ function startMeow()
 function startNewMeow(buffer_size)
 {
     if (isWasm) {
-        faust.createMeow('Meow.wasm', audio_context, buffer_size, startMeowAux);
+        faust.createMeow(audio_context, buffer_size, startMeowAux);
     }  else {
         alert("WebAssembly is not supported in this browser !")
     }
@@ -6479,9 +6508,15 @@ window.addEventListener('touchstart', function() {
                         
                         }, false);
                         
-                        // General
-                        $(startMeow);
-                        
+// Start monophonic instrument
+if (typeof (Module) !== "undefined") {
+    console.log("Compiled with EMCC");
+    Module['onRuntimeInitialized'] = startMeow;
+} else {
+    console.log("Compiled with WASM backend");
+    startMeow();
+}
+
 // Save Meow state to local storage
 setInterval(function() { if (Meow) saveMeow(); }, 1000);
  
