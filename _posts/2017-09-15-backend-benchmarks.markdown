@@ -89,8 +89,6 @@ The fasted one (Chrome for now) can be compared with C++, LLVM IR, WAVM native e
 
 ![](/images/Backends_Chrome.png){: .center-image }
 
-
-
 ### Comments and Conclusion ###
 
 Testing wasm JIT machines inside browsers is not an easy task. The C++ WAVM runtime revealed to be an excellent tool to compare the Faust C++, LLVM IR and wasm backend. Since its code can be easily adapted, one can estimate also what can be expected **deploying wasm DSP modules in pure native environments**, outside of the browser, where some **audio  specific optimizations** may be considered.
@@ -98,4 +96,9 @@ Testing wasm JIT machines inside browsers is not an easy task. The C++ WAVM runt
 Measures done on a set of Faust DSP show that WebAssembly code still run slower than C++ of LLVM IR generated code in most cases, **up to almost 66% slower** in the less favorable examples. This value will typically be a bit worse when deploying in browsers, since **float denormal protection code has to be used**. Benchmarks in browser wasm runtime still need to be done to confirm or refine these findings. 
 
 Comparing the **Chrome**, **Firefox** and **WebKit** browsers on OSX El Capitan shows that Chrome is currently the fastest engine in most cases, with Firefox and WebKit quite similar (with a slight plus for WebKit). 
+
+Comparing the **Chrome** browser with native engines shows results from *5 times slower* (filterBank.dsp), *3 times slower* (sTunedBar6.dsp) up to much more favorable cases (karplus32.dsp).
+ 
+
+
 
