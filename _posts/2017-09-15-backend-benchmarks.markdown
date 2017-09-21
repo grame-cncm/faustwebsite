@@ -66,12 +66,6 @@ Binaryen is a [compiler and toolchain infrastructure library for WebAssembly](ht
 
 ![](/images/Binaryen_optimization.png){: .center-image }
 
-#### Comparing three browsers on OSX El Capitan####
-
-[HTML test pages](http://faust.grame.fr/modules/bench/) were prepared to compare the performances of the three main browsers on OSX El Capitan. The DSP wasm module *compute* method is called repeatedly in a timed loop, using sucessive slices of a big allocated circular audio buffer to avoid cache effects. Here are the results:
-
-![](/images/Browsers.png){: .center-image }
-
 #### Float denormal handling ####
 
 A specific problem occurs when audio computation produces denormal float values, which is quite common with recursive filters, and can be extremely costly to compute on some processors like the Intel family for instance. A Flush To Zero (FTZ) mode for denormals can usually be set at hardware level, but it not yet available in the WebAssembly MVP version, which strictly conform to the IEEE 754 norm 8. 
@@ -83,6 +77,19 @@ The **-ftz 1** mode adds a test in each recursive loop which uses the *fabs* fun
 Even if using software ftz is not strictly needed in our benchmark chain (since the C++ WAVM uses the ftz hardware protection mode), we can still compare the speed of the different ftz options. Here is the result of code generated with -ftz for 0 to 2:
 
 ![](/images/FTZ_modes.png){: .center-image }
+
+
+#### Comparing three browsers on OSX El Capitan####
+
+[HTML test pages](http://faust.grame.fr/modules/bench/) were prepared to compare the performances of the three main browsers on OSX El Capitan. The DSP code is compiled with float denormal protection on (-ftz 2). The generated wasm module *compute* method is called repeatedly in a timed loop, using sucessive slices of a big allocated circular audio buffer to avoid cache effects. Here are the results:
+
+![](/images/Browsers.png){: .center-image }
+
+The fasted one (Chrome for now) can be compared with C++, LLVM IR, WAVM native engines: 
+
+![](/images/Backends_Chrome.png){: .center-image }
+
+
 
 ### Comments and Conclusion ###
 
