@@ -5,7 +5,7 @@ date:   2017-09-15 12:00:00
 categories: news
 ---
 
-Porting and running large C/C++ code base on the Web have been the subject of several competing projects in the recent years, from Google NaCl/PNaCl to Mozilla [asm.js](http://asmjs.org). Recently standardized WebAssembly language inherits from ideas experimented in both approaches, with the Mozilla vision finnally winning as [Robert O'Callahan explains here](http://robert.ocallahan.org/2017/06/webassembly-mozilla-won.html). Coupled with the [WebAudio API](https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html), running real-time audio code in the Web now appears to be an achievable goal.   
+Porting and running large C/C++ code base on the Web have been the subject of several competing projects in the recent years, from Google NaCl/PNaCl to Mozilla [asm.js](http://asmjs.org). Recently standardized WebAssembly language inherits from ideas experimented in both approaches, with the Mozilla vision finnally winning as [Robert O'Callahan explains here](http://robert.ocallahan.org/2017/06/webassembly-mozilla-won.html). Coupled with the [WebAudio API](https://webaudio.github.io/web-audio-api/), running real-time audio code in the Web now appears to be an achievable goal.   
 
 WebAssembly is a hot topic in the JavaScript ecosystem. The WebAudio community is eagerly waiting for the [AudioWorklet](https://webaudio.github.io/web-audio-api/#AudioWorklet) specification, with its promised reduced latency and glitch-free audio rendering, to land in browser development versions, and be tested. Porting well established C/C++ codebase with [Emscripten](http://kripken.github.io/emscripten-site/), like the [Csound](https://www.mansoft.nl/csound/) framework as an example, or using DSL languages like Faust, will then naturally beneficiate from improved and more stable performances. 
 
@@ -66,6 +66,12 @@ Binaryen is a [compiler and toolchain infrastructure library for WebAssembly](ht
 
 ![](/images/Binaryen_optimization.png){: .center-image }
 
+#### Comparing three browsers on OSX El Capitan####
+
+[HTML test pages](http://faust.grame.fr/modules/bench/) were prepared to compare the performances of the three main browsers on OSX El Capitan. The DSP wasm module *compute* method is called repeatedly in a timed loop, using sucessive slices of a big allocated audio buffer to avoid cache effects.  Here are the results:
+
+![](/images/Browsers.png){: .center-image }
+
 #### Float denormal handling ####
 
 A specific problem occurs when audio computation produces denormal float values, which is quite common with recursive filters, and can be extremely costly to compute on some processors like the Intel family for instance. A Flush To Zero (FTZ) mode for denormals can usually be set at hardware level, but it not yet available in the WebAssembly MVP version, which strictly conform to the IEEE 754 norm 8. 
@@ -83,3 +89,6 @@ Even if using software ftz is not strictly needed in our benchmark chain (since 
 Testing wasm JIT machines inside browsers is not an easy task. The C++ WAVM runtime revealed to be an excellent tool to compare the Faust C++, LLVM IR and wasm backend. Since its code can be easily adapted, one can estimate also what can be expected **deploying wasm DSP modules in pure native environments**, outside of the browser, where some **audio  specific optimizations** may be considered.
 
 Measures done on a set of Faust DSP show that WebAssembly code still run slower than C++ of LLVM IR generated code in most cases, **up to almost 66% slower** in the less favorable examples. This value will typically be a bit worse when deploying in browsers, since **float denormal protection code has to be used**. Benchmarks in browser wasm runtime still need to be done to confirm or refine these findings. 
+
+Comparing the **Chrome**, **Firefox** and **WebKit** browsers on OSX El Capitan shows that Chrome is currently the fastest engine in most cases, with Firefox and WebKit quite similar (with a slight plus for WebKit). 
+
