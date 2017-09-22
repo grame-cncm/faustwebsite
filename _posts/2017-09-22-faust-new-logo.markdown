@@ -10,46 +10,46 @@ The logo is available in several variants (Full Logo, Simple Logo, Faust Award, 
 
 The Adobe Illustrator file is available [here](/images/logo/LOGO_FAUST_VECTORIEL_EDITABLE.ai)
 
-### Full Logo
+## Full Logo
 Very nice and trendy on your T-shirt...
-#### Blue
+### Blue
 ![](/images/logo/LOGO_FAUST_COMPLET_BLEU.png){: .center-image } 
-#### White
+### White
 ![](/images/logo/LOGO_FAUST_COMPLET_BLANC.png){: .center-image } 
-#### Grey
+### Grey
 ![](/images/logo/LOGO_FAUST_COMPLET_GRIS.png){: .center-image } 
-#### Orange
+### Orange
 ![](/images/logo/LOGO_FAUST_COMPLET_ORANGE.png){: .center-image }
 
-### Simple Logo
+## Simple Logo
 If you don't have too much space...
-#### Blue
+### Blue
 ![](/images/logo/LOGO_FAUST_SIMPLE_BLEU.png){: .center-image } 
-#### White
+### White
 ![](/images/logo/LOGO_FAUST_SIMPLE_BLANC.png){: .center-image } 
-#### Grey
+### Grey
 ![](/images/logo/LOGO_FAUST_SIMPLE_GRIS.png){: .center-image } 
-#### Orange
+### Orange
 ![](/images/logo/LOGO_FAUST_SIMPLE_ORANGE.png){: .center-image }
 
-### Faust Awards
+## Faust Awards
 And the winner is...
-#### Blue
+### Blue
 ![](/images/logo/LOGO_FAUST_AWARD_BLEU.png){: .center-image } 
-#### White
+### White
 ![](/images/logo/LOGO_FAUST_AWARD_BLANC.png){: .center-image } 
-#### Grey
+### Grey
 ![](/images/logo/LOGO_FAUST_AWARD_GRIS.png){: .center-image } 
-#### Orange
+### Orange
 ![](/images/logo/LOGO_FAUST_AWARD_ORANGE.png){: .center-image }
 
-### Made with Faust
+## Made with Faust
 For your next killer app...
-#### Blue
+### Blue
 ![](/images/logo/LOGO_FAUST_MADEWITH_BLEU.png){: .center-image } 
-#### White
+### White
 ![](/images/logo/LOGO_FAUST_MADEWITH_BLANC.png){: .center-image } 
-#### Grey
+### Grey
 ![](/images/logo/LOGO_FAUST_MADEWITH_GRIS.png){: .center-image } 
-#### Orange
+### Orange
 ![](/images/logo/LOGO_FAUST_MADEWITH_ORANGE.png){: .center-image }
