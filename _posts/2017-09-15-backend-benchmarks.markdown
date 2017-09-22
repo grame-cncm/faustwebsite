@@ -85,7 +85,7 @@ Even if using software ftz is not strictly needed in our benchmark chain (since 
 
 ![](/images/Browsers.png){: .center-image }
 
-The fasted one (Chrome for now) can be compared with C++, LLVM IR, WAVM native engines: 
+The fasted one (Chrome for now) can be compared with C++, LLVM IR, WAVM native engines, all compiled with float denormal protection on (-ftz 2): 
 
 ![](/images/Backends_Chrome.png){: .center-image }
 
@@ -97,7 +97,7 @@ Measures done on a set of Faust DSP show that WebAssembly code still run slower 
 
 Comparing the **Chrome**, **Firefox** and **WebKit** browsers on OSX El Capitan shows that Chrome is currently the fastest engine in most cases, with Firefox and WebKit quite similar (with a slight plus for WebKit). 
 
-Comparing the Chrome browser with native engines shows results from **5 times slower** (filterBank.dsp), **3 times slower** (sTunedBar6.dsp) up to much more favorable cases (karplus32.dsp). Note that filterBank.dsp example is a bit of a pathological case, since Chrome is significantly slower than Firefox and WebKit in this case, and filterBank.dsp uses a lot of *pow(10, x)* code that is rewritten an optimized as *exp10(x)* with the C++ backend path.
+Comparing the Chrome browser with native engines shows results from **4,8 times slower** (filterBank.dsp), **2,8 times slower** (sTunedBar6.dsp) up to much more favorable cases (karplus32.dsp). Note that filterBank.dsp example is a bit of a pathological case, since Chrome is significantly slower than Firefox and WebKit in this case, and filterBank.dsp uses a lot of *pow(10, x)* code that is rewritten an optimized as *exp10(x)* with the C++ backend path.
  
 
 
