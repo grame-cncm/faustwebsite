@@ -97,7 +97,7 @@ Measures done on a set of Faust DSP show that WebAssembly code still run slower 
 
 Comparing the **Chrome**, **Firefox** and **WebKit** browsers on OSX El Capitan shows that Chrome is currently the fastest engine in most cases, with Firefox and WebKit quite similar (with a slight plus for WebKit). 
 
-Comparing the **Chrome** browser with native engines shows results from *5 times slower* (filterBank.dsp), *3 times slower* (sTunedBar6.dsp) up to much more favorable cases (karplus32.dsp).
+Comparing the Chrome browser with native engines shows results from **5 times slower** (filterBank.dsp), **3 times slower** (sTunedBar6.dsp) up to much more favorable cases (karplus32.dsp). Note that filterBank.dsp example is a bit of a pathological case, since Chrome is significantly slower than Firefox and WebKit in this case, and filterBank.dsp uses a lot of *pow(10, x)* code that is rewritten an optimized as *exp10(x)* with the C++ backend path.
  
 
 
