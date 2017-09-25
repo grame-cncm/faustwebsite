@@ -98,7 +98,9 @@ An finally the load handler is defined to activate the code:
 
     window.addEventListener("load", startnoise);
 
-Look at the [Noise](http://faust.grame.fr/modules/noise-wasm.html) and [OSC](http://faust.grame.fr/modules/osc-wasm.html) online pages for the complete code.
+Look at the [Noise](http://faust.grame.fr/modules/noise-wasm.html) and [OSC](http://faust.grame.fr/modules/osc-wasm.html) online pages for the complete code. 
+
+Note that pages loading an additional .wasm file cannot directly be loaded in Chrome. You'll have to start a local server (using the *python -m SimpleHTTPServer* command for instance) and access them with their *http://* based URL.  
 
 #### Generating Polyphonic WebAudio nodes ####
 
