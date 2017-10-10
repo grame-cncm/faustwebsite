@@ -16,7 +16,7 @@ Compilation options: -scal -ftz 2
 */
 
 function getJSONkisana() {
-	return "{\"name\":\"Kisana\",\"version\":\"2.4.3\",\"options\":\"-scal -ftz 2\",\"size\":\"23804\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"Yann Orlarey\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Kisana\"},{\"noises.lib/name\":\"Faust Noise Generator Library\"},{\"noises.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Kisana\",\"items\":[{\"type\":\"hgroup\",\"label\":\"Instrument Hands\",\"meta\":[{\"1\":\"\"}],\"items\":[{\"type\":\"vslider\",\"label\":\"1 (Note 48)\",\"address\":\"/Kisana/Instrument_Hands/1_(Note_48)\",\"index\":\"224\",\"meta\":[{\"acc\":\"1 0 -10 0 14\"},{\"unit\":\"pk\"}],\"init\":\"0\",\"min\":\"0\",\"max\":\"11\",\"step\":\"1\"},{\"type\":\"vslider\",\"label\":\"2 (Note 60)\",\"address\":\"/Kisana/Instrument_Hands/2_(Note_60)\",\"index\":\"2956\",\"meta\":[{\"acc\":\"1 0 -10 0 14\"},{\"unit\":\"pk\"}],\"init\":\"2\",\"min\":\"0\",\"max\":\"11\",\"step\":\"1\"},{\"type\":\"vslider\",\"label\":\"3 (Note 72)\",\"address\":\"/Kisana/Instrument_Hands/3_(Note_72)\",\"index\":\"20268\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"unit\":\"pk\"}],\"init\":\"4\",\"min\":\"0\",\"max\":\"11\",\"step\":\"1\"}]},{\"type\":\"hslider\",\"label\":\"Brightness\",\"address\":\"/Kisana/Brightness\",\"index\":\"104\",\"meta\":[{\"2\":\"\"},{\"acc\":\"0 1 -10 0 10\"}],\"init\":\"0.2\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"Resonance\",\"address\":\"/Kisana/Resonance\",\"index\":\"0\",\"meta\":[{\"3\":\"\"},{\"acc\":\"2 1 -10 0 12\"}],\"init\":\"4\",\"min\":\"0.1\",\"max\":\"10\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"Kisana\",\"version\":\"2.4.3\",\"options\":\"-scal -ftz 2\",\"size\":\"23804\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"Yann Orlarey\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Kisana\"},{\"noises.lib/name\":\"Faust Noise Generator Library\"},{\"noises.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Kisana\",\"items\":[{\"type\":\"hgroup\",\"label\":\"Instrument Hands\",\"meta\":[{\"1\":\"\"}],\"items\":[{\"type\":\"vslider\",\"label\":\"1 (Note 48)\",\"address\":\"/Kisana/Instrument_Hands/1_(Note_48)\",\"index\":\"224\",\"meta\":[{\"acc\":\"1 0 -10 0 14\"},{\"unit\":\"pk\"}],\"init\":\"0\",\"min\":\"0\",\"max\":\"11\",\"step\":\"1\"},{\"type\":\"vslider\",\"label\":\"2 (Note 60)\",\"address\":\"/Kisana/Instrument_Hands/2_(Note_60)\",\"index\":\"2444\",\"meta\":[{\"acc\":\"1 0 -10 0 14\"},{\"unit\":\"pk\"}],\"init\":\"2\",\"min\":\"0\",\"max\":\"11\",\"step\":\"1\"},{\"type\":\"vslider\",\"label\":\"3 (Note 72)\",\"address\":\"/Kisana/Instrument_Hands/3_(Note_72)\",\"index\":\"20268\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"unit\":\"pk\"}],\"init\":\"4\",\"min\":\"0\",\"max\":\"11\",\"step\":\"1\"}]},{\"type\":\"hslider\",\"label\":\"Brightness\",\"address\":\"/Kisana/Brightness\",\"index\":\"104\",\"meta\":[{\"2\":\"\"},{\"acc\":\"0 1 -10 0 10\"}],\"init\":\"0.2\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"Resonance\",\"address\":\"/Kisana/Resonance\",\"index\":\"0\",\"meta\":[{\"3\":\"\"},{\"acc\":\"2 1 -10 0 12\"}],\"init\":\"4\",\"min\":\"0.1\",\"max\":\"10\",\"step\":\"0.01\"}]}]}";
 }
 
 'use strict';
@@ -86,9 +86,6 @@ faust.kisana = function (instance, context, buffer_size, sample_rate) {
     
     var pathTable = [];
     
-    // Allocate table for 'setParamValue'
-    var value_table = [];
-        
     function update_outputs () 
     {
         if (outputs_items.length > 0 && output_handler && outputs_timer-- === 0) {
@@ -110,14 +107,6 @@ faust.kisana = function (instance, context, buffer_size, sample_rate) {
             for (j = 0; j < buffer_size; j++) {
                 dspInput[j] = input[j];
             }
-        }
-        
-        // Update control state
-        for (i = 0; i < inputs_items.length; i++) {
-            var path = inputs_items[i];
-            var values = value_table[path];
-            factory.setParamValue(dsp, pathTable[path], values[0]);
-            values[0] = values[1];
         }
         
         // Compute
@@ -224,27 +213,7 @@ faust.kisana = function (instance, context, buffer_size, sample_rate) {
         
         // Init kisana
         factory.init(dsp, sample_rate);
-        
-        // Init 'value' table
-        for (i = 0; i < inputs_items.length; i++) {
-            var path = inputs_items[i];
-            var values = new Float64Array(2);
-            values[0] = values[1] = factory.getParamValue(dsp, pathTable[path]);
-            value_table[path] = values;
-        }
     }
-    
-	function setParamValueAux (path, val) 
-	{
-		var values = value_table[path];
-		if (values) {
-			// relaxing the test
-			//if (factory.getParamValue(dsp, pathTable[path]) === values[0]) {
-				values[0] = val;
-			//} 
-			values[1] = val;
-		}
-	}
     
     init();
     
@@ -301,12 +270,7 @@ faust.kisana = function (instance, context, buffer_size, sample_rate) {
             return output_handler;
         },
         
-        setParamValue : function (path, val) 
-        {
-        	setParamValueAux(path, val);
-        },
-        
-        setParamValue1 : function (path, val)
+        setParamValue : function (path, val)
         {
             factory.setParamValue(dsp, pathTable[path], val);
         },
