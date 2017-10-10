@@ -11,60 +11,13 @@ CPU load (in % of a 1024 frames audio buffer) :
 <script>
 
 /*
-Code generated with Faust version 2.3.17
+Code generated with Faust version 2.4.3
 Compilation options: -scal -ftz 2
 */
 
-function getSizeclarinetMIDI() {
-	return 16604;
-}
-
-function getPathTableclarinetMIDI() {
-	var pathTable = [];
-	pathTable["/clarinet/gate"] = 72;
-	pathTable["/clarinet/otherParams/outGain"] = 0;
-	pathTable["/clarinet/otherParams/bellOpening"] = 16;
-	pathTable["/clarinet/otherParams/vibratoGain"] = 36;
-	pathTable["/clarinet/otherParams/vibratoFreq"] = 52;
-	pathTable["/clarinet/midi/sustain"] = 76;
-	pathTable["/clarinet/midi/gain"] = 88;
-	pathTable["/clarinet/midi/envAttack"] = 96;
-	pathTable["/clarinet/otherParams/reedStiffness"] = 164;
-	pathTable["/clarinet/midi/freq"] = 8372;
-	pathTable["/clarinet/midi/bend"] = 8376;
-	return pathTable;
-}
-
 function getJSONclarinetMIDI() {
-	return "{\"name\":\"ClarinetMIDI\",\"version\":\"2.3.17\",\"options\":\"-scal -ftz 2\",\"size\":\"16604\",\"inputs\":\"0\",\"outputs\":\"2\",\"meta\":[{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"copyright\":\"(c)Romain Michon, CCRMA (Stanford University), GRAME\"},{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"description\":\"Simple MIDI-controllable clarinet physical model with physical parameters.\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"license\":\"MIT\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"ClarinetMIDI\"},{\"noises.lib/name\":\"Faust Noise Generator Library\"},{\"noises.lib/version\":\"0.0\"},{\"oscillators.lib/name\":\"Faust Oscillator Library\"},{\"oscillators.lib/version\":\"0.0\"},{\"routes.lib/name\":\"Faust Signal Routing Library\"},{\"routes.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"clarinet\",\"items\":[{\"type\":\"hgroup\",\"label\":\"midi\",\"meta\":[{\"0\":\"\"}],\"items\":[{\"type\":\"hslider\",\"label\":\"freq\",\"address\":\"/clarinet/midi/freq\",\"index\":\"8372\",\"meta\":[{\"0\":\"\"},{\"style\":\"knob\"}],\"init\":\"440\",\"min\":\"50\",\"max\":\"1000\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"bend\",\"address\":\"/clarinet/midi/bend\",\"index\":\"8376\",\"meta\":[{\"1\":\"\"},{\"hidden\":\"1\"},{\"midi\":\"pitchwheel\"},{\"style\":\"knob\"}],\"init\":\"1\",\"min\":\"0\",\"max\":\"10\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"gain\",\"address\":\"/clarinet/midi/gain\",\"index\":\"88\",\"meta\":[{\"2\":\"\"},{\"style\":\"knob\"}],\"init\":\"0.6\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"envAttack\",\"address\":\"/clarinet/midi/envAttack\",\"index\":\"96\",\"meta\":[{\"3\":\"\"},{\"style\":\"knob\"}],\"init\":\"1\",\"min\":\"0\",\"max\":\"30\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"sustain\",\"address\":\"/clarinet/midi/sustain\",\"index\":\"76\",\"meta\":[{\"4\":\"\"},{\"hidden\":\"1\"},{\"midi\":\"ctrl 64\"},{\"style\":\"knob\"}],\"init\":\"0\",\"min\":\"0\",\"max\":\"1\",\"step\":\"1\"}]},{\"type\":\"hgroup\",\"label\":\"otherParams\",\"meta\":[{\"1\":\"\"}],\"items\":[{\"type\":\"hslider\",\"label\":\"reedStiffness\",\"address\":\"/clarinet/otherParams/reedStiffness\",\"index\":\"164\",\"meta\":[{\"0\":\"\"},{\"midi\":\"ctrl 1\"},{\"style\":\"knob\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"bellOpening\",\"address\":\"/clarinet/otherParams/bellOpening\",\"index\":\"16\",\"meta\":[{\"1\":\"\"},{\"midi\":\"ctrl 3\"},{\"style\":\"knob\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"vibratoFreq\",\"address\":\"/clarinet/otherParams/vibratoFreq\",\"index\":\"52\",\"meta\":[{\"2\":\"\"},{\"style\":\"knob\"}],\"init\":\"5\",\"min\":\"1\",\"max\":\"10\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"vibratoGain\",\"address\":\"/clarinet/otherParams/vibratoGain\",\"index\":\"36\",\"meta\":[{\"3\":\"\"},{\"style\":\"knob\"}],\"init\":\"0.25\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"outGain\",\"address\":\"/clarinet/otherParams/outGain\",\"index\":\"0\",\"meta\":[{\"4\":\"\"},{\"style\":\"knob\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"}]},{\"type\":\"button\",\"label\":\"gate\",\"address\":\"/clarinet/gate\",\"index\":\"72\",\"meta\":[{\"2\":\"\"}]}]}]}";
+	return "{\"name\":\"ClarinetMIDI\",\"version\":\"2.4.3\",\"options\":\"-scal -ftz 2\",\"size\":\"16604\",\"inputs\":\"0\",\"outputs\":\"2\",\"meta\":[{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"copyright\":\"(c)Romain Michon, CCRMA (Stanford University), GRAME\"},{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"description\":\"Simple MIDI-controllable clarinet physical model with physical parameters.\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"license\":\"MIT\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"ClarinetMIDI\"},{\"noises.lib/name\":\"Faust Noise Generator Library\"},{\"noises.lib/version\":\"0.0\"},{\"oscillators.lib/name\":\"Faust Oscillator Library\"},{\"oscillators.lib/version\":\"0.0\"},{\"routes.lib/name\":\"Faust Signal Routing Library\"},{\"routes.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"clarinet\",\"items\":[{\"type\":\"hgroup\",\"label\":\"midi\",\"meta\":[{\"0\":\"\"}],\"items\":[{\"type\":\"hslider\",\"label\":\"freq\",\"address\":\"/clarinet/midi/freq\",\"index\":\"8372\",\"meta\":[{\"0\":\"\"},{\"style\":\"knob\"}],\"init\":\"440\",\"min\":\"50\",\"max\":\"1000\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"bend\",\"address\":\"/clarinet/midi/bend\",\"index\":\"8376\",\"meta\":[{\"1\":\"\"},{\"hidden\":\"1\"},{\"midi\":\"pitchwheel\"},{\"style\":\"knob\"}],\"init\":\"1\",\"min\":\"0\",\"max\":\"10\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"gain\",\"address\":\"/clarinet/midi/gain\",\"index\":\"88\",\"meta\":[{\"2\":\"\"},{\"style\":\"knob\"}],\"init\":\"0.6\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"envAttack\",\"address\":\"/clarinet/midi/envAttack\",\"index\":\"96\",\"meta\":[{\"3\":\"\"},{\"style\":\"knob\"}],\"init\":\"1\",\"min\":\"0\",\"max\":\"30\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"sustain\",\"address\":\"/clarinet/midi/sustain\",\"index\":\"76\",\"meta\":[{\"4\":\"\"},{\"hidden\":\"1\"},{\"midi\":\"ctrl 64\"},{\"style\":\"knob\"}],\"init\":\"0\",\"min\":\"0\",\"max\":\"1\",\"step\":\"1\"}]},{\"type\":\"hgroup\",\"label\":\"otherParams\",\"meta\":[{\"1\":\"\"}],\"items\":[{\"type\":\"hslider\",\"label\":\"reedStiffness\",\"address\":\"/clarinet/otherParams/reedStiffness\",\"index\":\"164\",\"meta\":[{\"0\":\"\"},{\"midi\":\"ctrl 1\"},{\"style\":\"knob\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"bellOpening\",\"address\":\"/clarinet/otherParams/bellOpening\",\"index\":\"16\",\"meta\":[{\"1\":\"\"},{\"midi\":\"ctrl 3\"},{\"style\":\"knob\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"vibratoFreq\",\"address\":\"/clarinet/otherParams/vibratoFreq\",\"index\":\"52\",\"meta\":[{\"2\":\"\"},{\"style\":\"knob\"}],\"init\":\"5\",\"min\":\"1\",\"max\":\"10\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"vibratoGain\",\"address\":\"/clarinet/otherParams/vibratoGain\",\"index\":\"36\",\"meta\":[{\"3\":\"\"},{\"style\":\"knob\"}],\"init\":\"0.25\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"outGain\",\"address\":\"/clarinet/otherParams/outGain\",\"index\":\"0\",\"meta\":[{\"4\":\"\"},{\"style\":\"knob\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"}]},{\"type\":\"button\",\"label\":\"gate\",\"address\":\"/clarinet/gate\",\"index\":\"72\",\"meta\":[{\"2\":\"\"}]}]}]}";
 }
-
-function metadataclarinetMIDI(m) {
-	m.declare("basics.lib/name", "Faust Basic Element Library");
-	m.declare("basics.lib/version", "0.0");
-	m.declare("copyright", "(c)Romain Michon, CCRMA (Stanford University), GRAME");
-	m.declare("delays.lib/name", "Faust Delay Library");
-	m.declare("delays.lib/version", "0.0");
-	m.declare("description", "Simple MIDI-controllable clarinet physical model with physical parameters.");
-	m.declare("filters.lib/name", "Faust Filters Library");
-	m.declare("filters.lib/version", "0.0");
-	m.declare("license", "MIT");
-	m.declare("maths.lib/author", "GRAME");
-	m.declare("maths.lib/copyright", "GRAME");
-	m.declare("maths.lib/license", "LGPL with exception");
-	m.declare("maths.lib/name", "Faust Math Library");
-	m.declare("maths.lib/version", "2.1");
-	m.declare("name", "ClarinetMIDI");
-	m.declare("noises.lib/name", "Faust Noise Generator Library");
-	m.declare("noises.lib/version", "0.0");
-	m.declare("oscillators.lib/name", "Faust Oscillator Library");
-	m.declare("oscillators.lib/version", "0.0");
-	m.declare("routes.lib/name", "Faust Signal Routing Library");
-	m.declare("routes.lib/version", "0.0");
-	m.declare("signals.lib/name", "Faust Signal Routing Library");
-	m.declare("signals.lib/version", "0.0");
-}
-
 
 'use strict';
 
@@ -96,7 +49,7 @@ faust.clarinetMIDI = function (instance, context, buffer_size, sample_rate) {
         return n;
     }
      
-    var memory_size = pow2limit(getSizeclarinetMIDI() + (numIn + numOut) * (ptr_size + (buffer_size * sample_size)));
+    var memory_size = pow2limit(parseInt(json_object.size) + (numIn + numOut) * (ptr_size + (buffer_size * sample_size)));
    
     var factory = instance.exports;
     
@@ -105,8 +58,8 @@ faust.clarinetMIDI = function (instance, context, buffer_size, sample_rate) {
     var HEAPF = new Float64Array(HEAP);
   
     // bargraph
-    var ouputs_timer = 5;
-    var ouputs_items = [];
+    var outputs_timer = 5;
+    var outputs_items = [];
      
     // input items
     var inputs_items = [];
@@ -118,7 +71,7 @@ faust.clarinetMIDI = function (instance, context, buffer_size, sample_rate) {
     var default_values = [];
     
     // clarinetMIDI is placed first with index 0. Audio buffer start at the end of clarinetMIDI.
-    var audio_heap_ptr = getSizeclarinetMIDI();
+    var audio_heap_ptr = parseInt(json_object.size);
   
     // Setup pointers offset
     var audio_heap_ptr_inputs = audio_heap_ptr; 
@@ -131,17 +84,17 @@ faust.clarinetMIDI = function (instance, context, buffer_size, sample_rate) {
     // Start of clarinetMIDI memory : clarinetMIDI is placed first with index 0
     var dsp = 0;
     
-    var pathTable = getPathTableclarinetMIDI();
+    var pathTable = [];
     
     // Allocate table for 'setParamValue'
     var value_table = [];
         
     function update_outputs () 
     {
-        if (ouputs_items.length > 0 && output_handler && ouputs_timer-- === 0) {
-            ouputs_timer = 5;
-            for (var i = 0; i < ouputs_items.length; i++) {
-                output_handler(ouputs_items[i], factory.getParamValue(dsp, pathTable[ouputs_items[i]]));
+        if (outputs_items.length > 0 && output_handler && outputs_timer-- === 0) {
+            outputs_timer = 5;
+            for (var i = 0; i < outputs_items.length; i++) {
+                output_handler(outputs_items[i], factory.getParamValue(dsp, pathTable[outputs_items[i]]));
             }
         }
     }
@@ -215,7 +168,8 @@ faust.clarinetMIDI = function (instance, context, buffer_size, sample_rate) {
         } else if (item.type === "hbargraph" 
         	|| item.type === "vbargraph") {
             // Keep bargraph adresses
-            ouputs_items.push(item.address);
+            outputs_items.push(item.address);
+            pathTable[item.address] = parseInt(item.index);
         } else if (item.type === "vslider" 
         	|| item.type === "hslider" 
         	|| item.type === "button" 
@@ -223,6 +177,7 @@ faust.clarinetMIDI = function (instance, context, buffer_size, sample_rate) {
         	|| item.type === "nentry") {
             // Keep inputs adresses
             inputs_items.push(item.address);
+            pathTable[item.address] = parseInt(item.index);
             if (item.type === "button") {
                 buttons_items.push(item.address);
                 default_values.push(0);
