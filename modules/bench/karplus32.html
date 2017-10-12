@@ -323,7 +323,7 @@ var sample_rate = 44100;
 var inputs = [];
 var outputs = [];
 var run = -1;
-var bench_num = 1;
+var bench_num = 3;
 
 var NV = 4096;
 var input_index = 0;
@@ -388,17 +388,40 @@ function bench(instance, display_handler)
         console.log("Delta : " + delta);
         run = (1000 / delta) * 5000;
     }
+    
+    var mega_results = [];
+    var cpu_results = [];
 
 	for (var i = 0; i < bench_num; i++) {
+	
  		// Do the bench and keep result
 		var duration = benchOne(karplus32, run);
 		var cpu = (duration * sample_rate) / (run * buffer_size * 10);
 		var mega = megapersec(buffer_size, (karplus32.getNumInputs() + karplus32.getNumOutputs()), duration/run/1000);
-    	if (display_handler) {
-    		display_handler(mega, cpu);
-    	}
+		
+		mega_results.push(mega);
+		cpu_results.push(cpu);
+    	
 		console.log("MBytes/sec : " + mega);
 		console.log("karplus32 CPU % : " + cpu);
+    }
+    
+    // Compute mean 
+    var mega_sum = 0.;
+    var cpu_sum = 0.;
+    for (var i = 0; i < bench_num; i++) {
+    	mega_sum += mega_results[i];
+    	cpu_sum += cpu_results[i];
+    }
+    
+    var mega_mean = mega_sum/bench_num;
+    var cpu_mean = cpu_sum/bench_num;
+    
+    console.log("MBytes/sec mean: " + mega_mean);
+	console.log("karplus32 CPU mean% : " + cpu_mean);
+    
+    if (display_handler) {
+    	display_handler(mega_mean, cpu_mean);
     }
 }
 
