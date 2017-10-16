@@ -243,8 +243,7 @@ class TibetanBowlProcessor extends AudioWorkletProcessor {
         // Update controls
         var params = Object.entries(parameters);
         for (var i = 0; i < params.length; i++) {
-        	//this.HEAPF32[this.pathTable[params[i][0]] >> 2] = params[i][1][0];
-            //this.factory.setParamValue(this.dsp, this.pathTable[params[i][0]], params[i][1][0]);
+            this.HEAPF32[this.pathTable[params[i][0]] >> 2] = params[i][1][0];
         }
         
         // Compute
