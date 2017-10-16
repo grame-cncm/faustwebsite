@@ -220,7 +220,7 @@ class LoopProcessor extends AudioWorkletProcessor {
             LoopProcessor.parse_ui(this.json_object.ui, this, LoopProcessor.parse_item2);
             
             // Init DSP
-            this.factory.init(this.dsp, 44100);
+            this.factory.init(this.dsp, sampleRate); // 'sampleRate' is defined in AudioWorkletGlobalScope  
         }
        
         // Init resulting DSP

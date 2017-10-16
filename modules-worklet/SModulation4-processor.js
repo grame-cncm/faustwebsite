@@ -220,7 +220,7 @@ class SModulation4Processor extends AudioWorkletProcessor {
             SModulation4Processor.parse_ui(this.json_object.ui, this, SModulation4Processor.parse_item2);
             
             // Init DSP
-            this.factory.init(this.dsp, 44100);
+            this.factory.init(this.dsp, sampleRate); // 'sampleRate' is defined in AudioWorkletGlobalScope  
         }
        
         // Init resulting DSP
