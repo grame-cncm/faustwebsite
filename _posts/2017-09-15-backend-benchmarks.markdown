@@ -52,7 +52,7 @@ The WAVM runtime strictly conforms to the WebAssembly specification, thus behavi
 
 - adding the equivalent of *-fast-math* compilation flag that [have to be done at LLVM IR and JIT (= native)](https://github.com/sletz/WAVM/commit/1aa96a2088ed1c6eb918b7f292f4571aecdfc6da) generation steps.
 
-- and finally simplifying some mathematical operators, [using their standard definition](https://github.com/sletz/WAVM/commit/a9e2a91c53e79168fb7e193beb36e99d81d0be21) instead of the specific WAVM coded ones that striclty implement [WebAssembly official semantic](http://webassembly.org/docs/semantics/) (see for instance the definition of *f32.min/f32.max* operations).
+- and finally simplifying some mathematical operators, [using their standard definition](https://github.com/sletz/WAVM/commit/a9e2a91c53e79168fb7e193beb36e99d81d0be21) instead of the specific WAVM coded ones that strictly implement [WebAssembly official semantic](http://webassembly.org/docs/semantics/) (see for instance the definition of *f32.min/f32.max* operations).
 
 Here is the diagram of DSP examples run with reference WAVM runtime, and the three specific optimizations:
 
@@ -81,7 +81,7 @@ Even if using software ftz is not strictly needed in our benchmark chain (since 
 
 #### Comparing three browsers on OSX El Capitan####
 
-[HTML test pages](http://faust.grame.fr/modules/bench/) were prepared to compare the performances of the three main browsers on OSX El Capitan. The DSP code is compiled with float denormal protection on (-ftz 2). The generated wasm module *compute* method is called repeatedly in a timed loop, using sucessive slices of a big allocated circular audio buffer to avoid cache effects. Here are the results:
+[HTML test pages](http://faust.grame.fr/modules/bench/) were prepared to compare the performances of the three main browsers on OSX El Capitan. The DSP code is compiled with float denormal protection on (-ftz 2). The generated wasm module *compute* method is called repeatedly in a timed loop, using successive slices of a big allocated circular audio buffer to avoid cache effects. Here are the results:
 
 ![](/images/Browsers.png){: .center-image }
 
