@@ -81,7 +81,7 @@ Even if using software ftz is not strictly needed in our benchmark chain (since 
 
 #### Comparing three browsers on OSX El Capitan####
 
-[HTML test pages](http://faust.grame.fr/modules/bench/) were prepared to compare the performances of the three main browsers on OSX El Capitan. The DSP code is compiled with float denormal protection on (-ftz 2). The generated wasm module *compute* method is called repeatedly in a timed loop, using successive slices of a big allocated circular audio buffer to avoid cache effects. Here are the results:
+[HTML test pages](http://faust.grame.fr/bench/) were prepared to compare the performances of the three main browsers on OSX El Capitan. The DSP code is compiled with float denormal protection on (-ftz 2). The generated wasm module *compute* method is called repeatedly in a timed loop, using successive slices of a big allocated circular audio buffer to avoid cache effects. Here are the results:
 
 ![](/images/Browsers.png){: .center-image }
 
