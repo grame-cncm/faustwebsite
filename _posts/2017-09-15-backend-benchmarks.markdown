@@ -38,10 +38,6 @@ C++ and LLVM IR code has been compiled with the *-Ofast* optimization flag, the 
 
 ![](/images/C++_LLVM_IR_WASM_OSX.png){: .center-image }
 
-Doing the same tests on a Linux 3.1 GHz AMD machine gives a bit different results, with the wasm backend even winning in the *freeverb.dsp* example:
-
-![](/images/C++_LLVM_IR_WASM_LINUX.png){: .center-image }
-
 The diagrams clearly shows that the wasm code is still slower than C++ or LLVM IR code, but speed difference is not so high in most cases. Some DSP behaviours  need  to be understood in more details.   
 
 #### Optimizing the WAVM runtime for audio code ####
