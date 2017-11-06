@@ -58,7 +58,7 @@ After generating the LLVM IR code, the WAVM runtime runs a set of LLVM IR to IR 
 
 #### WebAssembly module optimization with Binaryen ####
 
-Binaryen is a [compiler and toolchain infrastructure library for WebAssembly](https://github.com/WebAssembly/binaryen), written in C++. We tested the **wasm-opt** tool at **-O3** level on Faust generated wasm modules to estimate what speedup we can expect. The following diagram shows limited gains, with no more than 5% in some of the tested cases:
+Binaryen is a [compiler and toolchain infrastructure library for WebAssembly](https://github.com/WebAssembly/binaryen), written in C++. We tested the **wasm-opt** tool at **-O3** level on Faust generated wasm modules to estimate which speedup we can expect. The following diagram shows limited gains, with no more than 5% in some of the tested cases:
 
 ![](/images/Binaryen_optimization.png){: .center-image }
 
@@ -70,7 +70,7 @@ Thus an automatic software strategy which consists in adding FTZ code in all rec
 
 The **-ftz 1** mode adds a test in each recursive loop which uses the *fabs* function and a threshold to detect subnormal samples (slower). The **-ftz 2** mode adds a test in each recursive loop which uses a mask to detect subnormal samples (faster). 
 
-Even if using software ftz is not strictly needed in our benchmark chain (since the C++ WAVM uses the ftz hardware protection mode), we can still compare the speed of the different ftz options. Here is the result of code generated with -ftz for 0 to 2:
+Even if using software ftz is not strictly needed in our benchmark chain (since the C++ WAVM uses the ftz hardware protection mode), we can still compare the speed of the different ftz options. Here is the result of code generated with -ftz from 0 to 2:
 
 ![](/images/FTZ_modes.png){: .center-image }
 
@@ -89,7 +89,7 @@ The fasted one (Chrome for now) can be compared with C++, LLVM IR, WAVM native e
 
 Testing wasm JIT machines inside browsers is not an easy task. The C++ WAVM runtime revealed to be an excellent tool to compare the Faust C++, LLVM IR and wasm backend. Since its code can be easily adapted, one can estimate also what can be expected **deploying wasm DSP modules in pure native environments**, outside of the browser, where some **audio  specific optimizations** may be considered.
 
-Measures done on a set of Faust DSP show that WebAssembly code still run slower than C++ of LLVM IR generated code in most cases, **up to almost 66% slower** in the less favorable examples. This value will typically be a bit worse when deploying in browsers, since **float denormal protection code has to be used**. Benchmarks in browser wasm runtime still need to be done to confirm or refine these findings. 
+Measures done on a set of Faust DSP show that WebAssembly code still run slower than C++ or LLVM IR generated code in most cases, **up to almost 66% slower** in the less favorable examples. This value will typically be a bit worse when deploying in browsers, since **float denormal protection code has to be used**. Benchmarks in browser wasm runtime still need to be done to confirm or refine these findings. 
 
 Comparing the **Chrome**, **Firefox** and **WebKit** browsers on OSX El Capitan shows that Chrome is currently the fastest engine in most cases, with Firefox and WebKit quite similar (with a slight plus for WebKit). 
 
