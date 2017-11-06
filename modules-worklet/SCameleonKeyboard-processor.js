@@ -18,10 +18,6 @@ function getBinaryCodeSCameleonKeyboard() {
  
 'use strict';
 
-if (typeof (AudioWorkletNode) === "undefined") {
-	alert("AudioWorklet is not supported in this browser !")
-}
-
 var faust = faust || {};
 
 faust.error_msg = null;
