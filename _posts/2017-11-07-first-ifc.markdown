@@ -5,7 +5,7 @@ date:   2017-11-07 08:00:00
 categories: news
 ---
 
-**1st International Faust Conference - Johannes Gutenberg University, Mainz (Germany), July 17-18, 2018**
+1st International Faust Conference - Johannes Gutenberg University, Mainz (Germany), July 17-18, 2018
 
 The International Faust Conference [IFC-18](http://www.ifc18.uni-mainz.de) will take place at the [Johannes Gutenberg University](http://www.uni-mainz.de) of Mainz (Germany) on July 17-18, 2018. It aims at gathering developers and users of the [Faust programming language](http://faust.grame.fr) to present current projects and discuss future directions for Faust and its community.
 Participants will be able to share their work through paper presentations. A series of round tables on various topics will serve as a platform to brainstorm on Faust's features, semantics, tools, applications, etc. to determine future directions for this language. Open spaces for demos and workshops will be available for participants to openly share their ongoing projects with the rest of the community.
