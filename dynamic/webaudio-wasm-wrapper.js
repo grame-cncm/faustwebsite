@@ -202,14 +202,11 @@ faust.remap = function(v, mn0, mx0, mn1, mx1)
 
 // special asm2wasm imports
 faust.asm2wasm = {
-    "fmod": function(x, y) {
+	"fmod": function(x, y) {
         return x % y;
     },
-    "log10": function(x) {
-        return window.Math.log(x) / window.Math.log(10);
-    },
     "remainder": function(x, y) {
-        return x - window.Math.round(x/y) * y;
+        return x - Math.round(x/y) * y;
     }
 };
 
@@ -486,11 +483,11 @@ faust.readDSPFactoryFromMachineAux = function (factory_name, factory_code, helpe
         factory.getJSON = eval("getJSON" + factory_name);
 
         try {
-          factory.json_object = JSON.parse(factory.getJSON());
+        	factory.json_object = JSON.parse(factory.getJSON());
         } catch (e) {
-          faust.error_msg = "Error in JSON.parse: " + e;
-          callback(null);
-          throw true;
+          	faust.error_msg = "Error in JSON.parse: " + e;
+          	callback(null);
+          	throw true;
         }
 
         factory.name = factory_name;
@@ -499,7 +496,7 @@ faust.readDSPFactoryFromMachineAux = function (factory_name, factory_code, helpe
 
         callback(factory);
     })
-    .catch(function() { faust.error_msg = "Faust DSP factory cannot be compiled"; callback(null); });
+    .catch(function(error) { console.log(error); faust.error_msg = "Faust DSP factory cannot be compiled"; callback(null); });
 }
 
 faust.deleteDSPFactory = function (factory) { faust.factory_table[factory.sha_key] = null; };
@@ -512,28 +509,28 @@ faust.deleteDSPFactory = function (factory) { faust.factory_table[factory.sha_ke
     dsp = 0;
     size = parseInt(factory.json_object.size)
 
-	-----------
-	audio_ptrs:
-	-----------
-	audio_heap_ptr = audio_heap_ptr_inputs = parseInt(factory.json_object.size)
+    -----------
+    audio_ptrs:
+    -----------
+    audio_heap_ptr = audio_heap_ptr_inputs = parseInt(factory.json_object.size)
     getNumInputsAux ==> size = getNumInputsAux * ptr_size
-        ---
-        ---
+    ---
+    ---
     audio_heap_ptr_outputs
     getNumOutputsAux ==> size = getNumOutputsAux * ptr_size
-        ---
-        ---
-    ---------------
+    ---
+    ---
+    --------------
     audio_buffers:
-    ---------------
+    --------------
     audio_heap_inputs
     getNumInputsAux ==> size = getNumInputsAux * buffer_size * sample_size
-        ---
-        ---
+    ---
+    ---
     audio_heap_outputs
     getNumOutputsAux ==> size = getNumOutputsAux * buffer_size * sample_size
-        ---
-        ---
+    ---
+    ---
 */
 
 /**
@@ -547,7 +544,7 @@ faust.deleteDSPFactory = function (factory) { faust.factory_table[factory.sha_ke
 faust.createDSPInstance = function (factory, context, buffer_size, callback) {
 
     var importObject = { imports: { print: arg => console.log(arg) } }
-    importObject["global.Math"] = window.Math;
+    importObject["global.Math"] = Math;
     importObject["asm2wasm"] = faust.asm2wasm;
 
   	var time1 = performance.now();
@@ -580,8 +577,8 @@ faust.createDSPInstance = function (factory, context, buffer_size, callback) {
         for (var i = 0; i < sp.fCtrlLabel.length; i++) { sp.fCtrlLabel[i] = []; }
 
         // bargraph
-        sp.ouputs_timer = 5;
-        sp.ouputs_items = [];
+        sp.outputs_timer = 5;
+        sp.outputs_items = [];
 
         // input items
         sp.inputs_items = [];
@@ -618,10 +615,10 @@ faust.createDSPInstance = function (factory, context, buffer_size, callback) {
 
         sp.update_outputs = function ()
         {
-            if (sp.ouputs_items.length > 0 && sp.output_handler && sp.ouputs_timer-- === 0) {
-                sp.ouputs_timer = 5;
-                for (var i = 0; i < sp.ouputs_items.length; i++) {
-                    sp.output_handler(sp.ouputs_items[i], sp.factory.getParamValue(sp.dsp, sp.pathTable[sp.ouputs_items[i]]));
+            if (sp.outputs_items.length > 0 && sp.output_handler && sp.outputs_timer-- === 0) {
+                sp.outputs_timer = 5;
+                for (var i = 0; i < sp.outputs_items.length; i++) {
+                    sp.output_handler(sp.outputs_items[i], sp.factory.getParamValue(sp.dsp, sp.pathTable[sp.outputs_items[i]]));
                 }
             }
         }
@@ -634,9 +631,7 @@ faust.createDSPInstance = function (factory, context, buffer_size, callback) {
             for (i = 0; i < sp.numIn; i++) {
                 var input = e.inputBuffer.getChannelData(i);
                 var dspInput = sp.dspInChannnels[i];
-                for (j = 0; j < input.length; j++) {
-                    dspInput[j] = input[j];
-                }
+                dspInput.set(input);
             }
 
             // Possibly call an externally given callback (for instance to synchronize playing a MIDIFile...)
@@ -654,9 +649,7 @@ faust.createDSPInstance = function (factory, context, buffer_size, callback) {
             for (i = 0; i < sp.numOut; i++) {
                 var output = e.outputBuffer.getChannelData(i);
                 var dspOutput = sp.dspOutChannnels[i];
-                for (j = 0; j < output.length; j++) {
-                    output[j] = dspOutput[j];
-                }
+                output.set(dspOutput);
             }
         }
 
@@ -691,7 +684,7 @@ faust.createDSPInstance = function (factory, context, buffer_size, callback) {
             } else if (item.type === "hbargraph"
             	|| item.type === "vbargraph") {
                 // Keep bargraph adresses
-                sp.ouputs_items.push(item.address);
+                sp.outputs_items.push(item.address);
                 sp.pathTable[item.address] = parseInt(item.index);
             } else if (item.type === "vslider"
             	|| item.type === "hslider"
@@ -943,7 +936,7 @@ faust.createDSPInstance = function (factory, context, buffer_size, callback) {
         callback(sp);
 
     })
-    .catch(function() { faust.error_msg = "Faust DSP cannot be instantiated"; callback(null); });
+    .catch(function(error) { console.log(error); faust.error_msg = "Faust DSP cannot be instantiated"; callback(null); });
 }
 
 faust.deleteDSPInstance = function (dsp) {}
@@ -1028,7 +1021,7 @@ faust.createPolyDSPInstance = function (factory, context, buffer_size, polyphony
     mixObject["memory"] = { "memory": memory};
 
     var importObject = { imports: { print: arg => console.log(arg) } }
-    importObject["global.Math"] = window.Math;
+    importObject["global.Math"] = Math;
     importObject["asm2wasm"] = faust.asm2wasm;
     importObject["memory"] = { "memory": memory };
 
@@ -1084,8 +1077,8 @@ faust.createPolyDSPInstance = function (factory, context, buffer_size, polyphony
         sp.HEAPF32 = new Float32Array(sp.HEAP);
 
         // bargraph
-        sp.ouputs_timer = 5;
-        sp.ouputs_items = [];
+        sp.outputs_timer = 5;
+        sp.outputs_items = [];
 
         // input items
         sp.inputs_items = [];
@@ -1202,10 +1195,10 @@ faust.createPolyDSPInstance = function (factory, context, buffer_size, polyphony
 
         sp.update_outputs = function ()
         {
-            if (sp.ouputs_items.length > 0 && sp.output_handler && sp.ouputs_timer-- === 0) {
-                sp.ouputs_timer = 5;
-                for (var i = 0; i < sp.ouputs_items.length; i++) {
-                    sp.output_handler(sp.ouputs_items[i], sp.factory.getParamValue(sp.dsp_voices[0], sp.pathTable[sp.ouputs_items[i]]));
+            if (sp.outputs_items.length > 0 && sp.output_handler && sp.outputs_timer-- === 0) {
+                sp.outputs_timer = 5;
+                for (var i = 0; i < sp.outputs_items.length; i++) {
+                    sp.output_handler(sp.outputs_items[i], sp.factory.getParamValue(sp.dsp_voices[0], sp.pathTable[sp.outputs_items[i]]));
                 }
             }
         }
@@ -1218,9 +1211,7 @@ faust.createPolyDSPInstance = function (factory, context, buffer_size, polyphony
             for (i = 0; i < sp.numIn; i++) {
                 var input = e.inputBuffer.getChannelData(i);
                 var dspInput = sp.dspInChannnels[i];
-                for (j = 0; j < input.length; j++) {
-                    dspInput[j] = input[j];
-                }
+                dspInput.set(input);
             }
 
             // Possibly call an externally given callback (for instance to play a MIDIFile...)
@@ -1261,9 +1252,7 @@ faust.createPolyDSPInstance = function (factory, context, buffer_size, polyphony
             for (i = 0; i < sp.numOut; i++) {
                 var output = e.outputBuffer.getChannelData(i);
                 var dspOutput = sp.dspOutChannnels[i];
-                for (j = 0; j < output.length; j++) {
-                    output[j] = dspOutput[j];
-                }
+                output.set(dspOutput);
             }
         }
 
@@ -1303,7 +1292,7 @@ faust.createPolyDSPInstance = function (factory, context, buffer_size, polyphony
             } else if (item.type === "hbargraph"
             	|| item.type === "vbargraph") {
                 // Keep bargraph adresses
-                sp.ouputs_items.push(item.address);
+                sp.outputs_items.push(item.address);
                 sp.pathTable[item.address] = parseInt(item.index);
             } else if (item.type === "vslider"
             	|| item.type === "hslider"
@@ -1656,7 +1645,7 @@ faust.createPolyDSPInstance = function (factory, context, buffer_size, polyphony
         callback(sp);
 
     }); })
-    .catch(function() { faust.error_msg = "Faust DSP cannot be instantiated"; callback(null); });
+    .catch(function(error) { console.log(error); faust.error_msg = "Faust DSP cannot be instantiated"; callback(null); });
 }
 
 faust.deletePolyDSPInstance = function (dsp) {}
