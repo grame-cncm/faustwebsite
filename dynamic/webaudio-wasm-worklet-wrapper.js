@@ -14,7 +14,7 @@ var Sha1 = {};  // Sha1 namespace
  * @returns {String}                  Hash of msg as hex character string
  */
 Sha1.hash = function(msg, utf8encode) {
-    utf8encode =  (typeof utf8encode == 'undefined') ? true : utf8encode;
+    utf8encode = (typeof utf8encode == 'undefined') ? true : utf8encode;
     
     // convert string to UTF-8, as SHA only deals with byte-streams
     if (utf8encode) msg = Utf8.encode(msg);
@@ -882,8 +882,7 @@ faust.createDSPInstanceAux = function(factory, callback)
 
 faust.createDSPInstance = function(factory, callback)
 {
-    if (!factory.registered) {
-        
+    if (!factory.registered) {      
         var re1 = /mydsp/g;
         var re2 = /GETJSON/g;
         var re3 = /GETBASE64CODE/g;
@@ -893,18 +892,15 @@ faust.createDSPInstance = function(factory, callback)
         var url = window.URL.createObjectURL(new Blob([mydspProcessorString3], { type: 'text/javascript' }));
         
         // The main global scope
-        window.audioWorklet.addModule(url)
+        BaseAudioContext.audioWorklet.addModule(url)
         .then(function () {
               // Processor has been registered
               factory.registered = true;
-              
               // Create audio node
               faust.createDSPInstanceAux(factory, callback);
-            
         })
         .catch(function(error) { console.log(error); console.log("Faust mydsp cannot be loaded or compiled"); alert(error); });
-    } else {
-        
+    } else {      
         // Create audio node
         faust.createDSPInstanceAux(factory, callback);
     }
