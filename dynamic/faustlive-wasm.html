@@ -39,7 +39,7 @@
 
             .config {
                 display:grid;
-                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
                 grid-gap: 8px;
             }
 
@@ -323,16 +323,19 @@
     </head>
     <body bgcolor= "#FFFFFF">
         <center> <H1 > Testing the embedded dynamic Faust compiler </H1> </center>
-        <P> This page embeds the Faust compiler as a JavaScript library named libfaust.js (associated with the auxiliary WebAssembly library), and compiled with its WebAssembly generating backend.
-        <P> You can compile Faust .dsp files by just dropping them on the drop zone. A WebAudio node will be created and connected to audio inputs/outputs and controlled with the displayed HTML/SVG based GUI.
-        <P>Settings (buffer size, polyphonic mode and voices, ftz mode) can be changed dynamically and the DSP will be recompiled on the fly.
+        <P> This page embeds the Faust compiler as a JavaScript library named libfaust.js (associated with the auxiliary WebAssembly library), including its WebAssembly generating backend, and compiled using <a href="http://kripken.github.io/emscripten-site/">Emscripten</a>.
+            
+        <P> You can compile Faust .dsp files or URL by just dropping them on the drop zone. A WebAudio node will be created and connected to audio inputs/outputs and controlled with the displayed HTML/SVG based GUI.
+        <P>Settings (buffer size, polyphonic mode and voices, audio rendering model, ftz mode) can be changed dynamically and the DSP will be recompiled on the fly.
+        <P>Clicking on the yellow cross on the top right allows to access to the GRAME online compiler, to generate  different targets (like for instance standalone applications, VST, Max/MSP plugins, iOS or JUCE ready projects...).
         <div class="config">
 
             <div class="config-element">
-                <H3>Buffer size </H3>
-                <form method="POST" name="menu" >
+                <H3>Buffer size</H3>
+                <form method="POST" name="menu">
                     <select id="selectedBuffer" name="selectedBuffer"
                         onChange="setBufferSize(this.form.selectedBuffer)">
+                        <option value = 128> 128 </option>
                         <option value = 256> 256 </option>
                         <option value = 512> 512 </option>
                         <option selected value = 1024> 1024 </option>
@@ -341,20 +344,20 @@
                         <option value = 8192> 8192 </option>
                     </select>
                 </form>
-                <p>You can change the buffer size (from 256 to 8192 frames).</p>
+                <p>You can change the buffer size (from 256 to 8192 frames in ScripProcessor mode, it will be fixed at 128 frames in AudioWorklet mode).</p>
             </div>
 
             <div class="config-element">
-                <H3>Polyphonic instrument </H3>
+                <H3>Polyphonic instrument</H3>
                 <div class="line2">
-                <form method="POST" name="menu" >
+                <form method="POST" name="menu">
                     <select id="selectedPoly" name="selectedPoly"
                         onChange="setPoly(this.form.selectedPoly)">
                         <option value = ON> ON </option>
                         <option selected value = OFF> OFF </option>
                     </select>
                 </form>
-                <form method="POST" name="menu" >
+                <form method="POST" name="menu">
                     <select id="polyVoices" name="polyVoices"
                         onChange="setPolyVoices(this.form.polyVoices)">
                         <option value = 4> 4 </option>
@@ -366,12 +369,25 @@
                     </select>
                 </form>
                 </div>
-                <p>Assuming your DSP code is <a href="http://faust.grame.fr/news/2016/01/13/polyphonic-instruments.html ">polyphonic ready</a>, you can activate the polyphonic mode, adjust the number of available voices, and test it with a MIDI device or application (usable with Chrome which implements the <a href="https://webaudio.github.io/web-midi-api/">Web MIDI API</a>). <p> Be sure to launch the HTML page <B>after</B> your MIDI application(s)/devices(s) to be sure MIDI ports are properly detected.</p>
+                <p>Assuming your DSP code is <a href="https://faust.grame.fr/news/2016/01/13/polyphonic-instruments.html ">polyphonic ready</a>, you can activate the polyphonic mode, adjust the number of available voices, and test it with a MIDI device or application (usable with Chrome which implements the <a href="https://webaudio.github.io/web-midi-api/">Web MIDI API</a>).
+            </div>
+            
+            <div class="config-element">
+                <H3>ScriptProcessor/AudioWorklet</H3>
+                <form method="POST" name="menu" >
+                    <select id="selectedRenderingMode" name="selectedRenderingMode"
+                        onChange="setRenderingMode(this.form.selectedRenderingMode)">
+                        <option selected value = ScriptProcessor> ScriptProcessor </option>
+                        <option value = AudioWorklet> AudioWorklet </option>
+                    </select>
+                </form>
+                <p>ScriptProcessor: audio rendering is done using the old ScriptProcessor model</p>
+                <p>AudioWorklet: audio rendering is done using the new AudioWorklet model<p>
             </div>
 
             <div class="config-element">
-                <H3>Float denormals handling </H3>
-                <form method="POST" name="menu" >
+                <H3>Float denormals handling</H3>
+                <form method="POST" name="menu">
                     <select id="selectedFTZ" name="selectedFTZ"
                         onChange="setFTZ(this.form.selectedFTZ)">
                         <option value = 0> 0 </option>
@@ -379,12 +395,9 @@
                         <option selected value = 2> 2 </option>
                     </select>
                 </form>
-
                     <p>0: means no denormal handling</p>
                     <p>1: uses <B>fabs</B> and a <B>threshold</B> to detect denormal values (slower)<p>
                     <p>2: uses a <B>bitmask</B> to detect denormal values (faster)</p>
-
-
             </div>
 
         </div>
@@ -401,7 +414,6 @@
 
             <script src="jsscripts.js"></script>
             <script src="libfaust-wasm.js"></script>
-            <script src="WebMIDIAPI.js"></script>
             <!-- <script src="binaryen.js"> </script> -->
             <script src="webaudio-wasm-wrapper.js"></script>
             <script type="text/javascript">
@@ -419,7 +431,6 @@
             var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
             var buffer_size = 1024;
             var audio_input = null;
-            var midi_input = [];
             var factory = null;
             var DSP = null;
             var dsp_code = null;
@@ -427,13 +438,19 @@
             var poly_flag = "OFF";
             var ftz_flag = "2";
             var poly_nvoices = 16;
+            var rendering_mode = "ScriptProcessor";
             var output_handler = null;
             //var libraries_url = "http://127.0.0.1:8000/libraries/";
-            var libraries_url = "http://faust.grame.fr/libraries/";
+            var libraries_url = "https://faust.grame.fr/libraries/";
 
             function setBufferSize(bs_item)
             {
-                buffer_size = bs_item.options[bs_item.selectedIndex].value;
+                buffer_size = parseInt(bs_item.options[bs_item.selectedIndex].value);
+                if (buffer_size === 128 && rendering_mode === "ScriptProcessor") {
+                    console.log("buffer_size cannot be set to 128 in ScriptProcessor mode !");
+                    buffer_size = 256;
+                    restoreMenu("selectedBuffer", buffer_size);
+                }
                 compileDSP();
             }
 
@@ -445,7 +462,22 @@
 
             function setPolyVoices(voices_item)
             {
-                poly_nvoices = voices_item.options[voices_item.selectedIndex].value;
+                poly_nvoices = parseInt(voices_item.options[voices_item.selectedIndex].value);
+                compileDSP();
+            }
+            
+            function setRenderingMode(rendering_item)
+            {
+                rendering_mode = rendering_item.options[rendering_item.selectedIndex].value;
+                if (rendering_mode === "AudioWorklet") {
+                    buffer_size = 128;
+                    restoreMenu("selectedBuffer", buffer_size);
+                    document.getElementById("selectedBuffer").disabled = true;
+                } else {
+                    buffer_size = 1024;
+                    restoreMenu("selectedBuffer", buffer_size);
+                    document.getElementById("selectedBuffer").disabled = false;
+                }
                 compileDSP();
             }
 
@@ -504,39 +536,34 @@
                 }
             }
 
-            function onerrorcallback(error)
-            {
+            function onerrorcallback(error) {
                 console.log(error);
             }
-
-            function onsuccesscallbackJazz(access)
-            {
-                var inputs = access.getInputs();
-                for (var i = 0; i <inputs.length; i++) {
-                    var input = access.getInput(inputs[i]);
-                    midi_input.push(input);
-                    input.onmessage = midiMessageReceived;
-                }
-            }
-
-            function onsuccesscallbackStandard(access)
-            {
-                for (var input of access.inputs.values()) {
-                    midi_input.push(input);
-                    input.onmidimessage = midiMessageReceived;
-                    console.log(input.name);
-                }
-            }
-
-            function activateMIDIInput()
-            {
-                console.log("activateMIDIInput");
-                if (typeof (navigator.requestMIDIAccess) !== "undefined") {
-                    if (navigator.requestMIDIAccess() != undefined) {
-                        navigator.requestMIDIAccess().then(onsuccesscallbackStandard, onerrorcallback);
-                    } else{
-                        navigator.requestMIDIAccess(onsuccesscallbackJazz, onerrorcallback);
+            
+            function onsuccesscallbackStandard(access) {
+                
+                access.onstatechange = function(e) {
+                    if (e.port.type === "input") {
+                        if (e.port.state === "connected") {
+                            console.log(e.port.name + " is connected");
+                            e.port.onmidimessage = midiMessageReceived;
+                        } else if (e.port.state  === "disconnected") {
+                            console.log(e.port.name + " is disconnected");
+                            e.port.onmidimessage = null;
+                        }
                     }
+                }
+                
+                for (var input of access.inputs.values()) {
+                    input.onmidimessage = midiMessageReceived;
+                    console.log(input.name + " is connected");
+                }
+            }
+            
+            function activateMIDIInput() {
+                console.log("activateMIDIInput");
+                if (typeof(navigator.requestMIDIAccess) !== "undefined") {
+                    navigator.requestMIDIAccess().then(onsuccesscallbackStandard, onerrorcallback);
                 } else {
                     alert("MIDI input cannot be activated, either your browser still does't have it, or you need to explicitly activate it.");
                 }
@@ -554,6 +581,7 @@
                     navigator.getUserMedia({audio: { echoCancellation: false }}, getDevice, function(e) {
                                            alert('Error getting audio input');
                                            console.log(e);
+                                           audio_input = null;
                                            });
                 } else {
                     alert('Audio input API not available');
@@ -582,7 +610,8 @@
             function restoreMenu(id, value)
             {
                 for (var i = 0; i < document.getElementById(id).length; i++) {
-                    if (document.getElementById(id).options[i].value === value) {
+                    // Weak comparison here
+                    if (document.getElementById(id).options[i].value == value) {
                         document.getElementById(id).selectedIndex = i;
                         break;
                     }
@@ -606,6 +635,7 @@
                     localStorage.setItem("poly_flag", poly_flag);
                     localStorage.setItem("ftz_flag", ftz_flag);
                     localStorage.setItem("poly_nvoices", poly_nvoices);
+                    localStorage.setItem("rendering_mode", rendering_mode);
                 }
             }
 
@@ -627,16 +657,22 @@
             function loadPageState()
             {
                 if (typeof(Storage) !== "undefined" && localStorage.getItem("FaustLocalStorage") === "on") {
-                    buffer_size = (localStorage.getItem("buffer_size") ? localStorage.getItem("buffer_size") : 1024);
+                    buffer_size = parseInt(localStorage.getItem("buffer_size") ? localStorage.getItem("buffer_size") : 1024);
                     poly_flag = (localStorage.getItem("poly_flag") ? localStorage.getItem("poly_flag") : "OFF");
-                    poly_nvoices = (localStorage.getItem("poly_nvoices") ? localStorage.getItem("poly_nvoices") : 16);
-                    ftz_flag = (localStorage.getItem("ftz_flag") ? localStorage.getItem("ftz_flag") : 2);
-
+                    poly_nvoices = parseInt(localStorage.getItem("poly_nvoices") ? localStorage.getItem("poly_nvoices") : 16);
+                    ftz_flag = (localStorage.getItem("ftz_flag") ? localStorage.getItem("ftz_flag") : "2");
+                    rendering_mode = (localStorage.getItem("rendering_mode") ? localStorage.getItem("rendering_mode") : "ScriptProcessor");
+                    
                     // Restore menus
                     restoreMenu("selectedBuffer", buffer_size);
                     restoreMenu("selectedPoly", poly_flag);
                     restoreMenu("polyVoices", poly_nvoices);
                     restoreMenu("selectedFTZ", ftz_flag);
+                    restoreMenu("selectedRenderingMode", rendering_mode);
+                    
+                    if (rendering_mode === "AudioWorklet") {
+                        document.getElementById("selectedBuffer").disabled = true;
+                    }
                 }
             }
 
@@ -737,9 +773,78 @@
                     alert("Faust DSP code is not Polyphonic, it will probably not work correctly in this mode...")
                 }
             }
+            
+            function compileMonoDSP(factory)
+            {
+                faust.createDSPInstance(factory,
+                                        audio_context,
+                                        buffer_size,
+                                        function (dsp) {
+                                            
+                                            if (!dsp) {
+                                                alert(faust.getErrorMessage());
+                                                return;
+                                            }
+                                            
+                                            DSP = dsp;
+                                            if (DSP.getNumInputs() > 0) {
+                                                activateAudioInput();
+                                            } else {
+                                                audio_input = null;
+                                            }
+                                            
+                                            // Setup UI
+                                            faust_svg = $('<div />');
+                                            $('body').append(faust_svg);
+                                            output_handler = _f4u$t.main(DSP.getJSON(), $(faust_svg), DSP.setParamValue);
+                                            DSP.setOutputParamHandler(output_handler);
+                                            console.log(DSP.getNumInputs());
+                                            console.log(DSP.getNumOutputs());
+                                            DSP.metadata({ declare: function(key, value) { console.log("key = " + key + " value = " + value); }});
+                                            DSP.connect(audio_context.destination);
+                                            
+                                            loadDSPState();
+                                        });
+            }
+            
+            function compilePolyDSP(factory)
+            {
+                faust.createPolyDSPInstance(factory,
+                                            audio_context,
+                                            buffer_size,
+                                            poly_nvoices,
+                                            function (dsp) {
+                                            
+                                                if (!dsp) {
+                                                    alert(faust.getErrorMessage());
+                                                    return;
+                                                }
+                                                checkPolyphonicDSP(dsp.getJSON());
+                                                DSP = dsp;
+                                                
+                                                if (DSP.getNumInputs() > 0) {
+                                                    activateAudioInput();
+                                                } else {
+                                                    audio_input = null;
+                                                }
+                                                
+                                                // Setup UI
+                                                faust_svg = $('<div />');
+                                                $('body').append(faust_svg);
+                                                output_handler = _f4u$t.main(DSP.getJSON(), $(faust_svg), DSP.setParamValue);
+                                                DSP.setOutputParamHandler(output_handler);
+                                                console.log(DSP.getNumInputs());
+                                                console.log(DSP.getNumOutputs());
+                                                DSP.metadata({ declare: function(key, value) { console.log("key = " + key + " value = " + value); }});
+                                                DSP.connect(audio_context.destination);
+                                                
+                                                loadDSPState();
+                                            });
+            }
 
             function compileDSP()
             {
+                // If needed, deactivate running DSP
                 if (DSP) {
                     if (audio_input) {
                         audio_input.disconnect(DSP);
@@ -776,45 +881,13 @@
                     faust.createPolyDSPFactory(dsp_code,
                                                argv,
                                                function (factory) {
-                                               
                                                     if (!factory) {
                                                         alert(faust.getErrorMessage());
                                                         return;
                                                     }
-
-                                                    faust.createPolyDSPInstance(factory,
-                                                                               audio_context,
-                                                                               buffer_size,
-                                                                               poly_nvoices,
-                                                                               function (dsp) {
-
-                                                                                    if (!dsp) {
-                                                                                        alert(faust.getErrorMessage());
-                                                                                        return;
-                                                                                    }
-                                                                                    checkPolyphonicDSP(dsp.getJSON());
-                                                                                    DSP = dsp;
-                                                                                
-                                                                                    if (DSP.getNumInputs() > 0) {
-                                                                                        activateAudioInput();
-                                                                                    } else {
-                                                                                        audio_input = null;
-                                                                                    }
-
-                                                                                    // Setup UI
-                                                                                    faust_svg = $('<div />');
-                                                                                    $('body').append(faust_svg);
-                                                                                    output_handler = _f4u$t.main(DSP.getJSON(), $(faust_svg), DSP.setParamValue);
-                                                                                    DSP.setOutputParamHandler(output_handler);
-                                                                                    console.log(DSP.getNumInputs());
-                                                                                    console.log(DSP.getNumOutputs());
-                                                                                    DSP.metadata({ declare: function(key, value) { console.log("key = " + key + " value = " + value); }});
-                                                                                    DSP.connect(audio_context.destination);
-
-                                                                                    loadDSPState();
-                                                                               });
+                                                    compilePolyDSP(factory);
+                                               
                                                 });
-
                 } else {
 
                     isPoly = false;
@@ -824,41 +897,11 @@
                     faust.createDSPFactory(dsp_code,
                                            argv,
                                            function (factory) {
-                                           
-                                               if (!factory) {
+                                                if (!factory) {
                                                     alert(faust.getErrorMessage());
                                                     return;
-                                               }
-                                           
-                                               faust.createDSPInstance(factory,
-                                                                       audio_context,
-                                                                       buffer_size,
-                                                                       function (dsp) {
-
-                                                                            if (!dsp) {
-                                                                                alert(faust.getErrorMessage());
-                                                                                return;
-                                                                            }
-
-                                                                            DSP = dsp;
-                                                                            if (DSP.getNumInputs() > 0) {
-                                                                                activateAudioInput();
-                                                                            } else {
-                                                                                audio_input = null;
-                                                                            }
-
-                                                                            // Setup UI
-                                                                            faust_svg = $('<div />');
-                                                                            $('body').append(faust_svg);
-                                                                            output_handler = _f4u$t.main(DSP.getJSON(), $(faust_svg), DSP.setParamValue);
-                                                                            DSP.setOutputParamHandler(output_handler);
-                                                                            console.log(DSP.getNumInputs());
-                                                                            console.log(DSP.getNumOutputs());
-                                                                            DSP.metadata({ declare: function(key, value) { console.log("key = " + key + " value = " + value); }});
-                                                                            DSP.connect(audio_context.destination);
-
-                                                                            loadDSPState();
-                                                                       });
+                                                }
+                                                compileMonoDSP(factory);
                                            });
                 }
             }
@@ -883,6 +926,12 @@
             
             function init()
             {
+                // Check AudioWorklet support
+                if ((typeof (AudioWorkletNode) === "undefined")) {
+                    document.getElementById("selectedRenderingMode").disabled = true;
+                    alert("AudioWorklet is not supported, ScriptProcessor model only will be available");
+                }
+                
                 activateMIDIInput();
                 
                 var filedrag1 = document.getElementById("filedrag");
@@ -902,6 +951,22 @@
             // (see https://kripken.github.io/emscripten-site/docs/getting_started/FAQ.html)
             
             faust_module['onRuntimeInitialized'] = init;
+            
+            // To activate audio on iOS
+			window.addEventListener('touchstart', function() {
+                        
+                        // create empty buffer
+                        var buffer = audio_context.createBuffer(1, 1, 22050);
+                        var source = audio_context.createBufferSource();
+                        source.buffer = buffer;
+                        
+                        // connect to output (your speakers)
+                        source.connect(audio_context.destination);
+                        
+                        // play the file
+                        source.start();
+                        
+                        }, false);
 
             </script>
 
