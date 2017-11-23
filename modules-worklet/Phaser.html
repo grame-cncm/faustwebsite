@@ -5547,7 +5547,8 @@ class PhaserNode extends AudioWorkletNode {
 faust.createPhaser = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("Phaser-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("Phaser-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new PhaserNode(audio_context, {}));

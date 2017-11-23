@@ -5547,7 +5547,8 @@ class SFluteNode extends AudioWorkletNode {
 faust.createSFlute = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("SFlute-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("SFlute-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new SFluteNode(audio_context, {}));

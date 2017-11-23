@@ -5547,7 +5547,8 @@ class SOscillatorNode extends AudioWorkletNode {
 faust.createSOscillator = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("SOscillator-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("SOscillator-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new SOscillatorNode(audio_context, {}));

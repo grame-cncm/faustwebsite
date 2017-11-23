@@ -5547,7 +5547,8 @@ class VolumeNode extends AudioWorkletNode {
 faust.createVolume = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("Volume-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("Volume-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new VolumeNode(audio_context, {}));

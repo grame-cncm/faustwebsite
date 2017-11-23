@@ -5547,7 +5547,8 @@ class CombFilterNode extends AudioWorkletNode {
 faust.createCombFilter = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("CombFilter-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("CombFilter-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new CombFilterNode(audio_context, {}));

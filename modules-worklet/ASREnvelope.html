@@ -5547,7 +5547,8 @@ class ASREnvelopeNode extends AudioWorkletNode {
 faust.createASREnvelope = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("ASREnvelope-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("ASREnvelope-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new ASREnvelopeNode(audio_context, {}));

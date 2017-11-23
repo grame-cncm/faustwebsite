@@ -5547,7 +5547,8 @@ class RingModulationNode extends AudioWorkletNode {
 faust.createRingModulation = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("RingModulation-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("RingModulation-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new RingModulationNode(audio_context, {}));

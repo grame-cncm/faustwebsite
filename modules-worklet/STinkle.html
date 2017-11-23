@@ -5547,7 +5547,8 @@ class STinkleNode extends AudioWorkletNode {
 faust.createSTinkle = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("STinkle-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("STinkle-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new STinkleNode(audio_context, {}));

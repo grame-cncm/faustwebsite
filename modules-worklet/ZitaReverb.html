@@ -5547,7 +5547,8 @@ class ZitaReverbNode extends AudioWorkletNode {
 faust.createZitaReverb = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("ZitaReverb-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("ZitaReverb-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new ZitaReverbNode(audio_context, {}));

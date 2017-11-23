@@ -5547,7 +5547,8 @@ class TibetanBowlNode extends AudioWorkletNode {
 faust.createTibetanBowl = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("TibetanBowl-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("TibetanBowl-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new TibetanBowlNode(audio_context, {}));

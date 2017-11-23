@@ -5547,7 +5547,8 @@ class SRandomAndHoldNode extends AudioWorkletNode {
 faust.createSRandomAndHold = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("SRandomAndHold-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("SRandomAndHold-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new SRandomAndHoldNode(audio_context, {}));

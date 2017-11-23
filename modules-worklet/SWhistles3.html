@@ -5547,7 +5547,8 @@ class SWhistles3Node extends AudioWorkletNode {
 faust.createSWhistles3 = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("SWhistles3-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("SWhistles3-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new SWhistles3Node(audio_context, {}));

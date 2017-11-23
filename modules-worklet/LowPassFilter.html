@@ -5547,7 +5547,8 @@ class LowPassFilterNode extends AudioWorkletNode {
 faust.createLowPassFilter = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("LowPassFilter-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("LowPassFilter-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new LowPassFilterNode(audio_context, {}));

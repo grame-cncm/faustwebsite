@@ -5547,7 +5547,8 @@ class SRandomFluteNode extends AudioWorkletNode {
 faust.createSRandomFlute = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("SRandomFlute-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("SRandomFlute-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new SRandomFluteNode(audio_context, {}));

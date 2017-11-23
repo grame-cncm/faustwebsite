@@ -5547,7 +5547,8 @@ class PeakEqualizerNode extends AudioWorkletNode {
 faust.createPeakEqualizer = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("PeakEqualizer-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("PeakEqualizer-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new PeakEqualizerNode(audio_context, {}));

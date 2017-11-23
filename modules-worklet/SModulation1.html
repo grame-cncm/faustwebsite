@@ -5547,7 +5547,8 @@ class SModulation1Node extends AudioWorkletNode {
 faust.createSModulation1 = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("SModulation1-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("SModulation1-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new SModulation1Node(audio_context, {}));

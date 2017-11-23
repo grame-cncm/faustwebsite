@@ -5547,7 +5547,8 @@ class MeowNode extends AudioWorkletNode {
 faust.createMeow = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("Meow-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("Meow-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new MeowNode(audio_context, {}));

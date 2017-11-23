@@ -5547,7 +5547,8 @@ class LoopNode extends AudioWorkletNode {
 faust.createLoop = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("Loop-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("Loop-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new LoopNode(audio_context, {}));

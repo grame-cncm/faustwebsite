@@ -5547,7 +5547,8 @@ class RandomRingModulationNode extends AudioWorkletNode {
 faust.createRandomRingModulation = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("RandomRingModulation-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("RandomRingModulation-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new RandomRingModulationNode(audio_context, {}));

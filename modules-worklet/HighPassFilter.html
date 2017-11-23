@@ -5547,7 +5547,8 @@ class HighPassFilterNode extends AudioWorkletNode {
 faust.createHighPassFilter = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("HighPassFilter-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("HighPassFilter-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new HighPassFilterNode(audio_context, {}));

@@ -5547,7 +5547,8 @@ class SClarinetNode extends AudioWorkletNode {
 faust.createSClarinet = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("SClarinet-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("SClarinet-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new SClarinetNode(audio_context, {}));

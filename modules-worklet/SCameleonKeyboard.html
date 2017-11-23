@@ -5547,7 +5547,8 @@ class SCameleonKeyboardNode extends AudioWorkletNode {
 faust.createSCameleonKeyboard = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("SCameleonKeyboard-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("SCameleonKeyboard-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new SCameleonKeyboardNode(audio_context, {}));

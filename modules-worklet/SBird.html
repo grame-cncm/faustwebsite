@@ -5547,7 +5547,8 @@ class SBirdNode extends AudioWorkletNode {
 faust.createSBird = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("SBird-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("SBird-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new SBirdNode(audio_context, {}));

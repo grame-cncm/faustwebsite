@@ -5547,7 +5547,8 @@ class SBrassNode extends AudioWorkletNode {
 faust.createSBrass = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("SBrass-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("SBrass-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new SBrassNode(audio_context, {}));

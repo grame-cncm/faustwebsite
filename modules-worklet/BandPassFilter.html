@@ -5547,7 +5547,8 @@ class BandPassFilterNode extends AudioWorkletNode {
 faust.createBandPassFilter = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("BandPassFilter-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("BandPassFilter-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new BandPassFilterNode(audio_context, {}));

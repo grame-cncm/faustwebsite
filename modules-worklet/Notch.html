@@ -5547,7 +5547,8 @@ class NotchNode extends AudioWorkletNode {
 faust.createNotch = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("Notch-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("Notch-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new NotchNode(audio_context, {}));

@@ -5547,7 +5547,8 @@ class SLimiterNode extends AudioWorkletNode {
 faust.createSLimiter = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("SLimiter-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("SLimiter-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new SLimiterNode(audio_context, {}));

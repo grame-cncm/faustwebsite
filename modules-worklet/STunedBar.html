@@ -5547,7 +5547,8 @@ class STunedBarNode extends AudioWorkletNode {
 faust.createSTunedBar = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("STunedBar-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("STunedBar-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new STunedBarNode(audio_context, {}));

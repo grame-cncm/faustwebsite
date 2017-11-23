@@ -5547,7 +5547,8 @@ class SPulsaxophoneNode extends AudioWorkletNode {
 faust.createSPulsaxophone = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("SPulsaxophone-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("SPulsaxophone-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new SPulsaxophoneNode(audio_context, {}));

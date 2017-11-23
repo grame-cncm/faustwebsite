@@ -5547,7 +5547,8 @@ class RandomVibratoNode extends AudioWorkletNode {
 faust.createRandomVibrato = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("RandomVibrato-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("RandomVibrato-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new RandomVibratoNode(audio_context, {}));

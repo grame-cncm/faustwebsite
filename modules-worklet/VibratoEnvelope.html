@@ -5547,7 +5547,8 @@ class VibratoEnvelopeNode extends AudioWorkletNode {
 faust.createVibratoEnvelope = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("VibratoEnvelope-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("VibratoEnvelope-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new VibratoEnvelopeNode(audio_context, {}));

@@ -5547,7 +5547,8 @@ class SNoiseNode extends AudioWorkletNode {
 faust.createSNoise = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("SNoise-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("SNoise-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new SNoiseNode(audio_context, {}));

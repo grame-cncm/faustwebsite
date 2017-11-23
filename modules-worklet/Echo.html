@@ -5547,7 +5547,8 @@ class EchoNode extends AudioWorkletNode {
 faust.createEcho = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("Echo-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("Echo-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new EchoNode(audio_context, {}));

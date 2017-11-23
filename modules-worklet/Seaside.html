@@ -5547,7 +5547,8 @@ class SeasideNode extends AudioWorkletNode {
 faust.createSeaside = function(callback)
 {
     // The main global scope
-    BaseAudioContext.audioWorklet.addModule("Seaside-processor.js")
+    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+    AWContext.addModule("Seaside-processor.js")
     .then(function () {
          audio_context = new AudioContext();
          callback(new SeasideNode(audio_context, {}));
