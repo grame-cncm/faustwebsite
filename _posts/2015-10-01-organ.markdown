@@ -34,7 +34,7 @@ All it remains is to connect our organ voice to the MIDI control and add a gener
 
     process = voice(midigate, midigain, midifreq) * hslider("volume", 0, 0, 1, 0.01);
 
-You can try the code on the [online compiler](http://faust.grame.fr/onlinecompiler) by dragging [this url]({{site.url }}/images/organ.dsp) or pasting the following lines
+You can try the code on the [online compiler](https://faust.grame.fr/onlinecompiler) by dragging [this url]({{site.url }}/images/organ.dsp) or pasting the following lines
 
     // Simple Organ
     import("stdfaust.lib");

@@ -9,7 +9,7 @@ Porting and running large C/C++ code base on the Web have been the subject of se
 
 WebAssembly is a hot topic in the JavaScript ecosystem. The WebAudio community is eagerly waiting for the [AudioWorklet](https://webaudio.github.io/web-audio-api/#AudioWorklet) specification, with its promised reduced latency and glitch-free audio rendering, to land in browser development versions, and be tested. Porting well established C/C++ codebase with [Emscripten](http://kripken.github.io/emscripten-site/), like the [Csound](https://www.mansoft.nl/csound/) framework as an example, or using DSL languages like Faust, will then naturally beneficiate from improved and more stable performances. 
 
-The Faust ecosystem already allows to generate [static or dynamically compiled WebAssembly based WebAudio nodes](http://faust.grame.fr/news/2017/08/18/using-webaudio-api.html). These nodes are still using the deprecated ScriptProcessor WebAudio interface. Premillinary work has been started to be ready as soon at the AudioWorklet model will be testable. 
+The Faust ecosystem already allows to generate [static or dynamically compiled WebAssembly based WebAudio nodes](https://faust.grame.fr/news/2017/08/18/using-webaudio-api.html). These nodes are still using the deprecated ScriptProcessor WebAudio interface. Premillinary work has been started to be ready as soon at the AudioWorklet model will be testable. 
 
 In the meantime, work have been started using the [WAVM](https://github.com/AndrewScheidecker/WAVM), a standalone VM for WebAssembly, that can load both the standard binary and text wasm format, compiling it in native code using the LLVM chain (generating LLVM IR and compiling it on the fly to native code using LLVM JIT compiler), and running it at (near) native speed. 
 
@@ -33,7 +33,7 @@ In both cases, a full description of the DSP state as a JSON string is generated
 
 #### Benchmark of C++, LLVM IR and wast/wasm generated code ####
 
-Since Faust already generates C++ or LLVM IR code, the performances of those two backends can be compared with the new wasm one. Using the WAVM C++ written machine allows to deploy the [same measuring code](http://faust.grame.fr/news/2017/04/26/optimizing-compilation-parameters.html). The first benchmark compares the speed of C++, LLVM IR and wasm backends running a set of DSP, running on a MacBook Pro 2,2 GHz Core I7 with OSX El capitan. The same 4.0 version of LLVM toolchain has been used with the three backend.
+Since Faust already generates C++ or LLVM IR code, the performances of those two backends can be compared with the new wasm one. Using the WAVM C++ written machine allows to deploy the [same measuring code](https://faust.grame.fr/news/2017/04/26/optimizing-compilation-parameters.html). The first benchmark compares the speed of C++, LLVM IR and wasm backends running a set of DSP, running on a MacBook Pro 2,2 GHz Core I7 with OSX El capitan. The same 4.0 version of LLVM toolchain has been used with the three backend.
 C++ and LLVM IR code has been compiled with the *-Ofast* optimization flag, the WAVM runtime is the standard version one (without any specific audio optimization, see later):
 
 ![](/images/C++_LLVM_IR_WASM_OSX.png){: .center-image }
@@ -77,7 +77,7 @@ Even if using software ftz is not strictly needed in our benchmark chain (since 
 
 #### Comparing three browsers on OSX El Capitan####
 
-[HTML test pages](http://faust.grame.fr/bench/) were prepared to compare the performances of the three main browsers on OSX El Capitan. The DSP code is compiled with float denormal protection on (-ftz 2). The generated wasm module *compute* method is called repeatedly in a timed loop, using successive slices of a big allocated circular audio buffer to avoid cache effects. Here are the results:
+[HTML test pages](https://faust.grame.fr/bench/) were prepared to compare the performances of the three main browsers on OSX El Capitan. The DSP code is compiled with float denormal protection on (-ftz 2). The generated wasm module *compute* method is called repeatedly in a timed loop, using successive slices of a big allocated circular audio buffer to avoid cache effects. Here are the results:
 
 ![](/images/Browsers.png){: .center-image }
 

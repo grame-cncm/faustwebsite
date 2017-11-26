@@ -17,7 +17,7 @@ The architecture files are then combined to produce ready to compile JUCE applic
 
 #### Using the online compiler #### 
 
-The Faust [online compiler](http://faust.grame.fr/onlinecompiler/) has been updated to provide new 'juce' targets. Note that only some of the possible compilation options are availble for now: 
+The Faust [online compiler](https://faust.grame.fr/onlinecompiler/) has been updated to provide new 'juce' targets. Note that only some of the possible compilation options are availble for now: 
 
 - the **application** target produces a standalone MIDI controlable application (using Faust polyphonic code if the Faust source code is polyphonic aware) 
 

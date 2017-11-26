@@ -45,7 +45,7 @@ When no more used, you'll have to explicitly use the following code to deallocat
 
     faust.deleteDSPInstance(dsp);
 
-This instance can be used like the statically compiled one, as previously described in [this page](http://faust.grame.fr/news/2014/02/14/faust-and-webaudio-api.html).
+This instance can be used like the statically compiled one, as previously described in [this page](https://faust.grame.fr/news/2014/02/14/faust-and-webaudio-api.html).
 
 #### Polyphonic instruments ####
  
@@ -53,7 +53,7 @@ Polyphonic instruments can be produced. For a given 'factory' the following code
 
     var dsp = faust.createPolyDSPInstance(factory, audio_context, buffer_size, 16);
 
-This instance can be used like the statically compiled one, as previously described in [this page](http://faust.grame.fr/news/2014/02/14/faust-and-webaudio-api.html).
+This instance can be used like the statically compiled one, as previously described in [this page](https://faust.grame.fr/news/2014/02/14/faust-and-webaudio-api.html).
 
 
 #### Using Faust JavaScript library  ####

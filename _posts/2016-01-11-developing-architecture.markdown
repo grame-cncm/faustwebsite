@@ -59,7 +59,7 @@ Here is the C++ code the Faust compiler will produce:
 // license: "BSD"
 // copyright: "(c)GRAME 2006"
 //
-// Code generated with Faust 0.9.73 (http://faust.grame.fr)
+// Code generated with Faust 0.9.73 (https://faust.grame.fr)
 //----------------------------------------------------------
 
 /* link with  */

@@ -78,7 +78,7 @@ class interpreter_dsp : public dsp {
 
 {% endhighlight %}
 
-Since **interpreter_dsp** is a subclass of the **dsp** base class, an object of this type can be used with all already available audio and UI classes, in essence reusing all architecture files already developed for the static C++ class compilation scheme (like OSCUI, httpdUI interfaces etc.), see [Developing a new architecture file](http://faust.grame.fr/news/2016/01/11/developing-architecture.html).
+Since **interpreter_dsp** is a subclass of the **dsp** base class, an object of this type can be used with all already available audio and UI classes, in essence reusing all architecture files already developed for the static C++ class compilation scheme (like OSCUI, httpdUI interfaces etc.), see [Developing a new architecture file](https://faust.grame.fr/news/2016/01/11/developing-architecture.html).
 
 #### Saving/restoring the factory ####
 

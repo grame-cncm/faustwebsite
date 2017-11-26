@@ -18,7 +18,7 @@ By convention Faust architecture files with polyphonic capabilities expect to fi
 
 In case of MIDI control, the `freq` (which should be a frequency) will be automatically mapped to MIDI note numbers, `gain` (which should be a value between 0 and 1) to velocity and `freq` to keyon/keyoff events. Thus, gate can be used as a trigger signal for any envelope generator, etc.
 
-Look at the [A Simple Organ](http://faust.grame.fr/examples/2015/10/01/organ.html) post for a complete example.
+Look at the [A Simple Organ](https://faust.grame.fr/examples/2015/10/01/organ.html) post for a complete example.
 
 #### Allocating the polyphonic instrument ####
 
@@ -38,7 +38,7 @@ With the following the code, note that a polyphonic instrument may be used outsi
 
 #### Controlling the polyphonic instrument ####
 
-Note that mydsp_poly class is also ready for MIDI control and can react to `keyon/keyon` and `pitchwheel` messages. You can also add other MIDI control parameters directly in the dsp source code. See [Controlling with MIDI](http://faust.grame.fr/news/2016/01/14/controlling-with-midi.html) post for more informations.
+Note that mydsp_poly class is also ready for MIDI control and can react to `keyon/keyon` and `pitchwheel` messages. You can also add other MIDI control parameters directly in the dsp source code. See [Controlling with MIDI](https://faust.grame.fr/news/2016/01/14/controlling-with-midi.html) post for more informations.
 
 #### Creating the polyphonic instrument ####
 
