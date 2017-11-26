@@ -5548,7 +5548,7 @@ faust.createSBrass = function(callback)
 {
     // The main global scope
     var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
-    conosle.log(AWContext);
+    console.log(AWContext);
     AWContext.addModule("SBrass-processor.js")
     .then(function () {
          audio_context = new AudioContext();
