@@ -1,13 +1,13 @@
 
 /*
-Code generated with Faust version 2.5.4
+Code generated with Faust version 2.5.7
 Compilation options: -scal -ftz 2
 */
 
 function getJSONSNoise() {
-	return "{\"name\":\"White Noise\",\"version\":\"2.5.4\",\"options\":\"-scal -ftz 2\",\"size\":\"16\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"Grame\"},{\"copyright\":\"(c)GRAME 2009\"},{\"license\":\"BSD\"},{\"name\":\"White Noise\"},{\"version\":\"1.1\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"White Noise\",\"items\":[{\"type\":\"hslider\",\"label\":\"Volume\",\"address\":\"/White_Noise/Volume\",\"index\":\"0\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"White Noise\",\"version\":\"2.5.7\",\"options\":\"-scal -ftz 2\",\"size\":\"16\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"Grame\"},{\"copyright\":\"(c)GRAME 2009\"},{\"license\":\"BSD\"},{\"name\":\"White Noise\"},{\"version\":\"1.1\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"White Noise\",\"items\":[{\"type\":\"hslider\",\"label\":\"Volume\",\"address\":\"/White_Noise/Volume\",\"index\":\"0\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"}]}]}";
 }
-function getBase64CodeSNoise() { return "AGFzbQEAAAABy4CAgAAOYAJ/fwBgBH9/f38AYAF/AX9gAX8Bf2ACf38BfWABfwF/YAJ/fwBgAX8AYAJ/fwBgAn9/AGABfwBgAn9/AX9gAn9/AX9gA39/fQACgYCAgAAAA4+AgIAADgABAgMEBQYHCAkKCwwNBYeAgIAAAQCBgICAAAe6gYCAAAwHY29tcHV0ZQABDGdldE51bUlucHV0cwACDWdldE51bU91dHB1dHMAAw1nZXRQYXJhbVZhbHVlAAQNZ2V0U2FtcGxlUmF0ZQAFBGluaXQABg1pbnN0YW5jZUNsZWFyAAcRaW5zdGFuY2VDb25zdGFudHMACAxpbnN0YW5jZUluaXQACRppbnN0YW5jZVJlc2V0VXNlckludGVyZmFjZQAKDXNldFBhcmFtVmFsdWUADQZtZW1vcnkCAArugoCAAA6CgICAAAAL/YCAgAACAn8BfUEAIQRDAAAAACEGQQAhBSADQQBqKAIAIQRDAAAAMEEAKgIAlCEGQQAhBQNAAkBBAEHtnJmOBEEAKAIIbEG54ABqNgIEIAQgBWogBkEAKAIEspQ4AgBBAEEAKAIENgIIIAVBBGohBSAFQQQgAWxIBEAMAgwBCwsLC4WAgIAAAEEADwuFgICAAABBAQ8Li4CAgAAAIAAgAWoqAgAPC4iAgIAAAEEAKAIMDwuOgICAAAAgACABEAAgACABEAkLsoCAgAABAX9BACEBQQAhAQNAAkBBBCABQQJ0akEANgIAIAFBAWohASABQQJIBEAMAgwBCwsLC4mAgIAAAEEAIAE2AgwLkICAgAAAIAAgARAIIAAQCiAAEAcLjICAgAAAQQBDAAAAPzgCAAuNgICAAAAgASAAIAAgAUgbDwuNgICAAAAgACABIAAgAUgbDwuMgICAAAAgACABaiACOAIACwvOg4CAAAEAQQALxwN7Im5hbWUiOiJXaGl0ZSBOb2lzZSIsInZlcnNpb24iOiIyLjUuNCIsIm9wdGlvbnMiOiItc2NhbCAtZnR6IDIiLCJzaXplIjoiMTYiLCJpbnB1dHMiOiIwIiwib3V0cHV0cyI6IjEiLCJtZXRhIjpbeyJhdXRob3IiOiJHcmFtZSJ9LHsiY29weXJpZ2h0IjoiKGMpR1JBTUUgMjAwOSJ9LHsibGljZW5zZSI6IkJTRCJ9LHsibmFtZSI6IldoaXRlIE5vaXNlIn0seyJ2ZXJzaW9uIjoiMS4xIn1dLCJ1aSI6W3sidHlwZSI6InZncm91cCIsImxhYmVsIjoiV2hpdGUgTm9pc2UiLCJpdGVtcyI6W3sidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6IlZvbHVtZSIsImFkZHJlc3MiOiIvV2hpdGVfTm9pc2UvVm9sdW1lIiwiaW5kZXgiOiIwIiwibWV0YSI6W3siYWNjIjoiMSAwIC0xMCAwIDEwIn0seyJzdHlsZSI6Imtub2IifV0sImluaXQiOiIwLjUiLCJtaW4iOiIwIiwibWF4IjoiMSIsInN0ZXAiOiIwLjAxIn1dfV19MA=="; }
+function getBase64CodeSNoise() { return "AGFzbQEAAAABy4CAgAAOYAJ/fwBgBH9/f38AYAF/AX9gAX8Bf2ACf38BfWABfwF/YAJ/fwBgAX8AYAJ/fwBgAn9/AGABfwBgAn9/AX9gAn9/AX9gA39/fQACgYCAgAAAA4+AgIAADgABAgMEBQYHCAkKCwwNBYeAgIAAAQCBgICAAAe6gYCAAAwHY29tcHV0ZQABDGdldE51bUlucHV0cwACDWdldE51bU91dHB1dHMAAw1nZXRQYXJhbVZhbHVlAAQNZ2V0U2FtcGxlUmF0ZQAFBGluaXQABg1pbnN0YW5jZUNsZWFyAAcRaW5zdGFuY2VDb25zdGFudHMACAxpbnN0YW5jZUluaXQACRppbnN0YW5jZVJlc2V0VXNlckludGVyZmFjZQAKDXNldFBhcmFtVmFsdWUADQZtZW1vcnkCAArugoCAAA6CgICAAAAL/YCAgAACAn8BfUEAIQRDAAAAACEGQQAhBSADQQBqKAIAIQRDAAAAMEEAKgIAlCEGQQAhBQNAAkBBAEHtnJmOBEEAKAIIbEG54ABqNgIEIAQgBWogBkEAKAIEspQ4AgBBAEEAKAIENgIIIAVBBGohBSAFQQQgAWxIBEAMAgwBCwsLC4WAgIAAAEEADwuFgICAAABBAQ8Li4CAgAAAIAAgAWoqAgAPC4iAgIAAAEEAKAIMDwuOgICAAAAgACABEAAgACABEAkLsoCAgAABAX9BACEBQQAhAQNAAkBBBCABQQJ0akEANgIAIAFBAWohASABQQJIBEAMAgwBCwsLC4mAgIAAAEEAIAE2AgwLkICAgAAAIAAgARAIIAAQCiAAEAcLjICAgAAAQQBDAAAAPzgCAAuNgICAAAAgASAAIAAgAUgbDwuNgICAAAAgACABIAAgAUgbDwuMgICAAAAgACABaiACOAIACwvOg4CAAAEAQQALxwN7Im5hbWUiOiJXaGl0ZSBOb2lzZSIsInZlcnNpb24iOiIyLjUuNyIsIm9wdGlvbnMiOiItc2NhbCAtZnR6IDIiLCJzaXplIjoiMTYiLCJpbnB1dHMiOiIwIiwib3V0cHV0cyI6IjEiLCJtZXRhIjpbeyJhdXRob3IiOiJHcmFtZSJ9LHsiY29weXJpZ2h0IjoiKGMpR1JBTUUgMjAwOSJ9LHsibGljZW5zZSI6IkJTRCJ9LHsibmFtZSI6IldoaXRlIE5vaXNlIn0seyJ2ZXJzaW9uIjoiMS4xIn1dLCJ1aSI6W3sidHlwZSI6InZncm91cCIsImxhYmVsIjoiV2hpdGUgTm9pc2UiLCJpdGVtcyI6W3sidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6IlZvbHVtZSIsImFkZHJlc3MiOiIvV2hpdGVfTm9pc2UvVm9sdW1lIiwiaW5kZXgiOiIwIiwibWV0YSI6W3siYWNjIjoiMSAwIC0xMCAwIDEwIn0seyJzdHlsZSI6Imtub2IifV0sImluaXQiOiIwLjUiLCJtaW4iOiIwIiwibWF4IjoiMSIsInN0ZXAiOiIwLjAxIn1dfV19MA=="; }
 
 /*
  faust2wasm
@@ -24,18 +24,56 @@ faust.getErrorMessage = function() { return faust.error_msg; };
 // Audio buffer size
 faust.buffer_size = 128;
 
-faust.asm2wasm = { // special asm2wasm imports
-    "fmod": function(x, y) {
-        return x % y;
-    },
-    "remainder": function(x, y) {
-        return x - Math.round(x/y) * y;
+faust.importObject = {
+    env: {
+        memoryBase: 0,
+        tableBase: 0,
+            
+        absf: Math.abs,
+        acosf: Math.acos,
+        asinf: Math.asin,
+        atanf: Math.atan,
+        atan2f: Math.atan2,
+        ceilf: Math.ceil,
+        cosf: Math.cos,
+        expf: Math.exp,
+        floorf: Math.floor,
+        fmodf: function(x, y) { return x % y; },
+        logf: Math.log,
+        log10f: Math.log10,
+        max_f: Math.max,
+        min_f: Math.min,
+        remainderf: function(x, y) { return x - Math.round(x/y) * y; },
+        powf: Math.pow,
+        roundf: Math.fround,
+        sinf: Math.sin,
+        sqrtf: Math.sqrt,
+        tanf: Math.tan,
+            
+        abs: Math.abs,
+        acos: Math.acos,
+        asin: Math.asin,
+        atan: Math.atan,
+        atan2: Math.atan2,
+        ceil: Math.ceil,
+        cos: Math.cos,
+        exp: Math.exp,
+        floor: Math.floor,
+        fmod: function(x, y) { return x % y; },
+        log: Math.log,
+        log10: Math.log10,
+        max_: Math.max,
+        min_: Math.min,
+        remainder:function(x, y) { return x - Math.round(x/y) * y; },
+        pow: Math.pow,
+        round: Math.fround,
+        sin: Math.sin,
+        sqrt: Math.sqrt,
+        tan: Math.tan,
+            
+        table: new WebAssembly.Table({ initial: 0, element: 'anyfunc' })
     }
-}
-
-faust.importObject = { imports: { print: arg => console.log(arg) } }
-faust.importObject["global.Math"] = Math;
-faust.importObject["asm2wasm"] = faust.asm2wasm;
+};
 
 faust.b64ToUint6 = function (nChr)
 {

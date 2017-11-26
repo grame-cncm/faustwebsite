@@ -1,13 +1,13 @@
 
 /*
-Code generated with Faust version 2.5.4
+Code generated with Faust version 2.5.7
 Compilation options: -scal -ftz 2
 */
 
 function getJSONASREnvelope() {
-	return "{\"name\":\"ASR Envelope\",\"version\":\"2.5.4\",\"options\":\"-scal -ftz 2\",\"size\":\"64\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"envelopes.lib/author\":\"GRAME\"},{\"envelopes.lib/copyright\":\"GRAME\"},{\"envelopes.lib/license\":\"LGPL with exception\"},{\"envelopes.lib/name\":\"Faust Envelope Library\"},{\"envelopes.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"ASR Envelope\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"ASR Envelope\",\"items\":[{\"type\":\"hslider\",\"label\":\"ON/OFF\",\"address\":\"/ASR_Envelope/ON/OFF\",\"index\":\"0\",\"meta\":[{\"1\":\"\"},{\"acc\":\"1 0 -12 0 5\"}],\"init\":\"0\",\"min\":\"0\",\"max\":\"1\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Envelope Attack\",\"address\":\"/ASR_Envelope/Envelope_Attack\",\"index\":\"32\",\"meta\":[{\"2\":\"\"},{\"acc\":\"0 1 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"s\"}],\"init\":\"1\",\"min\":\"0.01\",\"max\":\"2\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"Envelope Release\",\"address\":\"/ASR_Envelope/Envelope_Release\",\"index\":\"12\",\"meta\":[{\"3\":\"\"},{\"acc\":\"0 1 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"s\"}],\"init\":\"0\",\"min\":\"0.01\",\"max\":\"5\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"ASR Envelope\",\"version\":\"2.5.7\",\"options\":\"-scal -ftz 2\",\"size\":\"64\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"envelopes.lib/author\":\"GRAME\"},{\"envelopes.lib/copyright\":\"GRAME\"},{\"envelopes.lib/license\":\"LGPL with exception\"},{\"envelopes.lib/name\":\"Faust Envelope Library\"},{\"envelopes.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"ASR Envelope\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"ASR Envelope\",\"items\":[{\"type\":\"hslider\",\"label\":\"ON/OFF\",\"address\":\"/ASR_Envelope/ON/OFF\",\"index\":\"0\",\"meta\":[{\"1\":\"\"},{\"acc\":\"1 0 -12 0 5\"}],\"init\":\"0\",\"min\":\"0\",\"max\":\"1\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Envelope Attack\",\"address\":\"/ASR_Envelope/Envelope_Attack\",\"index\":\"32\",\"meta\":[{\"2\":\"\"},{\"acc\":\"0 1 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"s\"}],\"init\":\"1\",\"min\":\"0.01\",\"max\":\"2\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"Envelope Release\",\"address\":\"/ASR_Envelope/Envelope_Release\",\"index\":\"12\",\"meta\":[{\"3\":\"\"},{\"acc\":\"0 1 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"s\"}],\"init\":\"0\",\"min\":\"0.01\",\"max\":\"5\",\"step\":\"0.01\"}]}]}";
 }
-function getBase64CodeASREnvelope() { return "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ZXMubGliL25hbWUiOiJGYXVzdCBFbnZlbG9wZSBMaWJyYXJ5In0seyJlbnZlbG9wZXMubGliL3ZlcnNpb24iOiIwLjAifSx7Im1hdGhzLmxpYi9hdXRob3IiOiJHUkFNRSJ9LHsibWF0aHMubGliL2NvcHlyaWdodCI6IkdSQU1FIn0seyJtYXRocy5saWIvbGljZW5zZSI6IkxHUEwgd2l0aCBleGNlcHRpb24ifSx7Im1hdGhzLmxpYi9uYW1lIjoiRmF1c3QgTWF0aCBMaWJyYXJ5In0seyJtYXRocy5saWIvdmVyc2lvbiI6IjIuMSJ9LHsibmFtZSI6IkFTUiBFbnZlbG9wZSJ9LHsic2lnbmFscy5saWIvbmFtZSI6IkZhdXN0IFNpZ25hbCBSb3V0aW5nIExpYnJhcnkifSx7InNpZ25hbHMubGliL3ZlcnNpb24iOiIwLjAifV0sInVpIjpbeyJ0eXBlIjoidmdyb3VwIiwibGFiZWwiOiJBU1IgRW52ZWxvcGUiLCJpdGVtcyI6W3sidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6Ik9OL09GRiIsImFkZHJlc3MiOiIvQVNSX0VudmVsb3BlL09OL09GRiIsImluZGV4IjoiMCIsIm1ldGEiOlt7IjEiOiIifSx7ImFjYyI6IjEgMCAtMTIgMCA1In1dLCJpbml0IjoiMCIsIm1pbiI6IjAiLCJtYXgiOiIxIiwic3RlcCI6IjEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJFbnZlbG9wZSBBdHRhY2siLCJhZGRyZXNzIjoiL0FTUl9FbnZlbG9wZS9FbnZlbG9wZV9BdHRhY2siLCJpbmRleCI6IjMyIiwibWV0YSI6W3siMiI6IiJ9LHsiYWNjIjoiMCAxIC0xMCAwIDEwIn0seyJzdHlsZSI6Imtub2IifSx7InVuaXQiOiJzIn1dLCJpbml0IjoiMSIsIm1pbiI6IjAuMDEiLCJtYXgiOiIyIiwic3RlcCI6IjAuMDEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJFbnZlbG9wZSBSZWxlYXNlIiwiYWRkcmVzcyI6Ii9BU1JfRW52ZWxvcGUvRW52ZWxvcGVfUmVsZWFzZSIsImluZGV4IjoiMTIiLCJtZXRhIjpbeyIzIjoiIn0seyJhY2MiOiIwIDEgLTEwIDAgMTAifSx7InN0eWxlIjoia25vYiJ9LHsidW5pdCI6InMifV0sImluaXQiOiIwIiwibWluIjoiMC4wMSIsIm1heCI6IjUiLCJzdGVwIjoiMC4wMSJ9XX1dfTA="; }
+function getBase64CodeASREnvelope() { return "AGFzbQEAAAABy4CAgAAOYAJ/fwBgBH9/f38AYAF/AX9gAX8Bf2ACf38BfWABfwF/YAJ/fwBgAX8AYAJ/fwBgAn9/AGABfwBgAn9/AX9gAn9/AX9gA39/fQACgYCAgAAAA4+AgIAADgABAgMEBQYHCAkKCwwNBYeAgIAAAQCCgICAAAe6gYCAAAwHY29tcHV0ZQABDGdldE51bUlucHV0cwACDWdldE51bU91dHB1dHMAAw1nZXRQYXJhbVZhbHVlAAQNZ2V0U2FtcGxlUmF0ZQAFBGluaXQABg1pbnN0YW5jZUNsZWFyAAcRaW5zdGFuY2VDb25zdGFudHMACAxpbnN0YW5jZUluaXQACRppbnN0YW5jZVJlc2V0VXNlckludGVyZmFjZQAKDXNldFBhcmFtVmFsdWUADQZtZW1vcnkCAAr1iICAAA6CgICAAAALgoWAgAACBn8LfUEAIQRBACEFQwAAAAAhCkEAIQZBACEHQwAAAAAhC0EAIQhDAAAAACEMQwAAAAAhDUEAIQlDAAAAACEOQwAAAAAhD0MAAAAAIRBDAAAAACERQwAAAAAhEkMAAAAAIRNDAAAAACEUIAJBAGooAgAhBCADQQBqKAIAIQVBACoCACEKIApDAAAAAF4hBiAGQQBKIQdDbxKDOkEAKgIMlCELIApDAAAAAFtBAEohCENvEoM6QQAqAiCUIQxBACoCNCAKlCENQQAhCQNAAkAgC0N3vn8/QQAqAhSUkiEOQQAgDkMAAAAAIA68QYCAgPwHcRs4AhBBACoCCEEAKgIQlCEPQwAAAAAgD0EAKgIcQwAAgD+SliAHGyEQQQAgEEMAAAAAIBC8QYCAgPwHcRs4AhggDEN3vn8/QQAqAiiUkiERQQAgEUMAAAAAIBG8QYCAgPwHcRs4AiRBACoCCEEAKgIklCESQwAAAAAgEkEAKgIwQwAAgD+SliAIGyETQQAgE0MAAAAAIBO8QYCAgPwHcRs4AiwgBrJDAAAAACANQQAqAixBACoCJJWUIApBACoCLCASXRtBACoCLEMAAAAAXRuUQQAqAjwgBhshFEEAIBRDAAAAACAUvEGAgID8B3EbOAI4IAUgCWogBCAJaioCAEEAKgI4QQAqAjhBACoCNEEAKgIYQwAAAABBACoCOJOUQQAqAhCVlJJDAAAAAEEAKgIYIA9dG0EAKgIYQwAAAABdG5Q4AgBBAEEAKgIQOAIUQQBBACoCGDgCHEEAQQAqAiQ4AihBAEEAKgIsOAIwQQBBACoCODgCPCAJQQRqIQkgCUEEIAFsSARADAIMAQsLCwuFgICAAABBAQ8LhYCAgAAAQQEPC4uAgIAAACAAIAFqKgIADwuIgICAAABBACgCBA8LjoCAgAAAIAAgARAAIAAgARAJC/mBgIAAAQV/QQAhAUEAIQJBACEDQQAhBEEAIQVBACEBA0ACQEEQIAFBAnRqQwAAAAA4AgAgAUEBaiEBIAFBAkgEQAwCDAELCwtBACECA0ACQEEYIAJBAnRqQwAAAAA4AgAgAkEBaiECIAJBAkgEQAwCDAELCwtBACEDA0ACQEEkIANBAnRqQwAAAAA4AgAgA0EBaiEDIANBAkgEQAwCDAELCwtBACEEA0ACQEEsIARBAnRqQwAAAAA4AgAgBEEBaiEEIARBAkgEQAwCDAELCwtBACEFA0ACQEE4IAVBAnRqQwAAAAA4AgAgBUEBaiEFIAVBAkgEQAwCDAELCwsLsICAgAAAQQAgATYCBEEAQwCAO0hDAACAP0EAKAIEspeWOAIIQQBDAACAP0EAKgIIlTgCNAuQgICAAAAgACABEAggABAKIAAQBwuggICAAABBAEMAAAAAOAIAQQBDAAAAADgCDEEAQwAAgD84AiALjYCAgAAAIAEgACAAIAFIGw8LjYCAgAAAIAAgASAAIAFIGw8LjICAgAAAIAAgAWogAjgCAAsLuoqAgAABAEEAC7MKeyJuYW1lIjoiQVNSIEVudmVsb3BlIiwidmVyc2lvbiI6IjIuNS43Iiwib3B0aW9ucyI6Ii1zY2FsIC1mdHogMiIsInNpemUiOiI2NCIsImlucHV0cyI6IjEiLCJvdXRwdXRzIjoiMSIsIm1ldGEiOlt7ImJhc2ljcy5saWIvbmFtZSI6IkZhdXN0IEJhc2ljIEVsZW1lbnQgTGlicmFyeSJ9LHsiYmFzaWNzLmxpYi92ZXJzaW9uIjoiMC4wIn0seyJlbnZlbG9wZXMubGliL2F1dGhvciI6IkdSQU1FIn0seyJlbnZlbG9wZXMubGliL2NvcHlyaWdodCI6IkdSQU1FIn0seyJlbnZlbG9wZXMubGliL2xpY2Vuc2UiOiJMR1BMIHdpdGggZXhjZXB0aW9uIn0seyJlbnZlbG9wZXMubGliL25hbWUiOiJGYXVzdCBFbnZlbG9wZSBMaWJyYXJ5In0seyJlbnZlbG9wZXMubGliL3ZlcnNpb24iOiIwLjAifSx7Im1hdGhzLmxpYi9hdXRob3IiOiJHUkFNRSJ9LHsibWF0aHMubGliL2NvcHlyaWdodCI6IkdSQU1FIn0seyJtYXRocy5saWIvbGljZW5zZSI6IkxHUEwgd2l0aCBleGNlcHRpb24ifSx7Im1hdGhzLmxpYi9uYW1lIjoiRmF1c3QgTWF0aCBMaWJyYXJ5In0seyJtYXRocy5saWIvdmVyc2lvbiI6IjIuMSJ9LHsibmFtZSI6IkFTUiBFbnZlbG9wZSJ9LHsic2lnbmFscy5saWIvbmFtZSI6IkZhdXN0IFNpZ25hbCBSb3V0aW5nIExpYnJhcnkifSx7InNpZ25hbHMubGliL3ZlcnNpb24iOiIwLjAifV0sInVpIjpbeyJ0eXBlIjoidmdyb3VwIiwibGFiZWwiOiJBU1IgRW52ZWxvcGUiLCJpdGVtcyI6W3sidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6Ik9OL09GRiIsImFkZHJlc3MiOiIvQVNSX0VudmVsb3BlL09OL09GRiIsImluZGV4IjoiMCIsIm1ldGEiOlt7IjEiOiIifSx7ImFjYyI6IjEgMCAtMTIgMCA1In1dLCJpbml0IjoiMCIsIm1pbiI6IjAiLCJtYXgiOiIxIiwic3RlcCI6IjEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJFbnZlbG9wZSBBdHRhY2siLCJhZGRyZXNzIjoiL0FTUl9FbnZlbG9wZS9FbnZlbG9wZV9BdHRhY2siLCJpbmRleCI6IjMyIiwibWV0YSI6W3siMiI6IiJ9LHsiYWNjIjoiMCAxIC0xMCAwIDEwIn0seyJzdHlsZSI6Imtub2IifSx7InVuaXQiOiJzIn1dLCJpbml0IjoiMSIsIm1pbiI6IjAuMDEiLCJtYXgiOiIyIiwic3RlcCI6IjAuMDEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJFbnZlbG9wZSBSZWxlYXNlIiwiYWRkcmVzcyI6Ii9BU1JfRW52ZWxvcGUvRW52ZWxvcGVfUmVsZWFzZSIsImluZGV4IjoiMTIiLCJtZXRhIjpbeyIzIjoiIn0seyJhY2MiOiIwIDEgLTEwIDAgMTAifSx7InN0eWxlIjoia25vYiJ9LHsidW5pdCI6InMifV0sImluaXQiOiIwIiwibWluIjoiMC4wMSIsIm1heCI6IjUiLCJzdGVwIjoiMC4wMSJ9XX1dfTA="; }
 
 /*
  faust2wasm
@@ -24,18 +24,56 @@ faust.getErrorMessage = function() { return faust.error_msg; };
 // Audio buffer size
 faust.buffer_size = 128;
 
-faust.asm2wasm = { // special asm2wasm imports
-    "fmod": function(x, y) {
-        return x % y;
-    },
-    "remainder": function(x, y) {
-        return x - Math.round(x/y) * y;
+faust.importObject = {
+    env: {
+        memoryBase: 0,
+        tableBase: 0,
+            
+        absf: Math.abs,
+        acosf: Math.acos,
+        asinf: Math.asin,
+        atanf: Math.atan,
+        atan2f: Math.atan2,
+        ceilf: Math.ceil,
+        cosf: Math.cos,
+        expf: Math.exp,
+        floorf: Math.floor,
+        fmodf: function(x, y) { return x % y; },
+        logf: Math.log,
+        log10f: Math.log10,
+        max_f: Math.max,
+        min_f: Math.min,
+        remainderf: function(x, y) { return x - Math.round(x/y) * y; },
+        powf: Math.pow,
+        roundf: Math.fround,
+        sinf: Math.sin,
+        sqrtf: Math.sqrt,
+        tanf: Math.tan,
+            
+        abs: Math.abs,
+        acos: Math.acos,
+        asin: Math.asin,
+        atan: Math.atan,
+        atan2: Math.atan2,
+        ceil: Math.ceil,
+        cos: Math.cos,
+        exp: Math.exp,
+        floor: Math.floor,
+        fmod: function(x, y) { return x % y; },
+        log: Math.log,
+        log10: Math.log10,
+        max_: Math.max,
+        min_: Math.min,
+        remainder:function(x, y) { return x - Math.round(x/y) * y; },
+        pow: Math.pow,
+        round: Math.fround,
+        sin: Math.sin,
+        sqrt: Math.sqrt,
+        tan: Math.tan,
+            
+        table: new WebAssembly.Table({ initial: 0, element: 'anyfunc' })
     }
-}
-
-faust.importObject = { imports: { print: arg => console.log(arg) } }
-faust.importObject["global.Math"] = Math;
-faust.importObject["asm2wasm"] = faust.asm2wasm;
+};
 
 faust.b64ToUint6 = function (nChr)
 {

@@ -1,13 +1,13 @@
 
 /*
-Code generated with Faust version 2.5.4
+Code generated with Faust version 2.5.7
 Compilation options: -scal -ftz 2
 */
 
 function getJSONNotch() {
-	return "{\"name\":\"Notch\",\"version\":\"2.5.4\",\"options\":\"-scal -ftz 2\",\"size\":\"28\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"maxmsp.lib/author\":\"GRAME\"},{\"maxmsp.lib/copyright\":\"GRAME\"},{\"maxmsp.lib/license\":\"LGPL\"},{\"maxmsp.lib/name\":\"MaxMSP compatibility Library\"},{\"maxmsp.lib/version\":\"1.1\"},{\"name\":\"Notch\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Notch\",\"items\":[{\"type\":\"hslider\",\"label\":\"Frequency\",\"address\":\"/Notch/Frequency\",\"index\":\"8\",\"meta\":[{\"acc\":\"0 1 -10 0 15\"},{\"scale\":\"log\"}],\"init\":\"440\",\"min\":\"80\",\"max\":\"10000\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Q - Filter Bandwidth\",\"address\":\"/Notch/Q_-_Filter_Bandwidth\",\"index\":\"12\",\"meta\":[{\"acc\":\"2 0 -10 0 10\"},{\"scale\":\"log\"}],\"init\":\"20\",\"min\":\"0.01\",\"max\":\"50\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"Notch\",\"version\":\"2.5.7\",\"options\":\"-scal -ftz 2\",\"size\":\"28\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"maxmsp.lib/author\":\"GRAME\"},{\"maxmsp.lib/copyright\":\"GRAME\"},{\"maxmsp.lib/license\":\"LGPL\"},{\"maxmsp.lib/name\":\"MaxMSP compatibility Library\"},{\"maxmsp.lib/version\":\"1.1\"},{\"name\":\"Notch\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Notch\",\"items\":[{\"type\":\"hslider\",\"label\":\"Frequency\",\"address\":\"/Notch/Frequency\",\"index\":\"8\",\"meta\":[{\"acc\":\"0 1 -10 0 15\"},{\"scale\":\"log\"}],\"init\":\"440\",\"min\":\"80\",\"max\":\"10000\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Q - Filter Bandwidth\",\"address\":\"/Notch/Q_-_Filter_Bandwidth\",\"index\":\"12\",\"meta\":[{\"acc\":\"2 0 -10 0 10\"},{\"scale\":\"log\"}],\"init\":\"20\",\"min\":\"0.01\",\"max\":\"50\",\"step\":\"0.01\"}]}]}";
 }
-function getBase64CodeNotch() { return "AGFzbQEAAAAB1YCAgAAQYAJ/fwBgBH9/f38AYAF9AX1gAX8Bf2ABfwF/YAJ/fwF9YAF/AX9gAn9/AGABfwBgAn9/AGACf38AYAF/AGACf38Bf2ACf38Bf2ADf399AGABfQF9AqWAgIAAAgtnbG9iYWwuTWF0aANjb3MAAgtnbG9iYWwuTWF0aANzaW4ADwOPgICAAA4AAQMEBQYHCAkKCwwNDgWHgICAAAEAgoCAgAAHuoGAgAAMB2NvbXB1dGUAAwxnZXROdW1JbnB1dHMABA1nZXROdW1PdXRwdXRzAAUNZ2V0UGFyYW1WYWx1ZQAGDWdldFNhbXBsZVJhdGUABwRpbml0AAgNaW5zdGFuY2VDbGVhcgAJEWluc3RhbmNlQ29uc3RhbnRzAAoMaW5zdGFuY2VJbml0AAsaaW5zdGFuY2VSZXNldFVzZXJJbnRlcmZhY2UADA1zZXRQYXJhbVZhbHVlAA8GbWVtb3J5AgAK6ISAgAAOgoCAgAAAC82CgIAAAgN/B31BACEEQQAhBUMAAAAAIQdDAAAAACEIQwAAAAAhCUMAAAAAIQpDAAAAACELQQAhBkMAAAAAIQxDAAAAACENIAJBAGooAgAhBCADQQBqKAIAIQVBACoCBEMAAAAAQwAAoEJDAEAcRkEAKgIIlpeXlCEHQwAAAD8gBxABQ28SgzpDCtcjPEMAAEhCQQAqAgyWl5eVlCEIQwAAgD8gCEMAAIA/kpUhCUMAAAAAQwAAAEAgBxAAlJMhCkMAAIA/IAiTIQtBACEGA0ACQCAKQQAqAhSUIQwgBCAGaioCACAJIAwgC0EAKgIYlJKUkyENQQAgDUMAAAAAIA28QYCAgPwHcRs4AhAgBSAGaiAJQQAqAhhBACoCECAMkpKUOAIAQQBBACoCFDgCGEEAQQAqAhA4AhQgBkEEaiEGIAZBBCABbEgEQAwCDAELCwsLhYCAgAAAQQEPC4WAgIAAAEEBDwuLgICAAAAgACABaioCAA8LiICAgAAAQQAoAgAPC46AgIAAACAAIAEQAiAAIAEQCwu1gICAAAEBf0EAIQFBACEBA0ACQEEQIAFBAnRqQwAAAAA4AgAgAUEBaiEBIAFBA0gEQAwCDAELCwsLpoCAgAAAQQAgATYCAEEAQ9sPyUBDAIA7SEMAAIA/QQAoAgCyl5aVOAIEC5CAgIAAACAAIAEQCiAAEAwgABAJC5aAgIAAAEEAQwAA3EM4AghBAEMAAKBBOAIMC42AgIAAACABIAAgACABSBsPC42AgIAAACAAIAEgACABSBsPC4yAgIAAACAAIAFqIAI4AgALC4uHgIAAAQBBAAuEB3sibmFtZSI6Ik5vdGNoIiwidmVyc2lvbiI6IjIuNS40Iiwib3B0aW9ucyI6Ii1zY2FsIC1mdHogMiIsInNpemUiOiIyOCIsImlucHV0cyI6IjEiLCJvdXRwdXRzIjoiMSIsIm1ldGEiOlt7Im1hdGhzLmxpYi9hdXRob3IiOiJHUkFNRSJ9LHsibWF0aHMubGliL2NvcHlyaWdodCI6IkdSQU1FIn0seyJtYXRocy5saWIvbGljZW5zZSI6IkxHUEwgd2l0aCBleGNlcHRpb24ifSx7Im1hdGhzLmxpYi9uYW1lIjoiRmF1c3QgTWF0aCBMaWJyYXJ5In0seyJtYXRocy5saWIvdmVyc2lvbiI6IjIuMSJ9LHsibWF4bXNwLmxpYi9hdXRob3IiOiJHUkFNRSJ9LHsibWF4bXNwLmxpYi9jb3B5cmlnaHQiOiJHUkFNRSJ9LHsibWF4bXNwLmxpYi9saWNlbnNlIjoiTEdQTCJ9LHsibWF4bXNwLmxpYi9uYW1lIjoiTWF4TVNQIGNvbXBhdGliaWxpdHkgTGlicmFyeSJ9LHsibWF4bXNwLmxpYi92ZXJzaW9uIjoiMS4xIn0seyJuYW1lIjoiTm90Y2gifV0sInVpIjpbeyJ0eXBlIjoidmdyb3VwIiwibGFiZWwiOiJOb3RjaCIsIml0ZW1zIjpbeyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiRnJlcXVlbmN5IiwiYWRkcmVzcyI6Ii9Ob3RjaC9GcmVxdWVuY3kiLCJpbmRleCI6IjgiLCJtZXRhIjpbeyJhY2MiOiIwIDEgLTEwIDAgMTUifSx7InNjYWxlIjoibG9nIn1dLCJpbml0IjoiNDQwIiwibWluIjoiODAiLCJtYXgiOiIxMDAwMCIsInN0ZXAiOiIxIn0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiUSAtIEZpbHRlciBCYW5kd2lkdGgiLCJhZGRyZXNzIjoiL05vdGNoL1FfLV9GaWx0ZXJfQmFuZHdpZHRoIiwiaW5kZXgiOiIxMiIsIm1ldGEiOlt7ImFjYyI6IjIgMCAtMTAgMCAxMCJ9LHsic2NhbGUiOiJsb2cifV0sImluaXQiOiIyMCIsIm1pbiI6IjAuMDEiLCJtYXgiOiI1MCIsInN0ZXAiOiIwLjAxIn1dfV19MA=="; }
+function getBase64CodeNotch() { return "AGFzbQEAAAAB1YCAgAAQYAJ/fwBgBH9/f38AYAF9AX1gAX8Bf2ABfwF/YAJ/fwF9YAF/AX9gAn9/AGABfwBgAn9/AGACf38AYAF/AGACf38Bf2ACf38Bf2ADf399AGABfQF9ApWAgIAAAgNlbnYDY29zAAIDZW52A3NpbgAPA4+AgIAADgABAwQFBgcICQoLDA0OBYeAgIAAAQCCgICAAAe6gYCAAAwHY29tcHV0ZQADDGdldE51bUlucHV0cwAEDWdldE51bU91dHB1dHMABQ1nZXRQYXJhbVZhbHVlAAYNZ2V0U2FtcGxlUmF0ZQAHBGluaXQACA1pbnN0YW5jZUNsZWFyAAkRaW5zdGFuY2VDb25zdGFudHMACgxpbnN0YW5jZUluaXQACxppbnN0YW5jZVJlc2V0VXNlckludGVyZmFjZQAMDXNldFBhcmFtVmFsdWUADwZtZW1vcnkCAArohICAAA6CgICAAAALzYKAgAACA38HfUEAIQRBACEFQwAAAAAhB0MAAAAAIQhDAAAAACEJQwAAAAAhCkMAAAAAIQtBACEGQwAAAAAhDEMAAAAAIQ0gAkEAaigCACEEIANBAGooAgAhBUEAKgIEQwAAAABDAACgQkMAQBxGQQAqAgiWl5eUIQdDAAAAPyAHEAFDbxKDOkMK1yM8QwAASEJBACoCDJaXl5WUIQhDAACAPyAIQwAAgD+SlSEJQwAAAABDAAAAQCAHEACUkyEKQwAAgD8gCJMhC0EAIQYDQAJAIApBACoCFJQhDCAEIAZqKgIAIAkgDCALQQAqAhiUkpSTIQ1BACANQwAAAAAgDbxBgICA/AdxGzgCECAFIAZqIAlBACoCGEEAKgIQIAySkpQ4AgBBAEEAKgIUOAIYQQBBACoCEDgCFCAGQQRqIQYgBkEEIAFsSARADAIMAQsLCwuFgICAAABBAQ8LhYCAgAAAQQEPC4uAgIAAACAAIAFqKgIADwuIgICAAABBACgCAA8LjoCAgAAAIAAgARACIAAgARALC7WAgIAAAQF/QQAhAUEAIQEDQAJAQRAgAUECdGpDAAAAADgCACABQQFqIQEgAUEDSARADAIMAQsLCwumgICAAABBACABNgIAQQBD2w/JQEMAgDtIQwAAgD9BACgCALKXlpU4AgQLkICAgAAAIAAgARAKIAAQDCAAEAkLloCAgAAAQQBDAADcQzgCCEEAQwAAoEE4AgwLjYCAgAAAIAEgACAAIAFIGw8LjYCAgAAAIAAgASAAIAFIGw8LjICAgAAAIAAgAWogAjgCAAsLi4eAgAABAEEAC4QHeyJuYW1lIjoiTm90Y2giLCJ2ZXJzaW9uIjoiMi41LjciLCJvcHRpb25zIjoiLXNjYWwgLWZ0eiAyIiwic2l6ZSI6IjI4IiwiaW5wdXRzIjoiMSIsIm91dHB1dHMiOiIxIiwibWV0YSI6W3sibWF0aHMubGliL2F1dGhvciI6IkdSQU1FIn0seyJtYXRocy5saWIvY29weXJpZ2h0IjoiR1JBTUUifSx7Im1hdGhzLmxpYi9saWNlbnNlIjoiTEdQTCB3aXRoIGV4Y2VwdGlvbiJ9LHsibWF0aHMubGliL25hbWUiOiJGYXVzdCBNYXRoIExpYnJhcnkifSx7Im1hdGhzLmxpYi92ZXJzaW9uIjoiMi4xIn0seyJtYXhtc3AubGliL2F1dGhvciI6IkdSQU1FIn0seyJtYXhtc3AubGliL2NvcHlyaWdodCI6IkdSQU1FIn0seyJtYXhtc3AubGliL2xpY2Vuc2UiOiJMR1BMIn0seyJtYXhtc3AubGliL25hbWUiOiJNYXhNU1AgY29tcGF0aWJpbGl0eSBMaWJyYXJ5In0seyJtYXhtc3AubGliL3ZlcnNpb24iOiIxLjEifSx7Im5hbWUiOiJOb3RjaCJ9XSwidWkiOlt7InR5cGUiOiJ2Z3JvdXAiLCJsYWJlbCI6Ik5vdGNoIiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJGcmVxdWVuY3kiLCJhZGRyZXNzIjoiL05vdGNoL0ZyZXF1ZW5jeSIsImluZGV4IjoiOCIsIm1ldGEiOlt7ImFjYyI6IjAgMSAtMTAgMCAxNSJ9LHsic2NhbGUiOiJsb2cifV0sImluaXQiOiI0NDAiLCJtaW4iOiI4MCIsIm1heCI6IjEwMDAwIiwic3RlcCI6IjEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJRIC0gRmlsdGVyIEJhbmR3aWR0aCIsImFkZHJlc3MiOiIvTm90Y2gvUV8tX0ZpbHRlcl9CYW5kd2lkdGgiLCJpbmRleCI6IjEyIiwibWV0YSI6W3siYWNjIjoiMiAwIC0xMCAwIDEwIn0seyJzY2FsZSI6ImxvZyJ9XSwiaW5pdCI6IjIwIiwibWluIjoiMC4wMSIsIm1heCI6IjUwIiwic3RlcCI6IjAuMDEifV19XX0w"; }
 
 /*
  faust2wasm
@@ -24,18 +24,56 @@ faust.getErrorMessage = function() { return faust.error_msg; };
 // Audio buffer size
 faust.buffer_size = 128;
 
-faust.asm2wasm = { // special asm2wasm imports
-    "fmod": function(x, y) {
-        return x % y;
-    },
-    "remainder": function(x, y) {
-        return x - Math.round(x/y) * y;
+faust.importObject = {
+    env: {
+        memoryBase: 0,
+        tableBase: 0,
+            
+        absf: Math.abs,
+        acosf: Math.acos,
+        asinf: Math.asin,
+        atanf: Math.atan,
+        atan2f: Math.atan2,
+        ceilf: Math.ceil,
+        cosf: Math.cos,
+        expf: Math.exp,
+        floorf: Math.floor,
+        fmodf: function(x, y) { return x % y; },
+        logf: Math.log,
+        log10f: Math.log10,
+        max_f: Math.max,
+        min_f: Math.min,
+        remainderf: function(x, y) { return x - Math.round(x/y) * y; },
+        powf: Math.pow,
+        roundf: Math.fround,
+        sinf: Math.sin,
+        sqrtf: Math.sqrt,
+        tanf: Math.tan,
+            
+        abs: Math.abs,
+        acos: Math.acos,
+        asin: Math.asin,
+        atan: Math.atan,
+        atan2: Math.atan2,
+        ceil: Math.ceil,
+        cos: Math.cos,
+        exp: Math.exp,
+        floor: Math.floor,
+        fmod: function(x, y) { return x % y; },
+        log: Math.log,
+        log10: Math.log10,
+        max_: Math.max,
+        min_: Math.min,
+        remainder:function(x, y) { return x - Math.round(x/y) * y; },
+        pow: Math.pow,
+        round: Math.fround,
+        sin: Math.sin,
+        sqrt: Math.sqrt,
+        tan: Math.tan,
+            
+        table: new WebAssembly.Table({ initial: 0, element: 'anyfunc' })
     }
-}
-
-faust.importObject = { imports: { print: arg => console.log(arg) } }
-faust.importObject["global.Math"] = Math;
-faust.importObject["asm2wasm"] = faust.asm2wasm;
+};
 
 faust.b64ToUint6 = function (nChr)
 {
