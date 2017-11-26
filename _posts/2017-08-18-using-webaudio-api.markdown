@@ -290,7 +290,7 @@ function startosc()
 
 {% endhighlight %}
 
-The [Dynamic OSC](https://faust.grame.fr/modules/dynamic-osc-wasm.html) page demonstrates the dynamic OSC complete code (based on the example seen before). The [Dynamic Organ](https://faust.grame.fr/modules/dynamic-organ-wasm.html) page demonstrates a polyphonic organ instrument, which loads a DSP from an url, and ready to be controlled with a MIDI device or application. Look at the [Dynamic Faust compiler](https://faust.grame.fr/dynamic/faustlive-wasm.html) page for a more complete use-case of the dynamic compiler.
+The [Dynamic OSC](https://faust.grame.fr/dynamic/dynamic-osc-wasm.html) page demonstrates the dynamic OSC complete code (based on the example seen before). The [Dynamic Organ](https://faust.grame.fr/dynamic/dynamic-organ-wasm.html) page demonstrates a polyphonic organ instrument, which loads a DSP from an url, and ready to be controlled with a MIDI device or application. Look at the [Dynamic Faust compiler](https://faust.grame.fr/dynamic/faustlive-wasm.html) page for a more complete use-case of the dynamic compiler.
 
 ### Float denormal handling ###
 
