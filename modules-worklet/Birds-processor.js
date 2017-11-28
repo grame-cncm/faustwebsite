@@ -24,6 +24,11 @@ faust.getErrorMessage = function() { return faust.error_msg; };
 // Audio buffer size
 faust.buffer_size = 128;
 
+faust.sleep = function(ms) 
+{
+  	return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 faust.importObject = {
     env: {
         memoryBase: 0,
@@ -211,7 +216,11 @@ class BirdsProcessor extends AudioWorkletProcessor {
         this.numIn = parseInt(this.json_object.inputs);
         this.numOut = parseInt(this.json_object.outputs);
         
-        /*
+        var try = 10;
+        while ((faust.Birds_instance == null) && (try-- > 0)) { 
+        	console.log("BirdsProcessor : sleep");
+        	await faust.sleep(200);
+        }
         // Memory allocator
         this.ptr_size = 4;
         this.sample_size = 4;
@@ -300,7 +309,6 @@ class BirdsProcessor extends AudioWorkletProcessor {
        
         // Init resulting DSP
         this.initAux();
-        */
     }
     
     process(inputs, outputs, parameters) {
@@ -308,7 +316,6 @@ class BirdsProcessor extends AudioWorkletProcessor {
         var input = inputs[0];
         var output = outputs[0];
         
-        /*
         // Copy inputs
         if (input !== undefined) {
             for (var channel = 0; channel < input.length; ++channel) {
@@ -333,7 +340,6 @@ class BirdsProcessor extends AudioWorkletProcessor {
                 output[channel].set(dspOutput);
             }
         }
-        */
         
         return true;
     }
@@ -341,18 +347,11 @@ class BirdsProcessor extends AudioWorkletProcessor {
 
  registerProcessor('Birds', BirdsProcessor);
 
-/*
 // Compile wasm binary module
 WebAssembly.instantiate(faust.atob(getBase64CodeBirds()), faust.importObject)
             .then(dsp_module => {
                   faust.Birds_instance = dsp_module.instance;
-                  registerProcessor('Birds', BirdsProcessor);
+                  //registerProcessor('Birds', BirdsProcessor);
             })
             .catch(function(error) { console.log(error); console.log("Faust Birds cannot be loaded or compiled"); });
-*/
 
-WebAssembly.instantiate(faust.atob(getBase64CodeBirds()), faust.importObject)
-            .then(dsp_module => {
-                  console.log("Birds is Compiled\n"); 
-            })
-            .catch(function(error) { console.log(error); console.log("Faust Birds cannot be loaded or compiled"); });
