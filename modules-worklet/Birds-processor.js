@@ -211,6 +211,7 @@ class BirdsProcessor extends AudioWorkletProcessor {
         this.numIn = parseInt(this.json_object.inputs);
         this.numOut = parseInt(this.json_object.outputs);
         
+        /*
         // Memory allocator
         this.ptr_size = 4;
         this.sample_size = 4;
@@ -299,6 +300,7 @@ class BirdsProcessor extends AudioWorkletProcessor {
        
         // Init resulting DSP
         this.initAux();
+        */
     }
     
     process(inputs, outputs, parameters) {
@@ -306,6 +308,7 @@ class BirdsProcessor extends AudioWorkletProcessor {
         var input = inputs[0];
         var output = outputs[0];
         
+        /*
         // Copy inputs
         if (input !== undefined) {
             for (var channel = 0; channel < input.length; ++channel) {
@@ -330,15 +333,26 @@ class BirdsProcessor extends AudioWorkletProcessor {
                 output[channel].set(dspOutput);
             }
         }
+        */
         
         return true;
     }
 }
 
+ registerProcessor('Birds', BirdsProcessor);
+
+/*
 // Compile wasm binary module
 WebAssembly.instantiate(faust.atob(getBase64CodeBirds()), faust.importObject)
             .then(dsp_module => {
                   faust.Birds_instance = dsp_module.instance;
                   registerProcessor('Birds', BirdsProcessor);
+            })
+            .catch(function(error) { console.log(error); console.log("Faust Birds cannot be loaded or compiled"); });
+*/
+
+WebAssembly.instantiate(faust.atob(getBase64CodeBirds()), faust.importObject)
+            .then(dsp_module => {
+                  console.log("Birds is Compiled\n"); 
             })
             .catch(function(error) { console.log(error); console.log("Faust Birds cannot be loaded or compiled"); });
