@@ -5407,454 +5407,14 @@ _f4u$t.main_loop = function() {
 }
 
 $(document).ready(function() { _f4u$t.main_loop(); });
-/* Copyright 2013 Chris Wilson
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
-*/
-
-// Initialize the MIDI library.
-(function (global, exports, perf) {
-    'use strict';
-    var midiIO,
-    debug = false;
-    if (debug) {
-        window.console.warn('Debuggin enabled');
-    }
-
-//init: create plugin
-    if (!window.navigator.requestMIDIAccess) {
-      window.navigator.requestMIDIAccess = _requestMIDIAccess;
-      if (!window.navigator.getMIDIAccess)
-        window.navigator.getMIDIAccess = _getMIDIAccess;
-    }
-
-  function _JazzInstance() {
-    this.inputInUse = false;
-    this.outputInUse = false;
-
-    // load the Jazz plugin
-    var o1 = document.createElement("object");
-    o1.id = "_Jazz" + Math.random() + "ie";
-    o1.classid = "CLSID:1ACE1618-1C7D-4561-AEE1-34842AA85E90";
-
-    this.activeX = o1;
-
-    var o2 = document.createElement("object");
-    o2.id = "_Jazz" + Math.random();
-    o2.type="audio/x-jazz";
-    o1.appendChild(o2);
-
-    this.objRef = o2;
-
-    var e = document.createElement("p");
-    e.appendChild(document.createTextNode("This page requires the "));
-
-    var a = document.createElement("a");
-    a.appendChild(document.createTextNode("Jazz plugin"));
-    a.href = "http://jazz-soft.net/";
-
-    e.appendChild(a);
-    e.appendChild(document.createTextNode("."));
-    o2.appendChild(e);
-
-    var insertionPoint = document.getElementById("MIDIPlugin");
-    if (!insertionPoint) {
-      // Create hidden element
-      var insertionPoint = document.createElement("div");
-      insertionPoint.id = "MIDIPlugin";
-      insertionPoint.style.position = "absolute";
-      insertionPoint.style.visibility = "hidden";
-      insertionPoint.style.left = "-9999px";
-      insertionPoint.style.top = "-9999px";
-      document.body.appendChild(insertionPoint);
-    }
-    insertionPoint.appendChild(o1);
-
-    if (this.objRef.isJazz)
-      this._Jazz = this.objRef;
-    else if (this.activeX.isJazz)
-      this._Jazz = this.activeX;
-    else
-      this._Jazz = null;
-    if (this._Jazz) {
-      this._Jazz._jazzTimeZero = this._Jazz.Time();
-      this._Jazz._perfTimeZero = window.performance.now();
-    }
-  }
-
-  function _requestMIDIAccess( successCallback, errorCallback ) {
-      new MIDIAccess( successCallback, errorCallback );
-  }
-
-  function _getMIDIAccess( successCallback, errorCallback ) {
-      var message = "getMIDIAccess has been renamed to requestMIDIAccess.  Please update your code.";
-
-      if (console.warn)
-        console.warn( message );
-      else
-        console.log( message );
-      new MIDIAccess( successCallback, errorCallback );
-  }
-
-  // API Methods
-
-  function MIDIAccess( successCallback, errorCallback ) {
-      this._jazzInstances = new Array();
-      this._jazzInstances.push( new _JazzInstance() );
-
-      if (this._jazzInstances[0]._Jazz) {
-        this._Jazz = this._jazzInstances[0]._Jazz;
-        this._successCallback = successCallback;
-        window.setTimeout( _onReady.bind(this), 3 );
-      } else {
-          if (errorCallback)
-            errorCallback( { code: 1 } );
-      }
-  }
-
-  function _onReady() {
-      if (this._successCallback)
-          this._successCallback( this );
-  }
-
-  MIDIAccess.prototype.getInputs = function(  ) {
-      if (!this._Jazz)
-          return null;
-      var list=this._Jazz.MidiInList();
-      var inputs = new Array( list.length );
-
-      for ( var i=0; i<list.length; i++ ) {
-          inputs[i] = new MIDIPort( this, list[i], i, "input" );
-      }
-      return inputs;
-  }
-
-  MIDIAccess.prototype.getOutputs = function(  ) {
-      if (!this._Jazz)
-          return null;
-      var list=this._Jazz.MidiOutList();
-      var outputs = new Array( list.length );
-
-      for ( var i=0; i<list.length; i++ ) {
-          outputs[i] = new MIDIPort( this, list[i], i, "output" );
-      }
-      return outputs;
-  }
-
-  // TODO: remove these versions
-  MIDIAccess.prototype.enumerateInputs = function(  ) {
-    var message = "MIDIAccess.enumerateInputs has been renamed to MIDIAccess.getInputs.  Please update your code.";
-
-    if (console.warn)
-      console.warn( message );
-    else
-      console.log( message );
-    return this.getInputs();
-  }
-
-  MIDIAccess.prototype.enumerateOutputs = function(  ) {
-    var message = "MIDIAccess.enumerateOutputs has been renamed to MIDIAccess.getOutputs.  Please update your code.";
-
-    if (console.warn)
-      console.warn( message );
-    else
-      console.log( message );
-    return this.getOutputs();
-  }
-
-  MIDIAccess.prototype.getInput = function( target ) {
-      if (target==null)
-          return null;
-      return new MIDIInput( this, target );
-  }
-
-  MIDIAccess.prototype.getOutput = function( target ) {
-      if (target==null)
-          return null;
-      return new MIDIOutput( this, target );
-  }
-
-  function MIDIPort( midi, port, index, type ) {
-      this._index = index;
-      this._midi = midi;
-      this.type = type;
-
-      // Can't get manu/version from Jazz
-      this.name = port;
-      this.manufacturer = null;
-      this.version = null;
-      this.fingerprint = "" + index + "." + this.name;
-  }
-
-  MIDIPort.prototype.toString = function() {
-      return ("type: "+ this.type + "name: '" + this.name + "' manufacturer: '" +
-      this.manufacturer + "' version: " + this.version + " fingerprint: '" + this.fingerprint + "'" );
-  }
-
-  function MIDIInput( midiAccess, target ) {
-    this.onmessage = null;
-    this._listeners = [];
-    this._midiAccess = midiAccess;
-
-    var inputInstance = null;
-    for (var i=0; (i<midiAccess._jazzInstances.length)&&(!inputInstance); i++) {
-      if (!midiAccess._jazzInstances[i].inputInUse)
-        inputInstance=midiAccess._jazzInstances[i];
-    }
-    if (!inputInstance) {
-      inputInstance = new _JazzInstance();
-      midiAccess._jazzInstances.push( inputInstance );
-    }
-    inputInstance.inputInUse = true;
-
-    this._jazzInstance = inputInstance._Jazz;
-
-    // target can be a MIDIPort or DOMString
-    if ( target instanceof MIDIPort ) {
-      this._deviceName = target.name;
-      this._index = target._index;
-    } else if (typeof target === "number") { // target is numerical index
-      this._index = target;
-      var list=this._jazzInstance.MidiInList();
-      this._deviceName = list[target];
-    } else if ( typeof target === 'string' ) { // fingerprint
-      var dot = target.indexOf(".");
-      this._index = parseInt( target.slice( 0, dot ) );
-      this._deviceName = target.slice( dot + 1 );
-    }
-
-    this._input = this._jazzInstance.MidiInOpen( this._index, _midiProc.bind(this) );
-  }
-
-  // Introduced in DOM Level 2:
-  MIDIInput.prototype.addEventListener = function (type, listener, useCapture ) {
-    if (type != "message")
-      return;
-    for (var i=0; i<this._listeners.length; i++)
-      if (this._listeners[i] == listener)
-        return;
-    this._listeners.push( listener );
-  }
-
-  MIDIInput.prototype.removeEventListener = function (type, listener, useCapture ) {
-    if (type != "message")
-      return;
-    for (var i=0; i<this._listeners.length; i++)
-      if (this._listeners[i] == listener) {
-        this._listeners.splice( i, 1 );  //remove it
-        return;
-      }
-  }
-
-  MIDIInput.prototype.preventDefault = function() {
-    this._pvtDef = true;
-  }
-
-  MIDIInput.prototype.dispatchEvent = function (evt) {
-    this._pvtDef = false;
-
-    // dispatch to listeners
-    for (var i=0; i<this._listeners.length; i++)
-      if (this._listeners[i].handleEvent)
-        this._listeners[i].handleEvent.bind(this)( evt );
-      else
-        this._listeners[i].bind(this)( evt );
-
-    if (this.onmessage)
-      this.onmessage( evt );
-
-    return this._pvtDef;
-  }
-
-  function _midiProc( timestamp, data ) {
-    var evt = document.createEvent( "Event" );
-    evt.initEvent( "cutonEvent", false, false );
-    evt.timestamp = parseFloat( timestamp.toString()) + this._jazzInstance._perfTimeZero;
-    var length = 0;
-    var i,j;
-
-    // Jazz sometimes passes us multiple messages at once, so we need to parse them out
-    // and pass them one at a time.
-    for (i=0; i<data.length; i+=length) {
-      switch (data[i] & 0xF0) {
-        case 0x80:  // note off
-        case 0x90:  // note on
-        case 0xA0:  // polyphonic aftertouch
-        case 0xB0:  // control change
-        case 0xE0:  // channel mode
-          length = 3;
-          break;
-
-        case 0xC0:  // program change
-        case 0xD0:  // channel aftertouch
-          length = 2;
-          break;
-
-        case 0xF0:
-          switch (data[i]) {
-            case 0xf0:  // variable-length sysex.
-              // count the length;
-              length = -1;
-              for (j=i+1; (j<data.length) && (data[j] != 0xF7); j++)
-                ;
-              length = j-i+1;
-              break;
-
-            case 0xF1:  // MTC quarter frame
-            case 0xF3:  // song select
-              length = 2;
-              break;
-
-            case 0xF2:  // song position pointer
-              length = 3;
-              break;
-
-            default:
-              length = 1;
-              break;
-          }
-          break;
-      }
-      evt.data = new Uint8Array(data.slice(i, length+i));
-      this.dispatchEvent( evt );
-    }
-  }
-
-  function MIDIOutput( midiAccess, target ) {
-    this._midiAccess = midiAccess;
-
-    var outputInstance = null;
-    for (var i=0; (i<midiAccess._jazzInstances.length)&&(!outputInstance); i++) {
-      if (!midiAccess._jazzInstances[i].outputInUse)
-        outputInstance=midiAccess._jazzInstances[i];
-    }
-    if (!outputInstance) {
-      outputInstance = new _JazzInstance();
-      midiAccess._jazzInstances.push( outputInstance );
-    }
-    outputInstance.outputInUse = true;
-
-    this._jazzInstance = outputInstance._Jazz;
-
-    // target can be a MIDIPort or DOMString
-    if ( target instanceof MIDIPort ) {
-      this._deviceName = target.name;
-      this._index = target._index;
-    } else if (typeof target === "number") { // target is numerical index
-      this._index = target;
-      var list=this._jazzInstance.MidiOutList();
-      this._deviceName = list[target];
-    } else if ( typeof target === 'string' ) { // fingerprint
-      var dot = target.indexOf(".");
-      this._index = parseInt( target.slice( 0, dot ) );
-      this._deviceName = target.slice( dot + 1 );
-    }
-
-    this._jazzInstance.MidiOutOpen(this._deviceName);
-  }
-
-  function _sendLater() {
-      this.jazz.MidiOutLong( this.data );    // handle send as sysex
-  }
-
-  MIDIOutput.prototype.send = function( data, timestamp ) {
-    var delayBeforeSend = 0;
-    if (data.length==0)
-      return false;
-
-    if (timestamp)
-      delayBeforeSend = Math.floor( timestamp - window.performance.now() );
-
-    if (timestamp && (delayBeforeSend>1)) {
-      var sendObj = new Object;
-      sendObj.jazz = this._jazzInstance;
-      sendObj.data = data;
-
-      window.setTimeout( _sendLater.bind(sendObj), delayBeforeSend );
-    } else {
-      this._jazzInstance.MidiOutLong( data );
-    }
-    return true;
-  }
-
-}(window));
-
-// Polyfill window.performance.now() if necessary.
-(function (exports) {
-    var perf = {},
-        props;
-
-    function findAlt() {
-        var prefix = "moz,webkit,opera,ms".split(","),
-            i = prefix.length,
-            //worst case, we use Date.now()
-            props = {
-                value: function (start) {
-                    return function () {
-                        return Date.now() - start;
-                    }
-                }(Date.now())
-            };
-
-        //seach for vendor prefixed version
-        for (; i >= 0; i--) {
-            if ((prefix[i] + "Now") in exports.performance) {
-                props.value = function (method) {
-                    return function () {
-                        exports.performance[method]();
-                    }
-                }(prefix[i] + "Now");
-                return props;
-            }
-        }
-
-        //otherwise, try to use connectionStart
-        if ("timing" in exports.performance &&
-            "connectStart" in exports.performance.timing) {
-            //this pretty much approximates performance.now() to the millisecond
-            props.value = function (start) {
-                return function(){Date.now() - start;}
-            }(exports.performance.timing.connectStart);
-        }
-        return props;
-    }
-
-    //if already defined, bail
-    if (("performance" in exports) && ("now" in exports.performance)) {
-        return;
-    }
-    if (!("performance" in exports)) {
-        Object.defineProperty(exports, "performance", {
-            get: function () {
-                return perf;
-            }
-        });
-        //otherwise, perforance is there, but not "now()"
-    }
-    props = findAlt();
-    Object.defineProperty(exports.performance, "now", props);
-}(window));
-
-
-
 
 /*
-Code generated with Faust version 2.4.2
+Code generated with Faust version 2.5.9
 Compilation options: -scal -ftz 2
 */
 
 function getJSONSClarinet() {
-	return "{\"name\":\"Clarinet\",\"version\":\"2.4.2\",\"options\":\"-scal -ftz 2\",\"size\":\"32940\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"Romain Michon\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"copyright\":\"Romain Michon (rmichon@ccrma.stanford.edu)\"},{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"description\":\"Nonlinear WaveGuide Clarinet\"},{\"envelopes.lib/author\":\"GRAME\"},{\"envelopes.lib/copyright\":\"GRAME\"},{\"envelopes.lib/license\":\"LGPL with exception\"},{\"envelopes.lib/name\":\"Faust Envelope Library\"},{\"envelopes.lib/version\":\"0.0\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"instruments.lib/author\":\"Romain Michon (rmichon@ccrma.stanford.edu)\"},{\"instruments.lib/copyright\":\"Romain Michon\"},{\"instruments.lib/licence\":\"STK-4.3\"},{\"instruments.lib/name\":\"Faust-STK Tools Library\"},{\"instruments.lib/version\":\"1.0\"},{\"licence\":\"STK-4.3\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Clarinet\"},{\"noises.lib/name\":\"Faust Noise Generator Library\"},{\"noises.lib/version\":\"0.0\"},{\"oscillators.lib/name\":\"Faust Oscillator Library\"},{\"oscillators.lib/version\":\"0.0\"},{\"reference\":\"https://ccrma.stanford.edu/~jos/pasp/Woodwinds.html\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"},{\"version\":\"1.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"CLARINET\",\"items\":[{\"type\":\"hslider\",\"label\":\"ON/OFF\",\"address\":\"/CLARINET/ON/OFF\",\"index\":\"4\",\"meta\":[{\"1\":\"\"}],\"init\":\"0\",\"min\":\"0\",\"max\":\"1\",\"step\":\"1\"},{\"type\":\"hgroup\",\"label\":\"Instrument\",\"meta\":[{\"2\":\"\"}],\"items\":[{\"type\":\"hslider\",\"label\":\"Frequency\",\"address\":\"/CLARINET/Instrument/Frequency\",\"index\":\"144\",\"meta\":[{\"acc\":\"1 1 -14 0 10\"},{\"tooltip\":\"Tone frequency\"},{\"unit\":\"Hz\"}],\"init\":\"440\",\"min\":\"110\",\"max\":\"1300\",\"step\":\"0.01\"}]},{\"type\":\"hgroup\",\"label\":\"Parameters\",\"meta\":[{\"3\":\"\"}],\"items\":[{\"type\":\"hslider\",\"label\":\"Pressure\",\"address\":\"/CLARINET/Parameters/Pressure\",\"index\":\"0\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"}],\"init\":\"0.8\",\"min\":\"0.25\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"Breath Noise\",\"address\":\"/CLARINET/Parameters/Breath_Noise\",\"index\":\"64\",\"meta\":[{\"acc\":\"0 1 -10 0 12\"},{\"style\":\"knob\"}],\"init\":\"0.02\",\"min\":\"0\",\"max\":\"0.12\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"Instrument Stiffness\",\"address\":\"/CLARINET/Parameters/Instrument_Stiffness\",\"index\":\"164\",\"meta\":[{\"acc\":\"0 1 -12 0 12\"},{\"style\":\"knob\"}],\"init\":\"0.25\",\"min\":\"0.01\",\"max\":\"1\",\"step\":\"0.01\"}]}]}]}";
+	return "{\"name\":\"Clarinet\",\"version\":\"2.5.9\",\"options\":\"-scal -ftz 2\",\"size\":\"32940\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"Romain Michon\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"copyright\":\"Romain Michon (rmichon@ccrma.stanford.edu)\"},{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"description\":\"Nonlinear WaveGuide Clarinet\"},{\"envelopes.lib/author\":\"GRAME\"},{\"envelopes.lib/copyright\":\"GRAME\"},{\"envelopes.lib/license\":\"LGPL with exception\"},{\"envelopes.lib/name\":\"Faust Envelope Library\"},{\"envelopes.lib/version\":\"0.0\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"instruments.lib/author\":\"Romain Michon (rmichon@ccrma.stanford.edu)\"},{\"instruments.lib/copyright\":\"Romain Michon\"},{\"instruments.lib/licence\":\"STK-4.3\"},{\"instruments.lib/name\":\"Faust-STK Tools Library\"},{\"instruments.lib/version\":\"1.0\"},{\"licence\":\"STK-4.3\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Clarinet\"},{\"noises.lib/name\":\"Faust Noise Generator Library\"},{\"noises.lib/version\":\"0.0\"},{\"oscillators.lib/name\":\"Faust Oscillator Library\"},{\"oscillators.lib/version\":\"0.0\"},{\"reference\":\"https://ccrma.stanford.edu/~jos/pasp/Woodwinds.html\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"},{\"version\":\"1.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"CLARINET\",\"items\":[{\"type\":\"hslider\",\"label\":\"ON/OFF\",\"address\":\"/CLARINET/ON/OFF\",\"index\":\"4\",\"meta\":[{\"1\":\"\"}],\"init\":\"0\",\"min\":\"0\",\"max\":\"1\",\"step\":\"1\"},{\"type\":\"hgroup\",\"label\":\"Instrument\",\"meta\":[{\"2\":\"\"}],\"items\":[{\"type\":\"hslider\",\"label\":\"Frequency\",\"address\":\"/CLARINET/Instrument/Frequency\",\"index\":\"144\",\"meta\":[{\"acc\":\"1 1 -14 0 10\"},{\"tooltip\":\"Tone frequency\"},{\"unit\":\"Hz\"}],\"init\":\"440\",\"min\":\"110\",\"max\":\"1300\",\"step\":\"0.01\"}]},{\"type\":\"hgroup\",\"label\":\"Parameters\",\"meta\":[{\"3\":\"\"}],\"items\":[{\"type\":\"hslider\",\"label\":\"Pressure\",\"address\":\"/CLARINET/Parameters/Pressure\",\"index\":\"0\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"}],\"init\":\"0.8\",\"min\":\"0.25\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"Breath Noise\",\"address\":\"/CLARINET/Parameters/Breath_Noise\",\"index\":\"64\",\"meta\":[{\"acc\":\"0 1 -10 0 12\"},{\"style\":\"knob\"}],\"init\":\"0.02\",\"min\":\"0\",\"max\":\"0.12\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"Instrument Stiffness\",\"address\":\"/CLARINET/Parameters/Instrument_Stiffness\",\"index\":\"164\",\"meta\":[{\"acc\":\"0 1 -12 0 12\"},{\"style\":\"knob\"}],\"init\":\"0.25\",\"min\":\"0.01\",\"max\":\"1\",\"step\":\"0.01\"}]}]}]}";
 }
 /*
  faust2webaudio
@@ -6042,8 +5602,7 @@ faust.SClarinet = function (dsp_instance, context, buffer_size) {
 
     sp.parse_items = function (items)
     {
-        var i;
-        for (i = 0; i < items.length; i++) {
+        for (var i = 0; i < items.length; i++) {
             sp.parse_item(items[i]);
         }
     }
@@ -6317,28 +5876,62 @@ faust.SClarinet = function (dsp_instance, context, buffer_size) {
 */
 faust.createSClarinet = function(context, buffer_size, callback)
 {
-    var asm2wasm = { // special asm2wasm imports
-        "fmod": function(x, y) {
-            return x % y;
-        },
-        "log10": function(x) {
-            return window.Math.log(x) / window.Math.log(10);
-        },
-        "remainder": function(x, y) {
-            return x - window.Math.round(x/y) * y;
+    var importObject = {
+        env: {
+            memoryBase: 0,
+            tableBase: 0,
+                
+            absf: Math.abs,
+            acosf: Math.acos,
+            asinf: Math.asin,
+            atanf: Math.atan,
+            atan2f: Math.atan2,
+            ceilf: Math.ceil,
+            cosf: Math.cos,
+            expf: Math.exp,
+            floorf: Math.floor,
+            fmodf: function(x, y) { return x % y; },
+            logf: Math.log,
+            log10f: Math.log10,
+            max_f: Math.max,
+            min_f: Math.min,
+            remainderf: function(x, y) { return x - Math.round(x/y) * y; },
+            powf: Math.pow,
+            roundf: Math.fround,
+            sinf: Math.sin,
+            sqrtf: Math.sqrt,
+            tanf: Math.tan,
+                
+            abs: Math.abs,
+            acos: Math.acos,
+            asin: Math.asin,
+            atan: Math.atan,
+            atan2: Math.atan2,
+            ceil: Math.ceil,
+            cos: Math.cos,
+            exp: Math.exp,
+            floor: Math.floor,
+            fmod: function(x, y) { return x % y; },
+            log: Math.log,
+            log10: Math.log10,
+            max_: Math.max,
+            min_: Math.min,
+            remainder:function(x, y) { return x - Math.round(x/y) * y; },
+            pow: Math.pow,
+            round: Math.fround,
+            sin: Math.sin,
+            sqrt: Math.sqrt,
+            tan: Math.tan,
+                
+            table: new WebAssembly.Table({ initial: 0, element: 'anyfunc' })
         }
     };
-
-    var importObject = { imports: { print: arg => console.log(arg) } }
-
-    importObject["global.Math"] = window.Math;
-    importObject["asm2wasm"] = asm2wasm;
 
     fetch('SClarinet.wasm')
     .then(dsp_file => dsp_file.arrayBuffer())
     .then(dsp_bytes => WebAssembly.instantiate(dsp_bytes, importObject))
     .then(dsp_module => callback(faust.SClarinet(dsp_module.instance, context, buffer_size)))
-    .catch(function() { faust.error_msg = "Faust SClarinet cannot be loaded or compiled"; callback(null); });
+    .catch(function(error) { console.log(error); faust.error_msg = "Faust SClarinet cannot be loaded or compiled"; callback(null); });
 }
 </script>
 </head>
@@ -6355,7 +5948,6 @@ var isWebKitAudio = (typeof(webkitAudioContext) !== "undefined");
 var isWasm = (typeof(WebAssembly) !== "undefined");
 var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
 var audio_input = null;
-var midi_input = [];
 var SClarinet = null;
 var faustsvg = null;
 var output_handler = null;
@@ -6400,39 +5992,34 @@ function midiMessageReceived(ev)
     }
 }
 
-function onerrorcallback(error)
-{
+function onerrorcallback(error) {
     console.log(error);
 }
 
-function onsuccesscallbackJazz(access)
-{
-    var inputs = access.getInputs();
-    for (var i = 0; i < inputs.length; i++) {
-        var input = access.getInput(inputs[i]);
-        midi_input.push(input);
-        input.onmessage = midiMessageReceived;
-    }
-}
-
-function onsuccesscallbackStandard(access)
-{
-    for (var input of access.inputs.values()) {
-        midi_input.push(input);
-        input.onmidimessage = midiMessageReceived;
-        console.log(input.name);
-    }
-}
-
-function activateMIDIInput()
-{
-    console.log("activateMIDIInput");
-    if (typeof (navigator.requestMIDIAccess) !== "undefined") {
-        if (navigator.requestMIDIAccess() !== undefined) {
-            navigator.requestMIDIAccess().then(onsuccesscallbackStandard, onerrorcallback);
-        } else{
-            navigator.requestMIDIAccess(onsuccesscallbackJazz, onerrorcallback);
+function onsuccesscallbackStandard(access) {
+    
+    access.onstatechange = function(e) {
+        if (e.port.type === "input") {
+            if (e.port.state === "connected") {
+                console.log(e.port.name + " is connected");
+                e.port.onmidimessage = midiMessageReceived;
+            } else if (e.port.state  === "disconnected") {
+                console.log(e.port.name + " is disconnected");
+                e.port.onmidimessage = null;
+            }
         }
+    }
+    
+    for (var input of access.inputs.values()) {
+        input.onmidimessage = midiMessageReceived;
+        console.log(input.name + " is connected");
+    }
+}
+
+function activateMIDIInput() {
+    console.log("activateMIDIInput");
+    if (typeof(navigator.requestMIDIAccess) !== "undefined") {
+        navigator.requestMIDIAccess().then(onsuccesscallbackStandard, onerrorcallback);
     } else {
         alert("MIDI input cannot be activated, either your browser still does't have it, or you need to explicitly activate it.");
     }
@@ -6450,6 +6037,7 @@ function activateAudioInput()
         navigator.getUserMedia({audio: { echoCancellation: false }}, getDevice, function(e) {
                                alert('Error getting audio input');
                                console.log(e);
+                               audio_input = null;
                                });
     } else {
         alert('Audio input API not available');
@@ -6586,7 +6174,7 @@ setInterval(function() { if (SClarinet) saveSClarinet(); }, 1000);
 <div id="export" style="color:white; position: absolute; width:400px; padding:2px 2px 2px 2px; background-color:7F7F7F; visibility:hidden; ">
 
 <div id="centerDiv" style="position:relative; margin-right:auto; margin-left:auto; text-align:center;">
-<input id="exportUrl" style="color:white; border:0px; text-align:center; font-size:16px; background-color:transparent; outline: 0px solid transparent; position:relative; margin-left:auto; maring-right: auto; text-align:center;" contenteditable="true" value="http://faustservice.grame.fr" onkeyup="onEnterKey()"/>
+<input id="exportUrl" style="color:white; border:0px; text-align:center; font-size:16px; background-color:transparent; outline: 0px solid transparent; position:relative; margin-left:auto; maring-right: auto; text-align:center;" contenteditable="true" value="https://faustservice.grame.fr" onkeyup="onEnterKey()"/>
 </br>
 </br>
 </br>
