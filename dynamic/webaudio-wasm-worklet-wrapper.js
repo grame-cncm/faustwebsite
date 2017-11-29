@@ -926,8 +926,9 @@ var mydspProcessorString = `
     //Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
     try {
 		registerProcessor('mydsp', mydspProcessor);
-	} catch (error) {
-		console.log(error);
+	} catch (e) {
+		console.log(e);
+		faust.error_msg = e;
 	}
 
     // Compile wasm binary module
@@ -942,7 +943,13 @@ var mydspProcessorString = `
 
 faust.createDSPInstanceAux = function(factory, callback)
 {
-    audio_context = new AudioContext();
+	try {
+    	audio_context = new AudioContext();
+    } catch(e) {
+    	console.log(e);
+    	faust.error_msg = e;
+    	callback(null);
+    }
     
     // Create a generic AudioWorkletNode
     var audio_node = new AudioWorkletNode(audio_context, factory.name,
