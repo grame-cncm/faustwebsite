@@ -321,7 +321,7 @@ class ChromaticSoftHarpProcessor extends AudioWorkletProcessor {
         }
         
         // Compute
-        this.factory.compute(this.dsp, 128, this.ins, this.outs);
+        this.factory.compute(this.dsp, faust.buffer_size, this.ins, this.outs);
         
         // Copy outputs
         if (output !== undefined) {
@@ -335,14 +335,18 @@ class ChromaticSoftHarpProcessor extends AudioWorkletProcessor {
     }
 }
 
-// Hack : 11/28/17 , registerProcessor done *before* compile the WASM module
-registerProcessor('ChromaticSoftHarp', ChromaticSoftHarpProcessor);
+// Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
+try {
+	registerProcessor('ChromaticSoftHarp', ChromaticSoftHarpProcessor);
+} catch (error) {
+	console.log(error);
+}
 
 // Compile wasm binary module
 WebAssembly.instantiate(faust.atob(getBase64CodeChromaticSoftHarp()), faust.importObject)
             .then(dsp_module => {
                   faust.ChromaticSoftHarp_instance = dsp_module.instance;
-                  // Hack : 11/28/17 , registerProcessor done *before* compile the WASM module
+                  // Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
                   //registerProcessor('ChromaticSoftHarp', ChromaticSoftHarpProcessor);
             })
             .catch(function(error) { console.log(error); console.log("Faust ChromaticSoftHarp cannot be loaded or compiled"); });

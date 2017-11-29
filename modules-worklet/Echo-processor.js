@@ -1,13 +1,13 @@
 
 /*
-Code generated with Faust version 2.5.7
+Code generated with Faust version 2.5.9
 Compilation options: -scal -ftz 2
 */
 
 function getJSONEcho() {
-	return "{\"name\":\"Echo\",\"version\":\"2.5.7\",\"options\":\"-scal -ftz 2\",\"size\":\"262168\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"name\":\"Echo\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Echo\",\"items\":[{\"type\":\"hslider\",\"label\":\"Echo Delay\",\"address\":\"/Echo/Echo_Delay\",\"index\":\"12\",\"meta\":[{\"unit\":\"s\"}],\"init\":\"0.5\",\"min\":\"0.01\",\"max\":\"1\",\"step\":\"0.001\"},{\"type\":\"hslider\",\"label\":\"Echo Intensity (Feedback)\",\"address\":\"/Echo/Echo_Intensity_(Feedback)\",\"index\":\"0\",\"meta\":[{\"acc\":\"0 1 -10 0 10\"},{\"style\":\"knob\"}],\"init\":\"0.001\",\"min\":\"0.001\",\"max\":\"0.65\",\"step\":\"0.001\"}]}]}";
+	return "{\"name\":\"Echo\",\"version\":\"2.5.9\",\"options\":\"-scal -ftz 2\",\"size\":\"262168\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"name\":\"Echo\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Echo\",\"items\":[{\"type\":\"hslider\",\"label\":\"Echo Delay\",\"address\":\"/Echo/Echo_Delay\",\"index\":\"12\",\"meta\":[{\"unit\":\"s\"}],\"init\":\"0.5\",\"min\":\"0.01\",\"max\":\"1\",\"step\":\"0.001\"},{\"type\":\"hslider\",\"label\":\"Echo Intensity (Feedback)\",\"address\":\"/Echo/Echo_Intensity_(Feedback)\",\"index\":\"0\",\"meta\":[{\"acc\":\"0 1 -10 0 10\"},{\"style\":\"knob\"}],\"init\":\"0.001\",\"min\":\"0.001\",\"max\":\"0.65\",\"step\":\"0.001\"}]}]}";
 }
-function getBase64CodeEcho() { return "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"; }
+function getBase64CodeEcho() { return "AGFzbQEAAAABy4CAgAAOYAJ/fwBgBH9/f38AYAF/AX9gAX8Bf2ACf38BfWABfwF/YAJ/fwBgAX8AYAJ/fwBgAn9/AGABfwBgAn9/AX9gAn9/AX9gA39/fQACgYCAgAAAA4+AgIAADgABAgMEBQYHCAkKCwwNBYeAgIAAAQCIgICAAAe6gYCAAAwHY29tcHV0ZQABDGdldE51bUlucHV0cwACDWdldE51bU91dHB1dHMAAw1nZXRQYXJhbVZhbHVlAAQNZ2V0U2FtcGxlUmF0ZQAFBGluaXQABg1pbnN0YW5jZUNsZWFyAAcRaW5zdGFuY2VDb25zdGFudHMACAxpbnN0YW5jZUluaXQACRppbnN0YW5jZVJlc2V0VXNlckludGVyZmFjZQAKDXNldFBhcmFtVmFsdWUADQZtZW1vcnkCAArthICAAA6CgICAAAALsYKAgAACBH8DfUEAIQRBACEFQwAAAAAhCEEAIQZBACEHQwAAAAAhCUMAAAAAIQogAkEAaigCACEEIANBAGooAgAhBUNvEoM6QQAqAgCUIQhDAEQsR0MK1yM8QwAAgD9BACoCDJaXlKhBAWohBkEAIQcDQAJAIAhDd75/P0EAKgIIlJIhCUEAIAlDAAAAACAJvEGAgID8B3EbOAIEIAQgB2oqAgBBACoCBEEUQQAoAhAgBmtB//8DcUECdGoqAgCUkiEKQRRBACgCEEH//wNxQQJ0aiAKQwAAAAAgCrxBgICA/AdxGzgCACAFIAdqQRRBACgCEEEAa0H//wNxQQJ0aioCADgCAEEAQQAqAgQ4AghBAEEAKAIQQQFqNgIQIAdBBGohByAHQQQgAWxIBEAMAgwBCwsLC4WAgIAAAEEBDwuFgICAAABBAQ8Li4CAgAAAIAAgAWoqAgAPC4qAgIAAAEEAKAKUgBAPC46AgIAAACAAIAEQACAAIAEQCQvvgICAAAECf0EAIQFBACECQQAhAQNAAkBBBCABQQJ0akMAAAAAOAIAIAFBAWohASABQQJIBEAMAgwBCwsLQQBBADYCEEEAIQIDQAJAQRQgAkECdGpDAAAAADgCACACQQFqIQIgAkGAgARIBEAMAgwBCwsLC4uAgIAAAEEAIAE2ApSAEAuQgICAAAAgACABEAggABAKIAAQBwuWgICAAABBAENvEoM6OAIAQQBDAAAAPzgCDAuNgICAAAAgASAAIAAgAUgbDwuNgICAAAAgACABIAAgAUgbDwuMgICAAAAgACABaiACOAIACwv+hICAAAEAQQAL9wR7Im5hbWUiOiJFY2hvIiwidmVyc2lvbiI6IjIuNS45Iiwib3B0aW9ucyI6Ii1zY2FsIC1mdHogMiIsInNpemUiOiIyNjIxNjgiLCJpbnB1dHMiOiIxIiwib3V0cHV0cyI6IjEiLCJtZXRhIjpbeyJuYW1lIjoiRWNobyJ9LHsic2lnbmFscy5saWIvbmFtZSI6IkZhdXN0IFNpZ25hbCBSb3V0aW5nIExpYnJhcnkifSx7InNpZ25hbHMubGliL3ZlcnNpb24iOiIwLjAifV0sInVpIjpbeyJ0eXBlIjoidmdyb3VwIiwibGFiZWwiOiJFY2hvIiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJFY2hvIERlbGF5IiwiYWRkcmVzcyI6Ii9FY2hvL0VjaG9fRGVsYXkiLCJpbmRleCI6IjEyIiwibWV0YSI6W3sidW5pdCI6InMifV0sImluaXQiOiIwLjUiLCJtaW4iOiIwLjAxIiwibWF4IjoiMSIsInN0ZXAiOiIwLjAwMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6IkVjaG8gSW50ZW5zaXR5IChGZWVkYmFjaykiLCJhZGRyZXNzIjoiL0VjaG8vRWNob19JbnRlbnNpdHlfKEZlZWRiYWNrKSIsImluZGV4IjoiMCIsIm1ldGEiOlt7ImFjYyI6IjAgMSAtMTAgMCAxMCJ9LHsic3R5bGUiOiJrbm9iIn1dLCJpbml0IjoiMC4wMDEiLCJtaW4iOiIwLjAwMSIsIm1heCI6IjAuNjUiLCJzdGVwIjoiMC4wMDEifV19XX0w"; }
 
 /*
  faust2wasm
@@ -321,7 +321,7 @@ class EchoProcessor extends AudioWorkletProcessor {
         }
         
         // Compute
-        this.factory.compute(this.dsp, 128, this.ins, this.outs);
+        this.factory.compute(this.dsp, faust.buffer_size, this.ins, this.outs);
         
         // Copy outputs
         if (output !== undefined) {
@@ -335,10 +335,18 @@ class EchoProcessor extends AudioWorkletProcessor {
     }
 }
 
+// Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
+try {
+	registerProcessor('Echo', EchoProcessor);
+} catch (error) {
+	console.log(error);
+}
+
 // Compile wasm binary module
 WebAssembly.instantiate(faust.atob(getBase64CodeEcho()), faust.importObject)
             .then(dsp_module => {
                   faust.Echo_instance = dsp_module.instance;
-                  registerProcessor('Echo', EchoProcessor);
+                  // Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
+                  //registerProcessor('Echo', EchoProcessor);
             })
             .catch(function(error) { console.log(error); console.log("Faust Echo cannot be loaded or compiled"); });

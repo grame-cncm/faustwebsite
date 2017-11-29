@@ -214,18 +214,56 @@ faust.getErrorMessage = function() { return faust.error_msg; };
 // Audio buffer size
 faust.buffer_size = 128;
 
-faust.asm2wasm = { // special asm2wasm imports
-    "fmod": function(x, y) {
-        return x % y;
-    },
-    "remainder": function(x, y) {
-        return x - Math.round(x/y) * y;
+faust.importObject = {
+    env: {
+        memoryBase: 0,
+        tableBase: 0,
+            
+        absf: Math.abs,
+        acosf: Math.acos,
+        asinf: Math.asin,
+        atanf: Math.atan,
+        atan2f: Math.atan2,
+        ceilf: Math.ceil,
+        cosf: Math.cos,
+        expf: Math.exp,
+        floorf: Math.floor,
+        fmodf: function(x, y) { return x % y; },
+        logf: Math.log,
+        log10f: Math.log10,
+        max_f: Math.max,
+        min_f: Math.min,
+        remainderf: function(x, y) { return x - Math.round(x/y) * y; },
+        powf: Math.pow,
+        roundf: Math.fround,
+        sinf: Math.sin,
+        sqrtf: Math.sqrt,
+        tanf: Math.tan,
+            
+        abs: Math.abs,
+        acos: Math.acos,
+        asin: Math.asin,
+        atan: Math.atan,
+        atan2: Math.atan2,
+        ceil: Math.ceil,
+        cos: Math.cos,
+        exp: Math.exp,
+        floor: Math.floor,
+        fmod: function(x, y) { return x % y; },
+        log: Math.log,
+        log10: Math.log10,
+        max_: Math.max,
+        min_: Math.min,
+        remainder: function(x, y) { return x - Math.round(x/y) * y; },
+        pow: Math.pow,
+        round: Math.fround,
+        sin: Math.sin,
+        sqrt: Math.sqrt,
+        tan: Math.tan,
+            
+        table: new WebAssembly.Table({ initial: 0, element: 'anyfunc' })
     }
-}
-
-faust.importObject = { imports: { print: arg => console.log(arg) } }
-faust.importObject["global.Math"] = Math;
-faust.importObject["asm2wasm"] = faust.asm2wasm;
+};
 
 faust.getLibFaustVersion = function () {
     return faust_module.Pointer_stringify(faust.getCLibFaustVersion());
@@ -274,7 +312,7 @@ faust.createDSPFactoryAux = function (code, argv, internal_memory, callback) {
     }
     
     try {
-        var time1 = performance.now();
+		var time1 = performance.now();
         
         var module_code_ptr = faust.createWasmCDSPFactoryFromString(name_ptr, code_ptr, argv.length, argv_ptr, error_msg_ptr, internal_memory);
         
@@ -615,18 +653,56 @@ var mydspProcessorString = `
     // Audio buffer size
     faust.buffer_size = 128;
 
-    faust.asm2wasm = { // special asm2wasm imports
-        "fmod": function(x, y) {
-            return x % y;
-        },
-        "remainder": function(x, y) {
-            return x - Math.round(x/y) * y;
+    faust.importObject = {
+        env: {
+            memoryBase: 0,
+            tableBase: 0,
+                
+            absf: Math.abs,
+            acosf: Math.acos,
+            asinf: Math.asin,
+            atanf: Math.atan,
+            atan2f: Math.atan2,
+            ceilf: Math.ceil,
+            cosf: Math.cos,
+            expf: Math.exp,
+            floorf: Math.floor,
+            fmodf: function(x, y) { return x % y; },
+            logf: Math.log,
+            log10f: Math.log10,
+            max_f: Math.max,
+            min_f: Math.min,
+            remainderf: function(x, y) { return x - Math.round(x/y) * y; },
+            powf: Math.pow,
+            roundf: Math.fround,
+            sinf: Math.sin,
+            sqrtf: Math.sqrt,
+            tanf: Math.tan,
+                
+            abs: Math.abs,
+            acos: Math.acos,
+            asin: Math.asin,
+            atan: Math.atan,
+            atan2: Math.atan2,
+            ceil: Math.ceil,
+            cos: Math.cos,
+            exp: Math.exp,
+            floor: Math.floor,
+            fmod: function(x, y) { return x % y; },
+            log: Math.log,
+            log10: Math.log10,
+            max_: Math.max,
+            min_: Math.min,
+            remainder:function(x, y) { return x - Math.round(x/y) * y; },
+            pow: Math.pow,
+            round: Math.fround,
+            sin: Math.sin,
+            sqrt: Math.sqrt,
+            tan: Math.tan,
+                
+            table: new WebAssembly.Table({ initial: 0, element: 'anyfunc' })
         }
-    }
-
-    faust.importObject = { imports: { print: arg => console.log(arg) } }
-    faust.importObject["global.Math"] = Math;
-    faust.importObject["asm2wasm"] = faust.asm2wasm;
+    };
 
     // WebAssembly instance
     faust.mydsp_instance = null;
@@ -846,12 +922,20 @@ var mydspProcessorString = `
             return true;
         }
     }
+    
+    //Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
+    try {
+		registerProcessor('mydsp', mydspProcessor);
+	} catch (error) {
+		console.log(error);
+	}
 
     // Compile wasm binary module
     WebAssembly.instantiate(faust.atob(getBase64Codemydsp()), faust.importObject)
                 .then(dsp_module => {
                       faust.mydsp_instance = dsp_module.instance;
-                      registerProcessor('mydsp', mydspProcessor);
+                      // Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
+                      //registerProcessor('mydsp', mydspProcessor);
                 })
                 .catch(function(error) { console.log(error); console.log("Faust mydsp cannot be loaded or compiled"); });
 `;
@@ -891,6 +975,7 @@ faust.createDSPInstance = function(factory, callback)
         var mydspProcessorString3 = mydspProcessorString2.replace(re3, factory.getBase64Code());
         var url = window.URL.createObjectURL(new Blob([mydspProcessorString3], { type: 'text/javascript' }));
         
+        /*
         // The main global scope
         var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
         AWContext.addModule(url)
@@ -901,6 +986,22 @@ faust.createDSPInstance = function(factory, callback)
               faust.createDSPInstanceAux(factory, callback);
         })
         .catch(function(error) { console.log(error); console.log("Faust mydsp cannot be loaded or compiled"); alert(error); });
+    	*/
+    	
+    	// Hack : 11/28/17, add an explicit timeout
+    	// The main global scope
+        var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
+        AWContext.addModule(url)
+        .then(function () {
+        	setTimeout(function () {
+              	// Processor has been registered
+              	factory.registered = true;
+              	// Create audio node
+              	faust.createDSPInstanceAux(factory, callback);
+            }, 500)
+        })
+        .catch(function(error) { console.log(error); console.log("Faust mydsp cannot be loaded or compiled"); alert(error); });
+    	
     } else {      
         // Create audio node
         faust.createDSPInstanceAux(factory, callback);
