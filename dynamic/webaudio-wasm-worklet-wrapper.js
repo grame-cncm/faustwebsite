@@ -946,8 +946,6 @@ faust.createDSPInstanceAux = function(factory, callback)
     	audio_context = new AudioContext();
     } catch(e) {
     	console.log(e);
-    	faust.error_msg = e;
-    	callback(null);
     }
     
     // Create a generic AudioWorkletNode
