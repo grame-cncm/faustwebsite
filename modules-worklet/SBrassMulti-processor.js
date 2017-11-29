@@ -335,18 +335,12 @@ class SBrassMultiProcessor extends AudioWorkletProcessor {
     }
 }
 
-// Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
+// Synchronously compile and instantiate the WASM module
 try {
+	let wasm_module = new WebAssembly.Module(faust.atob(getBase64CodeSBrassMulti()));
+	faust.SBrassMulti_instance = new WebAssembly.Instance(wasm_module, faust.importObject);
 	registerProcessor('SBrassMulti', SBrassMultiProcessor);
-} catch (error) {
-	console.log(error);
+} catch (e) {
+	console.log(e); console.log("Faust SBrassMulti cannot be loaded or compiled")
 }
 
-// Compile wasm binary module
-WebAssembly.instantiate(faust.atob(getBase64CodeSBrassMulti()), faust.importObject)
-            .then(dsp_module => {
-                  faust.SBrassMulti_instance = dsp_module.instance;
-                  // Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
-                  //registerProcessor('SBrassMulti', SBrassMultiProcessor);
-            })
-            .catch(function(error) { console.log(error); console.log("Faust SBrassMulti cannot be loaded or compiled"); });

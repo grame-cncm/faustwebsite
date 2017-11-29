@@ -335,18 +335,12 @@ class TibetanBowlProcessor extends AudioWorkletProcessor {
     }
 }
 
-// Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
+// Synchronously compile and instantiate the WASM module
 try {
+	let wasm_module = new WebAssembly.Module(faust.atob(getBase64CodeTibetanBowl()));
+	faust.TibetanBowl_instance = new WebAssembly.Instance(wasm_module, faust.importObject);
 	registerProcessor('TibetanBowl', TibetanBowlProcessor);
-} catch (error) {
-	console.log(error);
+} catch (e) {
+	console.log(e); console.log("Faust TibetanBowl cannot be loaded or compiled")
 }
 
-// Compile wasm binary module
-WebAssembly.instantiate(faust.atob(getBase64CodeTibetanBowl()), faust.importObject)
-            .then(dsp_module => {
-                  faust.TibetanBowl_instance = dsp_module.instance;
-                  // Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
-                  //registerProcessor('TibetanBowl', TibetanBowlProcessor);
-            })
-            .catch(function(error) { console.log(error); console.log("Faust TibetanBowl cannot be loaded or compiled"); });

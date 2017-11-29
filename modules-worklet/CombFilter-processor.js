@@ -335,18 +335,12 @@ class CombFilterProcessor extends AudioWorkletProcessor {
     }
 }
 
-// Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
+// Synchronously compile and instantiate the WASM module
 try {
+	let wasm_module = new WebAssembly.Module(faust.atob(getBase64CodeCombFilter()));
+	faust.CombFilter_instance = new WebAssembly.Instance(wasm_module, faust.importObject);
 	registerProcessor('CombFilter', CombFilterProcessor);
-} catch (error) {
-	console.log(error);
+} catch (e) {
+	console.log(e); console.log("Faust CombFilter cannot be loaded or compiled")
 }
 
-// Compile wasm binary module
-WebAssembly.instantiate(faust.atob(getBase64CodeCombFilter()), faust.importObject)
-            .then(dsp_module => {
-                  faust.CombFilter_instance = dsp_module.instance;
-                  // Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
-                  //registerProcessor('CombFilter', CombFilterProcessor);
-            })
-            .catch(function(error) { console.log(error); console.log("Faust CombFilter cannot be loaded or compiled"); });

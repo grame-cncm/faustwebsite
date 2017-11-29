@@ -5544,7 +5544,6 @@ class STinkleNode extends AudioWorkletNode {
     
 }
 
-/*
 faust.createSTinkle = function(callback)
 {
     // The main global scope
@@ -5557,24 +5556,6 @@ faust.createSTinkle = function(callback)
     })
     .catch(function(error) { console.log(error); console.log("Faust STinkle cannot be loaded or compiled"); });
 }
-*/
-
-// Hack : 11/28/17, add an explicit timeout
-faust.createSTinkle = function(callback)
-{
-    // The main global scope
-    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
-    console.log(AWContext);
-    AWContext.addModule("STinkle-processor.js")
-    .then(function () {
-    	setTimeout(function () {
-         	audio_context = new AudioContext();
-         	callback(new STinkleNode(audio_context, {}));
-    	}, 500)
-    })
-	.catch(function(error) { console.log(error); console.log("Faust STinkle cannot be loaded or compiled"); });
-}
-
 
 </script>
 </head>

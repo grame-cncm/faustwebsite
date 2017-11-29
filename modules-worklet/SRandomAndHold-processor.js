@@ -335,18 +335,12 @@ class SRandomAndHoldProcessor extends AudioWorkletProcessor {
     }
 }
 
-// Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
+// Synchronously compile and instantiate the WASM module
 try {
+	let wasm_module = new WebAssembly.Module(faust.atob(getBase64CodeSRandomAndHold()));
+	faust.SRandomAndHold_instance = new WebAssembly.Instance(wasm_module, faust.importObject);
 	registerProcessor('SRandomAndHold', SRandomAndHoldProcessor);
-} catch (error) {
-	console.log(error);
+} catch (e) {
+	console.log(e); console.log("Faust SRandomAndHold cannot be loaded or compiled")
 }
 
-// Compile wasm binary module
-WebAssembly.instantiate(faust.atob(getBase64CodeSRandomAndHold()), faust.importObject)
-            .then(dsp_module => {
-                  faust.SRandomAndHold_instance = dsp_module.instance;
-                  // Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
-                  //registerProcessor('SRandomAndHold', SRandomAndHoldProcessor);
-            })
-            .catch(function(error) { console.log(error); console.log("Faust SRandomAndHold cannot be loaded or compiled"); });

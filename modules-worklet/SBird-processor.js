@@ -335,18 +335,12 @@ class SBirdProcessor extends AudioWorkletProcessor {
     }
 }
 
-// Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
+// Synchronously compile and instantiate the WASM module
 try {
+	let wasm_module = new WebAssembly.Module(faust.atob(getBase64CodeSBird()));
+	faust.SBird_instance = new WebAssembly.Instance(wasm_module, faust.importObject);
 	registerProcessor('SBird', SBirdProcessor);
-} catch (error) {
-	console.log(error);
+} catch (e) {
+	console.log(e); console.log("Faust SBird cannot be loaded or compiled")
 }
 
-// Compile wasm binary module
-WebAssembly.instantiate(faust.atob(getBase64CodeSBird()), faust.importObject)
-            .then(dsp_module => {
-                  faust.SBird_instance = dsp_module.instance;
-                  // Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
-                  //registerProcessor('SBird', SBirdProcessor);
-            })
-            .catch(function(error) { console.log(error); console.log("Faust SBird cannot be loaded or compiled"); });

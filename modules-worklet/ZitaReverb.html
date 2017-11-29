@@ -5544,7 +5544,6 @@ class ZitaReverbNode extends AudioWorkletNode {
     
 }
 
-/*
 faust.createZitaReverb = function(callback)
 {
     // The main global scope
@@ -5557,24 +5556,6 @@ faust.createZitaReverb = function(callback)
     })
     .catch(function(error) { console.log(error); console.log("Faust ZitaReverb cannot be loaded or compiled"); });
 }
-*/
-
-// Hack : 11/28/17, add an explicit timeout
-faust.createZitaReverb = function(callback)
-{
-    // The main global scope
-    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
-    console.log(AWContext);
-    AWContext.addModule("ZitaReverb-processor.js")
-    .then(function () {
-    	setTimeout(function () {
-         	audio_context = new AudioContext();
-         	callback(new ZitaReverbNode(audio_context, {}));
-    	}, 500)
-    })
-	.catch(function(error) { console.log(error); console.log("Faust ZitaReverb cannot be loaded or compiled"); });
-}
-
 
 </script>
 </head>

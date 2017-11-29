@@ -335,18 +335,12 @@ class SModulation3Processor extends AudioWorkletProcessor {
     }
 }
 
-// Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
+// Synchronously compile and instantiate the WASM module
 try {
+	let wasm_module = new WebAssembly.Module(faust.atob(getBase64CodeSModulation3()));
+	faust.SModulation3_instance = new WebAssembly.Instance(wasm_module, faust.importObject);
 	registerProcessor('SModulation3', SModulation3Processor);
-} catch (error) {
-	console.log(error);
+} catch (e) {
+	console.log(e); console.log("Faust SModulation3 cannot be loaded or compiled")
 }
 
-// Compile wasm binary module
-WebAssembly.instantiate(faust.atob(getBase64CodeSModulation3()), faust.importObject)
-            .then(dsp_module => {
-                  faust.SModulation3_instance = dsp_module.instance;
-                  // Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
-                  //registerProcessor('SModulation3', SModulation3Processor);
-            })
-            .catch(function(error) { console.log(error); console.log("Faust SModulation3 cannot be loaded or compiled"); });

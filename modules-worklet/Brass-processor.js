@@ -335,18 +335,12 @@ class BrassProcessor extends AudioWorkletProcessor {
     }
 }
 
-// Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
+// Synchronously compile and instantiate the WASM module
 try {
+	let wasm_module = new WebAssembly.Module(faust.atob(getBase64CodeBrass()));
+	faust.Brass_instance = new WebAssembly.Instance(wasm_module, faust.importObject);
 	registerProcessor('Brass', BrassProcessor);
-} catch (error) {
-	console.log(error);
+} catch (e) {
+	console.log(e); console.log("Faust Brass cannot be loaded or compiled")
 }
 
-// Compile wasm binary module
-WebAssembly.instantiate(faust.atob(getBase64CodeBrass()), faust.importObject)
-            .then(dsp_module => {
-                  faust.Brass_instance = dsp_module.instance;
-                  // Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
-                  //registerProcessor('Brass', BrassProcessor);
-            })
-            .catch(function(error) { console.log(error); console.log("Faust Brass cannot be loaded or compiled"); });

@@ -335,18 +335,12 @@ class ZitaReverbProcessor extends AudioWorkletProcessor {
     }
 }
 
-// Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
+// Synchronously compile and instantiate the WASM module
 try {
+	let wasm_module = new WebAssembly.Module(faust.atob(getBase64CodeZitaReverb()));
+	faust.ZitaReverb_instance = new WebAssembly.Instance(wasm_module, faust.importObject);
 	registerProcessor('ZitaReverb', ZitaReverbProcessor);
-} catch (error) {
-	console.log(error);
+} catch (e) {
+	console.log(e); console.log("Faust ZitaReverb cannot be loaded or compiled")
 }
 
-// Compile wasm binary module
-WebAssembly.instantiate(faust.atob(getBase64CodeZitaReverb()), faust.importObject)
-            .then(dsp_module => {
-                  faust.ZitaReverb_instance = dsp_module.instance;
-                  // Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
-                  //registerProcessor('ZitaReverb', ZitaReverbProcessor);
-            })
-            .catch(function(error) { console.log(error); console.log("Faust ZitaReverb cannot be loaded or compiled"); });

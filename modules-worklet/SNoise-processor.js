@@ -335,18 +335,12 @@ class SNoiseProcessor extends AudioWorkletProcessor {
     }
 }
 
-// Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
+// Synchronously compile and instantiate the WASM module
 try {
+	let wasm_module = new WebAssembly.Module(faust.atob(getBase64CodeSNoise()));
+	faust.SNoise_instance = new WebAssembly.Instance(wasm_module, faust.importObject);
 	registerProcessor('SNoise', SNoiseProcessor);
-} catch (error) {
-	console.log(error);
+} catch (e) {
+	console.log(e); console.log("Faust SNoise cannot be loaded or compiled")
 }
 
-// Compile wasm binary module
-WebAssembly.instantiate(faust.atob(getBase64CodeSNoise()), faust.importObject)
-            .then(dsp_module => {
-                  faust.SNoise_instance = dsp_module.instance;
-                  // Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
-                  //registerProcessor('SNoise', SNoiseProcessor);
-            })
-            .catch(function(error) { console.log(error); console.log("Faust SNoise cannot be loaded or compiled"); });

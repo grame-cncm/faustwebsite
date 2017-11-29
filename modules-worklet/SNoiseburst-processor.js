@@ -335,18 +335,12 @@ class SNoiseburstProcessor extends AudioWorkletProcessor {
     }
 }
 
-// Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
+// Synchronously compile and instantiate the WASM module
 try {
+	let wasm_module = new WebAssembly.Module(faust.atob(getBase64CodeSNoiseburst()));
+	faust.SNoiseburst_instance = new WebAssembly.Instance(wasm_module, faust.importObject);
 	registerProcessor('SNoiseburst', SNoiseburstProcessor);
-} catch (error) {
-	console.log(error);
+} catch (e) {
+	console.log(e); console.log("Faust SNoiseburst cannot be loaded or compiled")
 }
 
-// Compile wasm binary module
-WebAssembly.instantiate(faust.atob(getBase64CodeSNoiseburst()), faust.importObject)
-            .then(dsp_module => {
-                  faust.SNoiseburst_instance = dsp_module.instance;
-                  // Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
-                  //registerProcessor('SNoiseburst', SNoiseburstProcessor);
-            })
-            .catch(function(error) { console.log(error); console.log("Faust SNoiseburst cannot be loaded or compiled"); });

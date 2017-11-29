@@ -335,18 +335,12 @@ class FreeverbProcessor extends AudioWorkletProcessor {
     }
 }
 
-// Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
+// Synchronously compile and instantiate the WASM module
 try {
+	let wasm_module = new WebAssembly.Module(faust.atob(getBase64CodeFreeverb()));
+	faust.Freeverb_instance = new WebAssembly.Instance(wasm_module, faust.importObject);
 	registerProcessor('Freeverb', FreeverbProcessor);
-} catch (error) {
-	console.log(error);
+} catch (e) {
+	console.log(e); console.log("Faust Freeverb cannot be loaded or compiled")
 }
 
-// Compile wasm binary module
-WebAssembly.instantiate(faust.atob(getBase64CodeFreeverb()), faust.importObject)
-            .then(dsp_module => {
-                  faust.Freeverb_instance = dsp_module.instance;
-                  // Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
-                  //registerProcessor('Freeverb', FreeverbProcessor);
-            })
-            .catch(function(error) { console.log(error); console.log("Faust Freeverb cannot be loaded or compiled"); });

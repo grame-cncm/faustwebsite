@@ -335,18 +335,12 @@ class SLimiterProcessor extends AudioWorkletProcessor {
     }
 }
 
-// Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
+// Synchronously compile and instantiate the WASM module
 try {
+	let wasm_module = new WebAssembly.Module(faust.atob(getBase64CodeSLimiter()));
+	faust.SLimiter_instance = new WebAssembly.Instance(wasm_module, faust.importObject);
 	registerProcessor('SLimiter', SLimiterProcessor);
-} catch (error) {
-	console.log(error);
+} catch (e) {
+	console.log(e); console.log("Faust SLimiter cannot be loaded or compiled")
 }
 
-// Compile wasm binary module
-WebAssembly.instantiate(faust.atob(getBase64CodeSLimiter()), faust.importObject)
-            .then(dsp_module => {
-                  faust.SLimiter_instance = dsp_module.instance;
-                  // Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
-                  //registerProcessor('SLimiter', SLimiterProcessor);
-            })
-            .catch(function(error) { console.log(error); console.log("Faust SLimiter cannot be loaded or compiled"); });

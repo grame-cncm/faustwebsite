@@ -335,18 +335,12 @@ class STunedBarProcessor extends AudioWorkletProcessor {
     }
 }
 
-// Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
+// Synchronously compile and instantiate the WASM module
 try {
+	let wasm_module = new WebAssembly.Module(faust.atob(getBase64CodeSTunedBar()));
+	faust.STunedBar_instance = new WebAssembly.Instance(wasm_module, faust.importObject);
 	registerProcessor('STunedBar', STunedBarProcessor);
-} catch (error) {
-	console.log(error);
+} catch (e) {
+	console.log(e); console.log("Faust STunedBar cannot be loaded or compiled")
 }
 
-// Compile wasm binary module
-WebAssembly.instantiate(faust.atob(getBase64CodeSTunedBar()), faust.importObject)
-            .then(dsp_module => {
-                  faust.STunedBar_instance = dsp_module.instance;
-                  // Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
-                  //registerProcessor('STunedBar', STunedBarProcessor);
-            })
-            .catch(function(error) { console.log(error); console.log("Faust STunedBar cannot be loaded or compiled"); });

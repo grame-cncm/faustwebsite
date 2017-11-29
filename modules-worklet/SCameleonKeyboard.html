@@ -5544,7 +5544,6 @@ class SCameleonKeyboardNode extends AudioWorkletNode {
     
 }
 
-/*
 faust.createSCameleonKeyboard = function(callback)
 {
     // The main global scope
@@ -5557,24 +5556,6 @@ faust.createSCameleonKeyboard = function(callback)
     })
     .catch(function(error) { console.log(error); console.log("Faust SCameleonKeyboard cannot be loaded or compiled"); });
 }
-*/
-
-// Hack : 11/28/17, add an explicit timeout
-faust.createSCameleonKeyboard = function(callback)
-{
-    // The main global scope
-    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
-    console.log(AWContext);
-    AWContext.addModule("SCameleonKeyboard-processor.js")
-    .then(function () {
-    	setTimeout(function () {
-         	audio_context = new AudioContext();
-         	callback(new SCameleonKeyboardNode(audio_context, {}));
-    	}, 500)
-    })
-	.catch(function(error) { console.log(error); console.log("Faust SCameleonKeyboard cannot be loaded or compiled"); });
-}
-
 
 </script>
 </head>

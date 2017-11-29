@@ -335,18 +335,12 @@ class RingModulationProcessor extends AudioWorkletProcessor {
     }
 }
 
-// Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
+// Synchronously compile and instantiate the WASM module
 try {
+	let wasm_module = new WebAssembly.Module(faust.atob(getBase64CodeRingModulation()));
+	faust.RingModulation_instance = new WebAssembly.Instance(wasm_module, faust.importObject);
 	registerProcessor('RingModulation', RingModulationProcessor);
-} catch (error) {
-	console.log(error);
+} catch (e) {
+	console.log(e); console.log("Faust RingModulation cannot be loaded or compiled")
 }
 
-// Compile wasm binary module
-WebAssembly.instantiate(faust.atob(getBase64CodeRingModulation()), faust.importObject)
-            .then(dsp_module => {
-                  faust.RingModulation_instance = dsp_module.instance;
-                  // Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
-                  //registerProcessor('RingModulation', RingModulationProcessor);
-            })
-            .catch(function(error) { console.log(error); console.log("Faust RingModulation cannot be loaded or compiled"); });

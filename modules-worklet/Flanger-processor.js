@@ -335,18 +335,12 @@ class FlangerProcessor extends AudioWorkletProcessor {
     }
 }
 
-// Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
+// Synchronously compile and instantiate the WASM module
 try {
+	let wasm_module = new WebAssembly.Module(faust.atob(getBase64CodeFlanger()));
+	faust.Flanger_instance = new WebAssembly.Instance(wasm_module, faust.importObject);
 	registerProcessor('Flanger', FlangerProcessor);
-} catch (error) {
-	console.log(error);
+} catch (e) {
+	console.log(e); console.log("Faust Flanger cannot be loaded or compiled")
 }
 
-// Compile wasm binary module
-WebAssembly.instantiate(faust.atob(getBase64CodeFlanger()), faust.importObject)
-            .then(dsp_module => {
-                  faust.Flanger_instance = dsp_module.instance;
-                  // Hack : 11/28/17, registerProcessor done *before* compilation of the WASM module
-                  //registerProcessor('Flanger', FlangerProcessor);
-            })
-            .catch(function(error) { console.log(error); console.log("Faust Flanger cannot be loaded or compiled"); });
