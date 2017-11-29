@@ -928,7 +928,6 @@ var mydspProcessorString = `
 		registerProcessor('mydsp', mydspProcessor);
 	} catch (e) {
 		console.log(e);
-		faust.error_msg = e;
 	}
 
     // Compile wasm binary module
