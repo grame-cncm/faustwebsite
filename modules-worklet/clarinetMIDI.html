@@ -5548,7 +5548,6 @@ class clarinetMIDI_polyNode extends AudioWorkletNode {
     keyOn(channel, pitch, velocity)
     {
         this.port.postMessage({ keyOn: [channel, pitch, velocity] });     
-        //this.port.postMessage({ "midi": [144, 
     }
     
     /**

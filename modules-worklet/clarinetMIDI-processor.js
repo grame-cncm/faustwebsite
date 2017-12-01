@@ -28,7 +28,7 @@ faust.getErrorMessage = function() { return faust.error_msg; };
 faust.buffer_size = 128;
 
 // Polyphony
-faust.polyphony = 8;
+faust.polyphony = 16;
 
 faust.createMemory = function (buffer_size, polyphony) {
     
@@ -571,59 +571,23 @@ class clarinetMIDI_polyProcessor extends AudioWorkletProcessor {
         // Set message handler
         this.port.onmessage = this.handleMessage.bind(this);
     }
-    
-    /*
-      onmessage (e) {
-    var msg  = e.data;
-    switch (msg.type) {
-      case "midi":  this.onmidi(msg.data[0], msg.data[1], msg.data[2]); break;
-      case "patch": this.onpatch(msg.data); break;
-      case "param": this.onparam(msg.key, msg.value); break;
-    }
-  }
- 
-  
-  webmidiport.onmidimessage  = function (msg ) {
-  node.port.postMessage({ type:"midi", data:msg.data });
-}
-   
-    */
-    
    
     handleMessage(event) {
-        
-        /*
-        // MIDI event handling
-        if (event.data.keyOn) {
-        	var data = event.data.keyOn;
-        	this.keyOn(data[0], data[1], data[2]);
-        } else if (event.data.keyOff) {
-        	var data = event.data.keyOff;
-        	this.keyOff(data[0], data[1], data[2]);
-        } else if (event.data.allNotesOff) {
-        	this.allNotesOff();
-            
-        // Parameters change handling
-        } else if (event.data.setParamValue) {
-            var data = event.data.setParamValue;
-            this.setParamValue(data[0], data[1]);
-        }
-        */
         var msg  = event.data;
-   		switch (msg.type) {
-      		case "midi":  this.midiMessage(msg.data); break;
-      		case "param":  this.setParamValue(msg.key, msg.value); break;
-      		//case "patch": this.onpatch(msg.data); break;   		
-    	}
+        switch (msg.type) {
+            case "midi":  this.midiMessage(msg.data); break;
+            case "param":  this.setParamValue(msg.key, msg.value); break;
+            //case "patch": this.onpatch(msg.data); break;
+        }
   	}
   	
-  	midiMessage(data)
+    midiMessage(data)
     {
-    	var cmd = data[0] >> 4;
+        var cmd = data[0] >> 4;
         var channel = data[0] & 0xf;
         var data1 = data[1];
         var data2 = data[2];
-        
+
         if (channel === 9) {
             return;
         } else if (cmd === 8 || ((cmd === 9) && (data2 === 0))) {
@@ -636,7 +600,7 @@ class clarinetMIDI_polyProcessor extends AudioWorkletProcessor {
             this.pitchWheel(channel, ((data2 * 128.0 + data1)-8192)/8192.0);
         }
     }
-        
+    
     process(inputs, outputs, parameters) {
         
         var input = inputs[0];
@@ -695,8 +659,6 @@ class clarinetMIDI_polyProcessor extends AudioWorkletProcessor {
         return true;
     }
 }
-
-console.log("registerProcessor");
 
 // Synchronously compile and instantiate the WASM modules
 try {
