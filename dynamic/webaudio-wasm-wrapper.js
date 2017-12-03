@@ -1171,8 +1171,10 @@ var mydspProcessorString = `
             this.ptr_size = 4;
             this.sample_size = 4;
             
-            this.factory = mydspProcessor.mydsp_instance.exports;
-            this.HEAP = mydspProcessor.mydsp_instance.exports.memory.buffer;
+            // Create the WASM instance
+            var wasm_instance = new WebAssembly.Instance(mydspProcessor.wasm_module, mydspProcessor.importObject);
+            this.factory = wasm_instance.exports;
+            this.HEAP = wasm_instance.exports.memory.buffer;
             this.HEAP32 = new Int32Array(this.HEAP);
             this.HEAPF32 = new Float32Array(this.HEAP);
  
@@ -1425,8 +1427,7 @@ var mydspProcessorString = `
 
     // Synchronously compile and instantiate the WASM module
     try {
-        let wasm_module = new WebAssembly.Module(mydspProcessor.atob(getBase64Codemydsp()));
-        mydspProcessor.mydsp_instance = new WebAssembly.Instance(wasm_module, mydspProcessor.importObject);
+        mydspProcessor.wasm_module = new WebAssembly.Module(mydspProcessor.atob(getBase64Codemydsp()));
         registerProcessor('mydsp', mydspProcessor);
     } catch (e) {
         console.log(e); console.log("Faust mydsp cannot be loaded or compiled");
@@ -2556,8 +2557,72 @@ var mydsp_polyProcessorString = `
             this.ptr_size = 4;
             this.sample_size = 4;
             
-            this.factory = mydsp_polyProcessor.mydsp_instance.exports;
-            this.HEAP = mydsp_polyProcessor.memory.buffer;
+            // Create the WASM memory
+            var wasm_memory = mydsp_polyProcessor.createMemory(mydsp_polyProcessor.buffer_size, mydsp_polyProcessor.polyphony);
+            
+            // Create the WASM mixer
+            this.mixObject = { imports: { print: arg => console.log(arg) } }
+            this.mixObject["memory"] = { "memory": wasm_memory };
+            
+            this.importObject = {
+                env: {
+                    memoryBase: 0,
+                    tableBase: 0,
+                        
+                    absf: Math.abs,
+                    acosf: Math.acos,
+                    asinf: Math.asin,
+                    atanf: Math.atan,
+                    atan2f: Math.atan2,
+                    ceilf: Math.ceil,
+                    cosf: Math.cos,
+                    expf: Math.exp,
+                    floorf: Math.floor,
+                    fmodf: function(x, y) { return x % y; },
+                    logf: Math.log,
+                    log10f: Math.log10,
+                    max_f: Math.max,
+                    min_f: Math.min,
+                    remainderf: function(x, y) { return x - Math.round(x/y) * y; },
+                    powf: Math.pow,
+                    roundf: Math.fround,
+                    sinf: Math.sin,
+                    sqrtf: Math.sqrt,
+                    tanf: Math.tan,
+                        
+                    abs: Math.abs,
+                    acos: Math.acos,
+                    asin: Math.asin,
+                    atan: Math.atan,
+                    atan2: Math.atan2,
+                    ceil: Math.ceil,
+                    cos: Math.cos,
+                    exp: Math.exp,
+                    floor: Math.floor,
+                    fmod: function(x, y) { return x % y; },
+                    log: Math.log,
+                    log10: Math.log10,
+                    max_: Math.max,
+                    min_: Math.min,
+                    remainder: function(x, y) { return x - Math.round(x/y) * y; },
+                    pow: Math.pow,
+                    round: Math.fround,
+                    sin: Math.sin,
+                    sqrt: Math.sqrt,
+                    tan: Math.tan,
+                        
+                    memory: wasm_memory,
+                        
+                    table: new WebAssembly.Table({ initial: 0, element: 'anyfunc' })
+                }
+            };
+            
+            this.mixer = new WebAssembly.Instance(mydsp_polyProcessor.wasm_mixer_module, this.mixObject).exports;
+            
+            // Create the WASM instance
+            this.factory = new WebAssembly.Instance(mydsp_polyProcessor.wasm_module, this.importObject).exports;
+            
+            this.HEAP = wasm_memory.buffer;
             this.HEAP32 = new Int32Array(this.HEAP);
             this.HEAPF32 = new Float32Array(this.HEAP);
             
@@ -2588,9 +2653,6 @@ var mydsp_polyProcessorString = `
             
             // Setup DSP voices offset
             this.dsp_start = this.audio_heap_mixing + (this.numOut * mydsp_polyProcessor.buffer_size * this.sample_size);
-            
-            // wasm mixer
-            this.mixer = mydsp_polyProcessor.mixer_instance.exports;
             
             console.log(this.mixer);
             console.log(this.factory);
@@ -2941,71 +3003,10 @@ var mydsp_polyProcessorString = `
     mydsp_polyProcessor.buffer_size = 128;
     mydsp_polyProcessor.polyphony = MAX_POLYPHONY;
 
-    mydsp_polyProcessor.memory = mydsp_polyProcessor.createMemory(mydsp_polyProcessor.buffer_size, mydsp_polyProcessor.polyphony);
-
-    // Create Mixer
-    mydsp_polyProcessor.mixObject = { imports: { print: arg => console.log(arg) } }
-    mydsp_polyProcessor.mixObject["memory"] = { "memory": mydsp_polyProcessor.memory };
-
-    mydsp_polyProcessor.importObject = {
-        env: {
-            memoryBase: 0,
-            tableBase: 0,
-                
-            absf: Math.abs,
-            acosf: Math.acos,
-            asinf: Math.asin,
-            atanf: Math.atan,
-            atan2f: Math.atan2,
-            ceilf: Math.ceil,
-            cosf: Math.cos,
-            expf: Math.exp,
-            floorf: Math.floor,
-            fmodf: function(x, y) { return x % y; },
-            logf: Math.log,
-            log10f: Math.log10,
-            max_f: Math.max,
-            min_f: Math.min,
-            remainderf: function(x, y) { return x - Math.round(x/y) * y; },
-            powf: Math.pow,
-            roundf: Math.fround,
-            sinf: Math.sin,
-            sqrtf: Math.sqrt,
-            tanf: Math.tan,
-                
-            abs: Math.abs,
-            acos: Math.acos,
-            asin: Math.asin,
-            atan: Math.atan,
-            atan2: Math.atan2,
-            ceil: Math.ceil,
-            cos: Math.cos,
-            exp: Math.exp,
-            floor: Math.floor,
-            fmod: function(x, y) { return x % y; },
-            log: Math.log,
-            log10: Math.log10,
-            max_: Math.max,
-            min_: Math.min,
-            remainder: function(x, y) { return x - Math.round(x/y) * y; },
-            pow: Math.pow,
-            round: Math.fround,
-            sin: Math.sin,
-            sqrt: Math.sqrt,
-            tan: Math.tan,
-                
-            memory: mydsp_polyProcessor.memory,
-                
-            table: new WebAssembly.Table({ initial: 0, element: 'anyfunc' })
-        }
-    };
-
-    // Synchronously compile and instantiate the WASM modules
+    // Synchronously compile the WASM modules
     try {
-        let wasm_mixer_module = new WebAssembly.Module(mydsp_polyProcessor.atob(getBase64Mixer()));
-        mydsp_polyProcessor.mixer_instance = new WebAssembly.Instance(wasm_mixer_module, mydsp_polyProcessor.mixObject);
-        let wasm_module = new WebAssembly.Module(mydsp_polyProcessor.atob(getBase64Codemydsp()));
-        mydsp_polyProcessor.mydsp_instance = new WebAssembly.Instance(wasm_module, mydsp_polyProcessor.importObject);
+        mydsp_polyProcessor.wasm_mixer_module = new WebAssembly.Module(mydsp_polyProcessor.atob(getBase64Mixer()));
+        mydsp_polyProcessor.wasm_module = new WebAssembly.Module(mydsp_polyProcessor.atob(getBase64Codemydsp()));
         registerProcessor('mydsp_poly', mydsp_polyProcessor);
     } catch (e) {
         console.log(e); console.log("Faust mydsp_poly cannot be loaded or compiled");
@@ -3027,8 +3028,8 @@ faust.createPolyDSPWorkletInstanceAux = function (factory, context, polyphony, c
     // Create a generic AudioWorkletNode, use polyphony to distinguish different classes
     var audio_node = new AudioWorkletNode(audio_context, factory.name + '_' + polyphony.toString() + "_poly",
                                           { numberOfInputs: parseInt(factory.json_object.inputs),
-                                          numberOfOutputs: parseInt(factory.json_object.outputs),
-                                          channelCount: 1 });
+                                            numberOfOutputs: parseInt(factory.json_object.outputs),
+                                            channelCount: 1 });
     
     // Patch it with additional functions
     audio_node.handleMessage = function(event)
@@ -3189,7 +3190,7 @@ faust.createPolyDSPWorkletInstance = function(factory, context, polyphony, callb
         var mydsp_polyProcessorString4 = mydsp_polyProcessorString3.replace(re4, factory.getBase64Code());
         var url = window.URL.createObjectURL(new Blob([mydsp_polyProcessorString4], { type: 'text/javascript' }));
         
-        console.log(mydsp_polyProcessorString4);
+        //console.log(mydsp_polyProcessorString4);
         
         // The main global scope
         var awc = window.audioWorklet || BaseAudioContext.AudioWorklet;
