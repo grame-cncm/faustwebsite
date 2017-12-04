@@ -255,7 +255,7 @@ faust.createDSPFactoryAux = function (code, argv, internal_memory, callback)
     }
     
     try {
-		var time1 = performance.now();
+        var time1 = performance.now();
         var module_code_ptr = faust.createWasmCDSPFactoryFromString(name_ptr, code_ptr, argv.length, argv_ptr, error_msg_ptr, internal_memory);
         var time2 = performance.now();
         console.log("Faust compilation duration : " + (time2 - time1));
@@ -307,7 +307,7 @@ faust.createDSPFactoryAux = function (code, argv, internal_memory, callback)
         callback(null);
     }
     
-};
+}
 
 /**
  * Create a DSP factory from source code as a string to be used to create 'monophonic' DSP
@@ -394,7 +394,7 @@ faust.expandDSP = function (code, argv)
     faust_module._free(argv_ptr);
     
     return expand_dsp;
-};
+}
 
 /**
  * Write a Faust DSP factory into struct containing name, Faust wasm compiled code, and helpers code.
@@ -478,32 +478,8 @@ faust.readDSPFactoryFromMachineAux = function (factory_name, factory_code, helpe
           
         callback(factory);
     })
-    .catch(function() { faust.error_msg = "Faust DSP factory cannot be compiled"; callback(null); });
+    .catch(function(error) { console.log(error); faust.error_msg = "Faust DSP factory cannot be compiled"; callback(null); });
     
-    /*
-    var factory = {};
-    factory.code = factory_code;
-    factory.helpers = helpers_code;
-    
-    // 'libfaust.js' wasm backend generates UI methods, then we compile the code
-    eval(helpers_code);
-    factory.getJSON = eval("getJSON" + factory_name);
-    factory.getBase64Code = eval("getBase64Code" + factory_name);
-    
-    try {
-        factory.json_object = JSON.parse(factory.getJSON());
-    } catch (e) {
-        faust.error_msg = "Error in JSON.parse: " + e;
-        callback(null);
-        throw true;
-    }
-    
-    factory.name = factory_name;
-    factory.sha_key = sha_key;
-    faust.factory_table[sha_key] = factory;
-    
-    callback(factory);
-    */
 }
 
 faust.deleteDSPFactory = function (factory) { faust.factory_table[factory.sha_key] = null; };
@@ -601,7 +577,7 @@ faust.createDSPInstance = function (factory, context, buffer_size, callback) {
         }
     };
 
-  	var time1 = performance.now();
+    var time1 = performance.now();
 
     WebAssembly.instantiate(factory.module, importObject)
     .then(dsp_instance => {
@@ -1446,8 +1422,8 @@ faust.createDSPWorkletInstanceAux = function(factory, context, callback)
     // Create a generic AudioWorkletNode
     var audio_node = new AudioWorkletNode(audio_context, factory.name,
                                           { numberOfInputs: parseInt(factory.json_object.inputs),
-                                          numberOfOutputs: parseInt(factory.json_object.outputs),
-                                          channelCount: 1 });
+                                            numberOfOutputs: parseInt(factory.json_object.outputs),
+                                            channelCount: 1 });
     
     // Patch it with additional functions
     audio_node.handleMessage = function(event)
@@ -1559,6 +1535,13 @@ faust.createDSPWorkletInstanceAux = function(factory, context, callback)
     callback(audio_node);
 }
 
+/**
+ * Create a AudioWorklet Web Audio object from a factory
+ *
+ * @param factory - the DSP factory
+ * @param context - the Web Audio context
+ * @param callback - a callback taking the created AudioWorklet as parameter, or null in case of error
+ */
 faust.createDSPWorkletInstance = function(factory, context, callback)
 {
     if (factory.polyphony.length === 0) {
@@ -1663,7 +1646,7 @@ faust.createPolyDSPInstance = function (factory, context, buffer_size, polyphony
 
     var memory = faust.createMemory(factory, buffer_size, polyphony);
 
-	var time1 = performance.now();
+    var time1 = performance.now();
 
     var mixObject = { imports: { print: arg => console.log(arg) } }
     mixObject["memory"] = { "memory": memory};
@@ -2999,7 +2982,6 @@ var mydsp_polyProcessorString = `
 
     // Globals
 
-    // Create memory block
     mydsp_polyProcessor.buffer_size = 128;
     mydsp_polyProcessor.polyphony = MAX_POLYPHONY;
 
@@ -3176,6 +3158,14 @@ faust.createPolyDSPWorkletInstanceAux = function (factory, context, polyphony, c
     callback(audio_node);
 }
 
+/**
+ * Create a 'polyphonic' AudioWorklet Web Audio object from a factory
+ *
+ * @param factory - the DSP factory
+ * @param context - the Web Audio context
+ * @param polyphony - the number of polyphonic voices
+ * @param callback - a callback taking the created AudioWorklet as parameter, or null in case of error
+ */
 faust.createPolyDSPWorkletInstance = function(factory, context, polyphony, callback)
 {
     if (factory.polyphony.indexOf(polyphony) === -1) {
@@ -3189,8 +3179,6 @@ faust.createPolyDSPWorkletInstance = function(factory, context, polyphony, callb
         var mydsp_polyProcessorString3 = mydsp_polyProcessorString2.replace(re3, factory.getJSON());
         var mydsp_polyProcessorString4 = mydsp_polyProcessorString3.replace(re4, factory.getBase64Code());
         var url = window.URL.createObjectURL(new Blob([mydsp_polyProcessorString4], { type: 'text/javascript' }));
-        
-        //console.log(mydsp_polyProcessorString4);
         
         // The main global scope
         var awc = window.audioWorklet || BaseAudioContext.AudioWorklet;
