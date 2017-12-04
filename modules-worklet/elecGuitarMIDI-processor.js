@@ -19,148 +19,6 @@ function getBase64CodeelecGuitarMIDI() { return "AGFzbQEAAAAB1oCAgAAQYAJ/fwBgBH9
 
 function getBase64Mixer() { return "AGFzbQEAAAABj4CAgAACYAN/f38AYAR/f39/AX0CkoCAgAABBm1lbW9yeQZtZW1vcnkCAAIDg4CAgAACAAEHmoCAgAACC2NsZWFyT3V0cHV0AAAIbWl4Vm9pY2UAAQqKgoCAAALigICAAAEDfwJAQQAhBQNAAkAgAiAFQQJ0aigCACEDQQAhBANAAkAgAyAEQQJ0akMAAAAAOAIAIARBAWohBCAEIABIBEAMAgUMAQsACwsgBUEBaiEFIAUgAUgEQAwCBQwBCwALCwsLnYGAgAACBH8DfQJ9QQAhB0MAAAAAIQgDQAJAQQAhBiACIAdBAnRqKAIAIQQgAyAHQQJ0aigCACEFA0ACQCAEIAZBAnRqKgIAIQkgCCAJi5chCCAFIAZBAnRqKgIAIQogBSAGQQJ0aiAKIAmSOAIAIAZBAWohBiAGIABIBEAMAgUMAQsACwsgB0EBaiEHIAcgAUgEQAwCBQwBCwALCyAIDwsL"; }
 
-var faust = faust || {};
-
-faust.error_msg = null;
-faust.getErrorMessage = function() { return faust.error_msg; };
-
-// Audio buffer size
-faust.buffer_size = 128;
-
-// Polyphony
-faust.polyphony = 16;
-
-faust.createMemory = function (buffer_size, polyphony) {
-    
-    // Memory allocator
-    var ptr_size = 4;
-    var sample_size = 4;
-    
-    function pow2limit(x)
-    {
-        var n = 65536; // Minimum = 64 kB
-        while (n < x) { n = 2 * n; }
-        return n;
-    }
-    
-    // Keep JSON parsed object
-    var json_object = null;
-    try {
-        json_object = JSON.parse(getJSONelecGuitarMIDI());
-    } catch (e) {
-        faust.error_msg = "Error in JSON.parse: " + e;
-        return null;
-    }
-    
-    var memory_size = pow2limit(parseInt(json_object.size) * polyphony + ((parseInt(json_object.inputs) + parseInt(json_object.outputs) * 2) * (ptr_size + (buffer_size * sample_size)))) / 65536;
-    memory_size = Math.max(2, memory_size); // As least 2
-    return new WebAssembly.Memory({ initial: memory_size, maximum: memory_size });
-}
-
-// Create memory block
-faust.memory = faust.createMemory(faust.buffer_size, faust.polyphony);
-
-faust.importObject = {
-    env: {
-        memoryBase: 0,
-        tableBase: 0,
-            
-        absf: Math.abs,
-        acosf: Math.acos,
-        asinf: Math.asin,
-        atanf: Math.atan,
-        atan2f: Math.atan2,
-        ceilf: Math.ceil,
-        cosf: Math.cos,
-        expf: Math.exp,
-        floorf: Math.floor,
-        fmodf: function(x, y) { return x % y; },
-        logf: Math.log,
-        log10f: Math.log10,
-        max_f: Math.max,
-        min_f: Math.min,
-        remainderf: function(x, y) { return x - Math.round(x/y) * y; },
-        powf: Math.pow,
-        roundf: Math.fround,
-        sinf: Math.sin,
-        sqrtf: Math.sqrt,
-        tanf: Math.tan,
-            
-        abs: Math.abs,
-        acos: Math.acos,
-        asin: Math.asin,
-        atan: Math.atan,
-        atan2: Math.atan2,
-        ceil: Math.ceil,
-        cos: Math.cos,
-        exp: Math.exp,
-        floor: Math.floor,
-        fmod: function(x, y) { return x % y; },
-        log: Math.log,
-        log10: Math.log10,
-        max_: Math.max,
-        min_: Math.min,
-        remainder: function(x, y) { return x - Math.round(x/y) * y; },
-        pow: Math.pow,
-        round: Math.fround,
-        sin: Math.sin,
-        sqrt: Math.sqrt,
-        tan: Math.tan,
-        
-        memory: faust.memory,
-            
-        table: new WebAssembly.Table({ initial: 0, element: 'anyfunc' })
-    }
-};
-
-faust.b64ToUint6 = function (nChr)
-{
-    return nChr > 64 && nChr < 91 ?
-        nChr - 65
-        : nChr > 96 && nChr < 123 ?
-        nChr - 71
-        : nChr > 47 && nChr < 58 ?
-        nChr + 4
-        : nChr === 43 ?
-        62
-        : nChr === 47 ?
-        63
-        :
-        0;
-}
-
-faust.atob = function (sBase64, nBlocksSize)
-{
-    if (typeof atob === 'function') {
-        return atob(sBase64);
-    } else {
-        
-        var sB64Enc = sBase64.replace(/[^A-Za-z0-9\+\/]/g, "");
-        var nInLen = sB64Enc.length;
-        var nOutLen = nBlocksSize ? Math.ceil((nInLen * 3 + 1 >> 2) / nBlocksSize) * nBlocksSize : nInLen * 3 + 1 >> 2;
-        var taBytes = new Uint8Array(nOutLen);
-        
-        for (var nMod3, nMod4, nUint24 = 0, nOutIdx = 0, nInIdx = 0; nInIdx < nInLen; nInIdx++) {
-            nMod4 = nInIdx & 3;
-            nUint24 |= faust.b64ToUint6(sB64Enc.charCodeAt(nInIdx)) << 18 - 6 * nMod4;
-            if (nMod4 === 3 || nInLen - nInIdx === 1) {
-                for (nMod3 = 0; nMod3 < 3 && nOutIdx < nOutLen; nMod3++, nOutIdx++) {
-                    taBytes[nOutIdx] = nUint24 >>> (16 >>> nMod3 & 24) & 255;
-                }
-                nUint24 = 0;
-            }
-        }
-        return taBytes.buffer;
-    }
-}
-
-faust.mixObject = { imports: { print: arg => console.log(arg) } }
-faust.mixObject["memory"] = { "memory": faust.memory };
-
-// WebAssembly instance
-faust.elecGuitarMIDI_instance = null;
-faust.mixer_instance = null;
-
 // Polyphonic Faust DSP
 class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
     
@@ -226,15 +84,101 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
             // Keep inputs adresses
             obj.inputs_items.push(item.address);
             obj.pathTable[item.address] = parseInt(item.index);
+            if (item.meta !== undefined) {
+                for (var i = 0; i < item.meta.length; i++) {
+                    if (item.meta[i].midi !== undefined) {
+                        if (item.meta[i].midi.trim() === "pitchwheel") {
+                            obj.fPitchwheelLabel.push(item.address);
+                        } else if (item.meta[i].midi.trim().split(" ")[0] === "ctrl") {
+                            obj.fCtrlLabel[parseInt(item.meta[i].midi.trim().split(" ")[1])]
+                            .push({ path:item.address,
+                                  min:parseFloat(item.min),
+                                  max:parseFloat(item.max) });
+                        }
+                    }
+                }
+            }
         }
     }
+    
+    static b64ToUint6(nChr)
+    {
+        return nChr > 64 && nChr < 91 ?
+        nChr - 65
+        : nChr > 96 && nChr < 123 ?
+        nChr - 71
+        : nChr > 47 && nChr < 58 ?
+        nChr + 4
+        : nChr === 43 ?
+        62
+        : nChr === 47 ?
+        63
+        :
+        0;
+    }
+    
+    static atob(sBase64, nBlocksSize)
+    {
+        if (typeof atob === 'function') {
+            return atob(sBase64);
+        } else {
+            
+            var sB64Enc = sBase64.replace(/[^A-Za-z0-9\+\/]/g, "");
+            var nInLen = sB64Enc.length;
+            var nOutLen = nBlocksSize ? Math.ceil((nInLen * 3 + 1 >> 2) / nBlocksSize) * nBlocksSize : nInLen * 3 + 1 >> 2;
+            var taBytes = new Uint8Array(nOutLen);
+            
+            for (var nMod3, nMod4, nUint24 = 0, nOutIdx = 0, nInIdx = 0; nInIdx < nInLen; nInIdx++) {
+                nMod4 = nInIdx & 3;
+                nUint24 |= elecGuitarMIDI_polyProcessor.b64ToUint6(sB64Enc.charCodeAt(nInIdx)) << 18 - 6 * nMod4;
+                if (nMod4 === 3 || nInLen - nInIdx === 1) {
+                    for (nMod3 = 0; nMod3 < 3 && nOutIdx < nOutLen; nMod3++, nOutIdx++) {
+                        taBytes[nOutIdx] = nUint24 >>> (16 >>> nMod3 & 24) & 255;
+                    }
+                    nUint24 = 0;
+                }
+            }
+            return taBytes.buffer;
+        }
+    }
+    
+    static remap(v, mn0, mx0, mn1, mx1)
+    {
+        return (1.0 * (v - mn0) / (mx0 - mn0)) * (mx1 - mn1) + mn1;
+    }
 
-    static get parameterDescriptors () {
-        
+    static get parameterDescriptors () 
+    {
         // Analyse JSON to generate AudioParam parameters
         var params = [];
         elecGuitarMIDI_polyProcessor.parse_ui(JSON.parse(getJSONelecGuitarMIDI()).ui, params, elecGuitarMIDI_polyProcessor.parse_item1);
         return params;
+    }
+    
+    static createMemory(buffer_size, polyphony) 
+    {
+        // Memory allocator
+        var ptr_size = 4;
+        var sample_size = 4;
+        
+        function pow2limit(x)
+        {
+            var n = 65536; // Minimum = 64 kB
+            while (n < x) { n = 2 * n; }
+            return n;
+        }
+        
+        // Keep JSON parsed object
+        var json_object = null;
+        try {
+            json_object = JSON.parse(getJSONelecGuitarMIDI());
+        } catch (e) {
+            return null;
+        }
+        
+        var memory_size = pow2limit(parseInt(json_object.size) * polyphony + ((parseInt(json_object.inputs) + parseInt(json_object.outputs) * 2) * (ptr_size + (buffer_size * sample_size)))) / 65536;
+        memory_size = Math.max(2, memory_size); // As least 2
+        return new WebAssembly.Memory({ initial: memory_size, maximum: memory_size });
     }
     
     constructor (options)
@@ -243,7 +187,8 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
         
         this.json_object = JSON.parse(getJSONelecGuitarMIDI());
         
-        this.output_handler = null;
+        this.output_handler = function(path, value) { this.port.postMessage({ path: path, value: value }); };
+        
         this.ins = null;
         this.outs = null;
         this.mixing = null;
@@ -257,6 +202,10 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
         this.fGainLabel = "";
         this.fDate = 0;
         
+        this.fPitchwheelLabel = [];
+        this.fCtrlLabel = new Array(128);
+        for (var i = 0; i < this.fCtrlLabel.length; i++) { this.fCtrlLabel[i] = []; }
+   
         this.numIn = parseInt(this.json_object.inputs);
         this.numOut = parseInt(this.json_object.outputs);
         
@@ -264,8 +213,8 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
         this.ptr_size = 4;
         this.sample_size = 4;
         
-        this.factory = faust.elecGuitarMIDI_instance.exports;
-        this.HEAP = faust.memory.buffer;
+        this.factory = elecGuitarMIDI_polyProcessor.elecGuitarMIDI_instance.exports;
+        this.HEAP = elecGuitarMIDI_polyProcessor.memory.buffer;
         this.HEAP32 = new Int32Array(this.HEAP);
         this.HEAPF32 = new Float32Array(this.HEAP);
         
@@ -281,8 +230,7 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
         this.inputs_items = [];
         
         // Start of HEAP index
-        //this.audio_heap_ptr = 0;
-        // Fails when 0...
+        // this.audio_heap_ptr = 0; Fails when 0...
         this.audio_heap_ptr = 65536;
         
         // Setup pointers offset
@@ -292,20 +240,20 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
         
         // Setup buffer offset
         this.audio_heap_inputs = this.audio_heap_ptr_mixing + (this.numOut * this.ptr_size);
-        this.audio_heap_outputs = this.audio_heap_inputs + (this.numIn * faust.buffer_size * this.sample_size);
-        this.audio_heap_mixing = this.audio_heap_outputs + (this.numOut * faust.buffer_size * this.sample_size);
+        this.audio_heap_outputs = this.audio_heap_inputs + (this.numIn * elecGuitarMIDI_polyProcessor.buffer_size * this.sample_size);
+        this.audio_heap_mixing = this.audio_heap_outputs + (this.numOut * elecGuitarMIDI_polyProcessor.buffer_size * this.sample_size);
         
         // Setup DSP voices offset
-        this.dsp_start = this.audio_heap_mixing + (this.numOut * faust.buffer_size * this.sample_size);
+        this.dsp_start = this.audio_heap_mixing + (this.numOut * elecGuitarMIDI_polyProcessor.buffer_size * this.sample_size);
         
         // wasm mixer
-        this.mixer = faust.mixer_instance.exports;
+        this.mixer = elecGuitarMIDI_polyProcessor.mixer_instance.exports;
         
         console.log(this.mixer);
         console.log(this.factory);
         
         // Start of DSP memory ('polyphony' DSP voices)
-        this.polyphony = faust.polyphony;
+        this.polyphony = elecGuitarMIDI_polyProcessor.polyphony;
         this.dsp_voices = [];
         this.dsp_voices_state = [];
         this.dsp_voices_level = [];
@@ -421,13 +369,13 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
             if (this.numIn > 0) {
                 this.ins = this.audio_heap_ptr_inputs;
                 for (i = 0; i < this.numIn; i++) {
-                    this.HEAP32[(this.ins >> 2) + i] = this.audio_heap_inputs + ((faust.buffer_size * this.sample_size) * i);
+                    this.HEAP32[(this.ins >> 2) + i] = this.audio_heap_inputs + ((elecGuitarMIDI_polyProcessor.buffer_size * this.sample_size) * i);
                 }
                 
                 // Prepare Ins buffer tables
                 var dspInChans = this.HEAP32.subarray(this.ins >> 2, (this.ins + this.numIn * this.ptr_size) >> 2);
                 for (i = 0; i < this.numIn; i++) {
-                    this.dspInChannnels[i] = this.HEAPF32.subarray(dspInChans[i] >> 2, (dspInChans[i] + faust.buffer_size * this.sample_size) >> 2);
+                    this.dspInChannnels[i] = this.HEAPF32.subarray(dspInChans[i] >> 2, (dspInChans[i] + elecGuitarMIDI_polyProcessor.buffer_size * this.sample_size) >> 2);
                 }
             }
             
@@ -437,14 +385,14 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
                 this.mixing = this.audio_heap_ptr_mixing;
                 
                 for (i = 0; i < this.numOut; i++) {
-                    this.HEAP32[(this.outs >> 2) + i] = this.audio_heap_outputs + ((faust.buffer_size * this.sample_size) * i);
-                    this.HEAP32[(this.mixing >> 2) + i] = this.audio_heap_mixing + ((faust.buffer_size * this.sample_size) * i);
+                    this.HEAP32[(this.outs >> 2) + i] = this.audio_heap_outputs + ((elecGuitarMIDI_polyProcessor.buffer_size * this.sample_size) * i);
+                    this.HEAP32[(this.mixing >> 2) + i] = this.audio_heap_mixing + ((elecGuitarMIDI_polyProcessor.buffer_size * this.sample_size) * i);
                 }
                 
                 // Prepare Out buffer tables
                 var dspOutChans = this.HEAP32.subarray(this.outs >> 2, (this.outs + this.numOut * this.ptr_size) >> 2);
                 for (i = 0; i < this.numOut; i++) {
-                    this.dspOutChannnels[i] = this.HEAPF32.subarray(dspOutChans[i] >> 2, (dspOutChans[i] + faust.buffer_size * this.sample_size) >> 2);
+                    this.dspOutChannnels[i] = this.HEAPF32.subarray(dspOutChans[i] >> 2, (dspOutChans[i] + elecGuitarMIDI_polyProcessor.buffer_size * this.sample_size) >> 2);
                 }
             }
             
@@ -471,13 +419,6 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
             }
         }
         
-        /**
-         * Instantiates a new polyphonic voice.
-         *
-         * @param channel - the MIDI channel (0..15, not used for now)
-         * @param pitch - the MIDI pitch (0..127)
-         * @param velocity - the MIDI velocity (0..127)
-         */
         this.keyOn = function (channel, pitch, velocity)
         {
             var voice = this.getFreeVoice();
@@ -487,13 +428,6 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
             this.dsp_voices_state[voice] = pitch;
         }
         
-        /**
-         * De-instantiates a polyphonic voice.
-         *
-         * @param channel - the MIDI channel (0..15, not used for now)
-         * @param pitch - the MIDI pitch (0..127)
-         * @param velocity - the MIDI velocity (0..127)
-         */
         this.keyOff = function (channel, pitch, velocity)
         {
             var voice = this.getPlayingVoice(pitch);
@@ -508,9 +442,6 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
             }
         }
         
-        /**
-         * Gently terminates all the active voices.
-         */
         this.allNotesOff = function ()
         {
             for (var i = 0; i <  this.polyphony; i++) {
@@ -519,33 +450,34 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
             }
         }
         
-        /**
-         * Controller 123 allNoteOff only is handled.
-         *
-         * @param channel - the MIDI channel (0..15, not used for now)
-         * @param ctrl - the MIDI controller number (0..127)
-         * @param value - the MIDI controller value (0..127)
-         */
         this.ctrlChange = function (channel, ctrl, value)
         {
             if (ctrl === 123 || ctrl === 120) {
                 this.allNotesOff();
             }
+            
+            if (this.fCtrlLabel[ctrl] !== []) {
+                for (var i = 0; i < this.fCtrlLabel[ctrl].length; i++) {
+                    var path = this.fCtrlLabel[ctrl][i].path;
+                    this.setParamValue(path, elecGuitarMIDI_polyProcessor.remap(value, 0, 127, this.fCtrlLabel[ctrl][i].min, this.fCtrlLabel[ctrl][i].max));
+                    if (this.output_handler) {
+                   		this.output_handler(path, this.getParamValue(path));
+                   	}
+                }
+            }
         }
         
-        /**
-         * PitchWeel: empty for now.
-         *
-         */
         this.pitchWheel = function (channel, wheel)
-        {}
+        {
+            for (var i = 0; i < this.fPitchwheelLabel.length; i++) {
+                var path = this.fPitchwheelLabel[i];
+                this.setParamValue(path, Math.pow(2.0, wheel/12.0));
+                if (this.output_handler) {
+                   	this.output_handler(path, this.getParamValue(path));
+                }
+            }
+        }
         
-        /**
-         * Set parameter value.
-         *
-         * @param path - the path to the wanted parameter (retrieved using 'getParams' method)
-         * @param val - the float value for the wanted parameter
-         */
         this.setParamValue = function (path, val)
         {
             for (var i = 0; i < this.polyphony; i++) {
@@ -553,13 +485,6 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
             }
         }
 
-        /**
-         * Get parameter value.
-         *
-         * @param path - the path to the wanted parameter (retrieved using 'getParams' method)
-         *
-         * @return the float value
-         */
         this.getParamValue = function (path)
         {
             return this.factory.getParamValue(this.dsp_voices[0], this.pathTable[path]);
@@ -572,14 +497,22 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
         this.port.onmessage = this.handleMessage.bind(this);
     }
    
-    handleMessage(event) {
-        var msg  = event.data;
+    handleMessage(event) 
+    {
+        var msg = event.data;
         switch (msg.type) {
-            case "midi":  this.midiMessage(msg.data); break;
-            case "param":  this.setParamValue(msg.key, msg.value); break;
+            // Generic MIDI message
+            case "midi": this.midiMessage(msg.data); break;
+            // Typed MIDI message
+            case "keyOn": this.keyOn(msg.data[0], msg.data[1], msg.data[2]); break;
+            case "keyOff": this.keyOff(msg.data[0], msg.data[1], msg.data[2]); break;
+            case "ctrlChange": this.ctrlChange(msg.data[0], msg.data[1], msg.data[2]); break;
+            case "pitchWheel": this.pitchWheel(msg.data[0], msg.data[1]); break;
+            // Generic data message
+            case "param": this.setParamValue(msg.key, msg.value); break;
             //case "patch": this.onpatch(msg.data); break;
         }
-  	}
+    }
   	
     midiMessage(data)
     {
@@ -601,26 +534,26 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
         }
     }
     
-    process(inputs, outputs, parameters) {
-        
+    process(inputs, outputs, parameters) 
+    {
         var input = inputs[0];
         var output = outputs[0];
       
         // Copy inputs
         if (input !== undefined) {
-            for (var channel = 0; channel < input.length; ++channel) {
-                var dspInput = this.dspInChannnels[channel];
-                dspInput.set(input[channel]);
+            for (var chan = 0; chan < Math.min(this.numIn, input.length) ; ++chan) {
+                var dspInput = this.dspInChannnels[chan];
+                dspInput.set(input[chan]);
             }
         }
          
         // Possibly call an externally given callback (for instance to synchronize playing a MIDIFile...)
         if (this.compute_handler) {
-            this.compute_handler(faust.buffer_size);
+            this.compute_handler(elecGuitarMIDI_polyProcessor.buffer_size);
         }
          
         // First clear the outputs
-        this.mixer.clearOutput(faust.buffer_size, this.numOut, this.outs);
+        this.mixer.clearOutput(elecGuitarMIDI_polyProcessor.buffer_size, this.numOut, this.outs);
         
         // Compute all running voices
         for (var i = 0; i < this.polyphony; i++) {
@@ -630,14 +563,14 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
                     this.factory.setParamValue(this.dsp_voices[i], this.fGateLabel, 0.0);
                     this.factory.compute(this.dsp_voices[i], 1, this.ins, this.mixing);
                     this.factory.setParamValue(this.dsp_voices[i], this.fGateLabel, 1.0);
-                    this.factory.compute(this.dsp_voices[i], faust.buffer_size, this.ins, this.mixing);
+                    this.factory.compute(this.dsp_voices[i], elecGuitarMIDI_polyProcessor.buffer_size, this.ins, this.mixing);
                     this.dsp_voices_trigger[i] = false;
                 } else {
                     // Compute regular voice
-                    this.factory.compute(this.dsp_voices[i], faust.buffer_size, this.ins, this.mixing);
+                    this.factory.compute(this.dsp_voices[i], elecGuitarMIDI_polyProcessor.buffer_size, this.ins, this.mixing);
                 }
                 // Mix it in result
-                this.dsp_voices_level[i] = this.mixer.mixVoice(faust.buffer_size, this.numOut, this.mixing, this.outs);
+                this.dsp_voices_level[i] = this.mixer.mixVoice(elecGuitarMIDI_polyProcessor.buffer_size, this.numOut, this.mixing, this.outs);
                 // Check the level to possibly set the voice in kFreeVoice again
                 if ((this.dsp_voices_level[i] < 0.001) && (this.dsp_voices_state[i] === this.kReleaseVoice)) {
                     this.dsp_voices_state[i] = this.kFreeVoice;
@@ -650,9 +583,9 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
         
         // Copy outputs
         if (output !== undefined) {
-            for (var channel = 0; channel < output.length; ++channel) {
-                var dspOutput = this.dspOutChannnels[channel];
-                output[channel].set(dspOutput);
+            for (var chan = 0; chan < Math.min(this.numOut, output.length); ++chan) {
+                var dspOutput = this.dspOutChannnels[chan];
+                output[chan].set(dspOutput);
             }
         }
         
@@ -660,15 +593,80 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
     }
 }
 
+// Globals
+
+// Create memory block
+elecGuitarMIDI_polyProcessor.buffer_size = 128;
+elecGuitarMIDI_polyProcessor.polyphony = 16;
+
+elecGuitarMIDI_polyProcessor.memory = elecGuitarMIDI_polyProcessor.createMemory(elecGuitarMIDI_polyProcessor.buffer_size, elecGuitarMIDI_polyProcessor.polyphony);
+
+// Create Mixer
+elecGuitarMIDI_polyProcessor.mixObject = { imports: { print: arg => console.log(arg) } }
+elecGuitarMIDI_polyProcessor.mixObject["memory"] = { "memory": elecGuitarMIDI_polyProcessor.memory };
+
+elecGuitarMIDI_polyProcessor.importObject = {
+    env: {
+        memoryBase: 0,
+        tableBase: 0,
+            
+        absf: Math.abs,
+        acosf: Math.acos,
+        asinf: Math.asin,
+        atanf: Math.atan,
+        atan2f: Math.atan2,
+        ceilf: Math.ceil,
+        cosf: Math.cos,
+        expf: Math.exp,
+        floorf: Math.floor,
+        fmodf: function(x, y) { return x % y; },
+        logf: Math.log,
+        log10f: Math.log10,
+        max_f: Math.max,
+        min_f: Math.min,
+        remainderf: function(x, y) { return x - Math.round(x/y) * y; },
+        powf: Math.pow,
+        roundf: Math.fround,
+        sinf: Math.sin,
+        sqrtf: Math.sqrt,
+        tanf: Math.tan,
+            
+        abs: Math.abs,
+        acos: Math.acos,
+        asin: Math.asin,
+        atan: Math.atan,
+        atan2: Math.atan2,
+        ceil: Math.ceil,
+        cos: Math.cos,
+        exp: Math.exp,
+        floor: Math.floor,
+        fmod: function(x, y) { return x % y; },
+        log: Math.log,
+        log10: Math.log10,
+        max_: Math.max,
+        min_: Math.min,
+        remainder: function(x, y) { return x - Math.round(x/y) * y; },
+        pow: Math.pow,
+        round: Math.fround,
+        sin: Math.sin,
+        sqrt: Math.sqrt,
+        tan: Math.tan,
+            
+        memory: elecGuitarMIDI_polyProcessor.memory,
+            
+        table: new WebAssembly.Table({ initial: 0, element: 'anyfunc' })
+    }
+};
+
 // Synchronously compile and instantiate the WASM modules
 try {
-    let wasm_mixer_module = new WebAssembly.Module(faust.atob(getBase64Mixer()));
-    faust.mixer_instance = new WebAssembly.Instance(wasm_mixer_module, faust.mixObject);
-    let wasm_module = new WebAssembly.Module(faust.atob(getBase64CodeelecGuitarMIDI()));
-    faust.elecGuitarMIDI_instance = new WebAssembly.Instance(wasm_module, faust.importObject);
+    let wasm_mixer_module = new WebAssembly.Module(elecGuitarMIDI_polyProcessor.atob(getBase64Mixer()));
+    elecGuitarMIDI_polyProcessor.mixer_instance = new WebAssembly.Instance(wasm_mixer_module, elecGuitarMIDI_polyProcessor.mixObject);
+    let wasm_module = new WebAssembly.Module(elecGuitarMIDI_polyProcessor.atob(getBase64CodeelecGuitarMIDI()));
+    elecGuitarMIDI_polyProcessor.elecGuitarMIDI_instance = new WebAssembly.Instance(wasm_module, elecGuitarMIDI_polyProcessor.importObject);
     registerProcessor('elecGuitarMIDI_poly', elecGuitarMIDI_polyProcessor);
 } catch (e) {
-    console.log(e); console.log("Faust elecGuitarMIDI cannot be loaded or compiled");
+    console.log(e); console.log("Faust elecGuitarMIDI_poly cannot be loaded or compiled");
 }
 
 

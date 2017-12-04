@@ -566,7 +566,7 @@ faust.createDSPInstance = function (factory, context, buffer_size, callback) {
             log10: Math.log10,
             max_: Math.max,
             min_: Math.min,
-            remainder:function(x, y) { return x - Math.round(x/y) * y; },
+            remainder: function(x, y) { return x - Math.round(x/y) * y; },
             pow: Math.pow,
             round: Math.fround,
             sin: Math.sin,
@@ -1114,8 +1114,8 @@ var mydspProcessorString = `
             return (1.0 * (v - mn0) / (mx0 - mn0)) * (mx1 - mn1) + mn1;
         }
         
-        static get parameterDescriptors () {
-            
+        static get parameterDescriptors () 
+        {
             // Analyse JSON to generate AudioParam parameters
             var params = [];
             mydspProcessor.parse_ui(JSON.parse(getJSONmydsp()).ui, params, mydspProcessor.parse_item1);
@@ -1390,7 +1390,7 @@ var mydspProcessorString = `
             log10: Math.log10,
             max_: Math.max,
             min_: Math.min,
-            remainder:function(x, y) { return x - Math.round(x/y) * y; },
+            remainder: function(x, y) { return x - Math.round(x/y) * y; },
             pow: Math.pow,
             round: Math.fround,
             sin: Math.sin,
@@ -1412,18 +1412,12 @@ var mydspProcessorString = `
 
 faust.createDSPWorkletInstanceAux = function(factory, context, callback)
 {
-    // Because of a bug in Chrome, allocate new global context each time
-    try {
-        audio_context = new AudioContext();
-    } catch(e) {
-        console.log(e);
-    }
-    
-    // Create a generic AudioWorkletNode
-    var audio_node = new AudioWorkletNode(audio_context, factory.name,
+	// Create a generic AudioWorkletNode
+	var audio_node = new AudioWorkletNode(audio_context, factory.name,
                                           { numberOfInputs: parseInt(factory.json_object.inputs),
                                             numberOfOutputs: parseInt(factory.json_object.outputs),
-                                            channelCount: 1 });
+                                            channelCount: 1,
+                                            channelCountMode: "explicit" });
     
     // Patch it with additional functions
     audio_node.handleMessage = function(event)
@@ -1553,9 +1547,7 @@ faust.createDSPWorkletInstance = function(factory, context, callback)
         var mydspProcessorString3 = mydspProcessorString2.replace(re3, factory.getBase64Code());
         var url = window.URL.createObjectURL(new Blob([mydspProcessorString3], { type: 'text/javascript' }));
         
-        // The main global scope
-        var awc = window.audioWorklet || BaseAudioContext.AudioWorklet;
-        awc.addModule(url)
+        context.audioWorklet.addModule(url)
         .then(function () {
               // Processor has been registered
               factory.polyphony.push(1);
@@ -1691,7 +1683,7 @@ faust.createPolyDSPInstance = function (factory, context, buffer_size, polyphony
             log10: Math.log10,
             max_: Math.max,
             min_: Math.min,
-            remainder:function(x, y) { return x - Math.round(x/y) * y; },
+            remainder: function(x, y) { return x - Math.round(x/y) * y; },
             pow: Math.pow,
             round: Math.fround,
             sin: Math.sin,
@@ -1862,10 +1854,10 @@ faust.createPolyDSPInstance = function (factory, context, buffer_size, polyphony
 
             // Then decide which one to steal
             if (oldest_date_release != Number.MAX_VALUE) {
-                console.log("Steal release voice : voice_date = %d cur_date = %d voice = %d\n", sp.dsp_voices_date[voice_release], sp.fDate, voice_release);
+                console.log("Steal release voice : voice_date = %d cur_date = %d voice = %d", sp.dsp_voices_date[voice_release], sp.fDate, voice_release);
                 return sp.allocVoice(voice_release);
             } else if (oldest_date_playing != Number.MAX_VALUE) {
-                console.log("Steal playing voice : voice_date = %d cur_date = %d voice = %d\n", sp.dsp_voices_date[voice_playing], sp.fDate, voice_playing);
+                console.log("Steal playing voice : voice_date = %d cur_date = %d voice = %d", sp.dsp_voices_date[voice_playing], sp.fDate, voice_playing);
                 return sp.allocVoice(voice_playing);
             } else {
                 return sp.kNoVoice;
@@ -2202,7 +2194,7 @@ faust.createPolyDSPInstance = function (factory, context, buffer_size, polyphony
                 // Release voice
                 sp.dsp_voices_state[voice] = sp.kReleaseVoice;
             } else {
-                console.log("Playing voice not found...\n");
+                console.log("Playing voice not found...");
             }
         }
 
@@ -2725,10 +2717,10 @@ var mydsp_polyProcessorString = `
                 
                 // Then decide which one to steal
                 if (oldest_date_release != Number.MAX_VALUE) {
-                    console.log("Steal release voice : voice_date = %d cur_date = %d voice = %d\\n", this.dsp_voices_date[voice_release], this.fDate, voice_release);
+                    console.log("Steal release voice : voice_date = %d cur_date = %d voice = %d", this.dsp_voices_date[voice_release], this.fDate, voice_release);
                     return this.allocVoice(voice_release);
                 } else if (oldest_date_playing != Number.MAX_VALUE) {
-                    console.log("Steal playing voice : voice_date = %d cur_date = %d voice = %d\\n", this.dsp_voices_date[voice_playing], this.fDate, voice_playing);
+                    console.log("Steal playing voice : voice_date = %d cur_date = %d voice = %d", this.dsp_voices_date[voice_playing], this.fDate, voice_playing);
                     return this.allocVoice(voice_playing);
                 } else {
                     return this.kNoVoice;
@@ -2825,7 +2817,7 @@ var mydsp_polyProcessorString = `
                     // Release voice
                     this.dsp_voices_state[voice] = this.kReleaseVoice;
                 } else {
-                    console.log("Playing voice not found...\\n");
+                    console.log("Playing voice not found...");
                 }
             }
             
@@ -3000,18 +2992,12 @@ var mydsp_polyProcessorString = `
 
 faust.createPolyDSPWorkletInstanceAux = function (factory, context, polyphony, callback)
 {
-    // Because of a bug in Chrome, allocate new global context each time
-    try {
-        audio_context = new AudioContext();
-    } catch(e) {
-        console.log(e);
-    }
-    
-    // Create a generic AudioWorkletNode, use polyphony to distinguish different classes
-    var audio_node = new AudioWorkletNode(audio_context, factory.name + '_' + polyphony.toString() + "_poly",
+	// Create a generic AudioWorkletNode, use polyphony to distinguish different classes
+	var audio_node = new AudioWorkletNode(audio_context, factory.name + '_' + polyphony.toString() + "_poly",
                                           { numberOfInputs: parseInt(factory.json_object.inputs),
                                             numberOfOutputs: parseInt(factory.json_object.outputs),
-                                            channelCount: 1 });
+                                            channelCount: 1,
+                                            channelCountMode: "explicit" });
     
     // Patch it with additional functions
     audio_node.handleMessage = function(event)
@@ -3180,9 +3166,7 @@ faust.createPolyDSPWorkletInstance = function(factory, context, polyphony, callb
         var mydsp_polyProcessorString4 = mydsp_polyProcessorString3.replace(re4, factory.getBase64Code());
         var url = window.URL.createObjectURL(new Blob([mydsp_polyProcessorString4], { type: 'text/javascript' }));
         
-        // The main global scope
-        var awc = window.audioWorklet || BaseAudioContext.AudioWorklet;
-        awc.addModule(url)
+        context.audioWorklet.addModule(url)
         .then(function () {
               // Processor has been registered
               factory.polyphony.push(polyphony);

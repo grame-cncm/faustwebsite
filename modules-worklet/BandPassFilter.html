@@ -5429,8 +5429,6 @@ if (typeof (AudioWorkletNode) === "undefined") {
 	alert("AudioWorklet is not supported in this browser !")
 }
 
-var faust = faust || {};
-
 class BandPassFilterNode extends AudioWorkletNode {
     
     constructor(context, options) {
@@ -5487,6 +5485,8 @@ class BandPassFilterNode extends AudioWorkletNode {
                 obj.pathTable[item.address] = parseInt(item.index);
             }
         }
+        
+        this.output_handler = null;
    
         this.json_object = json_object;
         
@@ -5499,11 +5499,8 @@ class BandPassFilterNode extends AudioWorkletNode {
         // Parse UI
         this.parse_ui(this.json_object.ui, this);
         
-        //console.log(this.inputs_items);
-        //console.log(this.outputs_items);
-        
-        // Start node/processor communication port
-        //this.port.start();
+        // Set message handler
+        this.port.onmessage = this.handleMessage.bind(this);
     }
     
     getJSON()
@@ -5513,6 +5510,8 @@ class BandPassFilterNode extends AudioWorkletNode {
     
     setParamValue(path, val)
     {
+        //this.port.postMessage({ type:"param", key:path, value:val });
+        // Needed for sample accurate control
         this.parameters.get(path).setValueAtTime(val, 0);
     }
     
@@ -5521,9 +5520,24 @@ class BandPassFilterNode extends AudioWorkletNode {
         return this.parameters.get(path).value;
     }
     
+    /**
+     * Setup a control output handler with a function of type (path, value)
+     * to be used on each generated output value. This handler will be called
+     * each audio cycle at the end of the 'compute' method.
+     *
+     * @param handler - a function of type function(path, value)
+     */
     setOutputParamHandler(handler)
     {
-        // TODO
+        this.output_handler = handler;
+    }
+    
+    /**
+     * Get the current output handler.
+     */
+    getOutputParamHandler()
+    {
+        return this.output_handler;
     }
     
     // TO REMOVE
@@ -5542,17 +5556,53 @@ class BandPassFilterNode extends AudioWorkletNode {
         return this.inputs_items;
     }
     
+    /**
+     * Controller
+     *
+     * @param channel - the MIDI channel (0..15, not used for now)
+     * @param ctrl - the MIDI controller number (0..127)
+     * @param value - the MIDI controller value (0..127)
+     */
+    ctrlChange(channel, ctrl, value)
+    {
+        this.port.postMessage({ type: "ctrlChange", data: [channel, ctrl, value] });
+    }
+    
+    /**
+     * PitchWeel
+     *
+     * @param channel - the MIDI channel (0..15, not used for now)
+     * @param value - the MIDI controller value (-1..1)
+     */
+    pitchWheel(channel, wheel)
+    {
+        this.port.postMessage({ type: "pitchWheel", data: [channel, wheel] });
+    }
+    
+    midiMessage(data)
+    {
+        this.port.postMessage({ type:"midi", data:data });
+    }
+    
+    handleMessage(event) 
+    {
+        var msg = event.data;
+        if (this.output_handler) {
+            this.output_handler(msg.path, msg.value);
+        }
+    }
+    
 }
 
-faust.createBandPassFilter = function(callback)
+// Faust context
+var faust = faust || {};
+
+faust.createBandPassFilter = function(context, callback)
 {
     // The main global scope
-    var AWContext = window.audioWorklet || BaseAudioContext.AudioWorklet;
-    console.log(AWContext);
-    AWContext.addModule("BandPassFilter-processor.js")
+    context.audioWorklet.addModule("BandPassFilter-processor.js")
     .then(function () {
-         audio_context = new AudioContext();
-         callback(new BandPassFilterNode(audio_context, {}));
+         callback(new BandPassFilterNode(context, {}));
     })
     .catch(function(error) { console.log(error); console.log("Faust BandPassFilter cannot be loaded or compiled"); });
 }
@@ -5569,11 +5619,18 @@ faust.createBandPassFilter = function(callback)
 // Faust part
 
 var isWasm = (typeof(WebAssembly) !== "undefined");
-var audio_context = null;
+var isWebKitAudio = (typeof (webkitAudioContext) !== "undefined");
+var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
 var audio_input = null;
 var BandPassFilter = null;
 var faustsvg = null;
 var output_handler = null;
+
+function workletAvailable()
+{
+    var context = new OfflineAudioContext(1, 1, 44100);
+    return context.audioWorklet && typeof context.audioWorklet.addModule === 'function';
+}
 
 // MIDI input handling
 
@@ -5723,11 +5780,7 @@ function startBandPassFilterAux(dsp)
     faustsvg = $('<div />');
     $('body').append(faustsvg);
     
-    // TODO : does not work : 'this' is not know inside BandPassFilter.setParamValue
-    //output_handler = _f4u$t.main(BandPassFilter.getJSON(), faustsvg, BandPassFilter.setParamValue);
-    output_handler = _f4u$t.main(BandPassFilter.getJSON(), faustsvg, function(path, val)
-                                 { BandPassFilter.parameters.get(path).setValueAtTime(val, 0); });
-   
+    output_handler = _f4u$t.main(BandPassFilter.getJSON(), faustsvg, function(path, val) { BandPassFilter.setParamValue(path, val); });
     BandPassFilter.setOutputParamHandler(output_handler);
 
     // Load BandPassFilter state from local storage
@@ -5741,10 +5794,10 @@ function startBandPassFilter()
 
 function startNewBandPassFilter()
 {
-    if (isWasm) {
-        faust.createBandPassFilter(startBandPassFilterAux);
+     if (isWasm && workletAvailable()) {
+        faust.createBandPassFilter(audio_context, startBandPassFilterAux);
     }  else {
-        alert("WebAssembly is not supported in this browser !")
+        alert("WebAssembly or AudioWorklet is not supported in this browser !");
     }
 }
 

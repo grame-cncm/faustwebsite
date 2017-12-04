@@ -5430,12 +5430,10 @@ if (typeof (AudioWorkletNode) === "undefined") {
 	alert("AudioWorklet is not supported in this browser !")
 }
 
-var faust = faust || {};
-
 class elecGuitarMIDI_polyNode extends AudioWorkletNode {
     
-    constructor(context, options) {
-        
+    constructor(context, options) 
+    {
         var json_object = JSON.parse(getJSONelecGuitarMIDI());
      
         // Setting values for the input, the output and the channel count.
@@ -5489,6 +5487,8 @@ class elecGuitarMIDI_polyNode extends AudioWorkletNode {
             }
         }
         
+        this.output_handler = null;
+        
         this.json_object = json_object;
             
         // input/output items
@@ -5499,6 +5499,9 @@ class elecGuitarMIDI_polyNode extends AudioWorkletNode {
     
         // Parse UI
         this.parse_ui(this.json_object.ui, this);
+        
+        // Set message handler
+        this.port.onmessage = this.handleMessage.bind(this);
     }
     
     getJSON()
@@ -5508,8 +5511,8 @@ class elecGuitarMIDI_polyNode extends AudioWorkletNode {
     
     setParamValue(path, val)
     {
-        //this.port.postMessage({ setParamValue: [path, val] });
         this.port.postMessage({ type:"param", key:path, value:val });
+        this.parameters.get(path).setValueAtTime(val, 0);
     }
     
     getParamValue(path)
@@ -5517,9 +5520,24 @@ class elecGuitarMIDI_polyNode extends AudioWorkletNode {
         return this.parameters.get(path).value;
     }
     
+    /**
+     * Setup a control output handler with a function of type (path, value)
+     * to be used on each generated output value. This handler will be called
+     * each audio cycle at the end of the 'compute' method.
+     *
+     * @param handler - a function of type function(path, value)
+     */
     setOutputParamHandler(handler)
     {
-        // TODO
+        this.output_handler = handler;
+    }
+    
+    /**
+     * Get the current output handler.
+     */
+    getOutputParamHandler()
+    {
+        return this.output_handler;
     }
     
     // TO REMOVE
@@ -5537,7 +5555,7 @@ class elecGuitarMIDI_polyNode extends AudioWorkletNode {
     {
         return this.inputs_items;
     }
-    
+     
     /**
      * Instantiates a new polyphonic voice.
      *
@@ -5547,7 +5565,7 @@ class elecGuitarMIDI_polyNode extends AudioWorkletNode {
      */
     keyOn(channel, pitch, velocity)
     {
-        this.port.postMessage({ keyOn: [channel, pitch, velocity] });     
+        this.port.postMessage({ type: "keyOn", data: [channel, pitch, velocity] });
     }
     
     /**
@@ -5559,7 +5577,7 @@ class elecGuitarMIDI_polyNode extends AudioWorkletNode {
      */
     keyOff(channel, pitch, velocity)
     {
-        this.port.postMessage({ keyOff: [channel, pitch, velocity] });
+        this.port.postMessage({ type: "keyOff", data: [channel, pitch, velocity] });
     }
 
     /**
@@ -5567,7 +5585,7 @@ class elecGuitarMIDI_polyNode extends AudioWorkletNode {
      */
     allNotesOff()
     {
-        this.port.postMessage({ allNotesOff: 0 });
+        this.port.postMessage({ type: "ctrlChange", data: [channel, 123, 0] });
     }
 
     /**
@@ -5577,12 +5595,9 @@ class elecGuitarMIDI_polyNode extends AudioWorkletNode {
      * @param ctrl - the MIDI controller number (0..127)
      * @param value - the MIDI controller value (0..127)
      */
-    ctrlChange (channel, ctrl, value)
+    ctrlChange(channel, ctrl, value)
     {
-        if (ctrl === 123 || ctrl === 120) {
-            this.allNotesOff();
-        }
-        // TODO
+        this.port.postMessage({ type: "ctrlChange", data: [channel, ctrl, value] });
     }
     
     /**
@@ -5593,7 +5608,7 @@ class elecGuitarMIDI_polyNode extends AudioWorkletNode {
      */
     pitchWheel(channel, wheel)
     {
-        // TODO
+        this.port.postMessage({ type: "pitchWheel", data: [channel, wheel] });
     }
     
     midiMessage(data)
@@ -5601,19 +5616,26 @@ class elecGuitarMIDI_polyNode extends AudioWorkletNode {
     	this.port.postMessage({ type:"midi", data:data });
     }
     
+    handleMessage(event) 
+    {
+        var msg = event.data;
+        if (this.output_handler) {
+            this.output_handler(msg.path, msg.value);
+        }
+    }
 }
 
-faust.createelecGuitarMIDI_poly = function(max_polyphony, callback)
+// Faust context
+var faust = faust || {};
+
+faust.createelecGuitarMIDI_poly = function(context, max_polyphony, callback)
 {
     // TODO: handle max_polyphony
     
     // The main global scope
-    var awc = window.audioWorklet || BaseAudioContext.AudioWorklet;
-    console.log(awc);
-    awc.addModule("elecGuitarMIDI-processor.js")
+    context.audioWorklet.addModule("elecGuitarMIDI-processor.js")
     .then(function () {
-       	audio_context = new AudioContext();
-        callback(new elecGuitarMIDI_polyNode(audio_context, {}));
+        callback(new elecGuitarMIDI_polyNode(context, {}));
     })
 	.catch(function(error) { console.log(error); console.log("Faust elecGuitarMIDI_poly cannot be loaded or compiled"); });
 }
@@ -5628,13 +5650,20 @@ faust.createelecGuitarMIDI_poly = function(max_polyphony, callback)
 
 // Faust part
 
-var isWasm = (typeof (WebAssembly) !== "undefined");
-var audio_context = null;
+var isWasm = (typeof(WebAssembly) !== "undefined");
+var isWebKitAudio = (typeof (webkitAudioContext) !== "undefined");
+var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
 var max_polyphony = 16;
 var audio_input = null;
 var elecGuitarMIDI_poly = null;
 var faustsvg = null;
 var output_handler = null;
+
+function workletAvailable()
+{
+    var context = new OfflineAudioContext(1, 1, 44100);
+    return context.audioWorklet && typeof context.audioWorklet.addModule === 'function';
+}
 
 function changeBufferSize(buffer_size)
 {
@@ -5821,10 +5850,10 @@ function startelecGuitarMIDI()
 
 function startNewelecGuitarMIDI()
 {
-    if (isWasm) {
-        faust.createelecGuitarMIDI_poly(max_polyphony, startelecGuitarMIDIAux);
+    if (isWasm && workletAvailable()) {
+        faust.createelecGuitarMIDI_poly(audio_context, max_polyphony, startelecGuitarMIDIAux);
     }  else {
-        alert("WebAssembly is not supported in this browser !")
+        alert("WebAssembly or AudioWorklet is not supported in this browser !");
     }
 }
 
