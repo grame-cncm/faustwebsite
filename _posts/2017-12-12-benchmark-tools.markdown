@@ -42,9 +42,9 @@ On the following pages, just hit the *Start benchmark* button, and wait for the 
 - [http://faust.grame.fr/bench/zitaRev.html](http://faust.grame.fr/bench/zitaRev.html)
 
 
-### Looking at the Denormal issue ###
+### Testing the denormal issue ###
 
-A specific problem occurs when audio computation produces denormal float values, which is quite common with recursive filters, and can be extremely costly to compute on some processors like the Intel family for instance. Loog at the [following page](http://faust.grame.fr/news/2017/09/15/backend-benchmarks.html) for more explanations. Even with the software FTZ mode, we still see huge DSP CPU issue in some cases like this djmbe physical model based on simple biquad filters:
+A specific problem occurs when audio computation produces denormal float values, which is quite common with recursive filters, and can be extremely costly to compute on some processors like the Intel family for instance. Loog at the [following page](http://faust.grame.fr/news/2017/09/15/backend-benchmarks.html) for more explanations. Even with the software FTZ mode, we still see huge DSP CPU issue in some cases like this djembe physical model based on simple biquad filters:
 
 - [http://faust.grame.fr/modules/djembe.html](http://faust.grame.fr/modules/djembe.html)
 
@@ -53,4 +53,8 @@ On OSX for instance, open the **Activity Monitor** tool and look as your browser
 ### Benchmark tools ###
 
 For developers, benchmark tools allow to generate HTML pages to test your DSP. Look in particular at the [**faust2benchwasm** script.](https://github.com/grame-cncm/faust/tree/master-dev/tools/benchmark)
+
+### Dynamic testing page ###
+
+A more complete testig page for monophonic and polyphonic MIDI aware DSP, ScriptProcessor or AudioWorklet mode, FTZ selection mode is [available here](https://faust.grame.fr/dynamic/faustlive-wasm.html).
 
