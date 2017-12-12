@@ -5,7 +5,7 @@ date:   2017-12-12 08:00:00
 categories: news
 ---
 
-WebAudio wasm benchmark pages and tools allow to test statically Faust generated HTML pages. Tools to generate new ones are also available.
+WebAudio wasm benchmark pages and tools allow to test statically generated HTML pages from Faust DSP. Tools to generate new ones are also available.
 
 ### Simple pages ###
 
@@ -15,17 +15,16 @@ Simple pages can be used to test simple monophonic and polyphonic DSP, generated
 - [dynamically compiled OSC as a ScriptProcessor node](https://faust.grame.fr/dynamic/dynamic-osc-wasm.html)
 - [dynamically compiled MIDI controllable Organ as a ScriptProcessor node](https://faust.grame.fr/dynamic/dynamic-organ-wasm.html)
 
-Note that as 12/12/17, AudioWorklet pages can ony be tested with Chrome Canary. Be sure to [active AudioWorklet mode](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/) first. On a MacBook Pro OSX El Capitan 2,2 GHz Intel Core i7, **we still hear audio glitches when testing them**, for example when opening the JavaScript console, of interacting with other applications (like scrolling in the XCode editor, scrolling in the terminal...)
+Note that as 12/12/17, AudioWorklet pages can ony be tested with Chrome Canary. Be sure to [activate AudioWorklet mode](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/) first. On a MacBook Pro OSX El Capitan 2,2 GHz Intel Core i7, **we still hear audio glitches when testing them**, for example when opening the JavaScript console, or interacting with other applications (like scrolling in the XCode editor, scrolling in the terminal...)
 
 - [dynamically compiled OSC as an AudioWorlet node](https://faust.grame.fr/dynamic/dynamic-osc-worklet-wasm.html)
 - [dynamically compiled MIDI controllable Organ as an AudioWorlet node](https://faust.grame.fr/dynamic/dynamic-organ-worklet-wasm.html)
 
-
 ### Benchmark pages ###
 
-A set of statically generated pages allow to measure the DSP CPU use of Faust generated WebAssemby code. The **compute** method is repeatedly called in a loop, taking 100% of a core and which duration is measured. Results as MBytes/sec as well a DSP CPU load in % of a 1024 frames, 44.1 kHz audio buffer is displayed. 
+A set of statically generated pages allow to measure the DSP CPU use of Faust generated WebAssemby code. The **compute** method is repeatedly called in a loop, taking 100% of a core and which duration is measured. Results as MBytes/sec as well a DSP CPU load in % of a 1024 frames, 44.1 kHz audio buffer are displayed. 
 
-On the following pages, just hit the *Start benchmark* button, and wait for the result to be displayed. Note that since the computation is done in the main JavaScript, don't disturb your machine too much to get a reliable result. This can be used to compare the performances of the different browsers:
+On the following pages, just hit the *Start benchmark* button, and wait for the result to be displayed. Note that since the computation is done in the main JavaScript thread, don't disturb your machine too much to get a reliable result. This can be used to compare the performances of the different browsers:
 
 - [http://faust.grame.fr/bench/clarinetMIDI.html](http://faust.grame.fr/bench/clarinetMIDI.html)
 - [http://faust.grame.fr/bench/djembe.html](http://faust.grame.fr/bench/djembe.html)
