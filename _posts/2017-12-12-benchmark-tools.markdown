@@ -20,11 +20,27 @@ Note that as 12/12/17, AudioWorklet pages can ony be tested with Chrome Canary. 
 - [dynamically compiled OSC as an AudioWorlet node](https://faust.grame.fr/dynamic/dynamic-osc-worklet-wasm.html)
 - [dynamically compiled MIDI controllable Organ as an AudioWorlet node](https://faust.grame.fr/dynamic/dynamic-organ-worklet-wasm.html)
 
+### Polyphonic MIDI aware pages ###
+
+More complex statically generated polyphonic MIDI aware pages can be tested.
+
+ScriptProcessor based pages:
+
+- [http://faust.grame.fr/modules-worklet/clarinetMIDI.html](http://faust.grame.fr/modules-worklet/clarinetMIDI.html)
+- [http://faust.grame.fr/modules-worklet/elecGuitarMIDI.html](http://faust.grame.fr/modules-worklet/elecGuitarMIDI.html)
+- [http://faust.grame.fr/modules-worklet/violinMIDI.html](http://faust.grame.fr/modules-worklet/violinMIDI.html)
+
+AudioWorklet based pages:
+
+- [http://faust.grame.fr/modules/clarinetMIDI.html](http://faust.grame.fr/modules/clarinetMIDI.html)
+- [http://faust.grame.fr/modules/elecGuitarMIDI.html](http://faust.grame.fr/modules/elecGuitarMIDI.html)
+- [http://faust.grame.fr/modules/violinMIDI.html](http://faust.grame.fr/modules/violinMIDI.html)
+
 ### Benchmark pages ###
 
-A set of statically generated pages allow to measure the DSP CPU use of Faust generated WebAssemby code. The **compute** method is repeatedly called in a loop, taking 100% of a core and which duration is measured. Results as MBytes/sec as well a DSP CPU load in % of a 1024 frames, 44.1 kHz audio buffer are displayed. 
+A set of statically generated pages allow to measure the DSP CPU use of Faust generated WebAssemby code. The **compute** method is repeatedly called in a loop (taking 100% of a core) which duration is measured. Results as MBytes/sec as well a DSP CPU load in % of a 1024 frames, 44.1 kHz audio buffer are displayed. 
 
-On the following pages, just hit the *Start benchmark* button, and wait for the result to be displayed. Note that since the computation is done in the main JavaScript thread, don't disturb your machine too much to get a reliable result. This can be used to compare the performances of the different browsers:
+On the following pages, just hit the *Start benchmark* button, and wait for the result to be displayed. Note that since the computation is done in the main JavaScript thread, don't disturb your machine too much to get a reliable result. The pages can typically be used to compare the performances of different browsers:
 
 - [http://faust.grame.fr/bench/clarinetMIDI.html](http://faust.grame.fr/bench/clarinetMIDI.html)
 - [http://faust.grame.fr/bench/djembe.html](http://faust.grame.fr/bench/djembe.html)
@@ -40,7 +56,6 @@ On the following pages, just hit the *Start benchmark* button, and wait for the 
 - [http://faust.grame.fr/bench/violinMIDI.html](http://faust.grame.fr/bench/violinMIDI.html)
 - [http://faust.grame.fr/bench/zitaRev.html](http://faust.grame.fr/bench/zitaRev.html)
 
-
 ### Testing the denormal issue ###
 
 A specific problem occurs when audio computation produces denormal float values, which is quite common with recursive filters, and can be extremely costly to compute on some processors like the Intel family for instance. Loog at the [following page](http://faust.grame.fr/news/2017/09/15/backend-benchmarks.html) for more explanations. Even with the software FTZ mode, we still see huge DSP CPU issue in some cases like this djembe physical model based on simple biquad filters:
@@ -55,5 +70,5 @@ For developers, benchmark tools allow to generate HTML pages to test your DSP. L
 
 ### Dynamic testing page ###
 
-A more complete testig page for monophonic and polyphonic MIDI aware DSP, ScriptProcessor or AudioWorklet mode, FTZ selection mode is [available here](https://faust.grame.fr/dynamic/faustlive-wasm.html).
+A more complete testing page for monophonic and polyphonic MIDI aware DSP, ScriptProcessor or AudioWorklet mode, FTZ selection mode is [available here](https://faust.grame.fr/dynamic/faustlive-wasm.html).
 

@@ -1,13 +1,13 @@
 
 /*
-Code generated with Faust version 2.5.9
-Compilation options: -scal -ftz 2
+Code generated with Faust version 2.5.12
+Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONPeakEqualizer() {
-	return "{\"name\":\"Peak Equalizer\",\"version\":\"2.5.9\",\"options\":\"-scal -ftz 2\",\"size\":\"64\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Peak Equalizer\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Peak EQ\",\"items\":[{\"type\":\"hslider\",\"label\":\"Q - Filter Bandwidth\",\"address\":\"/Peak_EQ/Q_-_Filter_Bandwidth\",\"index\":\"36\",\"meta\":[{\"acc\":\"2 0 -10 0 10\"},{\"unit\":\"Hz\"}],\"init\":\"50\",\"min\":\"20\",\"max\":\"200\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Peak Frequency\",\"address\":\"/Peak_EQ/Peak_Frequency\",\"index\":\"12\",\"meta\":[{\"1\":\"\"},{\"acc\":\"0 1 -10 0 10\"},{\"scale\":\"log\"},{\"unit\":\"Hz\"}],\"init\":\"440\",\"min\":\"50\",\"max\":\"11000\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"Level\",\"address\":\"/Peak_EQ/Level\",\"index\":\"24\",\"meta\":[{\"2\":\"\"},{\"acc\":\"2 1 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"dB\"}],\"init\":\"0\",\"min\":\"-40\",\"max\":\"32\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"Peak Equalizer\",\"version\":\"2.5.12\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"64\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Peak Equalizer\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Peak EQ\",\"items\":[{\"type\":\"hslider\",\"label\":\"Q - Filter Bandwidth\",\"address\":\"/Peak_EQ/Q_-_Filter_Bandwidth\",\"index\":\"36\",\"meta\":[{\"acc\":\"2 0 -10 0 10\"},{\"unit\":\"Hz\"}],\"init\":\"50\",\"min\":\"20\",\"max\":\"200\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Peak Frequency\",\"address\":\"/Peak_EQ/Peak_Frequency\",\"index\":\"12\",\"meta\":[{\"1\":\"\"},{\"acc\":\"0 1 -10 0 10\"},{\"scale\":\"log\"},{\"unit\":\"Hz\"}],\"init\":\"440\",\"min\":\"50\",\"max\":\"11000\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"Level\",\"address\":\"/Peak_EQ/Level\",\"index\":\"24\",\"meta\":[{\"2\":\"\"},{\"acc\":\"2 1 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"dB\"}],\"init\":\"0\",\"min\":\"-40\",\"max\":\"32\",\"step\":\"0.01\"}]}]}";
 }
-function getBase64CodePeakEqualizer() { return "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R1JBTUUifSx7Im1hdGhzLmxpYi9saWNlbnNlIjoiTEdQTCB3aXRoIGV4Y2VwdGlvbiJ9LHsibWF0aHMubGliL25hbWUiOiJGYXVzdCBNYXRoIExpYnJhcnkifSx7Im1hdGhzLmxpYi92ZXJzaW9uIjoiMi4xIn0seyJuYW1lIjoiUGVhayBFcXVhbGl6ZXIifSx7InNpZ25hbHMubGliL25hbWUiOiJGYXVzdCBTaWduYWwgUm91dGluZyBMaWJyYXJ5In0seyJzaWduYWxzLmxpYi92ZXJzaW9uIjoiMC4wIn1dLCJ1aSI6W3sidHlwZSI6InZncm91cCIsImxhYmVsIjoiUGVhayBFUSIsIml0ZW1zIjpbeyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiUSAtIEZpbHRlciBCYW5kd2lkdGgiLCJhZGRyZXNzIjoiL1BlYWtfRVEvUV8tX0ZpbHRlcl9CYW5kd2lkdGgiLCJpbmRleCI6IjM2IiwibWV0YSI6W3siYWNjIjoiMiAwIC0xMCAwIDEwIn0seyJ1bml0IjoiSHoifV0sImluaXQiOiI1MCIsIm1pbiI6IjIwIiwibWF4IjoiMjAwIiwic3RlcCI6IjEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJQZWFrIEZyZXF1ZW5jeSIsImFkZHJlc3MiOiIvUGVha19FUS9QZWFrX0ZyZXF1ZW5jeSIsImluZGV4IjoiMTIiLCJtZXRhIjpbeyIxIjoiIn0seyJhY2MiOiIwIDEgLTEwIDAgMTAifSx7InNjYWxlIjoibG9nIn0seyJ1bml0IjoiSHoifV0sImluaXQiOiI0NDAiLCJtaW4iOiI1MCIsIm1heCI6IjExMDAwIiwic3RlcCI6IjAuMDEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJMZXZlbCIsImFkZHJlc3MiOiIvUGVha19FUS9MZXZlbCIsImluZGV4IjoiMjQiLCJtZXRhIjpbeyIyIjoiIn0seyJhY2MiOiIyIDEgLTEwIDAgMTAifSx7InN0eWxlIjoia25vYiJ9LHsidW5pdCI6ImRCIn1dLCJpbml0IjoiMCIsIm1pbiI6Ii00MCIsIm1heCI6IjMyIiwic3RlcCI6IjAuMDEifV19XX0w"; }
+function getBase64CodePeakEqualizer() { return "AGFzbQEAAAAB24CAgAARYAJ/fwBgBH9/f38AYAF/AX9gAX8Bf2ACf38BfWABfwF/YAJ/fwBgAX8AYAJ/fwBgAn9/AGABfwBgAn9/AX9gAn9/AX9gAn19AX1gA39/fQBgAX0BfWABfQF9AqWAgIAAAwNlbnYFX3Bvd2YADQNlbnYFX3NpbmYADwNlbnYFX3RhbmYAEAOPgICAAA4AAQIDBAUGBwgJCgsMDgWHgICAAAEAgoCAgAAHuoGAgAAMB2NvbXB1dGUABAxnZXROdW1JbnB1dHMABQ1nZXROdW1PdXRwdXRzAAYNZ2V0UGFyYW1WYWx1ZQAHDWdldFNhbXBsZVJhdGUACARpbml0AAkNaW5zdGFuY2VDbGVhcgAKEWluc3RhbmNlQ29uc3RhbnRzAAsMaW5zdGFuY2VJbml0AAwaaW5zdGFuY2VSZXNldFVzZXJJbnRlcmZhY2UADQ1zZXRQYXJhbVZhbHVlABAGbWVtb3J5AgAKw4iAgAAOgoCAgAAAC4KFgIAAAgR/EH1BACEEQQAhBUMAAAAAIQhDAAAAACEJQQAhBkMAAAAAIQpDAAAAACELQQAhB0MAAAAAIQxDAAAAACENQwAAAAAhDkMAAAAAIQ9DAAAAACEQQwAAAAAhEUMAAAAAIRJDAAAAACETQwAAAAAhFEMAAAAAIRVDAAAAACEWQwAAAAAhFyACQQBqKAIAIQQgA0EAaigCACEFQ28SgzpBACoCDJQhCEMAACDCQwAAAEJBACoCGJaXIQkgCUMAAAAAXiEGQQAqAiBDAAAgQUPNzEw9IAmLlBAAlCEKQ28SgzpBACoCJJQhC0EAIQcDQAJAIAhDd75/P0EAKgIUlJIhDEEAIAxDAAAAACAMvEGAgID8B3EbOAIQQQAqAghBACoCEJQQAiENQwAAgD8gDZUhDiALQ3e+fz9BACoCLJSSIQ9BACAPQwAAAAAgD7xBgICA/AdxGzgCKEMAAKBBQwAASENBACoCKJaXQQAqAjBBACoCEJQQAZUhECAKIBCUIRFBACoCICAQlCESIBIgESAGGyETQwAAAEBBACoCOEMAAIA/QwAAgD8gDUMAAABAEACVk5SUIRQgDiATkiANlUMAAIA/kiEVIAQgB2oqAgBBACoCPCAOIBOTIA2VQwAAgD+SlCAUkiAVlZMhFkEAIBZDAAAAACAWvEGAgID8B3EbOAI0IBEgEiAGGyEXIAUgB2ogFEEAKgI0IA4gF5IgDZVDAACAP5KUkkEAKgI8IA4gF5MgDZVDAACAP5KUkiAVlTgCAEEAQQAqAhA4AhRBAEEAKgIoOAIsQQBBACoCODgCPEEAQQAqAjQ4AjggB0EEaiEHIAdBBCABbEgEQAwCDAELCwsLhYCAgAAAQQEPC4WAgIAAAEEBDwuLgICAAAAgACABaioCAA8LiICAgAAAQQAoAgAPC46AgIAAACAAIAEQAyAAIAEQDAuXgYCAAAEDf0EAIQFBACECQQAhA0EAIQEDQAJAQRAgAUECdGpDAAAAADgCACABQQFqIQEgAUECSARADAIMAQsLC0EAIQIDQAJAQSggAkECdGpDAAAAADgCACACQQFqIQIgAkECSARADAIMAQsLC0EAIQMDQAJAQTQgA0ECdGpDAAAAADgCACADQQFqIQMgA0EDSARADAIMAQsLCwvggICAAABBACABNgIAQQBDAIA7SEMAAIA/QQAoAgCyl5Y4AgRBAEPbD0lAQQAqAgSVOAIIQQBDAACAP0EAKgIElTgCHEEAQ9sPSUBBACoCHJQ4AiBBAEPbD8lAQQAqAhyUOAIwC5CAgIAAACAAIAEQCyAAEA0gABAKC6CAgIAAAEEAQwAA3EM4AgxBAEMAAAAAOAIYQQBDAABIQjgCJAuNgICAAAAgASAAIAAgAUgbDwuNgICAAAAgACABIAAgAUgbDwuMgICAAAAgACABaiACOAIACwvOiYCAAAEAQQALxwl7Im5hbWUiOiJQZWFrIEVxdWFsaXplciIsInZlcnNpb24iOiIyLjUuMTIiLCJvcHRpb25zIjoid2FzbS1pYiwgLXNjYWwgLWZ0eiAyIiwic2l6ZSI6IjY0IiwiaW5wdXRzIjoiMSIsIm91dHB1dHMiOiIxIiwibWV0YSI6W3siYmFzaWNzLmxpYi9uYW1lIjoiRmF1c3QgQmFzaWMgRWxlbWVudCBMaWJyYXJ5In0seyJiYXNpY3MubGliL3ZlcnNpb24iOiIwLjAifSx7ImZpbHRlcnMubGliL25hbWUiOiJGYXVzdCBGaWx0ZXJzIExpYnJhcnkifSx7ImZpbHRlcnMubGliL3ZlcnNpb24iOiIwLjAifSx7Im1hdGhzLmxpYi9hdXRob3IiOiJHUkFNRSJ9LHsibWF0aHMubGliL2NvcHlyaWdodCI6IkdSQU1FIn0seyJtYXRocy5saWIvbGljZW5zZSI6IkxHUEwgd2l0aCBleGNlcHRpb24ifSx7Im1hdGhzLmxpYi9uYW1lIjoiRmF1c3QgTWF0aCBMaWJyYXJ5In0seyJtYXRocy5saWIvdmVyc2lvbiI6IjIuMSJ9LHsibmFtZSI6IlBlYWsgRXF1YWxpemVyIn0seyJzaWduYWxzLmxpYi9uYW1lIjoiRmF1c3QgU2lnbmFsIFJvdXRpbmcgTGlicmFyeSJ9LHsic2lnbmFscy5saWIvdmVyc2lvbiI6IjAuMCJ9XSwidWkiOlt7InR5cGUiOiJ2Z3JvdXAiLCJsYWJlbCI6IlBlYWsgRVEiLCJpdGVtcyI6W3sidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6IlEgLSBGaWx0ZXIgQmFuZHdpZHRoIiwiYWRkcmVzcyI6Ii9QZWFrX0VRL1FfLV9GaWx0ZXJfQmFuZHdpZHRoIiwiaW5kZXgiOiIzNiIsIm1ldGEiOlt7ImFjYyI6IjIgMCAtMTAgMCAxMCJ9LHsidW5pdCI6Ikh6In1dLCJpbml0IjoiNTAiLCJtaW4iOiIyMCIsIm1heCI6IjIwMCIsInN0ZXAiOiIxIn0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiUGVhayBGcmVxdWVuY3kiLCJhZGRyZXNzIjoiL1BlYWtfRVEvUGVha19GcmVxdWVuY3kiLCJpbmRleCI6IjEyIiwibWV0YSI6W3siMSI6IiJ9LHsiYWNjIjoiMCAxIC0xMCAwIDEwIn0seyJzY2FsZSI6ImxvZyJ9LHsidW5pdCI6Ikh6In1dLCJpbml0IjoiNDQwIiwibWluIjoiNTAiLCJtYXgiOiIxMTAwMCIsInN0ZXAiOiIwLjAxIn0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiTGV2ZWwiLCJhZGRyZXNzIjoiL1BlYWtfRVEvTGV2ZWwiLCJpbmRleCI6IjI0IiwibWV0YSI6W3siMiI6IiJ9LHsiYWNjIjoiMiAxIC0xMCAwIDEwIn0seyJzdHlsZSI6Imtub2IifSx7InVuaXQiOiJkQiJ9XSwiaW5pdCI6IjAiLCJtaW4iOiItNDAiLCJtYXgiOiIzMiIsInN0ZXAiOiIwLjAxIn1dfV19MA=="; }
 
 /*
  faust2wasm
@@ -384,48 +384,51 @@ PeakEqualizerProcessor.importObject = {
         memoryBase: 0,
         tableBase: 0,
             
-        absf: Math.abs,
-        acosf: Math.acos,
-        asinf: Math.asin,
-        atanf: Math.atan,
-        atan2f: Math.atan2,
-        ceilf: Math.ceil,
-        cosf: Math.cos,
-        expf: Math.exp,
-        floorf: Math.floor,
-        fmodf: function(x, y) { return x % y; },
-        logf: Math.log,
-        log10f: Math.log10,
-        max_f: Math.max,
-        min_f: Math.min,
-        remainderf: function(x, y) { return x - Math.round(x/y) * y; },
-        powf: Math.pow,
-        roundf: Math.fround,
-        sinf: Math.sin,
-        sqrtf: Math.sqrt,
-        tanf: Math.tan,
-            
-        abs: Math.abs,
-        acos: Math.acos,
-        asin: Math.asin,
-        atan: Math.atan,
-        atan2: Math.atan2,
-        ceil: Math.ceil,
-        cos: Math.cos,
-        exp: Math.exp,
-        floor: Math.floor,
-        fmod: function(x, y) { return x % y; },
-        log: Math.log,
-        log10: Math.log10,
-        max_: Math.max,
-        min_: Math.min,
-        remainder:function(x, y) { return x - Math.round(x/y) * y; },
-        pow: Math.pow,
-        round: Math.fround,
-        sin: Math.sin,
-        sqrt: Math.sqrt,
-        tan: Math.tan,
-            
+        // Integer version
+        _abs: Math.abs,
+        
+        // Float version
+        _acosf: Math.acos,
+        _asinf: Math.asin,
+        _atanf: Math.atan,
+        _atan2f: Math.atan2,
+        _ceilf: Math.ceil,
+        _cosf: Math.cos,
+        _expf: Math.exp,
+        _floorf: Math.floor,
+        _fmodf: function(x, y) { return x % y; },
+        _logf: Math.log,
+        _log10f: Math.log10,
+        _max_f: Math.max,
+        _min_f: Math.min,
+        _remainderf: function(x, y) { return x - Math.round(x/y) * y; },
+        _powf: Math.pow,
+        _roundf: Math.fround,
+        _sinf: Math.sin,
+        _sqrtf: Math.sqrt,
+        _tanf: Math.tan,
+           
+        // Double version
+        _acos: Math.acos,
+        _asin: Math.asin,
+        _atan: Math.atan,
+        _atan2: Math.atan2,
+        _ceil: Math.ceil,
+        _cos: Math.cos,
+        _exp: Math.exp,
+        _floor: Math.floor,
+        _fmod: function(x, y) { return x % y; },
+        _log: Math.log,
+        _log10: Math.log10,
+        _max_: Math.max,
+        _min_: Math.min,
+        _remainder:function(x, y) { return x - Math.round(x/y) * y; },
+        _pow: Math.pow,
+        _round: Math.fround,
+        _sin: Math.sin,
+        _sqrt: Math.sqrt,
+        _tan: Math.tan,
+        
         table: new WebAssembly.Table({ initial: 0, element: 'anyfunc' })
     }
 };

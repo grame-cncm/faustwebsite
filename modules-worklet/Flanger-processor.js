@@ -1,13 +1,13 @@
 
 /*
-Code generated with Faust version 2.5.9
-Compilation options: -scal -ftz 2
+Code generated with Faust version 2.5.12
+Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONFlanger() {
-	return "{\"name\":\"Flanger\",\"version\":\"2.5.9\",\"options\":\"-scal -ftz 2\",\"size\":\"32840\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Flanger\"},{\"oscillators.lib/name\":\"Faust Oscillator Library\"},{\"oscillators.lib/version\":\"0.0\"},{\"phaflangers.lib/name\":\"Faust Phaser and Flanger Library\"},{\"phaflangers.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Flanger\",\"items\":[{\"type\":\"vgroup\",\"label\":\"FLANGER\",\"meta\":[{\"tooltip\":\"Reference: https://ccrma.stanford.edu/~jos/pasp/Flanging.html\"}],\"items\":[{\"type\":\"hgroup\",\"label\":\"0x00\",\"meta\":[{\"1\":\"\"}],\"items\":[{\"type\":\"hslider\",\"label\":\"Speed\",\"address\":\"/Flanger/FLANGER/0x00/Speed\",\"index\":\"16420\",\"meta\":[{\"1\":\"\"},{\"acc\":\"0 1 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"Hz\"}],\"init\":\"3\",\"min\":\"0\",\"max\":\"10\",\"step\":\"0.01\"}]}]},{\"type\":\"hslider\",\"label\":\"Flanger Intensity\",\"address\":\"/Flanger/Flanger_Intensity\",\"index\":\"8\",\"meta\":[{\"3\":\"\"},{\"acc\":\"1 0 -10 0 10\"},{\"unit\":\"%\"}],\"init\":\"10\",\"min\":\"0\",\"max\":\"100\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"Flanger\",\"version\":\"2.5.12\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"32840\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Flanger\"},{\"oscillators.lib/name\":\"Faust Oscillator Library\"},{\"oscillators.lib/version\":\"0.0\"},{\"phaflangers.lib/name\":\"Faust Phaser and Flanger Library\"},{\"phaflangers.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Flanger\",\"items\":[{\"type\":\"vgroup\",\"label\":\"FLANGER\",\"meta\":[{\"tooltip\":\"Reference: https://ccrma.stanford.edu/~jos/pasp/Flanging.html\"}],\"items\":[{\"type\":\"hgroup\",\"label\":\"0x00\",\"meta\":[{\"1\":\"\"}],\"items\":[{\"type\":\"hslider\",\"label\":\"Speed\",\"address\":\"/Flanger/FLANGER/0x00/Speed\",\"index\":\"16420\",\"meta\":[{\"1\":\"\"},{\"acc\":\"0 1 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"Hz\"}],\"init\":\"3\",\"min\":\"0\",\"max\":\"10\",\"step\":\"0.01\"}]}]},{\"type\":\"hslider\",\"label\":\"Flanger Intensity\",\"address\":\"/Flanger/Flanger_Intensity\",\"index\":\"8\",\"meta\":[{\"3\":\"\"},{\"acc\":\"1 0 -10 0 10\"},{\"unit\":\"%\"}],\"init\":\"10\",\"min\":\"0\",\"max\":\"100\",\"step\":\"0.01\"}]}]}";
 }
-function getBase64CodeFlanger() { return "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Z25hbHMubGliL25hbWUiOiJGYXVzdCBTaWduYWwgUm91dGluZyBMaWJyYXJ5In0seyJzaWduYWxzLmxpYi92ZXJzaW9uIjoiMC4wIn1dLCJ1aSI6W3sidHlwZSI6InZncm91cCIsImxhYmVsIjoiRmxhbmdlciIsIml0ZW1zIjpbeyJ0eXBlIjoidmdyb3VwIiwibGFiZWwiOiJGTEFOR0VSIiwibWV0YSI6W3sidG9vbHRpcCI6IlJlZmVyZW5jZTogaHR0cHM6Ly9jY3JtYS5zdGFuZm9yZC5lZHUvfmpvcy9wYXNwL0ZsYW5naW5nLmh0bWwifV0sIml0ZW1zIjpbeyJ0eXBlIjoiaGdyb3VwIiwibGFiZWwiOiIweDAwIiwibWV0YSI6W3siMSI6IiJ9XSwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJTcGVlZCIsImFkZHJlc3MiOiIvRmxhbmdlci9GTEFOR0VSLzB4MDAvU3BlZWQiLCJpbmRleCI6IjE2NDIwIiwibWV0YSI6W3siMSI6IiJ9LHsiYWNjIjoiMCAxIC0xMCAwIDEwIn0seyJzdHlsZSI6Imtub2IifSx7InVuaXQiOiJIeiJ9XSwiaW5pdCI6IjMiLCJtaW4iOiIwIiwibWF4IjoiMTAiLCJzdGVwIjoiMC4wMSJ9XX1dfSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJGbGFuZ2VyIEludGVuc2l0eSIsImFkZHJlc3MiOiIvRmxhbmdlci9GbGFuZ2VyX0ludGVuc2l0eSIsImluZGV4IjoiOCIsIm1ldGEiOlt7IjMiOiIifSx7ImFjYyI6IjEgMCAtMTAgMCAxMCJ9LHsidW5pdCI6IiUifV0sImluaXQiOiIxMCIsIm1pbiI6IjAiLCJtYXgiOiIxMDAiLCJzdGVwIjoiMC4wMSJ9XX1dfTA="; }
+function getBase64CodeFlanger() { return "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biI6IjAuMCJ9LHsic2lnbmFscy5saWIvbmFtZSI6IkZhdXN0IFNpZ25hbCBSb3V0aW5nIExpYnJhcnkifSx7InNpZ25hbHMubGliL3ZlcnNpb24iOiIwLjAifV0sInVpIjpbeyJ0eXBlIjoidmdyb3VwIiwibGFiZWwiOiJGbGFuZ2VyIiwiaXRlbXMiOlt7InR5cGUiOiJ2Z3JvdXAiLCJsYWJlbCI6IkZMQU5HRVIiLCJtZXRhIjpbeyJ0b29sdGlwIjoiUmVmZXJlbmNlOiBodHRwczovL2Njcm1hLnN0YW5mb3JkLmVkdS9+am9zL3Bhc3AvRmxhbmdpbmcuaHRtbCJ9XSwiaXRlbXMiOlt7InR5cGUiOiJoZ3JvdXAiLCJsYWJlbCI6IjB4MDAiLCJtZXRhIjpbeyIxIjoiIn1dLCJpdGVtcyI6W3sidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6IlNwZWVkIiwiYWRkcmVzcyI6Ii9GbGFuZ2VyL0ZMQU5HRVIvMHgwMC9TcGVlZCIsImluZGV4IjoiMTY0MjAiLCJtZXRhIjpbeyIxIjoiIn0seyJhY2MiOiIwIDEgLTEwIDAgMTAifSx7InN0eWxlIjoia25vYiJ9LHsidW5pdCI6Ikh6In1dLCJpbml0IjoiMyIsIm1pbiI6IjAiLCJtYXgiOiIxMCIsInN0ZXAiOiIwLjAxIn1dfV19LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6IkZsYW5nZXIgSW50ZW5zaXR5IiwiYWRkcmVzcyI6Ii9GbGFuZ2VyL0ZsYW5nZXJfSW50ZW5zaXR5IiwiaW5kZXgiOiI4IiwibWV0YSI6W3siMyI6IiJ9LHsiYWNjIjoiMSAwIC0xMCAwIDEwIn0seyJ1bml0IjoiJSJ9XSwiaW5pdCI6IjEwIiwibWluIjoiMCIsIm1heCI6IjEwMCIsInN0ZXAiOiIwLjAxIn1dfV19MA=="; }
 
 /*
  faust2wasm
@@ -384,48 +384,51 @@ FlangerProcessor.importObject = {
         memoryBase: 0,
         tableBase: 0,
             
-        absf: Math.abs,
-        acosf: Math.acos,
-        asinf: Math.asin,
-        atanf: Math.atan,
-        atan2f: Math.atan2,
-        ceilf: Math.ceil,
-        cosf: Math.cos,
-        expf: Math.exp,
-        floorf: Math.floor,
-        fmodf: function(x, y) { return x % y; },
-        logf: Math.log,
-        log10f: Math.log10,
-        max_f: Math.max,
-        min_f: Math.min,
-        remainderf: function(x, y) { return x - Math.round(x/y) * y; },
-        powf: Math.pow,
-        roundf: Math.fround,
-        sinf: Math.sin,
-        sqrtf: Math.sqrt,
-        tanf: Math.tan,
-            
-        abs: Math.abs,
-        acos: Math.acos,
-        asin: Math.asin,
-        atan: Math.atan,
-        atan2: Math.atan2,
-        ceil: Math.ceil,
-        cos: Math.cos,
-        exp: Math.exp,
-        floor: Math.floor,
-        fmod: function(x, y) { return x % y; },
-        log: Math.log,
-        log10: Math.log10,
-        max_: Math.max,
-        min_: Math.min,
-        remainder:function(x, y) { return x - Math.round(x/y) * y; },
-        pow: Math.pow,
-        round: Math.fround,
-        sin: Math.sin,
-        sqrt: Math.sqrt,
-        tan: Math.tan,
-            
+        // Integer version
+        _abs: Math.abs,
+        
+        // Float version
+        _acosf: Math.acos,
+        _asinf: Math.asin,
+        _atanf: Math.atan,
+        _atan2f: Math.atan2,
+        _ceilf: Math.ceil,
+        _cosf: Math.cos,
+        _expf: Math.exp,
+        _floorf: Math.floor,
+        _fmodf: function(x, y) { return x % y; },
+        _logf: Math.log,
+        _log10f: Math.log10,
+        _max_f: Math.max,
+        _min_f: Math.min,
+        _remainderf: function(x, y) { return x - Math.round(x/y) * y; },
+        _powf: Math.pow,
+        _roundf: Math.fround,
+        _sinf: Math.sin,
+        _sqrtf: Math.sqrt,
+        _tanf: Math.tan,
+           
+        // Double version
+        _acos: Math.acos,
+        _asin: Math.asin,
+        _atan: Math.atan,
+        _atan2: Math.atan2,
+        _ceil: Math.ceil,
+        _cos: Math.cos,
+        _exp: Math.exp,
+        _floor: Math.floor,
+        _fmod: function(x, y) { return x % y; },
+        _log: Math.log,
+        _log10: Math.log10,
+        _max_: Math.max,
+        _min_: Math.min,
+        _remainder:function(x, y) { return x - Math.round(x/y) * y; },
+        _pow: Math.pow,
+        _round: Math.fround,
+        _sin: Math.sin,
+        _sqrt: Math.sqrt,
+        _tan: Math.tan,
+        
         table: new WebAssembly.Table({ initial: 0, element: 'anyfunc' })
     }
 };

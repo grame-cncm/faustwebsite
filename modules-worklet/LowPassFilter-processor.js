@@ -1,13 +1,13 @@
 
 /*
-Code generated with Faust version 2.5.9
-Compilation options: -scal -ftz 2
+Code generated with Faust version 2.5.12
+Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONLowPassFilter() {
-	return "{\"name\":\"Low Pass Filter\",\"version\":\"2.5.9\",\"options\":\"-scal -ftz 2\",\"size\":\"32\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Low Pass Filter\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Low Pass Filter\",\"items\":[{\"type\":\"hslider\",\"label\":\"Cut-off Frequency\",\"address\":\"/Low_Pass_Filter/Cut-off_Frequency\",\"index\":\"8\",\"meta\":[{\"acc\":\"2 1 -10 0 10\"},{\"scale\":\"log\"}],\"init\":\"800\",\"min\":\"10\",\"max\":\"20000\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"Low Pass Filter\",\"version\":\"2.5.12\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"32\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Low Pass Filter\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Low Pass Filter\",\"items\":[{\"type\":\"hslider\",\"label\":\"Cut-off Frequency\",\"address\":\"/Low_Pass_Filter/Cut-off_Frequency\",\"index\":\"8\",\"meta\":[{\"acc\":\"2 1 -10 0 10\"},{\"scale\":\"log\"}],\"init\":\"800\",\"min\":\"10\",\"max\":\"20000\",\"step\":\"0.01\"}]}]}";
 }
-function getBase64CodeLowPassFilter() { return "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"; }
+function getBase64CodeLowPassFilter() { return "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"; }
 
 /*
  faust2wasm
@@ -384,48 +384,51 @@ LowPassFilterProcessor.importObject = {
         memoryBase: 0,
         tableBase: 0,
             
-        absf: Math.abs,
-        acosf: Math.acos,
-        asinf: Math.asin,
-        atanf: Math.atan,
-        atan2f: Math.atan2,
-        ceilf: Math.ceil,
-        cosf: Math.cos,
-        expf: Math.exp,
-        floorf: Math.floor,
-        fmodf: function(x, y) { return x % y; },
-        logf: Math.log,
-        log10f: Math.log10,
-        max_f: Math.max,
-        min_f: Math.min,
-        remainderf: function(x, y) { return x - Math.round(x/y) * y; },
-        powf: Math.pow,
-        roundf: Math.fround,
-        sinf: Math.sin,
-        sqrtf: Math.sqrt,
-        tanf: Math.tan,
-            
-        abs: Math.abs,
-        acos: Math.acos,
-        asin: Math.asin,
-        atan: Math.atan,
-        atan2: Math.atan2,
-        ceil: Math.ceil,
-        cos: Math.cos,
-        exp: Math.exp,
-        floor: Math.floor,
-        fmod: function(x, y) { return x % y; },
-        log: Math.log,
-        log10: Math.log10,
-        max_: Math.max,
-        min_: Math.min,
-        remainder:function(x, y) { return x - Math.round(x/y) * y; },
-        pow: Math.pow,
-        round: Math.fround,
-        sin: Math.sin,
-        sqrt: Math.sqrt,
-        tan: Math.tan,
-            
+        // Integer version
+        _abs: Math.abs,
+        
+        // Float version
+        _acosf: Math.acos,
+        _asinf: Math.asin,
+        _atanf: Math.atan,
+        _atan2f: Math.atan2,
+        _ceilf: Math.ceil,
+        _cosf: Math.cos,
+        _expf: Math.exp,
+        _floorf: Math.floor,
+        _fmodf: function(x, y) { return x % y; },
+        _logf: Math.log,
+        _log10f: Math.log10,
+        _max_f: Math.max,
+        _min_f: Math.min,
+        _remainderf: function(x, y) { return x - Math.round(x/y) * y; },
+        _powf: Math.pow,
+        _roundf: Math.fround,
+        _sinf: Math.sin,
+        _sqrtf: Math.sqrt,
+        _tanf: Math.tan,
+           
+        // Double version
+        _acos: Math.acos,
+        _asin: Math.asin,
+        _atan: Math.atan,
+        _atan2: Math.atan2,
+        _ceil: Math.ceil,
+        _cos: Math.cos,
+        _exp: Math.exp,
+        _floor: Math.floor,
+        _fmod: function(x, y) { return x % y; },
+        _log: Math.log,
+        _log10: Math.log10,
+        _max_: Math.max,
+        _min_: Math.min,
+        _remainder:function(x, y) { return x - Math.round(x/y) * y; },
+        _pow: Math.pow,
+        _round: Math.fround,
+        _sin: Math.sin,
+        _sqrt: Math.sqrt,
+        _tan: Math.tan,
+        
         table: new WebAssembly.Table({ initial: 0, element: 'anyfunc' })
     }
 };

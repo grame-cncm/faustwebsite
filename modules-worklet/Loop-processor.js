@@ -1,13 +1,13 @@
 
 /*
-Code generated with Faust version 2.5.9
-Compilation options: -scal -ftz 2
+Code generated with Faust version 2.5.12
+Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONLoop() {
-	return "{\"name\":\"Loop\",\"version\":\"2.5.9\",\"options\":\"-scal -ftz 2\",\"size\":\"8388660\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"author\":\"Grame\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"copyright\":\"(c)GRAME 2006\"},{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"license\":\"BSD\"},{\"name\":\"Loop\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"},{\"version\":\"1.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"LOOP\",\"items\":[{\"type\":\"hslider\",\"label\":\"Loop Mode ON/OFF\",\"address\":\"/LOOP/Loop_Mode_ON/OFF\",\"index\":\"0\",\"init\":\"0\",\"min\":\"0\",\"max\":\"1\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Start/Stop Recording (Max 20s)\",\"address\":\"/LOOP/Start/Stop_Recording_(Max_20s)\",\"index\":\"4\",\"meta\":[{\"acc\":\"1 0 -10 0 12\"}],\"init\":\"1\",\"min\":\"0\",\"max\":\"1\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Volume\",\"address\":\"/LOOP/Volume\",\"index\":\"8388644\",\"meta\":[{\"unit\":\"dB\"}],\"init\":\"0\",\"min\":\"-96\",\"max\":\"4\",\"step\":\"0.1\"}]}]}";
+	return "{\"name\":\"Loop\",\"version\":\"2.5.12\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"8388660\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"author\":\"Grame\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"copyright\":\"(c)GRAME 2006\"},{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"license\":\"BSD\"},{\"name\":\"Loop\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"},{\"version\":\"1.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"LOOP\",\"items\":[{\"type\":\"hslider\",\"label\":\"Loop Mode ON/OFF\",\"address\":\"/LOOP/Loop_Mode_ON/OFF\",\"index\":\"0\",\"init\":\"0\",\"min\":\"0\",\"max\":\"1\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Start/Stop Recording (Max 20s)\",\"address\":\"/LOOP/Start/Stop_Recording_(Max_20s)\",\"index\":\"4\",\"meta\":[{\"acc\":\"1 0 -10 0 12\"}],\"init\":\"1\",\"min\":\"0\",\"max\":\"1\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Volume\",\"address\":\"/LOOP/Volume\",\"index\":\"8388644\",\"meta\":[{\"unit\":\"dB\"}],\"init\":\"0\",\"min\":\"-96\",\"max\":\"4\",\"step\":\"0.1\"}]}]}";
 }
-function getBase64CodeLoop() { return "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Olt7InR5cGUiOiJ2Z3JvdXAiLCJsYWJlbCI6IkxPT1AiLCJpdGVtcyI6W3sidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6Ikxvb3AgTW9kZSBPTi9PRkYiLCJhZGRyZXNzIjoiL0xPT1AvTG9vcF9Nb2RlX09OL09GRiIsImluZGV4IjoiMCIsImluaXQiOiIwIiwibWluIjoiMCIsIm1heCI6IjEiLCJzdGVwIjoiMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6IlN0YXJ0L1N0b3AgUmVjb3JkaW5nIChNYXggMjBzKSIsImFkZHJlc3MiOiIvTE9PUC9TdGFydC9TdG9wX1JlY29yZGluZ18oTWF4XzIwcykiLCJpbmRleCI6IjQiLCJtZXRhIjpbeyJhY2MiOiIxIDAgLTEwIDAgMTIifV0sImluaXQiOiIxIiwibWluIjoiMCIsIm1heCI6IjEiLCJzdGVwIjoiMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6IlZvbHVtZSIsImFkZHJlc3MiOiIvTE9PUC9Wb2x1bWUiLCJpbmRleCI6IjgzODg2NDQiLCJtZXRhIjpbeyJ1bml0IjoiZEIifV0sImluaXQiOiIwIiwibWluIjoiLTk2IiwibWF4IjoiNCIsInN0ZXAiOiIwLjEifV19XX0w"; }
+function getBase64CodeLoop() { return "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IjEuMCJ9XSwidWkiOlt7InR5cGUiOiJ2Z3JvdXAiLCJsYWJlbCI6IkxPT1AiLCJpdGVtcyI6W3sidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6Ikxvb3AgTW9kZSBPTi9PRkYiLCJhZGRyZXNzIjoiL0xPT1AvTG9vcF9Nb2RlX09OL09GRiIsImluZGV4IjoiMCIsImluaXQiOiIwIiwibWluIjoiMCIsIm1heCI6IjEiLCJzdGVwIjoiMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6IlN0YXJ0L1N0b3AgUmVjb3JkaW5nIChNYXggMjBzKSIsImFkZHJlc3MiOiIvTE9PUC9TdGFydC9TdG9wX1JlY29yZGluZ18oTWF4XzIwcykiLCJpbmRleCI6IjQiLCJtZXRhIjpbeyJhY2MiOiIxIDAgLTEwIDAgMTIifV0sImluaXQiOiIxIiwibWluIjoiMCIsIm1heCI6IjEiLCJzdGVwIjoiMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6IlZvbHVtZSIsImFkZHJlc3MiOiIvTE9PUC9Wb2x1bWUiLCJpbmRleCI6IjgzODg2NDQiLCJtZXRhIjpbeyJ1bml0IjoiZEIifV0sImluaXQiOiIwIiwibWluIjoiLTk2IiwibWF4IjoiNCIsInN0ZXAiOiIwLjEifV19XX0w"; }
 
 /*
  faust2wasm
@@ -384,48 +384,51 @@ LoopProcessor.importObject = {
         memoryBase: 0,
         tableBase: 0,
             
-        absf: Math.abs,
-        acosf: Math.acos,
-        asinf: Math.asin,
-        atanf: Math.atan,
-        atan2f: Math.atan2,
-        ceilf: Math.ceil,
-        cosf: Math.cos,
-        expf: Math.exp,
-        floorf: Math.floor,
-        fmodf: function(x, y) { return x % y; },
-        logf: Math.log,
-        log10f: Math.log10,
-        max_f: Math.max,
-        min_f: Math.min,
-        remainderf: function(x, y) { return x - Math.round(x/y) * y; },
-        powf: Math.pow,
-        roundf: Math.fround,
-        sinf: Math.sin,
-        sqrtf: Math.sqrt,
-        tanf: Math.tan,
-            
-        abs: Math.abs,
-        acos: Math.acos,
-        asin: Math.asin,
-        atan: Math.atan,
-        atan2: Math.atan2,
-        ceil: Math.ceil,
-        cos: Math.cos,
-        exp: Math.exp,
-        floor: Math.floor,
-        fmod: function(x, y) { return x % y; },
-        log: Math.log,
-        log10: Math.log10,
-        max_: Math.max,
-        min_: Math.min,
-        remainder:function(x, y) { return x - Math.round(x/y) * y; },
-        pow: Math.pow,
-        round: Math.fround,
-        sin: Math.sin,
-        sqrt: Math.sqrt,
-        tan: Math.tan,
-            
+        // Integer version
+        _abs: Math.abs,
+        
+        // Float version
+        _acosf: Math.acos,
+        _asinf: Math.asin,
+        _atanf: Math.atan,
+        _atan2f: Math.atan2,
+        _ceilf: Math.ceil,
+        _cosf: Math.cos,
+        _expf: Math.exp,
+        _floorf: Math.floor,
+        _fmodf: function(x, y) { return x % y; },
+        _logf: Math.log,
+        _log10f: Math.log10,
+        _max_f: Math.max,
+        _min_f: Math.min,
+        _remainderf: function(x, y) { return x - Math.round(x/y) * y; },
+        _powf: Math.pow,
+        _roundf: Math.fround,
+        _sinf: Math.sin,
+        _sqrtf: Math.sqrt,
+        _tanf: Math.tan,
+           
+        // Double version
+        _acos: Math.acos,
+        _asin: Math.asin,
+        _atan: Math.atan,
+        _atan2: Math.atan2,
+        _ceil: Math.ceil,
+        _cos: Math.cos,
+        _exp: Math.exp,
+        _floor: Math.floor,
+        _fmod: function(x, y) { return x % y; },
+        _log: Math.log,
+        _log10: Math.log10,
+        _max_: Math.max,
+        _min_: Math.min,
+        _remainder:function(x, y) { return x - Math.round(x/y) * y; },
+        _pow: Math.pow,
+        _round: Math.fround,
+        _sin: Math.sin,
+        _sqrt: Math.sqrt,
+        _tan: Math.tan,
+        
         table: new WebAssembly.Table({ initial: 0, element: 'anyfunc' })
     }
 };

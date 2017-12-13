@@ -1,13 +1,13 @@
 
 /*
-Code generated with Faust version 2.5.9
-Compilation options: -scal -ftz 2
+Code generated with Faust version 2.5.12
+Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONSNoiseS() {
-	return "{\"name\":\"Noises\",\"version\":\"2.5.9\",\"options\":\"-scal -ftz 2\",\"size\":\"40\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"ER\"},{\"name\":\"Noises\"},{\"version\":\"1.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Noises\",\"items\":[{\"type\":\"hslider\",\"label\":\"Noise Type\",\"address\":\"/Noises/Noise_Type\",\"index\":\"4\",\"meta\":[{\"acc\":\"0 0 -10 0 10\"}],\"init\":\"1\",\"min\":\"0\",\"max\":\"2\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Pink Noise Volume\",\"address\":\"/Noises/Pink_Noise_Volume\",\"index\":\"0\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"},{\"tooltip\":\"0=Mute, 1=White Noise, 2=Pink Noise\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"2\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"White Noise Volume\",\"address\":\"/Noises/White_Noise_Volume\",\"index\":\"32\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"2\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"Noises\",\"version\":\"2.5.12\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"40\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"ER\"},{\"name\":\"Noises\"},{\"version\":\"1.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Noises\",\"items\":[{\"type\":\"hslider\",\"label\":\"Noise Type\",\"address\":\"/Noises/Noise_Type\",\"index\":\"4\",\"meta\":[{\"acc\":\"0 0 -10 0 10\"}],\"init\":\"1\",\"min\":\"0\",\"max\":\"2\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Pink Noise Volume\",\"address\":\"/Noises/Pink_Noise_Volume\",\"index\":\"0\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"},{\"tooltip\":\"0=Mute, 1=White Noise, 2=Pink Noise\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"2\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"White Noise Volume\",\"address\":\"/Noises/White_Noise_Volume\",\"index\":\"32\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"2\",\"step\":\"0.01\"}]}]}";
 }
-function getBase64CodeSNoiseS() { return "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"; }
+function getBase64CodeSNoiseS() { return "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"; }
 
 /*
  faust2wasm
@@ -384,48 +384,51 @@ SNoiseSProcessor.importObject = {
         memoryBase: 0,
         tableBase: 0,
             
-        absf: Math.abs,
-        acosf: Math.acos,
-        asinf: Math.asin,
-        atanf: Math.atan,
-        atan2f: Math.atan2,
-        ceilf: Math.ceil,
-        cosf: Math.cos,
-        expf: Math.exp,
-        floorf: Math.floor,
-        fmodf: function(x, y) { return x % y; },
-        logf: Math.log,
-        log10f: Math.log10,
-        max_f: Math.max,
-        min_f: Math.min,
-        remainderf: function(x, y) { return x - Math.round(x/y) * y; },
-        powf: Math.pow,
-        roundf: Math.fround,
-        sinf: Math.sin,
-        sqrtf: Math.sqrt,
-        tanf: Math.tan,
-            
-        abs: Math.abs,
-        acos: Math.acos,
-        asin: Math.asin,
-        atan: Math.atan,
-        atan2: Math.atan2,
-        ceil: Math.ceil,
-        cos: Math.cos,
-        exp: Math.exp,
-        floor: Math.floor,
-        fmod: function(x, y) { return x % y; },
-        log: Math.log,
-        log10: Math.log10,
-        max_: Math.max,
-        min_: Math.min,
-        remainder:function(x, y) { return x - Math.round(x/y) * y; },
-        pow: Math.pow,
-        round: Math.fround,
-        sin: Math.sin,
-        sqrt: Math.sqrt,
-        tan: Math.tan,
-            
+        // Integer version
+        _abs: Math.abs,
+        
+        // Float version
+        _acosf: Math.acos,
+        _asinf: Math.asin,
+        _atanf: Math.atan,
+        _atan2f: Math.atan2,
+        _ceilf: Math.ceil,
+        _cosf: Math.cos,
+        _expf: Math.exp,
+        _floorf: Math.floor,
+        _fmodf: function(x, y) { return x % y; },
+        _logf: Math.log,
+        _log10f: Math.log10,
+        _max_f: Math.max,
+        _min_f: Math.min,
+        _remainderf: function(x, y) { return x - Math.round(x/y) * y; },
+        _powf: Math.pow,
+        _roundf: Math.fround,
+        _sinf: Math.sin,
+        _sqrtf: Math.sqrt,
+        _tanf: Math.tan,
+           
+        // Double version
+        _acos: Math.acos,
+        _asin: Math.asin,
+        _atan: Math.atan,
+        _atan2: Math.atan2,
+        _ceil: Math.ceil,
+        _cos: Math.cos,
+        _exp: Math.exp,
+        _floor: Math.floor,
+        _fmod: function(x, y) { return x % y; },
+        _log: Math.log,
+        _log10: Math.log10,
+        _max_: Math.max,
+        _min_: Math.min,
+        _remainder:function(x, y) { return x - Math.round(x/y) * y; },
+        _pow: Math.pow,
+        _round: Math.fround,
+        _sin: Math.sin,
+        _sqrt: Math.sqrt,
+        _tan: Math.tan,
+        
         table: new WebAssembly.Table({ initial: 0, element: 'anyfunc' })
     }
 };
