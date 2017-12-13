@@ -26,15 +26,15 @@ More complex statically generated polyphonic MIDI aware pages can be tested.
 
 ScriptProcessor based pages:
 
-- [http://faust.grame.fr/modules-worklet/clarinetMIDI.html](http://faust.grame.fr/modules-worklet/clarinetMIDI.html)
-- [http://faust.grame.fr/modules-worklet/elecGuitarMIDI.html](http://faust.grame.fr/modules-worklet/elecGuitarMIDI.html)
-- [http://faust.grame.fr/modules-worklet/violinMIDI.html](http://faust.grame.fr/modules-worklet/violinMIDI.html)
-
-AudioWorklet based pages:
-
 - [http://faust.grame.fr/modules/clarinetMIDI.html](http://faust.grame.fr/modules/clarinetMIDI.html)
 - [http://faust.grame.fr/modules/elecGuitarMIDI.html](http://faust.grame.fr/modules/elecGuitarMIDI.html)
 - [http://faust.grame.fr/modules/violinMIDI.html](http://faust.grame.fr/modules/violinMIDI.html)
+
+AudioWorklet based pages:
+
+- [http://faust.grame.fr/modules-worklet/clarinetMIDI.html](http://faust.grame.fr/modules-worklet/clarinetMIDI.html)
+- [http://faust.grame.fr/modules-worklet/elecGuitarMIDI.html](http://faust.grame.fr/modules-worklet/elecGuitarMIDI.html)
+- [http://faust.grame.fr/modules-worklet/violinMIDI.html](http://faust.grame.fr/modules-worklet/violinMIDI.html)
 
 ### Benchmark pages ###
 
