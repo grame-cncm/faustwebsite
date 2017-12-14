@@ -27,15 +27,15 @@ More complex statically generated polyphonic MIDI aware pages can be tested.
 
 ScriptProcessor based pages:
 
-- [http://faust.grame.fr/modules/clarinetMIDI.html](http://faust.grame.fr/modules/clarinetMIDI.html)
-- [http://faust.grame.fr/modules/elecGuitarMIDI.html](http://faust.grame.fr/modules/elecGuitarMIDI.html)
-- [http://faust.grame.fr/modules/violinMIDI.html](http://faust.grame.fr/modules/violinMIDI.html)
+- [https://faust.grame.fr/modules/clarinetMIDI.html](https://faust.grame.fr/modules/clarinetMIDI.html)
+- [https://faust.grame.fr/modules/elecGuitarMIDI.html](https://faust.grame.fr/modules/elecGuitarMIDI.html)
+- [https://faust.grame.fr/modules/violinMIDI.html](https://faust.grame.fr/modules/violinMIDI.html)
 
 AudioWorklet based pages:
 
-- [http://faust.grame.fr/modules-worklet/clarinetMIDI.html](http://faust.grame.fr/modules-worklet/clarinetMIDI.html)
-- [http://faust.grame.fr/modules-worklet/elecGuitarMIDI.html](http://faust.grame.fr/modules-worklet/elecGuitarMIDI.html)
-- [http://faust.grame.fr/modules-worklet/violinMIDI.html](http://faust.grame.fr/modules-worklet/violinMIDI.html)
+- [https://faust.grame.fr/modules-worklet/clarinetMIDI.html](https://faust.grame.fr/modules-worklet/clarinetMIDI.html)
+- [https://faust.grame.fr/modules-worklet/elecGuitarMIDI.html](https://faust.grame.fr/modules-worklet/elecGuitarMIDI.html)
+- [https://faust.grame.fr/modules-worklet/violinMIDI.html](https://faust.grame.fr/modules-worklet/violinMIDI.html)
 
 ### Benchmark pages ###
 
@@ -43,25 +43,25 @@ A set of statically generated pages allow to measure the DSP CPU use of Faust ge
 
 On the following pages, just hit the *Start benchmark* button, and wait for the result to be displayed. Note that since the computation is done in the main JavaScript thread, don't disturb your machine too much to get a reliable result. The pages can typically be used to compare the performances of different browsers:
 
-- [http://faust.grame.fr/bench/clarinetMIDI.html](http://faust.grame.fr/bench/clarinetMIDI.html)
-- [http://faust.grame.fr/bench/djembe.html](http://faust.grame.fr/bench/djembe.html)
-- [http://faust.grame.fr/bench/filterBank.html](http://faust.grame.fr/bench/filterBank.html)
-- [http://faust.grame.fr/bench/freeverb.html](http://faust.grame.fr/bench/freeverb.html)
-- [http://faust.grame.fr/bench/frenchBell.html](http://faust.grame.fr/bench/frenchBell.html)
-- [http://faust.grame.fr/bench/guitarEffectChain.html](http://faust.grame.fr/bench/guitarEffectChain.html)
-- [http://faust.grame.fr/bench/karplus.html](http://faust.grame.fr/bench/karplus.html)
-- [http://faust.grame.fr/bench/karplus32.html](http://faust.grame.fr/bench/karplus32.html)
-- [http://faust.grame.fr/bench/kisana.html](http://faust.grame.fr/bench/kisana.html)
-- [http://faust.grame.fr/bench/spectralLevel.html](http://faust.grame.fr/bench/spectralLevel.html)
-- [http://faust.grame.fr/bench/stunedBar6.html](http://faust.grame.fr/bench/stunedBar6.html)
-- [http://faust.grame.fr/bench/violinMIDI.html](http://faust.grame.fr/bench/violinMIDI.html)
-- [http://faust.grame.fr/bench/zitaRev.html](http://faust.grame.fr/bench/zitaRev.html)
+- [https://faust.grame.fr/bench/clarinetMIDI.html](https://faust.grame.fr/bench/clarinetMIDI.html)
+- [https://faust.grame.fr/bench/djembe.html](https://faust.grame.fr/bench/djembe.html)
+- [https://faust.grame.fr/bench/filterBank.html](https://faust.grame.fr/bench/filterBank.html)
+- [https://faust.grame.fr/bench/freeverb.html](https://faust.grame.fr/bench/freeverb.html)
+- [https://faust.grame.fr/bench/frenchBell.html](https://faust.grame.fr/bench/frenchBell.html)
+- [https://faust.grame.fr/bench/guitarEffectChain.html](https://faust.grame.fr/bench/guitarEffectChain.html)
+- [https://faust.grame.fr/bench/karplus.html](https://faust.grame.fr/bench/karplus.html)
+- [https://faust.grame.fr/bench/karplus32.html](https://faust.grame.fr/bench/karplus32.html)
+- [https://faust.grame.fr/bench/kisana.html](https://faust.grame.fr/bench/kisana.html)
+- [https://faust.grame.fr/bench/spectralLevel.html](https://faust.grame.fr/bench/spectralLevel.html)
+- [https://faust.grame.fr/bench/stunedBar6.html](https://faust.grame.fr/bench/stunedBar6.html)
+- [https://faust.grame.fr/bench/violinMIDI.html](https://faust.grame.fr/bench/violinMIDI.html)
+- [https://faust.grame.fr/bench/zitaRev.html](https://faust.grame.fr/bench/zitaRev.html)
 
 ### Testing the denormal issue ###
 
-A specific problem occurs when audio computation produces denormal float values, which is quite common with recursive filters, and can be extremely costly to compute on some processors like the Intel family for instance. Loog at the [following page](http://faust.grame.fr/news/2017/09/15/backend-benchmarks.html) for more explanations. Even with the software FTZ mode, we still see huge DSP CPU issue in some cases like this djembe physical model based on simple biquad filters:
+A specific problem occurs when audio computation produces denormal float values, which is quite common with recursive filters, and can be extremely costly to compute on some processors like the Intel family for instance. Loog at the [following page](https://faust.grame.fr/news/2017/09/15/backend-benchmarks.html) for more explanations. Even with the software FTZ mode, we still see huge DSP CPU issue in some cases like this djembe physical model based on simple biquad filters:
 
-- [http://faust.grame.fr/modules/djembe.html](http://faust.grame.fr/modules/djembe.html)
+- [https://faust.grame.fr/modules/djembe.html](https://faust.grame.fr/modules/djembe.html)
 
 On OSX for instance, open the **Activity Monitor** tool and look as your browser CPU use. Then hit the checkbox to start playing, and hit it again to stop it. Silence should be produced, but actually very small sample values (= subnormals) are generated. If your machine uses an Intel CPU, you will see CPU raise quite rapidly ! (tested on a MacBook Pro OSX El Capitan 2,2 GHz Intel Core i7).
 
