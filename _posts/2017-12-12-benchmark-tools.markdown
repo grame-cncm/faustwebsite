@@ -5,20 +5,21 @@ date:   2017-12-12 08:00:00
 categories: news
 ---
 
-WebAudio wasm benchmark pages and tools allow to test statically generated HTML pages from Faust DSP. Tools to generate new ones are also available.
+WebAudio wasm benchmark pages and tools allow to test statically generated HTML pages from Faust DSP. Audio generating pages in ScriptProcessor or AudioWorklet mode can be tested first. DSP CPU benchmark pages can be used to test the perfomance of wasm code across different browsers. 
+
+Tools to generate new DSP CPU benchmark pages are also available, and finally a page allowing to test the dynamic compilation chain can be acccesed.
 
 ### Simple pages ###
 
-Simple pages can be used to test simple monophonic and polyphonic DSP, generated as ScriptProcessor or AudioWorklet WebAudio nodes. Here are statically or dynamically generated oscillator and MIDI controllable polyphonic organ pages:  
+Simple pages can be used to test simple monophonic and polyphonic DSP, generated as ScriptProcessor or AudioWorklet WebAudio nodes.
 
 - [statically generated OSC as a ScriptProcessor node](https://faust.grame.fr/modules/osc-wasm.html)
-- [dynamically compiled OSC as a ScriptProcessor node](https://faust.grame.fr/dynamic/dynamic-osc-wasm.html)
-- [dynamically compiled MIDI controllable Organ as a ScriptProcessor node](https://faust.grame.fr/dynamic/dynamic-organ-wasm.html)
+- [statically generated MIDI controllable Organ as a ScriptProcessor node](https://faust.grame.fr/modules/organ-wasm.html)
 
 Note that as 12/12/17, AudioWorklet pages can ony be tested with Chrome Canary. Be sure to [activate AudioWorklet mode](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/) first. On a MacBook Pro OSX El Capitan 2,2 GHz Intel Core i7, **we still hear audio glitches when testing them**, for example when opening the JavaScript console, or interacting with other applications (like scrolling in the XCode editor, scrolling in the terminal...)
 
-- [dynamically compiled OSC as an AudioWorlet node](https://faust.grame.fr/dynamic/dynamic-osc-worklet-wasm.html)
-- [dynamically compiled MIDI controllable Organ as an AudioWorlet node](https://faust.grame.fr/dynamic/dynamic-organ-worklet-wasm.html)
+- [statically generated OSC as an AudioWorlet node](https://faust.grame.fr/modules-worklet/osc-wasm-worklet.html)
+- [statically generated MIDI controllable Organ as an AudioWorlet node](https://faust.grame.fr/modules-worklet/organ-wasm-worklet.html)
 
 ### Polyphonic MIDI aware pages ###
 
@@ -68,7 +69,7 @@ On OSX for instance, open the **Activity Monitor** tool and look as your browser
 
 For developers, benchmark tools allow to generate HTML pages to test your DSP. Look in particular at the [**faust2benchwasm** script.](https://github.com/grame-cncm/faust/tree/master-dev/tools/benchmark)
 
-### Dynamic testing page ###
+### Dynamic compilation chain testing page ###
 
 A more complete testing page for monophonic and polyphonic MIDI aware DSP, ScriptProcessor or AudioWorklet mode, FTZ selection mode is [available here](https://faust.grame.fr/dynamic/faustlive-wasm.html).
 
