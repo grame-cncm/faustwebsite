@@ -1,0 +1,69 @@
+<html>
+<head>
+<H1> Faust generated polyphonic MIDI ready WebAudio node </H1>
+</head>
+<body>
+    
+<P> Organ volume:
+<input type="range" oninput="changeVolume(event) "min="-96" max="1" value="0" step="0.1"/>        
+
+
+<!-- Load 'faust2wasm' script generated .js file -->
+<script src="organ.js"></script>
+
+<script>
+    
+if (typeof (WebAssembly) === "undefined") {
+    alert("WebAssembly is not supported in this browser, the page will not work !")
+}
+
+var isWebKitAudio = (typeof (webkitAudioContext) !== "undefined");
+var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
+var organ = null;
+
+// Slider handler to change the 'organ' volume
+function changeVolume(event)
+{
+    var val = event.target.value;
+    val = parseFloat(val);
+    console.log(val);
+    organ.setParamValue("/organ/volume", val);
+}
+
+function startorgan()
+{
+    // Create the Faust generated node
+    faust.createorgan(audio_context,
+                    function (node) {
+                            organ = node;
+                            console.log(organ.getJSON());
+                            // Print paths to be used with 'setParamValue'
+                            console.log(organ.getParams());
+                            // Connect it to output as a regular WebAudio node
+                            organ.connect(audio_context.destination);
+                      });
+}
+
+// Load handler
+window.addEventListener('load', startorgan);
+
+// To activate audio on iOS
+window.addEventListener('touchstart', function() {
+                        
+                        // create empty buffer
+                        var buffer = audio_context.createBuffer(1, 1, 22050);
+                        var source = audio_context.createBufferSource();
+                        source.buffer = buffer;
+                        
+                        // connect to output (your speakers)
+                        source.connect(audio_context.destination);
+                        
+                        // play the file
+                        source.start();
+                        
+                        }, false);
+
+</script>
+
+</body>
+</html>
