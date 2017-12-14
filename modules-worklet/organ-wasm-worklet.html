@@ -33,7 +33,7 @@ function changeVolume(event)
 function startorgan()
 {
     // Create the Faust generated node
-    faust.createorgan_poly(audio_context,
+    faust.createorgan_poly(audio_context, 16,
                     function (node) {
                             organ = node;
                             console.log(organ.getJSON());
