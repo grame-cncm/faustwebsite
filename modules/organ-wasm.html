@@ -18,7 +18,8 @@ if (typeof (WebAssembly) === "undefined") {
 }
 
 var isWebKitAudio = (typeof (webkitAudioContext) !== "undefined");
-var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
+//var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
+var audio_context = null;
 var organ = null;
 
 // Slider handler to change the 'organ' volume
@@ -117,8 +118,11 @@ function activateMIDIInput()
 
 function startorgan()
 {
+    // Create audio context
+    audio_context =  new AudioContext();
+    
     // Create the Faust generated node
-    faust.createorgan_poly(audio_context, 1024, 16,
+    faust.createorgan_poly(audio_context, 256, 16,
                       function (node) {
                             organ = node;
                             console.log(organ.getJSON());
