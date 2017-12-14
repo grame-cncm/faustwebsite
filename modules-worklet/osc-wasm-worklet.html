@@ -44,7 +44,7 @@ function changeVolume(event)
 function startosc()
 {
     // Create the Faust generated node
-    faust.createosc(audio_context
+    faust.createosc(audio_context,
                     function (node) {
                             osc = node;
                             console.log(osc.getJSON());
