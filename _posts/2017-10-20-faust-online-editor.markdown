@@ -7,7 +7,6 @@ categories: news
 
 We are very happy to announce the online [Faust Editor](https://faust.grame.fr/editor). It can be used to _edit_, _compile_ and _run_ Faust code from any recent Web Browser with [WebAssembly](http://webassembly.org) support. This editor works completely on the client side and it is therefore very convenient for situations with many simultaneous users (workshops, classrooms, etc.). It embeds the latest version of the Faust compiler with an efficient WebAssembly backend and offers polyphonic MIDI support.
 
-
 ![](/images/editor-help.png){: .center-image } 
 
 ## Features
