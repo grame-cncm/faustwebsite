@@ -6,10 +6,8 @@ permalink: /download/
 
 
 ### The Faust compiler ###
-The Faust compiler itself comes in two flavors, Faust and Faust2:
 
-+ [Faust (master branch)](https://github.com/grame-cncm/faust/tree/master) is simple to compile and install as it has very few dependencies, but it can only generate C++ programs.
-+ The [faust2](https://github.com/grame-cncm/faust/tree/faust2) branch is more general and has backends for C++, C, JAVA, JavaScript, ASM JavaScript, LLVM IR, WebAssembly and Interpreter. But is has more dependencies, in particular LLVM. Faust2 is needed to compile FaustLive and other projects using the `libfaust` embedded Faust compiler.
+The Faust compiler is available as a [Faust github](https://github.com/grame-cncm/faust/tree/master) project with backends for C++, C, JAVA, JavaScript, ASM JavaScript, LLVM IR, WebAssembly and Interpreter. It has  dependencies, in particular LLVM and libmicrohttpd. The LLVM backend is needed to compile FaustLive and other projects using the `libfaust` embedded Faust compiler.
 
 You can also clone the github repository with the following command :
 
@@ -18,6 +16,7 @@ You can also clone the github repository with the following command :
 Faust is easy to compile and to run on Mac and Linux. For Windows users we recommend to use [FaustLive](https://sourceforge.net/projects/faudiostream/files).
 
 ### Projects using the embedded Faust compiler ###
+
 Several projects using the embedded Faust compiler are available thanks to `libfaust` and `LLVM` (the technology also used in FaustLive), in particular:
 
 + [Faustgen 1.12 for Max/MSP on OSX (32/64 bits) and Windows (32 bits)](https://sourceforge.net/projects/faudiostream/files/faustgen-1.12.zip/download), allows you to edit, compile and run Faust code from within Max/MSP.
@@ -27,6 +26,7 @@ Please note that Faust can also be used from [Csound6](http://www.youtube.com/wa
 
 
 ### FaustLive ###
+
 FaustLive is the recommended tool to get started with Faust. Thanks to its embedded Faust compiler, FaustLive provides an ultra-short _edit-compile-run_ cycle. Moreover FaustLive is multi-platform and doesn't require any additional compiler or development tool (beside a simple code editor).
 
 + [FaustLive for Windows](https://sourceforge.net/projects/faudiostream/files/FaustLive-Windows-2.44.rar/download)
