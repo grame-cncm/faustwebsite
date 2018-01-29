@@ -4,7 +4,7 @@ title: Projects
 permalink: /projects/
 ---
 
-Some interesting applications or projects using Faust:
+Some interesting applications or projects using Faust are listed here:
 
 - [FaustWorks](http://www.grame.fr/logiciels/faustworks)
 - [FaustLive](https://sourceforge.net/projects/faudiostream/files/)
@@ -31,3 +31,4 @@ Some interesting applications or projects using Faust:
 - [Radium, a music editor with a new type of interface](http://users.notam02.no/~kjetism/radium/)
 - [AudioKit, an audio plugins development using Xcode's Swift Playgrounds. ](http://audiokit.io)
 - [The Ear Tone Toolbox](https://ccrma.stanford.edu/~chechile/eartonetoolbox/main.html)
+- [Bart Brouns Faust projects](https://github.com/magnetophon)
