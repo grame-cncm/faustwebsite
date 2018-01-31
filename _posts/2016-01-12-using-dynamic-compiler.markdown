@@ -22,7 +22,7 @@ To generate various output languages, several backends have been developed: for 
 
 The complete chain goes from the Faust DSP source code, compiled in LLVM IR using the LLVM backend, to finally produce the executable code using the LLVM JIT. All steps take place in memory, getting rid of the classical file based approaches. Pointers to executable functions can be retrieved from the resulting LLVM module and the code directly called with the appropriate parameters.
 
-In the Faust2 development branch, the Faust compiler has been packaged as an embeddable library called **libfaust**, published with an associated API that imitates the concept of oriented-object languages, like C++. Given a Faust source code (as a file or a string), calling the **createDSPFactoryXXX** function runs the compilation chain (Faust + LLVM JIT) and generates the “prototype” of the class, as a **llvm-dsp-factory** pointer.
+In the Faust2 development branch, the Faust compiler has been packaged as an embeddable library called **libfaust**, published with an associated API that imitates the concept of oriented-object languages, like C++. Given a Faust source code (as a file or a string), calling the **createDSPFactoryXXX** function runs the compilation chain (Faust + LLVM JIT) and generates the “prototype” of the class, as a **llvm_dsp_factory** pointer.
 
 {% highlight c++ %}
 
@@ -47,7 +47,7 @@ class llvm_dsp_factory {
 
 Note that the library keeps an internal cache of all allocated factories so that the compilation of the same DSP code, that is same source code and same set of 'normalized' (= sorted in a canonical order) compilations options, will return the same (reference counted) factory pointer. You will have to explicitly use **deleteDSPFactory** to properly decrement the reference counter when the factory is no more needed. You can get a unique SHA1 key of the created factory using its **getSHAKey** method. 
 
-Next, the **createDSPInstance** function, corresponding to the **new className** of C++, instantiates a **llvm-dsp** pointer to be used through its interface, connected to the audio chain and controller interfaces. When finished, use **deleteDSPInstance** to destroy the dsp instance.
+Next, the **createDSPInstance** function, corresponding to the **new className** of C++, instantiates a **llvm_dsp** pointer to be used through its interface, connected to the audio chain and controller interfaces. When finished, use **deleteDSPInstance** to destroy the dsp instance.
 
 
 {% highlight c++ %}
@@ -93,7 +93,7 @@ Some additional functions are available in the API:
 - **expandDSPFromString/expandDSPFromFile** creates a 'self-contained' DSP source string where all needed librairies have been included. All compilations options are 'normalized' and included as a comment in the expanded string,
 - **generateAuxFilesFromString/generateAuxFilesFromFile**: from a DSP source string or file, generates auxiliary files: SVG, XML, ps... depending of the 'argv' parameters.
 
-#### Using libfaust library ####
+#### Using the libfaust library ####
 
 The libfaust library is part of the Faust2 development branch. You'll have to [compile and install it](https://faust.grame.fr/download/). Then look at the installed faust/dsp/llvm-dsp.h header for a complete description of the API. Note that faust/dsp/llvm-c-dsp.h is a pure C version of the same API.
 
