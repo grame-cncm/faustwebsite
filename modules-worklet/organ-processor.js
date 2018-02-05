@@ -1,13 +1,13 @@
 
 /*
-Code generated with Faust version 2.5.15
+Code generated with Faust version 2.5.17
 Compilation options: wasm-eb, -scal -ftz 2
 */
 
 function getJSONorgan() {
-	return "{\"name\":\"organ\",\"version\":\"2.5.15\",\"options\":\"wasm-eb, -scal -ftz 2\",\"size\":\"68\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"organ\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"organ\",\"items\":[{\"type\":\"hslider\",\"label\":\"freq\",\"address\":\"/organ/freq\",\"index\":\"32\",\"meta\":[{\"unit\":\"Hz\"}],\"init\":\"440\",\"min\":\"20\",\"max\":\"20000\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"gain\",\"address\":\"/organ/gain\",\"index\":\"8\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"10\",\"step\":\"0.01\"},{\"type\":\"button\",\"label\":\"gate\",\"address\":\"/organ/gate\",\"index\":\"4\"},{\"type\":\"hslider\",\"label\":\"volume\",\"address\":\"/organ/volume\",\"index\":\"0\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"organ\",\"version\":\"2.5.17\",\"options\":\"wasm-eb, -scal -ftz 2\",\"size\":\"68\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"organ\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"organ\",\"items\":[{\"type\":\"hslider\",\"label\":\"freq\",\"address\":\"/organ/freq\",\"index\":\"32\",\"meta\":[{\"unit\":\"Hz\"}],\"init\":\"440\",\"min\":\"20\",\"max\":\"20000\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"gain\",\"address\":\"/organ/gain\",\"index\":\"8\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"10\",\"step\":\"0.01\"},{\"type\":\"button\",\"label\":\"gate\",\"address\":\"/organ/gate\",\"index\":\"4\"},{\"type\":\"hslider\",\"label\":\"volume\",\"address\":\"/organ/volume\",\"index\":\"0\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"}]}]}";
 }
-function getBase64Codeorgan() { return "AGFzbQEAAAAB1oCAgAAQYAJ/fwBgBH9/f38AYAJ9fQF9YAF/AX9gAX8Bf2ACf38BfWABfwF/YAJ/fwBgAX8AYAJ/fwBgAn9/AGABfwBgAn9/AX9gAn9/AX9gA39/fQBgAX0BfQKogICAAAMDZW52Bm1lbW9yeQIAAQNlbnYGX2Ztb2RmAAIDZW52BV9zaW5mAA8Dj4CAgAAOAAEDBAUGBwgJCgsMDQ4HsYGAgAALB2NvbXB1dGUAAwxnZXROdW1JbnB1dHMABA1nZXROdW1PdXRwdXRzAAUNZ2V0UGFyYW1WYWx1ZQAGDWdldFNhbXBsZVJhdGUABwRpbml0AAgNaW5zdGFuY2VDbGVhcgAJEWluc3RhbmNlQ29uc3RhbnRzAAoMaW5zdGFuY2VJbml0AAsaaW5zdGFuY2VSZXNldFVzZXJJbnRlcmZhY2UADA1zZXRQYXJhbVZhbHVlAA8Kv4iAgAAOgoCAgAAAC52EgIAAAgJ/Cn1BACEEQwAAAAAhBkMAAAAAIQdDAAAAACEIQwAAAAAhCUMAAAAAIQpDAAAAACELQQAhBUMAAAAAIQxDAAAAACENQwAAAAAhDkMAAAAAIQ8gA0EAaigCACEEIABBAGoqAgAhBkNvEgM6IABBBGoqAgAgAEEIaioCAJSUIQcgAEEgaioCACEIIABBHGoqAgAgCJQhCSAAQSxqKgIAIAiUIQogAEE4aioCACAIlCELQQAhBQNAAkAgB0M7338/IABBEGoqAgCUkiEMIABBDGogDEMAAAAAIAy8QYCAgPwHcRs4AgAgCSAAQShqKgIAkkMAAIA/EAAhDSAAQSRqIA1DAAAAACANvEGAgID8B3EbOAIAIAogAEE0aioCAJJDAACAPxAAIQ4gAEEwaiAOQwAAAAAgDrxBgICA/AdxGzgCACALIABBwABqKgIAkkMAAIA/EAAhDyAAQTxqIA9DAAAAACAPvEGAgID8B3EbOAIAIAQgBWogBiAAQQxqKgIAQ9sPyUAgAEEkaioCAJQQAUMAAAA/Q9sPyUAgAEEwaioCAJQQAZSSQwAAgD5D2w/JQCAAQTxqKgIAlBABlJKUlDgCACAAQRBqIABBDGoqAgA4AgAgAEEoaiAAQSRqKgIAOAIAIABBNGogAEEwaioCADgCACAAQcAAaiAAQTxqKgIAOAIAIAVBBGohBSAFQQQgAWxIBEAMAgwBCwsLC4WAgIAAAEEADwuFgICAAABBAQ8Li4CAgAAAIAAgAWoqAgAPC4uAgIAAACAAQRRqKAIADwuOgICAAAAgACABEAIgACABEAsL1IGAgAABBH9BACEBQQAhAkEAIQNBACEEQQAhAQNAAkAgAEEMIAFBAnRqakMAAAAAOAIAIAFBAWohASABQQJIBEAMAgwBCwsLQQAhAgNAAkAgAEEkIAJBAnRqakMAAAAAOAIAIAJBAWohAiACQQJIBEAMAgwBCwsLQQAhAwNAAkAgAEEwIANBAnRqakMAAAAAOAIAIANBAWohAyADQQJIBEAMAgwBCwsLQQAhBANAAkAgAEE8IARBAnRqakMAAAAAOAIAIARBAWohBCAEQQJIBEAMAgwBCwsLC+uAgIAAACAAQRRqIAE2AgAgAEEYakMAgDtIQwAAgD8gAEEUaigCALKXljgCACAAQRxqQwAAgD8gAEEYaioCAJU4AgAgAEEsakMAAABAIABBGGoqAgCVOAIAIABBOGpDAABAQCAAQRhqKgIAlTgCAAuQgICAAAAgACABEAogABAMIAAQCQu2gICAAAAgAEEAakMAAAA/OAIAIABBBGpDAAAAADgCACAAQQhqQwAAAD84AgAgAEEgakMAANxDOAIAC42AgIAAACABIAAgACABSBsPC42AgIAAACAAIAEgACABSBsPC4yAgIAAACAAIAFqIAI4AgALC7GGgIAAAQBBAAuqBnsibmFtZSI6Im9yZ2FuIiwidmVyc2lvbiI6IjIuNS4xNSIsIm9wdGlvbnMiOiJ3YXNtLWViLCAtc2NhbCAtZnR6IDIiLCJzaXplIjoiNjgiLCJpbnB1dHMiOiIwIiwib3V0cHV0cyI6IjEiLCJtZXRhIjpbeyJtYXRocy5saWIvYXV0aG9yIjoiR1JBTUUifSx7Im1hdGhzLmxpYi9jb3B5cmlnaHQiOiJHUkFNRSJ9LHsibWF0aHMubGliL2xpY2Vuc2UiOiJMR1BMIHdpdGggZXhjZXB0aW9uIn0seyJtYXRocy5saWIvbmFtZSI6IkZhdXN0IE1hdGggTGlicmFyeSJ9LHsibWF0aHMubGliL3ZlcnNpb24iOiIyLjEifSx7Im5hbWUiOiJvcmdhbiJ9XSwidWkiOlt7InR5cGUiOiJ2Z3JvdXAiLCJsYWJlbCI6Im9yZ2FuIiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJmcmVxIiwiYWRkcmVzcyI6Ii9vcmdhbi9mcmVxIiwiaW5kZXgiOiIzMiIsIm1ldGEiOlt7InVuaXQiOiJIeiJ9XSwiaW5pdCI6IjQ0MCIsIm1pbiI6IjIwIiwibWF4IjoiMjAwMDAiLCJzdGVwIjoiMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6ImdhaW4iLCJhZGRyZXNzIjoiL29yZ2FuL2dhaW4iLCJpbmRleCI6IjgiLCJpbml0IjoiMC41IiwibWluIjoiMCIsIm1heCI6IjEwIiwic3RlcCI6IjAuMDEifSx7InR5cGUiOiJidXR0b24iLCJsYWJlbCI6ImdhdGUiLCJhZGRyZXNzIjoiL29yZ2FuL2dhdGUiLCJpbmRleCI6IjQifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJ2b2x1bWUiLCJhZGRyZXNzIjoiL29yZ2FuL3ZvbHVtZSIsImluZGV4IjoiMCIsImluaXQiOiIwLjUiLCJtaW4iOiIwIiwibWF4IjoiMSIsInN0ZXAiOiIwLjAxIn1dfV19MA=="; }
+function getBase64Codeorgan() { return "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IiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJmcmVxIiwiYWRkcmVzcyI6Ii9vcmdhbi9mcmVxIiwiaW5kZXgiOiIzMiIsIm1ldGEiOlt7InVuaXQiOiJIeiJ9XSwiaW5pdCI6IjQ0MCIsIm1pbiI6IjIwIiwibWF4IjoiMjAwMDAiLCJzdGVwIjoiMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6ImdhaW4iLCJhZGRyZXNzIjoiL29yZ2FuL2dhaW4iLCJpbmRleCI6IjgiLCJpbml0IjoiMC41IiwibWluIjoiMCIsIm1heCI6IjEwIiwic3RlcCI6IjAuMDEifSx7InR5cGUiOiJidXR0b24iLCJsYWJlbCI6ImdhdGUiLCJhZGRyZXNzIjoiL29yZ2FuL2dhdGUiLCJpbmRleCI6IjQifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJ2b2x1bWUiLCJhZGRyZXNzIjoiL29yZ2FuL3ZvbHVtZSIsImluZGV4IjoiMCIsImluaXQiOiIwLjUiLCJtaW4iOiIwIiwibWF4IjoiMSIsInN0ZXAiOiIwLjAxIn1dfV19MA=="; }
 
 /*
  faust2wasm
@@ -151,7 +151,14 @@ class organ_polyProcessor extends AudioWorkletProcessor {
     {
         // Analyse JSON to generate AudioParam parameters
         var params = [];
+        
+        // Add instrument parameters
         organ_polyProcessor.parse_ui(JSON.parse(getJSONorgan()).ui, params, organ_polyProcessor.parse_item1);
+        
+        // Possibly add effect parameters
+        if (typeof (getJSONeffect) !== "undefined") {
+             organ_polyProcessor.parse_ui(JSON.parse(getJSONeffect()).ui, params, organ_polyProcessor.parse_item1);
+        }
         return params;
     }
     
@@ -168,7 +175,6 @@ class organ_polyProcessor extends AudioWorkletProcessor {
             return n;
         }
         
-        // Keep JSON parsed object
         var json_object = null;
         try {
             json_object = JSON.parse(getJSONorgan());
@@ -176,7 +182,19 @@ class organ_polyProcessor extends AudioWorkletProcessor {
             return null;
         }
         
-        var memory_size = pow2limit(parseInt(json_object.size) * polyphony + ((parseInt(json_object.inputs) + parseInt(json_object.outputs) * 2) * (ptr_size + (buffer_size * sample_size)))) / 65536;
+        var effect_json_object_size = 0;
+        if (typeof (getJSONeffect) !== "undefined") {
+            var effect_json_object = null;
+            try {
+                effect_json_object = JSON.parse(getJSONeffect());
+                effect_json_object_size = parseInt(effect_json_object.size);
+            } catch (e) {
+                faust.error_msg = "Error in JSON.parse: " + e;
+                return null;
+            }
+        }
+        
+        var memory_size = pow2limit(effect_json_object_size + parseInt(json_object.size) * polyphony + ((parseInt(json_object.inputs) + parseInt(json_object.outputs) * 2) * (ptr_size + (buffer_size * sample_size)))) / 65536;
         memory_size = Math.max(2, memory_size); // As least 2
         return new WebAssembly.Memory({ initial: memory_size, maximum: memory_size });
     }
@@ -186,6 +204,9 @@ class organ_polyProcessor extends AudioWorkletProcessor {
         super(options);
         
         this.json_object = JSON.parse(getJSONorgan());
+        if (typeof (getJSONeffect) !== "undefined") {
+            this.effect_json_object = JSON.parse(getJSONeffect());
+        }
         
         this.output_handler = function(path, value) { this.port.postMessage({ path: path, value: value }); };
         
@@ -251,8 +272,12 @@ class organ_polyProcessor extends AudioWorkletProcessor {
         // wasm mixer
         this.mixer = organ_polyProcessor.mixer_instance.exports;
         
+        // wasm effect
+        this.effect = (organ_polyProcessor.effect_instance) ? organ_polyProcessor.effect_instance.exports : null;
+        
         console.log(this.mixer);
         console.log(this.factory);
+        console.log(this.effect);
         
         // Start of DSP memory ('polyphony' DSP voices)
         this.polyphony = organ_polyProcessor.polyphony;
@@ -280,6 +305,9 @@ class organ_polyProcessor extends AudioWorkletProcessor {
             this.dsp_voices_trigger[i] = false;
         }
         
+        // Effect memory starts after last voice
+        this.effect_start = this.dsp_voices[this.polyphony - 1] + parseInt(this.json_object.size);
+    
         this.getPlayingVoice = function(pitch)
         {
             var voice_playing = this.kNoVoice;
@@ -400,9 +428,13 @@ class organ_polyProcessor extends AudioWorkletProcessor {
                 }
             }
             
-             // Parse UI
+            // Parse UI part
             organ_polyProcessor.parse_ui(this.json_object.ui, this, organ_polyProcessor.parse_item2);
             
+            if (this.effect) {
+                organ_polyProcessor.parse_ui(this.effect_json_object.ui, this, organ_polyProcessor.parse_item2);
+            }
+     
             // keep 'keyOn/keyOff' labels
             for (i = 0; i < this.inputs_items.length; i++) {
                 if (this.inputs_items[i].endsWith("/gate")) {
@@ -420,6 +452,11 @@ class organ_polyProcessor extends AudioWorkletProcessor {
             // Init DSP voices
             for (i = 0; i <  this.polyphony; i++) {
                 this.factory.init(this.dsp_voices[i], sampleRate);  // 'sampleRate' is defined in AudioWorkletGlobalScope
+            }
+            
+            // Init effect
+            if (this.effect) {
+                this.effect.init(this.effect_start, sampleRate);
             }
         }
         
@@ -487,14 +524,22 @@ class organ_polyProcessor extends AudioWorkletProcessor {
         
         this.setParamValue = function (path, val)
         {
-            for (var i = 0; i < this.polyphony; i++) {
-                this.factory.setParamValue(this.dsp_voices[i], this.pathTable[path], val);
+            if (this.effect && getJSONeffect().includes(path)) {
+                this.effect.setParamValue(this.effect_start, this.pathTable[path], val);
+            } else {
+                for (var i = 0; i < this.polyphony; i++) {
+                    this.factory.setParamValue(this.dsp_voices[i], this.pathTable[path], val);
+                }
             }
         }
 
         this.getParamValue = function (path)
         {
-            return this.factory.getParamValue(this.dsp_voices[0], this.pathTable[path]);
+            if (this.effect && getJSONeffect().includes(path)) {
+                return this.effect.getParamValue(this.effect_start, this.pathTable[path]);
+            } else {
+                return this.factory.getParamValue(this.dsp_voices[0], this.pathTable[path]);
+            }
         }
             
         // Init resulting DSP
@@ -583,6 +628,11 @@ class organ_polyProcessor extends AudioWorkletProcessor {
                     this.dsp_voices_state[i] = this.kFreeVoice;
                 }
             }
+        }
+        
+        // Apply effect
+        if (this.effect) {
+            this.effect.compute(this.effect_start, organ_polyProcessor.buffer_size, this.outs, this.outs);
         }
         
         // Update bargraph
@@ -674,6 +724,11 @@ try {
     organ_polyProcessor.mixer_instance = new WebAssembly.Instance(wasm_mixer_module, organ_polyProcessor.mixObject);
     let wasm_module = new WebAssembly.Module(organ_polyProcessor.atob(getBase64Codeorgan()));
     organ_polyProcessor.organ_instance = new WebAssembly.Instance(wasm_module, organ_polyProcessor.importObject);
+    // Possibly compile effect
+    if (typeof (getBase64Codeeffect) !== "undefined") {
+        let wasm_effect_module = new WebAssembly.Module(organ_polyProcessor.atob(getBase64Codeeffect()));
+        organ_polyProcessor.effect_instance = new WebAssembly.Instance(wasm_effect_module, organ_polyProcessor.importObject);
+    }
     registerProcessor('organ_poly', organ_polyProcessor);
 } catch (e) {
     console.log(e); console.log("Faust organ_poly cannot be loaded or compiled");
