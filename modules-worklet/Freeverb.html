@@ -5437,9 +5437,10 @@ class FreeverbNode extends AudioWorkletNode {
         var json_object = JSON.parse(getJSONFreeverb());
         
         // Setting values for the input, the output and the channel count.
-        options.numberOfInputs = parseInt(json_object.inputs);
-        options.numberOfOutputs = parseInt(json_object.outputs);
-        options.channelCount = 1;
+        options.numberOfInputs = 1;
+        options.numberOfOutputs = 1;
+        options.channelCount = 2;
+        options.channelCountMode = "explicit";
         
         super(context, 'Freeverb', options);
         
@@ -5597,6 +5598,9 @@ var faust = faust || {};
 
 faust.createFreeverb = function(context, callback)
 {
+    // Resume audio context each time...
+    context.resume();
+    
     // The main global scope
     context.audioWorklet.addModule("Freeverb-processor.js")
     .then(function () {

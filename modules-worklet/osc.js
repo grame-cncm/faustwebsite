@@ -27,9 +27,10 @@ class oscNode extends AudioWorkletNode {
         var json_object = JSON.parse(getJSONosc());
         
         // Setting values for the input, the output and the channel count.
-        options.numberOfInputs = parseInt(json_object.inputs);
-        options.numberOfOutputs = parseInt(json_object.outputs);
-        options.channelCount = 1;
+        options.numberOfInputs = 1;
+        options.numberOfOutputs = 1;
+        options.channelCount = 2;
+        options.channelCountMode = "explicit";
         
         super(context, 'osc', options);
         
@@ -187,6 +188,9 @@ var faust = faust || {};
 
 faust.createosc = function(context, callback)
 {
+    // Resume audio context each time...
+    context.resume();
+    
     // The main global scope
     context.audioWorklet.addModule("osc-processor.js")
     .then(function () {

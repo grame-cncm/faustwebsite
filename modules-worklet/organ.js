@@ -28,9 +28,10 @@ class organ_polyNode extends AudioWorkletNode {
         var json_object = JSON.parse(getJSONorgan());
       
         // Setting values for the input, the output and the channel count.
-        options.numberOfInputs = parseInt(json_object.inputs);
-        options.numberOfOutputs = parseInt(json_object.outputs);
-        options.channelCount = 1;
+        options.numberOfInputs = 1;
+        options.numberOfOutputs = 1;
+        options.channelCount = 2;
+        options.channelCountMode = "explicit";
         
         super(context, 'organ_poly', options);
         
@@ -245,6 +246,9 @@ var faust = faust || {};
 faust.createorgan_poly = function(context, max_polyphony, callback)
 {
     // TODO: handle max_polyphony
+    
+    // Resume audio context each time...
+    context.resume();
     
     // The main global scope
     context.audioWorklet.addModule("organ-processor.js")

@@ -5437,9 +5437,10 @@ class ASREnvelopeNode extends AudioWorkletNode {
         var json_object = JSON.parse(getJSONASREnvelope());
         
         // Setting values for the input, the output and the channel count.
-        options.numberOfInputs = parseInt(json_object.inputs);
-        options.numberOfOutputs = parseInt(json_object.outputs);
-        options.channelCount = 1;
+        options.numberOfInputs = 1;
+        options.numberOfOutputs = 1;
+        options.channelCount = 2;
+        options.channelCountMode = "explicit";
         
         super(context, 'ASREnvelope', options);
         
@@ -5597,6 +5598,9 @@ var faust = faust || {};
 
 faust.createASREnvelope = function(context, callback)
 {
+    // Resume audio context each time...
+    context.resume();
+    
     // The main global scope
     context.audioWorklet.addModule("ASREnvelope-processor.js")
     .then(function () {

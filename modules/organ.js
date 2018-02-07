@@ -54,6 +54,9 @@ faust.debug = false;
  */
 faust.organ_poly = function (mixer_instance, dsp_instance, effect_instance, memory, context, buffer_size, polyphony) {
 
+    // Resume audio context each time...
+    context.resume();
+    
     var json_object = null;
     try {
         json_object = JSON.parse(getJSONorgan());
