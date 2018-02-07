@@ -3,11 +3,11 @@
 <rect x="1.000000" y="1.000000" width="288.400000" height="87.000000" rx="0" ry="0" style="stroke:none;fill:#cccccc;"/>
 <rect x="0.000000" y="0.000000" width="288.400000" height="87.000000" rx="0" ry="0" style="stroke:none;fill:#ffffff;"/>
 <text x="10.000000" y="7.000000" font-family="Arial" font-size="7"></text>
-<a xlink:href="phaser2Demo-0x7fda83b5fc90.svg">
+<a xlink:href="phaser2Demo-0x7fa5b4179750.svg">
 <rect x="75.000000" y="37.000000" width="51.600000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#cccccc;"/>
 <rect x="74.000000" y="36.000000" width="51.600000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#003366;"/>
 </a>
-<a xlink:href="phaser2Demo-0x7fda83b5fc90.svg">
+<a xlink:href="phaser2Demo-0x7fa5b4179750.svg">
 <text x="99.800000" y="50.000000" font-family="Arial" font-size="7" text-anchor="middle" fill="#FFFFFF">phaser2Demo</text>
 </a>
 <circle cx="76.000000" cy="38.000000" r="1"/>
@@ -27,11 +27,11 @@
 <line x1="188.600000" y1="45.000000" x2="191.600000" y2="44.000000"  transform="rotate(0.000000,191.600000,44.000000)" style="stroke: black; stroke-width:0.25;"/>
 <line x1="188.600000" y1="51.000000" x2="191.600000" y2="52.000000"  transform="rotate(0.000000,191.600000,52.000000)" style="stroke: black; stroke-width:0.25;"/>
 <line x1="188.600000" y1="53.000000" x2="191.600000" y2="52.000000"  transform="rotate(0.000000,191.600000,52.000000)" style="stroke: black; stroke-width:0.25;"/>
-<a xlink:href="drywet-0x7fda83b75740.svg">
+<a xlink:href="drywet-0x7fa5b418f1f0.svg">
 <rect x="232.600000" y="33.000000" width="25.800000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#cccccc;"/>
 <rect x="231.600000" y="32.000000" width="25.800000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#003366;"/>
 </a>
-<a xlink:href="drywet-0x7fda83b75740.svg">
+<a xlink:href="drywet-0x7fa5b418f1f0.svg">
 <text x="244.500000" y="46.000000" font-family="Arial" font-size="7" text-anchor="middle" fill="#FFFFFF">drywet</text>
 </a>
 <circle cx="233.600000" cy="34.000000" r="1"/>
