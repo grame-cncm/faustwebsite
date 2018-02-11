@@ -3,11 +3,11 @@
 <rect x="1.000000" y="1.000000" width="927.300000" height="159.000000" rx="0" ry="0" style="stroke:none;fill:#cccccc;"/>
 <rect x="0.000000" y="0.000000" width="927.300000" height="159.000000" rx="0" ry="0" style="stroke:none;fill:#ffffff;"/>
 <text x="10.000000" y="7.000000" font-family="Arial" font-size="7"></text>
-<a xlink:href="capture-0x7fec0d0ceef0.svg">
+<a xlink:href="capture-0x7f9b43ecf1f0.svg">
 <rect x="105.000000" y="69.000000" width="38.700000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#cccccc;"/>
 <rect x="104.000000" y="68.000000" width="38.700000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#003366;"/>
 </a>
-<a xlink:href="capture-0x7fec0d0ceef0.svg">
+<a xlink:href="capture-0x7f9b43ecf1f0.svg">
 <text x="123.350000" y="82.000000" font-family="Arial" font-size="7" text-anchor="middle" fill="#FFFFFF">capture</text>
 </a>
 <circle cx="106.000000" cy="70.000000" r="1"/>
@@ -53,11 +53,11 @@
 <line x1="804.600000" y1="65.000000" x2="807.600000" y2="64.000000"  transform="rotate(0.000000,807.600000,64.000000)" style="stroke: black; stroke-width:0.25;"/>
 <line x1="804.600000" y1="71.000000" x2="807.600000" y2="72.000000"  transform="rotate(0.000000,807.600000,72.000000)" style="stroke: black; stroke-width:0.25;"/>
 <line x1="804.600000" y1="73.000000" x2="807.600000" y2="72.000000"  transform="rotate(0.000000,807.600000,72.000000)" style="stroke: black; stroke-width:0.25;"/>
-<a xlink:href="level-0x7fec0d0d0e90.svg">
+<a xlink:href="level-0x7f9b43ed1190.svg">
 <rect x="683.400000" y="103.000000" width="25.800000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#cccccc;"/>
 <rect x="682.400000" y="102.000000" width="25.800000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#003366;"/>
 </a>
-<a xlink:href="level-0x7fec0d0d0e90.svg">
+<a xlink:href="level-0x7f9b43ed1190.svg">
 <text x="695.300000" y="116.000000" font-family="Arial" font-size="7" text-anchor="middle" fill="#FFFFFF">level</text>
 </a>
 <circle cx="684.400000" cy="104.000000" r="1"/>
