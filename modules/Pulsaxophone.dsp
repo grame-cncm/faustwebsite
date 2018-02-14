@@ -2,7 +2,7 @@ declare name "Pulsaxophone";
 declare author "ER"; //From Saxophone by Romain Michon;
 
 import("stdfaust.lib");
-instrument = library("instruments.lib"); 
+instrument = library("instruments.lib");
 
 /* =============== DESCRIPTION ================= :
 
@@ -15,9 +15,9 @@ instrument = library("instruments.lib");
 
 */
 //==================== INSTRUMENT =======================
-      
+
 process = vgroup("Pulsaxo",
-	(bodyFilter,breathPressure : instrumentBody) ~ 
+	(bodyFilter,breathPressure : instrumentBody) ~
 	(delay1 : NLFM) : !,fi.lowpass(1,1000)
 	//Scaling Output and stereo
 	*(gain) :>_<: instrReverbAccel);
@@ -28,7 +28,7 @@ process = vgroup("Pulsaxo",
 freq = hslider("[1]Frequency[unit:Hz][acc:1 1 -12 0 10]", 110,80,880,1):si.smooth(0.9999):min(880):max(80);
 gain = 0.8;
 gate = pulsaxo.gate;
-	
+
 pressure = 0.83;
 reedStiffness = 0.53;
 blowPosition = 0.43;
@@ -59,7 +59,7 @@ speed = hslider ("h:[2]Pulse/[1]Speed (Granulator)[unit:Hz][style:knob][acc:0 1 
 proba = hslider ("h:[2]Pulse/[2]Probability (Granulator)[unit:%][style:knob][acc:1 0 -10 0 10]", 88,75,100,1)*(0.01):fi.lowpass(1,1);
 
 phasor_bin (init) =  (+(float(speed)/float(ma.SR)) : fmod(_,1.0)) ~ *(init);
-pulsar = _<:(((_)<(ratio_env)):@(100))*((proba)>((_),(no.noise:abs):ba.latch)); 
+pulsar = _<:(((_)<(ratio_env)):@(100))*((proba)>((_),(no.noise:abs):ba.latch));
 
 };
 
@@ -67,12 +67,12 @@ pulsar = _<:(((_)<(ratio_env)):@(100))*((proba)>((_),(no.noise:abs):ba.latch));
 //nonlinearities are created by the nonlinear passive allpass ladder filter declared in filter.lib
 
 //nonlinear filter order
-nlfOrder = 6; 
+nlfOrder = 6;
 
 //attack - sustain - release envelope for nonlinearity (declared in instrument.lib)
-envelopeMod = en.asr(nonLinAttack,100,envelopeRelease,gate);
+envelopeMod = en.asr(nonLinAttack,1,envelopeRelease,gate);
 
-//nonLinearModultor is declared in instrument.lib, it adapts allpassnn from filter.lib 
+//nonLinearModultor is declared in instrument.lib, it adapts allpassnn from filter.lib
 //for using it with waveguide instruments
 NLFM =  instrument.nonLinearModulator((nonLinearity : si.smooth(0.999)),envelopeMod,freq,
      typeModulation,(frequencyMod : si.smooth(0.999)),nlfOrder);
@@ -95,7 +95,7 @@ delay1 = de.fdelay(4096,fdel1);
 delay2 = de.fdelay(4096,fdel2);
 
 //Breath pressure is controlled by an attack / sustain / release envelope (en.asr is declared in instrument.lib)
-envelope = (0.55+pressure*0.3)*en.asr(pressure*envelopeAttack,100,pressure*envelopeRelease,gate);
+envelope = (0.55+pressure*0.3)*en.asr(pressure*envelopeAttack,1,pressure*envelopeRelease,gate);
 breath = envelope + envelope*noiseGain*no.noise;
 
 //instrument.envVibrato is decalred in instrument.lib
@@ -107,10 +107,10 @@ bodyFilter = *(gain) : instrument.oneZero1(b0,b1)
 	with {
 		gain = -0.95;
 		b0 = 0.5;
-		b1 = 0.5;	
+		b1 = 0.5;
 	};
 
-instrumentBody(delay1FeedBack,breathP) = delay1FeedBack <: -(delay2) <: 
+instrumentBody(delay1FeedBack,breathP) = delay1FeedBack <: -(delay2) <:
 	((breathP - _ <: breathP - _*reedTable) - delay1FeedBack),_;
 
 instrReverbAccel = re.zita_rev1_stereo(rdel,f1,f2,t60dc,t60m,fsmax),_,_ <: _,!,_,!,!,_,!,_ : +,+

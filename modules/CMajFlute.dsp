@@ -2,7 +2,7 @@ declare name "C Major Flute";
 declare author "ER";// Adapted from  "Nonlinear WaveGuide Flute" by Romain Michon (rmichon@ccrma.stanford.edu)";
 
 import("stdfaust.lib");
-instrument = library("instruments.lib"); 
+instrument = library("instruments.lib");
 
 /* =============== DESCRIPTION ================= :
 
@@ -77,13 +77,13 @@ reflexionFilter = fi.lowpass(1,2000);
 //----------------------- Algorithm implementation ----------------------------
 
 //Pressure envelope
-env1(t) = en.adsr(env1Attack,env1Decay,90,env1Release,(t | pressureEnvelope))*pressure*1.1; 
+env1(t) = en.adsr(env1Attack,env1Decay,0.9,env1Release,(t | pressureEnvelope))*pressure*1.1;
 
 //Global envelope
-env2(t) = en.asr(env2Attack,100,env2Release,t)*0.5;
+env2(t) = en.asr(env2Attack,1,env2Release,t)*0.5;
 
 //Vibrato Envelope
-vibratoEnvelope(t) = instrument.envVibrato(vibratoBegin,vibratoAttack,100,vibratoRelease,t)*vibratoGain; 
+vibratoEnvelope(t) = instrument.envVibrato(vibratoBegin,vibratoAttack,100,vibratoRelease,t)*vibratoGain;
 
 vibrato(t) = os.osc(vibratoFreq)*vibratoEnvelope(t);
 
@@ -113,7 +113,7 @@ hand = hslider("h:[1]/[1]Instrument Hand[acc:0 1 -12 0 10]", 9, 0, N, 1): ba.aut
 // USAGE:
 //  _,_ : instrRerveb
 
-instrReverbFlute = _,_ <: *(reverbGain),*(reverbGain),*(1 - reverbGain),*(1 - reverbGain) : 
+instrReverbFlute = _,_ <: *(reverbGain),*(reverbGain),*(1 - reverbGain),*(1 - reverbGain) :
 re.zita_rev1_stereo(rdel,f1,f2,t60dc,t60m,fsmax),_,_ <: _,!,_,!,!,_,!,_ : +,+
     with {
        reverbGain = hslider("h:[2]Reverb/[1]Reverberation Volume (InstrReverb)[style:knob][acc:1 1 -10 0 10]", 0.2,0.05,1,0.01):si.smooth(0.999):min(1):max(0.05);

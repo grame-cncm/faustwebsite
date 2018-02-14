@@ -10,8 +10,8 @@ declare description "This object implements a helmholtz resonator (biquad filter
 - Left : silence/dying echo.
 - Front : single blow bottle.
 - Back : maximum whistling echo
-- Bottom : bottle + whistling echo 
-- Rocking : changes tone of blow bottle. 
+- Bottom : bottle + whistling echo
+- Rocking : changes tone of blow bottle.
 
 */
 
@@ -22,10 +22,10 @@ instrument = library("instruments.lib");
 
 process = vgroup("Blowhistle Bottles", par(i, N, blow(i)) :>_);
 
-blow(n)= par(i, 2, 
+blow(n)= par(i, 2,
 	//differential pressure
-	(-(breathPressure(trigger(n))) <: 
-	((+(1))*randPressure((trigger(n))) : +(breathPressure(trigger(n)))) - *(instrument.jetTable),_ : baPaF(i,n),_)~_: !,_: 
+	(-(breathPressure(trigger(n))) <:
+	((+(1))*randPressure((trigger(n))) : +(breathPressure(trigger(n)))) - *(instrument.jetTable),_ : baPaF(i,n),_)~_: !,_:
 	//signal scaling
 	fi.dcblocker*envelopeG(trigger(n))*(0.5)<:+(voice(i,n))*resonGain(i)):>_
 	with{
@@ -83,10 +83,10 @@ bandPassFilter(f) = instrument.bandPass(f,bottleRadius);
 //----------------------- Algorithm implementation ----------------------------
 
 //global envelope is of type attack - decay - sustain - release
-envelopeG(t) =  gain*en.adsr(gain*envelopeAttack,envelopeDecay,80,envelopeRelease,t);
+envelopeG(t) =  gain*en.adsr(gain*envelopeAttack,envelopeDecay,0.8,envelopeRelease,t);
 
 //pressure envelope is also ADSR
-envelope(t) = pressure*en.adsr(gain*0.02,0.01,80,gain*0.2,t);
+envelope(t) = pressure*en.adsr(gain*0.02,0.01,0.8,gain*0.2,t);
 
 //vibrato
 vibrato(t) = os.osc(vibratoFreq)*vibratoGain*instrument.envVibrato(vibratoBegin,vibratoAttack,100,vibratoRelease,t)*os.osc(vibratoFreq);
@@ -108,4 +108,4 @@ trigger(n) = position(n): trig
 	};
 
 
-	
+

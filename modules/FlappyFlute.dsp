@@ -2,7 +2,7 @@ declare name "Flappy Flute";
 declare author "ER";// Adapted from "Nonlinear WaveGuide Flute" by Romain Michon (rmichon@ccrma.stanford.edu)
 
 import("stdfaust.lib");
-instrument = library("instruments.lib"); 
+instrument = library("instruments.lib");
 
 /* =============== DESCRIPTION ======================== :
 
@@ -51,7 +51,7 @@ speed = hslider ("h:[2]Instrument/[2]Speed (Granulator)[style:knob][acc:0 1 -10 
 proba = hslider ("h:[2]Instrument/[3]Probability (Granulator)[unit:%][style:knob][acc:1 0 -10 0 10]", 88,60,100,1) *(0.01) : fi.lowpass(1,1);
 
 phasor_bin (init) =  (+(float(speed)/float(ma.SR)) : fmod(_,1.0)) ~ *(init);
-pulsar = _<:(((_)<(ratio_env)):@(100))*((proba)>((_),(no.noise:abs):ba.latch)); 
+pulsar = _<:(((_)<(ratio_env)):@(100))*((proba)>((_),(no.noise:abs):ba.latch));
 
 };
 
@@ -79,12 +79,12 @@ env1Release = 0.05;
 //nonlinearities are created by the nonlinear passive allpass ladder filter declared in filter.lib
 
 //nonlinear filter order
-nlfOrder = 6; 
+nlfOrder = 6;
 
 //attack - sustain - release envelope for nonlinearity (declared in instrument.lib)
-envelopeMod = en.asr(nonLinAttack,100,0.1,gate);
+envelopeMod = en.asr(nonLinAttack,1,0.1,gate);
 
-//nonLinearModultor is declared in instrument.lib, it adapts allpassnn from filter.lib 
+//nonLinearModultor is declared in instrument.lib, it adapts allpassnn from filter.lib
 //for using it with waveguide instruments
 NLFM =  instrument.nonLinearModulator((nonLinearity : si.smooth(0.999)),envelopeMod,freq,
      typeModulation,(frequencyMod : si.smooth(0.999)),nlfOrder);
@@ -110,13 +110,13 @@ reflexionFilter = fi.lowpass(1,2000);
 //----------------------- Algorithm implementation ----------------------------
 
 //Pressure envelope
-env1 = en.adsr(env1Attack,env1Decay,90,env1Release,(gate | pressureEnvelope))*pressure*1.1; 
+env1 = en.adsr(env1Attack,env1Decay,0.9,env1Release,(gate | pressureEnvelope))*pressure*1.1;
 
 //Global envelope
 env2 = en.asr(env2Attack,100,env2Release,gate)*0.5;
 
 //Vibrato Envelope
-vibratoEnvelope = instrument.envVibrato(vibratoBegin,vibratoAttack,100,vibratoRelease,gate)*vibratoGain; 
+vibratoEnvelope = instrument.envVibrato(vibratoBegin,vibratoAttack,100,vibratoRelease,gate)*vibratoGain;
 
 vibrato = os.osc(vibratoFreq)*vibratoEnvelope;
 

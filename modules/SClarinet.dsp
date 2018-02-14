@@ -32,17 +32,17 @@ instrument = library("instruments.lib");
 
 process = vgroup("CLARINET",
 	//Commuted Loss Filtering
-	(_,(breathPressure <: _,_) : (filter*-0.95 - _ <: 
-	
+	(_,(breathPressure <: _,_) : (filter*-0.95 - _ <:
+
 	//Non-Linear Scattering
-	*(reedTable)) + _) ~ 
-	
+	*(reedTable)) + _) ~
+
 	//Delay with Feedback
-	(delayLine):// : NLFM) : 
-	
+	(delayLine):// : NLFM) :
+
 	//scaling and stereo
-	*(gain)*1.5); 
-	
+	*(gain)*1.5);
+
 //==================== GUI SPECIFICATION ================
 
 
@@ -81,14 +81,14 @@ delayLine = de.fdelay(4096,delayLength);
 //one zero filter used as a allpass: pole is set to -1
 filter = instrument.oneZero0(0.5,0.5);
 
-//stereoizer is declared in INSTRUMENT.lib and implement a stereo spacialisation in function of 
-//the frequency period in number of samples 
+//stereoizer is declared in INSTRUMENT.lib and implement a stereo spacialisation in function of
+//the frequency period in number of samples
 //stereo = stereoizerCla(ma.SR/freq);
 
 //----------------------- Algorithm implementation ----------------------------
 
 //Breath pressure + vibrato + breath no.noise + envelope (Attack / Decay / Sustain / Release)
-envelope = en.adsr(envelopeAttack,envelopeDecay,100,envelopeRelease,gate)*pressure*0.9;
+envelope = en.adsr(envelopeAttack,envelopeDecay,1,envelopeRelease,gate)*pressure*0.9;
 
 vibrato = os.osc(vibratoFreq)*vibratoGain*
 	instrument.envVibrato(0.1*2*vibratoAttack,0.9*2*vibratoAttack,100,vibratoRelease,gate);

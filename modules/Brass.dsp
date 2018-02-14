@@ -5,15 +5,15 @@ declare copyright "Romain Michon";
 declare version "1.0";
 declare licence "STK-4.3"; // Synthesis Tool Kit 4.3 (MIT style license);
 declare description "A simple brass instrument waveguide model, a la Cook (TBone, HosePlayer).";
-declare reference "https://ccrma.stanford.edu/~jos/pasp/Brasses.html"; 
+declare reference "https://ccrma.stanford.edu/~jos/pasp/Brasses.html";
 
 //Modification GRAME July 2015
 
 import("stdfaust.lib");
-instrument = library("instruments.lib"); 
+instrument = library("instruments.lib");
 
 /* =============== DESCRIPTION ================= :
- 
+
 - Brass instrument
 - Head = Reverb/Silence
 - Upward = Higher frequency
@@ -25,7 +25,7 @@ instrument = library("instruments.lib");
 
 process = vgroup("Brass Instrument", Brass <: InstrReverBrass :>_);
 
-Brass = (borePressure <: deltaPressure,_ : 
+Brass = (borePressure <: deltaPressure,_ :
 	  (lipFilter <: *(mouthPressure),(1-_)),_ : _, * :> + :
 	  fi.dcblocker) ~ (boreDelay) :
 	  *(gain)*(2);
@@ -44,7 +44,7 @@ vibratoFreq = hslider("v:[3]Parameters/h:/Vibrato Frequency (Vibrato Envelope)[u
 vibratoGain = 0.05;
 vibratoBegin = 0.05;
 vibratoAttack = 0.5;
-vibratoRelease = 0.1;          
+vibratoRelease = 0.1;
 
 envelopeDecay = 0.001;
 envelopeAttack = 0.005;
@@ -67,7 +67,7 @@ boreDelay = de.fdelay(4096,slideTarget);
 vibrato = vibratoGain*os.osc(vibratoFreq)*instrument.envVibrato(vibratoBegin,vibratoAttack,100,vibratoRelease,gate);
 
 //envelope (Attack / Decay / Sustain / Release), breath pressure and vibrato
-breathPressure = pressure*en.adsr(envelopeAttack,envelopeDecay,100,envelopeRelease,gate) + vibrato;
+breathPressure = pressure*en.adsr(envelopeAttack,envelopeDecay,1,envelopeRelease,gate) + vibrato;
 mouthPressure = 0.3*breathPressure;
 
 //scale the de.delay feedback

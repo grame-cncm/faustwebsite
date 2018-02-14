@@ -10,7 +10,7 @@ declare reference "https://ccrma.stanford.edu/~jos/pasp/Woodwinds.html";
 //Modification Grame July 2015
 
 import("stdfaust.lib");
-instrument = library("instruments.lib"); 
+instrument = library("instruments.lib");
 
 /* =============== DESCRIPTION ================= :
 
@@ -32,17 +32,17 @@ instrument = library("instruments.lib");
 
 process = vgroup("CLARINET",
 	//Commuted Loss Filtering
-	(_,(breathPressure <: _,_) : (filter*-0.95 - _ <: 
-	
+	(_,(breathPressure <: _,_) : (filter*-0.95 - _ <:
+
 	//Non-Linear Scattering
-	*(reedTable)) + _) ~ 
-	
+	*(reedTable)) + _) ~
+
 	//Delay with Feedback
-	(delayLine):// : NLFM) : 
-	
+	(delayLine):// : NLFM) :
+
 	//scaling and stereo
-	*(gain)*1.5 <: instrReverbCla); 
-	
+	*(gain)*1.5 <: instrReverbCla);
+
 //==================== GUI SPECIFICATION ================
 
 freq = hslider("h:[2]Instrument/Frequency[unit:Hz][tooltip:Tone frequency][acc:1 1 -14 0 12]", 440,110,1300,0.01):si.smooth(0.999);
@@ -84,7 +84,7 @@ filter = instrument.oneZero0(0.5,0.5);
 //----------------------- Algorithm implementation ----------------------------
 
 //Breath pressure + vibrato + breath no.noise + envelope (Attack / Decay / Sustain / Release)
-envelope = en.adsr(envelopeAttack,envelopeDecay,100,envelopeRelease,gate)*pressure*0.9;
+envelope = en.adsr(envelopeAttack,envelopeDecay,1,envelopeRelease,gate)*pressure*0.9;
 
 vibrato = os.osc(vibratoFreq)*vibratoGain*
 	instrument.envVibrato(0.1*2*vibratoAttack,0.9*2*vibratoAttack,100,vibratoRelease,gate);
@@ -93,11 +93,11 @@ breathPressure = breath + breath*vibrato;
 
 //----------------------- INSTRREVERB ----------------------------
 
-instrReverbCla = _,_ <: *(reverbGain),*(reverbGain),*(1 - reverbGain),*(1 - reverbGain) : 
+instrReverbCla = _,_ <: *(reverbGain),*(reverbGain),*(1 - reverbGain),*(1 - reverbGain) :
 re.zita_rev1_stereo(rdel,f1,f2,t60dc,t60m,fsmax),_,_ <: _,!,_,!,!,_,!,_ : +,+
     with {
        reverbGain = hslider("h:[4]Reverb/ Reverberation Volume (InstrReverb)[style:knob][acc:1 1 -15 0 15]", 0.137,0.05,1,0.01) :si.smooth(0.999):min(1):max(0.05);
-       roomSize = hslider("h:[4]Reverb/Reverberation Room Size (InstrReverb)[style:knob][acc:1 1 -15 0 15]", 0.45,0.05,2,0.01):min(2):max(0.05);   
+       roomSize = hslider("h:[4]Reverb/Reverberation Room Size (InstrReverb)[style:knob][acc:1 1 -15 0 15]", 0.45,0.05,2,0.01):min(2):max(0.05);
        rdel = 20;
        f1 = 200;
        f2 = 6000;
@@ -105,7 +105,7 @@ re.zita_rev1_stereo(rdel,f1,f2,t60dc,t60m,fsmax),_,_ <: _,!,_,!,!,_,!,_ : +,+
        t60m = roomSize*2;
        fsmax = 48000;
     };
-       
+
 
 
 
