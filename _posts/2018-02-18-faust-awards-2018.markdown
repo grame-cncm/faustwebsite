@@ -16,7 +16,7 @@ Authors are required to prepare a video demonstrating the software. This video m
 
 Junior Competition
 ------------------
-In parallel to the Faust Open-Source Software Competition we introduce this year a junior competition, the Faust Student Software Competition, with a 200€ prize for the winner. The Faust Student Software Competition is intended to promote interesting audio processing and synthesis applications written in Faust in a single file in less than 1000 words. The word count is done after removing the comments from the code:
+In parallel to the Faust Open-Source Software Competition we have a junior competition, the Faust Student Software Competition, with a 200€ prize for the winner. The Faust Student Software Competition is intended to promote interesting audio processing and synthesis applications written in Faust in a single file in less than 1000 words. The word count is done after removing the comments from the code:
 
     cat foo.dsp | stripcmt | wc -w.
 
