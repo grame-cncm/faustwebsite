@@ -102,7 +102,7 @@ instrReverbHarp = _,_ <: *(reverbGain),*(reverbGain),*(1 - reverbGain),*(1 - rev
 re.zita_rev1_stereo(rdel,f1,f2,t60dc,t60m,fsmax),_,_ <: _,!,_,!,!,_,!,_ : +,+
     with {
        reverbGain = hslider("v:[8]Reverb/ Reverberation Volume (InstrReverb)[acc:1 1 -10 20 0 0.5] ",0.5,0.1,1,0.01) : si.smooth(0.999);
-       roomSize = hslider("v:[8]Reverb/ÒReverberation Room Size (InstrReverb)[acc:1 1 -10 0 25]", 0.72,0.01,2,0.01);
+       roomSize = hslider("v:[8]Reverb/ Reverberation Room Size (InstrReverb)[acc:1 1 -10 0 25]", 0.72,0.01,2,0.01);
        rdel = 20;
        f1 = 200;
        f2 = 6000;

@@ -1,11 +1,11 @@
 
 /*
-Code generated with Faust version 2.5.22
+Code generated with Faust version 2.5.24
 Compilation options: wasm-e, -scal -ftz 2
 */
 
 function getJSONorgan() {
-	return "{\"name\":\"organ\",\"version\":\"2.5.22\",\"options\":\"wasm-e, -scal -ftz 2\",\"size\":\"68\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"organ\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"organ\",\"items\":[{\"type\":\"hslider\",\"label\":\"freq\",\"address\":\"/organ/freq\",\"index\":\"32\",\"meta\":[{\"unit\":\"Hz\"}],\"init\":\"440\",\"min\":\"20\",\"max\":\"20000\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"gain\",\"address\":\"/organ/gain\",\"index\":\"8\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"10\",\"step\":\"0.01\"},{\"type\":\"button\",\"label\":\"gate\",\"address\":\"/organ/gate\",\"index\":\"4\"},{\"type\":\"hslider\",\"label\":\"volume\",\"address\":\"/organ/volume\",\"index\":\"0\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"organ\",\"filename\":\"organ\",\"version\":\"2.5.24\",\"options\":\"wasm-e, -scal -ftz 2\",\"size\":\"68\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"filename\":\"organ\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"organ\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"organ\",\"items\":[{\"type\":\"hslider\",\"label\":\"freq\",\"address\":\"/organ/freq\",\"index\":\"32\",\"meta\":[{\"unit\":\"Hz\"}],\"init\":\"440\",\"min\":\"20\",\"max\":\"20000\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"gain\",\"address\":\"/organ/gain\",\"index\":\"8\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"10\",\"step\":\"0.01\"},{\"type\":\"button\",\"label\":\"gate\",\"address\":\"/organ/gate\",\"index\":\"4\"},{\"type\":\"hslider\",\"label\":\"volume\",\"address\":\"/organ/volume\",\"index\":\"0\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"}]}]}";
 }
 /*
  faust2webaudio
@@ -702,14 +702,15 @@ faust.organ_poly = function (mixer_instance, dsp_instance, effect_instance, memo
      */
     sp.getJSON = function ()
     {
+        var res = "";
+        res = res.concat("{\"name\":\""); res = res.concat(sp.json_object.name); res = res.concat("\",");
+        res = res.concat("\"version\":\""); res = res.concat(sp.json_object.version); res = res.concat("\",");
+        res = res.concat("\"options\":\""); res = res.concat(sp.json_object.options); res = res.concat("\",");
+        res = res.concat("\"inputs\":\""); res = res.concat(sp.json_object.inputs); res = res.concat("\",");
+        res = res.concat("\"outputs\":\""); res = res.concat(sp.json_object.outputs); res = res.concat("\",");
+        res = res.concat("\"meta\":"); res = res.concat(JSON.stringify(sp.json_object.meta)); res = res.concat(",");
+
         if (sp.effect_json_object) {
-            var res = "";
-            res = res.concat("{\"name\":\""); res = res.concat(sp.json_object.name); res = res.concat("\",");
-            res = res.concat("\"version\":\""); res = res.concat(sp.json_object.version); res = res.concat("\",");
-            res = res.concat("\"options\":\""); res = res.concat(sp.json_object.options); res = res.concat("\",");
-            res = res.concat("\"inputs\":\""); res = res.concat(sp.json_object.inputs); res = res.concat("\",");
-            res = res.concat("\"outputs\":\""); res = res.concat(sp.json_object.outputs); res = res.concat("\",");
-            res = res.concat("\"meta\":"); res = res.concat(JSON.stringify(sp.json_object.meta)); res = res.concat(",");
             res = res.concat("\"ui\":[{\"type\":\"tgroup\",\"label\":\"Sequencer\",\"items\":[");
             res = res.concat("{\"type\": \"vgroup\",\"label\":\"Instrument\",\"items\":");
             res = res.concat(JSON.stringify(sp.json_object.ui));
@@ -720,7 +721,12 @@ faust.organ_poly = function (mixer_instance, dsp_instance, effect_instance, memo
             res = res.concat("]}]}");
             return res;
         } else {
-            return getJSONorgan();
+            res = res.concat("\"ui\":[{\"type\":\"tgroup\",\"label\":\"Polyphonic\",\"items\":[");
+            res = res.concat("{\"type\": \"vgroup\",\"label\":\"Voices\",\"items\":");
+            res = res.concat(JSON.stringify(sp.json_object.ui));
+            res = res.concat("},");
+            res = res.concat("]}]}");
+            return res;
         }
     }
  
