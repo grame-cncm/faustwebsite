@@ -10,8 +10,8 @@
   <meta name="description" content="In this example we will see how to write a simple organ base on a sine oscillator described here. The polyphony and the MIDI control will be handled by the a...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://faust.grame.fr/examples/2015/10/01/organ.html">
-  <link rel="alternate" type="application/rss+xml" title="Faust Programming Language" href="http://faust.grame.fr/feed.xml" />
+  <link rel="canonical" href="/examples/2015/10/01/organ.html">
+  <link rel="alternate" type="application/rss+xml" title="Faust Programming Language" href="/feed.xml" />
 </head>
 
 
@@ -128,7 +128,7 @@ midigain	= hslider("gain", 0.5, 0, 10, 0.01);	       	// MIDI keyon velocity
 </code></pre>
 </div>
 
-<p>You can try the code on the <a href="https://faust.grame.fr/onlinecompiler">online compiler</a> by dragging <a href="http://faust.grame.fr/images/organ.dsp">this url</a> or pasting the following lines</p>
+<p>You can try the code on the <a href="/onlinecompiler">online compiler</a> by dragging <a href="/images/organ.dsp">this url</a> or pasting the following lines</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>// Simple Organ
 import("stdfaust.lib");
@@ -168,7 +168,7 @@ voice(gate, gain, freq) = envelop(gate, gain) * timbre(freq);
         <div class="footer-col-wrapper">
             <div class="footer-col  footer-col-1">
                 <ul class="contact-list">
-                    <li><a href="http://faust.grame.fr">Faust Programming Language</a></li>
+                    <li><a href="/">Faust Programming Language</a></li>
                     <li><a href="http://www.grame.fr">GRAME CNCM</a></li>
                 </ul>
             </div>
