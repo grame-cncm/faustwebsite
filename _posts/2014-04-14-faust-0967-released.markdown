@@ -13,17 +13,17 @@ This release provides many bug fixes and improvements in several architectures (
 
 This tool, based on developments by Myles Borins at CCRMA, and by Mike Solomon and Stephane Letz at GRAME, allows to make realtime audio applications in a web browser ! faust2webaudioasm uses emscripten to translate Faust programs to efficient Javascript code (asm.js) embedded in a single HTML page. Check some examples (best results with firefox 29):
 
-- [https://faust.grame.fr/webaudio/vumeters.html](https://faust.grame.fr/webaudio/vumeters.html)
-- [https://faust.grame.fr/webaudio/compressor.html](https://faust.grame.fr/webaudio/compressor.html)
-- [https://faust.grame.fr/webaudio/freeverb.html](https://faust.grame.fr/webaudio/freeverb.html)
-- [https://faust.grame.fr/webaudio/harpe.html](https://faust.grame.fr/webaudio/harpe.html)
-- [https://faust.grame.fr/webaudio/kisana.html](https://faust.grame.fr/webaudio/kisana.html)
-- [https://faust.grame.fr/webaudio/wahwah.html](https://faust.grame.fr/webaudio/wahwah.html)
+- [webaudio/vumeters.html](/webaudio/vumeters.html)
+- [webaudio/compressor.html](/webaudio/compressor.html)
+- [webaudio/freeverb.html](/webaudio/freeverb.html)
+- [webaudio/harpe.html](/webaudio/harpe.html)
+- [webaudio/kisana.html](/webaudio/kisana.html)
+- [webaudio/wahwah.html](/webaudio/wahwah.html)
  
 The two following ones are polyphonic instruments that can be controlled with MIDI. Check them with Chrome (don't forget to activate Web MIDI API).
 
-- [https://faust.grame.fr/webaudio/piano.html](https://faust.grame.fr/webaudio/piano.html)
-- [https://faust.grame.fr/webaudio/harpsi.html](https://faust.grame.fr/webaudio/harpsi.html)
+- [webaudio/piano.html](/webaudio/piano.html)
+- [webaudio/harpsi.html](/webaudio/harpsi.html)
 
 #### faust2owl ####
 

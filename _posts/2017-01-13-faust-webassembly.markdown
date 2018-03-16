@@ -61,7 +61,7 @@ will generate the textual WebAssembly output, use binaryen **wasm-as** tool to c
 
 will generate the binary WebAssembly output that can directly be loaded by the produced self-contained html page.
 
-Page containing [polyphonic instruments](https://faust.grame.fr/news/2016/01/13/polyphonic-instruments.html) can be generated with the following commands:
+Page containing [polyphonic instruments](/news/2016/01/13/polyphonic-instruments.html) can be generated with the following commands:
 
     faust2webaudiowast -poly foo.dsp 
 
