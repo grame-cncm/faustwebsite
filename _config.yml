@@ -10,5 +10,5 @@ github_username:  orlarey
 # Build settings
 markdown: kramdown
 
-exclude: [modules]
+#exclude: [modules]
 incremental: true
