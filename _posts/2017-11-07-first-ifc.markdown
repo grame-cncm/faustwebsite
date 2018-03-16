@@ -1,3 +1,4 @@
+
 ---
 layout: post
 title:  "1st International Faust Conference"
@@ -7,7 +8,7 @@ categories: news
 
 1st International Faust Conference - Johannes Gutenberg University, Mainz (Germany), July 17-18, 2018
 
-The International Faust Conference [IFC-18](http://www.ifc18.uni-mainz.de) will take place at the [Johannes Gutenberg University](http://www.uni-mainz.de) of Mainz (Germany) on July 17-18, 2018. It aims at gathering developers and users of the [Faust programming language](https://faust.grame.fr) to present current projects and discuss future directions for Faust and its community.
+The International Faust Conference [IFC-18](http://www.ifc18.uni-mainz.de) will take place at the [Johannes Gutenberg University](http://www.uni-mainz.de) of Mainz (Germany) on July 17-18, 2018. It aims at gathering developers and users of the [Faust programming language](/) to present current projects and discuss future directions for Faust and its community.
 Participants will be able to share their work through paper presentations. A series of round tables on various topics will serve as a platform to brainstorm on Faust's features, semantics, tools, applications, etc. to determine future directions for this language. Open spaces for demos and workshops will be available for participants to openly share their ongoing projects with the rest of the community.
 
 As a special event, the winner of GRAME's Faust Open-Source Software Competition will be announced during IFC-18.
@@ -16,7 +17,7 @@ IFC-18 is free and everyone is welcome to attend!
 
 ### Call for Papers ###
 
-We welcome submissions from academic, professional, independent programmers, artists, etc. We solicit original papers centered around the [Faust programming language](https://faust.grame.fr) in the following categories:
+We welcome submissions from academic, professional, independent programmers, artists, etc. We solicit original papers centered around the [Faust programming language](/) in the following categories:
 
 - Original research
 - Technology tutorial

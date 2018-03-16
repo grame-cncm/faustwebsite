@@ -51,6 +51,6 @@ Instead of hardcoding the sampling rate, we can use the `SR` primitive defined i
 
 ![oscillator](/images/osc.svg)
 
-You can try it by pasting the above code into the [online compiler](https://faust.grame.fr/onlinecompiler) and selecting the web/audio target in the _exec code_ tab will result in the following user interface:
+You can try it by pasting the above code into the [online compiler](/onlinecompiler) and selecting the web/audio target in the _exec code_ tab will result in the following user interface:
 
 ![userinterface](/images/osc-ui.png)

@@ -98,13 +98,13 @@ An finally the load handler is defined to activate the code:
 
     window.addEventListener("load", startnoise);
 
-Look at the [Noise](https://faust.grame.fr/modules/noise-wasm.html) and [OSC](https://faust.grame.fr/modules/osc-wasm.html) online pages for the complete code. 
+Look at the [Noise](/modules/noise-wasm.html) and [OSC](/modules/osc-wasm.html) online pages for the complete code. 
 
 Note that pages loading an additional .wasm file cannot directly be loaded in Chrome. You'll have to start a local server (using the *python -m SimpleHTTPServer* command for instance) and access them with their *http://* based URL.  
 
 #### Generating Polyphonic WebAudio nodes ####
 
-Assuming that the compiled Faust DSP file is [polyphonic ready](https://faust.grame.fr/news/2016/01/13/polyphonic-instruments.html), a polyphonic ready WebAudio node can be created with the **-poly** parameter, and will generate the following constructor for the node (where the *mydsp* part will be replaced by the actual DSP name): 
+Assuming that the compiled Faust DSP file is [polyphonic ready](/news/2016/01/13/polyphonic-instruments.html), a polyphonic ready WebAudio node can be created with the **-poly** parameter, and will generate the following constructor for the node (where the *mydsp* part will be replaced by the actual DSP name): 
 
 {% highlight javascript %}
 
@@ -176,7 +176,7 @@ Assuming that the compiled Faust DSP file is polyphonic ready, the **-poly** par
 
 The **-links** generates the  DSP processor SVG representation, and links to the original DSP file as well as generated SVG files, so that the HTML page can possibly be deployed as a reusable Faust DSP resource. 
 
-Several pages generetd with the **faust2webaudiowasm** tool can be seen [here](https://faust.grame.fr/modules/).
+Several pages generetd with the **faust2webaudiowasm** tool can be seen [here](/modules/).
 
 #### WebAssembly module optimization ####
 
@@ -261,7 +261,7 @@ var isWebKitAudio = (typeof (webkitAudioContext) !== "undefined");
 var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
 var dsp_code = "import(\"stdfaust.lib\"); vol = hslider(\"volume [unit:dB]\", 0, -96, 0, 0.1) : ba.db2linear : si.smoo; freq = hslider(\"freq [unit:Hz]\", 1000, 20, 24000, 1); process = vgroup(\"Oscillator\", os.osc(freq) * vol);";
 var osc = null;
-var libraries_url = "https://faust.grame.fr/modules/libraries/";
+var libraries_url = "/modules/libraries/";
 
 function startosc()
 {
@@ -290,7 +290,7 @@ function startosc()
 
 {% endhighlight %}
 
-The [Dynamic OSC](https://faust.grame.fr/dynamic/dynamic-osc-wasm.html) page demonstrates the dynamic OSC complete code (based on the example seen before). The [Dynamic Organ](https://faust.grame.fr/dynamic/dynamic-organ-wasm.html) page demonstrates a polyphonic organ instrument, which loads a DSP from an url, and ready to be controlled with a MIDI device or application. Look at the [Dynamic Faust compiler](https://faust.grame.fr/dynamic/faustlive-wasm.html) page for a more complete use-case of the dynamic compiler.
+The [Dynamic OSC](/dynamic/dynamic-osc-wasm.html) page demonstrates the dynamic OSC complete code (based on the example seen before). The [Dynamic Organ](/dynamic/dynamic-organ-wasm.html) page demonstrates a polyphonic organ instrument, which loads a DSP from an url, and ready to be controlled with a MIDI device or application. Look at the [Dynamic Faust compiler](/dynamic/faustlive-wasm.html) page for a more complete use-case of the dynamic compiler.
 
 ### Float denormal handling ###
 

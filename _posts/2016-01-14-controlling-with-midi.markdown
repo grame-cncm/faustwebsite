@@ -83,4 +83,4 @@ Several architecture files and associated scripts have been updated to handle MI
 - use **faust2alsa -midi foo.dsp** to create a MIDI aware ALSA/GTK application on Linux
 - use **faust2alqt -midi foo.dsp** to create a MIDI aware ALSA/QT application on Linux.
  
-Note that the **buildUserInterface** method for polyphonic instruments (defined using the **mydsp_poly** class) called with a MidiUI object, will automatically connect to the MIDI system, to be ready to handle incoming keyOn/keyOff MIDI messages and so on. See [Creating polyphonic instruments](https://faust.grame.fr/news/2016/01/13/polyphonic-instruments.html) page for more informations.
+Note that the **buildUserInterface** method for polyphonic instruments (defined using the **mydsp_poly** class) called with a MidiUI object, will automatically connect to the MIDI system, to be ready to handle incoming keyOn/keyOff MIDI messages and so on. See [Creating polyphonic instruments](/news/2016/01/13/polyphonic-instruments.html) page for more informations.
