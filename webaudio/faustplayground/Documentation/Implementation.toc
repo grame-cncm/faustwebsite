@@ -1,0 +1,24 @@
+\contentsline {section}{\numberline {1}General Considerations}{3}
+\contentsline {subsection}{\numberline {1.1}FaustPlayground}{3}
+\contentsline {subsection}{\numberline {1.2}Code Structure}{3}
+\contentsline {section}{\numberline {2}SceneClass.js}{4}
+\contentsline {subsection}{\numberline {2.1}Class Description}{4}
+\contentsline {subsection}{\numberline {2.2}Scenes Instances}{4}
+\contentsline {subsubsection}{\numberline {2.2.1}Pedagogical Version}{4}
+\contentsline {subsubsection}{\numberline {2.2.2}Normal Version}{5}
+\contentsline {section}{\numberline {3}Main.js}{5}
+\contentsline {section}{\numberline {4}ModuleClass.js}{5}
+\contentsline {section}{\numberline {5}Drag and Connect}{7}
+\contentsline {subsection}{\numberline {5.1}Dragging.js}{7}
+\contentsline {subsection}{\numberline {5.2}Connect.js}{7}
+\contentsline {section}{\numberline {6}Pedagogie}{7}
+\contentsline {subsection}{\numberline {6.1}Library.js}{7}
+\contentsline {subsection}{\numberline {6.2}Tooltips.js}{7}
+\contentsline {section}{\numberline {7}Scenario - Example - Pedagogical FaustPlayground}{8}
+\contentsline {subsection}{\numberline {7.1}Initialize Pedagogical Playground}{8}
+\contentsline {subsection}{\numberline {7.2}Reaction to a drop in the scene}{9}
+\contentsline {subsection}{\numberline {7.3}Reaction to a connection drag from the module to the scene output}{10}
+\contentsline {subsection}{\numberline {7.4}Reaction to a source edition}{11}
+\contentsline {section}{\numberline {8}Appendix}{12}
+\contentsline {subsection}{\numberline {8.1}File interactions}{12}
+\contentsline {subsection}{\numberline {8.2}JSON Description for the scene}{13}
