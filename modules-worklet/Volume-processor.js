@@ -1,17 +1,16 @@
 
 /*
-Code generated with Faust version 2.5.24
+Code generated with Faust version 2.5.32
 Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONVolume() {
-	return "{\"name\":\"Volume\",\"filename\":\"Volume\",\"version\":\"2.5.24\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"16\",\"inputs\":\"2\",\"outputs\":\"2\",\"meta\":[{\"author\":\"GRAME\"},{\"filename\":\"Volume\"},{\"name\":\"Volume\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Volume\",\"items\":[{\"type\":\"hslider\",\"label\":\"Volume\",\"address\":\"/Volume/Volume\",\"index\":\"0\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"}],\"init\":\"0.75\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"Volume\",\"filename\":\"Volume\",\"version\":\"2.5.32\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"16\",\"inputs\":\"2\",\"outputs\":\"2\",\"meta\":[{\"author\":\"GRAME\"},{\"filename\":\"Volume\"},{\"name\":\"Volume\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Volume\",\"items\":[{\"type\":\"hslider\",\"label\":\"Volume\",\"address\":\"/Volume/Volume\",\"index\":\"0\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"}],\"init\":\"0.75\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"}]}]}";
 }
-function getBase64CodeVolume() { return "AGFzbQEAAAABy4CAgAAOYAJ/fwBgBH9/f38AYAF/AX9gAX8Bf2ACf38BfWABfwF/YAJ/fwBgAX8AYAJ/fwBgAn9/AGABfwBgAn9/AX9gAn9/AX9gA39/fQACgYCAgAAAA4+AgIAADgABAgMEBQYHCAkKCwwNBYeAgIAAAQCEgICAAAe6gYCAAAwHY29tcHV0ZQABDGdldE51bUlucHV0cwACDWdldE51bU91dHB1dHMAAw1nZXRQYXJhbVZhbHVlAAQNZ2V0U2FtcGxlUmF0ZQAFBGluaXQABg1pbnN0YW5jZUNsZWFyAAcRaW5zdGFuY2VDb25zdGFudHMACAxpbnN0YW5jZUluaXQACRppbnN0YW5jZVJlc2V0VXNlckludGVyZmFjZQAKDXNldFBhcmFtVmFsdWUADQZtZW1vcnkCAArOg4CAAA6CgICAAAAL2oGAgAACBX8CfUEAIQRBACEFQQAhBkEAIQdDAAAAACEJQQAhCEMAAAAAIQogAkEAaigCACEEIAJBBGooAgAhBSADQQBqKAIAIQYgA0EEaigCACEHQ28SgzpBACoCAJQhCUEAIQgDQAJAIAlDd75/P0EAKgIIlJIhCkEAIApDAAAAACAKvEGAgID8B3EbOAIEIAYgCGogBCAIaioCAEEAKgIElDgCACAHIAhqIAUgCGoqAgBBACoCBJQ4AgBBAEEAKgIEOAIIIAhBBGohCCAIQQQgAWxIBEAMAgwBCwsLC4WAgIAAAEECDwuFgICAAABBAg8Li4CAgAAAIAAgAWoqAgAPC4iAgIAAAEEAKAIMDwuOgICAAAAgACABEAAgACABEAkLtYCAgAABAX9BACEBQQAhAQNAAkBBBCABQQJ0akMAAAAAOAIAIAFBAWohASABQQJIBEAMAgwBCwsLC4mAgIAAAEEAIAE2AgwLkICAgAAAIAAgARAIIAAQCiAAEAcLjICAgAAAQQBDAABAPzgCAAuNgICAAAAgASAAIAAgAUgbDwuNgICAAAAgACABIAAgAUgbDwuMgICAAAAgACABaiACOAIACwvug4CAAAEAQQAL5wN7Im5hbWUiOiJWb2x1bWUiLCJmaWxlbmFtZSI6IlZvbHVtZSIsInZlcnNpb24iOiIyLjUuMjQiLCJvcHRpb25zIjoid2FzbS1pYiwgLXNjYWwgLWZ0eiAyIiwic2l6ZSI6IjE2IiwiaW5wdXRzIjoiMiIsIm91dHB1dHMiOiIyIiwibWV0YSI6W3siYXV0aG9yIjoiR1JBTUUifSx7ImZpbGVuYW1lIjoiVm9sdW1lIn0seyJuYW1lIjoiVm9sdW1lIn0seyJzaWduYWxzLmxpYi9uYW1lIjoiRmF1c3QgU2lnbmFsIFJvdXRpbmcgTGlicmFyeSJ9LHsic2lnbmFscy5saWIvdmVyc2lvbiI6IjAuMCJ9XSwidWkiOlt7InR5cGUiOiJ2Z3JvdXAiLCJsYWJlbCI6IlZvbHVtZSIsIml0ZW1zIjpbeyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiVm9sdW1lIiwiYWRkcmVzcyI6Ii9Wb2x1bWUvVm9sdW1lIiwiaW5kZXgiOiIwIiwibWV0YSI6W3siYWNjIjoiMSAwIC0xMCAwIDEwIn1dLCJpbml0IjoiMC43NSIsIm1pbiI6IjAiLCJtYXgiOiIxIiwic3RlcCI6IjAuMDEifV19XX0w"; }
+function getBase64CodeVolume() { return "AGFzbQEAAAABy4CAgAAOYAJ/fwBgBH9/f38AYAF/AX9gAX8Bf2ACf38BfWABfwF/YAJ/fwBgAX8AYAJ/fwBgAn9/AGABfwBgAn9/AX9gAn9/AX9gA39/fQACgYCAgAAAA4+AgIAADgABAgMEBQYHCAkKCwwNBYeAgIAAAQCEgICAAAe6gYCAAAwHY29tcHV0ZQABDGdldE51bUlucHV0cwACDWdldE51bU91dHB1dHMAAw1nZXRQYXJhbVZhbHVlAAQNZ2V0U2FtcGxlUmF0ZQAFBGluaXQABg1pbnN0YW5jZUNsZWFyAAcRaW5zdGFuY2VDb25zdGFudHMACAxpbnN0YW5jZUluaXQACRppbnN0YW5jZVJlc2V0VXNlckludGVyZmFjZQAKDXNldFBhcmFtVmFsdWUADQZtZW1vcnkCAArOg4CAAA6CgICAAAAL2oGAgAACBX8CfUEAIQRBACEFQQAhBkEAIQdDAAAAACEJQQAhCEMAAAAAIQogAkEAaigCACEEIAJBBGooAgAhBSADQQBqKAIAIQYgA0EEaigCACEHQ28SgzpBACoCAJQhCUEAIQgDQAJAIAlDd75/P0EAKgIIlJIhCkEAIApDAAAAACAKvEGAgID8B3EbOAIEIAYgCGogBCAIaioCAEEAKgIElDgCACAHIAhqIAUgCGoqAgBBACoCBJQ4AgBBAEEAKgIEOAIIIAhBBGohCCAIQQQgAWxIBEAMAgwBCwsLC4WAgIAAAEECDwuFgICAAABBAg8Li4CAgAAAIAAgAWoqAgAPC4iAgIAAAEEAKAIMDwuOgICAAAAgACABEAAgACABEAkLtYCAgAABAX9BACEBQQAhAQNAAkBBBCABQQJ0akMAAAAAOAIAIAFBAWohASABQQJIBEAMAgwBCwsLC4mAgIAAAEEAIAE2AgwLkICAgAAAIAAgARAIIAAQCiAAEAcLjICAgAAAQQBDAABAPzgCAAuNgICAAAAgASAAIAAgAUgbDwuNgICAAAAgACABIAAgAUgbDwuMgICAAAAgACABaiACOAIACwvug4CAAAEAQQAL5wN7Im5hbWUiOiJWb2x1bWUiLCJmaWxlbmFtZSI6IlZvbHVtZSIsInZlcnNpb24iOiIyLjUuMzIiLCJvcHRpb25zIjoid2FzbS1pYiwgLXNjYWwgLWZ0eiAyIiwic2l6ZSI6IjE2IiwiaW5wdXRzIjoiMiIsIm91dHB1dHMiOiIyIiwibWV0YSI6W3siYXV0aG9yIjoiR1JBTUUifSx7ImZpbGVuYW1lIjoiVm9sdW1lIn0seyJuYW1lIjoiVm9sdW1lIn0seyJzaWduYWxzLmxpYi9uYW1lIjoiRmF1c3QgU2lnbmFsIFJvdXRpbmcgTGlicmFyeSJ9LHsic2lnbmFscy5saWIvdmVyc2lvbiI6IjAuMCJ9XSwidWkiOlt7InR5cGUiOiJ2Z3JvdXAiLCJsYWJlbCI6IlZvbHVtZSIsIml0ZW1zIjpbeyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiVm9sdW1lIiwiYWRkcmVzcyI6Ii9Wb2x1bWUvVm9sdW1lIiwiaW5kZXgiOiIwIiwibWV0YSI6W3siYWNjIjoiMSAwIC0xMCAwIDEwIn1dLCJpbml0IjoiMC43NSIsIm1pbiI6IjAiLCJtYXgiOiIxIiwic3RlcCI6IjAuMDEifV19XX0w"; }
 
 /*
- faust2wasm
- Additional code: GRAME 2017
+ faust2wasm: GRAME 2017-2018
 */
  
 'use strict';
@@ -177,8 +176,9 @@ class VolumeProcessor extends AudioWorkletProcessor {
         this.ptr_size = 4;
         this.sample_size = 4;
         
-        this.factory = VolumeProcessor.Volume_instance.exports;
-        this.HEAP = VolumeProcessor.Volume_instance.exports.memory.buffer;
+        this.Volume_instance = new WebAssembly.Instance(VolumeProcessor.wasm_module, VolumeProcessor.importObject);
+  	   	this.factory = this.Volume_instance.exports;
+        this.HEAP = this.Volume_instance.exports.memory.buffer;
         this.HEAP32 = new Int32Array(this.HEAP);
         this.HEAPF32 = new Float32Array(this.HEAP);
 
@@ -435,9 +435,10 @@ VolumeProcessor.importObject = {
 
 // Synchronously compile and instantiate the WASM module
 try {
-    let wasm_module = new WebAssembly.Module(VolumeProcessor.atob(getBase64CodeVolume()));
-    VolumeProcessor.Volume_instance = new WebAssembly.Instance(wasm_module, VolumeProcessor.importObject);
-    registerProcessor('Volume', VolumeProcessor);
+    if (VolumeProcessor.wasm_module == undefined) {
+        VolumeProcessor.wasm_module = new WebAssembly.Module(VolumeProcessor.atob(getBase64CodeVolume()));
+        registerProcessor('Volume', VolumeProcessor);
+    }
 } catch (e) {
     console.log(e); console.log("Faust Volume cannot be loaded or compiled");
 }

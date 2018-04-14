@@ -1,18 +1,16 @@
 
 /*
-Code generated with Faust version 2.5.24
+Code generated with Faust version 2.5.32
 Compilation options: wasm-eb, -scal -ftz 2
 */
 
 function getJSONclarinetMIDI() {
-	return "{\"name\":\"ClarinetMIDI\",\"filename\":\"clarinetMIDI\",\"version\":\"2.5.24\",\"options\":\"wasm-eb, -scal -ftz 2\",\"size\":\"16608\",\"inputs\":\"0\",\"outputs\":\"2\",\"meta\":[{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"copyright\":\"(c)Romain Michon, CCRMA (Stanford University), GRAME\"},{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"description\":\"Simple MIDI-controllable clarinet physical model with physical parameters.\"},{\"filename\":\"clarinetMIDI\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"license\":\"MIT\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"ClarinetMIDI\"},{\"noises.lib/name\":\"Faust Noise Generator Library\"},{\"noises.lib/version\":\"0.0\"},{\"oscillators.lib/name\":\"Faust Oscillator Library\"},{\"oscillators.lib/version\":\"0.0\"},{\"routes.lib/name\":\"Faust Signal Routing Library\"},{\"routes.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"clarinet\",\"items\":[{\"type\":\"hgroup\",\"label\":\"midi\",\"meta\":[{\"0\":\"\"}],\"items\":[{\"type\":\"hslider\",\"label\":\"freq\",\"address\":\"/clarinet/midi/freq\",\"index\":\"8376\",\"meta\":[{\"0\":\"\"},{\"style\":\"knob\"}],\"init\":\"440\",\"min\":\"50\",\"max\":\"1000\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"bend\",\"address\":\"/clarinet/midi/bend\",\"index\":\"8380\",\"meta\":[{\"1\":\"\"},{\"hidden\":\"1\"},{\"midi\":\"pitchwheel\"},{\"style\":\"knob\"}],\"init\":\"1\",\"min\":\"0\",\"max\":\"10\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"gain\",\"address\":\"/clarinet/midi/gain\",\"index\":\"92\",\"meta\":[{\"2\":\"\"},{\"style\":\"knob\"}],\"init\":\"0.6\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"envAttack\",\"address\":\"/clarinet/midi/envAttack\",\"index\":\"100\",\"meta\":[{\"3\":\"\"},{\"style\":\"knob\"}],\"init\":\"1\",\"min\":\"0\",\"max\":\"30\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"sustain\",\"address\":\"/clarinet/midi/sustain\",\"index\":\"80\",\"meta\":[{\"4\":\"\"},{\"hidden\":\"1\"},{\"midi\":\"ctrl 64\"},{\"style\":\"knob\"}],\"init\":\"0\",\"min\":\"0\",\"max\":\"1\",\"step\":\"1\"}]},{\"type\":\"hgroup\",\"label\":\"otherParams\",\"meta\":[{\"1\":\"\"}],\"items\":[{\"type\":\"hslider\",\"label\":\"reedStiffness\",\"address\":\"/clarinet/otherParams/reedStiffness\",\"index\":\"168\",\"meta\":[{\"0\":\"\"},{\"midi\":\"ctrl 1\"},{\"style\":\"knob\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"bellOpening\",\"address\":\"/clarinet/otherParams/bellOpening\",\"index\":\"12\",\"meta\":[{\"1\":\"\"},{\"midi\":\"ctrl 3\"},{\"style\":\"knob\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"vibratoFreq\",\"address\":\"/clarinet/otherParams/vibratoFreq\",\"index\":\"48\",\"meta\":[{\"2\":\"\"},{\"style\":\"knob\"}],\"init\":\"5\",\"min\":\"1\",\"max\":\"10\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"vibratoGain\",\"address\":\"/clarinet/otherParams/vibratoGain\",\"index\":\"32\",\"meta\":[{\"3\":\"\"},{\"style\":\"knob\"}],\"init\":\"0.25\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"outGain\",\"address\":\"/clarinet/otherParams/outGain\",\"index\":\"0\",\"meta\":[{\"4\":\"\"},{\"style\":\"knob\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"}]},{\"type\":\"button\",\"label\":\"gate\",\"address\":\"/clarinet/gate\",\"index\":\"76\",\"meta\":[{\"2\":\"\"}]}]}]}";
+	return "{\"name\":\"ClarinetMIDI\",\"filename\":\"clarinetMIDI\",\"version\":\"2.5.32\",\"options\":\"wasm-eb, -scal -ftz 2\",\"size\":\"16608\",\"inputs\":\"0\",\"outputs\":\"2\",\"meta\":[{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"copyright\":\"(c)Romain Michon, CCRMA (Stanford University), GRAME\"},{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"description\":\"Simple MIDI-controllable clarinet physical model with physical parameters.\"},{\"filename\":\"clarinetMIDI\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"license\":\"MIT\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"ClarinetMIDI\"},{\"noises.lib/name\":\"Faust Noise Generator Library\"},{\"noises.lib/version\":\"0.0\"},{\"oscillators.lib/name\":\"Faust Oscillator Library\"},{\"oscillators.lib/version\":\"0.0\"},{\"routes.lib/name\":\"Faust Signal Routing Library\"},{\"routes.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"clarinet\",\"items\":[{\"type\":\"hgroup\",\"label\":\"midi\",\"meta\":[{\"0\":\"\"}],\"items\":[{\"type\":\"hslider\",\"label\":\"freq\",\"address\":\"/clarinet/midi/freq\",\"index\":\"8376\",\"meta\":[{\"0\":\"\"},{\"style\":\"knob\"}],\"init\":\"440\",\"min\":\"50\",\"max\":\"1000\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"bend\",\"address\":\"/clarinet/midi/bend\",\"index\":\"8380\",\"meta\":[{\"1\":\"\"},{\"hidden\":\"1\"},{\"midi\":\"pitchwheel\"},{\"style\":\"knob\"}],\"init\":\"1\",\"min\":\"0\",\"max\":\"10\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"gain\",\"address\":\"/clarinet/midi/gain\",\"index\":\"92\",\"meta\":[{\"2\":\"\"},{\"style\":\"knob\"}],\"init\":\"0.6\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"envAttack\",\"address\":\"/clarinet/midi/envAttack\",\"index\":\"100\",\"meta\":[{\"3\":\"\"},{\"style\":\"knob\"}],\"init\":\"1\",\"min\":\"0\",\"max\":\"30\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"sustain\",\"address\":\"/clarinet/midi/sustain\",\"index\":\"80\",\"meta\":[{\"4\":\"\"},{\"hidden\":\"1\"},{\"midi\":\"ctrl 64\"},{\"style\":\"knob\"}],\"init\":\"0\",\"min\":\"0\",\"max\":\"1\",\"step\":\"1\"}]},{\"type\":\"hgroup\",\"label\":\"otherParams\",\"meta\":[{\"1\":\"\"}],\"items\":[{\"type\":\"hslider\",\"label\":\"reedStiffness\",\"address\":\"/clarinet/otherParams/reedStiffness\",\"index\":\"168\",\"meta\":[{\"0\":\"\"},{\"midi\":\"ctrl 1\"},{\"style\":\"knob\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"bellOpening\",\"address\":\"/clarinet/otherParams/bellOpening\",\"index\":\"12\",\"meta\":[{\"1\":\"\"},{\"midi\":\"ctrl 3\"},{\"style\":\"knob\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"vibratoFreq\",\"address\":\"/clarinet/otherParams/vibratoFreq\",\"index\":\"48\",\"meta\":[{\"2\":\"\"},{\"style\":\"knob\"}],\"init\":\"5\",\"min\":\"1\",\"max\":\"10\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"vibratoGain\",\"address\":\"/clarinet/otherParams/vibratoGain\",\"index\":\"32\",\"meta\":[{\"3\":\"\"},{\"style\":\"knob\"}],\"init\":\"0.25\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"outGain\",\"address\":\"/clarinet/otherParams/outGain\",\"index\":\"0\",\"meta\":[{\"4\":\"\"},{\"style\":\"knob\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"}]},{\"type\":\"button\",\"label\":\"gate\",\"address\":\"/clarinet/gate\",\"index\":\"76\",\"meta\":[{\"2\":\"\"}]}]}]}";
 }
-function getBase64CodeclarinetMIDI() { return "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IjoiMC4wIn0seyJkZXNjcmlwdGlvbiI6IlNpbXBsZSBNSURJLWNvbnRyb2xsYWJsZSBjbGFyaW5ldCBwaHlzaWNhbCBtb2RlbCB3aXRoIHBoeXNpY2FsIHBhcmFtZXRlcnMuIn0seyJmaWxlbmFtZSI6ImNsYXJpbmV0TUlESSJ9LHsiZmlsdGVycy5saWIvbmFtZSI6IkZhdXN0IEZpbHRlcnMgTGlicmFyeSJ9LHsiZmlsdGVycy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsibGljZW5zZSI6Ik1JVCJ9LHsibWF0aHMubGliL2F1dGhvciI6IkdSQU1FIn0seyJtYXRocy5saWIvY29weXJpZ2h0IjoiR1JBTUUifSx7Im1hdGhzLmxpYi9saWNlbnNlIjoiTEdQTCB3aXRoIGV4Y2VwdGlvbiJ9LHsibWF0aHMubGliL25hbWUiOiJGYXVzdCBNYXRoIExpYnJhcnkifSx7Im1hdGhzLmxpYi92ZXJzaW9uIjoiMi4xIn0seyJuYW1lIjoiQ2xhcmluZXRNSURJIn0seyJub2lzZXMubGliL25hbWUiOiJGYXVzdCBOb2lzZSBHZW5lcmF0b3IgTGlicmFyeSJ9LHsibm9pc2VzLmxpYi92ZXJzaW9uIjoiMC4wIn0seyJvc2NpbGxhdG9ycy5saWIvbmFtZSI6IkZhdXN0IE9zY2lsbGF0b3IgTGlicmFyeSJ9LHsib3NjaWxsYXRvcnMubGliL3ZlcnNpb24iOiIwLjAifSx7InJvdXRlcy5saWIvbmFtZSI6IkZhdXN0IFNpZ25hbCBSb3V0aW5nIExpYnJhcnkifSx7InJvdXRlcy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsic2lnbmFscy5saWIvbmFtZSI6IkZhdXN0IFNpZ25hbCBSb3V0aW5nIExpYnJhcnkifSx7InNpZ25hbHMubGliL3ZlcnNpb24iOiIwLjAifV0sInVpIjpbeyJ0eXBlIjoidmdyb3VwIiwibGFiZWwiOiJjbGFyaW5ldCIsIml0ZW1zIjpbeyJ0eXBlIjoiaGdyb3VwIiwibGFiZWwiOiJtaWRpIiwibWV0YSI6W3siMCI6IiJ9XSwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJmcmVxIiwiYWRkcmVzcyI6Ii9jbGFyaW5ldC9taWRpL2ZyZXEiLCJpbmRleCI6IjgzNzYiLCJtZXRhIjpbeyIwIjoiIn0seyJzdHlsZSI6Imtub2IifV0sImluaXQiOiI0NDAiLCJtaW4iOiI1MCIsIm1heCI6IjEwMDAiLCJzdGVwIjoiMC4wMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6ImJlbmQiLCJhZGRyZXNzIjoiL2NsYXJpbmV0L21pZGkvYmVuZCIsImluZGV4IjoiODM4MCIsIm1ldGEiOlt7IjEiOiIifSx7ImhpZGRlbiI6IjEifSx7Im1pZGkiOiJwaXRjaHdoZWVsIn0seyJzdHlsZSI6Imtub2IifV0sImluaXQiOiIxIiwibWluIjoiMCIsIm1heCI6IjEwIiwic3RlcCI6IjAuMDEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJnYWluIiwiYWRkcmVzcyI6Ii9jbGFyaW5ldC9taWRpL2dhaW4iLCJpbmRleCI6IjkyIiwibWV0YSI6W3siMiI6IiJ9LHsic3R5bGUiOiJrbm9iIn1dLCJpbml0IjoiMC42IiwibWluIjoiMCIsIm1heCI6IjEiLCJzdGVwIjoiMC4wMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6ImVudkF0dGFjayIsImFkZHJlc3MiOiIvY2xhcmluZXQvbWlkaS9lbnZBdHRhY2siLCJpbmRleCI6IjEwMCIsIm1ldGEiOlt7IjMiOiIifSx7InN0eWxlIjoia25vYiJ9XSwiaW5pdCI6IjEiLCJtaW4iOiIwIiwibWF4IjoiMzAiLCJzdGVwIjoiMC4wMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6InN1c3RhaW4iLCJhZGRyZXNzIjoiL2NsYXJpbmV0L21pZGkvc3VzdGFpbiIsImluZGV4IjoiODAiLCJtZXRhIjpbeyI0IjoiIn0seyJoaWRkZW4iOiIxIn0seyJtaWRpIjoiY3RybCA2NCJ9LHsic3R5bGUiOiJrbm9iIn1dLCJpbml0IjoiMCIsIm1pbiI6IjAiLCJtYXgiOiIxIiwic3RlcCI6IjEifV19LHsidHlwZSI6Imhncm91cCIsImxhYmVsIjoib3RoZXJQYXJhbXMiLCJtZXRhIjpbeyIxIjoiIn1dLCJpdGVtcyI6W3sidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6InJlZWRTdGlmZm5lc3MiLCJhZGRyZXNzIjoiL2NsYXJpbmV0L290aGVyUGFyYW1zL3JlZWRTdGlmZm5lc3MiLCJpbmRleCI6IjE2OCIsIm1ldGEiOlt7IjAiOiIifSx7Im1pZGkiOiJjdHJsIDEifSx7InN0eWxlIjoia25vYiJ9XSwiaW5pdCI6IjAuNSIsIm1pbiI6IjAiLCJtYXgiOiIxIiwic3RlcCI6IjAuMDEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJiZWxsT3BlbmluZyIsImFkZHJlc3MiOiIvY2xhcmluZXQvb3RoZXJQYXJhbXMvYmVsbE9wZW5pbmciLCJpbmRleCI6IjEyIiwibWV0YSI6W3siMSI6IiJ9LHsibWlkaSI6ImN0cmwgMyJ9LHsic3R5bGUiOiJrbm9iIn1dLCJpbml0IjoiMC41IiwibWluIjoiMCIsIm1heCI6IjEiLCJzdGVwIjoiMC4wMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6InZpYnJhdG9GcmVxIiwiYWRkcmVzcyI6Ii9jbGFyaW5ldC9vdGhlclBhcmFtcy92aWJyYXRvRnJlcSIsImluZGV4IjoiNDgiLCJtZXRhIjpbeyIyIjoiIn0seyJzdHlsZSI6Imtub2IifV0sImluaXQiOiI1IiwibWluIjoiMSIsIm1heCI6IjEwIiwic3RlcCI6IjAuMDEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJ2aWJyYXRvR2FpbiIsImFkZHJlc3MiOiIvY2xhcmluZXQvb3RoZXJQYXJhbXMvdmlicmF0b0dhaW4iLCJpbmRleCI6IjMyIiwibWV0YSI6W3siMyI6IiJ9LHsic3R5bGUiOiJrbm9iIn1dLCJpbml0IjoiMC4yNSIsIm1pbiI6IjAiLCJtYXgiOiIxIiwic3RlcCI6IjAuMDEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJvdXRHYWluIiwiYWRkcmVzcyI6Ii9jbGFyaW5ldC9vdGhlclBhcmFtcy9vdXRHYWluIiwiaW5kZXgiOiIwIiwibWV0YSI6W3siNCI6IiJ9LHsic3R5bGUiOiJrbm9iIn1dLCJpbml0IjoiMC41IiwibWluIjoiMCIsIm1heCI6IjEiLCJzdGVwIjoiMC4wMSJ9XX0seyJ0eXBlIjoiYnV0dG9uIiwibGFiZWwiOiJnYXRlIiwiYWRkcmVzcyI6Ii9jbGFyaW5ldC9nYXRlIiwiaW5kZXgiOiI3NiIsIm1ldGEiOlt7IjIiOiIifV19XX1dfTA="; }
+function getBase64CodeclarinetMIDI() { return "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b24iOiIwLjAifSx7ImRlc2NyaXB0aW9uIjoiU2ltcGxlIE1JREktY29udHJvbGxhYmxlIGNsYXJpbmV0IHBoeXNpY2FsIG1vZGVsIHdpdGggcGh5c2ljYWwgcGFyYW1ldGVycy4ifSx7ImZpbGVuYW1lIjoiY2xhcmluZXRNSURJIn0seyJmaWx0ZXJzLmxpYi9uYW1lIjoiRmF1c3QgRmlsdGVycyBMaWJyYXJ5In0seyJmaWx0ZXJzLmxpYi92ZXJzaW9uIjoiMC4wIn0seyJsaWNlbnNlIjoiTUlUIn0seyJtYXRocy5saWIvYXV0aG9yIjoiR1JBTUUifSx7Im1hdGhzLmxpYi9jb3B5cmlnaHQiOiJHUkFNRSJ9LHsibWF0aHMubGliL2xpY2Vuc2UiOiJMR1BMIHdpdGggZXhjZXB0aW9uIn0seyJtYXRocy5saWIvbmFtZSI6IkZhdXN0IE1hdGggTGlicmFyeSJ9LHsibWF0aHMubGliL3ZlcnNpb24iOiIyLjEifSx7Im5hbWUiOiJDbGFyaW5ldE1JREkifSx7Im5vaXNlcy5saWIvbmFtZSI6IkZhdXN0IE5vaXNlIEdlbmVyYXRvciBMaWJyYXJ5In0seyJub2lzZXMubGliL3ZlcnNpb24iOiIwLjAifSx7Im9zY2lsbGF0b3JzLmxpYi9uYW1lIjoiRmF1c3QgT3NjaWxsYXRvciBMaWJyYXJ5In0seyJvc2NpbGxhdG9ycy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsicm91dGVzLmxpYi9uYW1lIjoiRmF1c3QgU2lnbmFsIFJvdXRpbmcgTGlicmFyeSJ9LHsicm91dGVzLmxpYi92ZXJzaW9uIjoiMC4wIn0seyJzaWduYWxzLmxpYi9uYW1lIjoiRmF1c3QgU2lnbmFsIFJvdXRpbmcgTGlicmFyeSJ9LHsic2lnbmFscy5saWIvdmVyc2lvbiI6IjAuMCJ9XSwidWkiOlt7InR5cGUiOiJ2Z3JvdXAiLCJsYWJlbCI6ImNsYXJpbmV0IiwiaXRlbXMiOlt7InR5cGUiOiJoZ3JvdXAiLCJsYWJlbCI6Im1pZGkiLCJtZXRhIjpbeyIwIjoiIn1dLCJpdGVtcyI6W3sidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6ImZyZXEiLCJhZGRyZXNzIjoiL2NsYXJpbmV0L21pZGkvZnJlcSIsImluZGV4IjoiODM3NiIsIm1ldGEiOlt7IjAiOiIifSx7InN0eWxlIjoia25vYiJ9XSwiaW5pdCI6IjQ0MCIsIm1pbiI6IjUwIiwibWF4IjoiMTAwMCIsInN0ZXAiOiIwLjAxIn0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiYmVuZCIsImFkZHJlc3MiOiIvY2xhcmluZXQvbWlkaS9iZW5kIiwiaW5kZXgiOiI4MzgwIiwibWV0YSI6W3siMSI6IiJ9LHsiaGlkZGVuIjoiMSJ9LHsibWlkaSI6InBpdGNod2hlZWwifSx7InN0eWxlIjoia25vYiJ9XSwiaW5pdCI6IjEiLCJtaW4iOiIwIiwibWF4IjoiMTAiLCJzdGVwIjoiMC4wMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6ImdhaW4iLCJhZGRyZXNzIjoiL2NsYXJpbmV0L21pZGkvZ2FpbiIsImluZGV4IjoiOTIiLCJtZXRhIjpbeyIyIjoiIn0seyJzdHlsZSI6Imtub2IifV0sImluaXQiOiIwLjYiLCJtaW4iOiIwIiwibWF4IjoiMSIsInN0ZXAiOiIwLjAxIn0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiZW52QXR0YWNrIiwiYWRkcmVzcyI6Ii9jbGFyaW5ldC9taWRpL2VudkF0dGFjayIsImluZGV4IjoiMTAwIiwibWV0YSI6W3siMyI6IiJ9LHsic3R5bGUiOiJrbm9iIn1dLCJpbml0IjoiMSIsIm1pbiI6IjAiLCJtYXgiOiIzMCIsInN0ZXAiOiIwLjAxIn0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoic3VzdGFpbiIsImFkZHJlc3MiOiIvY2xhcmluZXQvbWlkaS9zdXN0YWluIiwiaW5kZXgiOiI4MCIsIm1ldGEiOlt7IjQiOiIifSx7ImhpZGRlbiI6IjEifSx7Im1pZGkiOiJjdHJsIDY0In0seyJzdHlsZSI6Imtub2IifV0sImluaXQiOiIwIiwibWluIjoiMCIsIm1heCI6IjEiLCJzdGVwIjoiMSJ9XX0seyJ0eXBlIjoiaGdyb3VwIiwibGFiZWwiOiJvdGhlclBhcmFtcyIsIm1ldGEiOlt7IjEiOiIifV0sIml0ZW1zIjpbeyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoicmVlZFN0aWZmbmVzcyIsImFkZHJlc3MiOiIvY2xhcmluZXQvb3RoZXJQYXJhbXMvcmVlZFN0aWZmbmVzcyIsImluZGV4IjoiMTY4IiwibWV0YSI6W3siMCI6IiJ9LHsibWlkaSI6ImN0cmwgMSJ9LHsic3R5bGUiOiJrbm9iIn1dLCJpbml0IjoiMC41IiwibWluIjoiMCIsIm1heCI6IjEiLCJzdGVwIjoiMC4wMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6ImJlbGxPcGVuaW5nIiwiYWRkcmVzcyI6Ii9jbGFyaW5ldC9vdGhlclBhcmFtcy9iZWxsT3BlbmluZyIsImluZGV4IjoiMTIiLCJtZXRhIjpbeyIxIjoiIn0seyJtaWRpIjoiY3RybCAzIn0seyJzdHlsZSI6Imtub2IifV0sImluaXQiOiIwLjUiLCJtaW4iOiIwIiwibWF4IjoiMSIsInN0ZXAiOiIwLjAxIn0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoidmlicmF0b0ZyZXEiLCJhZGRyZXNzIjoiL2NsYXJpbmV0L290aGVyUGFyYW1zL3ZpYnJhdG9GcmVxIiwiaW5kZXgiOiI0OCIsIm1ldGEiOlt7IjIiOiIifSx7InN0eWxlIjoia25vYiJ9XSwiaW5pdCI6IjUiLCJtaW4iOiIxIiwibWF4IjoiMTAiLCJzdGVwIjoiMC4wMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6InZpYnJhdG9HYWluIiwiYWRkcmVzcyI6Ii9jbGFyaW5ldC9vdGhlclBhcmFtcy92aWJyYXRvR2FpbiIsImluZGV4IjoiMzIiLCJtZXRhIjpbeyIzIjoiIn0seyJzdHlsZSI6Imtub2IifV0sImluaXQiOiIwLjI1IiwibWluIjoiMCIsIm1heCI6IjEiLCJzdGVwIjoiMC4wMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6Im91dEdhaW4iLCJhZGRyZXNzIjoiL2NsYXJpbmV0L290aGVyUGFyYW1zL291dEdhaW4iLCJpbmRleCI6IjAiLCJtZXRhIjpbeyI0IjoiIn0seyJzdHlsZSI6Imtub2IifV0sImluaXQiOiIwLjUiLCJtaW4iOiIwIiwibWF4IjoiMSIsInN0ZXAiOiIwLjAxIn1dfSx7InR5cGUiOiJidXR0b24iLCJsYWJlbCI6ImdhdGUiLCJhZGRyZXNzIjoiL2NsYXJpbmV0L2dhdGUiLCJpbmRleCI6Ijc2IiwibWV0YSI6W3siMiI6IiJ9XX1dfV19MA=="; }
 
 /*
- faust2wasm
- 
- Additional code: GRAME 2017
+ faust2wasm: GRAME 2017-2018
 */
  
 'use strict';
@@ -20,20 +18,20 @@ function getBase64CodeclarinetMIDI() { return "AGFzbQEAAAAB24CAgAARYAJ/fwBgBH9/f
 function getBase64Mixer() { return "AGFzbQEAAAABj4CAgAACYAN/f38AYAR/f39/AX0CkoCAgAABBm1lbW9yeQZtZW1vcnkCAAIDg4CAgAACAAEHmoCAgAACC2NsZWFyT3V0cHV0AAAIbWl4Vm9pY2UAAQqKgoCAAALigICAAAEDfwJAQQAhBQNAAkAgAiAFQQJ0aigCACEDQQAhBANAAkAgAyAEQQJ0akMAAAAAOAIAIARBAWohBCAEIABIBEAMAgUMAQsACwsgBUEBaiEFIAUgAUgEQAwCBQwBCwALCwsLnYGAgAACBH8DfQJ9QQAhB0MAAAAAIQgDQAJAQQAhBiACIAdBAnRqKAIAIQQgAyAHQQJ0aigCACEFA0ACQCAEIAZBAnRqKgIAIQkgCCAJi5chCCAFIAZBAnRqKgIAIQogBSAGQQJ0aiAKIAmSOAIAIAZBAWohBiAGIABIBEAMAgUMAQsACwsgB0EBaiEHIAcgAUgEQAwCBQwBCwALCyAIDwsL"; }
 
 // Polyphonic Faust DSP
-class clarinetMIDI_polyProcessor extends AudioWorkletProcessor {
+class clarinetMIDIPolyProcessor extends AudioWorkletProcessor {
     
     // JSON parsing functions
     static parse_ui(ui, obj, callback)
     {
         for (var i = 0; i < ui.length; i++) {
-           	clarinetMIDI_polyProcessor.parse_group(ui[i], obj, callback);
+           	clarinetMIDIPolyProcessor.parse_group(ui[i], obj, callback);
         }
     }
     
     static parse_group(group, obj, callback)
     {
         if (group.items) {
-            clarinetMIDI_polyProcessor.parse_items(group.items, obj, callback);
+            clarinetMIDIPolyProcessor.parse_items(group.items, obj, callback);
         }
     }
     
@@ -49,7 +47,7 @@ class clarinetMIDI_polyProcessor extends AudioWorkletProcessor {
         if (item.type === "vgroup"
             || item.type === "hgroup"
             || item.type === "tgroup") {
-            clarinetMIDI_polyProcessor.parse_items(item.items, obj, callback);
+            clarinetMIDIPolyProcessor.parse_items(item.items, obj, callback);
         } else if (item.type === "hbargraph"
                    || item.type === "vbargraph") {
             // Nothing
@@ -70,7 +68,7 @@ class clarinetMIDI_polyProcessor extends AudioWorkletProcessor {
         if (item.type === "vgroup"
             || item.type === "hgroup"
             || item.type === "tgroup") {
-            clarinetMIDI_polyProcessor.parse_items(item.items, obj, callback);
+            clarinetMIDIPolyProcessor.parse_items(item.items, obj, callback);
         } else if (item.type === "hbargraph"
                    || item.type === "vbargraph") {
             // Keep bargraph adresses
@@ -130,7 +128,7 @@ class clarinetMIDI_polyProcessor extends AudioWorkletProcessor {
             
             for (var nMod3, nMod4, nUint24 = 0, nOutIdx = 0, nInIdx = 0; nInIdx < nInLen; nInIdx++) {
                 nMod4 = nInIdx & 3;
-                nUint24 |= clarinetMIDI_polyProcessor.b64ToUint6(sB64Enc.charCodeAt(nInIdx)) << 18 - 6 * nMod4;
+                nUint24 |= clarinetMIDIPolyProcessor.b64ToUint6(sB64Enc.charCodeAt(nInIdx)) << 18 - 6 * nMod4;
                 if (nMod4 === 3 || nInLen - nInIdx === 1) {
                     for (nMod3 = 0; nMod3 < 3 && nOutIdx < nOutLen; nMod3++, nOutIdx++) {
                         taBytes[nOutIdx] = nUint24 >>> (16 >>> nMod3 & 24) & 255;
@@ -153,11 +151,11 @@ class clarinetMIDI_polyProcessor extends AudioWorkletProcessor {
         var params = [];
         
         // Add instrument parameters
-        clarinetMIDI_polyProcessor.parse_ui(JSON.parse(getJSONclarinetMIDI()).ui, params, clarinetMIDI_polyProcessor.parse_item1);
+        clarinetMIDIPolyProcessor.parse_ui(JSON.parse(getJSONclarinetMIDI()).ui, params, clarinetMIDIPolyProcessor.parse_item1);
         
         // Possibly add effect parameters
         if (typeof (getJSONeffect) !== "undefined") {
-             clarinetMIDI_polyProcessor.parse_ui(JSON.parse(getJSONeffect()).ui, params, clarinetMIDI_polyProcessor.parse_item1);
+             clarinetMIDIPolyProcessor.parse_ui(JSON.parse(getJSONeffect()).ui, params, clarinetMIDIPolyProcessor.parse_item1);
         }
         return params;
     }
@@ -236,8 +234,70 @@ class clarinetMIDI_polyProcessor extends AudioWorkletProcessor {
         this.ptr_size = 4;
         this.sample_size = 4;
         
-        this.factory = clarinetMIDI_polyProcessor.clarinetMIDI_instance.exports;
-        this.HEAP = clarinetMIDI_polyProcessor.memory.buffer;
+        this.memory = clarinetMIDIPolyProcessor.createMemory(clarinetMIDIPolyProcessor.buffer_size, clarinetMIDIPolyProcessor.polyphony);
+
+        // Create Mixer
+        this.mixObject = { imports: { print: arg => console.log(arg) } }
+        this.mixObject["memory"] = { "memory": this.memory };
+
+        this.importObject = {
+            env: {
+                memoryBase: 0,
+                tableBase: 0,
+                    
+                // Integer version
+                _abs: Math.abs,
+                
+                // Float version
+                _acosf: Math.acos,
+                _asinf: Math.asin,
+                _atanf: Math.atan,
+                _atan2f: Math.atan2,
+                _ceilf: Math.ceil,
+                _cosf: Math.cos,
+                _expf: Math.exp,
+                _floorf: Math.floor,
+                _fmodf: function(x, y) { return x % y; },
+                _logf: Math.log,
+                _log10f: Math.log10,
+                _max_f: Math.max,
+                _min_f: Math.min,
+                _remainderf: function(x, y) { return x - Math.round(x/y) * y; },
+                _powf: Math.pow,
+                _roundf: Math.fround,
+                _sinf: Math.sin,
+                _sqrtf: Math.sqrt,
+                _tanf: Math.tan,
+                   
+                // Double version
+                _acos: Math.acos,
+                _asin: Math.asin,
+                _atan: Math.atan,
+                _atan2: Math.atan2,
+                _ceil: Math.ceil,
+                _cos: Math.cos,
+                _exp: Math.exp,
+                _floor: Math.floor,
+                _fmod: function(x, y) { return x % y; },
+                _log: Math.log,
+                _log10: Math.log10,
+                _max_: Math.max,
+                _min_: Math.min,
+                _remainder:function(x, y) { return x - Math.round(x/y) * y; },
+                _pow: Math.pow,
+                _round: Math.fround,
+                _sin: Math.sin,
+                _sqrt: Math.sqrt,
+                _tan: Math.tan,
+                
+                memory: this.memory,
+                
+                table: new WebAssembly.Table({ initial: 0, element: 'anyfunc' })
+            }
+        }
+
+        this.factory = new WebAssembly.Instance(clarinetMIDIPolyProcessor.wasm_module, this.importObject).exports;
+        this.HEAP = this.memory.buffer;
         this.HEAP32 = new Int32Array(this.HEAP);
         this.HEAPF32 = new Float32Array(this.HEAP);
         
@@ -263,24 +323,24 @@ class clarinetMIDI_polyProcessor extends AudioWorkletProcessor {
         
         // Setup buffer offset
         this.audio_heap_inputs = this.audio_heap_ptr_mixing + (this.numOut * this.ptr_size);
-        this.audio_heap_outputs = this.audio_heap_inputs + (this.numIn * clarinetMIDI_polyProcessor.buffer_size * this.sample_size);
-        this.audio_heap_mixing = this.audio_heap_outputs + (this.numOut * clarinetMIDI_polyProcessor.buffer_size * this.sample_size);
+        this.audio_heap_outputs = this.audio_heap_inputs + (this.numIn * clarinetMIDIPolyProcessor.buffer_size * this.sample_size);
+        this.audio_heap_mixing = this.audio_heap_outputs + (this.numOut * clarinetMIDIPolyProcessor.buffer_size * this.sample_size);
         
         // Setup DSP voices offset
-        this.dsp_start = this.audio_heap_mixing + (this.numOut * clarinetMIDI_polyProcessor.buffer_size * this.sample_size);
+        this.dsp_start = this.audio_heap_mixing + (this.numOut * clarinetMIDIPolyProcessor.buffer_size * this.sample_size);
         
         // wasm mixer
-        this.mixer = clarinetMIDI_polyProcessor.mixer_instance.exports;
+        this.mixer = new WebAssembly.Instance(clarinetMIDIPolyProcessor.wasm_mixer_module, this.mixObject).exports;
         
         // wasm effect
-        this.effect = (clarinetMIDI_polyProcessor.effect_instance) ? clarinetMIDI_polyProcessor.effect_instance.exports : null;
+        this.effect = (clarinetMIDIPolyProcessor.wasm_effect_module) ? new WebAssembly.Instance(clarinetMIDIPolyProcessor.wasm_effect_module, this.importObject).exports : null;
         
         console.log(this.mixer);
         console.log(this.factory);
         console.log(this.effect);
         
         // Start of DSP memory ('polyphony' DSP voices)
-        this.polyphony = clarinetMIDI_polyProcessor.polyphony;
+        this.polyphony = clarinetMIDIPolyProcessor.polyphony;
         this.dsp_voices = [];
         this.dsp_voices_state = [];
         this.dsp_voices_level = [];
@@ -401,13 +461,13 @@ class clarinetMIDI_polyProcessor extends AudioWorkletProcessor {
             if (this.numIn > 0) {
                 this.ins = this.audio_heap_ptr_inputs;
                 for (i = 0; i < this.numIn; i++) {
-                    this.HEAP32[(this.ins >> 2) + i] = this.audio_heap_inputs + ((clarinetMIDI_polyProcessor.buffer_size * this.sample_size) * i);
+                    this.HEAP32[(this.ins >> 2) + i] = this.audio_heap_inputs + ((clarinetMIDIPolyProcessor.buffer_size * this.sample_size) * i);
                 }
                 
                 // Prepare Ins buffer tables
                 var dspInChans = this.HEAP32.subarray(this.ins >> 2, (this.ins + this.numIn * this.ptr_size) >> 2);
                 for (i = 0; i < this.numIn; i++) {
-                    this.dspInChannnels[i] = this.HEAPF32.subarray(dspInChans[i] >> 2, (dspInChans[i] + clarinetMIDI_polyProcessor.buffer_size * this.sample_size) >> 2);
+                    this.dspInChannnels[i] = this.HEAPF32.subarray(dspInChans[i] >> 2, (dspInChans[i] + clarinetMIDIPolyProcessor.buffer_size * this.sample_size) >> 2);
                 }
             }
             
@@ -417,22 +477,22 @@ class clarinetMIDI_polyProcessor extends AudioWorkletProcessor {
                 this.mixing = this.audio_heap_ptr_mixing;
                 
                 for (i = 0; i < this.numOut; i++) {
-                    this.HEAP32[(this.outs >> 2) + i] = this.audio_heap_outputs + ((clarinetMIDI_polyProcessor.buffer_size * this.sample_size) * i);
-                    this.HEAP32[(this.mixing >> 2) + i] = this.audio_heap_mixing + ((clarinetMIDI_polyProcessor.buffer_size * this.sample_size) * i);
+                    this.HEAP32[(this.outs >> 2) + i] = this.audio_heap_outputs + ((clarinetMIDIPolyProcessor.buffer_size * this.sample_size) * i);
+                    this.HEAP32[(this.mixing >> 2) + i] = this.audio_heap_mixing + ((clarinetMIDIPolyProcessor.buffer_size * this.sample_size) * i);
                 }
                 
                 // Prepare Out buffer tables
                 var dspOutChans = this.HEAP32.subarray(this.outs >> 2, (this.outs + this.numOut * this.ptr_size) >> 2);
                 for (i = 0; i < this.numOut; i++) {
-                    this.dspOutChannnels[i] = this.HEAPF32.subarray(dspOutChans[i] >> 2, (dspOutChans[i] + clarinetMIDI_polyProcessor.buffer_size * this.sample_size) >> 2);
+                    this.dspOutChannnels[i] = this.HEAPF32.subarray(dspOutChans[i] >> 2, (dspOutChans[i] + clarinetMIDIPolyProcessor.buffer_size * this.sample_size) >> 2);
                 }
             }
             
             // Parse UI part
-            clarinetMIDI_polyProcessor.parse_ui(this.json_object.ui, this, clarinetMIDI_polyProcessor.parse_item2);
+            clarinetMIDIPolyProcessor.parse_ui(this.json_object.ui, this, clarinetMIDIPolyProcessor.parse_item2);
             
             if (this.effect) {
-                clarinetMIDI_polyProcessor.parse_ui(this.effect_json_object.ui, this, clarinetMIDI_polyProcessor.parse_item2);
+                clarinetMIDIPolyProcessor.parse_ui(this.effect_json_object.ui, this, clarinetMIDIPolyProcessor.parse_item2);
             }
      
             // keep 'keyOn/keyOff' labels
@@ -503,7 +563,7 @@ class clarinetMIDI_polyProcessor extends AudioWorkletProcessor {
             if (this.fCtrlLabel[ctrl] !== []) {
                 for (var i = 0; i < this.fCtrlLabel[ctrl].length; i++) {
                     var path = this.fCtrlLabel[ctrl][i].path;
-                    this.setParamValue(path, clarinetMIDI_polyProcessor.remap(value, 0, 127, this.fCtrlLabel[ctrl][i].min, this.fCtrlLabel[ctrl][i].max));
+                    this.setParamValue(path, clarinetMIDIPolyProcessor.remap(value, 0, 127, this.fCtrlLabel[ctrl][i].min, this.fCtrlLabel[ctrl][i].max));
                     if (this.output_handler) {
                    		this.output_handler(path, this.getParamValue(path));
                    	}
@@ -601,11 +661,11 @@ class clarinetMIDI_polyProcessor extends AudioWorkletProcessor {
          
         // Possibly call an externally given callback (for instance to synchronize playing a MIDIFile...)
         if (this.compute_handler) {
-            this.compute_handler(clarinetMIDI_polyProcessor.buffer_size);
+            this.compute_handler(clarinetMIDIPolyProcessor.buffer_size);
         }
          
         // First clear the outputs
-        this.mixer.clearOutput(clarinetMIDI_polyProcessor.buffer_size, this.numOut, this.outs);
+        this.mixer.clearOutput(clarinetMIDIPolyProcessor.buffer_size, this.numOut, this.outs);
         
         // Compute all running voices
         for (var i = 0; i < this.polyphony; i++) {
@@ -615,14 +675,14 @@ class clarinetMIDI_polyProcessor extends AudioWorkletProcessor {
                     this.factory.setParamValue(this.dsp_voices[i], this.fGateLabel, 0.0);
                     this.factory.compute(this.dsp_voices[i], 1, this.ins, this.mixing);
                     this.factory.setParamValue(this.dsp_voices[i], this.fGateLabel, 1.0);
-                    this.factory.compute(this.dsp_voices[i], clarinetMIDI_polyProcessor.buffer_size, this.ins, this.mixing);
+                    this.factory.compute(this.dsp_voices[i], clarinetMIDIPolyProcessor.buffer_size, this.ins, this.mixing);
                     this.dsp_voices_trigger[i] = false;
                 } else {
                     // Compute regular voice
-                    this.factory.compute(this.dsp_voices[i], clarinetMIDI_polyProcessor.buffer_size, this.ins, this.mixing);
+                    this.factory.compute(this.dsp_voices[i], clarinetMIDIPolyProcessor.buffer_size, this.ins, this.mixing);
                 }
                 // Mix it in result
-                this.dsp_voices_level[i] = this.mixer.mixVoice(clarinetMIDI_polyProcessor.buffer_size, this.numOut, this.mixing, this.outs);
+                this.dsp_voices_level[i] = this.mixer.mixVoice(clarinetMIDIPolyProcessor.buffer_size, this.numOut, this.mixing, this.outs);
                 // Check the level to possibly set the voice in kFreeVoice again
                 if ((this.dsp_voices_level[i] < 0.001) && (this.dsp_voices_state[i] === this.kReleaseVoice)) {
                     this.dsp_voices_state[i] = this.kFreeVoice;
@@ -632,7 +692,7 @@ class clarinetMIDI_polyProcessor extends AudioWorkletProcessor {
         
         // Apply effect
         if (this.effect) {
-            this.effect.compute(this.effect_start, clarinetMIDI_polyProcessor.buffer_size, this.outs, this.outs);
+            this.effect.compute(this.effect_start, clarinetMIDIPolyProcessor.buffer_size, this.outs, this.outs);
         }
         
         // Update bargraph
@@ -653,85 +713,22 @@ class clarinetMIDI_polyProcessor extends AudioWorkletProcessor {
 // Globals
 
 // Create memory block
-clarinetMIDI_polyProcessor.buffer_size = 128;
-clarinetMIDI_polyProcessor.polyphony = 16;
-
-clarinetMIDI_polyProcessor.memory = clarinetMIDI_polyProcessor.createMemory(clarinetMIDI_polyProcessor.buffer_size, clarinetMIDI_polyProcessor.polyphony);
-
-// Create Mixer
-clarinetMIDI_polyProcessor.mixObject = { imports: { print: arg => console.log(arg) } }
-clarinetMIDI_polyProcessor.mixObject["memory"] = { "memory": clarinetMIDI_polyProcessor.memory };
-
-clarinetMIDI_polyProcessor.importObject = {
-    env: {
-        memoryBase: 0,
-        tableBase: 0,
-            
-        // Integer version
-        _abs: Math.abs,
-        
-        // Float version
-        _acosf: Math.acos,
-        _asinf: Math.asin,
-        _atanf: Math.atan,
-        _atan2f: Math.atan2,
-        _ceilf: Math.ceil,
-        _cosf: Math.cos,
-        _expf: Math.exp,
-        _floorf: Math.floor,
-        _fmodf: function(x, y) { return x % y; },
-        _logf: Math.log,
-        _log10f: Math.log10,
-        _max_f: Math.max,
-        _min_f: Math.min,
-        _remainderf: function(x, y) { return x - Math.round(x/y) * y; },
-        _powf: Math.pow,
-        _roundf: Math.fround,
-        _sinf: Math.sin,
-        _sqrtf: Math.sqrt,
-        _tanf: Math.tan,
-           
-        // Double version
-        _acos: Math.acos,
-        _asin: Math.asin,
-        _atan: Math.atan,
-        _atan2: Math.atan2,
-        _ceil: Math.ceil,
-        _cos: Math.cos,
-        _exp: Math.exp,
-        _floor: Math.floor,
-        _fmod: function(x, y) { return x % y; },
-        _log: Math.log,
-        _log10: Math.log10,
-        _max_: Math.max,
-        _min_: Math.min,
-        _remainder:function(x, y) { return x - Math.round(x/y) * y; },
-        _pow: Math.pow,
-        _round: Math.fround,
-        _sin: Math.sin,
-        _sqrt: Math.sqrt,
-        _tan: Math.tan,
-        
-        memory: clarinetMIDI_polyProcessor.memory,
-        
-        table: new WebAssembly.Table({ initial: 0, element: 'anyfunc' })
-    }
-};
+clarinetMIDIPolyProcessor.buffer_size = 128;
+clarinetMIDIPolyProcessor.polyphony = 16;
 
 // Synchronously compile and instantiate the WASM modules
 try {
-    let wasm_mixer_module = new WebAssembly.Module(clarinetMIDI_polyProcessor.atob(getBase64Mixer()));
-    clarinetMIDI_polyProcessor.mixer_instance = new WebAssembly.Instance(wasm_mixer_module, clarinetMIDI_polyProcessor.mixObject);
-    let wasm_module = new WebAssembly.Module(clarinetMIDI_polyProcessor.atob(getBase64CodeclarinetMIDI()));
-    clarinetMIDI_polyProcessor.clarinetMIDI_instance = new WebAssembly.Instance(wasm_module, clarinetMIDI_polyProcessor.importObject);
-    // Possibly compile effect
-    if (typeof (getBase64Codeeffect) !== "undefined") {
-        let wasm_effect_module = new WebAssembly.Module(clarinetMIDI_polyProcessor.atob(getBase64Codeeffect()));
-        clarinetMIDI_polyProcessor.effect_instance = new WebAssembly.Instance(wasm_effect_module, clarinetMIDI_polyProcessor.importObject);
+    if (clarinetMIDIPolyProcessor.wasm_mixer_module == undefined) {
+        clarinetMIDIPolyProcessor.wasm_mixer_module = new WebAssembly.Module(clarinetMIDIPolyProcessor.atob(getBase64Mixer()));
+        clarinetMIDIPolyProcessor.wasm_module = new WebAssembly.Module(clarinetMIDIPolyProcessor.atob(getBase64CodeclarinetMIDI()));
+        // Possibly compile effect
+        if (typeof (getBase64Codeeffect) !== "undefined") {
+            clarinetMIDIPolyProcessor.wasm_effect_module = new WebAssembly.Module(clarinetMIDIPolyProcessor.atob(getBase64Codeeffect()));
+        }
+        registerProcessor('clarinetMIDIPoly', clarinetMIDIPolyProcessor);
     }
-    registerProcessor('clarinetMIDI_poly', clarinetMIDI_polyProcessor);
 } catch (e) {
-    console.log(e); console.log("Faust clarinetMIDI_poly cannot be loaded or compiled");
+    console.log(e); console.log("Faust clarinetMIDIPoly cannot be loaded or compiled");
 }
 
 

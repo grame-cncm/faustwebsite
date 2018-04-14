@@ -372,7 +372,7 @@ Finds the sum of a numerical array.
 **/
 Array.prototype.sum = function() {
   var sum = 0;
-  for(var i = 0; i < this.length; i++) {
+  for (var i = 0; i < this.length; i++) {
     sum += this[i];
   }
   return sum;
@@ -740,7 +740,7 @@ _f4u$t.rand_string = function(n)
     n = 8;
   }
 
-  for( var i=0; i < n; i++ ) {
+  for (var i = 0; i < n; i++ ) {
     text += possible.charAt(Math.floor(Math.random() * possible.length));
   }
   return text;
@@ -1131,7 +1131,7 @@ _f4u$t.unique = function(s) {
 }
 
 /**
-Returns the type part of an id.  The faust naming convention gives
+Returns the type part of an id. The faust naming convention gives
 all DOM ids a type as the second entry. Examples are vslider, hslider,
 rbutton.
 
@@ -1574,7 +1574,7 @@ _f4u$t.hard_delete = function(div) {
   To be called when used with the C++/LLVM libfaust based FaustNode.
 **/
 _f4u$t.make_audio_ui = function(dsp, svg) {
-  var json = eval ("(" + dsp.json() + ")");
+  var json = eval("(" + dsp.json() + ")");
   var faust_svg = new _f4u$t.SVG(
     svg,
     // kludge to prevent scroll bars...
@@ -2459,7 +2459,6 @@ _f4u$t.RotatingButton.prototype.r = function() {
 _f4u$t.RotatingButton.prototype.dims = function() {
   return [this.r() * 2, this.r() * 2];
 }
-
 
 _f4u$t.RotatingButton.prototype.make_mgroove = function(svg, parent, id) {
   var full_id = 'faust_rbutton_mgroove_'+id;
@@ -4225,7 +4224,6 @@ _f4u$t.json_to_ui = function(json, hash) {
  * obviously, the goal is to separate the two as much as possible
  */
 
-
 /*
   UTILITY FUNCTIONS
 */
@@ -4270,7 +4268,7 @@ _f4u$t.transform_to_array = function(transform) {
   while(true) {
     var match = matrix.exec(transform);
     if (match != null) {
-      out.push(["matrix",parseFloat(match[1]), parseFloat(match[2]), parseFloat(match[3]), parseFloat(match[4]), parseFloat(match[5]), parseFloat(match[6])]);
+      out.push(["matrix", parseFloat(match[1]), parseFloat(match[2]), parseFloat(match[3]), parseFloat(match[4]), parseFloat(match[5]), parseFloat(match[6])]);
       transform = transform.substr(match[0].length,transform.length-match[0].length);
       continue;
     }
@@ -5410,19 +5408,19 @@ _f4u$t.main_loop = function() {
 $(document).ready(function() { _f4u$t.main_loop(); });
 
 /*
-Code generated with Faust version 2.5.24
+Code generated with Faust version 2.5.32
 Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONSBrassMulti() {
-	return "{\"name\":\"Multiple Brass\",\"filename\":\"SBrassMulti\",\"version\":\"2.5.24\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"98684\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"ER\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"description\":\"WaveGuide Brass instrument from STK\"},{\"envelopes.lib/author\":\"GRAME\"},{\"envelopes.lib/copyright\":\"GRAME\"},{\"envelopes.lib/license\":\"LGPL with exception\"},{\"envelopes.lib/name\":\"Faust Envelope Library\"},{\"envelopes.lib/version\":\"0.0\"},{\"filename\":\"SBrassMulti\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"instruments.lib/author\":\"Romain Michon (rmichon@ccrma.stanford.edu)\"},{\"instruments.lib/copyright\":\"Romain Michon\"},{\"instruments.lib/licence\":\"STK-4.3\"},{\"instruments.lib/name\":\"Faust-STK Tools Library\"},{\"instruments.lib/version\":\"1.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Multiple Brass\"},{\"oscillators.lib/name\":\"Faust Oscillator Library\"},{\"oscillators.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Brass Instrument\",\"items\":[{\"type\":\"hslider\",\"label\":\"ON/OFF\",\"address\":\"/Brass_Instrument/ON/OFF\",\"index\":\"52\",\"init\":\"0\",\"min\":\"0\",\"max\":\"1\",\"step\":\"1\"},{\"type\":\"hgroup\",\"label\":\"Instrument\",\"items\":[{\"type\":\"vgroup\",\"label\":\"Frequencies\",\"items\":[{\"type\":\"hslider\",\"label\":\"Frequency 1\",\"address\":\"/Brass_Instrument/Instrument/Frequencies/Frequency_1\",\"index\":\"40\",\"meta\":[{\"acc\":\"1 1 -10 0 10\"},{\"unit\":\"Hz\"}],\"init\":\"370\",\"min\":\"280\",\"max\":\"380\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"Frequency 2\",\"address\":\"/Brass_Instrument/Instrument/Frequencies/Frequency_2\",\"index\":\"32992\",\"meta\":[{\"acc\":\"0 1 -10 0 10\"},{\"unit\":\"Hz\"}],\"init\":\"440\",\"min\":\"380\",\"max\":\"550\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"Frequency 3\",\"address\":\"/Brass_Instrument/Instrument/Frequencies/Frequency_3\",\"index\":\"65848\",\"meta\":[{\"acc\":\"2 0 -10 0 12\"},{\"unit\":\"Hz\"}],\"init\":\"587.32\",\"min\":\"550\",\"max\":\"700\",\"step\":\"0.01\"}]},{\"type\":\"vgroup\",\"label\":\"Gain\",\"items\":[{\"type\":\"hslider\",\"label\":\"Volume 1\",\"address\":\"/Brass_Instrument/Instrument/Gain/Volume_1\",\"index\":\"32\",\"meta\":[{\"acc\":\"1 0 -10 0 12\"},{\"style\":\"knob\"},{\"tooltip\":\"Gain (value between 0 and 1)\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"Volume 2\",\"address\":\"/Brass_Instrument/Instrument/Gain/Volume_2\",\"index\":\"32988\",\"meta\":[{\"acc\":\"0 0 -10 0 12\"},{\"style\":\"knob\"},{\"tooltip\":\"Gain (value between 0 and 1)\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"Volume 3\",\"address\":\"/Brass_Instrument/Instrument/Gain/Volume_3\",\"index\":\"65844\",\"meta\":[{\"acc\":\"2 1 -10 0 10\"},{\"style\":\"knob\"},{\"tooltip\":\"Gain (value between 0 and 1)\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"0.5\",\"step\":\"0.01\"}]}]}]}]}";
+	return "{\"name\":\"Multiple Brass\",\"filename\":\"SBrassMulti\",\"version\":\"2.5.32\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"98684\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"ER\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"description\":\"WaveGuide Brass instrument from STK\"},{\"envelopes.lib/author\":\"GRAME\"},{\"envelopes.lib/copyright\":\"GRAME\"},{\"envelopes.lib/license\":\"LGPL with exception\"},{\"envelopes.lib/name\":\"Faust Envelope Library\"},{\"envelopes.lib/version\":\"0.0\"},{\"filename\":\"SBrassMulti\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"instruments.lib/author\":\"Romain Michon (rmichon@ccrma.stanford.edu)\"},{\"instruments.lib/copyright\":\"Romain Michon\"},{\"instruments.lib/licence\":\"STK-4.3\"},{\"instruments.lib/name\":\"Faust-STK Tools Library\"},{\"instruments.lib/version\":\"1.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Multiple Brass\"},{\"oscillators.lib/name\":\"Faust Oscillator Library\"},{\"oscillators.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Brass Instrument\",\"items\":[{\"type\":\"hslider\",\"label\":\"ON/OFF\",\"address\":\"/Brass_Instrument/ON/OFF\",\"index\":\"52\",\"init\":\"0\",\"min\":\"0\",\"max\":\"1\",\"step\":\"1\"},{\"type\":\"hgroup\",\"label\":\"Instrument\",\"items\":[{\"type\":\"vgroup\",\"label\":\"Frequencies\",\"items\":[{\"type\":\"hslider\",\"label\":\"Frequency 1\",\"address\":\"/Brass_Instrument/Instrument/Frequencies/Frequency_1\",\"index\":\"40\",\"meta\":[{\"acc\":\"1 1 -10 0 10\"},{\"unit\":\"Hz\"}],\"init\":\"370\",\"min\":\"280\",\"max\":\"380\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"Frequency 2\",\"address\":\"/Brass_Instrument/Instrument/Frequencies/Frequency_2\",\"index\":\"32992\",\"meta\":[{\"acc\":\"0 1 -10 0 10\"},{\"unit\":\"Hz\"}],\"init\":\"440\",\"min\":\"380\",\"max\":\"550\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"Frequency 3\",\"address\":\"/Brass_Instrument/Instrument/Frequencies/Frequency_3\",\"index\":\"65848\",\"meta\":[{\"acc\":\"2 0 -10 0 12\"},{\"unit\":\"Hz\"}],\"init\":\"587.32\",\"min\":\"550\",\"max\":\"700\",\"step\":\"0.01\"}]},{\"type\":\"vgroup\",\"label\":\"Gain\",\"items\":[{\"type\":\"hslider\",\"label\":\"Volume 1\",\"address\":\"/Brass_Instrument/Instrument/Gain/Volume_1\",\"index\":\"32\",\"meta\":[{\"acc\":\"1 0 -10 0 12\"},{\"style\":\"knob\"},{\"tooltip\":\"Gain (value between 0 and 1)\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"Volume 2\",\"address\":\"/Brass_Instrument/Instrument/Gain/Volume_2\",\"index\":\"32988\",\"meta\":[{\"acc\":\"0 0 -10 0 12\"},{\"style\":\"knob\"},{\"tooltip\":\"Gain (value between 0 and 1)\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"Volume 3\",\"address\":\"/Brass_Instrument/Instrument/Gain/Volume_3\",\"index\":\"65844\",\"meta\":[{\"acc\":\"2 1 -10 0 10\"},{\"style\":\"knob\"},{\"tooltip\":\"Gain (value between 0 and 1)\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"0.5\",\"step\":\"0.01\"}]}]}]}]}";
 }
-function getBase64CodeSBrassMulti() { return "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ABAKC9CAgIAAAEEAQwAAAD84AiBBAEMAALlDOAIoQQBDAAAAADgCNEEAQwAAAD84AtyBAkEAQwAA3EM4AuCBAkEAQwAAAD84ArSCBEEAQ3vUEkQ4AriCBAuNgICAAAAgASAAIAAgAUgbDwuNgICAAAAgACABIAAgAUgbDwuMgICAAAAgACABaiACOAIACwvNl4CAAAEAQQALxhd7Im5hbWUiOiJNdWx0aXBsZSBCcmFzcyIsImZpbGVuYW1lIjoiU0JyYXNzTXVsdGkiLCJ2ZXJzaW9uIjoiMi41LjI0Iiwib3B0aW9ucyI6Indhc20taWIsIC1zY2FsIC1mdHogMiIsInNpemUiOiI5ODY4NCIsImlucHV0cyI6IjAiLCJvdXRwdXRzIjoiMSIsIm1ldGEiOlt7ImF1dGhvciI6IkVSIn0seyJiYXNpY3MubGliL25hbWUiOiJGYXVzdCBCYXNpYyBFbGVtZW50IExpYnJhcnkifSx7ImJhc2ljcy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsiZGVsYXlzLmxpYi9uYW1lIjoiRmF1c3QgRGVsYXkgTGlicmFyeSJ9LHsiZGVsYXlzLmxpYi92ZXJzaW9uIjoiMC4wIn0seyJkZXNjcmlwdGlvbiI6IldhdmVHdWlkZSBCcmFzcyBpbnN0cnVtZW50IGZyb20gU1RLIn0seyJlbnZlbG9wZXMubGliL2F1dGhvciI6IkdSQU1FIn0seyJlbnZlbG9wZXMubGliL2NvcHlyaWdodCI6IkdSQU1FIn0seyJlbnZlbG9wZXMubGliL2xpY2Vuc2UiOiJMR1BMIHdpdGggZXhjZXB0aW9uIn0seyJlbnZlbG9wZXMubGliL25hbWUiOiJGYXVzdCBFbnZlbG9wZSBMaWJyYXJ5In0seyJlbnZlbG9wZXMubGliL3ZlcnNpb24iOiIwLjAifSx7ImZpbGVuYW1lIjoiU0JyYXNzTXVsdGkifSx7ImZpbHRlcnMubGliL25hbWUiOiJGYXVzdCBGaWx0ZXJzIExpYnJhcnkifSx7ImZpbHRlcnMubGliL3ZlcnNpb24iOiIwLjAifSx7Imluc3RydW1lbnRzLmxpYi9hdXRob3IiOiJSb21haW4gTWljaG9uIChybWljaG9uQGNjcm1hLnN0YW5mb3JkLmVkdSkifSx7Imluc3RydW1lbnRzLmxpYi9jb3B5cmlnaHQiOiJSb21haW4gTWljaG9uIn0seyJpbnN0cnVtZW50cy5saWIvbGljZW5jZSI6IlNUSy00LjMifSx7Imluc3RydW1lbnRzLmxpYi9uYW1lIjoiRmF1c3QtU1RLIFRvb2xzIExpYnJhcnkifSx7Imluc3RydW1lbnRzLmxpYi92ZXJzaW9uIjoiMS4wIn0seyJtYXRocy5saWIvYXV0aG9yIjoiR1JBTUUifSx7Im1hdGhzLmxpYi9jb3B5cmlnaHQiOiJHUkFNRSJ9LHsibWF0aHMubGliL2xpY2Vuc2UiOiJMR1BMIHdpdGggZXhjZXB0aW9uIn0seyJtYXRocy5saWIvbmFtZSI6IkZhdXN0IE1hdGggTGlicmFyeSJ9LHsibWF0aHMubGliL3ZlcnNpb24iOiIyLjEifSx7Im5hbWUiOiJNdWx0aXBsZSBCcmFzcyJ9LHsib3NjaWxsYXRvcnMubGliL25hbWUiOiJGYXVzdCBPc2NpbGxhdG9yIExpYnJhcnkifSx7Im9zY2lsbGF0b3JzLmxpYi92ZXJzaW9uIjoiMC4wIn0seyJzaWduYWxzLmxpYi9uYW1lIjoiRmF1c3QgU2lnbmFsIFJvdXRpbmcgTGlicmFyeSJ9LHsic2lnbmFscy5saWIvdmVyc2lvbiI6IjAuMCJ9XSwidWkiOlt7InR5cGUiOiJ2Z3JvdXAiLCJsYWJlbCI6IkJyYXNzIEluc3RydW1lbnQiLCJpdGVtcyI6W3sidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6Ik9OL09GRiIsImFkZHJlc3MiOiIvQnJhc3NfSW5zdHJ1bWVudC9PTi9PRkYiLCJpbmRleCI6IjUyIiwiaW5pdCI6IjAiLCJtaW4iOiIwIiwibWF4IjoiMSIsInN0ZXAiOiIxIn0seyJ0eXBlIjoiaGdyb3VwIiwibGFiZWwiOiJJbnN0cnVtZW50IiwiaXRlbXMiOlt7InR5cGUiOiJ2Z3JvdXAiLCJsYWJlbCI6IkZyZXF1ZW5jaWVzIiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJGcmVxdWVuY3kgMSIsImFkZHJlc3MiOiIvQnJhc3NfSW5zdHJ1bWVudC9JbnN0cnVtZW50L0ZyZXF1ZW5jaWVzL0ZyZXF1ZW5jeV8xIiwiaW5kZXgiOiI0MCIsIm1ldGEiOlt7ImFjYyI6IjEgMSAtMTAgMCAxMCJ9LHsidW5pdCI6Ikh6In1dLCJpbml0IjoiMzcwIiwibWluIjoiMjgwIiwibWF4IjoiMzgwIiwic3RlcCI6IjAuMDEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJGcmVxdWVuY3kgMiIsImFkZHJlc3MiOiIvQnJhc3NfSW5zdHJ1bWVudC9JbnN0cnVtZW50L0ZyZXF1ZW5jaWVzL0ZyZXF1ZW5jeV8yIiwiaW5kZXgiOiIzMjk5MiIsIm1ldGEiOlt7ImFjYyI6IjAgMSAtMTAgMCAxMCJ9LHsidW5pdCI6Ikh6In1dLCJpbml0IjoiNDQwIiwibWluIjoiMzgwIiwibWF4IjoiNTUwIiwic3RlcCI6IjAuMDEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJGcmVxdWVuY3kgMyIsImFkZHJlc3MiOiIvQnJhc3NfSW5zdHJ1bWVudC9JbnN0cnVtZW50L0ZyZXF1ZW5jaWVzL0ZyZXF1ZW5jeV8zIiwiaW5kZXgiOiI2NTg0OCIsIm1ldGEiOlt7ImFjYyI6IjIgMCAtMTAgMCAxMiJ9LHsidW5pdCI6Ikh6In1dLCJpbml0IjoiNTg3LjMyIiwibWluIjoiNTUwIiwibWF4IjoiNzAwIiwic3RlcCI6IjAuMDEifV19LHsidHlwZSI6InZncm91cCIsImxhYmVsIjoiR2FpbiIsIml0ZW1zIjpbeyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiVm9sdW1lIDEiLCJhZGRyZXNzIjoiL0JyYXNzX0luc3RydW1lbnQvSW5zdHJ1bWVudC9HYWluL1ZvbHVtZV8xIiwiaW5kZXgiOiIzMiIsIm1ldGEiOlt7ImFjYyI6IjEgMCAtMTAgMCAxMiJ9LHsic3R5bGUiOiJrbm9iIn0seyJ0b29sdGlwIjoiR2FpbiAodmFsdWUgYmV0d2VlbiAwIGFuZCAxKSJ9XSwiaW5pdCI6IjAuNSIsIm1pbiI6IjAiLCJtYXgiOiIxIiwic3RlcCI6IjAuMDEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJWb2x1bWUgMiIsImFkZHJlc3MiOiIvQnJhc3NfSW5zdHJ1bWVudC9JbnN0cnVtZW50L0dhaW4vVm9sdW1lXzIiLCJpbmRleCI6IjMyOTg4IiwibWV0YSI6W3siYWNjIjoiMCAwIC0xMCAwIDEyIn0seyJzdHlsZSI6Imtub2IifSx7InRvb2x0aXAiOiJHYWluICh2YWx1ZSBiZXR3ZWVuIDAgYW5kIDEpIn1dLCJpbml0IjoiMC41IiwibWluIjoiMCIsIm1heCI6IjEiLCJzdGVwIjoiMC4wMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6IlZvbHVtZSAzIiwiYWRkcmVzcyI6Ii9CcmFzc19JbnN0cnVtZW50L0luc3RydW1lbnQvR2Fpbi9Wb2x1bWVfMyIsImluZGV4IjoiNjU4NDQiLCJtZXRhIjpbeyJhY2MiOiIyIDEgLTEwIDAgMTAifSx7InN0eWxlIjoia25vYiJ9LHsidG9vbHRpcCI6IkdhaW4gKHZhbHVlIGJldHdlZW4gMCBhbmQgMSkifV0sImluaXQiOiIwLjUiLCJtaW4iOiIwIiwibWF4IjoiMC41Iiwic3RlcCI6IjAuMDEifV19XX1dfV19MA=="; }
+function getBase64CodeSBrassMulti() { return "AGFzbQEAAAAB24CAgAARYAJ/fwBgBH9/f38AYAF9AX1gAX8Bf2ABfwF/YAJ/fwF9YAF/AX9gAn9/AGABfwBgAn9/AGACf38AYAF/AGACf38Bf2ACf38Bf2ACfX0BfWADf399AGABfQF9AqWAgIAAAwNlbnYFX2Nvc2YAAgNlbnYFX3Bvd2YADgNlbnYFX3RhbmYAEAOPgICAAA4AAQMEBQYHCAkKCwwNDwWHgICAAAEAhICAgAAHuoGAgAAMB2NvbXB1dGUABAxnZXROdW1JbnB1dHMABQ1nZXROdW1PdXRwdXRzAAYNZ2V0UGFyYW1WYWx1ZQAHDWdldFNhbXBsZVJhdGUACARpbml0AAkNaW5zdGFuY2VDbGVhcgAKEWluc3RhbmNlQ29uc3RhbnRzAAsMaW5zdGFuY2VJbml0AAwaaW5zdGFuY2VSZXNldFVzZXJJbnRlcmZhY2UADQ1zZXRQYXJhbVZhbHVlABAGbWVtb3J5AgAKrq+AgAAOgoCAgAAAC7+cgIAAAhR/OX1BACEEQwAAAAAhGEMAAAAAIRlDAAAAACEaQQAhBUEAIQZBACEHQwAAAAAhG0EAIQhDAAAAACEcQwAAAAAhHUMAAAAAIR5DAAAAACEfQQAhCUMAAAAAISBDAAAAACEhQQAhCkMAAAAAISJBACELQQAhDEEAIQ1DAAAAACEjQwAAAAAhJEMAAAAAISVBACEOQwAAAAAhJkMAAAAAISdDAAAAACEoQwAAAAAhKUMAAAAAISpBACEPQwAAAAAhK0MAAAAAISxDAAAAACEtQwAAAAAhLkMAAAAAIS9DAAAAACEwQwAAAAAhMUMAAAAAITJDAAAAACEzQwAAAAAhNEMAAAAAITVDAAAAACE2QwAAAAAhN0EAIRBDAAAAACE4QQAhEUEAIRJBACETQwAAAAAhOUMAAAAAITpDAAAAACE7QwAAAAAhPEMAAAAAIT1DAAAAACE+QwAAAAAhP0MAAAAAIUBDAAAAACFBQwAAAAAhQkMAAAAAIUNDAAAAACFEQQAhFEMAAAAAIUVBACEVQQAhFkEAIRdDAAAAACFGQwAAAAAhR0MAAAAAIUhDAAAAACFJQwAAAAAhSkMAAAAAIUtDAAAAACFMQwAAAAAhTUMAAAAAIU5DAAAAACFPQwAAAAAhUCADQQBqKAIAIQRDmplZP0EAKgIglCEYQ28SgzpBACoCKJQhGUEAKgI0IRogGkMAAAAAXiEFIAVBAEohBiAaQwAAAABbQQBKIQdBACoCUCAaQwAAgL+SlCEbIBpDAAAAAF8hCEOamVk/QQAqAtyBApQhHENvEoM6QQAqAuCBApQhHUOamVk/QQAqArSCBJQhHkNvEoM6QQAqAriCBJQhH0EAIQkDQAJAQQBBATYCACAZQ3e+fz9BACoCMJSSISBBACAgQwAAAAAgILxBgICA/AdxGzgCLEP6fgo/QQAqAiRBACoCLJVDAABAQJKUISEgIaghCiAhjiEiIApBAWohCyAKQQBBACAKSBshDCALQQBBACALSBshDUHIAUEAKALEAUGBICAMQYEgIAxIG0EBamtB/z9xQQJ0aioCACAiQwAAgD8gIZOSlCAhICKTQcgBQQAoAsQBQYEgIA1BgSAgDUgbQQFqa0H/P3FBAnRqKgIAlJIhI0MAAAAAQQAqAiRBACoCPEMAAIA/kpYgBhshJEEAICRDAAAAACAkvEGAgID8B3EbOAI4QwAAAABBACoCQEEAKgJIQwAAgD+SliAHGyElQQAgJUMAAAAAICW8QYCAgPwHcRs4AkRBACoCREEAKgJMXSEOIAWyQwAAAABBACoCVEEAKgJElEMAAIA/IA4bQQAqAkRDAAAAAF0bIBtBACoCREEAKgJMk5RDAACAP5IgGkEAKgJEQQAqAkBdGyAOG5RBACoCXCAFGyEmQQAgJkMAAAAAICa8QYCAgPwHcRs4AlhBACoCWEEAKgJYQQAqAmBBACoCOEMAAAAAQQAqAliTlJSSQwAAAABBACoCOEEAKgIkXRtBACoCOEMAAAAAXRshJ0EAKgJsQQAqAmRDAAAAAEEAKgJ8k5SSIShBACAoQwAAAAAgKLxBgICA/AdxGzgCaEEAKgJ0QQAqAmRBACoCaJSSQQFBACgCBGuykiEpQQAgKUMAAAAAICm8QYCAgPwHcRs4AnBBACoCcCEqQQAgKkMAAAAAICq8QYCAgPwHcRs4AnhBACAFQQAoAoQBQQAqAqABQwAAgD9gcnE2AoABQQAgBUEAKAKMAUEBamw2AogBIAhBACoCoAFDAAAAAF5xIQ8gD0EARkEAKgKgAUO9N4Y1YHKyQQAqApABQQAoAoQBQQBGIAVxQQAqAqABQwAAgD9dcUEAKAKMAbJBACoClAFecUEBQQAoAowBskEAKgKUAV1rbLKUQQAqAqABQwAAgD9BACoCmAEgD7KUk5SSlCErQQAgK0MAAAAAICu8QYCAgPwHcRs4ApwBQ83MTD1BACoCeEEAKgKcAZSUISxDpHC9PiAnlCAskiEtQ4/C9TxDmpmZPiAtlCAYICOUk5RBACoCrAFDAAAAAENkO/8/QQAqAqQBQQAqAiyUEACUk5RDYHd+P0EAKgKwAZSSkyEuQQAgLkMAAAAAIC68QYCAgPwHcRs4AqgBQQAqAqgBQwAAAEAQASEvIC9DAACAP16yIC8gL0MAAIA/X7KUkiEwIBggI0MAAIA/IDCTlJQhMUOamZk+IC0gMJSUITJBACAyIDGSOAK0ASAxQ1K4fj9BACoCwAGUIDKSkkEAKgK4AZMhM0EAIDNDAAAAACAzvEGAgID8B3EbOAK8AUEAKgK8ASE0QcgBQQAoAsQBQf8/cUECdGogNEMAAAAAIDS8QYCAgPwHcRs4AgBBACoCGEEAKgLMgQKUQQAqAhxByAFBACgCxAFBAGtB/z9xQQJ0aioCAEHIAUEAKALEAUEBa0H/P3FBAnRqKgIAkpSSITVBACA1QwAAAAAgNbxBgICA/AdxGzgCyIECIB1Dd75/P0EAKgLogQKUkiE2QQAgNkMAAAAAIDa8QYCAgPwHcRs4AuSBAkP6fgo/QQAqAiRBACoC5IEClUMAAEBAkpQhNyA3qCEQIDeOITggEEEBaiERIBBBAEEAIBBIGyESIBFBAEEAIBFIGyETQYiCAkEAKALEAUGBICASQYEgIBJIG0EBamtB/z9xQQJ0aioCACA4QwAAgD8gN5OSlCA3IDiTQYiCAkEAKALEAUGBICATQYEgIBNIG0EBamtB/z9xQQJ0aioCAJSSITkgLEN7FC4/ICeUkiE6Q4/C9TxDmpmZPiA6lCAcIDmUk5RBACoC8IECQwAAAABDZDv/P0EAKgKkAUEAKgLkgQKUEACUk5RDYHd+P0EAKgL0gQKUkpMhO0EAIDtDAAAAACA7vEGAgID8B3EbOALsgQJBACoC7IECQwAAAEAQASE8IDxDAACAP16yIDwgPEMAAIA/X7KUkiE9IBwgOUMAAIA/ID2TlJQhPkOamZk+IDogPZSUIT9BACA/ID6SOAL4gQIgPkNSuH4/QQAqAoSCApQgP5KSQQAqAvyBApMhQEEAIEBDAAAAACBAvEGAgID8B3EbOAKAggJBACoCgIICIUFBiIICQQAoAsQBQf8/cUECdGogQUMAAAAAIEG8QYCAgPwHcRs4AgBBiIICQQAoAsQBQQBrQf8/cUECdGoqAgBBACoC2IECQQAqAoiCBEEAKgKUggSUQQAqAoyCBEEAKgKYggSUkpSTIUJBACBCQwAAAAAgQrxBgICA/AdxGzgCkIIEIB9Dd75/P0EAKgLAggSUkiFDQQAgQ0MAAAAAIEO8QYCAgPwHcRs4AryCBEP6fgo/QQAqAiRBACoCvIIElUMAAEBAkpQhRCBEqCEUIESOIUUgFEEBaiEVIBRBAEEAIBRIGyEWIBVBAEEAIBVIGyEXQeCCBEEAKALEAUGBICAWQYEgIBZIG0EBamtB/z9xQQJ0aioCACBFQwAAgD8gRJOSlCBEIEWTQeCCBEEAKALEAUGBICAXQYEgIBdIG0EBamtB/z9xQQJ0aioCAJSSIUYgJyAskiFHQ4/C9TxDmpmZPiBHlCAeIEaUk5RBACoCyIIEQwAAAABDZDv/P0EAKgKkAUEAKgK8ggSUEACUk5RDYHd+P0EAKgLMggSUkpMhSEEAIEhDAAAAACBIvEGAgID8B3EbOALEggRBACoCxIIEQwAAAEAQASFJIElDAACAP16yIEkgSUMAAIA/X7KUkiFKIB4gRkMAAIA/IEqTlJQhS0OamZk+IEcgSpSUIUxBACBMIEuSOALQggQgS0NSuH4/QQAqAtyCBJQgTJKSQQAqAtSCBJMhTUEAIE1DAAAAACBNvEGAgID8B3EbOALYggRBACoC2IIEIU5B4IIEQQAoAsQBQf8/cUECdGogTkMAAAAAIE68QYCAgPwHcRs4AgBBACoCrIIEQQAqAuSCBpRBACoCsIIEQeCCBEEAKALEAUEAa0H/P3FBAnRqKgIAQeCCBEEAKALEAUEBa0H/P3FBAnRqKgIAkpSSIU9BACBPQwAAAAAgT7xBgICA/AdxGzgC4IIGQQAqAuCCBkEAKgKkggRBACoC6IIGQQAqAvSCBpRBACoC7IIGQQAqAviCBpSSlJMhUEEAIFBDAAAAACBQvEGAgID8B3EbOALwggYgBCAJakEAKgLIgQJBACoC2IECQQAqApiCBEEAKgKQggRDAAAAQEEAKgKUggSUkpKUkkEAKgKkggRBACoC+IIGQQAqAvCCBkMAAABAQQAqAvSCBpSSkpSSOAIAQQBBACgCADYCBEEAQQAqAiw4AjBBAEEAKgI4OAI8QQBBACoCRDgCSEEAQQAqAlg4AlxBAEEAKgJoOAJsQQBBACoCcDgCdEEAQQAqAng4AnxBAEEAKAKAATYChAFBAEEAKAKIATYCjAFBAEEAKgKcATgCoAFBAEEAKgKsATgCsAFBAEEAKgKoATgCrAFBAEEAKgK0ATgCuAFBAEEAKgK8ATgCwAFBAEEAKALEAUEBajYCxAFBAEEAKgLIgQI4AsyBAkEAQQAqAuSBAjgC6IECQQBBACoC8IECOAL0gQJBAEEAKgLsgQI4AvCBAkEAQQAqAviBAjgC/IECQQBBACoCgIICOAKEggJBAEEAKgKUggQ4ApiCBEEAQQAqApCCBDgClIIEQQBBACoCvIIEOALAggRBAEEAKgLIggQ4AsyCBEEAQQAqAsSCBDgCyIIEQQBBACoC0IIEOALUggRBAEEAKgLYggQ4AtyCBEEAQQAqAuCCBjgC5IIGQQBBACoC9IIGOAL4ggZBAEEAKgLwggY4AvSCBiAJQQRqIQkgCUEEIAFsSARADAIMAQsLCwuFgICAAABBAA8LhYCAgAAAQQEPC4uAgIAAACAAIAFqKgIADwuIgICAAABBACgCCA8LjoCAgAAAIAAgARADIAAgARAMC76LgIAAAR1/QQAhAUEAIQJBACEDQQAhBEEAIQVBACEGQQAhB0EAIQhBACEJQQAhCkEAIQtBACEMQQAhDUEAIQ5BACEPQQAhEEEAIRFBACESQQAhE0EAIRRBACEVQQAhFkEAIRdBACEYQQAhGUEAIRpBACEbQQAhHEEAIR1BACEBA0ACQEEAIAFBAnRqQQA2AgAgAUEBaiEBIAFBAkgEQAwCDAELCwtBACECA0ACQEEsIAJBAnRqQwAAAAA4AgAgAkEBaiECIAJBAkgEQAwCDAELCwtBACEDA0ACQEE4IANBAnRqQwAAAAA4AgAgA0EBaiEDIANBAkgEQAwCDAELCwtBACEEA0ACQEHEACAEQQJ0akMAAAAAOAIAIARBAWohBCAEQQJIBEAMAgwBCwsLQQAhBQNAAkBB2AAgBUECdGpDAAAAADgCACAFQQFqIQUgBUECSARADAIMAQsLC0EAIQYDQAJAQegAIAZBAnRqQwAAAAA4AgAgBkEBaiEGIAZBAkgEQAwCDAELCwtBACEHA0ACQEHwACAHQQJ0akMAAAAAOAIAIAdBAWohByAHQQJIBEAMAgwBCwsLQQAhCANAAkBB+AAgCEECdGpDAAAAADgCACAIQQFqIQggCEECSARADAIMAQsLC0EAIQkDQAJAQYABIAlBAnRqQQA2AgAgCUEBaiEJIAlBAkgEQAwCDAELCwtBACEKA0ACQEGIASAKQQJ0akEANgIAIApBAWohCiAKQQJIBEAMAgwBCwsLQQAhCwNAAkBBnAEgC0ECdGpDAAAAADgCACALQQFqIQsgC0ECSARADAIMAQsLC0EAIQwDQAJAQagBIAxBAnRqQwAAAAA4AgAgDEEBaiEMIAxBA0gEQAwCDAELCwtBACENA0ACQEG0ASANQQJ0akMAAAAAOAIAIA1BAWohDSANQQJIBEAMAgwBCwsLQQAhDgNAAkBBvAEgDkECdGpDAAAAADgCACAOQQFqIQ4gDkECSARADAIMAQsLC0EAQQA2AsQBQQAhDwNAAkBByAEgD0ECdGpDAAAAADgCACAPQQFqIQ8gD0GAwABIBEAMAgwBCwsLQQAhEANAAkBByIECIBBBAnRqQwAAAAA4AgAgEEEBaiEQIBBBAkgEQAwCDAELCwtBACERA0ACQEHkgQIgEUECdGpDAAAAADgCACARQQFqIREgEUECSARADAIMAQsLC0EAIRIDQAJAQeyBAiASQQJ0akMAAAAAOAIAIBJBAWohEiASQQNIBEAMAgwBCwsLQQAhEwNAAkBB+IECIBNBAnRqQwAAAAA4AgAgE0EBaiETIBNBAkgEQAwCDAELCwtBACEUA0ACQEGAggIgFEECdGpDAAAAADgCACAUQQFqIRQgFEECSARADAIMAQsLC0EAIRUDQAJAQYiCAiAVQQJ0akMAAAAAOAIAIBVBAWohFSAVQYDAAEgEQAwCDAELCwtBACEWA0ACQEGQggQgFkECdGpDAAAAADgCACAWQQFqIRYgFkEDSARADAIMAQsLC0EAIRcDQAJAQbyCBCAXQQJ0akMAAAAAOAIAIBdBAWohFyAXQQJIBEAMAgwBCwsLQQAhGANAAkBBxIIEIBhBAnRqQwAAAAA4AgAgGEEBaiEYIBhBA0gEQAwCDAELCwtBACEZA0ACQEHQggQgGUECdGpDAAAAADgCACAZQQFqIRkgGUECSARADAIMAQsLC0EAIRoDQAJAQdiCBCAaQQJ0akMAAAAAOAIAIBpBAWohGiAaQQJIBEAMAgwBCwsLQQAhGwNAAkBB4IIEIBtBAnRqQwAAAAA4AgAgG0EBaiEbIBtBgMAASARADAIMAQsLC0EAIRwDQAJAQeCCBiAcQQJ0akMAAAAAOAIAIBxBAWohHCAcQQJIBEAMAgwBCwsLQQAhHQNAAkBB8IIGIB1BAnRqQwAAAAA4AgAgHUEBaiEdIB1BA0gEQAwCDAELCwsLt4WAgAAAQQAgATYCCEEAQwCAO0hDAACAP0EAKAIIspeWOAIMQQBDAACAP0MdQ5NFQQAqAgyVEAKVOAIQQQBBACoCEEMAAIA/kjgCFEEAQwAAAABDAACAP0EAKgIQk0EAKgIUlZM4AhhBAEMAAIA/QQAqAhSVOAIcQQBDAAAAQEEAKgIMlDgCJEEAQ1g5NDxBACoCDJQ4AkBBAEMK1yM8QQAqAgyUOAJMQQBDAAB6REEAKgIMlTgCUEEAQwAAyEJBACoCDJU4AlRBAEMAAAA/QQAqAgyVOAJgQQBD5MsWQkEAKgIMlTgCZEEAQwAAAEBBACoCDJU4ApABQQBDzcxMPUEAKgIMlDgClAFBAEMAAIA/QwAAgD9DAFDDR0MAACBBQQAqAgyVEAGVkzgCmAFBAENCgFpBQQAqAgyVOAKkAUEAQx1DE0ZBACoCDJUQAjgC0IECQQBDAACAP0EAKgLQgQKVOALUgQJBAEMAAIA/QQAqAtSBAkPzBLU/kkEAKgLQgQKVQwAAgD+SlTgC2IECQQBDAAAAQEMAAIA/QwAAgD9BACoC0IECQwAAAEAQAZWTlDgCiIIEQQBBACoC1IECQ/MEtb+SQQAqAtCBApVDAACAP5I4AoyCBEEAQ6vkXEZBACoCDJUQAjgCnIIEQQBDAACAP0EAKgKcggSVOAKgggRBAEMAAIA/QQAqAqCCBEMAAIA/kkEAKgKcggSVQwAAgD+SlTgCpIIEQQBBACoCoIIEQwAAgD+SOAKoggRBAEMAAAAAQwAAgD9BACoCoIIEk0EAKgKoggSVkzgCrIIEQQBDAACAP0EAKgKoggSVOAKwggRBAEMAAABAQwAAgD9DAACAP0EAKgKcggRDAAAAQBABlZOUOALoggZBAEEAKgKgggRDAACAv5JBACoCnIIElUMAAIA/kjgC7IIGC5CAgIAAACAAIAEQCyAAEA0gABAKC9CAgIAAAEEAQwAAAD84AiBBAEMAALlDOAIoQQBDAAAAADgCNEEAQwAAAD84AtyBAkEAQwAA3EM4AuCBAkEAQwAAAD84ArSCBEEAQ3vUEkQ4AriCBAuNgICAAAAgASAAIAAgAUgbDwuNgICAAAAgACABIAAgAUgbDwuMgICAAAAgACABaiACOAIACwvNl4CAAAEAQQALxhd7Im5hbWUiOiJNdWx0aXBsZSBCcmFzcyIsImZpbGVuYW1lIjoiU0JyYXNzTXVsdGkiLCJ2ZXJzaW9uIjoiMi41LjMyIiwib3B0aW9ucyI6Indhc20taWIsIC1zY2FsIC1mdHogMiIsInNpemUiOiI5ODY4NCIsImlucHV0cyI6IjAiLCJvdXRwdXRzIjoiMSIsIm1ldGEiOlt7ImF1dGhvciI6IkVSIn0seyJiYXNpY3MubGliL25hbWUiOiJGYXVzdCBCYXNpYyBFbGVtZW50IExpYnJhcnkifSx7ImJhc2ljcy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsiZGVsYXlzLmxpYi9uYW1lIjoiRmF1c3QgRGVsYXkgTGlicmFyeSJ9LHsiZGVsYXlzLmxpYi92ZXJzaW9uIjoiMC4wIn0seyJkZXNjcmlwdGlvbiI6IldhdmVHdWlkZSBCcmFzcyBpbnN0cnVtZW50IGZyb20gU1RLIn0seyJlbnZlbG9wZXMubGliL2F1dGhvciI6IkdSQU1FIn0seyJlbnZlbG9wZXMubGliL2NvcHlyaWdodCI6IkdSQU1FIn0seyJlbnZlbG9wZXMubGliL2xpY2Vuc2UiOiJMR1BMIHdpdGggZXhjZXB0aW9uIn0seyJlbnZlbG9wZXMubGliL25hbWUiOiJGYXVzdCBFbnZlbG9wZSBMaWJyYXJ5In0seyJlbnZlbG9wZXMubGliL3ZlcnNpb24iOiIwLjAifSx7ImZpbGVuYW1lIjoiU0JyYXNzTXVsdGkifSx7ImZpbHRlcnMubGliL25hbWUiOiJGYXVzdCBGaWx0ZXJzIExpYnJhcnkifSx7ImZpbHRlcnMubGliL3ZlcnNpb24iOiIwLjAifSx7Imluc3RydW1lbnRzLmxpYi9hdXRob3IiOiJSb21haW4gTWljaG9uIChybWljaG9uQGNjcm1hLnN0YW5mb3JkLmVkdSkifSx7Imluc3RydW1lbnRzLmxpYi9jb3B5cmlnaHQiOiJSb21haW4gTWljaG9uIn0seyJpbnN0cnVtZW50cy5saWIvbGljZW5jZSI6IlNUSy00LjMifSx7Imluc3RydW1lbnRzLmxpYi9uYW1lIjoiRmF1c3QtU1RLIFRvb2xzIExpYnJhcnkifSx7Imluc3RydW1lbnRzLmxpYi92ZXJzaW9uIjoiMS4wIn0seyJtYXRocy5saWIvYXV0aG9yIjoiR1JBTUUifSx7Im1hdGhzLmxpYi9jb3B5cmlnaHQiOiJHUkFNRSJ9LHsibWF0aHMubGliL2xpY2Vuc2UiOiJMR1BMIHdpdGggZXhjZXB0aW9uIn0seyJtYXRocy5saWIvbmFtZSI6IkZhdXN0IE1hdGggTGlicmFyeSJ9LHsibWF0aHMubGliL3ZlcnNpb24iOiIyLjEifSx7Im5hbWUiOiJNdWx0aXBsZSBCcmFzcyJ9LHsib3NjaWxsYXRvcnMubGliL25hbWUiOiJGYXVzdCBPc2NpbGxhdG9yIExpYnJhcnkifSx7Im9zY2lsbGF0b3JzLmxpYi92ZXJzaW9uIjoiMC4wIn0seyJzaWduYWxzLmxpYi9uYW1lIjoiRmF1c3QgU2lnbmFsIFJvdXRpbmcgTGlicmFyeSJ9LHsic2lnbmFscy5saWIvdmVyc2lvbiI6IjAuMCJ9XSwidWkiOlt7InR5cGUiOiJ2Z3JvdXAiLCJsYWJlbCI6IkJyYXNzIEluc3RydW1lbnQiLCJpdGVtcyI6W3sidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6Ik9OL09GRiIsImFkZHJlc3MiOiIvQnJhc3NfSW5zdHJ1bWVudC9PTi9PRkYiLCJpbmRleCI6IjUyIiwiaW5pdCI6IjAiLCJtaW4iOiIwIiwibWF4IjoiMSIsInN0ZXAiOiIxIn0seyJ0eXBlIjoiaGdyb3VwIiwibGFiZWwiOiJJbnN0cnVtZW50IiwiaXRlbXMiOlt7InR5cGUiOiJ2Z3JvdXAiLCJsYWJlbCI6IkZyZXF1ZW5jaWVzIiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJGcmVxdWVuY3kgMSIsImFkZHJlc3MiOiIvQnJhc3NfSW5zdHJ1bWVudC9JbnN0cnVtZW50L0ZyZXF1ZW5jaWVzL0ZyZXF1ZW5jeV8xIiwiaW5kZXgiOiI0MCIsIm1ldGEiOlt7ImFjYyI6IjEgMSAtMTAgMCAxMCJ9LHsidW5pdCI6Ikh6In1dLCJpbml0IjoiMzcwIiwibWluIjoiMjgwIiwibWF4IjoiMzgwIiwic3RlcCI6IjAuMDEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJGcmVxdWVuY3kgMiIsImFkZHJlc3MiOiIvQnJhc3NfSW5zdHJ1bWVudC9JbnN0cnVtZW50L0ZyZXF1ZW5jaWVzL0ZyZXF1ZW5jeV8yIiwiaW5kZXgiOiIzMjk5MiIsIm1ldGEiOlt7ImFjYyI6IjAgMSAtMTAgMCAxMCJ9LHsidW5pdCI6Ikh6In1dLCJpbml0IjoiNDQwIiwibWluIjoiMzgwIiwibWF4IjoiNTUwIiwic3RlcCI6IjAuMDEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJGcmVxdWVuY3kgMyIsImFkZHJlc3MiOiIvQnJhc3NfSW5zdHJ1bWVudC9JbnN0cnVtZW50L0ZyZXF1ZW5jaWVzL0ZyZXF1ZW5jeV8zIiwiaW5kZXgiOiI2NTg0OCIsIm1ldGEiOlt7ImFjYyI6IjIgMCAtMTAgMCAxMiJ9LHsidW5pdCI6Ikh6In1dLCJpbml0IjoiNTg3LjMyIiwibWluIjoiNTUwIiwibWF4IjoiNzAwIiwic3RlcCI6IjAuMDEifV19LHsidHlwZSI6InZncm91cCIsImxhYmVsIjoiR2FpbiIsIml0ZW1zIjpbeyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiVm9sdW1lIDEiLCJhZGRyZXNzIjoiL0JyYXNzX0luc3RydW1lbnQvSW5zdHJ1bWVudC9HYWluL1ZvbHVtZV8xIiwiaW5kZXgiOiIzMiIsIm1ldGEiOlt7ImFjYyI6IjEgMCAtMTAgMCAxMiJ9LHsic3R5bGUiOiJrbm9iIn0seyJ0b29sdGlwIjoiR2FpbiAodmFsdWUgYmV0d2VlbiAwIGFuZCAxKSJ9XSwiaW5pdCI6IjAuNSIsIm1pbiI6IjAiLCJtYXgiOiIxIiwic3RlcCI6IjAuMDEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJWb2x1bWUgMiIsImFkZHJlc3MiOiIvQnJhc3NfSW5zdHJ1bWVudC9JbnN0cnVtZW50L0dhaW4vVm9sdW1lXzIiLCJpbmRleCI6IjMyOTg4IiwibWV0YSI6W3siYWNjIjoiMCAwIC0xMCAwIDEyIn0seyJzdHlsZSI6Imtub2IifSx7InRvb2x0aXAiOiJHYWluICh2YWx1ZSBiZXR3ZWVuIDAgYW5kIDEpIn1dLCJpbml0IjoiMC41IiwibWluIjoiMCIsIm1heCI6IjEiLCJzdGVwIjoiMC4wMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6IlZvbHVtZSAzIiwiYWRkcmVzcyI6Ii9CcmFzc19JbnN0cnVtZW50L0luc3RydW1lbnQvR2Fpbi9Wb2x1bWVfMyIsImluZGV4IjoiNjU4NDQiLCJtZXRhIjpbeyJhY2MiOiIyIDEgLTEwIDAgMTAifSx7InN0eWxlIjoia25vYiJ9LHsidG9vbHRpcCI6IkdhaW4gKHZhbHVlIGJldHdlZW4gMCBhbmQgMSkifV0sImluaXQiOiIwLjUiLCJtaW4iOiIwIiwibWF4IjoiMC41Iiwic3RlcCI6IjAuMDEifV19XX1dfV19MA=="; }
 
 /*
- faust2wasm
- Additional code: GRAME 2017-2018
+ faust2wasm: GRAME 2017-2018
 */
+ 
  
 'use strict';
 
@@ -5503,11 +5501,31 @@ class SBrassMultiNode extends AudioWorkletNode {
         this.port.onmessage = this.handleMessage.bind(this);
     }
     
+    // To be called by the message port with messages coming from the processor
+    handleMessage(event)
+    {
+        var msg = event.data;
+        if (this.output_handler) {
+            this.output_handler(msg.path, msg.value);
+        }
+    }
+    
+    // Public API
+    
+    /**
+     *  Returns a full JSON description of the SBrassMulti.
+     */
     getJSON()
     {
         return getJSONSBrassMulti();
     }
     
+    /**
+     *  Set the control value at a given path.
+     *
+     * @param path - a path to the control
+     * @param val - the value to be set
+     */
     setParamValue(path, val)
     {
         //this.port.postMessage({ type:"param", key:path, value:val });
@@ -5516,6 +5534,11 @@ class SBrassMultiNode extends AudioWorkletNode {
         this.parameters.get(path).setValueAtTime(val, 0);
     }
     
+    /**
+     *  Get the control value at a given path.
+     *
+     * @return the current control value
+     */
     getParamValue(path)
     {
         return this.parameters.get(path).value;
@@ -5541,7 +5564,6 @@ class SBrassMultiNode extends AudioWorkletNode {
         return this.output_handler;
     }
     
-    // TO REMOVE
     getNumInputs()
     {
         return parseInt(this.json_object.inputs);
@@ -5552,13 +5574,16 @@ class SBrassMultiNode extends AudioWorkletNode {
         return parseInt(this.json_object.outputs);
     }
     
+    /**
+     * Returns an array of all input paths (to be used with setParamValue/getParamValue)
+     */
     getParams()
     {
         return this.inputs_items;
     }
     
     /**
-     * Controller
+     * Control change
      *
      * @param channel - the MIDI channel (0..15, not used for now)
      * @param ctrl - the MIDI controller number (0..127)
@@ -5580,35 +5605,71 @@ class SBrassMultiNode extends AudioWorkletNode {
         this.port.postMessage({ type: "pitchWheel", data: [channel, wheel] });
     }
     
+    /**
+     * Generic MIDI message handler.
+     */
     midiMessage(data)
     {
         this.port.postMessage({ type:"midi", data:data });
     }
     
-    handleMessage(event) 
-    {
-        var msg = event.data;
-        if (this.output_handler) {
-            this.output_handler(msg.path, msg.value);
-        }
-    }
-    
 }
 
-// Faust context
-var faust = faust || {};
+// Factory class
 
-faust.createSBrassMulti = function(context, callback)
-{
-    // Resume audio context each time...
-    context.resume();
+class SBrassMulti {
     
-    // The main global scope
-    context.audioWorklet.addModule("SBrassMulti-processor.js")
-    .then(function () {
-         callback(new SBrassMultiNode(context, {}));
-    })
-    .catch(function(error) { console.log(error); console.log("Faust SBrassMulti cannot be loaded or compiled"); });
+    /**
+     * Factory constructor.
+     *
+     * @param context - the audio context
+     * @param baseUrl - the baseUrl of the plugin folder
+     */
+    constructor(context, baseUrl)
+    {
+    	// Resume audio context each time...
+    	context.resume();
+    	
+        this.context = context;
+        this.baseUrl = baseUrl;
+    }
+    
+    /**
+     * Load additionnal resources to prepare the custom AudioWorkletNode. Returns a promise to be used with the created node.
+     */
+    load()
+    {
+    	return new Promise((resolve, reject) => {
+        		this.context.audioWorklet.addModule(this.baseUrl + "SBrassMulti-processor.js").then(() => {
+        		this.node = new SBrassMultiNode(this.context, {});
+        		return (this.node);
+        	}).then((node) => {
+                resolve(node);
+            }).catch((e) => {
+                reject(e);
+            });
+        });
+    }
+    
+    loadGui() 
+    {
+        return new Promise((resolve, reject) => {
+            try {
+            	var link = document.createElement('link');
+            	link.rel = 'import';
+            	link.id = 'urlPlugin';
+            	link.href = this.baseUrl + "main.html";
+            	document.head.appendChild(link);
+            	var element = document.createElement("faust-SBrassMulti");
+            	element._plug = this.node;
+            	resolve(element);
+        	} catch (e) {
+            	console.log(e);
+            	reject(e);
+        	}
+    	});
+    };
+    
 }
 
 </script>
@@ -5624,11 +5685,9 @@ faust.createSBrassMulti = function(context, callback)
 
 var isWasm = (typeof(WebAssembly) !== "undefined");
 var isWebKitAudio = (typeof (webkitAudioContext) !== "undefined");
-var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
-var audio_input = null;
-var SBrassMulti = null;
-var faustsvg = null;
-var output_handler = null;
+var context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
+var factory = null;
+var node = null;
 
 function workletAvailable()
 {
@@ -5641,15 +5700,15 @@ function workletAvailable()
 
 function pitchWheel(channel, wheel)
 {
-    if (SBrassMulti) {
-        SBrassMulti.pitchWheel(channel, wheel);
+    if (node) {
+        node.pitchWheel(channel, wheel);
     }
 }
 
 function ctrlChange(channel, ctrl, value)
 {
-    if (SBrassMulti) {
-        SBrassMulti.ctrlChange(channel, ctrl, value);
+    if (node) {
+        node.ctrlChange(channel, ctrl, value);
     }
 }
 
@@ -5714,7 +5773,6 @@ function activateAudioInput()
         navigator.getUserMedia({audio: { echoCancellation: false }}, getDevice, function(e) {
                                alert('Error getting audio input');
                                console.log(e);
-                               audio_input = null;
                                });
     } else {
         alert('Audio input API not available');
@@ -5723,20 +5781,17 @@ function activateAudioInput()
 
 function getDevice(device)
 {
-    // Create an AudioNode from the stream.
-    audio_input = audio_context.createMediaStreamSource(device);
-
-    // Connect it to the destination.
-    audio_input.connect(SBrassMulti);
+    // Connect the input to the destination.
+    context.createMediaStreamSource(device).connect(node);
 }
 
 // Save/Load functions using local storage
 function saveSBrassMulti()
 {
     if (typeof(Storage) !== "undefined") {
-        var params = SBrassMulti.getParams();
+        var params = node.getParams();
         for (var i = 0; i < params.length; i++) {
-            localStorage.setItem(params[i], SBrassMulti.getParamValue(params[i]));
+            localStorage.setItem(params[i], node.getParamValue(params[i]));
         }
     }
 }
@@ -5744,49 +5799,43 @@ function saveSBrassMulti()
 function loadSBrassMulti()
 {
     if (typeof(Storage) !== "undefined") {
-        var params = SBrassMulti.getParams();
+        var params = node.getParams();
         for (var i = 0; i < params.length; i++) {
             if (localStorage.getItem(params[i])) {
                 // Restore SBrassMulti state
-                SBrassMulti.setParamValue(params[i], Number(localStorage.getItem(params[i])));
+                node.setParamValue(params[i], Number(localStorage.getItem(params[i])));
                 // Restore GUI state
-                output_handler(params[i], Number(localStorage.getItem(params[i])));
+                node.getOutputParamHandler()(params[i], Number(localStorage.getItem(params[i])));
             }
         }
     }
 }
 
-function startSBrassMultiAux(dsp)
+function startSBrassMultiAux(aw_node)
 {
-    if (!dsp) {
-        alert(faust.getErrorMessage());
-        return;
-    }
+    node = aw_node;
 
-    SBrassMulti = dsp;
-
-    if (SBrassMulti.getNumInputs() > 0) {
+    if (node.getNumInputs() > 0) {
         activateAudioInput();
     }
     
     console.log("startSBrassMultiAux");
-    console.log(SBrassMulti.parameters);
+    console.log(node.parameters);
     
-    SBrassMulti.connect(audio_context.destination);
-    console.log(SBrassMulti.getJSON());
+    node.connect(context.destination);
+    console.log(node.getJSON());
 
     // TODO: emcc
-    //SBrassMulti.metadata({ declare: function(key, value) { console.log("key = " + key + " value = " + value); }});
-    console.log(SBrassMulti.getParams());
+    //node.metadata({ declare: function(key, value) { console.log("key = " + key + " value = " + value); }});
+    console.log(node.getParams());
 
     // No polling from the server needed, so use an empty loop
     _f4u$t.main_loop = function() {}
 
-    faustsvg = $('<div />');
+    var faustsvg = $('<div />');
     $('body').append(faustsvg);
     
-    output_handler = _f4u$t.main(SBrassMulti.getJSON(), faustsvg, function(path, val) { SBrassMulti.setParamValue(path, val); });
-    SBrassMulti.setOutputParamHandler(output_handler);
+    node.setOutputParamHandler(_f4u$t.main(node.getJSON(), faustsvg, function(path, val) { node.setParamValue(path, val); }));
 
     // Load SBrassMulti state from local storage
     loadSBrassMulti();
@@ -5800,7 +5849,10 @@ function startSBrassMulti()
 function startNewSBrassMulti()
 {
      if (isWasm && workletAvailable()) {
-        faust.createSBrassMulti(audio_context, startSBrassMultiAux);
+        factory = new SBrassMulti(context, "");
+        factory.load()
+        .then((aw_node) => startSBrassMultiAux(aw_node))
+        .catch((error) => { console.log(error); console.log("Faust mydsp cannot be loaded or compiled"); });
     }  else {
         alert("WebAssembly or AudioWorklet is not supported in this browser !");
     }
@@ -5810,12 +5862,12 @@ function startNewSBrassMulti()
 window.addEventListener('touchstart', function() {
 
                         // create empty buffer
-                        var buffer = audio_context.createBuffer(1, 1, 22050);
-                        var source = audio_context.createBufferSource();
+                        var buffer = context.createBuffer(1, 1, 22050);
+                        var source = context.createBufferSource();
                         source.buffer = buffer;
 
                         // connect to output (your speakers)
-                        source.connect(audio_context.destination);
+                        source.connect(context.destination);
 
                         // play the file
                         source.start();
@@ -5833,7 +5885,7 @@ if (typeof (Module) !== "undefined") {
 }
 
 // Save SBrassMulti state to local storage
-setInterval(function() { if (SBrassMulti) saveSBrassMulti(); }, 1000);
+setInterval(function() { if (node) saveSBrassMulti(); }, 1000);
 
 </script>
 </body>

@@ -1,18 +1,16 @@
 
 /*
-Code generated with Faust version 2.5.24
+Code generated with Faust version 2.5.32
 Compilation options: wasm-eb, -scal -ftz 2
 */
 
 function getJSONorgan() {
-	return "{\"name\":\"organ\",\"filename\":\"organ\",\"version\":\"2.5.24\",\"options\":\"wasm-eb, -scal -ftz 2\",\"size\":\"68\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"filename\":\"organ\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"organ\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"organ\",\"items\":[{\"type\":\"hslider\",\"label\":\"freq\",\"address\":\"/organ/freq\",\"index\":\"32\",\"meta\":[{\"unit\":\"Hz\"}],\"init\":\"440\",\"min\":\"20\",\"max\":\"20000\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"gain\",\"address\":\"/organ/gain\",\"index\":\"8\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"10\",\"step\":\"0.01\"},{\"type\":\"button\",\"label\":\"gate\",\"address\":\"/organ/gate\",\"index\":\"4\"},{\"type\":\"hslider\",\"label\":\"volume\",\"address\":\"/organ/volume\",\"index\":\"0\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"organ\",\"filename\":\"organ\",\"version\":\"2.5.32\",\"options\":\"wasm-eb, -scal -ftz 2\",\"size\":\"68\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"filename\":\"organ\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"organ\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"organ\",\"items\":[{\"type\":\"hslider\",\"label\":\"freq\",\"address\":\"/organ/freq\",\"index\":\"16\",\"meta\":[{\"unit\":\"Hz\"}],\"init\":\"440\",\"min\":\"20\",\"max\":\"20000\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"gain\",\"address\":\"/organ/gain\",\"index\":\"56\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"10\",\"step\":\"0.01\"},{\"type\":\"button\",\"label\":\"gate\",\"address\":\"/organ/gate\",\"index\":\"52\"},{\"type\":\"hslider\",\"label\":\"volume\",\"address\":\"/organ/volume\",\"index\":\"0\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"}]}]}";
 }
-function getBase64Codeorgan() { return "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fV0sInVpIjpbeyJ0eXBlIjoidmdyb3VwIiwibGFiZWwiOiJvcmdhbiIsIml0ZW1zIjpbeyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiZnJlcSIsImFkZHJlc3MiOiIvb3JnYW4vZnJlcSIsImluZGV4IjoiMzIiLCJtZXRhIjpbeyJ1bml0IjoiSHoifV0sImluaXQiOiI0NDAiLCJtaW4iOiIyMCIsIm1heCI6IjIwMDAwIiwic3RlcCI6IjEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJnYWluIiwiYWRkcmVzcyI6Ii9vcmdhbi9nYWluIiwiaW5kZXgiOiI4IiwiaW5pdCI6IjAuNSIsIm1pbiI6IjAiLCJtYXgiOiIxMCIsInN0ZXAiOiIwLjAxIn0seyJ0eXBlIjoiYnV0dG9uIiwibGFiZWwiOiJnYXRlIiwiYWRkcmVzcyI6Ii9vcmdhbi9nYXRlIiwiaW5kZXgiOiI0In0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoidm9sdW1lIiwiYWRkcmVzcyI6Ii9vcmdhbi92b2x1bWUiLCJpbmRleCI6IjAiLCJpbml0IjoiMC41IiwibWluIjoiMCIsIm1heCI6IjEiLCJzdGVwIjoiMC4wMSJ9XX1dfTA="; }
+function getBase64Codeorgan() { return "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fV0sInVpIjpbeyJ0eXBlIjoidmdyb3VwIiwibGFiZWwiOiJvcmdhbiIsIml0ZW1zIjpbeyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiZnJlcSIsImFkZHJlc3MiOiIvb3JnYW4vZnJlcSIsImluZGV4IjoiMTYiLCJtZXRhIjpbeyJ1bml0IjoiSHoifV0sImluaXQiOiI0NDAiLCJtaW4iOiIyMCIsIm1heCI6IjIwMDAwIiwic3RlcCI6IjEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJnYWluIiwiYWRkcmVzcyI6Ii9vcmdhbi9nYWluIiwiaW5kZXgiOiI1NiIsImluaXQiOiIwLjUiLCJtaW4iOiIwIiwibWF4IjoiMTAiLCJzdGVwIjoiMC4wMSJ9LHsidHlwZSI6ImJ1dHRvbiIsImxhYmVsIjoiZ2F0ZSIsImFkZHJlc3MiOiIvb3JnYW4vZ2F0ZSIsImluZGV4IjoiNTIifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJ2b2x1bWUiLCJhZGRyZXNzIjoiL29yZ2FuL3ZvbHVtZSIsImluZGV4IjoiMCIsImluaXQiOiIwLjUiLCJtaW4iOiIwIiwibWF4IjoiMSIsInN0ZXAiOiIwLjAxIn1dfV19MA=="; }
 
 /*
- faust2wasm
- 
- Additional code: GRAME 2017
+ faust2wasm: GRAME 2017-2018
 */
  
 'use strict';
@@ -20,20 +18,20 @@ function getBase64Codeorgan() { return "AGFzbQEAAAAB1oCAgAAQYAJ/fwBgBH9/f38AYAJ9
 function getBase64Mixer() { return "AGFzbQEAAAABj4CAgAACYAN/f38AYAR/f39/AX0CkoCAgAABBm1lbW9yeQZtZW1vcnkCAAIDg4CAgAACAAEHmoCAgAACC2NsZWFyT3V0cHV0AAAIbWl4Vm9pY2UAAQqKgoCAAALigICAAAEDfwJAQQAhBQNAAkAgAiAFQQJ0aigCACEDQQAhBANAAkAgAyAEQQJ0akMAAAAAOAIAIARBAWohBCAEIABIBEAMAgUMAQsACwsgBUEBaiEFIAUgAUgEQAwCBQwBCwALCwsLnYGAgAACBH8DfQJ9QQAhB0MAAAAAIQgDQAJAQQAhBiACIAdBAnRqKAIAIQQgAyAHQQJ0aigCACEFA0ACQCAEIAZBAnRqKgIAIQkgCCAJi5chCCAFIAZBAnRqKgIAIQogBSAGQQJ0aiAKIAmSOAIAIAZBAWohBiAGIABIBEAMAgUMAQsACwsgB0EBaiEHIAcgAUgEQAwCBQwBCwALCyAIDwsL"; }
 
 // Polyphonic Faust DSP
-class organ_polyProcessor extends AudioWorkletProcessor {
+class organPolyProcessor extends AudioWorkletProcessor {
     
     // JSON parsing functions
     static parse_ui(ui, obj, callback)
     {
         for (var i = 0; i < ui.length; i++) {
-           	organ_polyProcessor.parse_group(ui[i], obj, callback);
+           	organPolyProcessor.parse_group(ui[i], obj, callback);
         }
     }
     
     static parse_group(group, obj, callback)
     {
         if (group.items) {
-            organ_polyProcessor.parse_items(group.items, obj, callback);
+            organPolyProcessor.parse_items(group.items, obj, callback);
         }
     }
     
@@ -49,7 +47,7 @@ class organ_polyProcessor extends AudioWorkletProcessor {
         if (item.type === "vgroup"
             || item.type === "hgroup"
             || item.type === "tgroup") {
-            organ_polyProcessor.parse_items(item.items, obj, callback);
+            organPolyProcessor.parse_items(item.items, obj, callback);
         } else if (item.type === "hbargraph"
                    || item.type === "vbargraph") {
             // Nothing
@@ -70,7 +68,7 @@ class organ_polyProcessor extends AudioWorkletProcessor {
         if (item.type === "vgroup"
             || item.type === "hgroup"
             || item.type === "tgroup") {
-            organ_polyProcessor.parse_items(item.items, obj, callback);
+            organPolyProcessor.parse_items(item.items, obj, callback);
         } else if (item.type === "hbargraph"
                    || item.type === "vbargraph") {
             // Keep bargraph adresses
@@ -130,7 +128,7 @@ class organ_polyProcessor extends AudioWorkletProcessor {
             
             for (var nMod3, nMod4, nUint24 = 0, nOutIdx = 0, nInIdx = 0; nInIdx < nInLen; nInIdx++) {
                 nMod4 = nInIdx & 3;
-                nUint24 |= organ_polyProcessor.b64ToUint6(sB64Enc.charCodeAt(nInIdx)) << 18 - 6 * nMod4;
+                nUint24 |= organPolyProcessor.b64ToUint6(sB64Enc.charCodeAt(nInIdx)) << 18 - 6 * nMod4;
                 if (nMod4 === 3 || nInLen - nInIdx === 1) {
                     for (nMod3 = 0; nMod3 < 3 && nOutIdx < nOutLen; nMod3++, nOutIdx++) {
                         taBytes[nOutIdx] = nUint24 >>> (16 >>> nMod3 & 24) & 255;
@@ -153,11 +151,11 @@ class organ_polyProcessor extends AudioWorkletProcessor {
         var params = [];
         
         // Add instrument parameters
-        organ_polyProcessor.parse_ui(JSON.parse(getJSONorgan()).ui, params, organ_polyProcessor.parse_item1);
+        organPolyProcessor.parse_ui(JSON.parse(getJSONorgan()).ui, params, organPolyProcessor.parse_item1);
         
         // Possibly add effect parameters
         if (typeof (getJSONeffect) !== "undefined") {
-             organ_polyProcessor.parse_ui(JSON.parse(getJSONeffect()).ui, params, organ_polyProcessor.parse_item1);
+             organPolyProcessor.parse_ui(JSON.parse(getJSONeffect()).ui, params, organPolyProcessor.parse_item1);
         }
         return params;
     }
@@ -236,8 +234,70 @@ class organ_polyProcessor extends AudioWorkletProcessor {
         this.ptr_size = 4;
         this.sample_size = 4;
         
-        this.factory = organ_polyProcessor.organ_instance.exports;
-        this.HEAP = organ_polyProcessor.memory.buffer;
+        this.memory = organPolyProcessor.createMemory(organPolyProcessor.buffer_size, organPolyProcessor.polyphony);
+
+        // Create Mixer
+        this.mixObject = { imports: { print: arg => console.log(arg) } }
+        this.mixObject["memory"] = { "memory": this.memory };
+
+        this.importObject = {
+            env: {
+                memoryBase: 0,
+                tableBase: 0,
+                    
+                // Integer version
+                _abs: Math.abs,
+                
+                // Float version
+                _acosf: Math.acos,
+                _asinf: Math.asin,
+                _atanf: Math.atan,
+                _atan2f: Math.atan2,
+                _ceilf: Math.ceil,
+                _cosf: Math.cos,
+                _expf: Math.exp,
+                _floorf: Math.floor,
+                _fmodf: function(x, y) { return x % y; },
+                _logf: Math.log,
+                _log10f: Math.log10,
+                _max_f: Math.max,
+                _min_f: Math.min,
+                _remainderf: function(x, y) { return x - Math.round(x/y) * y; },
+                _powf: Math.pow,
+                _roundf: Math.fround,
+                _sinf: Math.sin,
+                _sqrtf: Math.sqrt,
+                _tanf: Math.tan,
+                   
+                // Double version
+                _acos: Math.acos,
+                _asin: Math.asin,
+                _atan: Math.atan,
+                _atan2: Math.atan2,
+                _ceil: Math.ceil,
+                _cos: Math.cos,
+                _exp: Math.exp,
+                _floor: Math.floor,
+                _fmod: function(x, y) { return x % y; },
+                _log: Math.log,
+                _log10: Math.log10,
+                _max_: Math.max,
+                _min_: Math.min,
+                _remainder:function(x, y) { return x - Math.round(x/y) * y; },
+                _pow: Math.pow,
+                _round: Math.fround,
+                _sin: Math.sin,
+                _sqrt: Math.sqrt,
+                _tan: Math.tan,
+                
+                memory: this.memory,
+                
+                table: new WebAssembly.Table({ initial: 0, element: 'anyfunc' })
+            }
+        }
+
+        this.factory = new WebAssembly.Instance(organPolyProcessor.wasm_module, this.importObject).exports;
+        this.HEAP = this.memory.buffer;
         this.HEAP32 = new Int32Array(this.HEAP);
         this.HEAPF32 = new Float32Array(this.HEAP);
         
@@ -263,24 +323,24 @@ class organ_polyProcessor extends AudioWorkletProcessor {
         
         // Setup buffer offset
         this.audio_heap_inputs = this.audio_heap_ptr_mixing + (this.numOut * this.ptr_size);
-        this.audio_heap_outputs = this.audio_heap_inputs + (this.numIn * organ_polyProcessor.buffer_size * this.sample_size);
-        this.audio_heap_mixing = this.audio_heap_outputs + (this.numOut * organ_polyProcessor.buffer_size * this.sample_size);
+        this.audio_heap_outputs = this.audio_heap_inputs + (this.numIn * organPolyProcessor.buffer_size * this.sample_size);
+        this.audio_heap_mixing = this.audio_heap_outputs + (this.numOut * organPolyProcessor.buffer_size * this.sample_size);
         
         // Setup DSP voices offset
-        this.dsp_start = this.audio_heap_mixing + (this.numOut * organ_polyProcessor.buffer_size * this.sample_size);
+        this.dsp_start = this.audio_heap_mixing + (this.numOut * organPolyProcessor.buffer_size * this.sample_size);
         
         // wasm mixer
-        this.mixer = organ_polyProcessor.mixer_instance.exports;
+        this.mixer = new WebAssembly.Instance(organPolyProcessor.wasm_mixer_module, this.mixObject).exports;
         
         // wasm effect
-        this.effect = (organ_polyProcessor.effect_instance) ? organ_polyProcessor.effect_instance.exports : null;
+        this.effect = (organPolyProcessor.wasm_effect_module) ? new WebAssembly.Instance(organPolyProcessor.wasm_effect_module, this.importObject).exports : null;
         
         console.log(this.mixer);
         console.log(this.factory);
         console.log(this.effect);
         
         // Start of DSP memory ('polyphony' DSP voices)
-        this.polyphony = organ_polyProcessor.polyphony;
+        this.polyphony = organPolyProcessor.polyphony;
         this.dsp_voices = [];
         this.dsp_voices_state = [];
         this.dsp_voices_level = [];
@@ -401,13 +461,13 @@ class organ_polyProcessor extends AudioWorkletProcessor {
             if (this.numIn > 0) {
                 this.ins = this.audio_heap_ptr_inputs;
                 for (i = 0; i < this.numIn; i++) {
-                    this.HEAP32[(this.ins >> 2) + i] = this.audio_heap_inputs + ((organ_polyProcessor.buffer_size * this.sample_size) * i);
+                    this.HEAP32[(this.ins >> 2) + i] = this.audio_heap_inputs + ((organPolyProcessor.buffer_size * this.sample_size) * i);
                 }
                 
                 // Prepare Ins buffer tables
                 var dspInChans = this.HEAP32.subarray(this.ins >> 2, (this.ins + this.numIn * this.ptr_size) >> 2);
                 for (i = 0; i < this.numIn; i++) {
-                    this.dspInChannnels[i] = this.HEAPF32.subarray(dspInChans[i] >> 2, (dspInChans[i] + organ_polyProcessor.buffer_size * this.sample_size) >> 2);
+                    this.dspInChannnels[i] = this.HEAPF32.subarray(dspInChans[i] >> 2, (dspInChans[i] + organPolyProcessor.buffer_size * this.sample_size) >> 2);
                 }
             }
             
@@ -417,22 +477,22 @@ class organ_polyProcessor extends AudioWorkletProcessor {
                 this.mixing = this.audio_heap_ptr_mixing;
                 
                 for (i = 0; i < this.numOut; i++) {
-                    this.HEAP32[(this.outs >> 2) + i] = this.audio_heap_outputs + ((organ_polyProcessor.buffer_size * this.sample_size) * i);
-                    this.HEAP32[(this.mixing >> 2) + i] = this.audio_heap_mixing + ((organ_polyProcessor.buffer_size * this.sample_size) * i);
+                    this.HEAP32[(this.outs >> 2) + i] = this.audio_heap_outputs + ((organPolyProcessor.buffer_size * this.sample_size) * i);
+                    this.HEAP32[(this.mixing >> 2) + i] = this.audio_heap_mixing + ((organPolyProcessor.buffer_size * this.sample_size) * i);
                 }
                 
                 // Prepare Out buffer tables
                 var dspOutChans = this.HEAP32.subarray(this.outs >> 2, (this.outs + this.numOut * this.ptr_size) >> 2);
                 for (i = 0; i < this.numOut; i++) {
-                    this.dspOutChannnels[i] = this.HEAPF32.subarray(dspOutChans[i] >> 2, (dspOutChans[i] + organ_polyProcessor.buffer_size * this.sample_size) >> 2);
+                    this.dspOutChannnels[i] = this.HEAPF32.subarray(dspOutChans[i] >> 2, (dspOutChans[i] + organPolyProcessor.buffer_size * this.sample_size) >> 2);
                 }
             }
             
             // Parse UI part
-            organ_polyProcessor.parse_ui(this.json_object.ui, this, organ_polyProcessor.parse_item2);
+            organPolyProcessor.parse_ui(this.json_object.ui, this, organPolyProcessor.parse_item2);
             
             if (this.effect) {
-                organ_polyProcessor.parse_ui(this.effect_json_object.ui, this, organ_polyProcessor.parse_item2);
+                organPolyProcessor.parse_ui(this.effect_json_object.ui, this, organPolyProcessor.parse_item2);
             }
      
             // keep 'keyOn/keyOff' labels
@@ -503,7 +563,7 @@ class organ_polyProcessor extends AudioWorkletProcessor {
             if (this.fCtrlLabel[ctrl] !== []) {
                 for (var i = 0; i < this.fCtrlLabel[ctrl].length; i++) {
                     var path = this.fCtrlLabel[ctrl][i].path;
-                    this.setParamValue(path, organ_polyProcessor.remap(value, 0, 127, this.fCtrlLabel[ctrl][i].min, this.fCtrlLabel[ctrl][i].max));
+                    this.setParamValue(path, organPolyProcessor.remap(value, 0, 127, this.fCtrlLabel[ctrl][i].min, this.fCtrlLabel[ctrl][i].max));
                     if (this.output_handler) {
                    		this.output_handler(path, this.getParamValue(path));
                    	}
@@ -601,11 +661,11 @@ class organ_polyProcessor extends AudioWorkletProcessor {
          
         // Possibly call an externally given callback (for instance to synchronize playing a MIDIFile...)
         if (this.compute_handler) {
-            this.compute_handler(organ_polyProcessor.buffer_size);
+            this.compute_handler(organPolyProcessor.buffer_size);
         }
          
         // First clear the outputs
-        this.mixer.clearOutput(organ_polyProcessor.buffer_size, this.numOut, this.outs);
+        this.mixer.clearOutput(organPolyProcessor.buffer_size, this.numOut, this.outs);
         
         // Compute all running voices
         for (var i = 0; i < this.polyphony; i++) {
@@ -615,14 +675,14 @@ class organ_polyProcessor extends AudioWorkletProcessor {
                     this.factory.setParamValue(this.dsp_voices[i], this.fGateLabel, 0.0);
                     this.factory.compute(this.dsp_voices[i], 1, this.ins, this.mixing);
                     this.factory.setParamValue(this.dsp_voices[i], this.fGateLabel, 1.0);
-                    this.factory.compute(this.dsp_voices[i], organ_polyProcessor.buffer_size, this.ins, this.mixing);
+                    this.factory.compute(this.dsp_voices[i], organPolyProcessor.buffer_size, this.ins, this.mixing);
                     this.dsp_voices_trigger[i] = false;
                 } else {
                     // Compute regular voice
-                    this.factory.compute(this.dsp_voices[i], organ_polyProcessor.buffer_size, this.ins, this.mixing);
+                    this.factory.compute(this.dsp_voices[i], organPolyProcessor.buffer_size, this.ins, this.mixing);
                 }
                 // Mix it in result
-                this.dsp_voices_level[i] = this.mixer.mixVoice(organ_polyProcessor.buffer_size, this.numOut, this.mixing, this.outs);
+                this.dsp_voices_level[i] = this.mixer.mixVoice(organPolyProcessor.buffer_size, this.numOut, this.mixing, this.outs);
                 // Check the level to possibly set the voice in kFreeVoice again
                 if ((this.dsp_voices_level[i] < 0.001) && (this.dsp_voices_state[i] === this.kReleaseVoice)) {
                     this.dsp_voices_state[i] = this.kFreeVoice;
@@ -632,7 +692,7 @@ class organ_polyProcessor extends AudioWorkletProcessor {
         
         // Apply effect
         if (this.effect) {
-            this.effect.compute(this.effect_start, organ_polyProcessor.buffer_size, this.outs, this.outs);
+            this.effect.compute(this.effect_start, organPolyProcessor.buffer_size, this.outs, this.outs);
         }
         
         // Update bargraph
@@ -653,85 +713,22 @@ class organ_polyProcessor extends AudioWorkletProcessor {
 // Globals
 
 // Create memory block
-organ_polyProcessor.buffer_size = 128;
-organ_polyProcessor.polyphony = 16;
-
-organ_polyProcessor.memory = organ_polyProcessor.createMemory(organ_polyProcessor.buffer_size, organ_polyProcessor.polyphony);
-
-// Create Mixer
-organ_polyProcessor.mixObject = { imports: { print: arg => console.log(arg) } }
-organ_polyProcessor.mixObject["memory"] = { "memory": organ_polyProcessor.memory };
-
-organ_polyProcessor.importObject = {
-    env: {
-        memoryBase: 0,
-        tableBase: 0,
-            
-        // Integer version
-        _abs: Math.abs,
-        
-        // Float version
-        _acosf: Math.acos,
-        _asinf: Math.asin,
-        _atanf: Math.atan,
-        _atan2f: Math.atan2,
-        _ceilf: Math.ceil,
-        _cosf: Math.cos,
-        _expf: Math.exp,
-        _floorf: Math.floor,
-        _fmodf: function(x, y) { return x % y; },
-        _logf: Math.log,
-        _log10f: Math.log10,
-        _max_f: Math.max,
-        _min_f: Math.min,
-        _remainderf: function(x, y) { return x - Math.round(x/y) * y; },
-        _powf: Math.pow,
-        _roundf: Math.fround,
-        _sinf: Math.sin,
-        _sqrtf: Math.sqrt,
-        _tanf: Math.tan,
-           
-        // Double version
-        _acos: Math.acos,
-        _asin: Math.asin,
-        _atan: Math.atan,
-        _atan2: Math.atan2,
-        _ceil: Math.ceil,
-        _cos: Math.cos,
-        _exp: Math.exp,
-        _floor: Math.floor,
-        _fmod: function(x, y) { return x % y; },
-        _log: Math.log,
-        _log10: Math.log10,
-        _max_: Math.max,
-        _min_: Math.min,
-        _remainder:function(x, y) { return x - Math.round(x/y) * y; },
-        _pow: Math.pow,
-        _round: Math.fround,
-        _sin: Math.sin,
-        _sqrt: Math.sqrt,
-        _tan: Math.tan,
-        
-        memory: organ_polyProcessor.memory,
-        
-        table: new WebAssembly.Table({ initial: 0, element: 'anyfunc' })
-    }
-};
+organPolyProcessor.buffer_size = 128;
+organPolyProcessor.polyphony = 16;
 
 // Synchronously compile and instantiate the WASM modules
 try {
-    let wasm_mixer_module = new WebAssembly.Module(organ_polyProcessor.atob(getBase64Mixer()));
-    organ_polyProcessor.mixer_instance = new WebAssembly.Instance(wasm_mixer_module, organ_polyProcessor.mixObject);
-    let wasm_module = new WebAssembly.Module(organ_polyProcessor.atob(getBase64Codeorgan()));
-    organ_polyProcessor.organ_instance = new WebAssembly.Instance(wasm_module, organ_polyProcessor.importObject);
-    // Possibly compile effect
-    if (typeof (getBase64Codeeffect) !== "undefined") {
-        let wasm_effect_module = new WebAssembly.Module(organ_polyProcessor.atob(getBase64Codeeffect()));
-        organ_polyProcessor.effect_instance = new WebAssembly.Instance(wasm_effect_module, organ_polyProcessor.importObject);
+    if (organPolyProcessor.wasm_mixer_module == undefined) {
+        organPolyProcessor.wasm_mixer_module = new WebAssembly.Module(organPolyProcessor.atob(getBase64Mixer()));
+        organPolyProcessor.wasm_module = new WebAssembly.Module(organPolyProcessor.atob(getBase64Codeorgan()));
+        // Possibly compile effect
+        if (typeof (getBase64Codeeffect) !== "undefined") {
+            organPolyProcessor.wasm_effect_module = new WebAssembly.Module(organPolyProcessor.atob(getBase64Codeeffect()));
+        }
+        registerProcessor('organPoly', organPolyProcessor);
     }
-    registerProcessor('organ_poly', organ_polyProcessor);
 } catch (e) {
-    console.log(e); console.log("Faust organ_poly cannot be loaded or compiled");
+    console.log(e); console.log("Faust organPoly cannot be loaded or compiled");
 }
 
 

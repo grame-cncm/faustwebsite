@@ -1,17 +1,16 @@
 
 /*
-Code generated with Faust version 2.5.24
+Code generated with Faust version 2.5.32
 Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONSNoise() {
-	return "{\"name\":\"White Noise\",\"filename\":\"SNoise\",\"version\":\"2.5.24\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"16\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"Grame\"},{\"copyright\":\"(c)GRAME 2009\"},{\"filename\":\"SNoise\"},{\"license\":\"BSD\"},{\"name\":\"White Noise\"},{\"version\":\"1.1\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"White Noise\",\"items\":[{\"type\":\"hslider\",\"label\":\"Volume\",\"address\":\"/White_Noise/Volume\",\"index\":\"0\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"White Noise\",\"filename\":\"SNoise\",\"version\":\"2.5.32\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"16\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"Grame\"},{\"copyright\":\"(c)GRAME 2009\"},{\"filename\":\"SNoise\"},{\"license\":\"BSD\"},{\"name\":\"White Noise\"},{\"version\":\"1.1\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"White Noise\",\"items\":[{\"type\":\"hslider\",\"label\":\"Volume\",\"address\":\"/White_Noise/Volume\",\"index\":\"0\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"}]}]}";
 }
-function getBase64CodeSNoise() { return "AGFzbQEAAAABy4CAgAAOYAJ/fwBgBH9/f38AYAF/AX9gAX8Bf2ACf38BfWABfwF/YAJ/fwBgAX8AYAJ/fwBgAn9/AGABfwBgAn9/AX9gAn9/AX9gA39/fQACgYCAgAAAA4+AgIAADgABAgMEBQYHCAkKCwwNBYeAgIAAAQCBgICAAAe6gYCAAAwHY29tcHV0ZQABDGdldE51bUlucHV0cwACDWdldE51bU91dHB1dHMAAw1nZXRQYXJhbVZhbHVlAAQNZ2V0U2FtcGxlUmF0ZQAFBGluaXQABg1pbnN0YW5jZUNsZWFyAAcRaW5zdGFuY2VDb25zdGFudHMACAxpbnN0YW5jZUluaXQACRppbnN0YW5jZVJlc2V0VXNlckludGVyZmFjZQAKDXNldFBhcmFtVmFsdWUADQZtZW1vcnkCAArugoCAAA6CgICAAAAL/YCAgAACAn8BfUEAIQRDAAAAACEGQQAhBSADQQBqKAIAIQRDAAAAMEEAKgIAlCEGQQAhBQNAAkBBAEHtnJmOBEEAKAIIbEG54ABqNgIEIAQgBWogBkEAKAIEspQ4AgBBAEEAKAIENgIIIAVBBGohBSAFQQQgAWxIBEAMAgwBCwsLC4WAgIAAAEEADwuFgICAAABBAQ8Li4CAgAAAIAAgAWoqAgAPC4iAgIAAAEEAKAIMDwuOgICAAAAgACABEAAgACABEAkLsoCAgAABAX9BACEBQQAhAQNAAkBBBCABQQJ0akEANgIAIAFBAWohASABQQJIBEAMAgwBCwsLC4mAgIAAAEEAIAE2AgwLkICAgAAAIAAgARAIIAAQCiAAEAcLjICAgAAAQQBDAAAAPzgCAAuNgICAAAAgASAAIAAgAUgbDwuNgICAAAAgACABIAAgAUgbDwuMgICAAAAgACABaiACOAIACwuChICAAAEAQQAL+wN7Im5hbWUiOiJXaGl0ZSBOb2lzZSIsImZpbGVuYW1lIjoiU05vaXNlIiwidmVyc2lvbiI6IjIuNS4yNCIsIm9wdGlvbnMiOiJ3YXNtLWliLCAtc2NhbCAtZnR6IDIiLCJzaXplIjoiMTYiLCJpbnB1dHMiOiIwIiwib3V0cHV0cyI6IjEiLCJtZXRhIjpbeyJhdXRob3IiOiJHcmFtZSJ9LHsiY29weXJpZ2h0IjoiKGMpR1JBTUUgMjAwOSJ9LHsiZmlsZW5hbWUiOiJTTm9pc2UifSx7ImxpY2Vuc2UiOiJCU0QifSx7Im5hbWUiOiJXaGl0ZSBOb2lzZSJ9LHsidmVyc2lvbiI6IjEuMSJ9XSwidWkiOlt7InR5cGUiOiJ2Z3JvdXAiLCJsYWJlbCI6IldoaXRlIE5vaXNlIiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJWb2x1bWUiLCJhZGRyZXNzIjoiL1doaXRlX05vaXNlL1ZvbHVtZSIsImluZGV4IjoiMCIsIm1ldGEiOlt7ImFjYyI6IjEgMCAtMTAgMCAxMCJ9LHsic3R5bGUiOiJrbm9iIn1dLCJpbml0IjoiMC41IiwibWluIjoiMCIsIm1heCI6IjEiLCJzdGVwIjoiMC4wMSJ9XX1dfTA="; }
+function getBase64CodeSNoise() { return "AGFzbQEAAAABy4CAgAAOYAJ/fwBgBH9/f38AYAF/AX9gAX8Bf2ACf38BfWABfwF/YAJ/fwBgAX8AYAJ/fwBgAn9/AGABfwBgAn9/AX9gAn9/AX9gA39/fQACgYCAgAAAA4+AgIAADgABAgMEBQYHCAkKCwwNBYeAgIAAAQCBgICAAAe6gYCAAAwHY29tcHV0ZQABDGdldE51bUlucHV0cwACDWdldE51bU91dHB1dHMAAw1nZXRQYXJhbVZhbHVlAAQNZ2V0U2FtcGxlUmF0ZQAFBGluaXQABg1pbnN0YW5jZUNsZWFyAAcRaW5zdGFuY2VDb25zdGFudHMACAxpbnN0YW5jZUluaXQACRppbnN0YW5jZVJlc2V0VXNlckludGVyZmFjZQAKDXNldFBhcmFtVmFsdWUADQZtZW1vcnkCAArugoCAAA6CgICAAAAL/YCAgAACAn8BfUEAIQRDAAAAACEGQQAhBSADQQBqKAIAIQRDAAAAMEEAKgIAlCEGQQAhBQNAAkBBAEHtnJmOBEEAKAIIbEG54ABqNgIEIAQgBWogBkEAKAIEspQ4AgBBAEEAKAIENgIIIAVBBGohBSAFQQQgAWxIBEAMAgwBCwsLC4WAgIAAAEEADwuFgICAAABBAQ8Li4CAgAAAIAAgAWoqAgAPC4iAgIAAAEEAKAIMDwuOgICAAAAgACABEAAgACABEAkLsoCAgAABAX9BACEBQQAhAQNAAkBBBCABQQJ0akEANgIAIAFBAWohASABQQJIBEAMAgwBCwsLC4mAgIAAAEEAIAE2AgwLkICAgAAAIAAgARAIIAAQCiAAEAcLjICAgAAAQQBDAAAAPzgCAAuNgICAAAAgASAAIAAgAUgbDwuNgICAAAAgACABIAAgAUgbDwuMgICAAAAgACABaiACOAIACwuChICAAAEAQQAL+wN7Im5hbWUiOiJXaGl0ZSBOb2lzZSIsImZpbGVuYW1lIjoiU05vaXNlIiwidmVyc2lvbiI6IjIuNS4zMiIsIm9wdGlvbnMiOiJ3YXNtLWliLCAtc2NhbCAtZnR6IDIiLCJzaXplIjoiMTYiLCJpbnB1dHMiOiIwIiwib3V0cHV0cyI6IjEiLCJtZXRhIjpbeyJhdXRob3IiOiJHcmFtZSJ9LHsiY29weXJpZ2h0IjoiKGMpR1JBTUUgMjAwOSJ9LHsiZmlsZW5hbWUiOiJTTm9pc2UifSx7ImxpY2Vuc2UiOiJCU0QifSx7Im5hbWUiOiJXaGl0ZSBOb2lzZSJ9LHsidmVyc2lvbiI6IjEuMSJ9XSwidWkiOlt7InR5cGUiOiJ2Z3JvdXAiLCJsYWJlbCI6IldoaXRlIE5vaXNlIiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJWb2x1bWUiLCJhZGRyZXNzIjoiL1doaXRlX05vaXNlL1ZvbHVtZSIsImluZGV4IjoiMCIsIm1ldGEiOlt7ImFjYyI6IjEgMCAtMTAgMCAxMCJ9LHsic3R5bGUiOiJrbm9iIn1dLCJpbml0IjoiMC41IiwibWluIjoiMCIsIm1heCI6IjEiLCJzdGVwIjoiMC4wMSJ9XX1dfTA="; }
 
 /*
- faust2wasm
- Additional code: GRAME 2017
+ faust2wasm: GRAME 2017-2018
 */
  
 'use strict';
@@ -177,8 +176,9 @@ class SNoiseProcessor extends AudioWorkletProcessor {
         this.ptr_size = 4;
         this.sample_size = 4;
         
-        this.factory = SNoiseProcessor.SNoise_instance.exports;
-        this.HEAP = SNoiseProcessor.SNoise_instance.exports.memory.buffer;
+        this.SNoise_instance = new WebAssembly.Instance(SNoiseProcessor.wasm_module, SNoiseProcessor.importObject);
+  	   	this.factory = this.SNoise_instance.exports;
+        this.HEAP = this.SNoise_instance.exports.memory.buffer;
         this.HEAP32 = new Int32Array(this.HEAP);
         this.HEAPF32 = new Float32Array(this.HEAP);
 
@@ -435,9 +435,10 @@ SNoiseProcessor.importObject = {
 
 // Synchronously compile and instantiate the WASM module
 try {
-    let wasm_module = new WebAssembly.Module(SNoiseProcessor.atob(getBase64CodeSNoise()));
-    SNoiseProcessor.SNoise_instance = new WebAssembly.Instance(wasm_module, SNoiseProcessor.importObject);
-    registerProcessor('SNoise', SNoiseProcessor);
+    if (SNoiseProcessor.wasm_module == undefined) {
+        SNoiseProcessor.wasm_module = new WebAssembly.Module(SNoiseProcessor.atob(getBase64CodeSNoise()));
+        registerProcessor('SNoise', SNoiseProcessor);
+    }
 } catch (e) {
     console.log(e); console.log("Faust SNoise cannot be loaded or compiled");
 }

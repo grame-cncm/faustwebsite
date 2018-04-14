@@ -372,7 +372,7 @@ Finds the sum of a numerical array.
 **/
 Array.prototype.sum = function() {
   var sum = 0;
-  for(var i = 0; i < this.length; i++) {
+  for (var i = 0; i < this.length; i++) {
     sum += this[i];
   }
   return sum;
@@ -740,7 +740,7 @@ _f4u$t.rand_string = function(n)
     n = 8;
   }
 
-  for( var i=0; i < n; i++ ) {
+  for (var i = 0; i < n; i++ ) {
     text += possible.charAt(Math.floor(Math.random() * possible.length));
   }
   return text;
@@ -1131,7 +1131,7 @@ _f4u$t.unique = function(s) {
 }
 
 /**
-Returns the type part of an id.  The faust naming convention gives
+Returns the type part of an id. The faust naming convention gives
 all DOM ids a type as the second entry. Examples are vslider, hslider,
 rbutton.
 
@@ -1574,7 +1574,7 @@ _f4u$t.hard_delete = function(div) {
   To be called when used with the C++/LLVM libfaust based FaustNode.
 **/
 _f4u$t.make_audio_ui = function(dsp, svg) {
-  var json = eval ("(" + dsp.json() + ")");
+  var json = eval("(" + dsp.json() + ")");
   var faust_svg = new _f4u$t.SVG(
     svg,
     // kludge to prevent scroll bars...
@@ -2459,7 +2459,6 @@ _f4u$t.RotatingButton.prototype.r = function() {
 _f4u$t.RotatingButton.prototype.dims = function() {
   return [this.r() * 2, this.r() * 2];
 }
-
 
 _f4u$t.RotatingButton.prototype.make_mgroove = function(svg, parent, id) {
   var full_id = 'faust_rbutton_mgroove_'+id;
@@ -4225,7 +4224,6 @@ _f4u$t.json_to_ui = function(json, hash) {
  * obviously, the goal is to separate the two as much as possible
  */
 
-
 /*
   UTILITY FUNCTIONS
 */
@@ -4270,7 +4268,7 @@ _f4u$t.transform_to_array = function(transform) {
   while(true) {
     var match = matrix.exec(transform);
     if (match != null) {
-      out.push(["matrix",parseFloat(match[1]), parseFloat(match[2]), parseFloat(match[3]), parseFloat(match[4]), parseFloat(match[5]), parseFloat(match[6])]);
+      out.push(["matrix", parseFloat(match[1]), parseFloat(match[2]), parseFloat(match[3]), parseFloat(match[4]), parseFloat(match[5]), parseFloat(match[6])]);
       transform = transform.substr(match[0].length,transform.length-match[0].length);
       continue;
     }
@@ -5410,19 +5408,19 @@ _f4u$t.main_loop = function() {
 $(document).ready(function() { _f4u$t.main_loop(); });
 
 /*
-Code generated with Faust version 2.5.24
+Code generated with Faust version 2.5.32
 Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONSPulsaxophone() {
-	return "{\"name\":\"Solo Pulsaxophone\",\"filename\":\"SPulsaxophone\",\"version\":\"2.5.24\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"17232\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"ER\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"envelopes.lib/author\":\"GRAME\"},{\"envelopes.lib/copyright\":\"GRAME\"},{\"envelopes.lib/license\":\"LGPL with exception\"},{\"envelopes.lib/name\":\"Faust Envelope Library\"},{\"envelopes.lib/version\":\"0.0\"},{\"filename\":\"SPulsaxophone\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"instruments.lib/author\":\"Romain Michon (rmichon@ccrma.stanford.edu)\"},{\"instruments.lib/copyright\":\"Romain Michon\"},{\"instruments.lib/licence\":\"STK-4.3\"},{\"instruments.lib/name\":\"Faust-STK Tools Library\"},{\"instruments.lib/version\":\"1.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Solo Pulsaxophone\"},{\"noises.lib/name\":\"Faust Noise Generator Library\"},{\"noises.lib/version\":\"0.0\"},{\"oscillators.lib/name\":\"Faust Oscillator Library\"},{\"oscillators.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"PULSAXO\",\"items\":[{\"type\":\"hgroup\",\"label\":\"Instrument\",\"items\":[{\"type\":\"hslider\",\"label\":\"Frequency\",\"address\":\"/PULSAXO/Instrument/Frequency\",\"index\":\"708\",\"meta\":[{\"acc\":\"1 1 -12 0 10\"},{\"unit\":\"Hz\"}],\"init\":\"110\",\"min\":\"80\",\"max\":\"880\",\"step\":\"1\"}]},{\"type\":\"hgroup\",\"label\":\"Parameters\",\"items\":[{\"type\":\"hslider\",\"label\":\"Vibrato Frequency\",\"address\":\"/PULSAXO/Parameters/Vibrato_Frequency\",\"index\":\"672\",\"meta\":[{\"acc\":\"0 1 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"Hz\"}],\"init\":\"6\",\"min\":\"1\",\"max\":\"15\",\"step\":\"0.1\"}]},{\"type\":\"hgroup\",\"label\":\"Pulse\",\"meta\":[{\"2\":\"\"}],\"items\":[{\"type\":\"hslider\",\"label\":\"Speed (Granulator)\",\"address\":\"/PULSAXO/Pulse/Speed_(Granulator)\",\"index\":\"60\",\"meta\":[{\"1\":\"\"},{\"acc\":\"0 1 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"Hz\"}],\"init\":\"4\",\"min\":\"0.001\",\"max\":\"7\",\"step\":\"0.0001\"},{\"type\":\"hslider\",\"label\":\"Probability (Granulator)\",\"address\":\"/PULSAXO/Pulse/Probability_(Granulator)\",\"index\":\"32\",\"meta\":[{\"2\":\"\"},{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"%\"}],\"init\":\"88\",\"min\":\"75\",\"max\":\"100\",\"step\":\"1\"}]}]}]}";
+	return "{\"name\":\"Solo Pulsaxophone\",\"filename\":\"SPulsaxophone\",\"version\":\"2.5.32\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"17232\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"ER\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"envelopes.lib/author\":\"GRAME\"},{\"envelopes.lib/copyright\":\"GRAME\"},{\"envelopes.lib/license\":\"LGPL with exception\"},{\"envelopes.lib/name\":\"Faust Envelope Library\"},{\"envelopes.lib/version\":\"0.0\"},{\"filename\":\"SPulsaxophone\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"instruments.lib/author\":\"Romain Michon (rmichon@ccrma.stanford.edu)\"},{\"instruments.lib/copyright\":\"Romain Michon\"},{\"instruments.lib/licence\":\"STK-4.3\"},{\"instruments.lib/name\":\"Faust-STK Tools Library\"},{\"instruments.lib/version\":\"1.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Solo Pulsaxophone\"},{\"noises.lib/name\":\"Faust Noise Generator Library\"},{\"noises.lib/version\":\"0.0\"},{\"oscillators.lib/name\":\"Faust Oscillator Library\"},{\"oscillators.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"PULSAXO\",\"items\":[{\"type\":\"hgroup\",\"label\":\"Instrument\",\"items\":[{\"type\":\"hslider\",\"label\":\"Frequency\",\"address\":\"/PULSAXO/Instrument/Frequency\",\"index\":\"708\",\"meta\":[{\"acc\":\"1 1 -12 0 10\"},{\"unit\":\"Hz\"}],\"init\":\"110\",\"min\":\"80\",\"max\":\"880\",\"step\":\"1\"}]},{\"type\":\"hgroup\",\"label\":\"Parameters\",\"items\":[{\"type\":\"hslider\",\"label\":\"Vibrato Frequency\",\"address\":\"/PULSAXO/Parameters/Vibrato_Frequency\",\"index\":\"672\",\"meta\":[{\"acc\":\"0 1 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"Hz\"}],\"init\":\"6\",\"min\":\"1\",\"max\":\"15\",\"step\":\"0.1\"}]},{\"type\":\"hgroup\",\"label\":\"Pulse\",\"meta\":[{\"2\":\"\"}],\"items\":[{\"type\":\"hslider\",\"label\":\"Speed (Granulator)\",\"address\":\"/PULSAXO/Pulse/Speed_(Granulator)\",\"index\":\"36\",\"meta\":[{\"1\":\"\"},{\"acc\":\"0 1 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"Hz\"}],\"init\":\"4\",\"min\":\"0.001\",\"max\":\"7\",\"step\":\"0.0001\"},{\"type\":\"hslider\",\"label\":\"Probability (Granulator)\",\"address\":\"/PULSAXO/Pulse/Probability_(Granulator)\",\"index\":\"592\",\"meta\":[{\"2\":\"\"},{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"%\"}],\"init\":\"88\",\"min\":\"75\",\"max\":\"100\",\"step\":\"1\"}]}]}]}";
 }
-function getBase64CodeSPulsaxophone() { return "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ZXMubGliL2xpY2Vuc2UiOiJMR1BMIHdpdGggZXhjZXB0aW9uIn0seyJlbnZlbG9wZXMubGliL25hbWUiOiJGYXVzdCBFbnZlbG9wZSBMaWJyYXJ5In0seyJlbnZlbG9wZXMubGliL3ZlcnNpb24iOiIwLjAifSx7ImZpbGVuYW1lIjoiU1B1bHNheG9waG9uZSJ9LHsiZmlsdGVycy5saWIvbmFtZSI6IkZhdXN0IEZpbHRlcnMgTGlicmFyeSJ9LHsiZmlsdGVycy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsiaW5zdHJ1bWVudHMubGliL2F1dGhvciI6IlJvbWFpbiBNaWNob24gKHJtaWNob25AY2NybWEuc3RhbmZvcmQuZWR1KSJ9LHsiaW5zdHJ1bWVudHMubGliL2NvcHlyaWdodCI6IlJvbWFpbiBNaWNob24ifSx7Imluc3RydW1lbnRzLmxpYi9saWNlbmNlIjoiU1RLLTQuMyJ9LHsiaW5zdHJ1bWVudHMubGliL25hbWUiOiJGYXVzdC1TVEsgVG9vbHMgTGlicmFyeSJ9LHsiaW5zdHJ1bWVudHMubGliL3ZlcnNpb24iOiIxLjAifSx7Im1hdGhzLmxpYi9hdXRob3IiOiJHUkFNRSJ9LHsibWF0aHMubGliL2NvcHlyaWdodCI6IkdSQU1FIn0seyJtYXRocy5saWIvbGljZW5zZSI6IkxHUEwgd2l0aCBleGNlcHRpb24ifSx7Im1hdGhzLmxpYi9uYW1lIjoiRmF1c3QgTWF0aCBMaWJyYXJ5In0seyJtYXRocy5saWIvdmVyc2lvbiI6IjIuMSJ9LHsibmFtZSI6IlNvbG8gUHVsc2F4b3Bob25lIn0seyJub2lzZXMubGliL25hbWUiOiJGYXVzdCBOb2lzZSBHZW5lcmF0b3IgTGlicmFyeSJ9LHsibm9pc2VzLmxpYi92ZXJzaW9uIjoiMC4wIn0seyJvc2NpbGxhdG9ycy5saWIvbmFtZSI6IkZhdXN0IE9zY2lsbGF0b3IgTGlicmFyeSJ9LHsib3NjaWxsYXRvcnMubGliL3ZlcnNpb24iOiIwLjAifSx7InNpZ25hbHMubGliL25hbWUiOiJGYXVzdCBTaWduYWwgUm91dGluZyBMaWJyYXJ5In0seyJzaWduYWxzLmxpYi92ZXJzaW9uIjoiMC4wIn1dLCJ1aSI6W3sidHlwZSI6InZncm91cCIsImxhYmVsIjoiUFVMU0FYTyIsIml0ZW1zIjpbeyJ0eXBlIjoiaGdyb3VwIiwibGFiZWwiOiJJbnN0cnVtZW50IiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJGcmVxdWVuY3kiLCJhZGRyZXNzIjoiL1BVTFNBWE8vSW5zdHJ1bWVudC9GcmVxdWVuY3kiLCJpbmRleCI6IjcwOCIsIm1ldGEiOlt7ImFjYyI6IjEgMSAtMTIgMCAxMCJ9LHsidW5pdCI6Ikh6In1dLCJpbml0IjoiMTEwIiwibWluIjoiODAiLCJtYXgiOiI4ODAiLCJzdGVwIjoiMSJ9XX0seyJ0eXBlIjoiaGdyb3VwIiwibGFiZWwiOiJQYXJhbWV0ZXJzIiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJWaWJyYXRvIEZyZXF1ZW5jeSIsImFkZHJlc3MiOiIvUFVMU0FYTy9QYXJhbWV0ZXJzL1ZpYnJhdG9fRnJlcXVlbmN5IiwiaW5kZXgiOiI2NzIiLCJtZXRhIjpbeyJhY2MiOiIwIDEgLTEwIDAgMTAifSx7InN0eWxlIjoia25vYiJ9LHsidW5pdCI6Ikh6In1dLCJpbml0IjoiNiIsIm1pbiI6IjEiLCJtYXgiOiIxNSIsInN0ZXAiOiIwLjEifV19LHsidHlwZSI6Imhncm91cCIsImxhYmVsIjoiUHVsc2UiLCJtZXRhIjpbeyIyIjoiIn1dLCJpdGVtcyI6W3sidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6IlNwZWVkIChHcmFudWxhdG9yKSIsImFkZHJlc3MiOiIvUFVMU0FYTy9QdWxzZS9TcGVlZF8oR3JhbnVsYXRvcikiLCJpbmRleCI6IjYwIiwibWV0YSI6W3siMSI6IiJ9LHsiYWNjIjoiMCAxIC0xMCAwIDEwIn0seyJzdHlsZSI6Imtub2IifSx7InVuaXQiOiJIeiJ9XSwiaW5pdCI6IjQiLCJtaW4iOiIwLjAwMSIsIm1heCI6IjciLCJzdGVwIjoiMC4wMDAxIn0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiUHJvYmFiaWxpdHkgKEdyYW51bGF0b3IpIiwiYWRkcmVzcyI6Ii9QVUxTQVhPL1B1bHNlL1Byb2JhYmlsaXR5XyhHcmFudWxhdG9yKSIsImluZGV4IjoiMzIiLCJtZXRhIjpbeyIyIjoiIn0seyJhY2MiOiIxIDAgLTEwIDAgMTAifSx7InN0eWxlIjoia25vYiJ9LHsidW5pdCI6IiUifV0sImluaXQiOiI4OCIsIm1pbiI6Ijc1IiwibWF4IjoiMTAwIiwic3RlcCI6IjEifV19XX1dfTA="; }
+function getBase64CodeSPulsaxophone() { return "AGFzbQEAAAAB4ICAgAASYAJ/fwBgBH9/f38AYAF9AX1gAn19AX1gAX8Bf2ABfwF/YAJ/fwF9YAF/AX9gAn9/AGABfwBgAn9/AGACf38AYAF/AGACf38Bf2ACf38Bf2ADf399AGABfQF9YAF9AX0CsoCAgAAEA2VudgVfY29zZgACA2VudgZfZm1vZGYAAwNlbnYFX3NpbmYAEANlbnYFX3RhbmYAEQOPgICAAA4AAQQFBgcICQoLDA0ODwWHgICAAAEAgYCAgAAHuoGAgAAMB2NvbXB1dGUABQxnZXROdW1JbnB1dHMABg1nZXROdW1PdXRwdXRzAAcNZ2V0UGFyYW1WYWx1ZQAIDWdldFNhbXBsZVJhdGUACQRpbml0AAoNaW5zdGFuY2VDbGVhcgALEWluc3RhbmNlQ29uc3RhbnRzAAwMaW5zdGFuY2VJbml0AA0aaW5zdGFuY2VSZXNldFVzZXJJbnRlcmZhY2UADg1zZXRQYXJhbVZhbHVlABEGbWVtb3J5AgAKn6uAgAAOgoCAgAAAC/SZgIAAAhF/OX1BACEEQwAAAAAhFUMAAAAAIRZDAAAAACEXQwAAAAAhGEEAIQVDAAAAACEZQwAAAAAhGkMAAAAAIRtDAAAAACEcQQAhBkMAAAAAIR1BACEHQQAhCEEAIQlBACEKQwAAAAAhHkEAIQtDAAAAACEfQwAAAAAhIEMAAAAAISFDAAAAACEiQQAhDEMAAAAAISNDAAAAACEkQwAAAAAhJUMAAAAAISZDAAAAACEnQwAAAAAhKEMAAAAAISlBACENQwAAAAAhKkEAIQ5BACEPQQAhEEMAAAAAIStDAAAAACEsQwAAAAAhLUMAAAAAIS5DAAAAACEvQwAAAAAhMEMAAAAAITFDAAAAACEyQwAAAAAhM0MAAAAAITRDAAAAACE1QwAAAAAhNkMAAAAAITdDAAAAACE4QwAAAAAhOUMAAAAAITpDAAAAACE7QwAAAAAhPEMAAAAAIT1DAAAAACE+QwAAAAAhP0MAAAAAIUBDAAAAACFBQwAAAAAhQkMAAAAAIUNDAAAAACFEQwAAAAAhRUEAIRFDAAAAACFGQQAhEkEAIRNBACEUQwAAAAAhR0MAAAAAIUhDAAAAACFJQwAAAAAhSkMAAAAAIUtDAAAAACFMQwAAAAAhTSADQQBqKAIAIQRBACoCJCEVQQAqAtAEIRZDbxKDOkEAKgKgBZQhF0MXt9E4QQAqAsQFlCEYQQAhBQNAAkBBAEEBNgIAQQAgFTgCKEEAKgIcQQAqAjSUQQAqAiAgFUEAKgIskpSSIRlBACAZQwAAAAAgGbxBgICA/AdxGzgCMEEAKgI8QQAqAhBBACoCMJSSQwAAgD8QASEaQQAgGkMAAAAAIBq8QYCAgPwHcRs4AjhBACoCOENvEoO6kiEbQQAgGzgCQEHMAEEAKAJIQf8AcUECdGogG0MAAAA/XTYCAEEAIBY4AtQEQQAqAhxBACoC4ASUQQAqAswEIBZBACoC2ASSlJIhHEEAIBxDAAAAACAcvEGAgID8B3EbOALcBEEAKgJEQwAAAABfIBtDAAAAAF5xIQZBAEHtnJmOBEEAKALoBGxBueAAajYC5ARBACoC8ARBASAGa7KUIAayQwAAADBBACgC5ASylIuUkiEdQQAgHUMAAAAAIB28QYCAgPwHcRs4AuwEQQAqAtwEQQAqAuwEXiEHQcwAQQAoAkhB5ABrQf8AcUECdGooAgAgB2whCCAIQQBKIQkgCUEASiEKQwAAAABBACoC9ARBACoC/ARDAACAP5KWIAobIR5BACAeQwAAAAAgHrxBgICA/AdxGzgC+AQgCEEARkEASiELQwAAAABBACoCgAVBACoCiAVDAACAP5KWIAsbIR9BACAfQwAAAAAgH7xBgICA/AdxGzgChAUgCbJDAAAAAEEAKgKMBUEAKgKEBUHMAEEAKAJIQeQAa0H/AHFBAnRqKAIAspQgB7KUlCAIskEAKgKEBUEAKgKABV0bQQAqAoQFQwAAAABdG5RBACoClAUgCRshIEEAICBDAAAAACAgvEGAgID8B3EbOAKQBSAXQ3e+fz9BACoCqAWUkiEhQQAgIUMAAAAAICG8QYCAgPwHcRs4AqQFQQAqArAFQQAqApwFQQAqAqQFQwAAAABBACoCwAWTlJSSISJBACAiQwAAAAAgIrxBgICA/AdxGzgCrAVBAUEAKAIEayEMQQAqArgFQQAqApwFQQAqAqQFQQAqAqwFlJSSIAyykiEjQQAgI0MAAAAAICO8QYCAgPwHcRs4ArQFQQAqArQFISRBACAkQwAAAAAgJLxBgICA/AdxGzgCvAVBACoCkAVBACoCkAVBACoCmAVDAAAAAEEAKgKQBZNBACoC+ASUlJJDAAAAAEEAKgL4BEEAKgL0BF0bQQAqAvgEQwAAAABdG0P8jycpQQAoAuQEspRDRItMP5KUQ83MTD5BACoCvAWUQwAAgD+SlCElIBhDcvl/P0EAKgLMBZSSISZBACAmQwAAAAAgJrxBgICA/AdxGzgCyAVDAACgQkMAAFxEQQAqAsgFlpchJ0EAKgIMICeVQwAAQMCSIShDhesRPyAolCEpICmoIQ0gKY4hKiANQQFqIQ4gDUEAQQAgDUgbIQ8gDkEAQQAgDkgbIRBB0MYAQQAoAkhBgSAgD0GBICAPSBtBAWprQf8PcUECdGoqAgAgKkMAAIA/ICmTkpQgKSAqk0HQxgBBACgCSEGBICAQQYEgIBBIG0EBamtB/w9xQQJ0aioCAJSSIStDd75/P0EAKgLUBZRDYr68OZIhLEEAICxDAAAAACAsvEGAgID8B3EbOALQBUEAKgLcBUEAKgKcBSAnQwAAAABBACoC7AWTlJSSIS1BACAtQwAAAAAgLbxBgICA/AdxGzgC2AVBACoC5AVBACoCnAUgJ0EAKgLYBZSUkiAMspIhLkEAIC5DAAAAACAuvEGAgID8B3EbOALgBUEAKgLgBSEvQQAgL0MAAAAAIC+8QYCAgPwHcRs4AugFQwAAAABBACoC8AVBACoC+AVDAACAP5KWIAobITBBACAwQwAAAAAgMLxBgICA/AdxGzgC9AVDAAAAAEEAKgL8BUEAKgKEBkMAAIA/kpYgCxshMUEAIDFDAAAAACAxvEGAgID8B3EbOAKABiAJskMAAAAAQQAqAogGQQAqAoAGQcwAQQAoAkhB5ABrQf8AcUECdGooAgCylCAHspSUIAiyQQAqAoAGQQAqAvwFXRtBACoCgAZDAAAAAF0blEEAKgKQBiAJGyEyQQAgMkMAAAAAIDK8QYCAgPwHcRs4AowGQ9sPSUBBACoC0AVBACoC6AWUQQAqAowGQQAqAowGQQAqApQGQQAqAvQFQwAAAABBACoCjAaTlJSSQwAAAABBACoC9AVBACoC8AVdG0EAKgL0BUMAAAAAXRuUlCEzIDMQAiE0QwAAAAAgNJMhNSAzEAAhNkEAKgLEBiA1lCArIDaUkiE3IDVBACoCvAaUIDYgN5SSITggNUEAKgK0BpQgNiA4lJIhOSA1QQAqAqwGlCA2IDmUkiE6IDVBACoCpAaUIDYgOpSSITsgNUEAKgKcBpQgNiA7lJIhPEEAIDxDAAAAACA8vEGAgID8B3EbOAKYBiA0IDuUIDZBACoCnAaUkiE9QQAgPUMAAAAAID28QYCAgPwHcRs4AqAGIDQgOpQgNkEAKgKkBpSSIT5BACA+QwAAAAAgPrxBgICA/AdxGzgCqAYgNCA5lCA2QQAqAqwGlJIhP0EAID9DAAAAACA/vEGAgID8B3EbOAKwBiA0IDiUIDZBACoCtAaUkiFAQQAgQEMAAAAAIEC8QYCAgPwHcRs4ArgGIDQgN5QgNkEAKgK8BpSSIUFBACBBQwAAAAAgQbxBgICA/AdxGzgCwAZDAAAAAEMzM3M/ICsgNJRBACoCxAYgNpSSlJMhQkEAIEI4AsgGIEJBACoCzAaSIUNB0AZBACgCSEH/D3FBAnRqIEM4AgBD9ijcPiAolCFEIERDAACAP5IhRSBFqCERIEWOIUYgEUEBaiESIBFBAEEAIBFIGyETIBJBAEEAIBJIGyEUQwAAAD8gQ0HQBkEAKAJIQYEgIBNBgSAgE0gba0H/D3FBAnRqKgIAIEYgRJOUIERDAACAPyBGk5JB0AZBACgCSEGBICAUQYEgIBRIG2tB/w9xQQJ0aioCAJSSk5QhRyAlIEeTIUhDd76fPiBIlEMzMzM/kiFJIElDAACAP16yIEkgSUMAAIA/X7KUkiFKICVDAAAAPyBDlCBIIEogSkMAAIC/YLKUIEpDAACAv12yk5SSkyFLQdDGAEEAKAJIQf8PcUECdGogS0MAAAAAIEu8QYCAgPwHcRs4AgAgRyFMIExDAAAAACBMvEGAgID8B3EbIU0gBCAFaiBNOAIAQQBBACgCADYCBEEAQQAqAig4AixBAEEAKgIwOAI0QQBBACoCODgCPEEAQQAqAkA4AkRBAEEAKAJIQQFqNgJIQQBBACoC1AQ4AtgEQQBBACoC3AQ4AuAEQQBBACgC5AQ2AugEQQBBACoC7AQ4AvAEQQBBACoC+AQ4AvwEQQBBACoChAU4AogFQQBBACoCkAU4ApQFQQBBACoCpAU4AqgFQQBBACoCrAU4ArAFQQBBACoCtAU4ArgFQQBBACoCvAU4AsAFQQBBACoCyAU4AswFQQBBACoC0AU4AtQFQQBBACoC2AU4AtwFQQBBACoC4AU4AuQFQQBBACoC6AU4AuwFQQBBACoC9AU4AvgFQQBBACoCgAY4AoQGQQBBACoCjAY4ApAGQQBBACoCmAY4ApwGQQBBACoCoAY4AqQGQQBBACoCqAY4AqwGQQBBACoCsAY4ArQGQQBBACoCuAY4ArwGQQBBACoCwAY4AsQGQQBBACoCyAY4AswGIAVBBGohBSAFQQQgAWxIBEAMAgwBCwsLC4WAgIAAAEEADwuFgICAAABBAQ8Li4CAgAAAIAAgAWoqAgAPC4iAgIAAAEEAKAIIDwuOgICAAAAgACABEAQgACABEA0Lpo2AgAABIn9BACEBQQAhAkEAIQNBACEEQQAhBUEAIQZBACEHQQAhCEEAIQlBACEKQQAhC0EAIQxBACENQQAhDkEAIQ9BACEQQQAhEUEAIRJBACETQQAhFEEAIRVBACEWQQAhF0EAIRhBACEZQQAhGkEAIRtBACEcQQAhHUEAIR5BACEfQQAhIEEAISFBACEiQQAhAQNAAkBBACABQQJ0akEANgIAIAFBAWohASABQQJIBEAMAgwBCwsLQQAhAgNAAkBBKCACQQJ0akMAAAAAOAIAIAJBAWohAiACQQJIBEAMAgwBCwsLQQAhAwNAAkBBMCADQQJ0akMAAAAAOAIAIANBAWohAyADQQJIBEAMAgwBCwsLQQAhBANAAkBBOCAEQQJ0akMAAAAAOAIAIARBAWohBCAEQQJIBEAMAgwBCwsLQQAhBQNAAkBBwAAgBUECdGpDAAAAADgCACAFQQFqIQUgBUECSARADAIMAQsLC0EAQQA2AkhBACEGA0ACQEHMACAGQQJ0akEANgIAIAZBAWohBiAGQYABSARADAIMAQsLC0EAIQcDQAJAQdQEIAdBAnRqQwAAAAA4AgAgB0EBaiEHIAdBAkgEQAwCDAELCwtBACEIA0ACQEHcBCAIQQJ0akMAAAAAOAIAIAhBAWohCCAIQQJIBEAMAgwBCwsLQQAhCQNAAkBB5AQgCUECdGpBADYCACAJQQFqIQkgCUECSARADAIMAQsLC0EAIQoDQAJAQewEIApBAnRqQwAAAAA4AgAgCkEBaiEKIApBAkgEQAwCDAELCwtBACELA0ACQEH4BCALQQJ0akMAAAAAOAIAIAtBAWohCyALQQJIBEAMAgwBCwsLQQAhDANAAkBBhAUgDEECdGpDAAAAADgCACAMQQFqIQwgDEECSARADAIMAQsLC0EAIQ0DQAJAQZAFIA1BAnRqQwAAAAA4AgAgDUEBaiENIA1BAkgEQAwCDAELCwtBACEOA0ACQEGkBSAOQQJ0akMAAAAAOAIAIA5BAWohDiAOQQJIBEAMAgwBCwsLQQAhDwNAAkBBrAUgD0ECdGpDAAAAADgCACAPQQFqIQ8gD0ECSARADAIMAQsLC0EAIRADQAJAQbQFIBBBAnRqQwAAAAA4AgAgEEEBaiEQIBBBAkgEQAwCDAELCwtBACERA0ACQEG8BSARQQJ0akMAAAAAOAIAIBFBAWohESARQQJIBEAMAgwBCwsLQQAhEgNAAkBByAUgEkECdGpDAAAAADgCACASQQFqIRIgEkECSARADAIMAQsLC0EAIRMDQAJAQdAFIBNBAnRqQwAAAAA4AgAgE0EBaiETIBNBAkgEQAwCDAELCwtBACEUA0ACQEHYBSAUQQJ0akMAAAAAOAIAIBRBAWohFCAUQQJIBEAMAgwBCwsLQQAhFQNAAkBB4AUgFUECdGpDAAAAADgCACAVQQFqIRUgFUECSARADAIMAQsLC0EAIRYDQAJAQegFIBZBAnRqQwAAAAA4AgAgFkEBaiEWIBZBAkgEQAwCDAELCwtBACEXA0ACQEH0BSAXQQJ0akMAAAAAOAIAIBdBAWohFyAXQQJIBEAMAgwBCwsLQQAhGANAAkBBgAYgGEECdGpDAAAAADgCACAYQQFqIRggGEECSARADAIMAQsLC0EAIRkDQAJAQYwGIBlBAnRqQwAAAAA4AgAgGUEBaiEZIBlBAkgEQAwCDAELCwtBACEaA0ACQEGYBiAaQQJ0akMAAAAAOAIAIBpBAWohGiAaQQJIBEAMAgwBCwsLQQAhGwNAAkBBoAYgG0ECdGpDAAAAADgCACAbQQFqIRsgG0ECSARADAIMAQsLC0EAIRwDQAJAQagGIBxBAnRqQwAAAAA4AgAgHEEBaiEcIBxBAkgEQAwCDAELCwtBACEdA0ACQEGwBiAdQQJ0akMAAAAAOAIAIB1BAWohHSAdQQJIBEAMAgwBCwsLQQAhHgNAAkBBuAYgHkECdGpDAAAAADgCACAeQQFqIR4gHkECSARADAIMAQsLC0EAIR8DQAJAQcAGIB9BAnRqQwAAAAA4AgAgH0EBaiEfIB9BAkgEQAwCDAELCwtBACEgA0ACQEHIBiAgQQJ0akMAAAAAOAIAICBBAWohICAgQQJIBEAMAgwBCwsLQQAhIQNAAkBB0AYgIUECdGpDAAAAADgCACAhQQFqISEgIUGAEEgEQAwCDAELCwtBACEiA0ACQEHQxgAgIkECdGpDAAAAADgCACAiQQFqISIgIkGAEEgEQAwCDAELCwsLroKAgAAAQQAgATYCCEEAQwCAO0hDAACAP0EAKAIIspeWOAIMQQBDAACAP0EAKgIMlTgCEEEAQwAAgD9D2w9JQEEAKgIMlRADlTgCFEEAQQAqAhRDAACAP5I4AhhBAEMAAAAAQwAAgD9BACoCFJNBACoCGJWTOAIcQQBDAACAP0EAKgIYlTgCIEEAQwrXIzxBACoCGJU4AswEQQBD5/upPUEAKgIMlDgC9ARBAEMQevY+QQAqAgyUOAKABUEAQxHyBEBBACoCDJU4AowFQQBDZsVAQUEAKgIMlTgCmAVBAEPbD8lAQQAqAgyVOAKcBUEAQ83MzD1BACoCDJQ4AvAFQQBDj8L1PUEAKgIMlDgC/AVBAENVVQVBQQAqAgyVOAKIBkEAQwAAIEFBACoCDJU4ApQGC5CAgIAAACAAIAEQDCAAEA4gABALC62AgIAAAEEAQwAAgEA4AiRBAEMAALBCOALQBEEAQwAAwEA4AqAFQQBDAADcQjgCxAULjYCAgAAAIAEgACAAIAFIGw8LjYCAgAAAIAAgASAAIAFIGw8LjICAgAAAIAAgAWogAjgCAAsL7ZKAgAABAEEAC+YSeyJuYW1lIjoiU29sbyBQdWxzYXhvcGhvbmUiLCJmaWxlbmFtZSI6IlNQdWxzYXhvcGhvbmUiLCJ2ZXJzaW9uIjoiMi41LjMyIiwib3B0aW9ucyI6Indhc20taWIsIC1zY2FsIC1mdHogMiIsInNpemUiOiIxNzIzMiIsImlucHV0cyI6IjAiLCJvdXRwdXRzIjoiMSIsIm1ldGEiOlt7ImF1dGhvciI6IkVSIn0seyJiYXNpY3MubGliL25hbWUiOiJGYXVzdCBCYXNpYyBFbGVtZW50IExpYnJhcnkifSx7ImJhc2ljcy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsiZGVsYXlzLmxpYi9uYW1lIjoiRmF1c3QgRGVsYXkgTGlicmFyeSJ9LHsiZGVsYXlzLmxpYi92ZXJzaW9uIjoiMC4wIn0seyJlbnZlbG9wZXMubGliL2F1dGhvciI6IkdSQU1FIn0seyJlbnZlbG9wZXMubGliL2NvcHlyaWdodCI6IkdSQU1FIn0seyJlbnZlbG9wZXMubGliL2xpY2Vuc2UiOiJMR1BMIHdpdGggZXhjZXB0aW9uIn0seyJlbnZlbG9wZXMubGliL25hbWUiOiJGYXVzdCBFbnZlbG9wZSBMaWJyYXJ5In0seyJlbnZlbG9wZXMubGliL3ZlcnNpb24iOiIwLjAifSx7ImZpbGVuYW1lIjoiU1B1bHNheG9waG9uZSJ9LHsiZmlsdGVycy5saWIvbmFtZSI6IkZhdXN0IEZpbHRlcnMgTGlicmFyeSJ9LHsiZmlsdGVycy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsiaW5zdHJ1bWVudHMubGliL2F1dGhvciI6IlJvbWFpbiBNaWNob24gKHJtaWNob25AY2NybWEuc3RhbmZvcmQuZWR1KSJ9LHsiaW5zdHJ1bWVudHMubGliL2NvcHlyaWdodCI6IlJvbWFpbiBNaWNob24ifSx7Imluc3RydW1lbnRzLmxpYi9saWNlbmNlIjoiU1RLLTQuMyJ9LHsiaW5zdHJ1bWVudHMubGliL25hbWUiOiJGYXVzdC1TVEsgVG9vbHMgTGlicmFyeSJ9LHsiaW5zdHJ1bWVudHMubGliL3ZlcnNpb24iOiIxLjAifSx7Im1hdGhzLmxpYi9hdXRob3IiOiJHUkFNRSJ9LHsibWF0aHMubGliL2NvcHlyaWdodCI6IkdSQU1FIn0seyJtYXRocy5saWIvbGljZW5zZSI6IkxHUEwgd2l0aCBleGNlcHRpb24ifSx7Im1hdGhzLmxpYi9uYW1lIjoiRmF1c3QgTWF0aCBMaWJyYXJ5In0seyJtYXRocy5saWIvdmVyc2lvbiI6IjIuMSJ9LHsibmFtZSI6IlNvbG8gUHVsc2F4b3Bob25lIn0seyJub2lzZXMubGliL25hbWUiOiJGYXVzdCBOb2lzZSBHZW5lcmF0b3IgTGlicmFyeSJ9LHsibm9pc2VzLmxpYi92ZXJzaW9uIjoiMC4wIn0seyJvc2NpbGxhdG9ycy5saWIvbmFtZSI6IkZhdXN0IE9zY2lsbGF0b3IgTGlicmFyeSJ9LHsib3NjaWxsYXRvcnMubGliL3ZlcnNpb24iOiIwLjAifSx7InNpZ25hbHMubGliL25hbWUiOiJGYXVzdCBTaWduYWwgUm91dGluZyBMaWJyYXJ5In0seyJzaWduYWxzLmxpYi92ZXJzaW9uIjoiMC4wIn1dLCJ1aSI6W3sidHlwZSI6InZncm91cCIsImxhYmVsIjoiUFVMU0FYTyIsIml0ZW1zIjpbeyJ0eXBlIjoiaGdyb3VwIiwibGFiZWwiOiJJbnN0cnVtZW50IiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJGcmVxdWVuY3kiLCJhZGRyZXNzIjoiL1BVTFNBWE8vSW5zdHJ1bWVudC9GcmVxdWVuY3kiLCJpbmRleCI6IjcwOCIsIm1ldGEiOlt7ImFjYyI6IjEgMSAtMTIgMCAxMCJ9LHsidW5pdCI6Ikh6In1dLCJpbml0IjoiMTEwIiwibWluIjoiODAiLCJtYXgiOiI4ODAiLCJzdGVwIjoiMSJ9XX0seyJ0eXBlIjoiaGdyb3VwIiwibGFiZWwiOiJQYXJhbWV0ZXJzIiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJWaWJyYXRvIEZyZXF1ZW5jeSIsImFkZHJlc3MiOiIvUFVMU0FYTy9QYXJhbWV0ZXJzL1ZpYnJhdG9fRnJlcXVlbmN5IiwiaW5kZXgiOiI2NzIiLCJtZXRhIjpbeyJhY2MiOiIwIDEgLTEwIDAgMTAifSx7InN0eWxlIjoia25vYiJ9LHsidW5pdCI6Ikh6In1dLCJpbml0IjoiNiIsIm1pbiI6IjEiLCJtYXgiOiIxNSIsInN0ZXAiOiIwLjEifV19LHsidHlwZSI6Imhncm91cCIsImxhYmVsIjoiUHVsc2UiLCJtZXRhIjpbeyIyIjoiIn1dLCJpdGVtcyI6W3sidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6IlNwZWVkIChHcmFudWxhdG9yKSIsImFkZHJlc3MiOiIvUFVMU0FYTy9QdWxzZS9TcGVlZF8oR3JhbnVsYXRvcikiLCJpbmRleCI6IjM2IiwibWV0YSI6W3siMSI6IiJ9LHsiYWNjIjoiMCAxIC0xMCAwIDEwIn0seyJzdHlsZSI6Imtub2IifSx7InVuaXQiOiJIeiJ9XSwiaW5pdCI6IjQiLCJtaW4iOiIwLjAwMSIsIm1heCI6IjciLCJzdGVwIjoiMC4wMDAxIn0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiUHJvYmFiaWxpdHkgKEdyYW51bGF0b3IpIiwiYWRkcmVzcyI6Ii9QVUxTQVhPL1B1bHNlL1Byb2JhYmlsaXR5XyhHcmFudWxhdG9yKSIsImluZGV4IjoiNTkyIiwibWV0YSI6W3siMiI6IiJ9LHsiYWNjIjoiMSAwIC0xMCAwIDEwIn0seyJzdHlsZSI6Imtub2IifSx7InVuaXQiOiIlIn1dLCJpbml0IjoiODgiLCJtaW4iOiI3NSIsIm1heCI6IjEwMCIsInN0ZXAiOiIxIn1dfV19XX0w"; }
 
 /*
- faust2wasm
- Additional code: GRAME 2017-2018
+ faust2wasm: GRAME 2017-2018
 */
+ 
  
 'use strict';
 
@@ -5503,11 +5501,31 @@ class SPulsaxophoneNode extends AudioWorkletNode {
         this.port.onmessage = this.handleMessage.bind(this);
     }
     
+    // To be called by the message port with messages coming from the processor
+    handleMessage(event)
+    {
+        var msg = event.data;
+        if (this.output_handler) {
+            this.output_handler(msg.path, msg.value);
+        }
+    }
+    
+    // Public API
+    
+    /**
+     *  Returns a full JSON description of the SPulsaxophone.
+     */
     getJSON()
     {
         return getJSONSPulsaxophone();
     }
     
+    /**
+     *  Set the control value at a given path.
+     *
+     * @param path - a path to the control
+     * @param val - the value to be set
+     */
     setParamValue(path, val)
     {
         //this.port.postMessage({ type:"param", key:path, value:val });
@@ -5516,6 +5534,11 @@ class SPulsaxophoneNode extends AudioWorkletNode {
         this.parameters.get(path).setValueAtTime(val, 0);
     }
     
+    /**
+     *  Get the control value at a given path.
+     *
+     * @return the current control value
+     */
     getParamValue(path)
     {
         return this.parameters.get(path).value;
@@ -5541,7 +5564,6 @@ class SPulsaxophoneNode extends AudioWorkletNode {
         return this.output_handler;
     }
     
-    // TO REMOVE
     getNumInputs()
     {
         return parseInt(this.json_object.inputs);
@@ -5552,13 +5574,16 @@ class SPulsaxophoneNode extends AudioWorkletNode {
         return parseInt(this.json_object.outputs);
     }
     
+    /**
+     * Returns an array of all input paths (to be used with setParamValue/getParamValue)
+     */
     getParams()
     {
         return this.inputs_items;
     }
     
     /**
-     * Controller
+     * Control change
      *
      * @param channel - the MIDI channel (0..15, not used for now)
      * @param ctrl - the MIDI controller number (0..127)
@@ -5580,35 +5605,71 @@ class SPulsaxophoneNode extends AudioWorkletNode {
         this.port.postMessage({ type: "pitchWheel", data: [channel, wheel] });
     }
     
+    /**
+     * Generic MIDI message handler.
+     */
     midiMessage(data)
     {
         this.port.postMessage({ type:"midi", data:data });
     }
     
-    handleMessage(event) 
-    {
-        var msg = event.data;
-        if (this.output_handler) {
-            this.output_handler(msg.path, msg.value);
-        }
-    }
-    
 }
 
-// Faust context
-var faust = faust || {};
+// Factory class
 
-faust.createSPulsaxophone = function(context, callback)
-{
-    // Resume audio context each time...
-    context.resume();
+class SPulsaxophone {
     
-    // The main global scope
-    context.audioWorklet.addModule("SPulsaxophone-processor.js")
-    .then(function () {
-         callback(new SPulsaxophoneNode(context, {}));
-    })
-    .catch(function(error) { console.log(error); console.log("Faust SPulsaxophone cannot be loaded or compiled"); });
+    /**
+     * Factory constructor.
+     *
+     * @param context - the audio context
+     * @param baseUrl - the baseUrl of the plugin folder
+     */
+    constructor(context, baseUrl)
+    {
+    	// Resume audio context each time...
+    	context.resume();
+    	
+        this.context = context;
+        this.baseUrl = baseUrl;
+    }
+    
+    /**
+     * Load additionnal resources to prepare the custom AudioWorkletNode. Returns a promise to be used with the created node.
+     */
+    load()
+    {
+    	return new Promise((resolve, reject) => {
+        		this.context.audioWorklet.addModule(this.baseUrl + "SPulsaxophone-processor.js").then(() => {
+        		this.node = new SPulsaxophoneNode(this.context, {});
+        		return (this.node);
+        	}).then((node) => {
+                resolve(node);
+            }).catch((e) => {
+                reject(e);
+            });
+        });
+    }
+    
+    loadGui() 
+    {
+        return new Promise((resolve, reject) => {
+            try {
+            	var link = document.createElement('link');
+            	link.rel = 'import';
+            	link.id = 'urlPlugin';
+            	link.href = this.baseUrl + "main.html";
+            	document.head.appendChild(link);
+            	var element = document.createElement("faust-SPulsaxophone");
+            	element._plug = this.node;
+            	resolve(element);
+        	} catch (e) {
+            	console.log(e);
+            	reject(e);
+        	}
+    	});
+    };
+    
 }
 
 </script>
@@ -5624,11 +5685,9 @@ faust.createSPulsaxophone = function(context, callback)
 
 var isWasm = (typeof(WebAssembly) !== "undefined");
 var isWebKitAudio = (typeof (webkitAudioContext) !== "undefined");
-var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
-var audio_input = null;
-var SPulsaxophone = null;
-var faustsvg = null;
-var output_handler = null;
+var context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
+var factory = null;
+var node = null;
 
 function workletAvailable()
 {
@@ -5641,15 +5700,15 @@ function workletAvailable()
 
 function pitchWheel(channel, wheel)
 {
-    if (SPulsaxophone) {
-        SPulsaxophone.pitchWheel(channel, wheel);
+    if (node) {
+        node.pitchWheel(channel, wheel);
     }
 }
 
 function ctrlChange(channel, ctrl, value)
 {
-    if (SPulsaxophone) {
-        SPulsaxophone.ctrlChange(channel, ctrl, value);
+    if (node) {
+        node.ctrlChange(channel, ctrl, value);
     }
 }
 
@@ -5714,7 +5773,6 @@ function activateAudioInput()
         navigator.getUserMedia({audio: { echoCancellation: false }}, getDevice, function(e) {
                                alert('Error getting audio input');
                                console.log(e);
-                               audio_input = null;
                                });
     } else {
         alert('Audio input API not available');
@@ -5723,20 +5781,17 @@ function activateAudioInput()
 
 function getDevice(device)
 {
-    // Create an AudioNode from the stream.
-    audio_input = audio_context.createMediaStreamSource(device);
-
-    // Connect it to the destination.
-    audio_input.connect(SPulsaxophone);
+    // Connect the input to the destination.
+    context.createMediaStreamSource(device).connect(node);
 }
 
 // Save/Load functions using local storage
 function saveSPulsaxophone()
 {
     if (typeof(Storage) !== "undefined") {
-        var params = SPulsaxophone.getParams();
+        var params = node.getParams();
         for (var i = 0; i < params.length; i++) {
-            localStorage.setItem(params[i], SPulsaxophone.getParamValue(params[i]));
+            localStorage.setItem(params[i], node.getParamValue(params[i]));
         }
     }
 }
@@ -5744,49 +5799,43 @@ function saveSPulsaxophone()
 function loadSPulsaxophone()
 {
     if (typeof(Storage) !== "undefined") {
-        var params = SPulsaxophone.getParams();
+        var params = node.getParams();
         for (var i = 0; i < params.length; i++) {
             if (localStorage.getItem(params[i])) {
                 // Restore SPulsaxophone state
-                SPulsaxophone.setParamValue(params[i], Number(localStorage.getItem(params[i])));
+                node.setParamValue(params[i], Number(localStorage.getItem(params[i])));
                 // Restore GUI state
-                output_handler(params[i], Number(localStorage.getItem(params[i])));
+                node.getOutputParamHandler()(params[i], Number(localStorage.getItem(params[i])));
             }
         }
     }
 }
 
-function startSPulsaxophoneAux(dsp)
+function startSPulsaxophoneAux(aw_node)
 {
-    if (!dsp) {
-        alert(faust.getErrorMessage());
-        return;
-    }
+    node = aw_node;
 
-    SPulsaxophone = dsp;
-
-    if (SPulsaxophone.getNumInputs() > 0) {
+    if (node.getNumInputs() > 0) {
         activateAudioInput();
     }
     
     console.log("startSPulsaxophoneAux");
-    console.log(SPulsaxophone.parameters);
+    console.log(node.parameters);
     
-    SPulsaxophone.connect(audio_context.destination);
-    console.log(SPulsaxophone.getJSON());
+    node.connect(context.destination);
+    console.log(node.getJSON());
 
     // TODO: emcc
-    //SPulsaxophone.metadata({ declare: function(key, value) { console.log("key = " + key + " value = " + value); }});
-    console.log(SPulsaxophone.getParams());
+    //node.metadata({ declare: function(key, value) { console.log("key = " + key + " value = " + value); }});
+    console.log(node.getParams());
 
     // No polling from the server needed, so use an empty loop
     _f4u$t.main_loop = function() {}
 
-    faustsvg = $('<div />');
+    var faustsvg = $('<div />');
     $('body').append(faustsvg);
     
-    output_handler = _f4u$t.main(SPulsaxophone.getJSON(), faustsvg, function(path, val) { SPulsaxophone.setParamValue(path, val); });
-    SPulsaxophone.setOutputParamHandler(output_handler);
+    node.setOutputParamHandler(_f4u$t.main(node.getJSON(), faustsvg, function(path, val) { node.setParamValue(path, val); }));
 
     // Load SPulsaxophone state from local storage
     loadSPulsaxophone();
@@ -5800,7 +5849,10 @@ function startSPulsaxophone()
 function startNewSPulsaxophone()
 {
      if (isWasm && workletAvailable()) {
-        faust.createSPulsaxophone(audio_context, startSPulsaxophoneAux);
+        factory = new SPulsaxophone(context, "");
+        factory.load()
+        .then((aw_node) => startSPulsaxophoneAux(aw_node))
+        .catch((error) => { console.log(error); console.log("Faust mydsp cannot be loaded or compiled"); });
     }  else {
         alert("WebAssembly or AudioWorklet is not supported in this browser !");
     }
@@ -5810,12 +5862,12 @@ function startNewSPulsaxophone()
 window.addEventListener('touchstart', function() {
 
                         // create empty buffer
-                        var buffer = audio_context.createBuffer(1, 1, 22050);
-                        var source = audio_context.createBufferSource();
+                        var buffer = context.createBuffer(1, 1, 22050);
+                        var source = context.createBufferSource();
                         source.buffer = buffer;
 
                         // connect to output (your speakers)
-                        source.connect(audio_context.destination);
+                        source.connect(context.destination);
 
                         // play the file
                         source.start();
@@ -5833,7 +5885,7 @@ if (typeof (Module) !== "undefined") {
 }
 
 // Save SPulsaxophone state to local storage
-setInterval(function() { if (SPulsaxophone) saveSPulsaxophone(); }, 1000);
+setInterval(function() { if (node) saveSPulsaxophone(); }, 1000);
 
 </script>
 </body>

@@ -372,7 +372,7 @@ Finds the sum of a numerical array.
 **/
 Array.prototype.sum = function() {
   var sum = 0;
-  for(var i = 0; i < this.length; i++) {
+  for (var i = 0; i < this.length; i++) {
     sum += this[i];
   }
   return sum;
@@ -740,7 +740,7 @@ _f4u$t.rand_string = function(n)
     n = 8;
   }
 
-  for( var i=0; i < n; i++ ) {
+  for (var i = 0; i < n; i++ ) {
     text += possible.charAt(Math.floor(Math.random() * possible.length));
   }
   return text;
@@ -1131,7 +1131,7 @@ _f4u$t.unique = function(s) {
 }
 
 /**
-Returns the type part of an id.  The faust naming convention gives
+Returns the type part of an id. The faust naming convention gives
 all DOM ids a type as the second entry. Examples are vslider, hslider,
 rbutton.
 
@@ -1574,7 +1574,7 @@ _f4u$t.hard_delete = function(div) {
   To be called when used with the C++/LLVM libfaust based FaustNode.
 **/
 _f4u$t.make_audio_ui = function(dsp, svg) {
-  var json = eval ("(" + dsp.json() + ")");
+  var json = eval("(" + dsp.json() + ")");
   var faust_svg = new _f4u$t.SVG(
     svg,
     // kludge to prevent scroll bars...
@@ -2459,7 +2459,6 @@ _f4u$t.RotatingButton.prototype.r = function() {
 _f4u$t.RotatingButton.prototype.dims = function() {
   return [this.r() * 2, this.r() * 2];
 }
-
 
 _f4u$t.RotatingButton.prototype.make_mgroove = function(svg, parent, id) {
   var full_id = 'faust_rbutton_mgroove_'+id;
@@ -4225,7 +4224,6 @@ _f4u$t.json_to_ui = function(json, hash) {
  * obviously, the goal is to separate the two as much as possible
  */
 
-
 /*
   UTILITY FUNCTIONS
 */
@@ -4270,7 +4268,7 @@ _f4u$t.transform_to_array = function(transform) {
   while(true) {
     var match = matrix.exec(transform);
     if (match != null) {
-      out.push(["matrix",parseFloat(match[1]), parseFloat(match[2]), parseFloat(match[3]), parseFloat(match[4]), parseFloat(match[5]), parseFloat(match[6])]);
+      out.push(["matrix", parseFloat(match[1]), parseFloat(match[2]), parseFloat(match[3]), parseFloat(match[4]), parseFloat(match[5]), parseFloat(match[6])]);
       transform = transform.substr(match[0].length,transform.length-match[0].length);
       continue;
     }
@@ -5410,19 +5408,19 @@ _f4u$t.main_loop = function() {
 $(document).ready(function() { _f4u$t.main_loop(); });
 
 /*
-Code generated with Faust version 2.5.24
+Code generated with Faust version 2.5.32
 Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONFreeverb() {
-	return "{\"name\":\"freeverb\",\"filename\":\"Freeverb\",\"version\":\"2.5.24\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"149856\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"author\":\"Grame\"},{\"copyright\":\"(c) GRAME 2006\"},{\"filename\":\"Freeverb\"},{\"license\":\"BSD\"},{\"name\":\"freeverb\"},{\"reference\":\"https://ccrma.stanford.edu/~jos/pasp/Freeverb.html\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"},{\"version\":\"1.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Freeverb\",\"items\":[{\"type\":\"hslider\",\"label\":\"Reverberation Intensity\",\"address\":\"/Freeverb/Reverberation_Intensity\",\"index\":\"0\",\"meta\":[{\"acc\":\"1 1 -10 0 10\"}],\"init\":\"0.3333\",\"min\":\"0.1\",\"max\":\"0.9\",\"step\":\"0.025\"},{\"type\":\"hslider\",\"label\":\"Reverberation Room Size\",\"address\":\"/Freeverb/Reverberation_Room_Size\",\"index\":\"20\",\"meta\":[{\"acc\":\"1 1 -10 0 10\"}],\"init\":\"0.5\",\"min\":\"0.1\",\"max\":\"0.9\",\"step\":\"0.025\"}]}]}";
+	return "{\"name\":\"freeverb\",\"filename\":\"Freeverb\",\"version\":\"2.5.32\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"149856\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"author\":\"Grame\"},{\"copyright\":\"(c) GRAME 2006\"},{\"filename\":\"Freeverb\"},{\"license\":\"BSD\"},{\"name\":\"freeverb\"},{\"reference\":\"https://ccrma.stanford.edu/~jos/pasp/Freeverb.html\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"},{\"version\":\"1.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Freeverb\",\"items\":[{\"type\":\"hslider\",\"label\":\"Reverberation Intensity\",\"address\":\"/Freeverb/Reverberation_Intensity\",\"index\":\"149840\",\"meta\":[{\"acc\":\"1 1 -10 0 10\"}],\"init\":\"0.3333\",\"min\":\"0.1\",\"max\":\"0.9\",\"step\":\"0.025\"},{\"type\":\"hslider\",\"label\":\"Reverberation Room Size\",\"address\":\"/Freeverb/Reverberation_Room_Size\",\"index\":\"8\",\"meta\":[{\"acc\":\"1 1 -10 0 10\"}],\"init\":\"0.5\",\"min\":\"0.1\",\"max\":\"0.9\",\"step\":\"0.025\"}]}]}";
 }
-function getBase64CodeFreeverb() { return "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ACA8QQFqITwgPEECSARADAIMAQsLC0EAIT0DQAJAQcTqCCA9QQJ0akMAAAAAOAIAID1BAWohPSA9QYAESARADAIMAQsLC0EAIT4DQAJAQcT6CCA+QQJ0akMAAAAAOAIAID5BAWohPiA+QQJIBEAMAgwBCwsLQQAhPwNAAkBBzPoIID9BAnRqQwAAAAA4AgAgP0EBaiE/ID9BgARIBEAMAgwBCwsLQQAhQANAAkBBzIoJIEBBAnRqQwAAAAA4AgAgQEEBaiFAIEBBAkgEQAwCDAELCwtBACFBA0ACQEHUigkgQUECdGpDAAAAADgCACBBQQFqIUEgQUGAAkgEQAwCDAELCwtBACFCA0ACQEHUkgkgQkECdGpDAAAAADgCACBCQQFqIUIgQkECSARADAIMAQsLCwuLgICAAABBACABNgLckgkLkICAgAAAIAAgARAIIAAQCiAAEAcLloCAgAAAQQBDTKaqPjgCAEEAQwAAAD84AhQLjYCAgAAAIAEgACAAIAFIGw8LjYCAgAAAIAAgASAAIAFIGw8LjICAgAAAIAAgAWogAjgCAAsL8YaAgAABAEEAC+oGeyJuYW1lIjoiZnJlZXZlcmIiLCJmaWxlbmFtZSI6IkZyZWV2ZXJiIiwidmVyc2lvbiI6IjIuNS4yNCIsIm9wdGlvbnMiOiJ3YXNtLWliLCAtc2NhbCAtZnR6IDIiLCJzaXplIjoiMTQ5ODU2IiwiaW5wdXRzIjoiMSIsIm91dHB1dHMiOiIxIiwibWV0YSI6W3siYXV0aG9yIjoiR3JhbWUifSx7ImNvcHlyaWdodCI6IihjKSBHUkFNRSAyMDA2In0seyJmaWxlbmFtZSI6IkZyZWV2ZXJiIn0seyJsaWNlbnNlIjoiQlNEIn0seyJuYW1lIjoiZnJlZXZlcmIifSx7InJlZmVyZW5jZSI6Imh0dHBzOi8vY2NybWEuc3RhbmZvcmQuZWR1L35qb3MvcGFzcC9GcmVldmVyYi5odG1sIn0seyJzaWduYWxzLmxpYi9uYW1lIjoiRmF1c3QgU2lnbmFsIFJvdXRpbmcgTGlicmFyeSJ9LHsic2lnbmFscy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsidmVyc2lvbiI6IjEuMCJ9XSwidWkiOlt7InR5cGUiOiJ2Z3JvdXAiLCJsYWJlbCI6IkZyZWV2ZXJiIiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJSZXZlcmJlcmF0aW9uIEludGVuc2l0eSIsImFkZHJlc3MiOiIvRnJlZXZlcmIvUmV2ZXJiZXJhdGlvbl9JbnRlbnNpdHkiLCJpbmRleCI6IjAiLCJtZXRhIjpbeyJhY2MiOiIxIDEgLTEwIDAgMTAifV0sImluaXQiOiIwLjMzMzMiLCJtaW4iOiIwLjEiLCJtYXgiOiIwLjkiLCJzdGVwIjoiMC4wMjUifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJSZXZlcmJlcmF0aW9uIFJvb20gU2l6ZSIsImFkZHJlc3MiOiIvRnJlZXZlcmIvUmV2ZXJiZXJhdGlvbl9Sb29tX1NpemUiLCJpbmRleCI6IjIwIiwibWV0YSI6W3siYWNjIjoiMSAxIC0xMCAwIDEwIn1dLCJpbml0IjoiMC41IiwibWluIjoiMC4xIiwibWF4IjoiMC45Iiwic3RlcCI6IjAuMDI1In1dfV19MA=="; }
+function getBase64CodeFreeverb() { return "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biI6IjAuMCJ9LHsidmVyc2lvbiI6IjEuMCJ9XSwidWkiOlt7InR5cGUiOiJ2Z3JvdXAiLCJsYWJlbCI6IkZyZWV2ZXJiIiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJSZXZlcmJlcmF0aW9uIEludGVuc2l0eSIsImFkZHJlc3MiOiIvRnJlZXZlcmIvUmV2ZXJiZXJhdGlvbl9JbnRlbnNpdHkiLCJpbmRleCI6IjE0OTg0MCIsIm1ldGEiOlt7ImFjYyI6IjEgMSAtMTAgMCAxMCJ9XSwiaW5pdCI6IjAuMzMzMyIsIm1pbiI6IjAuMSIsIm1heCI6IjAuOSIsInN0ZXAiOiIwLjAyNSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6IlJldmVyYmVyYXRpb24gUm9vbSBTaXplIiwiYWRkcmVzcyI6Ii9GcmVldmVyYi9SZXZlcmJlcmF0aW9uX1Jvb21fU2l6ZSIsImluZGV4IjoiOCIsIm1ldGEiOlt7ImFjYyI6IjEgMSAtMTAgMCAxMCJ9XSwiaW5pdCI6IjAuNSIsIm1pbiI6IjAuMSIsIm1heCI6IjAuOSIsInN0ZXAiOiIwLjAyNSJ9XX1dfTA="; }
 
 /*
- faust2wasm
- Additional code: GRAME 2017-2018
+ faust2wasm: GRAME 2017-2018
 */
+ 
  
 'use strict';
 
@@ -5503,11 +5501,31 @@ class FreeverbNode extends AudioWorkletNode {
         this.port.onmessage = this.handleMessage.bind(this);
     }
     
+    // To be called by the message port with messages coming from the processor
+    handleMessage(event)
+    {
+        var msg = event.data;
+        if (this.output_handler) {
+            this.output_handler(msg.path, msg.value);
+        }
+    }
+    
+    // Public API
+    
+    /**
+     *  Returns a full JSON description of the Freeverb.
+     */
     getJSON()
     {
         return getJSONFreeverb();
     }
     
+    /**
+     *  Set the control value at a given path.
+     *
+     * @param path - a path to the control
+     * @param val - the value to be set
+     */
     setParamValue(path, val)
     {
         //this.port.postMessage({ type:"param", key:path, value:val });
@@ -5516,6 +5534,11 @@ class FreeverbNode extends AudioWorkletNode {
         this.parameters.get(path).setValueAtTime(val, 0);
     }
     
+    /**
+     *  Get the control value at a given path.
+     *
+     * @return the current control value
+     */
     getParamValue(path)
     {
         return this.parameters.get(path).value;
@@ -5541,7 +5564,6 @@ class FreeverbNode extends AudioWorkletNode {
         return this.output_handler;
     }
     
-    // TO REMOVE
     getNumInputs()
     {
         return parseInt(this.json_object.inputs);
@@ -5552,13 +5574,16 @@ class FreeverbNode extends AudioWorkletNode {
         return parseInt(this.json_object.outputs);
     }
     
+    /**
+     * Returns an array of all input paths (to be used with setParamValue/getParamValue)
+     */
     getParams()
     {
         return this.inputs_items;
     }
     
     /**
-     * Controller
+     * Control change
      *
      * @param channel - the MIDI channel (0..15, not used for now)
      * @param ctrl - the MIDI controller number (0..127)
@@ -5580,35 +5605,71 @@ class FreeverbNode extends AudioWorkletNode {
         this.port.postMessage({ type: "pitchWheel", data: [channel, wheel] });
     }
     
+    /**
+     * Generic MIDI message handler.
+     */
     midiMessage(data)
     {
         this.port.postMessage({ type:"midi", data:data });
     }
     
-    handleMessage(event) 
-    {
-        var msg = event.data;
-        if (this.output_handler) {
-            this.output_handler(msg.path, msg.value);
-        }
-    }
-    
 }
 
-// Faust context
-var faust = faust || {};
+// Factory class
 
-faust.createFreeverb = function(context, callback)
-{
-    // Resume audio context each time...
-    context.resume();
+class Freeverb {
     
-    // The main global scope
-    context.audioWorklet.addModule("Freeverb-processor.js")
-    .then(function () {
-         callback(new FreeverbNode(context, {}));
-    })
-    .catch(function(error) { console.log(error); console.log("Faust Freeverb cannot be loaded or compiled"); });
+    /**
+     * Factory constructor.
+     *
+     * @param context - the audio context
+     * @param baseUrl - the baseUrl of the plugin folder
+     */
+    constructor(context, baseUrl)
+    {
+    	// Resume audio context each time...
+    	context.resume();
+    	
+        this.context = context;
+        this.baseUrl = baseUrl;
+    }
+    
+    /**
+     * Load additionnal resources to prepare the custom AudioWorkletNode. Returns a promise to be used with the created node.
+     */
+    load()
+    {
+    	return new Promise((resolve, reject) => {
+        		this.context.audioWorklet.addModule(this.baseUrl + "Freeverb-processor.js").then(() => {
+        		this.node = new FreeverbNode(this.context, {});
+        		return (this.node);
+        	}).then((node) => {
+                resolve(node);
+            }).catch((e) => {
+                reject(e);
+            });
+        });
+    }
+    
+    loadGui() 
+    {
+        return new Promise((resolve, reject) => {
+            try {
+            	var link = document.createElement('link');
+            	link.rel = 'import';
+            	link.id = 'urlPlugin';
+            	link.href = this.baseUrl + "main.html";
+            	document.head.appendChild(link);
+            	var element = document.createElement("faust-Freeverb");
+            	element._plug = this.node;
+            	resolve(element);
+        	} catch (e) {
+            	console.log(e);
+            	reject(e);
+        	}
+    	});
+    };
+    
 }
 
 </script>
@@ -5624,11 +5685,9 @@ faust.createFreeverb = function(context, callback)
 
 var isWasm = (typeof(WebAssembly) !== "undefined");
 var isWebKitAudio = (typeof (webkitAudioContext) !== "undefined");
-var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
-var audio_input = null;
-var Freeverb = null;
-var faustsvg = null;
-var output_handler = null;
+var context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
+var factory = null;
+var node = null;
 
 function workletAvailable()
 {
@@ -5641,15 +5700,15 @@ function workletAvailable()
 
 function pitchWheel(channel, wheel)
 {
-    if (Freeverb) {
-        Freeverb.pitchWheel(channel, wheel);
+    if (node) {
+        node.pitchWheel(channel, wheel);
     }
 }
 
 function ctrlChange(channel, ctrl, value)
 {
-    if (Freeverb) {
-        Freeverb.ctrlChange(channel, ctrl, value);
+    if (node) {
+        node.ctrlChange(channel, ctrl, value);
     }
 }
 
@@ -5714,7 +5773,6 @@ function activateAudioInput()
         navigator.getUserMedia({audio: { echoCancellation: false }}, getDevice, function(e) {
                                alert('Error getting audio input');
                                console.log(e);
-                               audio_input = null;
                                });
     } else {
         alert('Audio input API not available');
@@ -5723,20 +5781,17 @@ function activateAudioInput()
 
 function getDevice(device)
 {
-    // Create an AudioNode from the stream.
-    audio_input = audio_context.createMediaStreamSource(device);
-
-    // Connect it to the destination.
-    audio_input.connect(Freeverb);
+    // Connect the input to the destination.
+    context.createMediaStreamSource(device).connect(node);
 }
 
 // Save/Load functions using local storage
 function saveFreeverb()
 {
     if (typeof(Storage) !== "undefined") {
-        var params = Freeverb.getParams();
+        var params = node.getParams();
         for (var i = 0; i < params.length; i++) {
-            localStorage.setItem(params[i], Freeverb.getParamValue(params[i]));
+            localStorage.setItem(params[i], node.getParamValue(params[i]));
         }
     }
 }
@@ -5744,49 +5799,43 @@ function saveFreeverb()
 function loadFreeverb()
 {
     if (typeof(Storage) !== "undefined") {
-        var params = Freeverb.getParams();
+        var params = node.getParams();
         for (var i = 0; i < params.length; i++) {
             if (localStorage.getItem(params[i])) {
                 // Restore Freeverb state
-                Freeverb.setParamValue(params[i], Number(localStorage.getItem(params[i])));
+                node.setParamValue(params[i], Number(localStorage.getItem(params[i])));
                 // Restore GUI state
-                output_handler(params[i], Number(localStorage.getItem(params[i])));
+                node.getOutputParamHandler()(params[i], Number(localStorage.getItem(params[i])));
             }
         }
     }
 }
 
-function startFreeverbAux(dsp)
+function startFreeverbAux(aw_node)
 {
-    if (!dsp) {
-        alert(faust.getErrorMessage());
-        return;
-    }
+    node = aw_node;
 
-    Freeverb = dsp;
-
-    if (Freeverb.getNumInputs() > 0) {
+    if (node.getNumInputs() > 0) {
         activateAudioInput();
     }
     
     console.log("startFreeverbAux");
-    console.log(Freeverb.parameters);
+    console.log(node.parameters);
     
-    Freeverb.connect(audio_context.destination);
-    console.log(Freeverb.getJSON());
+    node.connect(context.destination);
+    console.log(node.getJSON());
 
     // TODO: emcc
-    //Freeverb.metadata({ declare: function(key, value) { console.log("key = " + key + " value = " + value); }});
-    console.log(Freeverb.getParams());
+    //node.metadata({ declare: function(key, value) { console.log("key = " + key + " value = " + value); }});
+    console.log(node.getParams());
 
     // No polling from the server needed, so use an empty loop
     _f4u$t.main_loop = function() {}
 
-    faustsvg = $('<div />');
+    var faustsvg = $('<div />');
     $('body').append(faustsvg);
     
-    output_handler = _f4u$t.main(Freeverb.getJSON(), faustsvg, function(path, val) { Freeverb.setParamValue(path, val); });
-    Freeverb.setOutputParamHandler(output_handler);
+    node.setOutputParamHandler(_f4u$t.main(node.getJSON(), faustsvg, function(path, val) { node.setParamValue(path, val); }));
 
     // Load Freeverb state from local storage
     loadFreeverb();
@@ -5800,7 +5849,10 @@ function startFreeverb()
 function startNewFreeverb()
 {
      if (isWasm && workletAvailable()) {
-        faust.createFreeverb(audio_context, startFreeverbAux);
+        factory = new Freeverb(context, "");
+        factory.load()
+        .then((aw_node) => startFreeverbAux(aw_node))
+        .catch((error) => { console.log(error); console.log("Faust mydsp cannot be loaded or compiled"); });
     }  else {
         alert("WebAssembly or AudioWorklet is not supported in this browser !");
     }
@@ -5810,12 +5862,12 @@ function startNewFreeverb()
 window.addEventListener('touchstart', function() {
 
                         // create empty buffer
-                        var buffer = audio_context.createBuffer(1, 1, 22050);
-                        var source = audio_context.createBufferSource();
+                        var buffer = context.createBuffer(1, 1, 22050);
+                        var source = context.createBufferSource();
                         source.buffer = buffer;
 
                         // connect to output (your speakers)
-                        source.connect(audio_context.destination);
+                        source.connect(context.destination);
 
                         // play the file
                         source.start();
@@ -5833,7 +5885,7 @@ if (typeof (Module) !== "undefined") {
 }
 
 // Save Freeverb state to local storage
-setInterval(function() { if (Freeverb) saveFreeverb(); }, 1000);
+setInterval(function() { if (node) saveFreeverb(); }, 1000);
 
 </script>
 </body>

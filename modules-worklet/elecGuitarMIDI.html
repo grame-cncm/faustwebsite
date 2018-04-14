@@ -372,7 +372,7 @@ Finds the sum of a numerical array.
 **/
 Array.prototype.sum = function() {
   var sum = 0;
-  for(var i = 0; i < this.length; i++) {
+  for (var i = 0; i < this.length; i++) {
     sum += this[i];
   }
   return sum;
@@ -740,7 +740,7 @@ _f4u$t.rand_string = function(n)
     n = 8;
   }
 
-  for( var i=0; i < n; i++ ) {
+  for (var i = 0; i < n; i++ ) {
     text += possible.charAt(Math.floor(Math.random() * possible.length));
   }
   return text;
@@ -1131,7 +1131,7 @@ _f4u$t.unique = function(s) {
 }
 
 /**
-Returns the type part of an id.  The faust naming convention gives
+Returns the type part of an id. The faust naming convention gives
 all DOM ids a type as the second entry. Examples are vslider, hslider,
 rbutton.
 
@@ -1574,7 +1574,7 @@ _f4u$t.hard_delete = function(div) {
   To be called when used with the C++/LLVM libfaust based FaustNode.
 **/
 _f4u$t.make_audio_ui = function(dsp, svg) {
-  var json = eval ("(" + dsp.json() + ")");
+  var json = eval("(" + dsp.json() + ")");
   var faust_svg = new _f4u$t.SVG(
     svg,
     // kludge to prevent scroll bars...
@@ -2459,7 +2459,6 @@ _f4u$t.RotatingButton.prototype.r = function() {
 _f4u$t.RotatingButton.prototype.dims = function() {
   return [this.r() * 2, this.r() * 2];
 }
-
 
 _f4u$t.RotatingButton.prototype.make_mgroove = function(svg, parent, id) {
   var full_id = 'faust_rbutton_mgroove_'+id;
@@ -4225,7 +4224,6 @@ _f4u$t.json_to_ui = function(json, hash) {
  * obviously, the goal is to separate the two as much as possible
  */
 
-
 /*
   UTILITY FUNCTIONS
 */
@@ -4270,7 +4268,7 @@ _f4u$t.transform_to_array = function(transform) {
   while(true) {
     var match = matrix.exec(transform);
     if (match != null) {
-      out.push(["matrix",parseFloat(match[1]), parseFloat(match[2]), parseFloat(match[3]), parseFloat(match[4]), parseFloat(match[5]), parseFloat(match[6])]);
+      out.push(["matrix", parseFloat(match[1]), parseFloat(match[2]), parseFloat(match[3]), parseFloat(match[4]), parseFloat(match[5]), parseFloat(match[6])]);
       transform = transform.substr(match[0].length,transform.length-match[0].length);
       continue;
     }
@@ -5410,18 +5408,17 @@ _f4u$t.main_loop = function() {
 $(document).ready(function() { _f4u$t.main_loop(); });
 
 /*
-Code generated with Faust version 2.5.24
+Code generated with Faust version 2.5.32
 Compilation options: wasm-eb, -scal -ftz 2
 */
 
 function getJSONelecGuitarMIDI() {
-	return "{\"name\":\"ElecGuitarMidi\",\"filename\":\"elecGuitarMIDI\",\"version\":\"2.5.24\",\"options\":\"wasm-eb, -scal -ftz 2\",\"size\":\"33000\",\"inputs\":\"0\",\"outputs\":\"2\",\"meta\":[{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"copyright\":\"(c)Romain Michon, CCRMA (Stanford University), GRAME\"},{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"description\":\"Simple electric guitar model without effect chain.\"},{\"envelopes.lib/author\":\"GRAME\"},{\"envelopes.lib/copyright\":\"GRAME\"},{\"envelopes.lib/license\":\"LGPL with exception\"},{\"envelopes.lib/name\":\"Faust Envelope Library\"},{\"envelopes.lib/version\":\"0.0\"},{\"filename\":\"elecGuitarMIDI\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"license\":\"MIT\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"ElecGuitarMidi\"},{\"noises.lib/name\":\"Faust Noise Generator Library\"},{\"noises.lib/version\":\"0.0\"},{\"routes.lib/name\":\"Faust Signal Routing Library\"},{\"routes.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"elecGuitar\",\"items\":[{\"type\":\"hgroup\",\"label\":\"midi\",\"meta\":[{\"0\":\"\"}],\"items\":[{\"type\":\"hslider\",\"label\":\"freq\",\"address\":\"/elecGuitar/midi/freq\",\"index\":\"32\",\"meta\":[{\"0\":\"\"},{\"style\":\"knob\"}],\"init\":\"440\",\"min\":\"50\",\"max\":\"1000\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"bend\",\"address\":\"/elecGuitar/midi/bend\",\"index\":\"36\",\"meta\":[{\"1\":\"\"},{\"hidden\":\"1\"},{\"midi\":\"pitchwheel\"},{\"style\":\"knob\"}],\"init\":\"1\",\"min\":\"0\",\"max\":\"10\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"gain\",\"address\":\"/elecGuitar/midi/gain\",\"index\":\"8300\",\"meta\":[{\"2\":\"\"},{\"style\":\"knob\"}],\"init\":\"0.8\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"sustain\",\"address\":\"/elecGuitar/midi/sustain\",\"index\":\"44\",\"meta\":[{\"3\":\"\"},{\"hidden\":\"1\"},{\"midi\":\"ctrl 64\"},{\"style\":\"knob\"}],\"init\":\"0\",\"min\":\"0\",\"max\":\"1\",\"step\":\"1\"}]},{\"type\":\"hslider\",\"label\":\"pluckPosition\",\"address\":\"/elecGuitar/pluckPosition\",\"index\":\"20\",\"meta\":[{\"1\":\"\"},{\"midi\":\"ctrl 1\"}],\"init\":\"0.8\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"outGain\",\"address\":\"/elecGuitar/outGain\",\"index\":\"0\",\"meta\":[{\"2\":\"\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"button\",\"label\":\"gate\",\"address\":\"/elecGuitar/gate\",\"index\":\"40\",\"meta\":[{\"3\":\"\"}]}]}]}";
+	return "{\"name\":\"ElecGuitarMidi\",\"filename\":\"elecGuitarMIDI\",\"version\":\"2.5.32\",\"options\":\"wasm-eb, -scal -ftz 2\",\"size\":\"33000\",\"inputs\":\"0\",\"outputs\":\"2\",\"meta\":[{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"copyright\":\"(c)Romain Michon, CCRMA (Stanford University), GRAME\"},{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"description\":\"Simple electric guitar model without effect chain.\"},{\"envelopes.lib/author\":\"GRAME\"},{\"envelopes.lib/copyright\":\"GRAME\"},{\"envelopes.lib/license\":\"LGPL with exception\"},{\"envelopes.lib/name\":\"Faust Envelope Library\"},{\"envelopes.lib/version\":\"0.0\"},{\"filename\":\"elecGuitarMIDI\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"license\":\"MIT\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"ElecGuitarMidi\"},{\"noises.lib/name\":\"Faust Noise Generator Library\"},{\"noises.lib/version\":\"0.0\"},{\"routes.lib/name\":\"Faust Signal Routing Library\"},{\"routes.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"elecGuitar\",\"items\":[{\"type\":\"hgroup\",\"label\":\"midi\",\"meta\":[{\"0\":\"\"}],\"items\":[{\"type\":\"hslider\",\"label\":\"freq\",\"address\":\"/elecGuitar/midi/freq\",\"index\":\"20\",\"meta\":[{\"0\":\"\"},{\"style\":\"knob\"}],\"init\":\"440\",\"min\":\"50\",\"max\":\"1000\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"bend\",\"address\":\"/elecGuitar/midi/bend\",\"index\":\"24\",\"meta\":[{\"1\":\"\"},{\"hidden\":\"1\"},{\"midi\":\"pitchwheel\"},{\"style\":\"knob\"}],\"init\":\"1\",\"min\":\"0\",\"max\":\"10\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"gain\",\"address\":\"/elecGuitar/midi/gain\",\"index\":\"8300\",\"meta\":[{\"2\":\"\"},{\"style\":\"knob\"}],\"init\":\"0.8\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"sustain\",\"address\":\"/elecGuitar/midi/sustain\",\"index\":\"32\",\"meta\":[{\"3\":\"\"},{\"hidden\":\"1\"},{\"midi\":\"ctrl 64\"},{\"style\":\"knob\"}],\"init\":\"0\",\"min\":\"0\",\"max\":\"1\",\"step\":\"1\"}]},{\"type\":\"hslider\",\"label\":\"pluckPosition\",\"address\":\"/elecGuitar/pluckPosition\",\"index\":\"52\",\"meta\":[{\"1\":\"\"},{\"midi\":\"ctrl 1\"}],\"init\":\"0.8\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"outGain\",\"address\":\"/elecGuitar/outGain\",\"index\":\"0\",\"meta\":[{\"2\":\"\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"button\",\"label\":\"gate\",\"address\":\"/elecGuitar/gate\",\"index\":\"28\",\"meta\":[{\"3\":\"\"}]}]}]}";
 }
-function getBase64CodeelecGuitarMIDI() { return "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zEw/OAIAIABBIGpDAADcQzgCACAAQSRqQwAAgD84AgAgAEEoakMAAAAAOAIAIABBLGpDAAAAADgCACAAQezAAGpDzcxMPzgCAAuNgICAAAAgASAAIAAgAUgbDwuNgICAAAAgACABIAAgAUgbDwuMgICAAAAgACABaiACOAIACwutk4CAAAEAQQALphN7Im5hbWUiOiJFbGVjR3VpdGFyTWlkaSIsImZpbGVuYW1lIjoiZWxlY0d1aXRhck1JREkiLCJ2ZXJzaW9uIjoiMi41LjI0Iiwib3B0aW9ucyI6Indhc20tZWIsIC1zY2FsIC1mdHogMiIsInNpemUiOiIzMzAwMCIsImlucHV0cyI6IjAiLCJvdXRwdXRzIjoiMiIsIm1ldGEiOlt7ImJhc2ljcy5saWIvbmFtZSI6IkZhdXN0IEJhc2ljIEVsZW1lbnQgTGlicmFyeSJ9LHsiYmFzaWNzLmxpYi92ZXJzaW9uIjoiMC4wIn0seyJjb3B5cmlnaHQiOiIoYylSb21haW4gTWljaG9uLCBDQ1JNQSAoU3RhbmZvcmQgVW5pdmVyc2l0eSksIEdSQU1FIn0seyJkZWxheXMubGliL25hbWUiOiJGYXVzdCBEZWxheSBMaWJyYXJ5In0seyJkZWxheXMubGliL3ZlcnNpb24iOiIwLjAifSx7ImRlc2NyaXB0aW9uIjoiU2ltcGxlIGVsZWN0cmljIGd1aXRhciBtb2RlbCB3aXRob3V0IGVmZmVjdCBjaGFpbi4ifSx7ImVudmVsb3Blcy5saWIvYXV0aG9yIjoiR1JBTUUifSx7ImVudmVsb3Blcy5saWIvY29weXJpZ2h0IjoiR1JBTUUifSx7ImVudmVsb3Blcy5saWIvbGljZW5zZSI6IkxHUEwgd2l0aCBleGNlcHRpb24ifSx7ImVudmVsb3Blcy5saWIvbmFtZSI6IkZhdXN0IEVudmVsb3BlIExpYnJhcnkifSx7ImVudmVsb3Blcy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsiZmlsZW5hbWUiOiJlbGVjR3VpdGFyTUlESSJ9LHsiZmlsdGVycy5saWIvbmFtZSI6IkZhdXN0IEZpbHRlcnMgTGlicmFyeSJ9LHsiZmlsdGVycy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsibGljZW5zZSI6Ik1JVCJ9LHsibWF0aHMubGliL2F1dGhvciI6IkdSQU1FIn0seyJtYXRocy5saWIvY29weXJpZ2h0IjoiR1JBTUUifSx7Im1hdGhzLmxpYi9saWNlbnNlIjoiTEdQTCB3aXRoIGV4Y2VwdGlvbiJ9LHsibWF0aHMubGliL25hbWUiOiJGYXVzdCBNYXRoIExpYnJhcnkifSx7Im1hdGhzLmxpYi92ZXJzaW9uIjoiMi4xIn0seyJuYW1lIjoiRWxlY0d1aXRhck1pZGkifSx7Im5vaXNlcy5saWIvbmFtZSI6IkZhdXN0IE5vaXNlIEdlbmVyYXRvciBMaWJyYXJ5In0seyJub2lzZXMubGliL3ZlcnNpb24iOiIwLjAifSx7InJvdXRlcy5saWIvbmFtZSI6IkZhdXN0IFNpZ25hbCBSb3V0aW5nIExpYnJhcnkifSx7InJvdXRlcy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsic2lnbmFscy5saWIvbmFtZSI6IkZhdXN0IFNpZ25hbCBSb3V0aW5nIExpYnJhcnkifSx7InNpZ25hbHMubGliL3ZlcnNpb24iOiIwLjAifV0sInVpIjpbeyJ0eXBlIjoidmdyb3VwIiwibGFiZWwiOiJlbGVjR3VpdGFyIiwiaXRlbXMiOlt7InR5cGUiOiJoZ3JvdXAiLCJsYWJlbCI6Im1pZGkiLCJtZXRhIjpbeyIwIjoiIn1dLCJpdGVtcyI6W3sidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6ImZyZXEiLCJhZGRyZXNzIjoiL2VsZWNHdWl0YXIvbWlkaS9mcmVxIiwiaW5kZXgiOiIzMiIsIm1ldGEiOlt7IjAiOiIifSx7InN0eWxlIjoia25vYiJ9XSwiaW5pdCI6IjQ0MCIsIm1pbiI6IjUwIiwibWF4IjoiMTAwMCIsInN0ZXAiOiIwLjAxIn0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiYmVuZCIsImFkZHJlc3MiOiIvZWxlY0d1aXRhci9taWRpL2JlbmQiLCJpbmRleCI6IjM2IiwibWV0YSI6W3siMSI6IiJ9LHsiaGlkZGVuIjoiMSJ9LHsibWlkaSI6InBpdGNod2hlZWwifSx7InN0eWxlIjoia25vYiJ9XSwiaW5pdCI6IjEiLCJtaW4iOiIwIiwibWF4IjoiMTAiLCJzdGVwIjoiMC4wMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6ImdhaW4iLCJhZGRyZXNzIjoiL2VsZWNHdWl0YXIvbWlkaS9nYWluIiwiaW5kZXgiOiI4MzAwIiwibWV0YSI6W3siMiI6IiJ9LHsic3R5bGUiOiJrbm9iIn1dLCJpbml0IjoiMC44IiwibWluIjoiMCIsIm1heCI6IjEiLCJzdGVwIjoiMC4wMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6InN1c3RhaW4iLCJhZGRyZXNzIjoiL2VsZWNHdWl0YXIvbWlkaS9zdXN0YWluIiwiaW5kZXgiOiI0NCIsIm1ldGEiOlt7IjMiOiIifSx7ImhpZGRlbiI6IjEifSx7Im1pZGkiOiJjdHJsIDY0In0seyJzdHlsZSI6Imtub2IifV0sImluaXQiOiIwIiwibWluIjoiMCIsIm1heCI6IjEiLCJzdGVwIjoiMSJ9XX0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoicGx1Y2tQb3NpdGlvbiIsImFkZHJlc3MiOiIvZWxlY0d1aXRhci9wbHVja1Bvc2l0aW9uIiwiaW5kZXgiOiIyMCIsIm1ldGEiOlt7IjEiOiIifSx7Im1pZGkiOiJjdHJsIDEifV0sImluaXQiOiIwLjgiLCJtaW4iOiIwIiwibWF4IjoiMSIsInN0ZXAiOiIwLjAxIn0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoib3V0R2FpbiIsImFkZHJlc3MiOiIvZWxlY0d1aXRhci9vdXRHYWluIiwiaW5kZXgiOiIwIiwibWV0YSI6W3siMiI6IiJ9XSwiaW5pdCI6IjAuNSIsIm1pbiI6IjAiLCJtYXgiOiIxIiwic3RlcCI6IjAuMDEifSx7InR5cGUiOiJidXR0b24iLCJsYWJlbCI6ImdhdGUiLCJhZGRyZXNzIjoiL2VsZWNHdWl0YXIvZ2F0ZSIsImluZGV4IjoiNDAiLCJtZXRhIjpbeyIzIjoiIn1dfV19XX0w"; }
+function getBase64CodeelecGuitarMIDI() { return "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gAAAIABBAGpDAAAAPzgCACAAQRRqQwAA3EM4AgAgAEEYakMAAIA/OAIAIABBHGpDAAAAADgCACAAQSBqQwAAAAA4AgAgAEE0akPNzEw/OAIAIABB7MAAakPNzEw/OAIAC42AgIAAACABIAAgACABSBsPC42AgIAAACAAIAEgACABSBsPC4yAgIAAACAAIAFqIAI4AgALC62TgIAAAQBBAAumE3sibmFtZSI6IkVsZWNHdWl0YXJNaWRpIiwiZmlsZW5hbWUiOiJlbGVjR3VpdGFyTUlESSIsInZlcnNpb24iOiIyLjUuMzIiLCJvcHRpb25zIjoid2FzbS1lYiwgLXNjYWwgLWZ0eiAyIiwic2l6ZSI6IjMzMDAwIiwiaW5wdXRzIjoiMCIsIm91dHB1dHMiOiIyIiwibWV0YSI6W3siYmFzaWNzLmxpYi9uYW1lIjoiRmF1c3QgQmFzaWMgRWxlbWVudCBMaWJyYXJ5In0seyJiYXNpY3MubGliL3ZlcnNpb24iOiIwLjAifSx7ImNvcHlyaWdodCI6IihjKVJvbWFpbiBNaWNob24sIENDUk1BIChTdGFuZm9yZCBVbml2ZXJzaXR5KSwgR1JBTUUifSx7ImRlbGF5cy5saWIvbmFtZSI6IkZhdXN0IERlbGF5IExpYnJhcnkifSx7ImRlbGF5cy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsiZGVzY3JpcHRpb24iOiJTaW1wbGUgZWxlY3RyaWMgZ3VpdGFyIG1vZGVsIHdpdGhvdXQgZWZmZWN0IGNoYWluLiJ9LHsiZW52ZWxvcGVzLmxpYi9hdXRob3IiOiJHUkFNRSJ9LHsiZW52ZWxvcGVzLmxpYi9jb3B5cmlnaHQiOiJHUkFNRSJ9LHsiZW52ZWxvcGVzLmxpYi9saWNlbnNlIjoiTEdQTCB3aXRoIGV4Y2VwdGlvbiJ9LHsiZW52ZWxvcGVzLmxpYi9uYW1lIjoiRmF1c3QgRW52ZWxvcGUgTGlicmFyeSJ9LHsiZW52ZWxvcGVzLmxpYi92ZXJzaW9uIjoiMC4wIn0seyJmaWxlbmFtZSI6ImVsZWNHdWl0YXJNSURJIn0seyJmaWx0ZXJzLmxpYi9uYW1lIjoiRmF1c3QgRmlsdGVycyBMaWJyYXJ5In0seyJmaWx0ZXJzLmxpYi92ZXJzaW9uIjoiMC4wIn0seyJsaWNlbnNlIjoiTUlUIn0seyJtYXRocy5saWIvYXV0aG9yIjoiR1JBTUUifSx7Im1hdGhzLmxpYi9jb3B5cmlnaHQiOiJHUkFNRSJ9LHsibWF0aHMubGliL2xpY2Vuc2UiOiJMR1BMIHdpdGggZXhjZXB0aW9uIn0seyJtYXRocy5saWIvbmFtZSI6IkZhdXN0IE1hdGggTGlicmFyeSJ9LHsibWF0aHMubGliL3ZlcnNpb24iOiIyLjEifSx7Im5hbWUiOiJFbGVjR3VpdGFyTWlkaSJ9LHsibm9pc2VzLmxpYi9uYW1lIjoiRmF1c3QgTm9pc2UgR2VuZXJhdG9yIExpYnJhcnkifSx7Im5vaXNlcy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsicm91dGVzLmxpYi9uYW1lIjoiRmF1c3QgU2lnbmFsIFJvdXRpbmcgTGlicmFyeSJ9LHsicm91dGVzLmxpYi92ZXJzaW9uIjoiMC4wIn0seyJzaWduYWxzLmxpYi9uYW1lIjoiRmF1c3QgU2lnbmFsIFJvdXRpbmcgTGlicmFyeSJ9LHsic2lnbmFscy5saWIvdmVyc2lvbiI6IjAuMCJ9XSwidWkiOlt7InR5cGUiOiJ2Z3JvdXAiLCJsYWJlbCI6ImVsZWNHdWl0YXIiLCJpdGVtcyI6W3sidHlwZSI6Imhncm91cCIsImxhYmVsIjoibWlkaSIsIm1ldGEiOlt7IjAiOiIifV0sIml0ZW1zIjpbeyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiZnJlcSIsImFkZHJlc3MiOiIvZWxlY0d1aXRhci9taWRpL2ZyZXEiLCJpbmRleCI6IjIwIiwibWV0YSI6W3siMCI6IiJ9LHsic3R5bGUiOiJrbm9iIn1dLCJpbml0IjoiNDQwIiwibWluIjoiNTAiLCJtYXgiOiIxMDAwIiwic3RlcCI6IjAuMDEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJiZW5kIiwiYWRkcmVzcyI6Ii9lbGVjR3VpdGFyL21pZGkvYmVuZCIsImluZGV4IjoiMjQiLCJtZXRhIjpbeyIxIjoiIn0seyJoaWRkZW4iOiIxIn0seyJtaWRpIjoicGl0Y2h3aGVlbCJ9LHsic3R5bGUiOiJrbm9iIn1dLCJpbml0IjoiMSIsIm1pbiI6IjAiLCJtYXgiOiIxMCIsInN0ZXAiOiIwLjAxIn0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiZ2FpbiIsImFkZHJlc3MiOiIvZWxlY0d1aXRhci9taWRpL2dhaW4iLCJpbmRleCI6IjgzMDAiLCJtZXRhIjpbeyIyIjoiIn0seyJzdHlsZSI6Imtub2IifV0sImluaXQiOiIwLjgiLCJtaW4iOiIwIiwibWF4IjoiMSIsInN0ZXAiOiIwLjAxIn0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoic3VzdGFpbiIsImFkZHJlc3MiOiIvZWxlY0d1aXRhci9taWRpL3N1c3RhaW4iLCJpbmRleCI6IjMyIiwibWV0YSI6W3siMyI6IiJ9LHsiaGlkZGVuIjoiMSJ9LHsibWlkaSI6ImN0cmwgNjQifSx7InN0eWxlIjoia25vYiJ9XSwiaW5pdCI6IjAiLCJtaW4iOiIwIiwibWF4IjoiMSIsInN0ZXAiOiIxIn1dfSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJwbHVja1Bvc2l0aW9uIiwiYWRkcmVzcyI6Ii9lbGVjR3VpdGFyL3BsdWNrUG9zaXRpb24iLCJpbmRleCI6IjUyIiwibWV0YSI6W3siMSI6IiJ9LHsibWlkaSI6ImN0cmwgMSJ9XSwiaW5pdCI6IjAuOCIsIm1pbiI6IjAiLCJtYXgiOiIxIiwic3RlcCI6IjAuMDEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJvdXRHYWluIiwiYWRkcmVzcyI6Ii9lbGVjR3VpdGFyL291dEdhaW4iLCJpbmRleCI6IjAiLCJtZXRhIjpbeyIyIjoiIn1dLCJpbml0IjoiMC41IiwibWluIjoiMCIsIm1heCI6IjEiLCJzdGVwIjoiMC4wMSJ9LHsidHlwZSI6ImJ1dHRvbiIsImxhYmVsIjoiZ2F0ZSIsImFkZHJlc3MiOiIvZWxlY0d1aXRhci9nYXRlIiwiaW5kZXgiOiIyOCIsIm1ldGEiOlt7IjMiOiIifV19XX1dfTA="; }
 
 /*
- faust2wasm
- Additional code: GRAME 2017-2018
+ faust2wasm: GRAME 2017-2018
 */
  
 'use strict';
@@ -5430,7 +5427,7 @@ if (typeof (AudioWorkletNode) === "undefined") {
 	alert("AudioWorklet is not supported in this browser !")
 }
 
-class elecGuitarMIDI_polyNode extends AudioWorkletNode {
+class elecGuitarMIDIPolyNode extends AudioWorkletNode {
     
     constructor(context, options) 
     {
@@ -5444,7 +5441,7 @@ class elecGuitarMIDI_polyNode extends AudioWorkletNode {
         options.channelCountMode = "explicit";
         options.channelInterpretation = "speakers";
         
-        super(context, 'elecGuitarMIDI_poly', options);
+        super(context, 'elecGuitarMIDIPoly', options);
         
         // JSON parsing functions
         this.parse_ui = function(ui, obj)
@@ -5511,6 +5508,20 @@ class elecGuitarMIDI_polyNode extends AudioWorkletNode {
         this.port.onmessage = this.handleMessage.bind(this);
     }
     
+    // To be called by the message port with messages coming from the processor
+    handleMessage(event)
+    {
+        var msg = event.data;
+        if (this.output_handler) {
+            this.output_handler(msg.path, msg.value);
+        }
+    }
+    
+    // Public API
+  
+    /**
+     *  Returns a full JSON description of the elecGuitarMIDI.
+     */
     getJSON()
     {
         var res = "";
@@ -5541,12 +5552,23 @@ class elecGuitarMIDI_polyNode extends AudioWorkletNode {
         }
     }
     
+    /**
+     *  Set the control value at a given path.
+     *
+     * @param path - a path to the control
+     * @param val - the value to be set
+     */
     setParamValue(path, val)
     {
         this.port.postMessage({ type:"param", key:path, value:val });
         this.parameters.get(path).setValueAtTime(val, 0);
     }
     
+    /**
+     *  Get the control value at a given path.
+     *
+     * @return the current control value
+     */
     getParamValue(path)
     {
         return this.parameters.get(path).value;
@@ -5572,7 +5594,6 @@ class elecGuitarMIDI_polyNode extends AudioWorkletNode {
         return this.output_handler;
     }
     
-    // TO REMOVE
     getNumInputs()
     {
         return parseInt(this.json_object.inputs);
@@ -5583,6 +5604,9 @@ class elecGuitarMIDI_polyNode extends AudioWorkletNode {
         return parseInt(this.json_object.outputs);
     }
     
+    /**
+     * Returns an array of all input paths (to be used with setParamValue/getParamValue)
+     */
     getParams()
     {
         return this.inputs_items;
@@ -5621,7 +5645,7 @@ class elecGuitarMIDI_polyNode extends AudioWorkletNode {
     }
 
     /**
-     * Controller
+     * Control change
      *
      * @param channel - the MIDI channel (0..15, not used for now)
      * @param ctrl - the MIDI controller number (0..127)
@@ -5643,36 +5667,70 @@ class elecGuitarMIDI_polyNode extends AudioWorkletNode {
         this.port.postMessage({ type: "pitchWheel", data: [channel, wheel] });
     }
     
+    /**
+     * Generic MIDI message handler.
+     */
     midiMessage(data)
     {
     	this.port.postMessage({ type:"midi", data:data });
     }
     
-    handleMessage(event) 
-    {
-        var msg = event.data;
-        if (this.output_handler) {
-            this.output_handler(msg.path, msg.value);
-        }
-    }
 }
 
-// Faust context
-var faust = faust || {};
+// Factory class
 
-faust.createelecGuitarMIDI_poly = function(context, max_polyphony, callback)
-{
-    // TODO: handle max_polyphony
+class elecGuitarMIDI {
     
-    // Resume audio context each time...
-    context.resume();
+    /**
+     * Factory constructor.
+     *
+     * @param context - the audio context
+     * @param baseUrl - the baseUrl of the plugin folder
+     */
+    constructor(context, baseUrl)
+    {
+    	// Resume audio context each time...
+    	context.resume();
+    	
+        this.context = context;
+        this.baseUrl = baseUrl;
+    }
     
-    // The main global scope
-    context.audioWorklet.addModule("elecGuitarMIDI-processor.js")
-    .then(function () {
-        callback(new elecGuitarMIDI_polyNode(context, {}));
-    })
-	.catch(function(error) { console.log(error); console.log("Faust elecGuitarMIDI_poly cannot be loaded or compiled"); });
+    /**
+     * Load additionnal resources to prepare the custom AudioWorkletNode. Returns a promise to be used with the created node.
+     */
+    load()
+    {
+    	return new Promise((resolve, reject) => {
+        		this.context.audioWorklet.addModule(this.baseUrl + "elecGuitarMIDI-processor.js").then(() => {
+        		this.node = new elecGuitarMIDIPolyNode(this.context, {});
+        		return (this.node);
+        	}).then((node) => {
+                resolve(node);
+            }).catch((e) => {
+                reject(e);
+            });
+        });
+    }
+    
+    loadGui() 
+    {
+        return new Promise((resolve, reject) => {
+            try {
+            	var link = document.createElement('link');
+            	link.rel = 'import';
+            	link.id = 'urlPlugin';
+            	link.href = this.baseUrl + "main.html";
+            	document.head.appendChild(link);
+            	var element = document.createElement("faust-elecGuitarMIDI");
+            	element._plug = this.node;
+            	resolve(element);
+        	} catch (e) {
+            	console.log(e);
+            	reject(e);
+        	}
+    	});
+    };
 }
 </script>
 </head>
@@ -5687,12 +5745,10 @@ faust.createelecGuitarMIDI_poly = function(context, max_polyphony, callback)
 
 var isWasm = (typeof(WebAssembly) !== "undefined");
 var isWebKitAudio = (typeof (webkitAudioContext) !== "undefined");
-var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
+var context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
 var max_polyphony = 16;
-var audio_input = null;
-var elecGuitarMIDI_poly = null;
-var faustsvg = null;
-var output_handler = null;
+var factory = null;
+var node = null;
 
 function workletAvailable()
 {
@@ -5701,40 +5757,33 @@ function workletAvailable()
     return context.audioWorklet && typeof context.audioWorklet.addModule === 'function';
 }
 
-function changeBufferSize(buffer_size)
-{
-    var new_buffer_size = buffer_size.options[buffer_size.selectedIndex].value;
-    console.log(new_buffer_size);
-    startNewelecGuitarMIDI(new_buffer_size);
-}
-
 // MIDI input handling
 
 function keyOn(channel, pitch, velocity)
 {
-    if (elecGuitarMIDI_poly) {
-        elecGuitarMIDI_poly.keyOn(channel, pitch, velocity);
+    if (node) {
+        node.keyOn(channel, pitch, velocity);
     }
 }
 
 function keyOff(channel, pitch, velocity)
 {
-    if (elecGuitarMIDI_poly) {
-        elecGuitarMIDI_poly.keyOff(channel, pitch, velocity);
+    if (node) {
+        node.keyOff(channel, pitch, velocity);
     }
 }
 
 function pitchWheel(channel, wheel)
 {
-    if (elecGuitarMIDI_poly) {
-        elecGuitarMIDI_poly.pitchWheel(channel, wheel);
+    if (node) {
+        node.pitchWheel(channel, wheel);
     }
 }
 
 function ctrlChange(channel, ctrl, value)
 {
-    if (elecGuitarMIDI_poly) {
-        elecGuitarMIDI_poly.ctrlChange(channel, ctrl, value);
+    if (node) {
+        node.ctrlChange(channel, ctrl, value);
     }
 }
 
@@ -5759,8 +5808,8 @@ function midiMessageReceived(ev)
     }
     */
     
-    if (elecGuitarMIDI_poly) {
-        elecGuitarMIDI_poly.midiMessage(ev.data);
+    if (node) {
+        node.midiMessage(ev.data);
     }
 }
 
@@ -5809,7 +5858,6 @@ function activateAudioInput()
         navigator.getUserMedia({audio: { echoCancellation: false }}, getDevice, function(e) {
                                alert('Error getting audio input');
                                console.log(e);
-                               audio_input = null;
                                });
     } else {
         alert('Audio input API not available');
@@ -5818,20 +5866,17 @@ function activateAudioInput()
 
 function getDevice(device)
 {
-    // Create an AudioNode from the stream.
-    audio_input = audio_context.createMediaStreamSource(device);
-    
-    // Connect it to the destination.
-    audio_input.connect(elecGuitarMIDI_poly);
+    // Connect the input to the destination.
+    context.createMediaStreamSource(device).connect(node);
 }
 
 // Save/Load functions using local storage (no yet working since 'params' does not reflect the polyphonic layout...)
 function saveelecGuitarMIDI()
 {
     if (typeof(Storage) !== "undefined") {
-        var params = elecGuitarMIDI_poly.getParams();
+        var params = node.getParams();
         for (var i = 0; i < params.length; i++) {
-            localStorage.setItem(params[i], elecGuitarMIDI_poly.getParamValue(params[i]));
+            localStorage.setItem(params[i], node.getParamValue(params[i]));
         }
     }
 }
@@ -5839,11 +5884,11 @@ function saveelecGuitarMIDI()
 function loadelecGuitarMIDI()
 {
     if (typeof(Storage) !== "undefined") {
-        var params = elecGuitarMIDI_poly.getParams();
+        var params = node.getParams();
         for (var i = 0; i < params.length; i++) {
             if (localStorage.getItem(params[i])) {
                 // Restore elecGuitarMIDI state
-                elecGuitarMIDI_poly.setParamValue(params[i], Number(localStorage.getItem(params[i])));
+                node.setParamValue(params[i], Number(localStorage.getItem(params[i])));
                 // Restore GUI state
                 output_handler(params[i], Number(localStorage.getItem(params[i])));
             }
@@ -5851,30 +5896,24 @@ function loadelecGuitarMIDI()
     }
 }
 
-function startelecGuitarMIDIAux(dsp)
+function startelecGuitarMIDIAux(aw_node)
 {
-    if (!dsp) {
-        alert(faust.getErrorMessage());
-        return;
-    }
+    node = aw_node;
     
-    elecGuitarMIDI_poly = dsp;
+    node.connect(context.destination);
     
-    elecGuitarMIDI_poly.connect(audio_context.destination);
-    
-    console.log(elecGuitarMIDI_poly.getJSON());
-    //elecGuitarMIDI_poly.metadata({ declare: function(key, value) { console.log("key = " + key + " value = " + value); }});
-    console.log(elecGuitarMIDI_poly.getParams());
+    console.log(node.getJSON());
+    //node.metadata({ declare: function(key, value) { console.log("key = " + key + " value = " + value); }});
+    console.log(node.getParams());
     
     // No polling from the server needed, so use an empty loop
     _f4u$t.main_loop = function() {}
     
-    faustsvg = $('<div />');
+    var faustsvg = $('<div />');
     $('body').append(faustsvg);
     
-    output_handler = _f4u$t.main(elecGuitarMIDI_poly.getJSON(), faustsvg, function(path, val) { elecGuitarMIDI_poly.setParamValue(path, val); });
-    elecGuitarMIDI_poly.setOutputParamHandler(output_handler);
-    
+    node.setOutputParamHandler(_f4u$t.main(node.getJSON(), faustsvg, function(path, val) { node.setParamValue(path, val); }));
+   
     // Load elecGuitarMIDI state from local storage
     loadelecGuitarMIDI();
 }
@@ -5887,7 +5926,11 @@ function startelecGuitarMIDI()
 function startNewelecGuitarMIDI()
 {
     if (isWasm && workletAvailable()) {
-        faust.createelecGuitarMIDI_poly(audio_context, max_polyphony, startelecGuitarMIDIAux);
+        factory = new elecGuitarMIDI(context, "");
+        factory.load()
+        .then((aw_node) => startelecGuitarMIDIAux(aw_node))
+        .catch((error) => { console.log(error); console.log("Faust mydsp cannot be loaded or compiled"); });
+        
     }  else {
         alert("WebAssembly or AudioWorklet is not supported in this browser !");
     }
@@ -5897,12 +5940,12 @@ function startNewelecGuitarMIDI()
 window.addEventListener('touchstart', function() {
                         
                         // create empty buffer
-                        var buffer = audio_context.createBuffer(1, 1, 22050);
-                        var source = audio_context.createBufferSource();
+                        var buffer = context.createBuffer(1, 1, 22050);
+                        var source = context.createBufferSource();
                         source.buffer = buffer;
                         
                         // connect to output (your speakers)
-                        source.connect(audio_context.destination);
+                        source.connect(context.destination);
                         
                         // play the file
                         source.start();
@@ -5920,7 +5963,7 @@ if (typeof (Module) !== "undefined") {
 }
 
 // Save elecGuitarMIDI state to local storage
-setInterval(function() { if (elecGuitarMIDI_poly) saveelecGuitarMIDI(); }, 1000);
+setInterval(function() { if (node) saveelecGuitarMIDI(); }, 1000);
 
 </script>
 </body>

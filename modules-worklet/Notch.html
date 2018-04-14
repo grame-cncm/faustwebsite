@@ -372,7 +372,7 @@ Finds the sum of a numerical array.
 **/
 Array.prototype.sum = function() {
   var sum = 0;
-  for(var i = 0; i < this.length; i++) {
+  for (var i = 0; i < this.length; i++) {
     sum += this[i];
   }
   return sum;
@@ -740,7 +740,7 @@ _f4u$t.rand_string = function(n)
     n = 8;
   }
 
-  for( var i=0; i < n; i++ ) {
+  for (var i = 0; i < n; i++ ) {
     text += possible.charAt(Math.floor(Math.random() * possible.length));
   }
   return text;
@@ -1131,7 +1131,7 @@ _f4u$t.unique = function(s) {
 }
 
 /**
-Returns the type part of an id.  The faust naming convention gives
+Returns the type part of an id. The faust naming convention gives
 all DOM ids a type as the second entry. Examples are vslider, hslider,
 rbutton.
 
@@ -1574,7 +1574,7 @@ _f4u$t.hard_delete = function(div) {
   To be called when used with the C++/LLVM libfaust based FaustNode.
 **/
 _f4u$t.make_audio_ui = function(dsp, svg) {
-  var json = eval ("(" + dsp.json() + ")");
+  var json = eval("(" + dsp.json() + ")");
   var faust_svg = new _f4u$t.SVG(
     svg,
     // kludge to prevent scroll bars...
@@ -2459,7 +2459,6 @@ _f4u$t.RotatingButton.prototype.r = function() {
 _f4u$t.RotatingButton.prototype.dims = function() {
   return [this.r() * 2, this.r() * 2];
 }
-
 
 _f4u$t.RotatingButton.prototype.make_mgroove = function(svg, parent, id) {
   var full_id = 'faust_rbutton_mgroove_'+id;
@@ -4225,7 +4224,6 @@ _f4u$t.json_to_ui = function(json, hash) {
  * obviously, the goal is to separate the two as much as possible
  */
 
-
 /*
   UTILITY FUNCTIONS
 */
@@ -4270,7 +4268,7 @@ _f4u$t.transform_to_array = function(transform) {
   while(true) {
     var match = matrix.exec(transform);
     if (match != null) {
-      out.push(["matrix",parseFloat(match[1]), parseFloat(match[2]), parseFloat(match[3]), parseFloat(match[4]), parseFloat(match[5]), parseFloat(match[6])]);
+      out.push(["matrix", parseFloat(match[1]), parseFloat(match[2]), parseFloat(match[3]), parseFloat(match[4]), parseFloat(match[5]), parseFloat(match[6])]);
       transform = transform.substr(match[0].length,transform.length-match[0].length);
       continue;
     }
@@ -5410,19 +5408,19 @@ _f4u$t.main_loop = function() {
 $(document).ready(function() { _f4u$t.main_loop(); });
 
 /*
-Code generated with Faust version 2.5.24
+Code generated with Faust version 2.5.32
 Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONNotch() {
-	return "{\"name\":\"Notch\",\"filename\":\"Notch\",\"version\":\"2.5.24\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"28\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"filename\":\"Notch\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"maxmsp.lib/author\":\"GRAME\"},{\"maxmsp.lib/copyright\":\"GRAME\"},{\"maxmsp.lib/license\":\"LGPL\"},{\"maxmsp.lib/name\":\"MaxMSP compatibility Library\"},{\"maxmsp.lib/version\":\"1.1\"},{\"name\":\"Notch\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Notch\",\"items\":[{\"type\":\"hslider\",\"label\":\"Frequency\",\"address\":\"/Notch/Frequency\",\"index\":\"8\",\"meta\":[{\"acc\":\"0 1 -10 0 15\"},{\"scale\":\"log\"}],\"init\":\"440\",\"min\":\"80\",\"max\":\"10000\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Q - Filter Bandwidth\",\"address\":\"/Notch/Q_-_Filter_Bandwidth\",\"index\":\"12\",\"meta\":[{\"acc\":\"2 0 -10 0 10\"},{\"scale\":\"log\"}],\"init\":\"20\",\"min\":\"0.01\",\"max\":\"50\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"Notch\",\"filename\":\"Notch\",\"version\":\"2.5.32\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"28\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"filename\":\"Notch\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"maxmsp.lib/author\":\"GRAME\"},{\"maxmsp.lib/copyright\":\"GRAME\"},{\"maxmsp.lib/license\":\"LGPL\"},{\"maxmsp.lib/name\":\"MaxMSP compatibility Library\"},{\"maxmsp.lib/version\":\"1.1\"},{\"name\":\"Notch\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Notch\",\"items\":[{\"type\":\"hslider\",\"label\":\"Frequency\",\"address\":\"/Notch/Frequency\",\"index\":\"8\",\"meta\":[{\"acc\":\"0 1 -10 0 15\"},{\"scale\":\"log\"}],\"init\":\"440\",\"min\":\"80\",\"max\":\"10000\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Q - Filter Bandwidth\",\"address\":\"/Notch/Q_-_Filter_Bandwidth\",\"index\":\"12\",\"meta\":[{\"acc\":\"2 0 -10 0 10\"},{\"scale\":\"log\"}],\"init\":\"20\",\"min\":\"0.01\",\"max\":\"50\",\"step\":\"0.01\"}]}]}";
 }
-function getBase64CodeNotch() { return "AGFzbQEAAAAB1YCAgAAQYAJ/fwBgBH9/f38AYAF9AX1gAX8Bf2ABfwF/YAJ/fwF9YAF/AX9gAn9/AGABfwBgAn9/AGACf38AYAF/AGACf38Bf2ACf38Bf2ADf399AGABfQF9ApmAgIAAAgNlbnYFX2Nvc2YAAgNlbnYFX3NpbmYADwOPgICAAA4AAQMEBQYHCAkKCwwNDgWHgICAAAEAgoCAgAAHuoGAgAAMB2NvbXB1dGUAAwxnZXROdW1JbnB1dHMABA1nZXROdW1PdXRwdXRzAAUNZ2V0UGFyYW1WYWx1ZQAGDWdldFNhbXBsZVJhdGUABwRpbml0AAgNaW5zdGFuY2VDbGVhcgAJEWluc3RhbmNlQ29uc3RhbnRzAAoMaW5zdGFuY2VJbml0AAsaaW5zdGFuY2VSZXNldFVzZXJJbnRlcmZhY2UADA1zZXRQYXJhbVZhbHVlAA8GbWVtb3J5AgAK6ISAgAAOgoCAgAAAC82CgIAAAgN/B31BACEEQQAhBUMAAAAAIQdDAAAAACEIQwAAAAAhCUMAAAAAIQpDAAAAACELQQAhBkMAAAAAIQxDAAAAACENIAJBAGooAgAhBCADQQBqKAIAIQVBACoCBEMAAAAAQwAAoEJDAEAcRkEAKgIIlpeXlCEHQwAAAD8gBxABQ28SgzpDCtcjPEMAAEhCQQAqAgyWl5eVlCEIQwAAgD8gCEMAAIA/kpUhCUMAAAAAQwAAAEAgBxAAlJMhCkMAAIA/IAiTIQtBACEGA0ACQCAKQQAqAhSUIQwgBCAGaioCACAJIAwgC0EAKgIYlJKUkyENQQAgDUMAAAAAIA28QYCAgPwHcRs4AhAgBSAGaiAJQQAqAhhBACoCECAMkpKUOAIAQQBBACoCFDgCGEEAQQAqAhA4AhQgBkEEaiEGIAZBBCABbEgEQAwCDAELCwsLhYCAgAAAQQEPC4WAgIAAAEEBDwuLgICAAAAgACABaioCAA8LiICAgAAAQQAoAgAPC46AgIAAACAAIAEQAiAAIAEQCwu1gICAAAEBf0EAIQFBACEBA0ACQEEQIAFBAnRqQwAAAAA4AgAgAUEBaiEBIAFBA0gEQAwCDAELCwsLpoCAgAAAQQAgATYCAEEAQ9sPyUBDAIA7SEMAAIA/QQAoAgCyl5aVOAIEC5CAgIAAACAAIAEQCiAAEAwgABAJC5aAgIAAAEEAQwAA3EM4AghBAEMAAKBBOAIMC42AgIAAACABIAAgACABSBsPC42AgIAAACAAIAEgACABSBsPC4yAgIAAACAAIAFqIAI4AgALC72HgIAAAQBBAAu2B3sibmFtZSI6Ik5vdGNoIiwiZmlsZW5hbWUiOiJOb3RjaCIsInZlcnNpb24iOiIyLjUuMjQiLCJvcHRpb25zIjoid2FzbS1pYiwgLXNjYWwgLWZ0eiAyIiwic2l6ZSI6IjI4IiwiaW5wdXRzIjoiMSIsIm91dHB1dHMiOiIxIiwibWV0YSI6W3siZmlsZW5hbWUiOiJOb3RjaCJ9LHsibWF0aHMubGliL2F1dGhvciI6IkdSQU1FIn0seyJtYXRocy5saWIvY29weXJpZ2h0IjoiR1JBTUUifSx7Im1hdGhzLmxpYi9saWNlbnNlIjoiTEdQTCB3aXRoIGV4Y2VwdGlvbiJ9LHsibWF0aHMubGliL25hbWUiOiJGYXVzdCBNYXRoIExpYnJhcnkifSx7Im1hdGhzLmxpYi92ZXJzaW9uIjoiMi4xIn0seyJtYXhtc3AubGliL2F1dGhvciI6IkdSQU1FIn0seyJtYXhtc3AubGliL2NvcHlyaWdodCI6IkdSQU1FIn0seyJtYXhtc3AubGliL2xpY2Vuc2UiOiJMR1BMIn0seyJtYXhtc3AubGliL25hbWUiOiJNYXhNU1AgY29tcGF0aWJpbGl0eSBMaWJyYXJ5In0seyJtYXhtc3AubGliL3ZlcnNpb24iOiIxLjEifSx7Im5hbWUiOiJOb3RjaCJ9XSwidWkiOlt7InR5cGUiOiJ2Z3JvdXAiLCJsYWJlbCI6Ik5vdGNoIiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJGcmVxdWVuY3kiLCJhZGRyZXNzIjoiL05vdGNoL0ZyZXF1ZW5jeSIsImluZGV4IjoiOCIsIm1ldGEiOlt7ImFjYyI6IjAgMSAtMTAgMCAxNSJ9LHsic2NhbGUiOiJsb2cifV0sImluaXQiOiI0NDAiLCJtaW4iOiI4MCIsIm1heCI6IjEwMDAwIiwic3RlcCI6IjEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJRIC0gRmlsdGVyIEJhbmR3aWR0aCIsImFkZHJlc3MiOiIvTm90Y2gvUV8tX0ZpbHRlcl9CYW5kd2lkdGgiLCJpbmRleCI6IjEyIiwibWV0YSI6W3siYWNjIjoiMiAwIC0xMCAwIDEwIn0seyJzY2FsZSI6ImxvZyJ9XSwiaW5pdCI6IjIwIiwibWluIjoiMC4wMSIsIm1heCI6IjUwIiwic3RlcCI6IjAuMDEifV19XX0w"; }
+function getBase64CodeNotch() { return "AGFzbQEAAAAB1YCAgAAQYAJ/fwBgBH9/f38AYAF9AX1gAX8Bf2ABfwF/YAJ/fwF9YAF/AX9gAn9/AGABfwBgAn9/AGACf38AYAF/AGACf38Bf2ACf38Bf2ADf399AGABfQF9ApmAgIAAAgNlbnYFX2Nvc2YAAgNlbnYFX3NpbmYADwOPgICAAA4AAQMEBQYHCAkKCwwNDgWHgICAAAEAgoCAgAAHuoGAgAAMB2NvbXB1dGUAAwxnZXROdW1JbnB1dHMABA1nZXROdW1PdXRwdXRzAAUNZ2V0UGFyYW1WYWx1ZQAGDWdldFNhbXBsZVJhdGUABwRpbml0AAgNaW5zdGFuY2VDbGVhcgAJEWluc3RhbmNlQ29uc3RhbnRzAAoMaW5zdGFuY2VJbml0AAsaaW5zdGFuY2VSZXNldFVzZXJJbnRlcmZhY2UADA1zZXRQYXJhbVZhbHVlAA8GbWVtb3J5AgAK6ISAgAAOgoCAgAAAC82CgIAAAgN/B31BACEEQQAhBUMAAAAAIQdDAAAAACEIQwAAAAAhCUMAAAAAIQpDAAAAACELQQAhBkMAAAAAIQxDAAAAACENIAJBAGooAgAhBCADQQBqKAIAIQVBACoCBEMAAAAAQwAAoEJDAEAcRkEAKgIIlpeXlCEHQwAAAD8gBxABQ28SgzpDCtcjPEMAAEhCQQAqAgyWl5eVlCEIQwAAgD8gCEMAAIA/kpUhCUMAAAAAQwAAAEAgBxAAlJMhCkMAAIA/IAiTIQtBACEGA0ACQCAKQQAqAhSUIQwgBCAGaioCACAJIAwgC0EAKgIYlJKUkyENQQAgDUMAAAAAIA28QYCAgPwHcRs4AhAgBSAGaiAJQQAqAhhBACoCECAMkpKUOAIAQQBBACoCFDgCGEEAQQAqAhA4AhQgBkEEaiEGIAZBBCABbEgEQAwCDAELCwsLhYCAgAAAQQEPC4WAgIAAAEEBDwuLgICAAAAgACABaioCAA8LiICAgAAAQQAoAgAPC46AgIAAACAAIAEQAiAAIAEQCwu1gICAAAEBf0EAIQFBACEBA0ACQEEQIAFBAnRqQwAAAAA4AgAgAUEBaiEBIAFBA0gEQAwCDAELCwsLpoCAgAAAQQAgATYCAEEAQ9sPyUBDAIA7SEMAAIA/QQAoAgCyl5aVOAIEC5CAgIAAACAAIAEQCiAAEAwgABAJC5aAgIAAAEEAQwAA3EM4AghBAEMAAKBBOAIMC42AgIAAACABIAAgACABSBsPC42AgIAAACAAIAEgACABSBsPC4yAgIAAACAAIAFqIAI4AgALC72HgIAAAQBBAAu2B3sibmFtZSI6Ik5vdGNoIiwiZmlsZW5hbWUiOiJOb3RjaCIsInZlcnNpb24iOiIyLjUuMzIiLCJvcHRpb25zIjoid2FzbS1pYiwgLXNjYWwgLWZ0eiAyIiwic2l6ZSI6IjI4IiwiaW5wdXRzIjoiMSIsIm91dHB1dHMiOiIxIiwibWV0YSI6W3siZmlsZW5hbWUiOiJOb3RjaCJ9LHsibWF0aHMubGliL2F1dGhvciI6IkdSQU1FIn0seyJtYXRocy5saWIvY29weXJpZ2h0IjoiR1JBTUUifSx7Im1hdGhzLmxpYi9saWNlbnNlIjoiTEdQTCB3aXRoIGV4Y2VwdGlvbiJ9LHsibWF0aHMubGliL25hbWUiOiJGYXVzdCBNYXRoIExpYnJhcnkifSx7Im1hdGhzLmxpYi92ZXJzaW9uIjoiMi4xIn0seyJtYXhtc3AubGliL2F1dGhvciI6IkdSQU1FIn0seyJtYXhtc3AubGliL2NvcHlyaWdodCI6IkdSQU1FIn0seyJtYXhtc3AubGliL2xpY2Vuc2UiOiJMR1BMIn0seyJtYXhtc3AubGliL25hbWUiOiJNYXhNU1AgY29tcGF0aWJpbGl0eSBMaWJyYXJ5In0seyJtYXhtc3AubGliL3ZlcnNpb24iOiIxLjEifSx7Im5hbWUiOiJOb3RjaCJ9XSwidWkiOlt7InR5cGUiOiJ2Z3JvdXAiLCJsYWJlbCI6Ik5vdGNoIiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJGcmVxdWVuY3kiLCJhZGRyZXNzIjoiL05vdGNoL0ZyZXF1ZW5jeSIsImluZGV4IjoiOCIsIm1ldGEiOlt7ImFjYyI6IjAgMSAtMTAgMCAxNSJ9LHsic2NhbGUiOiJsb2cifV0sImluaXQiOiI0NDAiLCJtaW4iOiI4MCIsIm1heCI6IjEwMDAwIiwic3RlcCI6IjEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJRIC0gRmlsdGVyIEJhbmR3aWR0aCIsImFkZHJlc3MiOiIvTm90Y2gvUV8tX0ZpbHRlcl9CYW5kd2lkdGgiLCJpbmRleCI6IjEyIiwibWV0YSI6W3siYWNjIjoiMiAwIC0xMCAwIDEwIn0seyJzY2FsZSI6ImxvZyJ9XSwiaW5pdCI6IjIwIiwibWluIjoiMC4wMSIsIm1heCI6IjUwIiwic3RlcCI6IjAuMDEifV19XX0w"; }
 
 /*
- faust2wasm
- Additional code: GRAME 2017-2018
+ faust2wasm: GRAME 2017-2018
 */
+ 
  
 'use strict';
 
@@ -5503,11 +5501,31 @@ class NotchNode extends AudioWorkletNode {
         this.port.onmessage = this.handleMessage.bind(this);
     }
     
+    // To be called by the message port with messages coming from the processor
+    handleMessage(event)
+    {
+        var msg = event.data;
+        if (this.output_handler) {
+            this.output_handler(msg.path, msg.value);
+        }
+    }
+    
+    // Public API
+    
+    /**
+     *  Returns a full JSON description of the Notch.
+     */
     getJSON()
     {
         return getJSONNotch();
     }
     
+    /**
+     *  Set the control value at a given path.
+     *
+     * @param path - a path to the control
+     * @param val - the value to be set
+     */
     setParamValue(path, val)
     {
         //this.port.postMessage({ type:"param", key:path, value:val });
@@ -5516,6 +5534,11 @@ class NotchNode extends AudioWorkletNode {
         this.parameters.get(path).setValueAtTime(val, 0);
     }
     
+    /**
+     *  Get the control value at a given path.
+     *
+     * @return the current control value
+     */
     getParamValue(path)
     {
         return this.parameters.get(path).value;
@@ -5541,7 +5564,6 @@ class NotchNode extends AudioWorkletNode {
         return this.output_handler;
     }
     
-    // TO REMOVE
     getNumInputs()
     {
         return parseInt(this.json_object.inputs);
@@ -5552,13 +5574,16 @@ class NotchNode extends AudioWorkletNode {
         return parseInt(this.json_object.outputs);
     }
     
+    /**
+     * Returns an array of all input paths (to be used with setParamValue/getParamValue)
+     */
     getParams()
     {
         return this.inputs_items;
     }
     
     /**
-     * Controller
+     * Control change
      *
      * @param channel - the MIDI channel (0..15, not used for now)
      * @param ctrl - the MIDI controller number (0..127)
@@ -5580,35 +5605,71 @@ class NotchNode extends AudioWorkletNode {
         this.port.postMessage({ type: "pitchWheel", data: [channel, wheel] });
     }
     
+    /**
+     * Generic MIDI message handler.
+     */
     midiMessage(data)
     {
         this.port.postMessage({ type:"midi", data:data });
     }
     
-    handleMessage(event) 
-    {
-        var msg = event.data;
-        if (this.output_handler) {
-            this.output_handler(msg.path, msg.value);
-        }
-    }
-    
 }
 
-// Faust context
-var faust = faust || {};
+// Factory class
 
-faust.createNotch = function(context, callback)
-{
-    // Resume audio context each time...
-    context.resume();
+class Notch {
     
-    // The main global scope
-    context.audioWorklet.addModule("Notch-processor.js")
-    .then(function () {
-         callback(new NotchNode(context, {}));
-    })
-    .catch(function(error) { console.log(error); console.log("Faust Notch cannot be loaded or compiled"); });
+    /**
+     * Factory constructor.
+     *
+     * @param context - the audio context
+     * @param baseUrl - the baseUrl of the plugin folder
+     */
+    constructor(context, baseUrl)
+    {
+    	// Resume audio context each time...
+    	context.resume();
+    	
+        this.context = context;
+        this.baseUrl = baseUrl;
+    }
+    
+    /**
+     * Load additionnal resources to prepare the custom AudioWorkletNode. Returns a promise to be used with the created node.
+     */
+    load()
+    {
+    	return new Promise((resolve, reject) => {
+        		this.context.audioWorklet.addModule(this.baseUrl + "Notch-processor.js").then(() => {
+        		this.node = new NotchNode(this.context, {});
+        		return (this.node);
+        	}).then((node) => {
+                resolve(node);
+            }).catch((e) => {
+                reject(e);
+            });
+        });
+    }
+    
+    loadGui() 
+    {
+        return new Promise((resolve, reject) => {
+            try {
+            	var link = document.createElement('link');
+            	link.rel = 'import';
+            	link.id = 'urlPlugin';
+            	link.href = this.baseUrl + "main.html";
+            	document.head.appendChild(link);
+            	var element = document.createElement("faust-Notch");
+            	element._plug = this.node;
+            	resolve(element);
+        	} catch (e) {
+            	console.log(e);
+            	reject(e);
+        	}
+    	});
+    };
+    
 }
 
 </script>
@@ -5624,11 +5685,9 @@ faust.createNotch = function(context, callback)
 
 var isWasm = (typeof(WebAssembly) !== "undefined");
 var isWebKitAudio = (typeof (webkitAudioContext) !== "undefined");
-var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
-var audio_input = null;
-var Notch = null;
-var faustsvg = null;
-var output_handler = null;
+var context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
+var factory = null;
+var node = null;
 
 function workletAvailable()
 {
@@ -5641,15 +5700,15 @@ function workletAvailable()
 
 function pitchWheel(channel, wheel)
 {
-    if (Notch) {
-        Notch.pitchWheel(channel, wheel);
+    if (node) {
+        node.pitchWheel(channel, wheel);
     }
 }
 
 function ctrlChange(channel, ctrl, value)
 {
-    if (Notch) {
-        Notch.ctrlChange(channel, ctrl, value);
+    if (node) {
+        node.ctrlChange(channel, ctrl, value);
     }
 }
 
@@ -5714,7 +5773,6 @@ function activateAudioInput()
         navigator.getUserMedia({audio: { echoCancellation: false }}, getDevice, function(e) {
                                alert('Error getting audio input');
                                console.log(e);
-                               audio_input = null;
                                });
     } else {
         alert('Audio input API not available');
@@ -5723,20 +5781,17 @@ function activateAudioInput()
 
 function getDevice(device)
 {
-    // Create an AudioNode from the stream.
-    audio_input = audio_context.createMediaStreamSource(device);
-
-    // Connect it to the destination.
-    audio_input.connect(Notch);
+    // Connect the input to the destination.
+    context.createMediaStreamSource(device).connect(node);
 }
 
 // Save/Load functions using local storage
 function saveNotch()
 {
     if (typeof(Storage) !== "undefined") {
-        var params = Notch.getParams();
+        var params = node.getParams();
         for (var i = 0; i < params.length; i++) {
-            localStorage.setItem(params[i], Notch.getParamValue(params[i]));
+            localStorage.setItem(params[i], node.getParamValue(params[i]));
         }
     }
 }
@@ -5744,49 +5799,43 @@ function saveNotch()
 function loadNotch()
 {
     if (typeof(Storage) !== "undefined") {
-        var params = Notch.getParams();
+        var params = node.getParams();
         for (var i = 0; i < params.length; i++) {
             if (localStorage.getItem(params[i])) {
                 // Restore Notch state
-                Notch.setParamValue(params[i], Number(localStorage.getItem(params[i])));
+                node.setParamValue(params[i], Number(localStorage.getItem(params[i])));
                 // Restore GUI state
-                output_handler(params[i], Number(localStorage.getItem(params[i])));
+                node.getOutputParamHandler()(params[i], Number(localStorage.getItem(params[i])));
             }
         }
     }
 }
 
-function startNotchAux(dsp)
+function startNotchAux(aw_node)
 {
-    if (!dsp) {
-        alert(faust.getErrorMessage());
-        return;
-    }
+    node = aw_node;
 
-    Notch = dsp;
-
-    if (Notch.getNumInputs() > 0) {
+    if (node.getNumInputs() > 0) {
         activateAudioInput();
     }
     
     console.log("startNotchAux");
-    console.log(Notch.parameters);
+    console.log(node.parameters);
     
-    Notch.connect(audio_context.destination);
-    console.log(Notch.getJSON());
+    node.connect(context.destination);
+    console.log(node.getJSON());
 
     // TODO: emcc
-    //Notch.metadata({ declare: function(key, value) { console.log("key = " + key + " value = " + value); }});
-    console.log(Notch.getParams());
+    //node.metadata({ declare: function(key, value) { console.log("key = " + key + " value = " + value); }});
+    console.log(node.getParams());
 
     // No polling from the server needed, so use an empty loop
     _f4u$t.main_loop = function() {}
 
-    faustsvg = $('<div />');
+    var faustsvg = $('<div />');
     $('body').append(faustsvg);
     
-    output_handler = _f4u$t.main(Notch.getJSON(), faustsvg, function(path, val) { Notch.setParamValue(path, val); });
-    Notch.setOutputParamHandler(output_handler);
+    node.setOutputParamHandler(_f4u$t.main(node.getJSON(), faustsvg, function(path, val) { node.setParamValue(path, val); }));
 
     // Load Notch state from local storage
     loadNotch();
@@ -5800,7 +5849,10 @@ function startNotch()
 function startNewNotch()
 {
      if (isWasm && workletAvailable()) {
-        faust.createNotch(audio_context, startNotchAux);
+        factory = new Notch(context, "");
+        factory.load()
+        .then((aw_node) => startNotchAux(aw_node))
+        .catch((error) => { console.log(error); console.log("Faust mydsp cannot be loaded or compiled"); });
     }  else {
         alert("WebAssembly or AudioWorklet is not supported in this browser !");
     }
@@ -5810,12 +5862,12 @@ function startNewNotch()
 window.addEventListener('touchstart', function() {
 
                         // create empty buffer
-                        var buffer = audio_context.createBuffer(1, 1, 22050);
-                        var source = audio_context.createBufferSource();
+                        var buffer = context.createBuffer(1, 1, 22050);
+                        var source = context.createBufferSource();
                         source.buffer = buffer;
 
                         // connect to output (your speakers)
-                        source.connect(audio_context.destination);
+                        source.connect(context.destination);
 
                         // play the file
                         source.start();
@@ -5833,7 +5885,7 @@ if (typeof (Module) !== "undefined") {
 }
 
 // Save Notch state to local storage
-setInterval(function() { if (Notch) saveNotch(); }, 1000);
+setInterval(function() { if (node) saveNotch(); }, 1000);
 
 </script>
 </body>

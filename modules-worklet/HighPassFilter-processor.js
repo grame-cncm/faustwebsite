@@ -1,17 +1,16 @@
 
 /*
-Code generated with Faust version 2.5.24
+Code generated with Faust version 2.5.32
 Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONHighPassFilter() {
-	return "{\"name\":\"High Pass Filter\",\"filename\":\"HighPassFilter\",\"version\":\"2.5.24\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"32\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"filename\":\"HighPassFilter\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"High Pass Filter\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"High Pass Filter\",\"items\":[{\"type\":\"hslider\",\"label\":\"Cut-off Frequency\",\"address\":\"/High_Pass_Filter/Cut-off_Frequency\",\"index\":\"8\",\"meta\":[{\"acc\":\"2 0 -10 0 10\"},{\"scale\":\"log\"}],\"init\":\"1300\",\"min\":\"10\",\"max\":\"20000\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"High Pass Filter\",\"filename\":\"HighPassFilter\",\"version\":\"2.5.32\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"32\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"filename\":\"HighPassFilter\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"High Pass Filter\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"High Pass Filter\",\"items\":[{\"type\":\"hslider\",\"label\":\"Cut-off Frequency\",\"address\":\"/High_Pass_Filter/Cut-off_Frequency\",\"index\":\"8\",\"meta\":[{\"acc\":\"2 0 -10 0 10\"},{\"scale\":\"log\"}],\"init\":\"1300\",\"min\":\"10\",\"max\":\"20000\",\"step\":\"0.01\"}]}]}";
 }
-function getBase64CodeHighPassFilter() { return "AGFzbQEAAAAB1oCAgAAQYAJ/fwBgBH9/f38AYAF/AX9gAX8Bf2ACf38BfWABfwF/YAJ/fwBgAX8AYAJ/fwBgAn9/AGABfwBgAn9/AX9gAn9/AX9gAn19AX1gA39/fQBgAX0BfQKZgICAAAIDZW52BV9wb3dmAA0DZW52BV90YW5mAA8Dj4CAgAAOAAECAwQFBgcICQoLDA4Fh4CAgAABAIKAgIAAB7qBgIAADAdjb21wdXRlAAMMZ2V0TnVtSW5wdXRzAAQNZ2V0TnVtT3V0cHV0cwAFDWdldFBhcmFtVmFsdWUABg1nZXRTYW1wbGVSYXRlAAcEaW5pdAAIDWluc3RhbmNlQ2xlYXIACRFpbnN0YW5jZUNvbnN0YW50cwAKDGluc3RhbmNlSW5pdAALGmluc3RhbmNlUmVzZXRVc2VySW50ZXJmYWNlAAwNc2V0UGFyYW1WYWx1ZQAPBm1lbW9yeQIACuGFgIAADoKAgIAAAAufg4CAAAIDfwh9QQAhBEEAIQVDAAAAACEHQQAhBkMAAAAAIQhDAAAAACEJQwAAAAAhCkMAAAAAIQtDAAAAACEMQwAAAAAhDUMAAAAAIQ4gAkEAaigCACEEIANBAGooAgAhBUNvEoM6QQAqAgiUIQdBACEGA0ACQCAHQ3e+fz9BACoCEJSSIQhBACAIQwAAAAAgCLxBgICA/AdxGzgCDEEAKgIEQwAAIEFDAECcRkEAKgIMlpeUEAEhCUMAAIA/IAmVIQogCUMAAABAEAAhC0MAAIA/IAuVIQwgCkPzBLU/kiAJlUMAAIA/kiENIAQgBmoqAgBBACoCHCAKQ/MEtb+SIAmVQwAAgD+SlEMAAABAQQAqAhhDAACAPyAMk5SUkiANlZMhDkEAIA5DAAAAACAOvEGAgID8B3EbOAIUIAUgBmpDAAAAQEEAKgIYQwAAAAAgDJOUlEEAKgIUIAuVkkEAKgIcIAuVkiANlTgCAEEAQQAqAgw4AhBBAEEAKgIYOAIcQQBBACoCFDgCGCAGQQRqIQYgBkEEIAFsSARADAIMAQsLCwuFgICAAABBAQ8LhYCAgAAAQQEPC4uAgIAAACAAIAFqKgIADwuIgICAAABBACgCAA8LjoCAgAAAIAAgARACIAAgARALC+aAgIAAAQJ/QQAhAUEAIQJBACEBA0ACQEEMIAFBAnRqQwAAAAA4AgAgAUEBaiEBIAFBAkgEQAwCDAELCwtBACECA0ACQEEUIAJBAnRqQwAAAAA4AgAgAkEBaiECIAJBA0gEQAwCDAELCwsLpoCAgAAAQQAgATYCAEEAQ9sPSUBDAIA7SEMAAIA/QQAoAgCyl5aVOAIEC5CAgIAAACAAIAEQCiAAEAwgABAJC4yAgIAAAEEAQwCAokQ4AggLjYCAgAAAIAEgACAAIAFIGw8LjYCAgAAAIAAgASAAIAFIGw8LjICAgAAAIAAgAWogAjgCAAsLtoaAgAABAEEAC68GeyJuYW1lIjoiSGlnaCBQYXNzIEZpbHRlciIsImZpbGVuYW1lIjoiSGlnaFBhc3NGaWx0ZXIiLCJ2ZXJzaW9uIjoiMi41LjI0Iiwib3B0aW9ucyI6Indhc20taWIsIC1zY2FsIC1mdHogMiIsInNpemUiOiIzMiIsImlucHV0cyI6IjEiLCJvdXRwdXRzIjoiMSIsIm1ldGEiOlt7ImZpbGVuYW1lIjoiSGlnaFBhc3NGaWx0ZXIifSx7ImZpbHRlcnMubGliL25hbWUiOiJGYXVzdCBGaWx0ZXJzIExpYnJhcnkifSx7ImZpbHRlcnMubGliL3ZlcnNpb24iOiIwLjAifSx7Im1hdGhzLmxpYi9hdXRob3IiOiJHUkFNRSJ9LHsibWF0aHMubGliL2NvcHlyaWdodCI6IkdSQU1FIn0seyJtYXRocy5saWIvbGljZW5zZSI6IkxHUEwgd2l0aCBleGNlcHRpb24ifSx7Im1hdGhzLmxpYi9uYW1lIjoiRmF1c3QgTWF0aCBMaWJyYXJ5In0seyJtYXRocy5saWIvdmVyc2lvbiI6IjIuMSJ9LHsibmFtZSI6IkhpZ2ggUGFzcyBGaWx0ZXIifSx7InNpZ25hbHMubGliL25hbWUiOiJGYXVzdCBTaWduYWwgUm91dGluZyBMaWJyYXJ5In0seyJzaWduYWxzLmxpYi92ZXJzaW9uIjoiMC4wIn1dLCJ1aSI6W3sidHlwZSI6InZncm91cCIsImxhYmVsIjoiSGlnaCBQYXNzIEZpbHRlciIsIml0ZW1zIjpbeyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiQ3V0LW9mZiBGcmVxdWVuY3kiLCJhZGRyZXNzIjoiL0hpZ2hfUGFzc19GaWx0ZXIvQ3V0LW9mZl9GcmVxdWVuY3kiLCJpbmRleCI6IjgiLCJtZXRhIjpbeyJhY2MiOiIyIDAgLTEwIDAgMTAifSx7InNjYWxlIjoibG9nIn1dLCJpbml0IjoiMTMwMCIsIm1pbiI6IjEwIiwibWF4IjoiMjAwMDAiLCJzdGVwIjoiMC4wMSJ9XX1dfTA="; }
+function getBase64CodeHighPassFilter() { return "AGFzbQEAAAAB1oCAgAAQYAJ/fwBgBH9/f38AYAF/AX9gAX8Bf2ACf38BfWABfwF/YAJ/fwBgAX8AYAJ/fwBgAn9/AGABfwBgAn9/AX9gAn9/AX9gAn19AX1gA39/fQBgAX0BfQKZgICAAAIDZW52BV9wb3dmAA0DZW52BV90YW5mAA8Dj4CAgAAOAAECAwQFBgcICQoLDA4Fh4CAgAABAIKAgIAAB7qBgIAADAdjb21wdXRlAAMMZ2V0TnVtSW5wdXRzAAQNZ2V0TnVtT3V0cHV0cwAFDWdldFBhcmFtVmFsdWUABg1nZXRTYW1wbGVSYXRlAAcEaW5pdAAIDWluc3RhbmNlQ2xlYXIACRFpbnN0YW5jZUNvbnN0YW50cwAKDGluc3RhbmNlSW5pdAALGmluc3RhbmNlUmVzZXRVc2VySW50ZXJmYWNlAAwNc2V0UGFyYW1WYWx1ZQAPBm1lbW9yeQIACuGFgIAADoKAgIAAAAufg4CAAAIDfwh9QQAhBEEAIQVDAAAAACEHQQAhBkMAAAAAIQhDAAAAACEJQwAAAAAhCkMAAAAAIQtDAAAAACEMQwAAAAAhDUMAAAAAIQ4gAkEAaigCACEEIANBAGooAgAhBUNvEoM6QQAqAgiUIQdBACEGA0ACQCAHQ3e+fz9BACoCEJSSIQhBACAIQwAAAAAgCLxBgICA/AdxGzgCDEEAKgIEQwAAIEFDAECcRkEAKgIMlpeUEAEhCUMAAIA/IAmVIQogCUMAAABAEAAhC0MAAIA/IAuVIQwgCkPzBLU/kiAJlUMAAIA/kiENIAQgBmoqAgBBACoCHCAKQ/MEtb+SIAmVQwAAgD+SlEMAAABAQQAqAhhDAACAPyAMk5SUkiANlZMhDkEAIA5DAAAAACAOvEGAgID8B3EbOAIUIAUgBmpDAAAAQEEAKgIYQwAAAAAgDJOUlEEAKgIUIAuVkkEAKgIcIAuVkiANlTgCAEEAQQAqAgw4AhBBAEEAKgIYOAIcQQBBACoCFDgCGCAGQQRqIQYgBkEEIAFsSARADAIMAQsLCwuFgICAAABBAQ8LhYCAgAAAQQEPC4uAgIAAACAAIAFqKgIADwuIgICAAABBACgCAA8LjoCAgAAAIAAgARACIAAgARALC+aAgIAAAQJ/QQAhAUEAIQJBACEBA0ACQEEMIAFBAnRqQwAAAAA4AgAgAUEBaiEBIAFBAkgEQAwCDAELCwtBACECA0ACQEEUIAJBAnRqQwAAAAA4AgAgAkEBaiECIAJBA0gEQAwCDAELCwsLpoCAgAAAQQAgATYCAEEAQ9sPSUBDAIA7SEMAAIA/QQAoAgCyl5aVOAIEC5CAgIAAACAAIAEQCiAAEAwgABAJC4yAgIAAAEEAQwCAokQ4AggLjYCAgAAAIAEgACAAIAFIGw8LjYCAgAAAIAAgASAAIAFIGw8LjICAgAAAIAAgAWogAjgCAAsLtoaAgAABAEEAC68GeyJuYW1lIjoiSGlnaCBQYXNzIEZpbHRlciIsImZpbGVuYW1lIjoiSGlnaFBhc3NGaWx0ZXIiLCJ2ZXJzaW9uIjoiMi41LjMyIiwib3B0aW9ucyI6Indhc20taWIsIC1zY2FsIC1mdHogMiIsInNpemUiOiIzMiIsImlucHV0cyI6IjEiLCJvdXRwdXRzIjoiMSIsIm1ldGEiOlt7ImZpbGVuYW1lIjoiSGlnaFBhc3NGaWx0ZXIifSx7ImZpbHRlcnMubGliL25hbWUiOiJGYXVzdCBGaWx0ZXJzIExpYnJhcnkifSx7ImZpbHRlcnMubGliL3ZlcnNpb24iOiIwLjAifSx7Im1hdGhzLmxpYi9hdXRob3IiOiJHUkFNRSJ9LHsibWF0aHMubGliL2NvcHlyaWdodCI6IkdSQU1FIn0seyJtYXRocy5saWIvbGljZW5zZSI6IkxHUEwgd2l0aCBleGNlcHRpb24ifSx7Im1hdGhzLmxpYi9uYW1lIjoiRmF1c3QgTWF0aCBMaWJyYXJ5In0seyJtYXRocy5saWIvdmVyc2lvbiI6IjIuMSJ9LHsibmFtZSI6IkhpZ2ggUGFzcyBGaWx0ZXIifSx7InNpZ25hbHMubGliL25hbWUiOiJGYXVzdCBTaWduYWwgUm91dGluZyBMaWJyYXJ5In0seyJzaWduYWxzLmxpYi92ZXJzaW9uIjoiMC4wIn1dLCJ1aSI6W3sidHlwZSI6InZncm91cCIsImxhYmVsIjoiSGlnaCBQYXNzIEZpbHRlciIsIml0ZW1zIjpbeyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiQ3V0LW9mZiBGcmVxdWVuY3kiLCJhZGRyZXNzIjoiL0hpZ2hfUGFzc19GaWx0ZXIvQ3V0LW9mZl9GcmVxdWVuY3kiLCJpbmRleCI6IjgiLCJtZXRhIjpbeyJhY2MiOiIyIDAgLTEwIDAgMTAifSx7InNjYWxlIjoibG9nIn1dLCJpbml0IjoiMTMwMCIsIm1pbiI6IjEwIiwibWF4IjoiMjAwMDAiLCJzdGVwIjoiMC4wMSJ9XX1dfTA="; }
 
 /*
- faust2wasm
- Additional code: GRAME 2017
+ faust2wasm: GRAME 2017-2018
 */
  
 'use strict';
@@ -177,8 +176,9 @@ class HighPassFilterProcessor extends AudioWorkletProcessor {
         this.ptr_size = 4;
         this.sample_size = 4;
         
-        this.factory = HighPassFilterProcessor.HighPassFilter_instance.exports;
-        this.HEAP = HighPassFilterProcessor.HighPassFilter_instance.exports.memory.buffer;
+        this.HighPassFilter_instance = new WebAssembly.Instance(HighPassFilterProcessor.wasm_module, HighPassFilterProcessor.importObject);
+  	   	this.factory = this.HighPassFilter_instance.exports;
+        this.HEAP = this.HighPassFilter_instance.exports.memory.buffer;
         this.HEAP32 = new Int32Array(this.HEAP);
         this.HEAPF32 = new Float32Array(this.HEAP);
 
@@ -435,9 +435,10 @@ HighPassFilterProcessor.importObject = {
 
 // Synchronously compile and instantiate the WASM module
 try {
-    let wasm_module = new WebAssembly.Module(HighPassFilterProcessor.atob(getBase64CodeHighPassFilter()));
-    HighPassFilterProcessor.HighPassFilter_instance = new WebAssembly.Instance(wasm_module, HighPassFilterProcessor.importObject);
-    registerProcessor('HighPassFilter', HighPassFilterProcessor);
+    if (HighPassFilterProcessor.wasm_module == undefined) {
+        HighPassFilterProcessor.wasm_module = new WebAssembly.Module(HighPassFilterProcessor.atob(getBase64CodeHighPassFilter()));
+        registerProcessor('HighPassFilter', HighPassFilterProcessor);
+    }
 } catch (e) {
     console.log(e); console.log("Faust HighPassFilter cannot be loaded or compiled");
 }

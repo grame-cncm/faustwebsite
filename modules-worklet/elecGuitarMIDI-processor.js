@@ -1,18 +1,16 @@
 
 /*
-Code generated with Faust version 2.5.24
+Code generated with Faust version 2.5.32
 Compilation options: wasm-eb, -scal -ftz 2
 */
 
 function getJSONelecGuitarMIDI() {
-	return "{\"name\":\"ElecGuitarMidi\",\"filename\":\"elecGuitarMIDI\",\"version\":\"2.5.24\",\"options\":\"wasm-eb, -scal -ftz 2\",\"size\":\"33000\",\"inputs\":\"0\",\"outputs\":\"2\",\"meta\":[{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"copyright\":\"(c)Romain Michon, CCRMA (Stanford University), GRAME\"},{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"description\":\"Simple electric guitar model without effect chain.\"},{\"envelopes.lib/author\":\"GRAME\"},{\"envelopes.lib/copyright\":\"GRAME\"},{\"envelopes.lib/license\":\"LGPL with exception\"},{\"envelopes.lib/name\":\"Faust Envelope Library\"},{\"envelopes.lib/version\":\"0.0\"},{\"filename\":\"elecGuitarMIDI\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"license\":\"MIT\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"ElecGuitarMidi\"},{\"noises.lib/name\":\"Faust Noise Generator Library\"},{\"noises.lib/version\":\"0.0\"},{\"routes.lib/name\":\"Faust Signal Routing Library\"},{\"routes.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"elecGuitar\",\"items\":[{\"type\":\"hgroup\",\"label\":\"midi\",\"meta\":[{\"0\":\"\"}],\"items\":[{\"type\":\"hslider\",\"label\":\"freq\",\"address\":\"/elecGuitar/midi/freq\",\"index\":\"32\",\"meta\":[{\"0\":\"\"},{\"style\":\"knob\"}],\"init\":\"440\",\"min\":\"50\",\"max\":\"1000\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"bend\",\"address\":\"/elecGuitar/midi/bend\",\"index\":\"36\",\"meta\":[{\"1\":\"\"},{\"hidden\":\"1\"},{\"midi\":\"pitchwheel\"},{\"style\":\"knob\"}],\"init\":\"1\",\"min\":\"0\",\"max\":\"10\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"gain\",\"address\":\"/elecGuitar/midi/gain\",\"index\":\"8300\",\"meta\":[{\"2\":\"\"},{\"style\":\"knob\"}],\"init\":\"0.8\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"sustain\",\"address\":\"/elecGuitar/midi/sustain\",\"index\":\"44\",\"meta\":[{\"3\":\"\"},{\"hidden\":\"1\"},{\"midi\":\"ctrl 64\"},{\"style\":\"knob\"}],\"init\":\"0\",\"min\":\"0\",\"max\":\"1\",\"step\":\"1\"}]},{\"type\":\"hslider\",\"label\":\"pluckPosition\",\"address\":\"/elecGuitar/pluckPosition\",\"index\":\"20\",\"meta\":[{\"1\":\"\"},{\"midi\":\"ctrl 1\"}],\"init\":\"0.8\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"outGain\",\"address\":\"/elecGuitar/outGain\",\"index\":\"0\",\"meta\":[{\"2\":\"\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"button\",\"label\":\"gate\",\"address\":\"/elecGuitar/gate\",\"index\":\"40\",\"meta\":[{\"3\":\"\"}]}]}]}";
+	return "{\"name\":\"ElecGuitarMidi\",\"filename\":\"elecGuitarMIDI\",\"version\":\"2.5.32\",\"options\":\"wasm-eb, -scal -ftz 2\",\"size\":\"33000\",\"inputs\":\"0\",\"outputs\":\"2\",\"meta\":[{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"copyright\":\"(c)Romain Michon, CCRMA (Stanford University), GRAME\"},{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"description\":\"Simple electric guitar model without effect chain.\"},{\"envelopes.lib/author\":\"GRAME\"},{\"envelopes.lib/copyright\":\"GRAME\"},{\"envelopes.lib/license\":\"LGPL with exception\"},{\"envelopes.lib/name\":\"Faust Envelope Library\"},{\"envelopes.lib/version\":\"0.0\"},{\"filename\":\"elecGuitarMIDI\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"license\":\"MIT\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"ElecGuitarMidi\"},{\"noises.lib/name\":\"Faust Noise Generator Library\"},{\"noises.lib/version\":\"0.0\"},{\"routes.lib/name\":\"Faust Signal Routing Library\"},{\"routes.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"elecGuitar\",\"items\":[{\"type\":\"hgroup\",\"label\":\"midi\",\"meta\":[{\"0\":\"\"}],\"items\":[{\"type\":\"hslider\",\"label\":\"freq\",\"address\":\"/elecGuitar/midi/freq\",\"index\":\"20\",\"meta\":[{\"0\":\"\"},{\"style\":\"knob\"}],\"init\":\"440\",\"min\":\"50\",\"max\":\"1000\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"bend\",\"address\":\"/elecGuitar/midi/bend\",\"index\":\"24\",\"meta\":[{\"1\":\"\"},{\"hidden\":\"1\"},{\"midi\":\"pitchwheel\"},{\"style\":\"knob\"}],\"init\":\"1\",\"min\":\"0\",\"max\":\"10\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"gain\",\"address\":\"/elecGuitar/midi/gain\",\"index\":\"8300\",\"meta\":[{\"2\":\"\"},{\"style\":\"knob\"}],\"init\":\"0.8\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"sustain\",\"address\":\"/elecGuitar/midi/sustain\",\"index\":\"32\",\"meta\":[{\"3\":\"\"},{\"hidden\":\"1\"},{\"midi\":\"ctrl 64\"},{\"style\":\"knob\"}],\"init\":\"0\",\"min\":\"0\",\"max\":\"1\",\"step\":\"1\"}]},{\"type\":\"hslider\",\"label\":\"pluckPosition\",\"address\":\"/elecGuitar/pluckPosition\",\"index\":\"52\",\"meta\":[{\"1\":\"\"},{\"midi\":\"ctrl 1\"}],\"init\":\"0.8\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"outGain\",\"address\":\"/elecGuitar/outGain\",\"index\":\"0\",\"meta\":[{\"2\":\"\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"button\",\"label\":\"gate\",\"address\":\"/elecGuitar/gate\",\"index\":\"28\",\"meta\":[{\"3\":\"\"}]}]}]}";
 }
-function getBase64CodeelecGuitarMIDI() { return "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zEw/OAIAIABBIGpDAADcQzgCACAAQSRqQwAAgD84AgAgAEEoakMAAAAAOAIAIABBLGpDAAAAADgCACAAQezAAGpDzcxMPzgCAAuNgICAAAAgASAAIAAgAUgbDwuNgICAAAAgACABIAAgAUgbDwuMgICAAAAgACABaiACOAIACwutk4CAAAEAQQALphN7Im5hbWUiOiJFbGVjR3VpdGFyTWlkaSIsImZpbGVuYW1lIjoiZWxlY0d1aXRhck1JREkiLCJ2ZXJzaW9uIjoiMi41LjI0Iiwib3B0aW9ucyI6Indhc20tZWIsIC1zY2FsIC1mdHogMiIsInNpemUiOiIzMzAwMCIsImlucHV0cyI6IjAiLCJvdXRwdXRzIjoiMiIsIm1ldGEiOlt7ImJhc2ljcy5saWIvbmFtZSI6IkZhdXN0IEJhc2ljIEVsZW1lbnQgTGlicmFyeSJ9LHsiYmFzaWNzLmxpYi92ZXJzaW9uIjoiMC4wIn0seyJjb3B5cmlnaHQiOiIoYylSb21haW4gTWljaG9uLCBDQ1JNQSAoU3RhbmZvcmQgVW5pdmVyc2l0eSksIEdSQU1FIn0seyJkZWxheXMubGliL25hbWUiOiJGYXVzdCBEZWxheSBMaWJyYXJ5In0seyJkZWxheXMubGliL3ZlcnNpb24iOiIwLjAifSx7ImRlc2NyaXB0aW9uIjoiU2ltcGxlIGVsZWN0cmljIGd1aXRhciBtb2RlbCB3aXRob3V0IGVmZmVjdCBjaGFpbi4ifSx7ImVudmVsb3Blcy5saWIvYXV0aG9yIjoiR1JBTUUifSx7ImVudmVsb3Blcy5saWIvY29weXJpZ2h0IjoiR1JBTUUifSx7ImVudmVsb3Blcy5saWIvbGljZW5zZSI6IkxHUEwgd2l0aCBleGNlcHRpb24ifSx7ImVudmVsb3Blcy5saWIvbmFtZSI6IkZhdXN0IEVudmVsb3BlIExpYnJhcnkifSx7ImVudmVsb3Blcy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsiZmlsZW5hbWUiOiJlbGVjR3VpdGFyTUlESSJ9LHsiZmlsdGVycy5saWIvbmFtZSI6IkZhdXN0IEZpbHRlcnMgTGlicmFyeSJ9LHsiZmlsdGVycy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsibGljZW5zZSI6Ik1JVCJ9LHsibWF0aHMubGliL2F1dGhvciI6IkdSQU1FIn0seyJtYXRocy5saWIvY29weXJpZ2h0IjoiR1JBTUUifSx7Im1hdGhzLmxpYi9saWNlbnNlIjoiTEdQTCB3aXRoIGV4Y2VwdGlvbiJ9LHsibWF0aHMubGliL25hbWUiOiJGYXVzdCBNYXRoIExpYnJhcnkifSx7Im1hdGhzLmxpYi92ZXJzaW9uIjoiMi4xIn0seyJuYW1lIjoiRWxlY0d1aXRhck1pZGkifSx7Im5vaXNlcy5saWIvbmFtZSI6IkZhdXN0IE5vaXNlIEdlbmVyYXRvciBMaWJyYXJ5In0seyJub2lzZXMubGliL3ZlcnNpb24iOiIwLjAifSx7InJvdXRlcy5saWIvbmFtZSI6IkZhdXN0IFNpZ25hbCBSb3V0aW5nIExpYnJhcnkifSx7InJvdXRlcy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsic2lnbmFscy5saWIvbmFtZSI6IkZhdXN0IFNpZ25hbCBSb3V0aW5nIExpYnJhcnkifSx7InNpZ25hbHMubGliL3ZlcnNpb24iOiIwLjAifV0sInVpIjpbeyJ0eXBlIjoidmdyb3VwIiwibGFiZWwiOiJlbGVjR3VpdGFyIiwiaXRlbXMiOlt7InR5cGUiOiJoZ3JvdXAiLCJsYWJlbCI6Im1pZGkiLCJtZXRhIjpbeyIwIjoiIn1dLCJpdGVtcyI6W3sidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6ImZyZXEiLCJhZGRyZXNzIjoiL2VsZWNHdWl0YXIvbWlkaS9mcmVxIiwiaW5kZXgiOiIzMiIsIm1ldGEiOlt7IjAiOiIifSx7InN0eWxlIjoia25vYiJ9XSwiaW5pdCI6IjQ0MCIsIm1pbiI6IjUwIiwibWF4IjoiMTAwMCIsInN0ZXAiOiIwLjAxIn0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiYmVuZCIsImFkZHJlc3MiOiIvZWxlY0d1aXRhci9taWRpL2JlbmQiLCJpbmRleCI6IjM2IiwibWV0YSI6W3siMSI6IiJ9LHsiaGlkZGVuIjoiMSJ9LHsibWlkaSI6InBpdGNod2hlZWwifSx7InN0eWxlIjoia25vYiJ9XSwiaW5pdCI6IjEiLCJtaW4iOiIwIiwibWF4IjoiMTAiLCJzdGVwIjoiMC4wMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6ImdhaW4iLCJhZGRyZXNzIjoiL2VsZWNHdWl0YXIvbWlkaS9nYWluIiwiaW5kZXgiOiI4MzAwIiwibWV0YSI6W3siMiI6IiJ9LHsic3R5bGUiOiJrbm9iIn1dLCJpbml0IjoiMC44IiwibWluIjoiMCIsIm1heCI6IjEiLCJzdGVwIjoiMC4wMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6InN1c3RhaW4iLCJhZGRyZXNzIjoiL2VsZWNHdWl0YXIvbWlkaS9zdXN0YWluIiwiaW5kZXgiOiI0NCIsIm1ldGEiOlt7IjMiOiIifSx7ImhpZGRlbiI6IjEifSx7Im1pZGkiOiJjdHJsIDY0In0seyJzdHlsZSI6Imtub2IifV0sImluaXQiOiIwIiwibWluIjoiMCIsIm1heCI6IjEiLCJzdGVwIjoiMSJ9XX0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoicGx1Y2tQb3NpdGlvbiIsImFkZHJlc3MiOiIvZWxlY0d1aXRhci9wbHVja1Bvc2l0aW9uIiwiaW5kZXgiOiIyMCIsIm1ldGEiOlt7IjEiOiIifSx7Im1pZGkiOiJjdHJsIDEifV0sImluaXQiOiIwLjgiLCJtaW4iOiIwIiwibWF4IjoiMSIsInN0ZXAiOiIwLjAxIn0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoib3V0R2FpbiIsImFkZHJlc3MiOiIvZWxlY0d1aXRhci9vdXRHYWluIiwiaW5kZXgiOiIwIiwibWV0YSI6W3siMiI6IiJ9XSwiaW5pdCI6IjAuNSIsIm1pbiI6IjAiLCJtYXgiOiIxIiwic3RlcCI6IjAuMDEifSx7InR5cGUiOiJidXR0b24iLCJsYWJlbCI6ImdhdGUiLCJhZGRyZXNzIjoiL2VsZWNHdWl0YXIvZ2F0ZSIsImluZGV4IjoiNDAiLCJtZXRhIjpbeyIzIjoiIn1dfV19XX0w"; }
+function getBase64CodeelecGuitarMIDI() { return "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gAAAIABBAGpDAAAAPzgCACAAQRRqQwAA3EM4AgAgAEEYakMAAIA/OAIAIABBHGpDAAAAADgCACAAQSBqQwAAAAA4AgAgAEE0akPNzEw/OAIAIABB7MAAakPNzEw/OAIAC42AgIAAACABIAAgACABSBsPC42AgIAAACAAIAEgACABSBsPC4yAgIAAACAAIAFqIAI4AgALC62TgIAAAQBBAAumE3sibmFtZSI6IkVsZWNHdWl0YXJNaWRpIiwiZmlsZW5hbWUiOiJlbGVjR3VpdGFyTUlESSIsInZlcnNpb24iOiIyLjUuMzIiLCJvcHRpb25zIjoid2FzbS1lYiwgLXNjYWwgLWZ0eiAyIiwic2l6ZSI6IjMzMDAwIiwiaW5wdXRzIjoiMCIsIm91dHB1dHMiOiIyIiwibWV0YSI6W3siYmFzaWNzLmxpYi9uYW1lIjoiRmF1c3QgQmFzaWMgRWxlbWVudCBMaWJyYXJ5In0seyJiYXNpY3MubGliL3ZlcnNpb24iOiIwLjAifSx7ImNvcHlyaWdodCI6IihjKVJvbWFpbiBNaWNob24sIENDUk1BIChTdGFuZm9yZCBVbml2ZXJzaXR5KSwgR1JBTUUifSx7ImRlbGF5cy5saWIvbmFtZSI6IkZhdXN0IERlbGF5IExpYnJhcnkifSx7ImRlbGF5cy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsiZGVzY3JpcHRpb24iOiJTaW1wbGUgZWxlY3RyaWMgZ3VpdGFyIG1vZGVsIHdpdGhvdXQgZWZmZWN0IGNoYWluLiJ9LHsiZW52ZWxvcGVzLmxpYi9hdXRob3IiOiJHUkFNRSJ9LHsiZW52ZWxvcGVzLmxpYi9jb3B5cmlnaHQiOiJHUkFNRSJ9LHsiZW52ZWxvcGVzLmxpYi9saWNlbnNlIjoiTEdQTCB3aXRoIGV4Y2VwdGlvbiJ9LHsiZW52ZWxvcGVzLmxpYi9uYW1lIjoiRmF1c3QgRW52ZWxvcGUgTGlicmFyeSJ9LHsiZW52ZWxvcGVzLmxpYi92ZXJzaW9uIjoiMC4wIn0seyJmaWxlbmFtZSI6ImVsZWNHdWl0YXJNSURJIn0seyJmaWx0ZXJzLmxpYi9uYW1lIjoiRmF1c3QgRmlsdGVycyBMaWJyYXJ5In0seyJmaWx0ZXJzLmxpYi92ZXJzaW9uIjoiMC4wIn0seyJsaWNlbnNlIjoiTUlUIn0seyJtYXRocy5saWIvYXV0aG9yIjoiR1JBTUUifSx7Im1hdGhzLmxpYi9jb3B5cmlnaHQiOiJHUkFNRSJ9LHsibWF0aHMubGliL2xpY2Vuc2UiOiJMR1BMIHdpdGggZXhjZXB0aW9uIn0seyJtYXRocy5saWIvbmFtZSI6IkZhdXN0IE1hdGggTGlicmFyeSJ9LHsibWF0aHMubGliL3ZlcnNpb24iOiIyLjEifSx7Im5hbWUiOiJFbGVjR3VpdGFyTWlkaSJ9LHsibm9pc2VzLmxpYi9uYW1lIjoiRmF1c3QgTm9pc2UgR2VuZXJhdG9yIExpYnJhcnkifSx7Im5vaXNlcy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsicm91dGVzLmxpYi9uYW1lIjoiRmF1c3QgU2lnbmFsIFJvdXRpbmcgTGlicmFyeSJ9LHsicm91dGVzLmxpYi92ZXJzaW9uIjoiMC4wIn0seyJzaWduYWxzLmxpYi9uYW1lIjoiRmF1c3QgU2lnbmFsIFJvdXRpbmcgTGlicmFyeSJ9LHsic2lnbmFscy5saWIvdmVyc2lvbiI6IjAuMCJ9XSwidWkiOlt7InR5cGUiOiJ2Z3JvdXAiLCJsYWJlbCI6ImVsZWNHdWl0YXIiLCJpdGVtcyI6W3sidHlwZSI6Imhncm91cCIsImxhYmVsIjoibWlkaSIsIm1ldGEiOlt7IjAiOiIifV0sIml0ZW1zIjpbeyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiZnJlcSIsImFkZHJlc3MiOiIvZWxlY0d1aXRhci9taWRpL2ZyZXEiLCJpbmRleCI6IjIwIiwibWV0YSI6W3siMCI6IiJ9LHsic3R5bGUiOiJrbm9iIn1dLCJpbml0IjoiNDQwIiwibWluIjoiNTAiLCJtYXgiOiIxMDAwIiwic3RlcCI6IjAuMDEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJiZW5kIiwiYWRkcmVzcyI6Ii9lbGVjR3VpdGFyL21pZGkvYmVuZCIsImluZGV4IjoiMjQiLCJtZXRhIjpbeyIxIjoiIn0seyJoaWRkZW4iOiIxIn0seyJtaWRpIjoicGl0Y2h3aGVlbCJ9LHsic3R5bGUiOiJrbm9iIn1dLCJpbml0IjoiMSIsIm1pbiI6IjAiLCJtYXgiOiIxMCIsInN0ZXAiOiIwLjAxIn0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiZ2FpbiIsImFkZHJlc3MiOiIvZWxlY0d1aXRhci9taWRpL2dhaW4iLCJpbmRleCI6IjgzMDAiLCJtZXRhIjpbeyIyIjoiIn0seyJzdHlsZSI6Imtub2IifV0sImluaXQiOiIwLjgiLCJtaW4iOiIwIiwibWF4IjoiMSIsInN0ZXAiOiIwLjAxIn0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoic3VzdGFpbiIsImFkZHJlc3MiOiIvZWxlY0d1aXRhci9taWRpL3N1c3RhaW4iLCJpbmRleCI6IjMyIiwibWV0YSI6W3siMyI6IiJ9LHsiaGlkZGVuIjoiMSJ9LHsibWlkaSI6ImN0cmwgNjQifSx7InN0eWxlIjoia25vYiJ9XSwiaW5pdCI6IjAiLCJtaW4iOiIwIiwibWF4IjoiMSIsInN0ZXAiOiIxIn1dfSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJwbHVja1Bvc2l0aW9uIiwiYWRkcmVzcyI6Ii9lbGVjR3VpdGFyL3BsdWNrUG9zaXRpb24iLCJpbmRleCI6IjUyIiwibWV0YSI6W3siMSI6IiJ9LHsibWlkaSI6ImN0cmwgMSJ9XSwiaW5pdCI6IjAuOCIsIm1pbiI6IjAiLCJtYXgiOiIxIiwic3RlcCI6IjAuMDEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJvdXRHYWluIiwiYWRkcmVzcyI6Ii9lbGVjR3VpdGFyL291dEdhaW4iLCJpbmRleCI6IjAiLCJtZXRhIjpbeyIyIjoiIn1dLCJpbml0IjoiMC41IiwibWluIjoiMCIsIm1heCI6IjEiLCJzdGVwIjoiMC4wMSJ9LHsidHlwZSI6ImJ1dHRvbiIsImxhYmVsIjoiZ2F0ZSIsImFkZHJlc3MiOiIvZWxlY0d1aXRhci9nYXRlIiwiaW5kZXgiOiIyOCIsIm1ldGEiOlt7IjMiOiIifV19XX1dfTA="; }
 
 /*
- faust2wasm
- 
- Additional code: GRAME 2017
+ faust2wasm: GRAME 2017-2018
 */
  
 'use strict';
@@ -20,20 +18,20 @@ function getBase64CodeelecGuitarMIDI() { return "AGFzbQEAAAAB1oCAgAAQYAJ/fwBgBH9
 function getBase64Mixer() { return "AGFzbQEAAAABj4CAgAACYAN/f38AYAR/f39/AX0CkoCAgAABBm1lbW9yeQZtZW1vcnkCAAIDg4CAgAACAAEHmoCAgAACC2NsZWFyT3V0cHV0AAAIbWl4Vm9pY2UAAQqKgoCAAALigICAAAEDfwJAQQAhBQNAAkAgAiAFQQJ0aigCACEDQQAhBANAAkAgAyAEQQJ0akMAAAAAOAIAIARBAWohBCAEIABIBEAMAgUMAQsACwsgBUEBaiEFIAUgAUgEQAwCBQwBCwALCwsLnYGAgAACBH8DfQJ9QQAhB0MAAAAAIQgDQAJAQQAhBiACIAdBAnRqKAIAIQQgAyAHQQJ0aigCACEFA0ACQCAEIAZBAnRqKgIAIQkgCCAJi5chCCAFIAZBAnRqKgIAIQogBSAGQQJ0aiAKIAmSOAIAIAZBAWohBiAGIABIBEAMAgUMAQsACwsgB0EBaiEHIAcgAUgEQAwCBQwBCwALCyAIDwsL"; }
 
 // Polyphonic Faust DSP
-class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
+class elecGuitarMIDIPolyProcessor extends AudioWorkletProcessor {
     
     // JSON parsing functions
     static parse_ui(ui, obj, callback)
     {
         for (var i = 0; i < ui.length; i++) {
-           	elecGuitarMIDI_polyProcessor.parse_group(ui[i], obj, callback);
+           	elecGuitarMIDIPolyProcessor.parse_group(ui[i], obj, callback);
         }
     }
     
     static parse_group(group, obj, callback)
     {
         if (group.items) {
-            elecGuitarMIDI_polyProcessor.parse_items(group.items, obj, callback);
+            elecGuitarMIDIPolyProcessor.parse_items(group.items, obj, callback);
         }
     }
     
@@ -49,7 +47,7 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
         if (item.type === "vgroup"
             || item.type === "hgroup"
             || item.type === "tgroup") {
-            elecGuitarMIDI_polyProcessor.parse_items(item.items, obj, callback);
+            elecGuitarMIDIPolyProcessor.parse_items(item.items, obj, callback);
         } else if (item.type === "hbargraph"
                    || item.type === "vbargraph") {
             // Nothing
@@ -70,7 +68,7 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
         if (item.type === "vgroup"
             || item.type === "hgroup"
             || item.type === "tgroup") {
-            elecGuitarMIDI_polyProcessor.parse_items(item.items, obj, callback);
+            elecGuitarMIDIPolyProcessor.parse_items(item.items, obj, callback);
         } else if (item.type === "hbargraph"
                    || item.type === "vbargraph") {
             // Keep bargraph adresses
@@ -130,7 +128,7 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
             
             for (var nMod3, nMod4, nUint24 = 0, nOutIdx = 0, nInIdx = 0; nInIdx < nInLen; nInIdx++) {
                 nMod4 = nInIdx & 3;
-                nUint24 |= elecGuitarMIDI_polyProcessor.b64ToUint6(sB64Enc.charCodeAt(nInIdx)) << 18 - 6 * nMod4;
+                nUint24 |= elecGuitarMIDIPolyProcessor.b64ToUint6(sB64Enc.charCodeAt(nInIdx)) << 18 - 6 * nMod4;
                 if (nMod4 === 3 || nInLen - nInIdx === 1) {
                     for (nMod3 = 0; nMod3 < 3 && nOutIdx < nOutLen; nMod3++, nOutIdx++) {
                         taBytes[nOutIdx] = nUint24 >>> (16 >>> nMod3 & 24) & 255;
@@ -153,11 +151,11 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
         var params = [];
         
         // Add instrument parameters
-        elecGuitarMIDI_polyProcessor.parse_ui(JSON.parse(getJSONelecGuitarMIDI()).ui, params, elecGuitarMIDI_polyProcessor.parse_item1);
+        elecGuitarMIDIPolyProcessor.parse_ui(JSON.parse(getJSONelecGuitarMIDI()).ui, params, elecGuitarMIDIPolyProcessor.parse_item1);
         
         // Possibly add effect parameters
         if (typeof (getJSONeffect) !== "undefined") {
-             elecGuitarMIDI_polyProcessor.parse_ui(JSON.parse(getJSONeffect()).ui, params, elecGuitarMIDI_polyProcessor.parse_item1);
+             elecGuitarMIDIPolyProcessor.parse_ui(JSON.parse(getJSONeffect()).ui, params, elecGuitarMIDIPolyProcessor.parse_item1);
         }
         return params;
     }
@@ -236,8 +234,70 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
         this.ptr_size = 4;
         this.sample_size = 4;
         
-        this.factory = elecGuitarMIDI_polyProcessor.elecGuitarMIDI_instance.exports;
-        this.HEAP = elecGuitarMIDI_polyProcessor.memory.buffer;
+        this.memory = elecGuitarMIDIPolyProcessor.createMemory(elecGuitarMIDIPolyProcessor.buffer_size, elecGuitarMIDIPolyProcessor.polyphony);
+
+        // Create Mixer
+        this.mixObject = { imports: { print: arg => console.log(arg) } }
+        this.mixObject["memory"] = { "memory": this.memory };
+
+        this.importObject = {
+            env: {
+                memoryBase: 0,
+                tableBase: 0,
+                    
+                // Integer version
+                _abs: Math.abs,
+                
+                // Float version
+                _acosf: Math.acos,
+                _asinf: Math.asin,
+                _atanf: Math.atan,
+                _atan2f: Math.atan2,
+                _ceilf: Math.ceil,
+                _cosf: Math.cos,
+                _expf: Math.exp,
+                _floorf: Math.floor,
+                _fmodf: function(x, y) { return x % y; },
+                _logf: Math.log,
+                _log10f: Math.log10,
+                _max_f: Math.max,
+                _min_f: Math.min,
+                _remainderf: function(x, y) { return x - Math.round(x/y) * y; },
+                _powf: Math.pow,
+                _roundf: Math.fround,
+                _sinf: Math.sin,
+                _sqrtf: Math.sqrt,
+                _tanf: Math.tan,
+                   
+                // Double version
+                _acos: Math.acos,
+                _asin: Math.asin,
+                _atan: Math.atan,
+                _atan2: Math.atan2,
+                _ceil: Math.ceil,
+                _cos: Math.cos,
+                _exp: Math.exp,
+                _floor: Math.floor,
+                _fmod: function(x, y) { return x % y; },
+                _log: Math.log,
+                _log10: Math.log10,
+                _max_: Math.max,
+                _min_: Math.min,
+                _remainder:function(x, y) { return x - Math.round(x/y) * y; },
+                _pow: Math.pow,
+                _round: Math.fround,
+                _sin: Math.sin,
+                _sqrt: Math.sqrt,
+                _tan: Math.tan,
+                
+                memory: this.memory,
+                
+                table: new WebAssembly.Table({ initial: 0, element: 'anyfunc' })
+            }
+        }
+
+        this.factory = new WebAssembly.Instance(elecGuitarMIDIPolyProcessor.wasm_module, this.importObject).exports;
+        this.HEAP = this.memory.buffer;
         this.HEAP32 = new Int32Array(this.HEAP);
         this.HEAPF32 = new Float32Array(this.HEAP);
         
@@ -263,24 +323,24 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
         
         // Setup buffer offset
         this.audio_heap_inputs = this.audio_heap_ptr_mixing + (this.numOut * this.ptr_size);
-        this.audio_heap_outputs = this.audio_heap_inputs + (this.numIn * elecGuitarMIDI_polyProcessor.buffer_size * this.sample_size);
-        this.audio_heap_mixing = this.audio_heap_outputs + (this.numOut * elecGuitarMIDI_polyProcessor.buffer_size * this.sample_size);
+        this.audio_heap_outputs = this.audio_heap_inputs + (this.numIn * elecGuitarMIDIPolyProcessor.buffer_size * this.sample_size);
+        this.audio_heap_mixing = this.audio_heap_outputs + (this.numOut * elecGuitarMIDIPolyProcessor.buffer_size * this.sample_size);
         
         // Setup DSP voices offset
-        this.dsp_start = this.audio_heap_mixing + (this.numOut * elecGuitarMIDI_polyProcessor.buffer_size * this.sample_size);
+        this.dsp_start = this.audio_heap_mixing + (this.numOut * elecGuitarMIDIPolyProcessor.buffer_size * this.sample_size);
         
         // wasm mixer
-        this.mixer = elecGuitarMIDI_polyProcessor.mixer_instance.exports;
+        this.mixer = new WebAssembly.Instance(elecGuitarMIDIPolyProcessor.wasm_mixer_module, this.mixObject).exports;
         
         // wasm effect
-        this.effect = (elecGuitarMIDI_polyProcessor.effect_instance) ? elecGuitarMIDI_polyProcessor.effect_instance.exports : null;
+        this.effect = (elecGuitarMIDIPolyProcessor.wasm_effect_module) ? new WebAssembly.Instance(elecGuitarMIDIPolyProcessor.wasm_effect_module, this.importObject).exports : null;
         
         console.log(this.mixer);
         console.log(this.factory);
         console.log(this.effect);
         
         // Start of DSP memory ('polyphony' DSP voices)
-        this.polyphony = elecGuitarMIDI_polyProcessor.polyphony;
+        this.polyphony = elecGuitarMIDIPolyProcessor.polyphony;
         this.dsp_voices = [];
         this.dsp_voices_state = [];
         this.dsp_voices_level = [];
@@ -401,13 +461,13 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
             if (this.numIn > 0) {
                 this.ins = this.audio_heap_ptr_inputs;
                 for (i = 0; i < this.numIn; i++) {
-                    this.HEAP32[(this.ins >> 2) + i] = this.audio_heap_inputs + ((elecGuitarMIDI_polyProcessor.buffer_size * this.sample_size) * i);
+                    this.HEAP32[(this.ins >> 2) + i] = this.audio_heap_inputs + ((elecGuitarMIDIPolyProcessor.buffer_size * this.sample_size) * i);
                 }
                 
                 // Prepare Ins buffer tables
                 var dspInChans = this.HEAP32.subarray(this.ins >> 2, (this.ins + this.numIn * this.ptr_size) >> 2);
                 for (i = 0; i < this.numIn; i++) {
-                    this.dspInChannnels[i] = this.HEAPF32.subarray(dspInChans[i] >> 2, (dspInChans[i] + elecGuitarMIDI_polyProcessor.buffer_size * this.sample_size) >> 2);
+                    this.dspInChannnels[i] = this.HEAPF32.subarray(dspInChans[i] >> 2, (dspInChans[i] + elecGuitarMIDIPolyProcessor.buffer_size * this.sample_size) >> 2);
                 }
             }
             
@@ -417,22 +477,22 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
                 this.mixing = this.audio_heap_ptr_mixing;
                 
                 for (i = 0; i < this.numOut; i++) {
-                    this.HEAP32[(this.outs >> 2) + i] = this.audio_heap_outputs + ((elecGuitarMIDI_polyProcessor.buffer_size * this.sample_size) * i);
-                    this.HEAP32[(this.mixing >> 2) + i] = this.audio_heap_mixing + ((elecGuitarMIDI_polyProcessor.buffer_size * this.sample_size) * i);
+                    this.HEAP32[(this.outs >> 2) + i] = this.audio_heap_outputs + ((elecGuitarMIDIPolyProcessor.buffer_size * this.sample_size) * i);
+                    this.HEAP32[(this.mixing >> 2) + i] = this.audio_heap_mixing + ((elecGuitarMIDIPolyProcessor.buffer_size * this.sample_size) * i);
                 }
                 
                 // Prepare Out buffer tables
                 var dspOutChans = this.HEAP32.subarray(this.outs >> 2, (this.outs + this.numOut * this.ptr_size) >> 2);
                 for (i = 0; i < this.numOut; i++) {
-                    this.dspOutChannnels[i] = this.HEAPF32.subarray(dspOutChans[i] >> 2, (dspOutChans[i] + elecGuitarMIDI_polyProcessor.buffer_size * this.sample_size) >> 2);
+                    this.dspOutChannnels[i] = this.HEAPF32.subarray(dspOutChans[i] >> 2, (dspOutChans[i] + elecGuitarMIDIPolyProcessor.buffer_size * this.sample_size) >> 2);
                 }
             }
             
             // Parse UI part
-            elecGuitarMIDI_polyProcessor.parse_ui(this.json_object.ui, this, elecGuitarMIDI_polyProcessor.parse_item2);
+            elecGuitarMIDIPolyProcessor.parse_ui(this.json_object.ui, this, elecGuitarMIDIPolyProcessor.parse_item2);
             
             if (this.effect) {
-                elecGuitarMIDI_polyProcessor.parse_ui(this.effect_json_object.ui, this, elecGuitarMIDI_polyProcessor.parse_item2);
+                elecGuitarMIDIPolyProcessor.parse_ui(this.effect_json_object.ui, this, elecGuitarMIDIPolyProcessor.parse_item2);
             }
      
             // keep 'keyOn/keyOff' labels
@@ -503,7 +563,7 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
             if (this.fCtrlLabel[ctrl] !== []) {
                 for (var i = 0; i < this.fCtrlLabel[ctrl].length; i++) {
                     var path = this.fCtrlLabel[ctrl][i].path;
-                    this.setParamValue(path, elecGuitarMIDI_polyProcessor.remap(value, 0, 127, this.fCtrlLabel[ctrl][i].min, this.fCtrlLabel[ctrl][i].max));
+                    this.setParamValue(path, elecGuitarMIDIPolyProcessor.remap(value, 0, 127, this.fCtrlLabel[ctrl][i].min, this.fCtrlLabel[ctrl][i].max));
                     if (this.output_handler) {
                    		this.output_handler(path, this.getParamValue(path));
                    	}
@@ -601,11 +661,11 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
          
         // Possibly call an externally given callback (for instance to synchronize playing a MIDIFile...)
         if (this.compute_handler) {
-            this.compute_handler(elecGuitarMIDI_polyProcessor.buffer_size);
+            this.compute_handler(elecGuitarMIDIPolyProcessor.buffer_size);
         }
          
         // First clear the outputs
-        this.mixer.clearOutput(elecGuitarMIDI_polyProcessor.buffer_size, this.numOut, this.outs);
+        this.mixer.clearOutput(elecGuitarMIDIPolyProcessor.buffer_size, this.numOut, this.outs);
         
         // Compute all running voices
         for (var i = 0; i < this.polyphony; i++) {
@@ -615,14 +675,14 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
                     this.factory.setParamValue(this.dsp_voices[i], this.fGateLabel, 0.0);
                     this.factory.compute(this.dsp_voices[i], 1, this.ins, this.mixing);
                     this.factory.setParamValue(this.dsp_voices[i], this.fGateLabel, 1.0);
-                    this.factory.compute(this.dsp_voices[i], elecGuitarMIDI_polyProcessor.buffer_size, this.ins, this.mixing);
+                    this.factory.compute(this.dsp_voices[i], elecGuitarMIDIPolyProcessor.buffer_size, this.ins, this.mixing);
                     this.dsp_voices_trigger[i] = false;
                 } else {
                     // Compute regular voice
-                    this.factory.compute(this.dsp_voices[i], elecGuitarMIDI_polyProcessor.buffer_size, this.ins, this.mixing);
+                    this.factory.compute(this.dsp_voices[i], elecGuitarMIDIPolyProcessor.buffer_size, this.ins, this.mixing);
                 }
                 // Mix it in result
-                this.dsp_voices_level[i] = this.mixer.mixVoice(elecGuitarMIDI_polyProcessor.buffer_size, this.numOut, this.mixing, this.outs);
+                this.dsp_voices_level[i] = this.mixer.mixVoice(elecGuitarMIDIPolyProcessor.buffer_size, this.numOut, this.mixing, this.outs);
                 // Check the level to possibly set the voice in kFreeVoice again
                 if ((this.dsp_voices_level[i] < 0.001) && (this.dsp_voices_state[i] === this.kReleaseVoice)) {
                     this.dsp_voices_state[i] = this.kFreeVoice;
@@ -632,7 +692,7 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
         
         // Apply effect
         if (this.effect) {
-            this.effect.compute(this.effect_start, elecGuitarMIDI_polyProcessor.buffer_size, this.outs, this.outs);
+            this.effect.compute(this.effect_start, elecGuitarMIDIPolyProcessor.buffer_size, this.outs, this.outs);
         }
         
         // Update bargraph
@@ -653,85 +713,22 @@ class elecGuitarMIDI_polyProcessor extends AudioWorkletProcessor {
 // Globals
 
 // Create memory block
-elecGuitarMIDI_polyProcessor.buffer_size = 128;
-elecGuitarMIDI_polyProcessor.polyphony = 16;
-
-elecGuitarMIDI_polyProcessor.memory = elecGuitarMIDI_polyProcessor.createMemory(elecGuitarMIDI_polyProcessor.buffer_size, elecGuitarMIDI_polyProcessor.polyphony);
-
-// Create Mixer
-elecGuitarMIDI_polyProcessor.mixObject = { imports: { print: arg => console.log(arg) } }
-elecGuitarMIDI_polyProcessor.mixObject["memory"] = { "memory": elecGuitarMIDI_polyProcessor.memory };
-
-elecGuitarMIDI_polyProcessor.importObject = {
-    env: {
-        memoryBase: 0,
-        tableBase: 0,
-            
-        // Integer version
-        _abs: Math.abs,
-        
-        // Float version
-        _acosf: Math.acos,
-        _asinf: Math.asin,
-        _atanf: Math.atan,
-        _atan2f: Math.atan2,
-        _ceilf: Math.ceil,
-        _cosf: Math.cos,
-        _expf: Math.exp,
-        _floorf: Math.floor,
-        _fmodf: function(x, y) { return x % y; },
-        _logf: Math.log,
-        _log10f: Math.log10,
-        _max_f: Math.max,
-        _min_f: Math.min,
-        _remainderf: function(x, y) { return x - Math.round(x/y) * y; },
-        _powf: Math.pow,
-        _roundf: Math.fround,
-        _sinf: Math.sin,
-        _sqrtf: Math.sqrt,
-        _tanf: Math.tan,
-           
-        // Double version
-        _acos: Math.acos,
-        _asin: Math.asin,
-        _atan: Math.atan,
-        _atan2: Math.atan2,
-        _ceil: Math.ceil,
-        _cos: Math.cos,
-        _exp: Math.exp,
-        _floor: Math.floor,
-        _fmod: function(x, y) { return x % y; },
-        _log: Math.log,
-        _log10: Math.log10,
-        _max_: Math.max,
-        _min_: Math.min,
-        _remainder:function(x, y) { return x - Math.round(x/y) * y; },
-        _pow: Math.pow,
-        _round: Math.fround,
-        _sin: Math.sin,
-        _sqrt: Math.sqrt,
-        _tan: Math.tan,
-        
-        memory: elecGuitarMIDI_polyProcessor.memory,
-        
-        table: new WebAssembly.Table({ initial: 0, element: 'anyfunc' })
-    }
-};
+elecGuitarMIDIPolyProcessor.buffer_size = 128;
+elecGuitarMIDIPolyProcessor.polyphony = 16;
 
 // Synchronously compile and instantiate the WASM modules
 try {
-    let wasm_mixer_module = new WebAssembly.Module(elecGuitarMIDI_polyProcessor.atob(getBase64Mixer()));
-    elecGuitarMIDI_polyProcessor.mixer_instance = new WebAssembly.Instance(wasm_mixer_module, elecGuitarMIDI_polyProcessor.mixObject);
-    let wasm_module = new WebAssembly.Module(elecGuitarMIDI_polyProcessor.atob(getBase64CodeelecGuitarMIDI()));
-    elecGuitarMIDI_polyProcessor.elecGuitarMIDI_instance = new WebAssembly.Instance(wasm_module, elecGuitarMIDI_polyProcessor.importObject);
-    // Possibly compile effect
-    if (typeof (getBase64Codeeffect) !== "undefined") {
-        let wasm_effect_module = new WebAssembly.Module(elecGuitarMIDI_polyProcessor.atob(getBase64Codeeffect()));
-        elecGuitarMIDI_polyProcessor.effect_instance = new WebAssembly.Instance(wasm_effect_module, elecGuitarMIDI_polyProcessor.importObject);
+    if (elecGuitarMIDIPolyProcessor.wasm_mixer_module == undefined) {
+        elecGuitarMIDIPolyProcessor.wasm_mixer_module = new WebAssembly.Module(elecGuitarMIDIPolyProcessor.atob(getBase64Mixer()));
+        elecGuitarMIDIPolyProcessor.wasm_module = new WebAssembly.Module(elecGuitarMIDIPolyProcessor.atob(getBase64CodeelecGuitarMIDI()));
+        // Possibly compile effect
+        if (typeof (getBase64Codeeffect) !== "undefined") {
+            elecGuitarMIDIPolyProcessor.wasm_effect_module = new WebAssembly.Module(elecGuitarMIDIPolyProcessor.atob(getBase64Codeeffect()));
+        }
+        registerProcessor('elecGuitarMIDIPoly', elecGuitarMIDIPolyProcessor);
     }
-    registerProcessor('elecGuitarMIDI_poly', elecGuitarMIDI_polyProcessor);
 } catch (e) {
-    console.log(e); console.log("Faust elecGuitarMIDI_poly cannot be loaded or compiled");
+    console.log(e); console.log("Faust elecGuitarMIDIPoly cannot be loaded or compiled");
 }
 
 

@@ -372,7 +372,7 @@ Finds the sum of a numerical array.
 **/
 Array.prototype.sum = function() {
   var sum = 0;
-  for(var i = 0; i < this.length; i++) {
+  for (var i = 0; i < this.length; i++) {
     sum += this[i];
   }
   return sum;
@@ -740,7 +740,7 @@ _f4u$t.rand_string = function(n)
     n = 8;
   }
 
-  for( var i=0; i < n; i++ ) {
+  for (var i = 0; i < n; i++ ) {
     text += possible.charAt(Math.floor(Math.random() * possible.length));
   }
   return text;
@@ -1131,7 +1131,7 @@ _f4u$t.unique = function(s) {
 }
 
 /**
-Returns the type part of an id.  The faust naming convention gives
+Returns the type part of an id. The faust naming convention gives
 all DOM ids a type as the second entry. Examples are vslider, hslider,
 rbutton.
 
@@ -1574,7 +1574,7 @@ _f4u$t.hard_delete = function(div) {
   To be called when used with the C++/LLVM libfaust based FaustNode.
 **/
 _f4u$t.make_audio_ui = function(dsp, svg) {
-  var json = eval ("(" + dsp.json() + ")");
+  var json = eval("(" + dsp.json() + ")");
   var faust_svg = new _f4u$t.SVG(
     svg,
     // kludge to prevent scroll bars...
@@ -2459,7 +2459,6 @@ _f4u$t.RotatingButton.prototype.r = function() {
 _f4u$t.RotatingButton.prototype.dims = function() {
   return [this.r() * 2, this.r() * 2];
 }
-
 
 _f4u$t.RotatingButton.prototype.make_mgroove = function(svg, parent, id) {
   var full_id = 'faust_rbutton_mgroove_'+id;
@@ -4225,7 +4224,6 @@ _f4u$t.json_to_ui = function(json, hash) {
  * obviously, the goal is to separate the two as much as possible
  */
 
-
 /*
   UTILITY FUNCTIONS
 */
@@ -4270,7 +4268,7 @@ _f4u$t.transform_to_array = function(transform) {
   while(true) {
     var match = matrix.exec(transform);
     if (match != null) {
-      out.push(["matrix",parseFloat(match[1]), parseFloat(match[2]), parseFloat(match[3]), parseFloat(match[4]), parseFloat(match[5]), parseFloat(match[6])]);
+      out.push(["matrix", parseFloat(match[1]), parseFloat(match[2]), parseFloat(match[3]), parseFloat(match[4]), parseFloat(match[5]), parseFloat(match[6])]);
       transform = transform.substr(match[0].length,transform.length-match[0].length);
       continue;
     }
@@ -5410,19 +5408,19 @@ _f4u$t.main_loop = function() {
 $(document).ready(function() { _f4u$t.main_loop(); });
 
 /*
-Code generated with Faust version 2.5.24
+Code generated with Faust version 2.5.32
 Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONSNoiseS() {
-	return "{\"name\":\"Noises\",\"filename\":\"SNoiseS\",\"version\":\"2.5.24\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"40\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"ER\"},{\"filename\":\"SNoiseS\"},{\"name\":\"Noises\"},{\"version\":\"1.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Noises\",\"items\":[{\"type\":\"hslider\",\"label\":\"Noise Type\",\"address\":\"/Noises/Noise_Type\",\"index\":\"4\",\"meta\":[{\"acc\":\"0 0 -10 0 10\"}],\"init\":\"1\",\"min\":\"0\",\"max\":\"2\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Pink Noise Volume\",\"address\":\"/Noises/Pink_Noise_Volume\",\"index\":\"0\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"},{\"tooltip\":\"0=Mute, 1=White Noise, 2=Pink Noise\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"2\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"White Noise Volume\",\"address\":\"/Noises/White_Noise_Volume\",\"index\":\"32\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"2\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"Noises\",\"filename\":\"SNoiseS\",\"version\":\"2.5.32\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"40\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"ER\"},{\"filename\":\"SNoiseS\"},{\"name\":\"Noises\"},{\"version\":\"1.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Noises\",\"items\":[{\"type\":\"hslider\",\"label\":\"Noise Type\",\"address\":\"/Noises/Noise_Type\",\"index\":\"4\",\"meta\":[{\"acc\":\"0 0 -10 0 10\"}],\"init\":\"1\",\"min\":\"0\",\"max\":\"2\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Pink Noise Volume\",\"address\":\"/Noises/Pink_Noise_Volume\",\"index\":\"0\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"},{\"tooltip\":\"0=Mute, 1=White Noise, 2=Pink Noise\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"2\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"White Noise Volume\",\"address\":\"/Noises/White_Noise_Volume\",\"index\":\"32\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"2\",\"step\":\"0.01\"}]}]}";
 }
-function getBase64CodeSNoiseS() { return "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"; }
+function getBase64CodeSNoiseS() { return "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"; }
 
 /*
- faust2wasm
- Additional code: GRAME 2017-2018
+ faust2wasm: GRAME 2017-2018
 */
+ 
  
 'use strict';
 
@@ -5503,11 +5501,31 @@ class SNoiseSNode extends AudioWorkletNode {
         this.port.onmessage = this.handleMessage.bind(this);
     }
     
+    // To be called by the message port with messages coming from the processor
+    handleMessage(event)
+    {
+        var msg = event.data;
+        if (this.output_handler) {
+            this.output_handler(msg.path, msg.value);
+        }
+    }
+    
+    // Public API
+    
+    /**
+     *  Returns a full JSON description of the SNoiseS.
+     */
     getJSON()
     {
         return getJSONSNoiseS();
     }
     
+    /**
+     *  Set the control value at a given path.
+     *
+     * @param path - a path to the control
+     * @param val - the value to be set
+     */
     setParamValue(path, val)
     {
         //this.port.postMessage({ type:"param", key:path, value:val });
@@ -5516,6 +5534,11 @@ class SNoiseSNode extends AudioWorkletNode {
         this.parameters.get(path).setValueAtTime(val, 0);
     }
     
+    /**
+     *  Get the control value at a given path.
+     *
+     * @return the current control value
+     */
     getParamValue(path)
     {
         return this.parameters.get(path).value;
@@ -5541,7 +5564,6 @@ class SNoiseSNode extends AudioWorkletNode {
         return this.output_handler;
     }
     
-    // TO REMOVE
     getNumInputs()
     {
         return parseInt(this.json_object.inputs);
@@ -5552,13 +5574,16 @@ class SNoiseSNode extends AudioWorkletNode {
         return parseInt(this.json_object.outputs);
     }
     
+    /**
+     * Returns an array of all input paths (to be used with setParamValue/getParamValue)
+     */
     getParams()
     {
         return this.inputs_items;
     }
     
     /**
-     * Controller
+     * Control change
      *
      * @param channel - the MIDI channel (0..15, not used for now)
      * @param ctrl - the MIDI controller number (0..127)
@@ -5580,35 +5605,71 @@ class SNoiseSNode extends AudioWorkletNode {
         this.port.postMessage({ type: "pitchWheel", data: [channel, wheel] });
     }
     
+    /**
+     * Generic MIDI message handler.
+     */
     midiMessage(data)
     {
         this.port.postMessage({ type:"midi", data:data });
     }
     
-    handleMessage(event) 
-    {
-        var msg = event.data;
-        if (this.output_handler) {
-            this.output_handler(msg.path, msg.value);
-        }
-    }
-    
 }
 
-// Faust context
-var faust = faust || {};
+// Factory class
 
-faust.createSNoiseS = function(context, callback)
-{
-    // Resume audio context each time...
-    context.resume();
+class SNoiseS {
     
-    // The main global scope
-    context.audioWorklet.addModule("SNoiseS-processor.js")
-    .then(function () {
-         callback(new SNoiseSNode(context, {}));
-    })
-    .catch(function(error) { console.log(error); console.log("Faust SNoiseS cannot be loaded or compiled"); });
+    /**
+     * Factory constructor.
+     *
+     * @param context - the audio context
+     * @param baseUrl - the baseUrl of the plugin folder
+     */
+    constructor(context, baseUrl)
+    {
+    	// Resume audio context each time...
+    	context.resume();
+    	
+        this.context = context;
+        this.baseUrl = baseUrl;
+    }
+    
+    /**
+     * Load additionnal resources to prepare the custom AudioWorkletNode. Returns a promise to be used with the created node.
+     */
+    load()
+    {
+    	return new Promise((resolve, reject) => {
+        		this.context.audioWorklet.addModule(this.baseUrl + "SNoiseS-processor.js").then(() => {
+        		this.node = new SNoiseSNode(this.context, {});
+        		return (this.node);
+        	}).then((node) => {
+                resolve(node);
+            }).catch((e) => {
+                reject(e);
+            });
+        });
+    }
+    
+    loadGui() 
+    {
+        return new Promise((resolve, reject) => {
+            try {
+            	var link = document.createElement('link');
+            	link.rel = 'import';
+            	link.id = 'urlPlugin';
+            	link.href = this.baseUrl + "main.html";
+            	document.head.appendChild(link);
+            	var element = document.createElement("faust-SNoiseS");
+            	element._plug = this.node;
+            	resolve(element);
+        	} catch (e) {
+            	console.log(e);
+            	reject(e);
+        	}
+    	});
+    };
+    
 }
 
 </script>
@@ -5624,11 +5685,9 @@ faust.createSNoiseS = function(context, callback)
 
 var isWasm = (typeof(WebAssembly) !== "undefined");
 var isWebKitAudio = (typeof (webkitAudioContext) !== "undefined");
-var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
-var audio_input = null;
-var SNoiseS = null;
-var faustsvg = null;
-var output_handler = null;
+var context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
+var factory = null;
+var node = null;
 
 function workletAvailable()
 {
@@ -5641,15 +5700,15 @@ function workletAvailable()
 
 function pitchWheel(channel, wheel)
 {
-    if (SNoiseS) {
-        SNoiseS.pitchWheel(channel, wheel);
+    if (node) {
+        node.pitchWheel(channel, wheel);
     }
 }
 
 function ctrlChange(channel, ctrl, value)
 {
-    if (SNoiseS) {
-        SNoiseS.ctrlChange(channel, ctrl, value);
+    if (node) {
+        node.ctrlChange(channel, ctrl, value);
     }
 }
 
@@ -5714,7 +5773,6 @@ function activateAudioInput()
         navigator.getUserMedia({audio: { echoCancellation: false }}, getDevice, function(e) {
                                alert('Error getting audio input');
                                console.log(e);
-                               audio_input = null;
                                });
     } else {
         alert('Audio input API not available');
@@ -5723,20 +5781,17 @@ function activateAudioInput()
 
 function getDevice(device)
 {
-    // Create an AudioNode from the stream.
-    audio_input = audio_context.createMediaStreamSource(device);
-
-    // Connect it to the destination.
-    audio_input.connect(SNoiseS);
+    // Connect the input to the destination.
+    context.createMediaStreamSource(device).connect(node);
 }
 
 // Save/Load functions using local storage
 function saveSNoiseS()
 {
     if (typeof(Storage) !== "undefined") {
-        var params = SNoiseS.getParams();
+        var params = node.getParams();
         for (var i = 0; i < params.length; i++) {
-            localStorage.setItem(params[i], SNoiseS.getParamValue(params[i]));
+            localStorage.setItem(params[i], node.getParamValue(params[i]));
         }
     }
 }
@@ -5744,49 +5799,43 @@ function saveSNoiseS()
 function loadSNoiseS()
 {
     if (typeof(Storage) !== "undefined") {
-        var params = SNoiseS.getParams();
+        var params = node.getParams();
         for (var i = 0; i < params.length; i++) {
             if (localStorage.getItem(params[i])) {
                 // Restore SNoiseS state
-                SNoiseS.setParamValue(params[i], Number(localStorage.getItem(params[i])));
+                node.setParamValue(params[i], Number(localStorage.getItem(params[i])));
                 // Restore GUI state
-                output_handler(params[i], Number(localStorage.getItem(params[i])));
+                node.getOutputParamHandler()(params[i], Number(localStorage.getItem(params[i])));
             }
         }
     }
 }
 
-function startSNoiseSAux(dsp)
+function startSNoiseSAux(aw_node)
 {
-    if (!dsp) {
-        alert(faust.getErrorMessage());
-        return;
-    }
+    node = aw_node;
 
-    SNoiseS = dsp;
-
-    if (SNoiseS.getNumInputs() > 0) {
+    if (node.getNumInputs() > 0) {
         activateAudioInput();
     }
     
     console.log("startSNoiseSAux");
-    console.log(SNoiseS.parameters);
+    console.log(node.parameters);
     
-    SNoiseS.connect(audio_context.destination);
-    console.log(SNoiseS.getJSON());
+    node.connect(context.destination);
+    console.log(node.getJSON());
 
     // TODO: emcc
-    //SNoiseS.metadata({ declare: function(key, value) { console.log("key = " + key + " value = " + value); }});
-    console.log(SNoiseS.getParams());
+    //node.metadata({ declare: function(key, value) { console.log("key = " + key + " value = " + value); }});
+    console.log(node.getParams());
 
     // No polling from the server needed, so use an empty loop
     _f4u$t.main_loop = function() {}
 
-    faustsvg = $('<div />');
+    var faustsvg = $('<div />');
     $('body').append(faustsvg);
     
-    output_handler = _f4u$t.main(SNoiseS.getJSON(), faustsvg, function(path, val) { SNoiseS.setParamValue(path, val); });
-    SNoiseS.setOutputParamHandler(output_handler);
+    node.setOutputParamHandler(_f4u$t.main(node.getJSON(), faustsvg, function(path, val) { node.setParamValue(path, val); }));
 
     // Load SNoiseS state from local storage
     loadSNoiseS();
@@ -5800,7 +5849,10 @@ function startSNoiseS()
 function startNewSNoiseS()
 {
      if (isWasm && workletAvailable()) {
-        faust.createSNoiseS(audio_context, startSNoiseSAux);
+        factory = new SNoiseS(context, "");
+        factory.load()
+        .then((aw_node) => startSNoiseSAux(aw_node))
+        .catch((error) => { console.log(error); console.log("Faust mydsp cannot be loaded or compiled"); });
     }  else {
         alert("WebAssembly or AudioWorklet is not supported in this browser !");
     }
@@ -5810,12 +5862,12 @@ function startNewSNoiseS()
 window.addEventListener('touchstart', function() {
 
                         // create empty buffer
-                        var buffer = audio_context.createBuffer(1, 1, 22050);
-                        var source = audio_context.createBufferSource();
+                        var buffer = context.createBuffer(1, 1, 22050);
+                        var source = context.createBufferSource();
                         source.buffer = buffer;
 
                         // connect to output (your speakers)
-                        source.connect(audio_context.destination);
+                        source.connect(context.destination);
 
                         // play the file
                         source.start();
@@ -5833,7 +5885,7 @@ if (typeof (Module) !== "undefined") {
 }
 
 // Save SNoiseS state to local storage
-setInterval(function() { if (SNoiseS) saveSNoiseS(); }, 1000);
+setInterval(function() { if (node) saveSNoiseS(); }, 1000);
 
 </script>
 </body>

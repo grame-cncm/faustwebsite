@@ -1,17 +1,16 @@
 
 /*
-Code generated with Faust version 2.5.24
+Code generated with Faust version 2.5.32
 Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONSLimiter() {
-	return "{\"name\":\"Limiter\",\"filename\":\"SLimiter\",\"version\":\"2.5.24\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"12\",\"inputs\":\"2\",\"outputs\":\"2\",\"meta\":[{\"author\":\"Yann Orlarey\"},{\"filename\":\"SLimiter\"},{\"name\":\"Limiter\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Limiter\",\"items\":[]}]}";
+	return "{\"name\":\"Limiter\",\"filename\":\"SLimiter\",\"version\":\"2.5.32\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"12\",\"inputs\":\"2\",\"outputs\":\"2\",\"meta\":[{\"author\":\"Yann Orlarey\"},{\"filename\":\"SLimiter\"},{\"name\":\"Limiter\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Limiter\",\"items\":[]}]}";
 }
-function getBase64CodeSLimiter() { return "AGFzbQEAAAABy4CAgAAOYAJ/fwBgBH9/f38AYAF/AX9gAX8Bf2ACf38BfWABfwF/YAJ/fwBgAX8AYAJ/fwBgAn9/AGABfwBgAn9/AX9gAn9/AX9gA39/fQACgYCAgAAAA4+AgIAADgABAgMEBQYHCAkKCwwNBYeAgIAAAQCEgICAAAe6gYCAAAwHY29tcHV0ZQABDGdldE51bUlucHV0cwACDWdldE51bU91dHB1dHMAAw1nZXRQYXJhbVZhbHVlAAQNZ2V0U2FtcGxlUmF0ZQAFBGluaXQABg1pbnN0YW5jZUNsZWFyAAcRaW5zdGFuY2VDb25zdGFudHMACAxpbnN0YW5jZUluaXQACRppbnN0YW5jZVJlc2V0VXNlckludGVyZmFjZQAKDXNldFBhcmFtVmFsdWUADQZtZW1vcnkCAArZg4CAAA6CgICAAAAL74GAgAACBX8EfUEAIQRBACEFQQAhBkEAIQdBACEIQwAAAAAhCUMAAAAAIQpDAAAAACELQwAAAAAhDCACQQBqKAIAIQQgAkEEaigCACEFIANBAGooAgAhBiADQQRqKAIAIQdBACEIA0ACQCAEIAhqKgIAIQkgBSAIaioCACEKQQAqAgRDxje+t5IgCYsgCouXlyELQQAgC0MAAAAAIAu8QYCAgPwHcRs4AgBDAACAP0EAKgIAlyEMIAYgCGogCSAMlTgCACAHIAhqIAogDJU4AgBBAEEAKgIAOAIEIAhBBGohCCAIQQQgAWxIBEAMAgwBCwsLC4WAgIAAAEECDwuFgICAAABBAg8Li4CAgAAAIAAgAWoqAgAPC4iAgIAAAEEAKAIIDwuOgICAAAAgACABEAAgACABEAkLtYCAgAABAX9BACEBQQAhAQNAAkBBACABQQJ0akMAAAAAOAIAIAFBAWohASABQQJIBEAMAgwBCwsLC4mAgIAAAEEAIAE2AggLkICAgAAAIAAgARAIIAAQCiAAEAcLgoCAgAAAC42AgIAAACABIAAgACABSBsPC42AgIAAACAAIAEgACABSBsPC4yAgIAAACAAIAFqIAI4AgALC5CCgIAAAQBBAAuJAnsibmFtZSI6IkxpbWl0ZXIiLCJmaWxlbmFtZSI6IlNMaW1pdGVyIiwidmVyc2lvbiI6IjIuNS4yNCIsIm9wdGlvbnMiOiJ3YXNtLWliLCAtc2NhbCAtZnR6IDIiLCJzaXplIjoiMTIiLCJpbnB1dHMiOiIyIiwib3V0cHV0cyI6IjIiLCJtZXRhIjpbeyJhdXRob3IiOiJZYW5uIE9ybGFyZXkifSx7ImZpbGVuYW1lIjoiU0xpbWl0ZXIifSx7Im5hbWUiOiJMaW1pdGVyIn1dLCJ1aSI6W3sidHlwZSI6InZncm91cCIsImxhYmVsIjoiTGltaXRlciIsIml0ZW1zIjpbXX1dfTA="; }
+function getBase64CodeSLimiter() { return "AGFzbQEAAAABy4CAgAAOYAJ/fwBgBH9/f38AYAF/AX9gAX8Bf2ACf38BfWABfwF/YAJ/fwBgAX8AYAJ/fwBgAn9/AGABfwBgAn9/AX9gAn9/AX9gA39/fQACgYCAgAAAA4+AgIAADgABAgMEBQYHCAkKCwwNBYeAgIAAAQCEgICAAAe6gYCAAAwHY29tcHV0ZQABDGdldE51bUlucHV0cwACDWdldE51bU91dHB1dHMAAw1nZXRQYXJhbVZhbHVlAAQNZ2V0U2FtcGxlUmF0ZQAFBGluaXQABg1pbnN0YW5jZUNsZWFyAAcRaW5zdGFuY2VDb25zdGFudHMACAxpbnN0YW5jZUluaXQACRppbnN0YW5jZVJlc2V0VXNlckludGVyZmFjZQAKDXNldFBhcmFtVmFsdWUADQZtZW1vcnkCAArZg4CAAA6CgICAAAAL74GAgAACBX8EfUEAIQRBACEFQQAhBkEAIQdBACEIQwAAAAAhCUMAAAAAIQpDAAAAACELQwAAAAAhDCACQQBqKAIAIQQgAkEEaigCACEFIANBAGooAgAhBiADQQRqKAIAIQdBACEIA0ACQCAEIAhqKgIAIQkgBSAIaioCACEKQQAqAgRDxje+t5IgCYsgCouXlyELQQAgC0MAAAAAIAu8QYCAgPwHcRs4AgBDAACAP0EAKgIAlyEMIAYgCGogCSAMlTgCACAHIAhqIAogDJU4AgBBAEEAKgIAOAIEIAhBBGohCCAIQQQgAWxIBEAMAgwBCwsLC4WAgIAAAEECDwuFgICAAABBAg8Li4CAgAAAIAAgAWoqAgAPC4iAgIAAAEEAKAIIDwuOgICAAAAgACABEAAgACABEAkLtYCAgAABAX9BACEBQQAhAQNAAkBBACABQQJ0akMAAAAAOAIAIAFBAWohASABQQJIBEAMAgwBCwsLC4mAgIAAAEEAIAE2AggLkICAgAAAIAAgARAIIAAQCiAAEAcLgoCAgAAAC42AgIAAACABIAAgACABSBsPC42AgIAAACAAIAEgACABSBsPC4yAgIAAACAAIAFqIAI4AgALC5CCgIAAAQBBAAuJAnsibmFtZSI6IkxpbWl0ZXIiLCJmaWxlbmFtZSI6IlNMaW1pdGVyIiwidmVyc2lvbiI6IjIuNS4zMiIsIm9wdGlvbnMiOiJ3YXNtLWliLCAtc2NhbCAtZnR6IDIiLCJzaXplIjoiMTIiLCJpbnB1dHMiOiIyIiwib3V0cHV0cyI6IjIiLCJtZXRhIjpbeyJhdXRob3IiOiJZYW5uIE9ybGFyZXkifSx7ImZpbGVuYW1lIjoiU0xpbWl0ZXIifSx7Im5hbWUiOiJMaW1pdGVyIn1dLCJ1aSI6W3sidHlwZSI6InZncm91cCIsImxhYmVsIjoiTGltaXRlciIsIml0ZW1zIjpbXX1dfTA="; }
 
 /*
- faust2wasm
- Additional code: GRAME 2017
+ faust2wasm: GRAME 2017-2018
 */
  
 'use strict';
@@ -177,8 +176,9 @@ class SLimiterProcessor extends AudioWorkletProcessor {
         this.ptr_size = 4;
         this.sample_size = 4;
         
-        this.factory = SLimiterProcessor.SLimiter_instance.exports;
-        this.HEAP = SLimiterProcessor.SLimiter_instance.exports.memory.buffer;
+        this.SLimiter_instance = new WebAssembly.Instance(SLimiterProcessor.wasm_module, SLimiterProcessor.importObject);
+  	   	this.factory = this.SLimiter_instance.exports;
+        this.HEAP = this.SLimiter_instance.exports.memory.buffer;
         this.HEAP32 = new Int32Array(this.HEAP);
         this.HEAPF32 = new Float32Array(this.HEAP);
 
@@ -435,9 +435,10 @@ SLimiterProcessor.importObject = {
 
 // Synchronously compile and instantiate the WASM module
 try {
-    let wasm_module = new WebAssembly.Module(SLimiterProcessor.atob(getBase64CodeSLimiter()));
-    SLimiterProcessor.SLimiter_instance = new WebAssembly.Instance(wasm_module, SLimiterProcessor.importObject);
-    registerProcessor('SLimiter', SLimiterProcessor);
+    if (SLimiterProcessor.wasm_module == undefined) {
+        SLimiterProcessor.wasm_module = new WebAssembly.Module(SLimiterProcessor.atob(getBase64CodeSLimiter()));
+        registerProcessor('SLimiter', SLimiterProcessor);
+    }
 } catch (e) {
     console.log(e); console.log("Faust SLimiter cannot be loaded or compiled");
 }
