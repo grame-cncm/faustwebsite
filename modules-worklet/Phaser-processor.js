@@ -342,6 +342,17 @@ class PhaserProcessor extends AudioWorkletProcessor {
         var input = inputs[0];
         var output = outputs[0];
         
+        // Check inputs
+        if (this.numIn > 0 && ((input === undefined) || (input[0][0] === undefined))) {
+            console.log("Process input error");
+            return true;
+        }
+        // Check outputs
+        if (this.numOut > 0 && ((output === undefined) || (output[0][0] === undefined))) {
+            console.log("Process output error");
+            return true;
+        }
+        
         // Copy inputs
         if (input !== undefined) {
             for (var chan = 0; chan < Math.min(this.numIn, input.length) ; ++chan) {
@@ -364,7 +375,6 @@ class PhaserProcessor extends AudioWorkletProcessor {
         
         // Copy outputs
         if (output !== undefined) {
-            //console.log("output.length " + output.length);
             for (var chan = 0; chan < Math.min(this.numOut, output.length); ++chan) {
                 var dspOutput = this.dspOutChannnels[chan];
                 output[chan].set(dspOutput);
