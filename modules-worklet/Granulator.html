@@ -5408,20 +5408,20 @@ _f4u$t.main_loop = function() {
 $(document).ready(function() { _f4u$t.main_loop(); });
 
 /*
-Code generated with Faust version 2.5.32
+Code generated with Faust version 2.5.33
 Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONGranulator() {
-	return "{\"name\":\"Granulator\",\"filename\":\"Granulator\",\"version\":\"2.5.32\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"660\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"analyzers.lib/name\":\"Faust Analyzer Library\"},{\"analyzers.lib/version\":\"0.0\"},{\"author\":\"Adapted from sfIter by Christophe Lebreton\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"filename\":\"Granulator\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Granulator\"},{\"noises.lib/name\":\"Faust Noise Generator Library\"},{\"noises.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"hgroup\",\"label\":\"Granulator\",\"items\":[{\"type\":\"hslider\",\"label\":\"Grain Size\",\"address\":\"/Granulator/Grain_Size\",\"index\":\"632\",\"meta\":[{\"1\":\"\"},{\"acc\":\"2 0 -10 0 10\"},{\"style\":\"knob\"}],\"init\":\"200\",\"min\":\"5\",\"max\":\"2205\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Speed\",\"address\":\"/Granulator/Speed\",\"index\":\"28\",\"meta\":[{\"2\":\"\"},{\"acc\":\"0 1 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"Hz\"}],\"init\":\"10\",\"min\":\"1\",\"max\":\"20\",\"step\":\"0.0001\"},{\"type\":\"hslider\",\"label\":\"Probability\",\"address\":\"/Granulator/Probability\",\"index\":\"60\",\"meta\":[{\"3\":\"\"},{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"%\"}],\"init\":\"70\",\"min\":\"50\",\"max\":\"100\",\"step\":\"1\"}]}]}";
+	return "{\"name\":\"Granulator\",\"filename\":\"Granulator\",\"version\":\"2.5.33\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"660\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"analyzers.lib/name\":\"Faust Analyzer Library\"},{\"analyzers.lib/version\":\"0.0\"},{\"author\":\"Adapted from sfIter by Christophe Lebreton\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"filename\":\"Granulator\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Granulator\"},{\"noises.lib/name\":\"Faust Noise Generator Library\"},{\"noises.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"hgroup\",\"label\":\"Granulator\",\"items\":[{\"type\":\"hslider\",\"label\":\"Grain Size\",\"address\":\"/Granulator/Grain_Size\",\"index\":\"632\",\"meta\":[{\"1\":\"\"},{\"acc\":\"2 0 -10 0 10\"},{\"style\":\"knob\"}],\"init\":\"200\",\"min\":\"5\",\"max\":\"2205\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Speed\",\"address\":\"/Granulator/Speed\",\"index\":\"28\",\"meta\":[{\"2\":\"\"},{\"acc\":\"0 1 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"Hz\"}],\"init\":\"10\",\"min\":\"1\",\"max\":\"20\",\"step\":\"0.0001\"},{\"type\":\"hslider\",\"label\":\"Probability\",\"address\":\"/Granulator/Probability\",\"index\":\"60\",\"meta\":[{\"3\":\"\"},{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"%\"}],\"init\":\"70\",\"min\":\"50\",\"max\":\"100\",\"step\":\"1\"}]}]}";
 }
-function getBase64CodeGranulator() { return "AGFzbQEAAAAB24CAgAARYAJ/fwBgBH9/f38AYAF9AX1gAn19AX1gAX8Bf2ABfwF/YAJ/fwF9YAF/AX9gAn9/AGABfwBgAn9/AGACf38AYAF/AGACf38Bf2ACf38Bf2ADf399AGABfQF9AqaAgIAAAwNlbnYFX2V4cGYAAgNlbnYGX2Ztb2RmAAMDZW52BV90YW5mABADj4CAgAAOAAEEBQYHCAkKCwwNDg8Fh4CAgAABAIKAgIAAB7qBgIAADAdjb21wdXRlAAQMZ2V0TnVtSW5wdXRzAAUNZ2V0TnVtT3V0cHV0cwAGDWdldFBhcmFtVmFsdWUABw1nZXRTYW1wbGVSYXRlAAgEaW5pdAAJDWluc3RhbmNlQ2xlYXIAChFpbnN0YW5jZUNvbnN0YW50cwALDGluc3RhbmNlSW5pdAAMGmluc3RhbmNlUmVzZXRVc2VySW50ZXJmYWNlAA0Nc2V0UGFyYW1WYWx1ZQAQBm1lbW9yeQIACqCPgIAADoKAgIAAAAunh4CAAAIFfw59QQAhBEEAIQVDAAAAACEJQwAAAAAhCkMAAAAAIQtBACEGQwAAAAAhDEMAAAAAIQ1DAAAAACEOQwAAAAAhD0MAAAAAIRBBACEHQwAAAAAhEUEAIQhDAAAAACESQwAAAAAhE0MAAAAAIRRDAAAAACEVQwAAAAAhFiACQQBqKAIAIQQgA0EAaigCACEFQQAqAhwhCUEAKgI8IQpDAACAP0EAKgL4BJUhC0EAIQYDQAJAQQAgCTgCIEEAKgIUQQAqAiyUQQAqAhggCUEAKgIkkpSSIQxBACAMQwAAAAAgDLxBgICA/AdxGzgCKEMAAAAAQQAqAghBACoCKJSTEAAhDUEAQe2cmY4EQQAoAjRsQbngAGo2AjBBACAKOAJAQQAqAhRBACoCTJRBACoCOCAKQQAqAkSSlJIhDkEAIA5DAAAAACAOvEGAgID8B3EbOAJIQQAqAlhBACoCUEEAKgIolJJDAACAPxABIQ9BACAPQwAAAAAgD7xBgICA/AdxGzgCVEEAKgJUQ28Sg7qSIRBBACAQOAJcQQAqAmBDAAAAAF8gEEMAAAAAXnEhB0EAKgJoQQEgB2uylCAHskMAAAAwQQAoAjCylIuUkiERQQAgEUMAAAAAIBG8QYCAgPwHcRs4AmRB8ABBACgCbEH/AHFBAnRqIBBDAAAAP102AgBBACoCSEEAKgJkXkHwAEEAKAJsQeQAa0H/AHFBAnRqKAIAbCEIQQAgCDYC8ARBACoCgAUgCEEAKAL0BGtBAEqykiALQQAqAoAFQwAAAABespSTIRJBACASQwAAAAAgErxBgICA/AdxGzgC/ARDAAAAMEEAKAIwQQAqAvwEQwAAAABebLKUiyETQwAAgD8gDZMhFCATIA1BACoCiAWUIBMgFJSSlyEVQQAgFUMAAAAAIBW8QYCAgPwHcRs4AoQFQQAqApAFIA2UQQAqAoQFIBSUkiEWQQAgFkMAAAAAIBa8QYCAgPwHcRs4AowFIAUgBmpBACoCjAUgBCAGaioCAJQ4AgBBAEEAKgIgOAIkQQBBACoCKDgCLEEAQQAoAjA2AjRBAEEAKgJAOAJEQQBBACoCSDgCTEEAQQAqAlQ4AlhBAEEAKgJcOAJgQQBBACoCZDgCaEEAQQAoAmxBAWo2AmxBAEEAKALwBDYC9ARBAEEAKgL8BDgCgAVBAEEAKgKEBTgCiAVBAEEAKgKMBTgCkAUgBkEEaiEGIAZBBCABbEgEQAwCDAELCwsLhYCAgAAAQQEPC4WAgIAAAEEBDwuLgICAAAAgACABaioCAA8LiICAgAAAQQAoAgAPC46AgIAAACAAIAEQAyAAIAEQDAuKhYCAAAENf0EAIQFBACECQQAhA0EAIQRBACEFQQAhBkEAIQdBACEIQQAhCUEAIQpBACELQQAhDEEAIQ1BACEBA0ACQEEgIAFBAnRqQwAAAAA4AgAgAUEBaiEBIAFBAkgEQAwCDAELCwtBACECA0ACQEEoIAJBAnRqQwAAAAA4AgAgAkEBaiECIAJBAkgEQAwCDAELCwtBACEDA0ACQEEwIANBAnRqQQA2AgAgA0EBaiEDIANBAkgEQAwCDAELCwtBACEEA0ACQEHAACAEQQJ0akMAAAAAOAIAIARBAWohBCAEQQJIBEAMAgwBCwsLQQAhBQNAAkBByAAgBUECdGpDAAAAADgCACAFQQFqIQUgBUECSARADAIMAQsLC0EAIQYDQAJAQdQAIAZBAnRqQwAAAAA4AgAgBkEBaiEGIAZBAkgEQAwCDAELCwtBACEHA0ACQEHcACAHQQJ0akMAAAAAOAIAIAdBAWohByAHQQJIBEAMAgwBCwsLQQAhCANAAkBB5AAgCEECdGpDAAAAADgCACAIQQFqIQggCEECSARADAIMAQsLC0EAQQA2AmxBACEJA0ACQEHwACAJQQJ0akEANgIAIAlBAWohCSAJQYABSARADAIMAQsLC0EAIQoDQAJAQfAEIApBAnRqQQA2AgAgCkEBaiEKIApBAkgEQAwCDAELCwtBACELA0ACQEH8BCALQQJ0akMAAAAAOAIAIAtBAWohCyALQQJIBEAMAgwBCwsLQQAhDANAAkBBhAUgDEECdGpDAAAAADgCACAMQQFqIQwgDEECSARADAIMAQsLC0EAIQ0DQAJAQYwFIA1BAnRqQwAAAAA4AgAgDUEBaiENIA1BAkgEQAwCDAELCwsLpIGAgAAAQQAgATYCAEEAQwCAO0hDAACAP0EAKAIAspeWOAIEQQBDAACAQUEAKgIElTgCCEEAQwAAgD9D2w9JQEEAKgIElRAClTgCDEEAQQAqAgxDAACAP5I4AhBBAEMAAAAAQwAAgD9BACoCDJNBACoCEJWTOAIUQQBDAACAP0EAKgIQlTgCGEEAQwrXIzxBACoCEJU4AjhBAEMAAIA/QQAqAgSVOAJQC5CAgIAAACAAIAEQCyAAEA0gABAKC6GAgIAAAEEAQwAAIEE4AhxBAEMAAIxCOAI8QQBDAABIQzgC+AQLjYCAgAAAIAEgACAAIAFIGw8LjYCAgAAAIAAgASAAIAFIGw8LjICAgAAAIAAgAWogAjgCAAsLzYuAgAABAEEAC8YLeyJuYW1lIjoiR3JhbnVsYXRvciIsImZpbGVuYW1lIjoiR3JhbnVsYXRvciIsInZlcnNpb24iOiIyLjUuMzIiLCJvcHRpb25zIjoid2FzbS1pYiwgLXNjYWwgLWZ0eiAyIiwic2l6ZSI6IjY2MCIsImlucHV0cyI6IjEiLCJvdXRwdXRzIjoiMSIsIm1ldGEiOlt7ImFuYWx5emVycy5saWIvbmFtZSI6IkZhdXN0IEFuYWx5emVyIExpYnJhcnkifSx7ImFuYWx5emVycy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsiYXV0aG9yIjoiQWRhcHRlZCBmcm9tIHNmSXRlciBieSBDaHJpc3RvcGhlIExlYnJldG9uIn0seyJiYXNpY3MubGliL25hbWUiOiJGYXVzdCBCYXNpYyBFbGVtZW50IExpYnJhcnkifSx7ImJhc2ljcy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsiZmlsZW5hbWUiOiJHcmFudWxhdG9yIn0seyJmaWx0ZXJzLmxpYi9uYW1lIjoiRmF1c3QgRmlsdGVycyBMaWJyYXJ5In0seyJmaWx0ZXJzLmxpYi92ZXJzaW9uIjoiMC4wIn0seyJtYXRocy5saWIvYXV0aG9yIjoiR1JBTUUifSx7Im1hdGhzLmxpYi9jb3B5cmlnaHQiOiJHUkFNRSJ9LHsibWF0aHMubGliL2xpY2Vuc2UiOiJMR1BMIHdpdGggZXhjZXB0aW9uIn0seyJtYXRocy5saWIvbmFtZSI6IkZhdXN0IE1hdGggTGlicmFyeSJ9LHsibWF0aHMubGliL3ZlcnNpb24iOiIyLjEifSx7Im5hbWUiOiJHcmFudWxhdG9yIn0seyJub2lzZXMubGliL25hbWUiOiJGYXVzdCBOb2lzZSBHZW5lcmF0b3IgTGlicmFyeSJ9LHsibm9pc2VzLmxpYi92ZXJzaW9uIjoiMC4wIn0seyJzaWduYWxzLmxpYi9uYW1lIjoiRmF1c3QgU2lnbmFsIFJvdXRpbmcgTGlicmFyeSJ9LHsic2lnbmFscy5saWIvdmVyc2lvbiI6IjAuMCJ9XSwidWkiOlt7InR5cGUiOiJoZ3JvdXAiLCJsYWJlbCI6IkdyYW51bGF0b3IiLCJpdGVtcyI6W3sidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6IkdyYWluIFNpemUiLCJhZGRyZXNzIjoiL0dyYW51bGF0b3IvR3JhaW5fU2l6ZSIsImluZGV4IjoiNjMyIiwibWV0YSI6W3siMSI6IiJ9LHsiYWNjIjoiMiAwIC0xMCAwIDEwIn0seyJzdHlsZSI6Imtub2IifV0sImluaXQiOiIyMDAiLCJtaW4iOiI1IiwibWF4IjoiMjIwNSIsInN0ZXAiOiIxIn0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiU3BlZWQiLCJhZGRyZXNzIjoiL0dyYW51bGF0b3IvU3BlZWQiLCJpbmRleCI6IjI4IiwibWV0YSI6W3siMiI6IiJ9LHsiYWNjIjoiMCAxIC0xMCAwIDEwIn0seyJzdHlsZSI6Imtub2IifSx7InVuaXQiOiJIeiJ9XSwiaW5pdCI6IjEwIiwibWluIjoiMSIsIm1heCI6IjIwIiwic3RlcCI6IjAuMDAwMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6IlByb2JhYmlsaXR5IiwiYWRkcmVzcyI6Ii9HcmFudWxhdG9yL1Byb2JhYmlsaXR5IiwiaW5kZXgiOiI2MCIsIm1ldGEiOlt7IjMiOiIifSx7ImFjYyI6IjEgMCAtMTAgMCAxMCJ9LHsic3R5bGUiOiJrbm9iIn0seyJ1bml0IjoiJSJ9XSwiaW5pdCI6IjcwIiwibWluIjoiNTAiLCJtYXgiOiIxMDAiLCJzdGVwIjoiMSJ9XX1dfTA="; }
+function getBase64CodeGranulator() { return "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IjAuMCJ9LHsiZmlsZW5hbWUiOiJHcmFudWxhdG9yIn0seyJmaWx0ZXJzLmxpYi9uYW1lIjoiRmF1c3QgRmlsdGVycyBMaWJyYXJ5In0seyJmaWx0ZXJzLmxpYi92ZXJzaW9uIjoiMC4wIn0seyJtYXRocy5saWIvYXV0aG9yIjoiR1JBTUUifSx7Im1hdGhzLmxpYi9jb3B5cmlnaHQiOiJHUkFNRSJ9LHsibWF0aHMubGliL2xpY2Vuc2UiOiJMR1BMIHdpdGggZXhjZXB0aW9uIn0seyJtYXRocy5saWIvbmFtZSI6IkZhdXN0IE1hdGggTGlicmFyeSJ9LHsibWF0aHMubGliL3ZlcnNpb24iOiIyLjEifSx7Im5hbWUiOiJHcmFudWxhdG9yIn0seyJub2lzZXMubGliL25hbWUiOiJGYXVzdCBOb2lzZSBHZW5lcmF0b3IgTGlicmFyeSJ9LHsibm9pc2VzLmxpYi92ZXJzaW9uIjoiMC4wIn0seyJzaWduYWxzLmxpYi9uYW1lIjoiRmF1c3QgU2lnbmFsIFJvdXRpbmcgTGlicmFyeSJ9LHsic2lnbmFscy5saWIvdmVyc2lvbiI6IjAuMCJ9XSwidWkiOlt7InR5cGUiOiJoZ3JvdXAiLCJsYWJlbCI6IkdyYW51bGF0b3IiLCJpdGVtcyI6W3sidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6IkdyYWluIFNpemUiLCJhZGRyZXNzIjoiL0dyYW51bGF0b3IvR3JhaW5fU2l6ZSIsImluZGV4IjoiNjMyIiwibWV0YSI6W3siMSI6IiJ9LHsiYWNjIjoiMiAwIC0xMCAwIDEwIn0seyJzdHlsZSI6Imtub2IifV0sImluaXQiOiIyMDAiLCJtaW4iOiI1IiwibWF4IjoiMjIwNSIsInN0ZXAiOiIxIn0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiU3BlZWQiLCJhZGRyZXNzIjoiL0dyYW51bGF0b3IvU3BlZWQiLCJpbmRleCI6IjI4IiwibWV0YSI6W3siMiI6IiJ9LHsiYWNjIjoiMCAxIC0xMCAwIDEwIn0seyJzdHlsZSI6Imtub2IifSx7InVuaXQiOiJIeiJ9XSwiaW5pdCI6IjEwIiwibWluIjoiMSIsIm1heCI6IjIwIiwic3RlcCI6IjAuMDAwMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6IlByb2JhYmlsaXR5IiwiYWRkcmVzcyI6Ii9HcmFudWxhdG9yL1Byb2JhYmlsaXR5IiwiaW5kZXgiOiI2MCIsIm1ldGEiOlt7IjMiOiIifSx7ImFjYyI6IjEgMCAtMTAgMCAxMCJ9LHsic3R5bGUiOiJrbm9iIn0seyJ1bml0IjoiJSJ9XSwiaW5pdCI6IjcwIiwibWluIjoiNTAiLCJtYXgiOiIxMDAiLCJzdGVwIjoiMSJ9XX1dfTA="; }
 
 /*
  faust2wasm: GRAME 2017-2018
 */
- 
- 
+
+
 'use strict';
 
 if (typeof (AudioWorkletNode) === "undefined") {
@@ -5429,11 +5429,11 @@ if (typeof (AudioWorkletNode) === "undefined") {
 }
 
 class GranulatorNode extends AudioWorkletNode {
-    
+
     constructor(context, options) {
-        
+
         var json_object = JSON.parse(getJSONGranulator());
-        
+
         // Setting values for the input, the output and the channel count.
         options.numberOfInputs = (parseInt(json_object.inputs) > 0) ? 1 : 0;
         options.numberOfOutputs = (parseInt(json_object.outputs) > 0) ? 1 : 0;
@@ -5441,9 +5441,9 @@ class GranulatorNode extends AudioWorkletNode {
         options.outputChannelCount = [parseInt(json_object.outputs)];
         options.channelCountMode = "explicit";
         options.channelInterpretation = "speakers";
-       
+
         super(context, 'Granulator', options);
-        
+
         // JSON parsing functions
         this.parse_ui = function(ui, obj)
         {
@@ -5451,21 +5451,21 @@ class GranulatorNode extends AudioWorkletNode {
                 this.parse_group(ui[i], obj);
             }
         }
-        
+
         this.parse_group = function(group, obj)
         {
             if (group.items) {
                 this.parse_items(group.items, obj);
             }
         }
-        
+
         this.parse_items = function(items, obj)
         {
             for (var i = 0; i < items.length; i++) {
             	this.parse_item(items[i], obj);
             }
         }
-        
+
         this.parse_item = function(item, obj)
         {
             if (item.type === "vgroup"
@@ -5485,22 +5485,22 @@ class GranulatorNode extends AudioWorkletNode {
                 obj.inputs_items.push(item.address);
             }
         }
-        
+
         this.output_handler = null;
-   
+
         this.json_object = json_object;
-        
+
         // input/output items
         this.inputs_items = [];
         this.outputs_items = [];
-       
+
         // Parse UI
         this.parse_ui(this.json_object.ui, this);
-        
+
         // Set message handler
         this.port.onmessage = this.handleMessage.bind(this);
     }
-    
+
     // To be called by the message port with messages coming from the processor
     handleMessage(event)
     {
@@ -5509,9 +5509,9 @@ class GranulatorNode extends AudioWorkletNode {
             this.output_handler(msg.path, msg.value);
         }
     }
-    
+
     // Public API
-    
+
     /**
      *  Returns a full JSON description of the Granulator.
      */
@@ -5519,7 +5519,7 @@ class GranulatorNode extends AudioWorkletNode {
     {
         return getJSONGranulator();
     }
-    
+
     /**
      *  Set the control value at a given path.
      *
@@ -5529,11 +5529,11 @@ class GranulatorNode extends AudioWorkletNode {
     setParamValue(path, val)
     {
         //this.port.postMessage({ type:"param", key:path, value:val });
-        
+
         // Needed for sample accurate control
         this.parameters.get(path).setValueAtTime(val, 0);
     }
-    
+
     /**
      *  Get the control value at a given path.
      *
@@ -5543,7 +5543,7 @@ class GranulatorNode extends AudioWorkletNode {
     {
         return this.parameters.get(path).value;
     }
-    
+
     /**
      * Setup a control output handler with a function of type (path, value)
      * to be used on each generated output value. This handler will be called
@@ -5555,7 +5555,7 @@ class GranulatorNode extends AudioWorkletNode {
     {
         this.output_handler = handler;
     }
-    
+
     /**
      * Get the current output handler.
      */
@@ -5563,17 +5563,17 @@ class GranulatorNode extends AudioWorkletNode {
     {
         return this.output_handler;
     }
-    
+
     getNumInputs()
     {
         return parseInt(this.json_object.inputs);
     }
-    
+
     getNumOutputs()
     {
         return parseInt(this.json_object.outputs);
     }
-    
+
     /**
      * Returns an array of all input paths (to be used with setParamValue/getParamValue)
      */
@@ -5581,7 +5581,7 @@ class GranulatorNode extends AudioWorkletNode {
     {
         return this.inputs_items;
     }
-    
+
     /**
      * Control change
      *
@@ -5593,7 +5593,7 @@ class GranulatorNode extends AudioWorkletNode {
     {
         this.port.postMessage({ type: "ctrlChange", data: [channel, ctrl, value] });
     }
-    
+
     /**
      * PitchWeel
      *
@@ -5604,7 +5604,7 @@ class GranulatorNode extends AudioWorkletNode {
     {
         this.port.postMessage({ type: "pitchWheel", data: [channel, wheel] });
     }
-    
+
     /**
      * Generic MIDI message handler.
      */
@@ -5612,13 +5612,13 @@ class GranulatorNode extends AudioWorkletNode {
     {
         this.port.postMessage({ type:"midi", data:data });
     }
-    
+
 }
 
 // Factory class
 
 class Granulator {
-    
+
     /**
      * Factory constructor.
      *
@@ -5629,11 +5629,11 @@ class Granulator {
     {
     	// Resume audio context each time...
     	context.resume();
-    	
+
         this.context = context;
         this.baseUrl = baseUrl;
     }
-    
+
     /**
      * Load additionnal resources to prepare the custom AudioWorkletNode. Returns a promise to be used with the created node.
      */
@@ -5642,6 +5642,7 @@ class Granulator {
     	return new Promise((resolve, reject) => {
         		this.context.audioWorklet.addModule(this.baseUrl + "Granulator-processor.js").then(() => {
         		this.node = new GranulatorNode(this.context, {});
+                this.node.onprocessorerror = () => { console.log('An error from Granulator-processor was detected.');}
         		return (this.node);
         	}).then((node) => {
                 resolve(node);
@@ -5650,8 +5651,8 @@ class Granulator {
             });
         });
     }
-    
-    loadGui() 
+
+    loadGui()
     {
         return new Promise((resolve, reject) => {
             try {
@@ -5669,9 +5670,8 @@ class Granulator {
         	}
     	});
     };
-    
-}
 
+}
 </script>
 </head>
 <body>
@@ -5786,27 +5786,59 @@ function getDevice(device)
 }
 
 // Save/Load functions using local storage
-function saveGranulator()
+
+//set item from local storage 'item_key' key
+function getStorageItemValue(item_key, key)
 {
-    if (typeof(Storage) !== "undefined") {
-        var params = node.getParams();
-        for (var i = 0; i < params.length; i++) {
-            localStorage.setItem(params[i], node.getParamValue(params[i]));
-        }
+    if (localStorage.getItem(item_key)) {
+        var item_value = JSON.parse(localStorage.getItem(item_key));
+        var item_index = item_value.findIndex((obj => obj[0] === key));
+        return (item_index >= 0) ? item_value[item_index][1]: null;
+    } else {
+        return null;
     }
 }
 
-function loadGranulator()
+//get [key, value] in local storage item_key key
+function setStorageItemValue(item_key, key, value)
 {
-    if (typeof(Storage) !== "undefined") {
-        var params = node.getParams();
-        for (var i = 0; i < params.length; i++) {
-            if (localStorage.getItem(params[i])) {
-                // Restore Granulator state
-                node.setParamValue(params[i], Number(localStorage.getItem(params[i])));
-                // Restore GUI state
-                node.getOutputParamHandler()(params[i], Number(localStorage.getItem(params[i])));
-            }
+    var item_value;
+    if (localStorage.getItem(item_key)) {
+        item_value = JSON.parse(localStorage.getItem(item_key));
+    } else {
+        item_value = [];
+    }
+    
+    // Possibly update an existing 'key'
+    var item_index = item_value.findIndex((obj => obj[0] === key));
+    if (item_index >= 0) {
+        item_value[item_index][1] = value;
+        // Otherwise push a new [key, value]
+    } else {
+        item_value.push([key, value]);
+    }
+    
+    localStorage.setItem(item_key, JSON.stringify(item_value));
+}
+
+function saveGranulatorState()
+{
+    var params = node.getParams();
+    for (var i = 0; i < params.length; i++) {
+        setStorageItemValue('Granulator', params[i], node.getParamValue(params[i]));
+    }
+}
+
+function loadGranulatorState()
+{
+    var params = node.getParams();
+    for (var i = 0; i < params.length; i++) {
+        var value = getStorageItemValue('Granulator', params[i]);
+        if (value) {
+            // Restore Granulator state
+            node.setParamValue(params[i], Number(value));
+            // Restore GUI state
+            node.getOutputParamHandler()(params[i], Number(value));
         }
     }
 }
@@ -5838,7 +5870,7 @@ function startGranulatorAux(aw_node)
     node.setOutputParamHandler(_f4u$t.main(node.getJSON(), faustsvg, function(path, val) { node.setParamValue(path, val); }));
 
     // Load Granulator state from local storage
-    loadGranulator();
+    loadGranulatorState();
 }
 
 function startGranulator()
@@ -5885,7 +5917,7 @@ if (typeof (Module) !== "undefined") {
 }
 
 // Save Granulator state to local storage
-setInterval(function() { if (node) saveGranulator(); }, 1000);
+setInterval(function() { if (node) saveGranulatorState(); }, 1000);
 
 </script>
 </body>

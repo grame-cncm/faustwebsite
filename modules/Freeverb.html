@@ -5408,12 +5408,12 @@ _f4u$t.main_loop = function() {
 $(document).ready(function() { _f4u$t.main_loop(); });
 
 /*
-Code generated with Faust version 2.5.32
+Code generated with Faust version 2.5.33
 Compilation options: wasm, -scal -ftz 2
 */
 
 function getJSONFreeverb() {
-	return "{\"name\":\"freeverb\",\"filename\":\"Freeverb\",\"version\":\"2.5.32\",\"options\":\"wasm, -scal -ftz 2\",\"size\":\"149856\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"author\":\"Grame\"},{\"copyright\":\"(c) GRAME 2006\"},{\"filename\":\"Freeverb\"},{\"license\":\"BSD\"},{\"name\":\"freeverb\"},{\"reference\":\"https://ccrma.stanford.edu/~jos/pasp/Freeverb.html\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"},{\"version\":\"1.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Freeverb\",\"items\":[{\"type\":\"hslider\",\"label\":\"Reverberation Intensity\",\"address\":\"/Freeverb/Reverberation_Intensity\",\"index\":\"0\",\"meta\":[{\"acc\":\"1 1 -10 0 10\"}],\"init\":\"0.3333\",\"min\":\"0.1\",\"max\":\"0.9\",\"step\":\"0.025\"},{\"type\":\"hslider\",\"label\":\"Reverberation Room Size\",\"address\":\"/Freeverb/Reverberation_Room_Size\",\"index\":\"20\",\"meta\":[{\"acc\":\"1 1 -10 0 10\"}],\"init\":\"0.5\",\"min\":\"0.1\",\"max\":\"0.9\",\"step\":\"0.025\"}]}]}";
+	return "{\"name\":\"freeverb\",\"filename\":\"Freeverb\",\"version\":\"2.5.33\",\"options\":\"wasm, -scal -ftz 2\",\"size\":\"149856\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"author\":\"Grame\"},{\"copyright\":\"(c) GRAME 2006\"},{\"filename\":\"Freeverb\"},{\"license\":\"BSD\"},{\"name\":\"freeverb\"},{\"reference\":\"https://ccrma.stanford.edu/~jos/pasp/Freeverb.html\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"},{\"version\":\"1.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Freeverb\",\"items\":[{\"type\":\"hslider\",\"label\":\"Reverberation Intensity\",\"address\":\"/Freeverb/Reverberation_Intensity\",\"index\":\"0\",\"meta\":[{\"acc\":\"1 1 -10 0 10\"}],\"init\":\"0.3333\",\"min\":\"0.1\",\"max\":\"0.9\",\"step\":\"0.025\"},{\"type\":\"hslider\",\"label\":\"Reverberation Room Size\",\"address\":\"/Freeverb/Reverberation_Room_Size\",\"index\":\"20\",\"meta\":[{\"acc\":\"1 1 -10 0 10\"}],\"init\":\"0.5\",\"min\":\"0.1\",\"max\":\"0.9\",\"step\":\"0.025\"}]}]}";
 }
 /*
  faust2webaudio
@@ -5969,7 +5969,6 @@ function changeBufferSize(buffer_size)
     startNewFreeverb(new_buffer_size);
 }
 
-
 // MIDI input handling
 
 function pitchWheel(channel, wheel)
@@ -6064,27 +6063,59 @@ function getDevice(device)
 }
 
 // Save/Load functions using local storage
-function saveFreeverb()
+
+//set item from local storage 'item_key' key
+function getStorageItemValue(item_key, key)
 {
-    if (typeof(Storage) !== "undefined") {
-        var params = Freeverb.getParams();
-        for (var i = 0; i < params.length; i++) {
-            localStorage.setItem(params[i], Freeverb.getParamValue(params[i]));
-        }
+    if (localStorage.getItem(item_key)) {
+        var item_value = JSON.parse(localStorage.getItem(item_key));
+        var item_index = item_value.findIndex((obj => obj[0] === key));
+        return (item_index >= 0) ? item_value[item_index][1]: null;
+    } else {
+        return null;
     }
 }
 
-function loadFreeverb()
+//get [key, value] in local storage item_key key
+function setStorageItemValue(item_key, key, value)
 {
-    if (typeof(Storage) !== "undefined") {
-        var params = Freeverb.getParams();
-        for (var i = 0; i < params.length; i++) {
-            if (localStorage.getItem(params[i])) {
-                // Restore Freeverb state
-                Freeverb.setParamValue(params[i], Number(localStorage.getItem(params[i])));
-                // Restore GUI state
-                output_handler(params[i], Number(localStorage.getItem(params[i])));
-            }
+    var item_value;
+    if (localStorage.getItem(item_key)) {
+        item_value = JSON.parse(localStorage.getItem(item_key));
+    } else {
+        item_value = [];
+    }
+    
+    // Possibly update an existing 'key'
+    var item_index = item_value.findIndex((obj => obj[0] === key));
+    if (item_index >= 0) {
+        item_value[item_index][1] = value;
+        // Otherwise push a new [key, value]
+    } else {
+        item_value.push([key, value]);
+    }
+    
+    localStorage.setItem(item_key, JSON.stringify(item_value));
+}
+
+function saveFreeverbState()
+{
+    var params = Freeverb.getParams();
+    for (var i = 0; i < params.length; i++) {
+        setStorageItemValue('Freeverb', params[i], Freeverb.getParamValue(params[i]));
+    }
+}
+
+function loadFreeverbState()
+{
+    var params = Freeverb.getParams();
+    for (var i = 0; i < params.length; i++) {
+        var value = getStorageItemValue('Freeverb', params[i]);
+        if (value) {
+            // Restore Freeverb state
+            Freeverb.setParamValue(params[i], Number(value));
+            // Restore GUI state
+            output_handler(params[i], Number(value));
         }
     }
 }
@@ -6119,7 +6150,7 @@ function startFreeverbAux(dsp)
     Freeverb.setOutputParamHandler(output_handler);
 
     // Load Freeverb state from local storage
-    loadFreeverb();
+    loadFreeverbState();
 }
 
 function startFreeverb()
@@ -6162,7 +6193,7 @@ if (typeof (Module) !== "undefined") {
 }
 
 // Save Freeverb state to local storage
-setInterval(function() { if (Freeverb) saveFreeverb(); }, 1000);
+setInterval(function() { if (Freeverb) saveFreeverbState(); }, 1000);
 
 </script>
 

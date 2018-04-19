@@ -23,7 +23,7 @@ if (typeof (WebAssembly) === "undefined") {
 
 var isWebKitAudio = (typeof (webkitAudioContext) !== "undefined");
 var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
-var osc = null;
+var osc_dsp = null;
 
 // Slider handler to change the 'osc' frequency
 function changeFreq(event)
@@ -31,7 +31,7 @@ function changeFreq(event)
     var val = event.target.value;
     val = parseFloat(val);
     console.log(val);
-    osc.setParamValue("/Oscillator/freq", val);
+    osc_dsp.setParamValue("/Oscillator/freq", val);
 }
 
 // Slider handler to change the 'osc' volume
@@ -40,21 +40,25 @@ function changeVolume(event)
     var val = event.target.value;
     val = parseFloat(val);
     console.log(val);
-    osc.setParamValue("/Oscillator/volume", val);
+    osc_dsp.setParamValue("/Oscillator/volume", val);
 }
 
 function startosc()
 {
     // Create the Faust generated node
-    faust.createosc(audio_context,
-                    function (node) {
-                            osc = node;
-                            console.log(osc.getJSON());
-                            // Print paths to be used with 'setParamValue'
-                            console.log(osc.getParams());
-                            // Connect it to output as a regular WebAudio node
-                            osc.connect(audio_context.destination);
-                      });
+    var osc_factory = new osc(audio_context, "");
+    console.log(osc_factory);
+    osc_factory.load()
+    .then((aw_node) => {
+        console.log(aw_node);
+        osc_dsp = aw_node;
+        console.log(osc_dsp.getJSON());
+        // Print paths to be used with 'setParamValue'
+        console.log(osc_dsp.getParams());
+        // Connect it to output as a regular WebAudio node
+        osc_dsp.connect(audio_context.destination);
+      })
+    .catch((error) => { console.log(error); console.log("Faust mydsp cannot be loaded or compiled"); });
 }
 
 // Load handler

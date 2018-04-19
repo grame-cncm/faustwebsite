@@ -1,13 +1,13 @@
 
 /*
-Code generated with Faust version 2.5.32
+Code generated with Faust version 2.5.33
 Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONEcho() {
-	return "{\"name\":\"Echo\",\"filename\":\"Echo\",\"version\":\"2.5.32\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"262168\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"filename\":\"Echo\"},{\"name\":\"Echo\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Echo\",\"items\":[{\"type\":\"hslider\",\"label\":\"Echo Delay\",\"address\":\"/Echo/Echo_Delay\",\"index\":\"12\",\"meta\":[{\"unit\":\"s\"}],\"init\":\"0.5\",\"min\":\"0.01\",\"max\":\"1\",\"step\":\"0.001\"},{\"type\":\"hslider\",\"label\":\"Echo Intensity (Feedback)\",\"address\":\"/Echo/Echo_Intensity_(Feedback)\",\"index\":\"0\",\"meta\":[{\"acc\":\"0 1 -10 0 10\"},{\"style\":\"knob\"}],\"init\":\"0.001\",\"min\":\"0.001\",\"max\":\"0.65\",\"step\":\"0.001\"}]}]}";
+	return "{\"name\":\"Echo\",\"filename\":\"Echo\",\"version\":\"2.5.33\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"262168\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"filename\":\"Echo\"},{\"name\":\"Echo\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Echo\",\"items\":[{\"type\":\"hslider\",\"label\":\"Echo Delay\",\"address\":\"/Echo/Echo_Delay\",\"index\":\"12\",\"meta\":[{\"unit\":\"s\"}],\"init\":\"0.5\",\"min\":\"0.01\",\"max\":\"1\",\"step\":\"0.001\"},{\"type\":\"hslider\",\"label\":\"Echo Intensity (Feedback)\",\"address\":\"/Echo/Echo_Intensity_(Feedback)\",\"index\":\"0\",\"meta\":[{\"acc\":\"0 1 -10 0 10\"},{\"style\":\"knob\"}],\"init\":\"0.001\",\"min\":\"0.001\",\"max\":\"0.65\",\"step\":\"0.001\"}]}]}";
 }
-function getBase64CodeEcho() { return "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"; }
+function getBase64CodeEcho() { return "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"; }
 
 /*
  faust2wasm: GRAME 2017-2018
@@ -182,9 +182,9 @@ class EchoProcessor extends AudioWorkletProcessor {
         this.HEAP32 = new Int32Array(this.HEAP);
         this.HEAPF32 = new Float32Array(this.HEAP);
 
-        console.log(this.HEAP);
-        console.log(this.HEAP32);
-        console.log(this.HEAPF32);
+        //console.log(this.HEAP);
+        //console.log(this.HEAP32);
+        //console.log(this.HEAPF32);
 
         // bargraph
         this.outputs_timer = 5;
@@ -343,13 +343,13 @@ class EchoProcessor extends AudioWorkletProcessor {
         var output = outputs[0];
         
         // Check inputs
-        if (this.numIn > 0 && ((input === undefined) || (input[0][0] === undefined))) {
-            console.log("Process input error");
+        if (this.numIn > 0 && ((input === undefined) || (input[0].length === 0))) {
+            //console.log("Process input error");
             return true;
         }
         // Check outputs
-        if (this.numOut > 0 && ((output === undefined) || (output[0][0] === undefined))) {
-            console.log("Process output error");
+        if (this.numOut > 0 && ((output === undefined) || (output[0].length === 0))) {
+            //console.log("Process output error");
             return true;
         }
         

@@ -21,43 +21,43 @@ if (typeof (WebAssembly) === "undefined") {
 
 var isWebKitAudio = (typeof (webkitAudioContext) !== "undefined");
 var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
-var organ = null;
+var organ_dsp = null;
 
-// Slider handler to change the 'organ' volume
+// Slider handler to change the 'organ_dsp' volume
 function changeVolume(event)
 {
     var val = event.target.value;
     val = parseFloat(val);
     console.log(val);
-    organ.setParamValue("/organ/volume", val);
+    organ_dsp.setParamValue("/organ/volume", val);
 }
 
 // MIDI input handling
 function keyOn(channel, pitch, velocity)
 {
-    if (organ) {
-        organ.keyOn(channel, pitch, velocity);
+    if (organ_dsp) {
+        organ_dsp.keyOn(channel, pitch, velocity);
     }
 }
 
 function keyOff(channel, pitch, velocity)
 {
-    if (organ) {
-        organ.keyOff(channel, pitch, velocity);
+    if (organ_dsp) {
+        organ_dsp.keyOff(channel, pitch, velocity);
     }
 }
 
 function pitchWheel(channel, bend)
 {
-    if (organ) {
-        organ.pitchWheel(channel, bend);
+    if (organ_dsp) {
+        organ_dsp.pitchWheel(channel, bend);
     }
 }
 
 function ctrlChange(channel, ctrl, value)
 {
-    if (organ) {
-        organ.ctrlChange(channel, ctrl, value);
+    if (organ_dsp) {
+        organ_dsp.ctrlChange(channel, ctrl, value);
     }
 }
 
@@ -119,17 +119,19 @@ function activateMIDIInput()
 function startorgan()
 {
     // Create the Faust generated node
-    faust.createorgan_poly(audio_context, 16,
-                    function (node) {
-                            organ = node;
-                            console.log(organ.getJSON());
-                            // Print paths to be used with 'setParamValue'
-                            console.log(organ.getParams());
-                            // Connect it to output as a regular WebAudio node
-                            organ.connect(audio_context.destination);
-                            // Activate MIDI
-                            activateMIDIInput();
-                      });
+    var organ_factory = new organ(audio_context, "");
+    console.log(organ_factory);
+    organ_factory.load()
+    .then((aw_node) => {
+            console.log(aw_node);
+            organ_dsp = aw_node;
+            console.log(organ_dsp.getJSON());
+            // Print paths to be used with 'setParamValue'
+            console.log(organ_dsp.getParams());
+            // Connect it to output as a regular WebAudio node
+            organ_dsp.connect(audio_context.destination);
+            })
+    .catch((error) => { console.log(error); console.log("Faust mydsp cannot be loaded or compiled"); });
 }
 
 // Load handler
