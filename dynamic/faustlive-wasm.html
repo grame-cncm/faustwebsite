@@ -452,6 +452,7 @@
             var rendering_mode = "ScriptProcessor";
             var output_handler = null;
             
+            /*
             // compute libraries URL relative to current page
             var wurl =  window.location.href;
             var qm = wurl.indexOf('?');
@@ -460,9 +461,10 @@
             }
             var libraries_url = wurl.substr(0, wurl.lastIndexOf('/')) + "/libraries/";
             console.log("libraries_url :", libraries_url);
+            */
 
             //var libraries_url = "http://127.0.0.1:8000/libraries/";
-            //var libraries_url = "https://faust.grame.fr/libraries/";
+            var libraries_url = "https://faust.grame.fr/libraries/";
 
             function setBufferSize(bs_item)
             {
