@@ -1,13 +1,13 @@
 
 /*
-Code generated with Faust version 2.5.33
+Code generated with Faust version 2.6.1
 Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONNotch() {
-	return "{\"name\":\"Notch\",\"filename\":\"Notch\",\"version\":\"2.5.33\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"28\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"filename\":\"Notch\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"maxmsp.lib/author\":\"GRAME\"},{\"maxmsp.lib/copyright\":\"GRAME\"},{\"maxmsp.lib/license\":\"LGPL\"},{\"maxmsp.lib/name\":\"MaxMSP compatibility Library\"},{\"maxmsp.lib/version\":\"1.1\"},{\"name\":\"Notch\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Notch\",\"items\":[{\"type\":\"hslider\",\"label\":\"Frequency\",\"address\":\"/Notch/Frequency\",\"index\":\"8\",\"meta\":[{\"acc\":\"0 1 -10 0 15\"},{\"scale\":\"log\"}],\"init\":\"440\",\"min\":\"80\",\"max\":\"10000\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Q - Filter Bandwidth\",\"address\":\"/Notch/Q_-_Filter_Bandwidth\",\"index\":\"12\",\"meta\":[{\"acc\":\"2 0 -10 0 10\"},{\"scale\":\"log\"}],\"init\":\"20\",\"min\":\"0.01\",\"max\":\"50\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"Notch\",\"filename\":\"Notch\",\"version\":\"2.6.1\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"28\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"filename\":\"Notch\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"maxmsp.lib/author\":\"GRAME\"},{\"maxmsp.lib/copyright\":\"GRAME\"},{\"maxmsp.lib/license\":\"LGPL\"},{\"maxmsp.lib/name\":\"MaxMSP compatibility Library\"},{\"maxmsp.lib/version\":\"1.1\"},{\"name\":\"Notch\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Notch\",\"items\":[{\"type\":\"hslider\",\"label\":\"Frequency\",\"address\":\"/Notch/Frequency\",\"index\":\"8\",\"meta\":[{\"acc\":\"0 1 -10 0 15\"},{\"scale\":\"log\"}],\"init\":\"440\",\"min\":\"80\",\"max\":\"10000\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Q - Filter Bandwidth\",\"address\":\"/Notch/Q_-_Filter_Bandwidth\",\"index\":\"12\",\"meta\":[{\"acc\":\"2 0 -10 0 10\"},{\"scale\":\"log\"}],\"init\":\"20\",\"min\":\"0.01\",\"max\":\"50\",\"step\":\"0.01\"}]}]}";
 }
-function getBase64CodeNotch() { return "AGFzbQEAAAAB1YCAgAAQYAJ/fwBgBH9/f38AYAF9AX1gAX8Bf2ABfwF/YAJ/fwF9YAF/AX9gAn9/AGABfwBgAn9/AGACf38AYAF/AGACf38Bf2ACf38Bf2ADf399AGABfQF9ApmAgIAAAgNlbnYFX2Nvc2YAAgNlbnYFX3NpbmYADwOPgICAAA4AAQMEBQYHCAkKCwwNDgWHgICAAAEAgoCAgAAHuoGAgAAMB2NvbXB1dGUAAwxnZXROdW1JbnB1dHMABA1nZXROdW1PdXRwdXRzAAUNZ2V0UGFyYW1WYWx1ZQAGDWdldFNhbXBsZVJhdGUABwRpbml0AAgNaW5zdGFuY2VDbGVhcgAJEWluc3RhbmNlQ29uc3RhbnRzAAoMaW5zdGFuY2VJbml0AAsaaW5zdGFuY2VSZXNldFVzZXJJbnRlcmZhY2UADA1zZXRQYXJhbVZhbHVlAA8GbWVtb3J5AgAK6ISAgAAOgoCAgAAAC82CgIAAAgN/B31BACEEQQAhBUMAAAAAIQdDAAAAACEIQwAAAAAhCUMAAAAAIQpDAAAAACELQQAhBkMAAAAAIQxDAAAAACENIAJBAGooAgAhBCADQQBqKAIAIQVBACoCBEMAAAAAQwAAoEJDAEAcRkEAKgIIlpeXlCEHQwAAAD8gBxABQ28SgzpDCtcjPEMAAEhCQQAqAgyWl5eVlCEIQwAAgD8gCEMAAIA/kpUhCUMAAAAAQwAAAEAgBxAAlJMhCkMAAIA/IAiTIQtBACEGA0ACQCAKQQAqAhSUIQwgBCAGaioCACAJIAwgC0EAKgIYlJKUkyENQQAgDUMAAAAAIA28QYCAgPwHcRs4AhAgBSAGaiAJQQAqAhhBACoCECAMkpKUOAIAQQBBACoCFDgCGEEAQQAqAhA4AhQgBkEEaiEGIAZBBCABbEgEQAwCDAELCwsLhYCAgAAAQQEPC4WAgIAAAEEBDwuLgICAAAAgACABaioCAA8LiICAgAAAQQAoAgAPC46AgIAAACAAIAEQAiAAIAEQCwu1gICAAAEBf0EAIQFBACEBA0ACQEEQIAFBAnRqQwAAAAA4AgAgAUEBaiEBIAFBA0gEQAwCDAELCwsLpoCAgAAAQQAgATYCAEEAQ9sPyUBDAIA7SEMAAIA/QQAoAgCyl5aVOAIEC5CAgIAAACAAIAEQCiAAEAwgABAJC5aAgIAAAEEAQwAA3EM4AghBAEMAAKBBOAIMC42AgIAAACABIAAgACABSBsPC42AgIAAACAAIAEgACABSBsPC4yAgIAAACAAIAFqIAI4AgALC72HgIAAAQBBAAu2B3sibmFtZSI6Ik5vdGNoIiwiZmlsZW5hbWUiOiJOb3RjaCIsInZlcnNpb24iOiIyLjUuMzMiLCJvcHRpb25zIjoid2FzbS1pYiwgLXNjYWwgLWZ0eiAyIiwic2l6ZSI6IjI4IiwiaW5wdXRzIjoiMSIsIm91dHB1dHMiOiIxIiwibWV0YSI6W3siZmlsZW5hbWUiOiJOb3RjaCJ9LHsibWF0aHMubGliL2F1dGhvciI6IkdSQU1FIn0seyJtYXRocy5saWIvY29weXJpZ2h0IjoiR1JBTUUifSx7Im1hdGhzLmxpYi9saWNlbnNlIjoiTEdQTCB3aXRoIGV4Y2VwdGlvbiJ9LHsibWF0aHMubGliL25hbWUiOiJGYXVzdCBNYXRoIExpYnJhcnkifSx7Im1hdGhzLmxpYi92ZXJzaW9uIjoiMi4xIn0seyJtYXhtc3AubGliL2F1dGhvciI6IkdSQU1FIn0seyJtYXhtc3AubGliL2NvcHlyaWdodCI6IkdSQU1FIn0seyJtYXhtc3AubGliL2xpY2Vuc2UiOiJMR1BMIn0seyJtYXhtc3AubGliL25hbWUiOiJNYXhNU1AgY29tcGF0aWJpbGl0eSBMaWJyYXJ5In0seyJtYXhtc3AubGliL3ZlcnNpb24iOiIxLjEifSx7Im5hbWUiOiJOb3RjaCJ9XSwidWkiOlt7InR5cGUiOiJ2Z3JvdXAiLCJsYWJlbCI6Ik5vdGNoIiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJGcmVxdWVuY3kiLCJhZGRyZXNzIjoiL05vdGNoL0ZyZXF1ZW5jeSIsImluZGV4IjoiOCIsIm1ldGEiOlt7ImFjYyI6IjAgMSAtMTAgMCAxNSJ9LHsic2NhbGUiOiJsb2cifV0sImluaXQiOiI0NDAiLCJtaW4iOiI4MCIsIm1heCI6IjEwMDAwIiwic3RlcCI6IjEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJRIC0gRmlsdGVyIEJhbmR3aWR0aCIsImFkZHJlc3MiOiIvTm90Y2gvUV8tX0ZpbHRlcl9CYW5kd2lkdGgiLCJpbmRleCI6IjEyIiwibWV0YSI6W3siYWNjIjoiMiAwIC0xMCAwIDEwIn0seyJzY2FsZSI6ImxvZyJ9XSwiaW5pdCI6IjIwIiwibWluIjoiMC4wMSIsIm1heCI6IjUwIiwic3RlcCI6IjAuMDEifV19XX0w"; }
+function getBase64CodeNotch() { return "AGFzbQEAAAAB1YCAgAAQYAJ/fwBgBH9/f38AYAF9AX1gAX8Bf2ABfwF/YAJ/fwF9YAF/AX9gAn9/AGABfwBgAn9/AGACf38AYAF/AGACf38Bf2ACf38Bf2ADf399AGABfQF9ApmAgIAAAgNlbnYFX2Nvc2YAAgNlbnYFX3NpbmYADwOPgICAAA4AAQMEBQYHCAkKCwwNDgWHgICAAAEAgoCAgAAHuoGAgAAMB2NvbXB1dGUAAwxnZXROdW1JbnB1dHMABA1nZXROdW1PdXRwdXRzAAUNZ2V0UGFyYW1WYWx1ZQAGDWdldFNhbXBsZVJhdGUABwRpbml0AAgNaW5zdGFuY2VDbGVhcgAJEWluc3RhbmNlQ29uc3RhbnRzAAoMaW5zdGFuY2VJbml0AAsaaW5zdGFuY2VSZXNldFVzZXJJbnRlcmZhY2UADA1zZXRQYXJhbVZhbHVlAA8GbWVtb3J5AgAK6ISAgAAOgoCAgAAAC82CgIAAAgN/B31BACEEQQAhBUMAAAAAIQdDAAAAACEIQwAAAAAhCUMAAAAAIQpDAAAAACELQQAhBkMAAAAAIQxDAAAAACENIAJBAGooAgAhBCADQQBqKAIAIQVBACoCBEMAAAAAQwAAoEJDAEAcRkEAKgIIlpeXlCEHQwAAAD8gBxABQ28SgzpDCtcjPEMAAEhCQQAqAgyWl5eVlCEIQwAAgD8gCEMAAIA/kpUhCUMAAAAAQwAAAEAgBxAAlJMhCkMAAIA/IAiTIQtBACEGA0ACQCAKQQAqAhSUIQwgBCAGaioCACAJIAwgC0EAKgIYlJKUkyENQQAgDUMAAAAAIA28QYCAgPwHcRs4AhAgBSAGaiAJQQAqAhhBACoCECAMkpKUOAIAQQBBACoCFDgCGEEAQQAqAhA4AhQgBkEEaiEGIAZBBCABbEgEQAwCDAELCwsLhYCAgAAAQQEPC4WAgIAAAEEBDwuLgICAAAAgACABaioCAA8LiICAgAAAQQAoAgAPC46AgIAAACAAIAEQAiAAIAEQCwu1gICAAAEBf0EAIQFBACEBA0ACQEEQIAFBAnRqQwAAAAA4AgAgAUEBaiEBIAFBA0gEQAwCDAELCwsLpoCAgAAAQQAgATYCAEEAQ9sPyUBDAIA7SEMAAIA/QQAoAgCyl5aVOAIEC5CAgIAAACAAIAEQCiAAEAwgABAJC5aAgIAAAEEAQwAA3EM4AghBAEMAAKBBOAIMC42AgIAAACABIAAgACABSBsPC42AgIAAACAAIAEgACABSBsPC4yAgIAAACAAIAFqIAI4AgALC7yHgIAAAQBBAAu1B3sibmFtZSI6Ik5vdGNoIiwiZmlsZW5hbWUiOiJOb3RjaCIsInZlcnNpb24iOiIyLjYuMSIsIm9wdGlvbnMiOiJ3YXNtLWliLCAtc2NhbCAtZnR6IDIiLCJzaXplIjoiMjgiLCJpbnB1dHMiOiIxIiwib3V0cHV0cyI6IjEiLCJtZXRhIjpbeyJmaWxlbmFtZSI6Ik5vdGNoIn0seyJtYXRocy5saWIvYXV0aG9yIjoiR1JBTUUifSx7Im1hdGhzLmxpYi9jb3B5cmlnaHQiOiJHUkFNRSJ9LHsibWF0aHMubGliL2xpY2Vuc2UiOiJMR1BMIHdpdGggZXhjZXB0aW9uIn0seyJtYXRocy5saWIvbmFtZSI6IkZhdXN0IE1hdGggTGlicmFyeSJ9LHsibWF0aHMubGliL3ZlcnNpb24iOiIyLjEifSx7Im1heG1zcC5saWIvYXV0aG9yIjoiR1JBTUUifSx7Im1heG1zcC5saWIvY29weXJpZ2h0IjoiR1JBTUUifSx7Im1heG1zcC5saWIvbGljZW5zZSI6IkxHUEwifSx7Im1heG1zcC5saWIvbmFtZSI6Ik1heE1TUCBjb21wYXRpYmlsaXR5IExpYnJhcnkifSx7Im1heG1zcC5saWIvdmVyc2lvbiI6IjEuMSJ9LHsibmFtZSI6Ik5vdGNoIn1dLCJ1aSI6W3sidHlwZSI6InZncm91cCIsImxhYmVsIjoiTm90Y2giLCJpdGVtcyI6W3sidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6IkZyZXF1ZW5jeSIsImFkZHJlc3MiOiIvTm90Y2gvRnJlcXVlbmN5IiwiaW5kZXgiOiI4IiwibWV0YSI6W3siYWNjIjoiMCAxIC0xMCAwIDE1In0seyJzY2FsZSI6ImxvZyJ9XSwiaW5pdCI6IjQ0MCIsIm1pbiI6IjgwIiwibWF4IjoiMTAwMDAiLCJzdGVwIjoiMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6IlEgLSBGaWx0ZXIgQmFuZHdpZHRoIiwiYWRkcmVzcyI6Ii9Ob3RjaC9RXy1fRmlsdGVyX0JhbmR3aWR0aCIsImluZGV4IjoiMTIiLCJtZXRhIjpbeyJhY2MiOiIyIDAgLTEwIDAgMTAifSx7InNjYWxlIjoibG9nIn1dLCJpbml0IjoiMjAiLCJtaW4iOiIwLjAxIiwibWF4IjoiNTAiLCJzdGVwIjoiMC4wMSJ9XX1dfTA="; }
 
 /*
  faust2wasm: GRAME 2017-2018
@@ -80,20 +80,6 @@ class NotchProcessor extends AudioWorkletProcessor {
             // Keep inputs adresses
             obj.inputs_items.push(item.address);
             obj.pathTable[item.address] = parseInt(item.index);
-            if (item.meta !== undefined) {
-                for (var i = 0; i < item.meta.length; i++) {
-                    if (item.meta[i].midi !== undefined) {
-                        if (item.meta[i].midi.trim() === "pitchwheel") {
-                            obj.fPitchwheelLabel.push(item.address);
-                        } else if (item.meta[i].midi.trim().split(" ")[0] === "ctrl") {
-                            obj.fCtrlLabel[parseInt(item.meta[i].midi.trim().split(" ")[1])]
-                                .push({ path:item.address,
-                                      min:parseFloat(item.min),
-                                      max:parseFloat(item.max) });
-                        }
-                    }
-                }
-            }
         }
     }
     
@@ -137,11 +123,6 @@ class NotchProcessor extends AudioWorkletProcessor {
             return taBytes.buffer;
         }
     }
-    
-    static remap(v, mn0, mx0, mn1, mx1)
-    {
-        return (1.0 * (v - mn0) / (mx0 - mn0)) * (mx1 - mn1) + mn1;
-    }
    
     static get parameterDescriptors () 
     {
@@ -164,10 +145,6 @@ class NotchProcessor extends AudioWorkletProcessor {
 
         this.dspInChannnels = [];
         this.dspOutChannnels = [];
-
-        this.fPitchwheelLabel = [];
-        this.fCtrlLabel = new Array(128);
-        for (var i = 0; i < this.fCtrlLabel.length; i++) { this.fCtrlLabel[i] = []; }
 
         this.numIn = parseInt(this.json_object.inputs);
         this.numOut = parseInt(this.json_object.outputs);
@@ -259,30 +236,6 @@ class NotchProcessor extends AudioWorkletProcessor {
             this.factory.init(this.dsp, sampleRate); // 'sampleRate' is defined in AudioWorkletGlobalScope  
         }
 
-        this.ctrlChange = function (channel, ctrl, value)
-        {
-            if (this.fCtrlLabel[ctrl] !== []) {
-                for (var i = 0; i < this.fCtrlLabel[ctrl].length; i++) {
-                    var path = this.fCtrlLabel[ctrl][i].path;
-                    this.setParamValue(path, NotchProcessor.remap(value, 0, 127, this.fCtrlLabel[ctrl][i].min, this.fCtrlLabel[ctrl][i].max));
-                    if (this.output_handler) {
-                   		this.output_handler(path, this.getParamValue(path));
-                   	}
-                }
-            }
-        }
-
-        this.pitchWheel = function (channel, wheel)
-        {
-            for (var i = 0; i < this.fPitchwheelLabel.length; i++) {
-                var path = this.fPitchwheelLabel[i];
-                this.setParamValue(path, Math.pow(2.0, wheel/12.0));
-                if (this.output_handler) {
-                   	this.output_handler(path, this.getParamValue(path));
-                }
-            }
-        }
-
         this.setParamValue = function (path, val)
         {
             this.HEAPF32[this.pathTable[path]] = val;
@@ -295,46 +248,6 @@ class NotchProcessor extends AudioWorkletProcessor {
 
         // Init resulting DSP
         this.initAux();
-
-        // Set message handler
-        this.port.onmessage = this.handleMessage.bind(this);
-    }
-    
-    handleMessage(event) 
-    {
-        var msg = event.data;
-        switch (msg.type) {
-            // Generic MIDI message
-            case "midi": this.midiMessage(msg.data); break;
-            // Typed MIDI message
-            case "keyOn": this.keyOn(msg.data[0], msg.data[1], msg.data[2]); break;
-            case "keyOff": this.keyOff(msg.data[0], msg.data[1], msg.data[2]); break;
-            case "ctrlChange": this.ctrlChange(msg.data[0], msg.data[1], msg.data[2]); break;
-            case "pitchWheel": this.pitchWheel(msg.data[0], msg.data[1]); break;
-            // Generic data message
-            case "param": this.setParamValue(msg.key, msg.value); break;
-            //case "patch": this.onpatch(msg.data); break;
-        }
-    }
-    
-    midiMessage(data)
-    {
-        var cmd = data[0] >> 4;
-        var channel = data[0] & 0xf;
-        var data1 = data[1];
-        var data2 = data[2];
-        
-        if (channel === 9) {
-            return;
-        } else if (cmd === 8 || ((cmd === 9) && (data2 === 0))) {
-            //this.keyOff(channel, data1, data2);
-        } else if (cmd === 9) {
-            //this.keyOn(channel, data1, data2);
-        } else if (cmd === 11) {
-            //this.ctrlChange(channel, data1, data2);
-        } else if (cmd === 14) {
-            //this.pitchWheel(channel, ((data2 * 128.0 + data1)-8192)/8192.0);
-        }
     }
     
     process(inputs, outputs, parameters) 

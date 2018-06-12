@@ -1,13 +1,13 @@
 
 /*
-Code generated with Faust version 2.5.33
+Code generated with Faust version 2.6.1
 Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONLowPassFilter() {
-	return "{\"name\":\"Low Pass Filter\",\"filename\":\"LowPassFilter\",\"version\":\"2.5.33\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"32\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"filename\":\"LowPassFilter\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Low Pass Filter\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Low Pass Filter\",\"items\":[{\"type\":\"hslider\",\"label\":\"Cut-off Frequency\",\"address\":\"/Low_Pass_Filter/Cut-off_Frequency\",\"index\":\"8\",\"meta\":[{\"acc\":\"2 1 -10 0 10\"},{\"scale\":\"log\"}],\"init\":\"800\",\"min\":\"10\",\"max\":\"20000\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"Low Pass Filter\",\"filename\":\"LowPassFilter\",\"version\":\"2.6.1\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"32\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"filename\":\"LowPassFilter\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Low Pass Filter\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Low Pass Filter\",\"items\":[{\"type\":\"hslider\",\"label\":\"Cut-off Frequency\",\"address\":\"/Low_Pass_Filter/Cut-off_Frequency\",\"index\":\"8\",\"meta\":[{\"acc\":\"2 1 -10 0 10\"},{\"scale\":\"log\"}],\"init\":\"800\",\"min\":\"10\",\"max\":\"20000\",\"step\":\"0.01\"}]}]}";
 }
-function getBase64CodeLowPassFilter() { return "AGFzbQEAAAAB1oCAgAAQYAJ/fwBgBH9/f38AYAF/AX9gAX8Bf2ACf38BfWABfwF/YAJ/fwBgAX8AYAJ/fwBgAn9/AGABfwBgAn9/AX9gAn9/AX9gAn19AX1gA39/fQBgAX0BfQKZgICAAAIDZW52BV9wb3dmAA0DZW52BV90YW5mAA8Dj4CAgAAOAAECAwQFBgcICQoLDA4Fh4CAgAABAIKAgIAAB7qBgIAADAdjb21wdXRlAAMMZ2V0TnVtSW5wdXRzAAQNZ2V0TnVtT3V0cHV0cwAFDWdldFBhcmFtVmFsdWUABg1nZXRTYW1wbGVSYXRlAAcEaW5pdAAIDWluc3RhbmNlQ2xlYXIACRFpbnN0YW5jZUNvbnN0YW50cwAKDGluc3RhbmNlSW5pdAALGmluc3RhbmNlUmVzZXRVc2VySW50ZXJmYWNlAAwNc2V0UGFyYW1WYWx1ZQAPBm1lbW9yeQIACryFgIAADoKAgIAAAAv6goCAAAIDfwZ9QQAhBEEAIQVDAAAAACEHQQAhBkMAAAAAIQhDAAAAACEJQwAAAAAhCkMAAAAAIQtDAAAAACEMIAJBAGooAgAhBCADQQBqKAIAIQVDbxKDOkEAKgIIlCEHQQAhBgNAAkAgB0N3vn8/QQAqAhCUkiEIQQAgCEMAAAAAIAi8QYCAgPwHcRs4AgxBACoCBEMAACBBQwBAnEZBACoCDJaXlBABIQlDAACAPyAJlSEKIApD8wS1P5IgCZVDAACAP5IhCyAEIAZqKgIAQQAqAhwgCkPzBLW/kiAJlUMAAIA/kpRDAAAAQEEAKgIYQwAAgD9DAACAPyAJQwAAAEAQAJWTlJSSIAuVkyEMQQAgDEMAAAAAIAy8QYCAgPwHcRs4AhQgBSAGakEAKgIcQQAqAhRDAAAAQEEAKgIYlJKSIAuVOAIAQQBBACoCDDgCEEEAQQAqAhg4AhxBAEEAKgIUOAIYIAZBBGohBiAGQQQgAWxIBEAMAgwBCwsLC4WAgIAAAEEBDwuFgICAAABBAQ8Li4CAgAAAIAAgAWoqAgAPC4iAgIAAAEEAKAIADwuOgICAAAAgACABEAIgACABEAsL5oCAgAABAn9BACEBQQAhAkEAIQEDQAJAQQwgAUECdGpDAAAAADgCACABQQFqIQEgAUECSARADAIMAQsLC0EAIQIDQAJAQRQgAkECdGpDAAAAADgCACACQQFqIQIgAkEDSARADAIMAQsLCwumgICAAABBACABNgIAQQBD2w9JQEMAgDtIQwAAgD9BACgCALKXlpU4AgQLkICAgAAAIAAgARAKIAAQDCAAEAkLjICAgAAAQQBDAABIRDgCCAuNgICAAAAgASAAIAAgAUgbDwuNgICAAAAgACABIAAgAUgbDwuMgICAAAAgACABaiACOAIACwuvhoCAAAEAQQALqAZ7Im5hbWUiOiJMb3cgUGFzcyBGaWx0ZXIiLCJmaWxlbmFtZSI6Ikxvd1Bhc3NGaWx0ZXIiLCJ2ZXJzaW9uIjoiMi41LjMzIiwib3B0aW9ucyI6Indhc20taWIsIC1zY2FsIC1mdHogMiIsInNpemUiOiIzMiIsImlucHV0cyI6IjEiLCJvdXRwdXRzIjoiMSIsIm1ldGEiOlt7ImZpbGVuYW1lIjoiTG93UGFzc0ZpbHRlciJ9LHsiZmlsdGVycy5saWIvbmFtZSI6IkZhdXN0IEZpbHRlcnMgTGlicmFyeSJ9LHsiZmlsdGVycy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsibWF0aHMubGliL2F1dGhvciI6IkdSQU1FIn0seyJtYXRocy5saWIvY29weXJpZ2h0IjoiR1JBTUUifSx7Im1hdGhzLmxpYi9saWNlbnNlIjoiTEdQTCB3aXRoIGV4Y2VwdGlvbiJ9LHsibWF0aHMubGliL25hbWUiOiJGYXVzdCBNYXRoIExpYnJhcnkifSx7Im1hdGhzLmxpYi92ZXJzaW9uIjoiMi4xIn0seyJuYW1lIjoiTG93IFBhc3MgRmlsdGVyIn0seyJzaWduYWxzLmxpYi9uYW1lIjoiRmF1c3QgU2lnbmFsIFJvdXRpbmcgTGlicmFyeSJ9LHsic2lnbmFscy5saWIvdmVyc2lvbiI6IjAuMCJ9XSwidWkiOlt7InR5cGUiOiJ2Z3JvdXAiLCJsYWJlbCI6IkxvdyBQYXNzIEZpbHRlciIsIml0ZW1zIjpbeyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiQ3V0LW9mZiBGcmVxdWVuY3kiLCJhZGRyZXNzIjoiL0xvd19QYXNzX0ZpbHRlci9DdXQtb2ZmX0ZyZXF1ZW5jeSIsImluZGV4IjoiOCIsIm1ldGEiOlt7ImFjYyI6IjIgMSAtMTAgMCAxMCJ9LHsic2NhbGUiOiJsb2cifV0sImluaXQiOiI4MDAiLCJtaW4iOiIxMCIsIm1heCI6IjIwMDAwIiwic3RlcCI6IjAuMDEifV19XX0w"; }
+function getBase64CodeLowPassFilter() { return "AGFzbQEAAAAB1oCAgAAQYAJ/fwBgBH9/f38AYAF/AX9gAX8Bf2ACf38BfWABfwF/YAJ/fwBgAX8AYAJ/fwBgAn9/AGABfwBgAn9/AX9gAn9/AX9gAn19AX1gA39/fQBgAX0BfQKZgICAAAIDZW52BV9wb3dmAA0DZW52BV90YW5mAA8Dj4CAgAAOAAECAwQFBgcICQoLDA4Fh4CAgAABAIKAgIAAB7qBgIAADAdjb21wdXRlAAMMZ2V0TnVtSW5wdXRzAAQNZ2V0TnVtT3V0cHV0cwAFDWdldFBhcmFtVmFsdWUABg1nZXRTYW1wbGVSYXRlAAcEaW5pdAAIDWluc3RhbmNlQ2xlYXIACRFpbnN0YW5jZUNvbnN0YW50cwAKDGluc3RhbmNlSW5pdAALGmluc3RhbmNlUmVzZXRVc2VySW50ZXJmYWNlAAwNc2V0UGFyYW1WYWx1ZQAPBm1lbW9yeQIACryFgIAADoKAgIAAAAv6goCAAAIDfwZ9QQAhBEEAIQVDAAAAACEHQQAhBkMAAAAAIQhDAAAAACEJQwAAAAAhCkMAAAAAIQtDAAAAACEMIAJBAGooAgAhBCADQQBqKAIAIQVDbxKDOkEAKgIIlCEHQQAhBgNAAkAgB0N3vn8/QQAqAhCUkiEIQQAgCEMAAAAAIAi8QYCAgPwHcRs4AgxBACoCBEMAACBBQwBAnEZBACoCDJaXlBABIQlDAACAPyAJlSEKIApD8wS1P5IgCZVDAACAP5IhCyAEIAZqKgIAQQAqAhwgCkPzBLW/kiAJlUMAAIA/kpRDAAAAQEEAKgIYQwAAgD9DAACAPyAJQwAAAEAQAJWTlJSSIAuVkyEMQQAgDEMAAAAAIAy8QYCAgPwHcRs4AhQgBSAGakEAKgIcQQAqAhRDAAAAQEEAKgIYlJKSIAuVOAIAQQBBACoCDDgCEEEAQQAqAhg4AhxBAEEAKgIUOAIYIAZBBGohBiAGQQQgAWxIBEAMAgwBCwsLC4WAgIAAAEEBDwuFgICAAABBAQ8Li4CAgAAAIAAgAWoqAgAPC4iAgIAAAEEAKAIADwuOgICAAAAgACABEAIgACABEAsL5oCAgAABAn9BACEBQQAhAkEAIQEDQAJAQQwgAUECdGpDAAAAADgCACABQQFqIQEgAUECSARADAIMAQsLC0EAIQIDQAJAQRQgAkECdGpDAAAAADgCACACQQFqIQIgAkEDSARADAIMAQsLCwumgICAAABBACABNgIAQQBD2w9JQEMAgDtIQwAAgD9BACgCALKXlpU4AgQLkICAgAAAIAAgARAKIAAQDCAAEAkLjICAgAAAQQBDAABIRDgCCAuNgICAAAAgASAAIAAgAUgbDwuNgICAAAAgACABIAAgAUgbDwuMgICAAAAgACABaiACOAIACwuuhoCAAAEAQQALpwZ7Im5hbWUiOiJMb3cgUGFzcyBGaWx0ZXIiLCJmaWxlbmFtZSI6Ikxvd1Bhc3NGaWx0ZXIiLCJ2ZXJzaW9uIjoiMi42LjEiLCJvcHRpb25zIjoid2FzbS1pYiwgLXNjYWwgLWZ0eiAyIiwic2l6ZSI6IjMyIiwiaW5wdXRzIjoiMSIsIm91dHB1dHMiOiIxIiwibWV0YSI6W3siZmlsZW5hbWUiOiJMb3dQYXNzRmlsdGVyIn0seyJmaWx0ZXJzLmxpYi9uYW1lIjoiRmF1c3QgRmlsdGVycyBMaWJyYXJ5In0seyJmaWx0ZXJzLmxpYi92ZXJzaW9uIjoiMC4wIn0seyJtYXRocy5saWIvYXV0aG9yIjoiR1JBTUUifSx7Im1hdGhzLmxpYi9jb3B5cmlnaHQiOiJHUkFNRSJ9LHsibWF0aHMubGliL2xpY2Vuc2UiOiJMR1BMIHdpdGggZXhjZXB0aW9uIn0seyJtYXRocy5saWIvbmFtZSI6IkZhdXN0IE1hdGggTGlicmFyeSJ9LHsibWF0aHMubGliL3ZlcnNpb24iOiIyLjEifSx7Im5hbWUiOiJMb3cgUGFzcyBGaWx0ZXIifSx7InNpZ25hbHMubGliL25hbWUiOiJGYXVzdCBTaWduYWwgUm91dGluZyBMaWJyYXJ5In0seyJzaWduYWxzLmxpYi92ZXJzaW9uIjoiMC4wIn1dLCJ1aSI6W3sidHlwZSI6InZncm91cCIsImxhYmVsIjoiTG93IFBhc3MgRmlsdGVyIiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJDdXQtb2ZmIEZyZXF1ZW5jeSIsImFkZHJlc3MiOiIvTG93X1Bhc3NfRmlsdGVyL0N1dC1vZmZfRnJlcXVlbmN5IiwiaW5kZXgiOiI4IiwibWV0YSI6W3siYWNjIjoiMiAxIC0xMCAwIDEwIn0seyJzY2FsZSI6ImxvZyJ9XSwiaW5pdCI6IjgwMCIsIm1pbiI6IjEwIiwibWF4IjoiMjAwMDAiLCJzdGVwIjoiMC4wMSJ9XX1dfTA="; }
 
 /*
  faust2wasm: GRAME 2017-2018
@@ -80,20 +80,6 @@ class LowPassFilterProcessor extends AudioWorkletProcessor {
             // Keep inputs adresses
             obj.inputs_items.push(item.address);
             obj.pathTable[item.address] = parseInt(item.index);
-            if (item.meta !== undefined) {
-                for (var i = 0; i < item.meta.length; i++) {
-                    if (item.meta[i].midi !== undefined) {
-                        if (item.meta[i].midi.trim() === "pitchwheel") {
-                            obj.fPitchwheelLabel.push(item.address);
-                        } else if (item.meta[i].midi.trim().split(" ")[0] === "ctrl") {
-                            obj.fCtrlLabel[parseInt(item.meta[i].midi.trim().split(" ")[1])]
-                                .push({ path:item.address,
-                                      min:parseFloat(item.min),
-                                      max:parseFloat(item.max) });
-                        }
-                    }
-                }
-            }
         }
     }
     
@@ -137,11 +123,6 @@ class LowPassFilterProcessor extends AudioWorkletProcessor {
             return taBytes.buffer;
         }
     }
-    
-    static remap(v, mn0, mx0, mn1, mx1)
-    {
-        return (1.0 * (v - mn0) / (mx0 - mn0)) * (mx1 - mn1) + mn1;
-    }
    
     static get parameterDescriptors () 
     {
@@ -164,10 +145,6 @@ class LowPassFilterProcessor extends AudioWorkletProcessor {
 
         this.dspInChannnels = [];
         this.dspOutChannnels = [];
-
-        this.fPitchwheelLabel = [];
-        this.fCtrlLabel = new Array(128);
-        for (var i = 0; i < this.fCtrlLabel.length; i++) { this.fCtrlLabel[i] = []; }
 
         this.numIn = parseInt(this.json_object.inputs);
         this.numOut = parseInt(this.json_object.outputs);
@@ -259,30 +236,6 @@ class LowPassFilterProcessor extends AudioWorkletProcessor {
             this.factory.init(this.dsp, sampleRate); // 'sampleRate' is defined in AudioWorkletGlobalScope  
         }
 
-        this.ctrlChange = function (channel, ctrl, value)
-        {
-            if (this.fCtrlLabel[ctrl] !== []) {
-                for (var i = 0; i < this.fCtrlLabel[ctrl].length; i++) {
-                    var path = this.fCtrlLabel[ctrl][i].path;
-                    this.setParamValue(path, LowPassFilterProcessor.remap(value, 0, 127, this.fCtrlLabel[ctrl][i].min, this.fCtrlLabel[ctrl][i].max));
-                    if (this.output_handler) {
-                   		this.output_handler(path, this.getParamValue(path));
-                   	}
-                }
-            }
-        }
-
-        this.pitchWheel = function (channel, wheel)
-        {
-            for (var i = 0; i < this.fPitchwheelLabel.length; i++) {
-                var path = this.fPitchwheelLabel[i];
-                this.setParamValue(path, Math.pow(2.0, wheel/12.0));
-                if (this.output_handler) {
-                   	this.output_handler(path, this.getParamValue(path));
-                }
-            }
-        }
-
         this.setParamValue = function (path, val)
         {
             this.HEAPF32[this.pathTable[path]] = val;
@@ -295,46 +248,6 @@ class LowPassFilterProcessor extends AudioWorkletProcessor {
 
         // Init resulting DSP
         this.initAux();
-
-        // Set message handler
-        this.port.onmessage = this.handleMessage.bind(this);
-    }
-    
-    handleMessage(event) 
-    {
-        var msg = event.data;
-        switch (msg.type) {
-            // Generic MIDI message
-            case "midi": this.midiMessage(msg.data); break;
-            // Typed MIDI message
-            case "keyOn": this.keyOn(msg.data[0], msg.data[1], msg.data[2]); break;
-            case "keyOff": this.keyOff(msg.data[0], msg.data[1], msg.data[2]); break;
-            case "ctrlChange": this.ctrlChange(msg.data[0], msg.data[1], msg.data[2]); break;
-            case "pitchWheel": this.pitchWheel(msg.data[0], msg.data[1]); break;
-            // Generic data message
-            case "param": this.setParamValue(msg.key, msg.value); break;
-            //case "patch": this.onpatch(msg.data); break;
-        }
-    }
-    
-    midiMessage(data)
-    {
-        var cmd = data[0] >> 4;
-        var channel = data[0] & 0xf;
-        var data1 = data[1];
-        var data2 = data[2];
-        
-        if (channel === 9) {
-            return;
-        } else if (cmd === 8 || ((cmd === 9) && (data2 === 0))) {
-            //this.keyOff(channel, data1, data2);
-        } else if (cmd === 9) {
-            //this.keyOn(channel, data1, data2);
-        } else if (cmd === 11) {
-            //this.ctrlChange(channel, data1, data2);
-        } else if (cmd === 14) {
-            //this.pitchWheel(channel, ((data2 * 128.0 + data1)-8192)/8192.0);
-        }
     }
     
     process(inputs, outputs, parameters) 

@@ -1,13 +1,13 @@
 
 /*
-Code generated with Faust version 2.5.33
+Code generated with Faust version 2.6.1
 Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONGranulator() {
-	return "{\"name\":\"Granulator\",\"filename\":\"Granulator\",\"version\":\"2.5.33\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"660\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"analyzers.lib/name\":\"Faust Analyzer Library\"},{\"analyzers.lib/version\":\"0.0\"},{\"author\":\"Adapted from sfIter by Christophe Lebreton\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"filename\":\"Granulator\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Granulator\"},{\"noises.lib/name\":\"Faust Noise Generator Library\"},{\"noises.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"hgroup\",\"label\":\"Granulator\",\"items\":[{\"type\":\"hslider\",\"label\":\"Grain Size\",\"address\":\"/Granulator/Grain_Size\",\"index\":\"632\",\"meta\":[{\"1\":\"\"},{\"acc\":\"2 0 -10 0 10\"},{\"style\":\"knob\"}],\"init\":\"200\",\"min\":\"5\",\"max\":\"2205\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Speed\",\"address\":\"/Granulator/Speed\",\"index\":\"28\",\"meta\":[{\"2\":\"\"},{\"acc\":\"0 1 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"Hz\"}],\"init\":\"10\",\"min\":\"1\",\"max\":\"20\",\"step\":\"0.0001\"},{\"type\":\"hslider\",\"label\":\"Probability\",\"address\":\"/Granulator/Probability\",\"index\":\"60\",\"meta\":[{\"3\":\"\"},{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"%\"}],\"init\":\"70\",\"min\":\"50\",\"max\":\"100\",\"step\":\"1\"}]}]}";
+	return "{\"name\":\"Granulator\",\"filename\":\"Granulator\",\"version\":\"2.6.1\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"660\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"analyzers.lib/name\":\"Faust Analyzer Library\"},{\"analyzers.lib/version\":\"0.0\"},{\"author\":\"Adapted from sfIter by Christophe Lebreton\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"filename\":\"Granulator\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Granulator\"},{\"noises.lib/name\":\"Faust Noise Generator Library\"},{\"noises.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"hgroup\",\"label\":\"Granulator\",\"items\":[{\"type\":\"hslider\",\"label\":\"Grain Size\",\"address\":\"/Granulator/Grain_Size\",\"index\":\"632\",\"meta\":[{\"1\":\"\"},{\"acc\":\"2 0 -10 0 10\"},{\"style\":\"knob\"}],\"init\":\"200\",\"min\":\"5\",\"max\":\"2205\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Speed\",\"address\":\"/Granulator/Speed\",\"index\":\"28\",\"meta\":[{\"2\":\"\"},{\"acc\":\"0 1 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"Hz\"}],\"init\":\"10\",\"min\":\"1\",\"max\":\"20\",\"step\":\"0.0001\"},{\"type\":\"hslider\",\"label\":\"Probability\",\"address\":\"/Granulator/Probability\",\"index\":\"60\",\"meta\":[{\"3\":\"\"},{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"%\"}],\"init\":\"70\",\"min\":\"50\",\"max\":\"100\",\"step\":\"1\"}]}]}";
 }
-function getBase64CodeGranulator() { return "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IjAuMCJ9LHsiZmlsZW5hbWUiOiJHcmFudWxhdG9yIn0seyJmaWx0ZXJzLmxpYi9uYW1lIjoiRmF1c3QgRmlsdGVycyBMaWJyYXJ5In0seyJmaWx0ZXJzLmxpYi92ZXJzaW9uIjoiMC4wIn0seyJtYXRocy5saWIvYXV0aG9yIjoiR1JBTUUifSx7Im1hdGhzLmxpYi9jb3B5cmlnaHQiOiJHUkFNRSJ9LHsibWF0aHMubGliL2xpY2Vuc2UiOiJMR1BMIHdpdGggZXhjZXB0aW9uIn0seyJtYXRocy5saWIvbmFtZSI6IkZhdXN0IE1hdGggTGlicmFyeSJ9LHsibWF0aHMubGliL3ZlcnNpb24iOiIyLjEifSx7Im5hbWUiOiJHcmFudWxhdG9yIn0seyJub2lzZXMubGliL25hbWUiOiJGYXVzdCBOb2lzZSBHZW5lcmF0b3IgTGlicmFyeSJ9LHsibm9pc2VzLmxpYi92ZXJzaW9uIjoiMC4wIn0seyJzaWduYWxzLmxpYi9uYW1lIjoiRmF1c3QgU2lnbmFsIFJvdXRpbmcgTGlicmFyeSJ9LHsic2lnbmFscy5saWIvdmVyc2lvbiI6IjAuMCJ9XSwidWkiOlt7InR5cGUiOiJoZ3JvdXAiLCJsYWJlbCI6IkdyYW51bGF0b3IiLCJpdGVtcyI6W3sidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6IkdyYWluIFNpemUiLCJhZGRyZXNzIjoiL0dyYW51bGF0b3IvR3JhaW5fU2l6ZSIsImluZGV4IjoiNjMyIiwibWV0YSI6W3siMSI6IiJ9LHsiYWNjIjoiMiAwIC0xMCAwIDEwIn0seyJzdHlsZSI6Imtub2IifV0sImluaXQiOiIyMDAiLCJtaW4iOiI1IiwibWF4IjoiMjIwNSIsInN0ZXAiOiIxIn0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiU3BlZWQiLCJhZGRyZXNzIjoiL0dyYW51bGF0b3IvU3BlZWQiLCJpbmRleCI6IjI4IiwibWV0YSI6W3siMiI6IiJ9LHsiYWNjIjoiMCAxIC0xMCAwIDEwIn0seyJzdHlsZSI6Imtub2IifSx7InVuaXQiOiJIeiJ9XSwiaW5pdCI6IjEwIiwibWluIjoiMSIsIm1heCI6IjIwIiwic3RlcCI6IjAuMDAwMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6IlByb2JhYmlsaXR5IiwiYWRkcmVzcyI6Ii9HcmFudWxhdG9yL1Byb2JhYmlsaXR5IiwiaW5kZXgiOiI2MCIsIm1ldGEiOlt7IjMiOiIifSx7ImFjYyI6IjEgMCAtMTAgMCAxMCJ9LHsic3R5bGUiOiJrbm9iIn0seyJ1bml0IjoiJSJ9XSwiaW5pdCI6IjcwIiwibWluIjoiNTAiLCJtYXgiOiIxMDAiLCJzdGVwIjoiMSJ9XX1dfTA="; }
+function getBase64CodeGranulator() { return "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MC4wIn0seyJmaWxlbmFtZSI6IkdyYW51bGF0b3IifSx7ImZpbHRlcnMubGliL25hbWUiOiJGYXVzdCBGaWx0ZXJzIExpYnJhcnkifSx7ImZpbHRlcnMubGliL3ZlcnNpb24iOiIwLjAifSx7Im1hdGhzLmxpYi9hdXRob3IiOiJHUkFNRSJ9LHsibWF0aHMubGliL2NvcHlyaWdodCI6IkdSQU1FIn0seyJtYXRocy5saWIvbGljZW5zZSI6IkxHUEwgd2l0aCBleGNlcHRpb24ifSx7Im1hdGhzLmxpYi9uYW1lIjoiRmF1c3QgTWF0aCBMaWJyYXJ5In0seyJtYXRocy5saWIvdmVyc2lvbiI6IjIuMSJ9LHsibmFtZSI6IkdyYW51bGF0b3IifSx7Im5vaXNlcy5saWIvbmFtZSI6IkZhdXN0IE5vaXNlIEdlbmVyYXRvciBMaWJyYXJ5In0seyJub2lzZXMubGliL3ZlcnNpb24iOiIwLjAifSx7InNpZ25hbHMubGliL25hbWUiOiJGYXVzdCBTaWduYWwgUm91dGluZyBMaWJyYXJ5In0seyJzaWduYWxzLmxpYi92ZXJzaW9uIjoiMC4wIn1dLCJ1aSI6W3sidHlwZSI6Imhncm91cCIsImxhYmVsIjoiR3JhbnVsYXRvciIsIml0ZW1zIjpbeyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiR3JhaW4gU2l6ZSIsImFkZHJlc3MiOiIvR3JhbnVsYXRvci9HcmFpbl9TaXplIiwiaW5kZXgiOiI2MzIiLCJtZXRhIjpbeyIxIjoiIn0seyJhY2MiOiIyIDAgLTEwIDAgMTAifSx7InN0eWxlIjoia25vYiJ9XSwiaW5pdCI6IjIwMCIsIm1pbiI6IjUiLCJtYXgiOiIyMjA1Iiwic3RlcCI6IjEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJTcGVlZCIsImFkZHJlc3MiOiIvR3JhbnVsYXRvci9TcGVlZCIsImluZGV4IjoiMjgiLCJtZXRhIjpbeyIyIjoiIn0seyJhY2MiOiIwIDEgLTEwIDAgMTAifSx7InN0eWxlIjoia25vYiJ9LHsidW5pdCI6Ikh6In1dLCJpbml0IjoiMTAiLCJtaW4iOiIxIiwibWF4IjoiMjAiLCJzdGVwIjoiMC4wMDAxIn0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiUHJvYmFiaWxpdHkiLCJhZGRyZXNzIjoiL0dyYW51bGF0b3IvUHJvYmFiaWxpdHkiLCJpbmRleCI6IjYwIiwibWV0YSI6W3siMyI6IiJ9LHsiYWNjIjoiMSAwIC0xMCAwIDEwIn0seyJzdHlsZSI6Imtub2IifSx7InVuaXQiOiIlIn1dLCJpbml0IjoiNzAiLCJtaW4iOiI1MCIsIm1heCI6IjEwMCIsInN0ZXAiOiIxIn1dfV19MA=="; }
 
 /*
  faust2wasm: GRAME 2017-2018
@@ -80,20 +80,6 @@ class GranulatorProcessor extends AudioWorkletProcessor {
             // Keep inputs adresses
             obj.inputs_items.push(item.address);
             obj.pathTable[item.address] = parseInt(item.index);
-            if (item.meta !== undefined) {
-                for (var i = 0; i < item.meta.length; i++) {
-                    if (item.meta[i].midi !== undefined) {
-                        if (item.meta[i].midi.trim() === "pitchwheel") {
-                            obj.fPitchwheelLabel.push(item.address);
-                        } else if (item.meta[i].midi.trim().split(" ")[0] === "ctrl") {
-                            obj.fCtrlLabel[parseInt(item.meta[i].midi.trim().split(" ")[1])]
-                                .push({ path:item.address,
-                                      min:parseFloat(item.min),
-                                      max:parseFloat(item.max) });
-                        }
-                    }
-                }
-            }
         }
     }
     
@@ -137,11 +123,6 @@ class GranulatorProcessor extends AudioWorkletProcessor {
             return taBytes.buffer;
         }
     }
-    
-    static remap(v, mn0, mx0, mn1, mx1)
-    {
-        return (1.0 * (v - mn0) / (mx0 - mn0)) * (mx1 - mn1) + mn1;
-    }
    
     static get parameterDescriptors () 
     {
@@ -164,10 +145,6 @@ class GranulatorProcessor extends AudioWorkletProcessor {
 
         this.dspInChannnels = [];
         this.dspOutChannnels = [];
-
-        this.fPitchwheelLabel = [];
-        this.fCtrlLabel = new Array(128);
-        for (var i = 0; i < this.fCtrlLabel.length; i++) { this.fCtrlLabel[i] = []; }
 
         this.numIn = parseInt(this.json_object.inputs);
         this.numOut = parseInt(this.json_object.outputs);
@@ -259,30 +236,6 @@ class GranulatorProcessor extends AudioWorkletProcessor {
             this.factory.init(this.dsp, sampleRate); // 'sampleRate' is defined in AudioWorkletGlobalScope  
         }
 
-        this.ctrlChange = function (channel, ctrl, value)
-        {
-            if (this.fCtrlLabel[ctrl] !== []) {
-                for (var i = 0; i < this.fCtrlLabel[ctrl].length; i++) {
-                    var path = this.fCtrlLabel[ctrl][i].path;
-                    this.setParamValue(path, GranulatorProcessor.remap(value, 0, 127, this.fCtrlLabel[ctrl][i].min, this.fCtrlLabel[ctrl][i].max));
-                    if (this.output_handler) {
-                   		this.output_handler(path, this.getParamValue(path));
-                   	}
-                }
-            }
-        }
-
-        this.pitchWheel = function (channel, wheel)
-        {
-            for (var i = 0; i < this.fPitchwheelLabel.length; i++) {
-                var path = this.fPitchwheelLabel[i];
-                this.setParamValue(path, Math.pow(2.0, wheel/12.0));
-                if (this.output_handler) {
-                   	this.output_handler(path, this.getParamValue(path));
-                }
-            }
-        }
-
         this.setParamValue = function (path, val)
         {
             this.HEAPF32[this.pathTable[path]] = val;
@@ -295,46 +248,6 @@ class GranulatorProcessor extends AudioWorkletProcessor {
 
         // Init resulting DSP
         this.initAux();
-
-        // Set message handler
-        this.port.onmessage = this.handleMessage.bind(this);
-    }
-    
-    handleMessage(event) 
-    {
-        var msg = event.data;
-        switch (msg.type) {
-            // Generic MIDI message
-            case "midi": this.midiMessage(msg.data); break;
-            // Typed MIDI message
-            case "keyOn": this.keyOn(msg.data[0], msg.data[1], msg.data[2]); break;
-            case "keyOff": this.keyOff(msg.data[0], msg.data[1], msg.data[2]); break;
-            case "ctrlChange": this.ctrlChange(msg.data[0], msg.data[1], msg.data[2]); break;
-            case "pitchWheel": this.pitchWheel(msg.data[0], msg.data[1]); break;
-            // Generic data message
-            case "param": this.setParamValue(msg.key, msg.value); break;
-            //case "patch": this.onpatch(msg.data); break;
-        }
-    }
-    
-    midiMessage(data)
-    {
-        var cmd = data[0] >> 4;
-        var channel = data[0] & 0xf;
-        var data1 = data[1];
-        var data2 = data[2];
-        
-        if (channel === 9) {
-            return;
-        } else if (cmd === 8 || ((cmd === 9) && (data2 === 0))) {
-            //this.keyOff(channel, data1, data2);
-        } else if (cmd === 9) {
-            //this.keyOn(channel, data1, data2);
-        } else if (cmd === 11) {
-            //this.ctrlChange(channel, data1, data2);
-        } else if (cmd === 14) {
-            //this.pitchWheel(channel, ((data2 * 128.0 + data1)-8192)/8192.0);
-        }
     }
     
     process(inputs, outputs, parameters) 

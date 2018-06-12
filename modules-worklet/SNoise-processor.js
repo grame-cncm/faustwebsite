@@ -1,13 +1,13 @@
 
 /*
-Code generated with Faust version 2.5.33
+Code generated with Faust version 2.6.1
 Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONSNoise() {
-	return "{\"name\":\"White Noise\",\"filename\":\"SNoise\",\"version\":\"2.5.33\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"16\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"Grame\"},{\"copyright\":\"(c)GRAME 2009\"},{\"filename\":\"SNoise\"},{\"license\":\"BSD\"},{\"name\":\"White Noise\"},{\"version\":\"1.1\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"White Noise\",\"items\":[{\"type\":\"hslider\",\"label\":\"Volume\",\"address\":\"/White_Noise/Volume\",\"index\":\"0\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"White Noise\",\"filename\":\"SNoise\",\"version\":\"2.6.1\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"16\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"Grame\"},{\"copyright\":\"(c)GRAME 2009\"},{\"filename\":\"SNoise\"},{\"license\":\"BSD\"},{\"name\":\"White Noise\"},{\"version\":\"1.1\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"White Noise\",\"items\":[{\"type\":\"hslider\",\"label\":\"Volume\",\"address\":\"/White_Noise/Volume\",\"index\":\"0\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"}]}]}";
 }
-function getBase64CodeSNoise() { return "AGFzbQEAAAABy4CAgAAOYAJ/fwBgBH9/f38AYAF/AX9gAX8Bf2ACf38BfWABfwF/YAJ/fwBgAX8AYAJ/fwBgAn9/AGABfwBgAn9/AX9gAn9/AX9gA39/fQACgYCAgAAAA4+AgIAADgABAgMEBQYHCAkKCwwNBYeAgIAAAQCBgICAAAe6gYCAAAwHY29tcHV0ZQABDGdldE51bUlucHV0cwACDWdldE51bU91dHB1dHMAAw1nZXRQYXJhbVZhbHVlAAQNZ2V0U2FtcGxlUmF0ZQAFBGluaXQABg1pbnN0YW5jZUNsZWFyAAcRaW5zdGFuY2VDb25zdGFudHMACAxpbnN0YW5jZUluaXQACRppbnN0YW5jZVJlc2V0VXNlckludGVyZmFjZQAKDXNldFBhcmFtVmFsdWUADQZtZW1vcnkCAArugoCAAA6CgICAAAAL/YCAgAACAn8BfUEAIQRDAAAAACEGQQAhBSADQQBqKAIAIQRDAAAAMEEAKgIAlCEGQQAhBQNAAkBBAEHtnJmOBEEAKAIIbEG54ABqNgIEIAQgBWogBkEAKAIEspQ4AgBBAEEAKAIENgIIIAVBBGohBSAFQQQgAWxIBEAMAgwBCwsLC4WAgIAAAEEADwuFgICAAABBAQ8Li4CAgAAAIAAgAWoqAgAPC4iAgIAAAEEAKAIMDwuOgICAAAAgACABEAAgACABEAkLsoCAgAABAX9BACEBQQAhAQNAAkBBBCABQQJ0akEANgIAIAFBAWohASABQQJIBEAMAgwBCwsLC4mAgIAAAEEAIAE2AgwLkICAgAAAIAAgARAIIAAQCiAAEAcLjICAgAAAQQBDAAAAPzgCAAuNgICAAAAgASAAIAAgAUgbDwuNgICAAAAgACABIAAgAUgbDwuMgICAAAAgACABaiACOAIACwuChICAAAEAQQAL+wN7Im5hbWUiOiJXaGl0ZSBOb2lzZSIsImZpbGVuYW1lIjoiU05vaXNlIiwidmVyc2lvbiI6IjIuNS4zMyIsIm9wdGlvbnMiOiJ3YXNtLWliLCAtc2NhbCAtZnR6IDIiLCJzaXplIjoiMTYiLCJpbnB1dHMiOiIwIiwib3V0cHV0cyI6IjEiLCJtZXRhIjpbeyJhdXRob3IiOiJHcmFtZSJ9LHsiY29weXJpZ2h0IjoiKGMpR1JBTUUgMjAwOSJ9LHsiZmlsZW5hbWUiOiJTTm9pc2UifSx7ImxpY2Vuc2UiOiJCU0QifSx7Im5hbWUiOiJXaGl0ZSBOb2lzZSJ9LHsidmVyc2lvbiI6IjEuMSJ9XSwidWkiOlt7InR5cGUiOiJ2Z3JvdXAiLCJsYWJlbCI6IldoaXRlIE5vaXNlIiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJWb2x1bWUiLCJhZGRyZXNzIjoiL1doaXRlX05vaXNlL1ZvbHVtZSIsImluZGV4IjoiMCIsIm1ldGEiOlt7ImFjYyI6IjEgMCAtMTAgMCAxMCJ9LHsic3R5bGUiOiJrbm9iIn1dLCJpbml0IjoiMC41IiwibWluIjoiMCIsIm1heCI6IjEiLCJzdGVwIjoiMC4wMSJ9XX1dfTA="; }
+function getBase64CodeSNoise() { return "AGFzbQEAAAABy4CAgAAOYAJ/fwBgBH9/f38AYAF/AX9gAX8Bf2ACf38BfWABfwF/YAJ/fwBgAX8AYAJ/fwBgAn9/AGABfwBgAn9/AX9gAn9/AX9gA39/fQACgYCAgAAAA4+AgIAADgABAgMEBQYHCAkKCwwNBYeAgIAAAQCBgICAAAe6gYCAAAwHY29tcHV0ZQABDGdldE51bUlucHV0cwACDWdldE51bU91dHB1dHMAAw1nZXRQYXJhbVZhbHVlAAQNZ2V0U2FtcGxlUmF0ZQAFBGluaXQABg1pbnN0YW5jZUNsZWFyAAcRaW5zdGFuY2VDb25zdGFudHMACAxpbnN0YW5jZUluaXQACRppbnN0YW5jZVJlc2V0VXNlckludGVyZmFjZQAKDXNldFBhcmFtVmFsdWUADQZtZW1vcnkCAArugoCAAA6CgICAAAAL/YCAgAACAn8BfUEAIQRDAAAAACEGQQAhBSADQQBqKAIAIQRDAAAAMEEAKgIAlCEGQQAhBQNAAkBBAEHtnJmOBEEAKAIIbEG54ABqNgIEIAQgBWogBkEAKAIEspQ4AgBBAEEAKAIENgIIIAVBBGohBSAFQQQgAWxIBEAMAgwBCwsLC4WAgIAAAEEADwuFgICAAABBAQ8Li4CAgAAAIAAgAWoqAgAPC4iAgIAAAEEAKAIMDwuOgICAAAAgACABEAAgACABEAkLsoCAgAABAX9BACEBQQAhAQNAAkBBBCABQQJ0akEANgIAIAFBAWohASABQQJIBEAMAgwBCwsLC4mAgIAAAEEAIAE2AgwLkICAgAAAIAAgARAIIAAQCiAAEAcLjICAgAAAQQBDAAAAPzgCAAuNgICAAAAgASAAIAAgAUgbDwuNgICAAAAgACABIAAgAUgbDwuMgICAAAAgACABaiACOAIACwuBhICAAAEAQQAL+gN7Im5hbWUiOiJXaGl0ZSBOb2lzZSIsImZpbGVuYW1lIjoiU05vaXNlIiwidmVyc2lvbiI6IjIuNi4xIiwib3B0aW9ucyI6Indhc20taWIsIC1zY2FsIC1mdHogMiIsInNpemUiOiIxNiIsImlucHV0cyI6IjAiLCJvdXRwdXRzIjoiMSIsIm1ldGEiOlt7ImF1dGhvciI6IkdyYW1lIn0seyJjb3B5cmlnaHQiOiIoYylHUkFNRSAyMDA5In0seyJmaWxlbmFtZSI6IlNOb2lzZSJ9LHsibGljZW5zZSI6IkJTRCJ9LHsibmFtZSI6IldoaXRlIE5vaXNlIn0seyJ2ZXJzaW9uIjoiMS4xIn1dLCJ1aSI6W3sidHlwZSI6InZncm91cCIsImxhYmVsIjoiV2hpdGUgTm9pc2UiLCJpdGVtcyI6W3sidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6IlZvbHVtZSIsImFkZHJlc3MiOiIvV2hpdGVfTm9pc2UvVm9sdW1lIiwiaW5kZXgiOiIwIiwibWV0YSI6W3siYWNjIjoiMSAwIC0xMCAwIDEwIn0seyJzdHlsZSI6Imtub2IifV0sImluaXQiOiIwLjUiLCJtaW4iOiIwIiwibWF4IjoiMSIsInN0ZXAiOiIwLjAxIn1dfV19MA=="; }
 
 /*
  faust2wasm: GRAME 2017-2018
@@ -80,20 +80,6 @@ class SNoiseProcessor extends AudioWorkletProcessor {
             // Keep inputs adresses
             obj.inputs_items.push(item.address);
             obj.pathTable[item.address] = parseInt(item.index);
-            if (item.meta !== undefined) {
-                for (var i = 0; i < item.meta.length; i++) {
-                    if (item.meta[i].midi !== undefined) {
-                        if (item.meta[i].midi.trim() === "pitchwheel") {
-                            obj.fPitchwheelLabel.push(item.address);
-                        } else if (item.meta[i].midi.trim().split(" ")[0] === "ctrl") {
-                            obj.fCtrlLabel[parseInt(item.meta[i].midi.trim().split(" ")[1])]
-                                .push({ path:item.address,
-                                      min:parseFloat(item.min),
-                                      max:parseFloat(item.max) });
-                        }
-                    }
-                }
-            }
         }
     }
     
@@ -137,11 +123,6 @@ class SNoiseProcessor extends AudioWorkletProcessor {
             return taBytes.buffer;
         }
     }
-    
-    static remap(v, mn0, mx0, mn1, mx1)
-    {
-        return (1.0 * (v - mn0) / (mx0 - mn0)) * (mx1 - mn1) + mn1;
-    }
    
     static get parameterDescriptors () 
     {
@@ -164,10 +145,6 @@ class SNoiseProcessor extends AudioWorkletProcessor {
 
         this.dspInChannnels = [];
         this.dspOutChannnels = [];
-
-        this.fPitchwheelLabel = [];
-        this.fCtrlLabel = new Array(128);
-        for (var i = 0; i < this.fCtrlLabel.length; i++) { this.fCtrlLabel[i] = []; }
 
         this.numIn = parseInt(this.json_object.inputs);
         this.numOut = parseInt(this.json_object.outputs);
@@ -259,30 +236,6 @@ class SNoiseProcessor extends AudioWorkletProcessor {
             this.factory.init(this.dsp, sampleRate); // 'sampleRate' is defined in AudioWorkletGlobalScope  
         }
 
-        this.ctrlChange = function (channel, ctrl, value)
-        {
-            if (this.fCtrlLabel[ctrl] !== []) {
-                for (var i = 0; i < this.fCtrlLabel[ctrl].length; i++) {
-                    var path = this.fCtrlLabel[ctrl][i].path;
-                    this.setParamValue(path, SNoiseProcessor.remap(value, 0, 127, this.fCtrlLabel[ctrl][i].min, this.fCtrlLabel[ctrl][i].max));
-                    if (this.output_handler) {
-                   		this.output_handler(path, this.getParamValue(path));
-                   	}
-                }
-            }
-        }
-
-        this.pitchWheel = function (channel, wheel)
-        {
-            for (var i = 0; i < this.fPitchwheelLabel.length; i++) {
-                var path = this.fPitchwheelLabel[i];
-                this.setParamValue(path, Math.pow(2.0, wheel/12.0));
-                if (this.output_handler) {
-                   	this.output_handler(path, this.getParamValue(path));
-                }
-            }
-        }
-
         this.setParamValue = function (path, val)
         {
             this.HEAPF32[this.pathTable[path]] = val;
@@ -295,46 +248,6 @@ class SNoiseProcessor extends AudioWorkletProcessor {
 
         // Init resulting DSP
         this.initAux();
-
-        // Set message handler
-        this.port.onmessage = this.handleMessage.bind(this);
-    }
-    
-    handleMessage(event) 
-    {
-        var msg = event.data;
-        switch (msg.type) {
-            // Generic MIDI message
-            case "midi": this.midiMessage(msg.data); break;
-            // Typed MIDI message
-            case "keyOn": this.keyOn(msg.data[0], msg.data[1], msg.data[2]); break;
-            case "keyOff": this.keyOff(msg.data[0], msg.data[1], msg.data[2]); break;
-            case "ctrlChange": this.ctrlChange(msg.data[0], msg.data[1], msg.data[2]); break;
-            case "pitchWheel": this.pitchWheel(msg.data[0], msg.data[1]); break;
-            // Generic data message
-            case "param": this.setParamValue(msg.key, msg.value); break;
-            //case "patch": this.onpatch(msg.data); break;
-        }
-    }
-    
-    midiMessage(data)
-    {
-        var cmd = data[0] >> 4;
-        var channel = data[0] & 0xf;
-        var data1 = data[1];
-        var data2 = data[2];
-        
-        if (channel === 9) {
-            return;
-        } else if (cmd === 8 || ((cmd === 9) && (data2 === 0))) {
-            //this.keyOff(channel, data1, data2);
-        } else if (cmd === 9) {
-            //this.keyOn(channel, data1, data2);
-        } else if (cmd === 11) {
-            //this.ctrlChange(channel, data1, data2);
-        } else if (cmd === 14) {
-            //this.pitchWheel(channel, ((data2 * 128.0 + data1)-8192)/8192.0);
-        }
     }
     
     process(inputs, outputs, parameters) 

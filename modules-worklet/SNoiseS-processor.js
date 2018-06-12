@@ -1,13 +1,13 @@
 
 /*
-Code generated with Faust version 2.5.33
+Code generated with Faust version 2.6.1
 Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONSNoiseS() {
-	return "{\"name\":\"Noises\",\"filename\":\"SNoiseS\",\"version\":\"2.5.33\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"40\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"ER\"},{\"filename\":\"SNoiseS\"},{\"name\":\"Noises\"},{\"version\":\"1.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Noises\",\"items\":[{\"type\":\"hslider\",\"label\":\"Noise Type\",\"address\":\"/Noises/Noise_Type\",\"index\":\"4\",\"meta\":[{\"acc\":\"0 0 -10 0 10\"}],\"init\":\"1\",\"min\":\"0\",\"max\":\"2\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Pink Noise Volume\",\"address\":\"/Noises/Pink_Noise_Volume\",\"index\":\"0\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"},{\"tooltip\":\"0=Mute, 1=White Noise, 2=Pink Noise\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"2\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"White Noise Volume\",\"address\":\"/Noises/White_Noise_Volume\",\"index\":\"32\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"2\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"Noises\",\"filename\":\"SNoiseS\",\"version\":\"2.6.1\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"40\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"ER\"},{\"filename\":\"SNoiseS\"},{\"name\":\"Noises\"},{\"version\":\"1.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Noises\",\"items\":[{\"type\":\"hslider\",\"label\":\"Noise Type\",\"address\":\"/Noises/Noise_Type\",\"index\":\"4\",\"meta\":[{\"acc\":\"0 0 -10 0 10\"}],\"init\":\"1\",\"min\":\"0\",\"max\":\"2\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Pink Noise Volume\",\"address\":\"/Noises/Pink_Noise_Volume\",\"index\":\"0\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"},{\"tooltip\":\"0=Mute, 1=White Noise, 2=Pink Noise\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"2\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"White Noise Volume\",\"address\":\"/Noises/White_Noise_Volume\",\"index\":\"32\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"2\",\"step\":\"0.01\"}]}]}";
 }
-function getBase64CodeSNoiseS() { return "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"; }
+function getBase64CodeSNoiseS() { return "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"; }
 
 /*
  faust2wasm: GRAME 2017-2018
@@ -80,20 +80,6 @@ class SNoiseSProcessor extends AudioWorkletProcessor {
             // Keep inputs adresses
             obj.inputs_items.push(item.address);
             obj.pathTable[item.address] = parseInt(item.index);
-            if (item.meta !== undefined) {
-                for (var i = 0; i < item.meta.length; i++) {
-                    if (item.meta[i].midi !== undefined) {
-                        if (item.meta[i].midi.trim() === "pitchwheel") {
-                            obj.fPitchwheelLabel.push(item.address);
-                        } else if (item.meta[i].midi.trim().split(" ")[0] === "ctrl") {
-                            obj.fCtrlLabel[parseInt(item.meta[i].midi.trim().split(" ")[1])]
-                                .push({ path:item.address,
-                                      min:parseFloat(item.min),
-                                      max:parseFloat(item.max) });
-                        }
-                    }
-                }
-            }
         }
     }
     
@@ -137,11 +123,6 @@ class SNoiseSProcessor extends AudioWorkletProcessor {
             return taBytes.buffer;
         }
     }
-    
-    static remap(v, mn0, mx0, mn1, mx1)
-    {
-        return (1.0 * (v - mn0) / (mx0 - mn0)) * (mx1 - mn1) + mn1;
-    }
    
     static get parameterDescriptors () 
     {
@@ -164,10 +145,6 @@ class SNoiseSProcessor extends AudioWorkletProcessor {
 
         this.dspInChannnels = [];
         this.dspOutChannnels = [];
-
-        this.fPitchwheelLabel = [];
-        this.fCtrlLabel = new Array(128);
-        for (var i = 0; i < this.fCtrlLabel.length; i++) { this.fCtrlLabel[i] = []; }
 
         this.numIn = parseInt(this.json_object.inputs);
         this.numOut = parseInt(this.json_object.outputs);
@@ -259,30 +236,6 @@ class SNoiseSProcessor extends AudioWorkletProcessor {
             this.factory.init(this.dsp, sampleRate); // 'sampleRate' is defined in AudioWorkletGlobalScope  
         }
 
-        this.ctrlChange = function (channel, ctrl, value)
-        {
-            if (this.fCtrlLabel[ctrl] !== []) {
-                for (var i = 0; i < this.fCtrlLabel[ctrl].length; i++) {
-                    var path = this.fCtrlLabel[ctrl][i].path;
-                    this.setParamValue(path, SNoiseSProcessor.remap(value, 0, 127, this.fCtrlLabel[ctrl][i].min, this.fCtrlLabel[ctrl][i].max));
-                    if (this.output_handler) {
-                   		this.output_handler(path, this.getParamValue(path));
-                   	}
-                }
-            }
-        }
-
-        this.pitchWheel = function (channel, wheel)
-        {
-            for (var i = 0; i < this.fPitchwheelLabel.length; i++) {
-                var path = this.fPitchwheelLabel[i];
-                this.setParamValue(path, Math.pow(2.0, wheel/12.0));
-                if (this.output_handler) {
-                   	this.output_handler(path, this.getParamValue(path));
-                }
-            }
-        }
-
         this.setParamValue = function (path, val)
         {
             this.HEAPF32[this.pathTable[path]] = val;
@@ -295,46 +248,6 @@ class SNoiseSProcessor extends AudioWorkletProcessor {
 
         // Init resulting DSP
         this.initAux();
-
-        // Set message handler
-        this.port.onmessage = this.handleMessage.bind(this);
-    }
-    
-    handleMessage(event) 
-    {
-        var msg = event.data;
-        switch (msg.type) {
-            // Generic MIDI message
-            case "midi": this.midiMessage(msg.data); break;
-            // Typed MIDI message
-            case "keyOn": this.keyOn(msg.data[0], msg.data[1], msg.data[2]); break;
-            case "keyOff": this.keyOff(msg.data[0], msg.data[1], msg.data[2]); break;
-            case "ctrlChange": this.ctrlChange(msg.data[0], msg.data[1], msg.data[2]); break;
-            case "pitchWheel": this.pitchWheel(msg.data[0], msg.data[1]); break;
-            // Generic data message
-            case "param": this.setParamValue(msg.key, msg.value); break;
-            //case "patch": this.onpatch(msg.data); break;
-        }
-    }
-    
-    midiMessage(data)
-    {
-        var cmd = data[0] >> 4;
-        var channel = data[0] & 0xf;
-        var data1 = data[1];
-        var data2 = data[2];
-        
-        if (channel === 9) {
-            return;
-        } else if (cmd === 8 || ((cmd === 9) && (data2 === 0))) {
-            //this.keyOff(channel, data1, data2);
-        } else if (cmd === 9) {
-            //this.keyOn(channel, data1, data2);
-        } else if (cmd === 11) {
-            //this.ctrlChange(channel, data1, data2);
-        } else if (cmd === 14) {
-            //this.pitchWheel(channel, ((data2 * 128.0 + data1)-8192)/8192.0);
-        }
     }
     
     process(inputs, outputs, parameters) 
