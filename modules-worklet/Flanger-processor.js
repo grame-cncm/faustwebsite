@@ -1,13 +1,13 @@
 
 /*
-Code generated with Faust version 2.6.1
+Code generated with Faust version 2.7.0
 Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONFlanger() {
-	return "{\"name\":\"Flanger\",\"filename\":\"Flanger\",\"version\":\"2.6.1\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"32840\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"filename\":\"Flanger\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Flanger\"},{\"oscillators.lib/name\":\"Faust Oscillator Library\"},{\"oscillators.lib/version\":\"0.0\"},{\"phaflangers.lib/name\":\"Faust Phaser and Flanger Library\"},{\"phaflangers.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Flanger\",\"items\":[{\"type\":\"vgroup\",\"label\":\"FLANGER\",\"meta\":[{\"tooltip\":\"Reference: https://ccrma.stanford.edu/~jos/pasp/Flanging.html\"}],\"items\":[{\"type\":\"hgroup\",\"label\":\"0x00\",\"meta\":[{\"1\":\"\"}],\"items\":[{\"type\":\"hslider\",\"label\":\"Speed\",\"address\":\"/Flanger/FLANGER/0x00/Speed\",\"index\":\"16420\",\"meta\":[{\"1\":\"\"},{\"acc\":\"0 1 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"Hz\"}],\"init\":\"3\",\"min\":\"0\",\"max\":\"10\",\"step\":\"0.01\"}]}]},{\"type\":\"hslider\",\"label\":\"Flanger Intensity\",\"address\":\"/Flanger/Flanger_Intensity\",\"index\":\"8\",\"meta\":[{\"3\":\"\"},{\"acc\":\"1 0 -10 0 10\"},{\"unit\":\"%\"}],\"init\":\"10\",\"min\":\"0\",\"max\":\"100\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"Flanger\",\"filename\":\"Flanger\",\"version\":\"2.7.0\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"32840\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"filename\":\"Flanger\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Flanger\"},{\"oscillators.lib/name\":\"Faust Oscillator Library\"},{\"oscillators.lib/version\":\"0.0\"},{\"phaflangers.lib/name\":\"Faust Phaser and Flanger Library\"},{\"phaflangers.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Flanger\",\"items\":[{\"type\":\"vgroup\",\"label\":\"FLANGER\",\"meta\":[{\"tooltip\":\"Reference: https://ccrma.stanford.edu/~jos/pasp/Flanging.html\"}],\"items\":[{\"type\":\"hgroup\",\"label\":\"0x00\",\"meta\":[{\"1\":\"\"}],\"items\":[{\"type\":\"hslider\",\"label\":\"Speed\",\"address\":\"/Flanger/FLANGER/0x00/Speed\",\"index\":\"16420\",\"meta\":[{\"1\":\"\"},{\"acc\":\"0 1 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"Hz\"}],\"init\":\"3\",\"min\":\"0\",\"max\":\"10\",\"step\":\"0.01\"}]}]},{\"type\":\"hslider\",\"label\":\"Flanger Intensity\",\"address\":\"/Flanger/Flanger_Intensity\",\"index\":\"8\",\"meta\":[{\"3\":\"\"},{\"acc\":\"1 0 -10 0 10\"},{\"unit\":\"%\"}],\"init\":\"10\",\"min\":\"0\",\"max\":\"100\",\"step\":\"0.01\"}]}]}";
 }
-function getBase64CodeFlanger() { return "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IEZsYW5nZXIgTGlicmFyeSJ9LHsicGhhZmxhbmdlcnMubGliL3ZlcnNpb24iOiIwLjAifSx7InNpZ25hbHMubGliL25hbWUiOiJGYXVzdCBTaWduYWwgUm91dGluZyBMaWJyYXJ5In0seyJzaWduYWxzLmxpYi92ZXJzaW9uIjoiMC4wIn1dLCJ1aSI6W3sidHlwZSI6InZncm91cCIsImxhYmVsIjoiRmxhbmdlciIsIml0ZW1zIjpbeyJ0eXBlIjoidmdyb3VwIiwibGFiZWwiOiJGTEFOR0VSIiwibWV0YSI6W3sidG9vbHRpcCI6IlJlZmVyZW5jZTogaHR0cHM6Ly9jY3JtYS5zdGFuZm9yZC5lZHUvfmpvcy9wYXNwL0ZsYW5naW5nLmh0bWwifV0sIml0ZW1zIjpbeyJ0eXBlIjoiaGdyb3VwIiwibGFiZWwiOiIweDAwIiwibWV0YSI6W3siMSI6IiJ9XSwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJTcGVlZCIsImFkZHJlc3MiOiIvRmxhbmdlci9GTEFOR0VSLzB4MDAvU3BlZWQiLCJpbmRleCI6IjE2NDIwIiwibWV0YSI6W3siMSI6IiJ9LHsiYWNjIjoiMCAxIC0xMCAwIDEwIn0seyJzdHlsZSI6Imtub2IifSx7InVuaXQiOiJIeiJ9XSwiaW5pdCI6IjMiLCJtaW4iOiIwIiwibWF4IjoiMTAiLCJzdGVwIjoiMC4wMSJ9XX1dfSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJGbGFuZ2VyIEludGVuc2l0eSIsImFkZHJlc3MiOiIvRmxhbmdlci9GbGFuZ2VyX0ludGVuc2l0eSIsImluZGV4IjoiOCIsIm1ldGEiOlt7IjMiOiIifSx7ImFjYyI6IjEgMCAtMTAgMCAxMCJ9LHsidW5pdCI6IiUifV0sImluaXQiOiIxMCIsIm1pbiI6IjAiLCJtYXgiOiIxMDAiLCJzdGVwIjoiMC4wMSJ9XX1dfTA="; }
+function getBase64CodeFlanger() { return "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IEZsYW5nZXIgTGlicmFyeSJ9LHsicGhhZmxhbmdlcnMubGliL3ZlcnNpb24iOiIwLjAifSx7InNpZ25hbHMubGliL25hbWUiOiJGYXVzdCBTaWduYWwgUm91dGluZyBMaWJyYXJ5In0seyJzaWduYWxzLmxpYi92ZXJzaW9uIjoiMC4wIn1dLCJ1aSI6W3sidHlwZSI6InZncm91cCIsImxhYmVsIjoiRmxhbmdlciIsIml0ZW1zIjpbeyJ0eXBlIjoidmdyb3VwIiwibGFiZWwiOiJGTEFOR0VSIiwibWV0YSI6W3sidG9vbHRpcCI6IlJlZmVyZW5jZTogaHR0cHM6Ly9jY3JtYS5zdGFuZm9yZC5lZHUvfmpvcy9wYXNwL0ZsYW5naW5nLmh0bWwifV0sIml0ZW1zIjpbeyJ0eXBlIjoiaGdyb3VwIiwibGFiZWwiOiIweDAwIiwibWV0YSI6W3siMSI6IiJ9XSwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJTcGVlZCIsImFkZHJlc3MiOiIvRmxhbmdlci9GTEFOR0VSLzB4MDAvU3BlZWQiLCJpbmRleCI6IjE2NDIwIiwibWV0YSI6W3siMSI6IiJ9LHsiYWNjIjoiMCAxIC0xMCAwIDEwIn0seyJzdHlsZSI6Imtub2IifSx7InVuaXQiOiJIeiJ9XSwiaW5pdCI6IjMiLCJtaW4iOiIwIiwibWF4IjoiMTAiLCJzdGVwIjoiMC4wMSJ9XX1dfSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJGbGFuZ2VyIEludGVuc2l0eSIsImFkZHJlc3MiOiIvRmxhbmdlci9GbGFuZ2VyX0ludGVuc2l0eSIsImluZGV4IjoiOCIsIm1ldGEiOlt7IjMiOiIifSx7ImFjYyI6IjEgMCAtMTAgMCAxMCJ9LHsidW5pdCI6IiUifV0sImluaXQiOiIxMCIsIm1pbiI6IjAiLCJtYXgiOiIxMDAiLCJzdGVwIjoiMC4wMSJ9XX1dfTA="; }
 
 /*
  faust2wasm: GRAME 2017-2018
@@ -71,6 +71,10 @@ class FlangerProcessor extends AudioWorkletProcessor {
                    || item.type === "vbargraph") {
             // Keep bargraph adresses
             obj.outputs_items.push(item.address);
+            obj.pathTable[item.address] = parseInt(item.index);
+        } else if (item.type === "soundfile") {
+            // Keep soundfile adresses
+            obj.soundfile_items.push(item.address);
             obj.pathTable[item.address] = parseInt(item.index);
         } else if (item.type === "vslider"
                    || item.type === "hslider"
@@ -152,6 +156,7 @@ class FlangerProcessor extends AudioWorkletProcessor {
         // Memory allocator
         this.ptr_size = 4;
         this.sample_size = 4;
+        this.integer_size = 4;
         
         this.Flanger_instance = new WebAssembly.Instance(FlangerProcessor.wasm_module, FlangerProcessor.importObject);
   	   	this.factory = this.Flanger_instance.exports;
@@ -169,6 +174,9 @@ class FlangerProcessor extends AudioWorkletProcessor {
 
         // input items
         this.inputs_items = [];
+        
+        // soundfile items
+        this.soundfile_items = [];
 
         // Start of HEAP index
 
@@ -182,12 +190,12 @@ class FlangerProcessor extends AudioWorkletProcessor {
         // Setup buffer offset
         this.audio_heap_inputs = this.audio_heap_ptr_outputs + (this.numOut * this.ptr_size);
         this.audio_heap_outputs = this.audio_heap_inputs + (this.numIn * FlangerProcessor.buffer_size * this.sample_size);
-
+        
         // Start of DSP memory : DSP is placed first with index 0
         this.dsp = 0;
 
         this.pathTable = [];
-
+     
         // Send output values to the AudioNode
         this.update_outputs = function ()
         {
@@ -197,6 +205,82 @@ class FlangerProcessor extends AudioWorkletProcessor {
                     this.output_handler(this.outputs_items[i], this.HEAPF32[this.pathTable[this.outputs_items[i]] >> 2]);
                 }
             }
+        }
+        
+        this.loadFile = function (sound_index, sound_ptr, length, sample_rate, channels, buffers)
+        {
+            /*
+             Soundfile layout:
+            
+                FAUSTFLOAT** fBuffers;
+                int fLength;
+                int fSampleRate;
+                int fChannels;
+             
+                ===========
+                Soundfile struct
+                fBuffers[channels]
+                fBuffers0
+                fBuffers1
+                ...
+                Soundfile struct
+                fBuffers[channels]
+                fBuffers0
+                fBuffers1
+                ...
+                ===========
+            */
+            
+            var size_of_soundfile = this.ptr_size + (this.integer_size * 3);  // fBuffers, fLength, fSampleRate, fChannels
+            
+            //console.log("sound_ptr " + sound_ptr);
+            //console.log("size_of_soundfile " + size_of_soundfile);
+            
+            // end of sounfile
+            var end_of_soundfile_ptr = sound_ptr + size_of_soundfile;
+            
+            this.HEAP32[sound_ptr >> 2] = end_of_soundfile_ptr;
+            this.HEAP32[(sound_ptr + 4) >> 2] = length;      // fLength
+            this.HEAP32[(sound_ptr + 8) >> 2] = sample_rate; // fSampleRate
+            this.HEAP32[(sound_ptr + 12) >> 2] = channels;   // fChannels
+            
+            //console.log("end_of_soundfile_ptr " + end_of_soundfile_ptr);
+            
+            // Setup soundfile pointers
+            var start_of_soundfile_data_ptr = end_of_soundfile_ptr + this.ptr_size * channels;
+            
+            for (var i = 0; i < channels; i++) {
+                this.HEAP32[(end_of_soundfile_ptr + (i * this.ptr_size)) >> 2] = start_of_soundfile_data_ptr + (i * length * this.sample_size);
+            }
+            
+            // Setup soundfile buffer
+            for (var i = 0; i < channels; i++) {
+                
+                // start of sound buffer
+                var start_of_buffer_ptr = start_of_soundfile_data_ptr + (i * length * this.sample_size);
+                
+                // generate a 440 Hz signal
+                for (var j = 0; j < length; j++) {
+                    this.HEAPF32[(start_of_buffer_ptr + (j * this.sample_size)) >> 2] = 0.8 * Math.sin((j/length)*2*Math.PI);
+                }
+            }
+            
+            // Setup fSoundfile fields in the DSP structure
+            //console.log("sound_index " + sound_index);
+            //console.log("this.pathTable[this.soundfile_items[sound_index]] " + this.pathTable[this.soundfile_items[sound_index]]);
+            
+            this.HEAP32[this.pathTable[this.soundfile_items[sound_index]] >> 2] = sound_ptr;
+            
+            /*
+            console.log("start_of_soundfile_data_ptr " + start_of_soundfile_data_ptr);
+            console.log("length " + length);
+            console.log("channels " + channels);
+            console.log("this.sample_size " + this.sample_size);
+            console.log("END " + (start_of_soundfile_data_ptr + (channels * length * this.sample_size)));
+            */
+            
+            // End of buffer data;
+            return start_of_soundfile_data_ptr + (channels * length * this.sample_size);
         }
         
         this.initAux = function ()
@@ -232,6 +316,17 @@ class FlangerProcessor extends AudioWorkletProcessor {
             // Parse UI
             FlangerProcessor.parse_ui(this.json_object.ui, this, FlangerProcessor.parse_item2);
             
+            /*
+            console.log("soundfile_items.length " + this.soundfile_items.length);
+            
+            // Setup soundfile offset (after audio data)
+            this.soundfile_ptr = this.audio_heap_outputs + (this.numOut * FlangerProcessor.buffer_size * this.sample_size);
+            
+            var sound_ptr1 = this.soundfile_ptr;
+            var sound_ptr2 = this.loadFile(0, sound_ptr1, 44100/700, 44100, 2, null);
+            var sound_ptr3 = this.loadFile(1, sound_ptr2, 44100/500, 44100, 2, null);
+            */
+             
             // Init DSP
             this.factory.init(this.dsp, sampleRate); // 'sampleRate' is defined in AudioWorkletGlobalScope  
         }

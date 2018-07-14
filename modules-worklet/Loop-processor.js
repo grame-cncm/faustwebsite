@@ -1,13 +1,13 @@
 
 /*
-Code generated with Faust version 2.6.1
+Code generated with Faust version 2.7.0
 Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONLoop() {
-	return "{\"name\":\"Loop\",\"filename\":\"Loop\",\"version\":\"2.6.1\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"8388660\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"author\":\"Grame\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"copyright\":\"(c)GRAME 2006\"},{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"filename\":\"Loop\"},{\"license\":\"BSD\"},{\"name\":\"Loop\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"},{\"version\":\"1.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"LOOP\",\"items\":[{\"type\":\"hslider\",\"label\":\"Loop Mode ON/OFF\",\"address\":\"/LOOP/Loop_Mode_ON/OFF\",\"index\":\"0\",\"init\":\"0\",\"min\":\"0\",\"max\":\"1\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Start/Stop Recording (Max 20s)\",\"address\":\"/LOOP/Start/Stop_Recording_(Max_20s)\",\"index\":\"4\",\"meta\":[{\"acc\":\"1 0 -10 0 12\"}],\"init\":\"1\",\"min\":\"0\",\"max\":\"1\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Volume\",\"address\":\"/LOOP/Volume\",\"index\":\"8388644\",\"meta\":[{\"unit\":\"dB\"}],\"init\":\"0\",\"min\":\"-96\",\"max\":\"4\",\"step\":\"0.1\"}]}]}";
+	return "{\"name\":\"Loop\",\"filename\":\"Loop\",\"version\":\"2.7.0\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"8388660\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"author\":\"Grame\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"copyright\":\"(c)GRAME 2006\"},{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"filename\":\"Loop\"},{\"license\":\"BSD\"},{\"name\":\"Loop\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"},{\"version\":\"1.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"LOOP\",\"items\":[{\"type\":\"hslider\",\"label\":\"Loop Mode ON/OFF\",\"address\":\"/LOOP/Loop_Mode_ON/OFF\",\"index\":\"0\",\"init\":\"0\",\"min\":\"0\",\"max\":\"1\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Start/Stop Recording (Max 20s)\",\"address\":\"/LOOP/Start/Stop_Recording_(Max_20s)\",\"index\":\"4\",\"meta\":[{\"acc\":\"1 0 -10 0 12\"}],\"init\":\"1\",\"min\":\"0\",\"max\":\"1\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Volume\",\"address\":\"/LOOP/Volume\",\"index\":\"8388644\",\"meta\":[{\"unit\":\"dB\"}],\"init\":\"0\",\"min\":\"-96\",\"max\":\"4\",\"step\":\"0.1\"}]}]}";
 }
-function getBase64CodeLoop() { return "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Z25hbHMubGliL3ZlcnNpb24iOiIwLjAifSx7InZlcnNpb24iOiIxLjAifV0sInVpIjpbeyJ0eXBlIjoidmdyb3VwIiwibGFiZWwiOiJMT09QIiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJMb29wIE1vZGUgT04vT0ZGIiwiYWRkcmVzcyI6Ii9MT09QL0xvb3BfTW9kZV9PTi9PRkYiLCJpbmRleCI6IjAiLCJpbml0IjoiMCIsIm1pbiI6IjAiLCJtYXgiOiIxIiwic3RlcCI6IjEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJTdGFydC9TdG9wIFJlY29yZGluZyAoTWF4IDIwcykiLCJhZGRyZXNzIjoiL0xPT1AvU3RhcnQvU3RvcF9SZWNvcmRpbmdfKE1heF8yMHMpIiwiaW5kZXgiOiI0IiwibWV0YSI6W3siYWNjIjoiMSAwIC0xMCAwIDEyIn1dLCJpbml0IjoiMSIsIm1pbiI6IjAiLCJtYXgiOiIxIiwic3RlcCI6IjEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJWb2x1bWUiLCJhZGRyZXNzIjoiL0xPT1AvVm9sdW1lIiwiaW5kZXgiOiI4Mzg4NjQ0IiwibWV0YSI6W3sidW5pdCI6ImRCIn1dLCJpbml0IjoiMCIsIm1pbiI6Ii05NiIsIm1heCI6IjQiLCJzdGVwIjoiMC4xIn1dfV19MA=="; }
+function getBase64CodeLoop() { return "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Z25hbHMubGliL3ZlcnNpb24iOiIwLjAifSx7InZlcnNpb24iOiIxLjAifV0sInVpIjpbeyJ0eXBlIjoidmdyb3VwIiwibGFiZWwiOiJMT09QIiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJMb29wIE1vZGUgT04vT0ZGIiwiYWRkcmVzcyI6Ii9MT09QL0xvb3BfTW9kZV9PTi9PRkYiLCJpbmRleCI6IjAiLCJpbml0IjoiMCIsIm1pbiI6IjAiLCJtYXgiOiIxIiwic3RlcCI6IjEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJTdGFydC9TdG9wIFJlY29yZGluZyAoTWF4IDIwcykiLCJhZGRyZXNzIjoiL0xPT1AvU3RhcnQvU3RvcF9SZWNvcmRpbmdfKE1heF8yMHMpIiwiaW5kZXgiOiI0IiwibWV0YSI6W3siYWNjIjoiMSAwIC0xMCAwIDEyIn1dLCJpbml0IjoiMSIsIm1pbiI6IjAiLCJtYXgiOiIxIiwic3RlcCI6IjEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJWb2x1bWUiLCJhZGRyZXNzIjoiL0xPT1AvVm9sdW1lIiwiaW5kZXgiOiI4Mzg4NjQ0IiwibWV0YSI6W3sidW5pdCI6ImRCIn1dLCJpbml0IjoiMCIsIm1pbiI6Ii05NiIsIm1heCI6IjQiLCJzdGVwIjoiMC4xIn1dfV19MA=="; }
 
 /*
  faust2wasm: GRAME 2017-2018
@@ -71,6 +71,10 @@ class LoopProcessor extends AudioWorkletProcessor {
                    || item.type === "vbargraph") {
             // Keep bargraph adresses
             obj.outputs_items.push(item.address);
+            obj.pathTable[item.address] = parseInt(item.index);
+        } else if (item.type === "soundfile") {
+            // Keep soundfile adresses
+            obj.soundfile_items.push(item.address);
             obj.pathTable[item.address] = parseInt(item.index);
         } else if (item.type === "vslider"
                    || item.type === "hslider"
@@ -152,6 +156,7 @@ class LoopProcessor extends AudioWorkletProcessor {
         // Memory allocator
         this.ptr_size = 4;
         this.sample_size = 4;
+        this.integer_size = 4;
         
         this.Loop_instance = new WebAssembly.Instance(LoopProcessor.wasm_module, LoopProcessor.importObject);
   	   	this.factory = this.Loop_instance.exports;
@@ -169,6 +174,9 @@ class LoopProcessor extends AudioWorkletProcessor {
 
         // input items
         this.inputs_items = [];
+        
+        // soundfile items
+        this.soundfile_items = [];
 
         // Start of HEAP index
 
@@ -182,12 +190,12 @@ class LoopProcessor extends AudioWorkletProcessor {
         // Setup buffer offset
         this.audio_heap_inputs = this.audio_heap_ptr_outputs + (this.numOut * this.ptr_size);
         this.audio_heap_outputs = this.audio_heap_inputs + (this.numIn * LoopProcessor.buffer_size * this.sample_size);
-
+        
         // Start of DSP memory : DSP is placed first with index 0
         this.dsp = 0;
 
         this.pathTable = [];
-
+     
         // Send output values to the AudioNode
         this.update_outputs = function ()
         {
@@ -197,6 +205,82 @@ class LoopProcessor extends AudioWorkletProcessor {
                     this.output_handler(this.outputs_items[i], this.HEAPF32[this.pathTable[this.outputs_items[i]] >> 2]);
                 }
             }
+        }
+        
+        this.loadFile = function (sound_index, sound_ptr, length, sample_rate, channels, buffers)
+        {
+            /*
+             Soundfile layout:
+            
+                FAUSTFLOAT** fBuffers;
+                int fLength;
+                int fSampleRate;
+                int fChannels;
+             
+                ===========
+                Soundfile struct
+                fBuffers[channels]
+                fBuffers0
+                fBuffers1
+                ...
+                Soundfile struct
+                fBuffers[channels]
+                fBuffers0
+                fBuffers1
+                ...
+                ===========
+            */
+            
+            var size_of_soundfile = this.ptr_size + (this.integer_size * 3);  // fBuffers, fLength, fSampleRate, fChannels
+            
+            //console.log("sound_ptr " + sound_ptr);
+            //console.log("size_of_soundfile " + size_of_soundfile);
+            
+            // end of sounfile
+            var end_of_soundfile_ptr = sound_ptr + size_of_soundfile;
+            
+            this.HEAP32[sound_ptr >> 2] = end_of_soundfile_ptr;
+            this.HEAP32[(sound_ptr + 4) >> 2] = length;      // fLength
+            this.HEAP32[(sound_ptr + 8) >> 2] = sample_rate; // fSampleRate
+            this.HEAP32[(sound_ptr + 12) >> 2] = channels;   // fChannels
+            
+            //console.log("end_of_soundfile_ptr " + end_of_soundfile_ptr);
+            
+            // Setup soundfile pointers
+            var start_of_soundfile_data_ptr = end_of_soundfile_ptr + this.ptr_size * channels;
+            
+            for (var i = 0; i < channels; i++) {
+                this.HEAP32[(end_of_soundfile_ptr + (i * this.ptr_size)) >> 2] = start_of_soundfile_data_ptr + (i * length * this.sample_size);
+            }
+            
+            // Setup soundfile buffer
+            for (var i = 0; i < channels; i++) {
+                
+                // start of sound buffer
+                var start_of_buffer_ptr = start_of_soundfile_data_ptr + (i * length * this.sample_size);
+                
+                // generate a 440 Hz signal
+                for (var j = 0; j < length; j++) {
+                    this.HEAPF32[(start_of_buffer_ptr + (j * this.sample_size)) >> 2] = 0.8 * Math.sin((j/length)*2*Math.PI);
+                }
+            }
+            
+            // Setup fSoundfile fields in the DSP structure
+            //console.log("sound_index " + sound_index);
+            //console.log("this.pathTable[this.soundfile_items[sound_index]] " + this.pathTable[this.soundfile_items[sound_index]]);
+            
+            this.HEAP32[this.pathTable[this.soundfile_items[sound_index]] >> 2] = sound_ptr;
+            
+            /*
+            console.log("start_of_soundfile_data_ptr " + start_of_soundfile_data_ptr);
+            console.log("length " + length);
+            console.log("channels " + channels);
+            console.log("this.sample_size " + this.sample_size);
+            console.log("END " + (start_of_soundfile_data_ptr + (channels * length * this.sample_size)));
+            */
+            
+            // End of buffer data;
+            return start_of_soundfile_data_ptr + (channels * length * this.sample_size);
         }
         
         this.initAux = function ()
@@ -232,6 +316,17 @@ class LoopProcessor extends AudioWorkletProcessor {
             // Parse UI
             LoopProcessor.parse_ui(this.json_object.ui, this, LoopProcessor.parse_item2);
             
+            /*
+            console.log("soundfile_items.length " + this.soundfile_items.length);
+            
+            // Setup soundfile offset (after audio data)
+            this.soundfile_ptr = this.audio_heap_outputs + (this.numOut * LoopProcessor.buffer_size * this.sample_size);
+            
+            var sound_ptr1 = this.soundfile_ptr;
+            var sound_ptr2 = this.loadFile(0, sound_ptr1, 44100/700, 44100, 2, null);
+            var sound_ptr3 = this.loadFile(1, sound_ptr2, 44100/500, 44100, 2, null);
+            */
+             
             // Init DSP
             this.factory.init(this.dsp, sampleRate); // 'sampleRate' is defined in AudioWorkletGlobalScope  
         }

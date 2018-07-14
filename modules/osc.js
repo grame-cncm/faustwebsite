@@ -1,11 +1,11 @@
 
 /*
-Code generated with Faust version 2.6.1
+Code generated with Faust version 2.7.0
 Compilation options: wasm, -scal -ftz 2
 */
 
 function getJSONosc() {
-	return "{\"name\":\"osc\",\"filename\":\"osc\",\"version\":\"2.6.1\",\"options\":\"wasm, -scal -ftz 2\",\"size\":\"56\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"Grame\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"copyright\":\"(c)GRAME 2009\"},{\"filename\":\"osc\"},{\"license\":\"BSD\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"osc\"},{\"oscillators.lib/name\":\"Faust Oscillator Library\"},{\"oscillators.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"},{\"version\":\"1.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Oscillator\",\"items\":[{\"type\":\"hslider\",\"label\":\"freq\",\"address\":\"/Oscillator/freq\",\"index\":\"16\",\"meta\":[{\"unit\":\"Hz\"}],\"init\":\"1000\",\"min\":\"20\",\"max\":\"24000\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"volume\",\"address\":\"/Oscillator/volume\",\"index\":\"44\",\"meta\":[{\"unit\":\"dB\"}],\"init\":\"0\",\"min\":\"-96\",\"max\":\"0\",\"step\":\"0.1\"}]}]}";
+	return "{\"name\":\"osc\",\"filename\":\"osc\",\"version\":\"2.7.0\",\"options\":\"wasm, -scal -ftz 2\",\"size\":\"56\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"Grame\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"copyright\":\"(c)GRAME 2009\"},{\"filename\":\"osc\"},{\"license\":\"BSD\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"osc\"},{\"oscillators.lib/name\":\"Faust Oscillator Library\"},{\"oscillators.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"},{\"version\":\"1.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Oscillator\",\"items\":[{\"type\":\"hslider\",\"label\":\"freq\",\"address\":\"/Oscillator/freq\",\"index\":\"16\",\"meta\":[{\"unit\":\"Hz\"}],\"init\":\"1000\",\"min\":\"20\",\"max\":\"24000\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"volume\",\"address\":\"/Oscillator/volume\",\"index\":\"44\",\"meta\":[{\"unit\":\"dB\"}],\"init\":\"0\",\"min\":\"-96\",\"max\":\"0\",\"step\":\"0.1\"}]}]}";
 }
 /*
  faust2webaudio

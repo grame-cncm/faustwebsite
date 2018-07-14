@@ -1,13 +1,13 @@
 
 /*
-Code generated with Faust version 2.6.1
+Code generated with Faust version 2.7.0
 Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONosc() {
-	return "{\"name\":\"osc\",\"filename\":\"osc\",\"version\":\"2.6.1\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"56\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"Grame\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"copyright\":\"(c)GRAME 2009\"},{\"filename\":\"osc\"},{\"license\":\"BSD\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"osc\"},{\"oscillators.lib/name\":\"Faust Oscillator Library\"},{\"oscillators.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"},{\"version\":\"1.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Oscillator\",\"items\":[{\"type\":\"hslider\",\"label\":\"freq\",\"address\":\"/Oscillator/freq\",\"index\":\"16\",\"meta\":[{\"unit\":\"Hz\"}],\"init\":\"1000\",\"min\":\"20\",\"max\":\"24000\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"volume\",\"address\":\"/Oscillator/volume\",\"index\":\"44\",\"meta\":[{\"unit\":\"dB\"}],\"init\":\"0\",\"min\":\"-96\",\"max\":\"0\",\"step\":\"0.1\"}]}]}";
+	return "{\"name\":\"osc\",\"filename\":\"osc\",\"version\":\"2.7.0\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"56\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"Grame\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"copyright\":\"(c)GRAME 2009\"},{\"filename\":\"osc\"},{\"license\":\"BSD\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"osc\"},{\"oscillators.lib/name\":\"Faust Oscillator Library\"},{\"oscillators.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"},{\"version\":\"1.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Oscillator\",\"items\":[{\"type\":\"hslider\",\"label\":\"freq\",\"address\":\"/Oscillator/freq\",\"index\":\"16\",\"meta\":[{\"unit\":\"Hz\"}],\"init\":\"1000\",\"min\":\"20\",\"max\":\"24000\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"volume\",\"address\":\"/Oscillator/volume\",\"index\":\"44\",\"meta\":[{\"unit\":\"dB\"}],\"init\":\"0\",\"min\":\"-96\",\"max\":\"0\",\"step\":\"0.1\"}]}]}";
 }
-function getBase64Codeosc() { return "AGFzbQEAAAAB0YCAgAAPYAJ/fwBgBH9/f38AYAF/AX9gAX8Bf2ACf38BfWABfwF/YAJ/fwBgAX8AYAJ/fwBgAn9/AGABfwBgAn9/AX9gAn9/AX9gAn19AX1gA39/fQACjYCAgAABA2VudgVfcG93ZgANA4+AgIAADgABAgMEBQYHCAkKCwwOBYeAgIAAAQCBgICAAAe6gYCAAAwHY29tcHV0ZQACDGdldE51bUlucHV0cwADDWdldE51bU91dHB1dHMABA1nZXRQYXJhbVZhbHVlAAUNZ2V0U2FtcGxlUmF0ZQAGBGluaXQABw1pbnN0YW5jZUNsZWFyAAgRaW5zdGFuY2VDb25zdGFudHMACQxpbnN0YW5jZUluaXQAChppbnN0YW5jZVJlc2V0VXNlckludGVyZmFjZQALDXNldFBhcmFtVmFsdWUADgZtZW1vcnkCAArUhoCAAA6CgICAAAAL+IKAgAACAn8GfUEAIQRDAAAAACEGQwAAAAAhB0EAIQVDAAAAACEIQwAAAAAhCUMAAAAAIQpDAAAAACELIANBAGooAgAhBEEAKgIMQQAqAhCUIQZDbxKDOkMAACBBQ83MTD1BACoCLJQQAJQhB0EAIQUDQAJAQQBBATYCAEEAKgIYIAZDAAAAAEEAKgIok5SSIQhBACAIQwAAAAAgCLxBgICA/AdxGzgCFEEAKgIgIAZBACoCFJSSQQFBACgCBGuykiEJQQAgCUMAAAAAIAm8QYCAgPwHcRs4AhxBACoCHCEKQQAgCkMAAAAAIAq8QYCAgPwHcRs4AiQgB0N3vn8/QQAqAjSUkiELQQAgC0MAAAAAIAu8QYCAgPwHcRs4AjAgBCAFakEAKgIkQQAqAjCUOAIAQQBBACgCADYCBEEAQQAqAhQ4AhhBAEEAKgIcOAIgQQBBACoCJDgCKEEAQQAqAjA4AjQgBUEEaiEFIAVBBCABbEgEQAwCDAELCwsLhYCAgAAAQQAPC4WAgIAAAEEBDwuLgICAAAAgACABaioCAA8LiICAgAAAQQAoAggPC46AgIAAACAAIAEQASAAIAEQCgv2gYCAAAEFf0EAIQFBACECQQAhA0EAIQRBACEFQQAhAQNAAkBBACABQQJ0akEANgIAIAFBAWohASABQQJIBEAMAgwBCwsLQQAhAgNAAkBBFCACQQJ0akMAAAAAOAIAIAJBAWohAiACQQJIBEAMAgwBCwsLQQAhAwNAAkBBHCADQQJ0akMAAAAAOAIAIANBAWohAyADQQJIBEAMAgwBCwsLQQAhBANAAkBBJCAEQQJ0akMAAAAAOAIAIARBAWohBCAEQQJIBEAMAgwBCwsLQQAhBQNAAkBBMCAFQQJ0akMAAAAAOAIAIAVBAWohBSAFQQJIBEAMAgwBCwsLC6aAgIAAAEEAIAE2AghBAEPbD8lAQwCAO0hDAACAP0EAKAIIspeWlTgCDAuQgICAAAAgACABEAkgABALIAAQCAuWgICAAABBAEMAAHpEOAIQQQBDAAAAADgCLAuNgICAAAAgASAAIAAgAUgbDwuNgICAAAAgACABIAAgAUgbDwuMgICAAAAgACABaiACOAIACwuIiICAAAEAQQALgQh7Im5hbWUiOiJvc2MiLCJmaWxlbmFtZSI6Im9zYyIsInZlcnNpb24iOiIyLjYuMSIsIm9wdGlvbnMiOiJ3YXNtLWliLCAtc2NhbCAtZnR6IDIiLCJzaXplIjoiNTYiLCJpbnB1dHMiOiIwIiwib3V0cHV0cyI6IjEiLCJtZXRhIjpbeyJhdXRob3IiOiJHcmFtZSJ9LHsiYmFzaWNzLmxpYi9uYW1lIjoiRmF1c3QgQmFzaWMgRWxlbWVudCBMaWJyYXJ5In0seyJiYXNpY3MubGliL3ZlcnNpb24iOiIwLjAifSx7ImNvcHlyaWdodCI6IihjKUdSQU1FIDIwMDkifSx7ImZpbGVuYW1lIjoib3NjIn0seyJsaWNlbnNlIjoiQlNEIn0seyJtYXRocy5saWIvYXV0aG9yIjoiR1JBTUUifSx7Im1hdGhzLmxpYi9jb3B5cmlnaHQiOiJHUkFNRSJ9LHsibWF0aHMubGliL2xpY2Vuc2UiOiJMR1BMIHdpdGggZXhjZXB0aW9uIn0seyJtYXRocy5saWIvbmFtZSI6IkZhdXN0IE1hdGggTGlicmFyeSJ9LHsibWF0aHMubGliL3ZlcnNpb24iOiIyLjEifSx7Im5hbWUiOiJvc2MifSx7Im9zY2lsbGF0b3JzLmxpYi9uYW1lIjoiRmF1c3QgT3NjaWxsYXRvciBMaWJyYXJ5In0seyJvc2NpbGxhdG9ycy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsic2lnbmFscy5saWIvbmFtZSI6IkZhdXN0IFNpZ25hbCBSb3V0aW5nIExpYnJhcnkifSx7InNpZ25hbHMubGliL3ZlcnNpb24iOiIwLjAifSx7InZlcnNpb24iOiIxLjAifV0sInVpIjpbeyJ0eXBlIjoidmdyb3VwIiwibGFiZWwiOiJPc2NpbGxhdG9yIiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJmcmVxIiwiYWRkcmVzcyI6Ii9Pc2NpbGxhdG9yL2ZyZXEiLCJpbmRleCI6IjE2IiwibWV0YSI6W3sidW5pdCI6Ikh6In1dLCJpbml0IjoiMTAwMCIsIm1pbiI6IjIwIiwibWF4IjoiMjQwMDAiLCJzdGVwIjoiMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6InZvbHVtZSIsImFkZHJlc3MiOiIvT3NjaWxsYXRvci92b2x1bWUiLCJpbmRleCI6IjQ0IiwibWV0YSI6W3sidW5pdCI6ImRCIn1dLCJpbml0IjoiMCIsIm1pbiI6Ii05NiIsIm1heCI6IjAiLCJzdGVwIjoiMC4xIn1dfV19MA=="; }
+function getBase64Codeosc() { return "AGFzbQEAAAAB0YCAgAAPYAJ/fwBgBH9/f38AYAF/AX9gAX8Bf2ACf38BfWABfwF/YAJ/fwBgAX8AYAJ/fwBgAn9/AGABfwBgAn9/AX9gAn9/AX9gAn19AX1gA39/fQACjYCAgAABA2VudgVfcG93ZgANA4+AgIAADgABAgMEBQYHCAkKCwwOBYeAgIAAAQCIgICAAAe6gYCAAAwHY29tcHV0ZQACDGdldE51bUlucHV0cwADDWdldE51bU91dHB1dHMABA1nZXRQYXJhbVZhbHVlAAUNZ2V0U2FtcGxlUmF0ZQAGBGluaXQABw1pbnN0YW5jZUNsZWFyAAgRaW5zdGFuY2VDb25zdGFudHMACQxpbnN0YW5jZUluaXQAChppbnN0YW5jZVJlc2V0VXNlckludGVyZmFjZQALDXNldFBhcmFtVmFsdWUADgZtZW1vcnkCAArUhoCAAA6CgICAAAAL+IKAgAACAn8GfUEAIQRDAAAAACEGQwAAAAAhB0EAIQVDAAAAACEIQwAAAAAhCUMAAAAAIQpDAAAAACELIANBAGooAgAhBEEAKgIMQQAqAhCUIQZDbxKDOkMAACBBQ83MTD1BACoCLJQQAJQhB0EAIQUDQAJAQQBBATYCAEEAKgIYIAZDAAAAAEEAKgIok5SSIQhBACAIQwAAAAAgCLxBgICA/AdxGzgCFEEAKgIgIAZBACoCFJSSQQFBACgCBGuykiEJQQAgCUMAAAAAIAm8QYCAgPwHcRs4AhxBACoCHCEKQQAgCkMAAAAAIAq8QYCAgPwHcRs4AiQgB0N3vn8/QQAqAjSUkiELQQAgC0MAAAAAIAu8QYCAgPwHcRs4AjAgBCAFakEAKgIkQQAqAjCUOAIAQQBBACgCADYCBEEAQQAqAhQ4AhhBAEEAKgIcOAIgQQBBACoCJDgCKEEAQQAqAjA4AjQgBUEEaiEFIAVBBCABbEgEQAwCDAELCwsLhYCAgAAAQQAPC4WAgIAAAEEBDwuLgICAAAAgACABaioCAA8LiICAgAAAQQAoAggPC46AgIAAACAAIAEQASAAIAEQCgv2gYCAAAEFf0EAIQFBACECQQAhA0EAIQRBACEFQQAhAQNAAkBBACABQQJ0akEANgIAIAFBAWohASABQQJIBEAMAgwBCwsLQQAhAgNAAkBBFCACQQJ0akMAAAAAOAIAIAJBAWohAiACQQJIBEAMAgwBCwsLQQAhAwNAAkBBHCADQQJ0akMAAAAAOAIAIANBAWohAyADQQJIBEAMAgwBCwsLQQAhBANAAkBBJCAEQQJ0akMAAAAAOAIAIARBAWohBCAEQQJIBEAMAgwBCwsLQQAhBQNAAkBBMCAFQQJ0akMAAAAAOAIAIAVBAWohBSAFQQJIBEAMAgwBCwsLC6aAgIAAAEEAIAE2AghBAEPbD8lAQwCAO0hDAACAP0EAKAIIspeWlTgCDAuQgICAAAAgACABEAkgABALIAAQCAuWgICAAABBAEMAAHpEOAIQQQBDAAAAADgCLAuNgICAAAAgASAAIAAgAUgbDwuNgICAAAAgACABIAAgAUgbDwuMgICAAAAgACABaiACOAIACwuIiICAAAEAQQALgQh7Im5hbWUiOiJvc2MiLCJmaWxlbmFtZSI6Im9zYyIsInZlcnNpb24iOiIyLjcuMCIsIm9wdGlvbnMiOiJ3YXNtLWliLCAtc2NhbCAtZnR6IDIiLCJzaXplIjoiNTYiLCJpbnB1dHMiOiIwIiwib3V0cHV0cyI6IjEiLCJtZXRhIjpbeyJhdXRob3IiOiJHcmFtZSJ9LHsiYmFzaWNzLmxpYi9uYW1lIjoiRmF1c3QgQmFzaWMgRWxlbWVudCBMaWJyYXJ5In0seyJiYXNpY3MubGliL3ZlcnNpb24iOiIwLjAifSx7ImNvcHlyaWdodCI6IihjKUdSQU1FIDIwMDkifSx7ImZpbGVuYW1lIjoib3NjIn0seyJsaWNlbnNlIjoiQlNEIn0seyJtYXRocy5saWIvYXV0aG9yIjoiR1JBTUUifSx7Im1hdGhzLmxpYi9jb3B5cmlnaHQiOiJHUkFNRSJ9LHsibWF0aHMubGliL2xpY2Vuc2UiOiJMR1BMIHdpdGggZXhjZXB0aW9uIn0seyJtYXRocy5saWIvbmFtZSI6IkZhdXN0IE1hdGggTGlicmFyeSJ9LHsibWF0aHMubGliL3ZlcnNpb24iOiIyLjEifSx7Im5hbWUiOiJvc2MifSx7Im9zY2lsbGF0b3JzLmxpYi9uYW1lIjoiRmF1c3QgT3NjaWxsYXRvciBMaWJyYXJ5In0seyJvc2NpbGxhdG9ycy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsic2lnbmFscy5saWIvbmFtZSI6IkZhdXN0IFNpZ25hbCBSb3V0aW5nIExpYnJhcnkifSx7InNpZ25hbHMubGliL3ZlcnNpb24iOiIwLjAifSx7InZlcnNpb24iOiIxLjAifV0sInVpIjpbeyJ0eXBlIjoidmdyb3VwIiwibGFiZWwiOiJPc2NpbGxhdG9yIiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJmcmVxIiwiYWRkcmVzcyI6Ii9Pc2NpbGxhdG9yL2ZyZXEiLCJpbmRleCI6IjE2IiwibWV0YSI6W3sidW5pdCI6Ikh6In1dLCJpbml0IjoiMTAwMCIsIm1pbiI6IjIwIiwibWF4IjoiMjQwMDAiLCJzdGVwIjoiMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6InZvbHVtZSIsImFkZHJlc3MiOiIvT3NjaWxsYXRvci92b2x1bWUiLCJpbmRleCI6IjQ0IiwibWV0YSI6W3sidW5pdCI6ImRCIn1dLCJpbml0IjoiMCIsIm1pbiI6Ii05NiIsIm1heCI6IjAiLCJzdGVwIjoiMC4xIn1dfV19MA=="; }
 
 /*
  faust2wasm: GRAME 2017-2018
@@ -34,7 +34,7 @@ class oscNode extends AudioWorkletNode {
         options.channelInterpretation = "speakers";
 
         super(context, 'osc', options);
-
+      
         // JSON parsing functions
         this.parse_ui = function(ui, obj)
         {
@@ -130,6 +130,12 @@ class oscNode extends AudioWorkletNode {
     {
         return getJSONosc();
     }
+    
+    // For WAP
+    getMetadata()
+    {
+        return getJSONosc();
+    }
 
     /**
      *  Set the control value at a given path.
@@ -142,6 +148,13 @@ class oscNode extends AudioWorkletNode {
         // Needed for sample accurate control
         this.parameters.get(path).setValueAtTime(val, 0);
     }
+    
+    // For WAP
+    setParam(path, val)
+    {
+        // Needed for sample accurate control
+        this.parameters.get(path).setValueAtTime(val, 0);
+    }
 
     /**
      *  Get the control value at a given path.
@@ -149,6 +162,12 @@ class oscNode extends AudioWorkletNode {
      * @return the current control value
      */
     getParamValue(path)
+    {
+        return this.parameters.get(path).value;
+    }
+    
+    // For WAP
+    getParam(path) 
     {
         return this.parameters.get(path).value;
     }
@@ -182,11 +201,28 @@ class oscNode extends AudioWorkletNode {
     {
         return parseInt(this.json_object.outputs);
     }
+    
+    // For WAP
+    inputChannelCount() 
+    {
+        return parseInt(this.json_object.inputs);
+    }
+
+    outputChannelCount() 
+    {
+        return parseInt(this.json_object.outputs);
+    }
 
     /**
      * Returns an array of all input paths (to be used with setParamValue/getParamValue)
      */
     getParams()
+    {
+        return this.inputs_items;
+    }
+    
+    // For WAP
+    getDescriptor() 
     {
         return this.inputs_items;
     }
@@ -247,66 +283,207 @@ class oscNode extends AudioWorkletNode {
         }
     }
     
+    // For WAP
+    onMidi(data) 
+    {
+     	midiMessage(data);
+    }
+    
+    /**
+     * @returns {Object} describes the path for each available param and its current value
+     */
+    async getState() 
+    {
+        var params = new Object();
+        for (let i = 0; i < this.getDescriptor().length; i++) {
+            Object.assign(params, { [this.getDescriptor()[i]]: `${this.getParam(this.getDescriptor()[i])}` });
+        }
+        return new Promise(resolve => {
+            resolve(params)
+        });
+    }
+
+    /**
+     * Sets each params with the value indicated in the state object
+     * @param {Object} state 
+     */
+    async setState(state) 
+    {
+        return new Promise(resolve => {
+            for (const param in state) {
+                if (state.hasOwnProperty(param)) this.setParam(param, state[param]);
+            }
+            try {
+                this.gui.setAttribute('state', JSON.stringify(state));
+            } catch (error) {
+                console.warn("Plugin without gui or GUI not defined", error);
+            }
+            resolve(state);
+        })
+    }
+    
+    /**
+     * A different call closer to the preset management
+     * @param {Object} patch to assign as a preset to the node
+     */
+    setPatch(patch) 
+    {
+        this.setState(this.presets[patch])
+    }
+    
     static remap(v, mn0, mx0, mn1, mx1)
     {
         return (1.0 * (v - mn0) / (mx0 - mn0)) * (mx1 - mn1) + mn1;
     }
+    
+    // Loads a sample and decode it
+    static loadAudioSample(context, url)
+    {
+        return new Promise(function(resolve, reject) {
+                           fetch(url)
+                           .then((response) => {
+                                 return response.arrayBuffer();
+                                 })
+                           .then((buffer) => {
+                                 context.decodeAudioData(buffer, (decodedAudioData) => {
+                                                         resolve(decodedAudioData);
+                                                         });
+                                 });
+                           });
+    }
+    
+    
+    
+    // Loads a sample
+    static loadSample(url)
+    {
+        return new Promise(function(resolve, reject) {
+                           fetch(url)
+                           .then((response) => {
+                                 resolve (response.arrayBuffer());
+                                 })
+                           });
+    }
+    
 }
 
 // Factory class
 
-class osc {
+window.osc = class osc {
 
     /**
      * Factory constructor.
      *
      * @param context - the audio context
-     * @param base_url - the base_url of the plugin folder
+     * @param baseUrl - the baseUrl of the plugin folder
      */
-    constructor(context, base_url)
+    constructor(context, baseUrl)
     {
     	// Resume audio context each time...
     	context.resume();
-
+    	
         this.context = context;
-        this.base_url = base_url;
+        this.baseUrl = baseUrl;
+        
+        this.pathTable = [];
+        
+        // soundfile items
+        this.soundfile_items = [];
     }
-
+    
+    // JSON parsing functions
+    parse_ui(ui)
+    {
+        for (var i = 0; i < ui.length; i++) {
+            this.parse_group(ui[i]);
+        }
+    }
+    
+    parse_group(group)
+    {
+        if (group.items) {
+            this.parse_items(group.items);
+        }
+    }
+    
+    parse_items(items)
+    {
+        for (var i = 0; i < items.length; i++) {
+            this.parse_item(items[i]);
+        }
+    }
+    
+    parse_item(item)
+    {
+        if (item.type === "vgroup"
+            || item.type === "hgroup"
+            || item.type === "tgroup") {
+            this.parse_items(item.items);
+        } else if (item.type === "soundfile") {
+            // Keep soundfile adresses
+            this.soundfile_items.push(item.address);
+            this.pathTable[item.address] = parseInt(item.index);
+        }
+    }
+  
     /**
      * Load additionnal resources to prepare the custom AudioWorkletNode. Returns a promise to be used with the created node.
      */
     load()
     {
     	return new Promise((resolve, reject) => {
-        		this.context.audioWorklet.addModule(this.base_url + "osc-processor.js").then(() => {
+                           
+                this.parse_ui(JSON.parse(getJSONosc()).ui);
+                           
+        		this.context.audioWorklet.addModule(this.baseUrl + "osc-processor.js").then(() => {
         		this.node = new oscNode(this.context, {});
                 this.node.onprocessorerror = () => { console.log('An error from osc-processor was detected.');}
         		return (this.node);
         	}).then((node) => {
+        		console.log(this.node.getDescriptor());
                 resolve(node);
             }).catch((e) => {
                 reject(e);
             });
         });
     }
-
-    loadGui()
+    
+    loadGui() 
     {
         return new Promise((resolve, reject) => {
             try {
-            	var link = document.createElement('link');
-            	link.rel = 'import';
-            	link.id = 'urlPlugin';
-            	link.href = this.base_url + "main.html";
-            	document.head.appendChild(link);
-            	var element = document.createElement("faust-osc");
-            	element._plug = this.node;
-            	resolve(element);
-        	} catch (e) {
-            	console.log(e);
-            	reject(e);
-        	}
-    	});
+                // DO THIS ONLY ONCE. If another instance has already been added, do not add the html file again
+                let url = this.baseUrl + "/main.html";
+
+                if (!this.linkExists(url)) {
+                    // LINK DOES NOT EXIST, let's add it to the document
+                    var link = document.createElement('link');
+                    link.rel = 'import';
+                    link.href = url;
+                    document.head.appendChild(link);
+                    link.onload = (e) => {
+                        // the file has been loaded, instanciate GUI
+                        // and get back the HTML elem
+                        // HERE WE COULD REMOVE THE HARD CODED NAME
+                        var element = createoscGUI(this.node);
+                        resolve(element);
+                    }
+                } else {
+                    // LINK EXIST, WE AT LEAST CREATED ONE INSTANCE PREVIOUSLY
+                    // so we can create another instance
+                    var element = createoscGUI(this.node);
+                    resolve(element);
+                }
+            } catch (e) {
+                console.log(e);
+                reject(e);
+            }
+        });
     };
+
+	linkExists(url) 
+	{
+    	return document.querySelectorAll(`link[href="${url}"]`).length > 0;
+   	}
 
 }

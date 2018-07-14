@@ -1,13 +1,13 @@
 
 /*
-Code generated with Faust version 2.6.1
+Code generated with Faust version 2.7.0
 Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONHighPassFilter() {
-	return "{\"name\":\"High Pass Filter\",\"filename\":\"HighPassFilter\",\"version\":\"2.6.1\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"32\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"filename\":\"HighPassFilter\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"High Pass Filter\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"High Pass Filter\",\"items\":[{\"type\":\"hslider\",\"label\":\"Cut-off Frequency\",\"address\":\"/High_Pass_Filter/Cut-off_Frequency\",\"index\":\"8\",\"meta\":[{\"acc\":\"2 0 -10 0 10\"},{\"scale\":\"log\"}],\"init\":\"1300\",\"min\":\"10\",\"max\":\"20000\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"High Pass Filter\",\"filename\":\"HighPassFilter\",\"version\":\"2.7.0\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"32\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"filename\":\"HighPassFilter\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"High Pass Filter\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"High Pass Filter\",\"items\":[{\"type\":\"hslider\",\"label\":\"Cut-off Frequency\",\"address\":\"/High_Pass_Filter/Cut-off_Frequency\",\"index\":\"8\",\"meta\":[{\"acc\":\"2 0 -10 0 10\"},{\"scale\":\"log\"}],\"init\":\"1300\",\"min\":\"10\",\"max\":\"20000\",\"step\":\"0.01\"}]}]}";
 }
-function getBase64CodeHighPassFilter() { return "AGFzbQEAAAAB1oCAgAAQYAJ/fwBgBH9/f38AYAF/AX9gAX8Bf2ACf38BfWABfwF/YAJ/fwBgAX8AYAJ/fwBgAn9/AGABfwBgAn9/AX9gAn9/AX9gAn19AX1gA39/fQBgAX0BfQKZgICAAAIDZW52BV9wb3dmAA0DZW52BV90YW5mAA8Dj4CAgAAOAAECAwQFBgcICQoLDA4Fh4CAgAABAIKAgIAAB7qBgIAADAdjb21wdXRlAAMMZ2V0TnVtSW5wdXRzAAQNZ2V0TnVtT3V0cHV0cwAFDWdldFBhcmFtVmFsdWUABg1nZXRTYW1wbGVSYXRlAAcEaW5pdAAIDWluc3RhbmNlQ2xlYXIACRFpbnN0YW5jZUNvbnN0YW50cwAKDGluc3RhbmNlSW5pdAALGmluc3RhbmNlUmVzZXRVc2VySW50ZXJmYWNlAAwNc2V0UGFyYW1WYWx1ZQAPBm1lbW9yeQIACuGFgIAADoKAgIAAAAufg4CAAAIDfwh9QQAhBEEAIQVDAAAAACEHQQAhBkMAAAAAIQhDAAAAACEJQwAAAAAhCkMAAAAAIQtDAAAAACEMQwAAAAAhDUMAAAAAIQ4gAkEAaigCACEEIANBAGooAgAhBUNvEoM6QQAqAgiUIQdBACEGA0ACQCAHQ3e+fz9BACoCEJSSIQhBACAIQwAAAAAgCLxBgICA/AdxGzgCDEEAKgIEQwAAIEFDAECcRkEAKgIMlpeUEAEhCUMAAIA/IAmVIQogCUMAAABAEAAhC0MAAIA/IAuVIQwgCkPzBLU/kiAJlUMAAIA/kiENIAQgBmoqAgBBACoCHCAKQ/MEtb+SIAmVQwAAgD+SlEMAAABAQQAqAhhDAACAPyAMk5SUkiANlZMhDkEAIA5DAAAAACAOvEGAgID8B3EbOAIUIAUgBmpDAAAAQEEAKgIYQwAAAAAgDJOUlEEAKgIUIAuVkkEAKgIcIAuVkiANlTgCAEEAQQAqAgw4AhBBAEEAKgIYOAIcQQBBACoCFDgCGCAGQQRqIQYgBkEEIAFsSARADAIMAQsLCwuFgICAAABBAQ8LhYCAgAAAQQEPC4uAgIAAACAAIAFqKgIADwuIgICAAABBACgCAA8LjoCAgAAAIAAgARACIAAgARALC+aAgIAAAQJ/QQAhAUEAIQJBACEBA0ACQEEMIAFBAnRqQwAAAAA4AgAgAUEBaiEBIAFBAkgEQAwCDAELCwtBACECA0ACQEEUIAJBAnRqQwAAAAA4AgAgAkEBaiECIAJBA0gEQAwCDAELCwsLpoCAgAAAQQAgATYCAEEAQ9sPSUBDAIA7SEMAAIA/QQAoAgCyl5aVOAIEC5CAgIAAACAAIAEQCiAAEAwgABAJC4yAgIAAAEEAQwCAokQ4AggLjYCAgAAAIAEgACAAIAFIGw8LjYCAgAAAIAAgASAAIAFIGw8LjICAgAAAIAAgAWogAjgCAAsLtYaAgAABAEEAC64GeyJuYW1lIjoiSGlnaCBQYXNzIEZpbHRlciIsImZpbGVuYW1lIjoiSGlnaFBhc3NGaWx0ZXIiLCJ2ZXJzaW9uIjoiMi42LjEiLCJvcHRpb25zIjoid2FzbS1pYiwgLXNjYWwgLWZ0eiAyIiwic2l6ZSI6IjMyIiwiaW5wdXRzIjoiMSIsIm91dHB1dHMiOiIxIiwibWV0YSI6W3siZmlsZW5hbWUiOiJIaWdoUGFzc0ZpbHRlciJ9LHsiZmlsdGVycy5saWIvbmFtZSI6IkZhdXN0IEZpbHRlcnMgTGlicmFyeSJ9LHsiZmlsdGVycy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsibWF0aHMubGliL2F1dGhvciI6IkdSQU1FIn0seyJtYXRocy5saWIvY29weXJpZ2h0IjoiR1JBTUUifSx7Im1hdGhzLmxpYi9saWNlbnNlIjoiTEdQTCB3aXRoIGV4Y2VwdGlvbiJ9LHsibWF0aHMubGliL25hbWUiOiJGYXVzdCBNYXRoIExpYnJhcnkifSx7Im1hdGhzLmxpYi92ZXJzaW9uIjoiMi4xIn0seyJuYW1lIjoiSGlnaCBQYXNzIEZpbHRlciJ9LHsic2lnbmFscy5saWIvbmFtZSI6IkZhdXN0IFNpZ25hbCBSb3V0aW5nIExpYnJhcnkifSx7InNpZ25hbHMubGliL3ZlcnNpb24iOiIwLjAifV0sInVpIjpbeyJ0eXBlIjoidmdyb3VwIiwibGFiZWwiOiJIaWdoIFBhc3MgRmlsdGVyIiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJDdXQtb2ZmIEZyZXF1ZW5jeSIsImFkZHJlc3MiOiIvSGlnaF9QYXNzX0ZpbHRlci9DdXQtb2ZmX0ZyZXF1ZW5jeSIsImluZGV4IjoiOCIsIm1ldGEiOlt7ImFjYyI6IjIgMCAtMTAgMCAxMCJ9LHsic2NhbGUiOiJsb2cifV0sImluaXQiOiIxMzAwIiwibWluIjoiMTAiLCJtYXgiOiIyMDAwMCIsInN0ZXAiOiIwLjAxIn1dfV19MA=="; }
+function getBase64CodeHighPassFilter() { return "AGFzbQEAAAAB1oCAgAAQYAJ/fwBgBH9/f38AYAF/AX9gAX8Bf2ACf38BfWABfwF/YAJ/fwBgAX8AYAJ/fwBgAn9/AGABfwBgAn9/AX9gAn9/AX9gAn19AX1gA39/fQBgAX0BfQKZgICAAAIDZW52BV9wb3dmAA0DZW52BV90YW5mAA8Dj4CAgAAOAAECAwQFBgcICQoLDA4Fh4CAgAABAIiAgIAAB7qBgIAADAdjb21wdXRlAAMMZ2V0TnVtSW5wdXRzAAQNZ2V0TnVtT3V0cHV0cwAFDWdldFBhcmFtVmFsdWUABg1nZXRTYW1wbGVSYXRlAAcEaW5pdAAIDWluc3RhbmNlQ2xlYXIACRFpbnN0YW5jZUNvbnN0YW50cwAKDGluc3RhbmNlSW5pdAALGmluc3RhbmNlUmVzZXRVc2VySW50ZXJmYWNlAAwNc2V0UGFyYW1WYWx1ZQAPBm1lbW9yeQIACuGFgIAADoKAgIAAAAufg4CAAAIDfwh9QQAhBEEAIQVDAAAAACEHQQAhBkMAAAAAIQhDAAAAACEJQwAAAAAhCkMAAAAAIQtDAAAAACEMQwAAAAAhDUMAAAAAIQ4gAkEAaigCACEEIANBAGooAgAhBUNvEoM6QQAqAgiUIQdBACEGA0ACQCAHQ3e+fz9BACoCEJSSIQhBACAIQwAAAAAgCLxBgICA/AdxGzgCDEEAKgIEQwAAIEFDAECcRkEAKgIMlpeUEAEhCUMAAIA/IAmVIQogCUMAAABAEAAhC0MAAIA/IAuVIQwgCkPzBLU/kiAJlUMAAIA/kiENIAQgBmoqAgBBACoCHCAKQ/MEtb+SIAmVQwAAgD+SlEMAAABAQQAqAhhDAACAPyAMk5SUkiANlZMhDkEAIA5DAAAAACAOvEGAgID8B3EbOAIUIAUgBmpDAAAAQEEAKgIYQwAAAAAgDJOUlEEAKgIUIAuVkkEAKgIcIAuVkiANlTgCAEEAQQAqAgw4AhBBAEEAKgIYOAIcQQBBACoCFDgCGCAGQQRqIQYgBkEEIAFsSARADAIMAQsLCwuFgICAAABBAQ8LhYCAgAAAQQEPC4uAgIAAACAAIAFqKgIADwuIgICAAABBACgCAA8LjoCAgAAAIAAgARACIAAgARALC+aAgIAAAQJ/QQAhAUEAIQJBACEBA0ACQEEMIAFBAnRqQwAAAAA4AgAgAUEBaiEBIAFBAkgEQAwCDAELCwtBACECA0ACQEEUIAJBAnRqQwAAAAA4AgAgAkEBaiECIAJBA0gEQAwCDAELCwsLpoCAgAAAQQAgATYCAEEAQ9sPSUBDAIA7SEMAAIA/QQAoAgCyl5aVOAIEC5CAgIAAACAAIAEQCiAAEAwgABAJC4yAgIAAAEEAQwCAokQ4AggLjYCAgAAAIAEgACAAIAFIGw8LjYCAgAAAIAAgASAAIAFIGw8LjICAgAAAIAAgAWogAjgCAAsLtYaAgAABAEEAC64GeyJuYW1lIjoiSGlnaCBQYXNzIEZpbHRlciIsImZpbGVuYW1lIjoiSGlnaFBhc3NGaWx0ZXIiLCJ2ZXJzaW9uIjoiMi43LjAiLCJvcHRpb25zIjoid2FzbS1pYiwgLXNjYWwgLWZ0eiAyIiwic2l6ZSI6IjMyIiwiaW5wdXRzIjoiMSIsIm91dHB1dHMiOiIxIiwibWV0YSI6W3siZmlsZW5hbWUiOiJIaWdoUGFzc0ZpbHRlciJ9LHsiZmlsdGVycy5saWIvbmFtZSI6IkZhdXN0IEZpbHRlcnMgTGlicmFyeSJ9LHsiZmlsdGVycy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsibWF0aHMubGliL2F1dGhvciI6IkdSQU1FIn0seyJtYXRocy5saWIvY29weXJpZ2h0IjoiR1JBTUUifSx7Im1hdGhzLmxpYi9saWNlbnNlIjoiTEdQTCB3aXRoIGV4Y2VwdGlvbiJ9LHsibWF0aHMubGliL25hbWUiOiJGYXVzdCBNYXRoIExpYnJhcnkifSx7Im1hdGhzLmxpYi92ZXJzaW9uIjoiMi4xIn0seyJuYW1lIjoiSGlnaCBQYXNzIEZpbHRlciJ9LHsic2lnbmFscy5saWIvbmFtZSI6IkZhdXN0IFNpZ25hbCBSb3V0aW5nIExpYnJhcnkifSx7InNpZ25hbHMubGliL3ZlcnNpb24iOiIwLjAifV0sInVpIjpbeyJ0eXBlIjoidmdyb3VwIiwibGFiZWwiOiJIaWdoIFBhc3MgRmlsdGVyIiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJDdXQtb2ZmIEZyZXF1ZW5jeSIsImFkZHJlc3MiOiIvSGlnaF9QYXNzX0ZpbHRlci9DdXQtb2ZmX0ZyZXF1ZW5jeSIsImluZGV4IjoiOCIsIm1ldGEiOlt7ImFjYyI6IjIgMCAtMTAgMCAxMCJ9LHsic2NhbGUiOiJsb2cifV0sImluaXQiOiIxMzAwIiwibWluIjoiMTAiLCJtYXgiOiIyMDAwMCIsInN0ZXAiOiIwLjAxIn1dfV19MA=="; }
 
 /*
  faust2wasm: GRAME 2017-2018
@@ -71,6 +71,10 @@ class HighPassFilterProcessor extends AudioWorkletProcessor {
                    || item.type === "vbargraph") {
             // Keep bargraph adresses
             obj.outputs_items.push(item.address);
+            obj.pathTable[item.address] = parseInt(item.index);
+        } else if (item.type === "soundfile") {
+            // Keep soundfile adresses
+            obj.soundfile_items.push(item.address);
             obj.pathTable[item.address] = parseInt(item.index);
         } else if (item.type === "vslider"
                    || item.type === "hslider"
@@ -152,6 +156,7 @@ class HighPassFilterProcessor extends AudioWorkletProcessor {
         // Memory allocator
         this.ptr_size = 4;
         this.sample_size = 4;
+        this.integer_size = 4;
         
         this.HighPassFilter_instance = new WebAssembly.Instance(HighPassFilterProcessor.wasm_module, HighPassFilterProcessor.importObject);
   	   	this.factory = this.HighPassFilter_instance.exports;
@@ -169,6 +174,9 @@ class HighPassFilterProcessor extends AudioWorkletProcessor {
 
         // input items
         this.inputs_items = [];
+        
+        // soundfile items
+        this.soundfile_items = [];
 
         // Start of HEAP index
 
@@ -182,12 +190,12 @@ class HighPassFilterProcessor extends AudioWorkletProcessor {
         // Setup buffer offset
         this.audio_heap_inputs = this.audio_heap_ptr_outputs + (this.numOut * this.ptr_size);
         this.audio_heap_outputs = this.audio_heap_inputs + (this.numIn * HighPassFilterProcessor.buffer_size * this.sample_size);
-
+        
         // Start of DSP memory : DSP is placed first with index 0
         this.dsp = 0;
 
         this.pathTable = [];
-
+     
         // Send output values to the AudioNode
         this.update_outputs = function ()
         {
@@ -197,6 +205,82 @@ class HighPassFilterProcessor extends AudioWorkletProcessor {
                     this.output_handler(this.outputs_items[i], this.HEAPF32[this.pathTable[this.outputs_items[i]] >> 2]);
                 }
             }
+        }
+        
+        this.loadFile = function (sound_index, sound_ptr, length, sample_rate, channels, buffers)
+        {
+            /*
+             Soundfile layout:
+            
+                FAUSTFLOAT** fBuffers;
+                int fLength;
+                int fSampleRate;
+                int fChannels;
+             
+                ===========
+                Soundfile struct
+                fBuffers[channels]
+                fBuffers0
+                fBuffers1
+                ...
+                Soundfile struct
+                fBuffers[channels]
+                fBuffers0
+                fBuffers1
+                ...
+                ===========
+            */
+            
+            var size_of_soundfile = this.ptr_size + (this.integer_size * 3);  // fBuffers, fLength, fSampleRate, fChannels
+            
+            //console.log("sound_ptr " + sound_ptr);
+            //console.log("size_of_soundfile " + size_of_soundfile);
+            
+            // end of sounfile
+            var end_of_soundfile_ptr = sound_ptr + size_of_soundfile;
+            
+            this.HEAP32[sound_ptr >> 2] = end_of_soundfile_ptr;
+            this.HEAP32[(sound_ptr + 4) >> 2] = length;      // fLength
+            this.HEAP32[(sound_ptr + 8) >> 2] = sample_rate; // fSampleRate
+            this.HEAP32[(sound_ptr + 12) >> 2] = channels;   // fChannels
+            
+            //console.log("end_of_soundfile_ptr " + end_of_soundfile_ptr);
+            
+            // Setup soundfile pointers
+            var start_of_soundfile_data_ptr = end_of_soundfile_ptr + this.ptr_size * channels;
+            
+            for (var i = 0; i < channels; i++) {
+                this.HEAP32[(end_of_soundfile_ptr + (i * this.ptr_size)) >> 2] = start_of_soundfile_data_ptr + (i * length * this.sample_size);
+            }
+            
+            // Setup soundfile buffer
+            for (var i = 0; i < channels; i++) {
+                
+                // start of sound buffer
+                var start_of_buffer_ptr = start_of_soundfile_data_ptr + (i * length * this.sample_size);
+                
+                // generate a 440 Hz signal
+                for (var j = 0; j < length; j++) {
+                    this.HEAPF32[(start_of_buffer_ptr + (j * this.sample_size)) >> 2] = 0.8 * Math.sin((j/length)*2*Math.PI);
+                }
+            }
+            
+            // Setup fSoundfile fields in the DSP structure
+            //console.log("sound_index " + sound_index);
+            //console.log("this.pathTable[this.soundfile_items[sound_index]] " + this.pathTable[this.soundfile_items[sound_index]]);
+            
+            this.HEAP32[this.pathTable[this.soundfile_items[sound_index]] >> 2] = sound_ptr;
+            
+            /*
+            console.log("start_of_soundfile_data_ptr " + start_of_soundfile_data_ptr);
+            console.log("length " + length);
+            console.log("channels " + channels);
+            console.log("this.sample_size " + this.sample_size);
+            console.log("END " + (start_of_soundfile_data_ptr + (channels * length * this.sample_size)));
+            */
+            
+            // End of buffer data;
+            return start_of_soundfile_data_ptr + (channels * length * this.sample_size);
         }
         
         this.initAux = function ()
@@ -232,6 +316,17 @@ class HighPassFilterProcessor extends AudioWorkletProcessor {
             // Parse UI
             HighPassFilterProcessor.parse_ui(this.json_object.ui, this, HighPassFilterProcessor.parse_item2);
             
+            /*
+            console.log("soundfile_items.length " + this.soundfile_items.length);
+            
+            // Setup soundfile offset (after audio data)
+            this.soundfile_ptr = this.audio_heap_outputs + (this.numOut * HighPassFilterProcessor.buffer_size * this.sample_size);
+            
+            var sound_ptr1 = this.soundfile_ptr;
+            var sound_ptr2 = this.loadFile(0, sound_ptr1, 44100/700, 44100, 2, null);
+            var sound_ptr3 = this.loadFile(1, sound_ptr2, 44100/500, 44100, 2, null);
+            */
+             
             // Init DSP
             this.factory.init(this.dsp, sampleRate); // 'sampleRate' is defined in AudioWorkletGlobalScope  
         }

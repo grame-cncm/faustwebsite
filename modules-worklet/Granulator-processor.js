@@ -1,13 +1,13 @@
 
 /*
-Code generated with Faust version 2.6.1
+Code generated with Faust version 2.7.0
 Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONGranulator() {
-	return "{\"name\":\"Granulator\",\"filename\":\"Granulator\",\"version\":\"2.6.1\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"660\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"analyzers.lib/name\":\"Faust Analyzer Library\"},{\"analyzers.lib/version\":\"0.0\"},{\"author\":\"Adapted from sfIter by Christophe Lebreton\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"filename\":\"Granulator\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Granulator\"},{\"noises.lib/name\":\"Faust Noise Generator Library\"},{\"noises.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"hgroup\",\"label\":\"Granulator\",\"items\":[{\"type\":\"hslider\",\"label\":\"Grain Size\",\"address\":\"/Granulator/Grain_Size\",\"index\":\"632\",\"meta\":[{\"1\":\"\"},{\"acc\":\"2 0 -10 0 10\"},{\"style\":\"knob\"}],\"init\":\"200\",\"min\":\"5\",\"max\":\"2205\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Speed\",\"address\":\"/Granulator/Speed\",\"index\":\"28\",\"meta\":[{\"2\":\"\"},{\"acc\":\"0 1 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"Hz\"}],\"init\":\"10\",\"min\":\"1\",\"max\":\"20\",\"step\":\"0.0001\"},{\"type\":\"hslider\",\"label\":\"Probability\",\"address\":\"/Granulator/Probability\",\"index\":\"60\",\"meta\":[{\"3\":\"\"},{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"%\"}],\"init\":\"70\",\"min\":\"50\",\"max\":\"100\",\"step\":\"1\"}]}]}";
+	return "{\"name\":\"Granulator\",\"filename\":\"Granulator\",\"version\":\"2.7.0\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"660\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"analyzers.lib/name\":\"Faust Analyzer Library\"},{\"analyzers.lib/version\":\"0.0\"},{\"author\":\"Adapted from sfIter by Christophe Lebreton\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"filename\":\"Granulator\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Granulator\"},{\"noises.lib/name\":\"Faust Noise Generator Library\"},{\"noises.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"hgroup\",\"label\":\"Granulator\",\"items\":[{\"type\":\"hslider\",\"label\":\"Grain Size\",\"address\":\"/Granulator/Grain_Size\",\"index\":\"632\",\"meta\":[{\"1\":\"\"},{\"acc\":\"2 0 -10 0 10\"},{\"style\":\"knob\"}],\"init\":\"200\",\"min\":\"5\",\"max\":\"2205\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Speed\",\"address\":\"/Granulator/Speed\",\"index\":\"28\",\"meta\":[{\"2\":\"\"},{\"acc\":\"0 1 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"Hz\"}],\"init\":\"10\",\"min\":\"1\",\"max\":\"20\",\"step\":\"0.0001\"},{\"type\":\"hslider\",\"label\":\"Probability\",\"address\":\"/Granulator/Probability\",\"index\":\"60\",\"meta\":[{\"3\":\"\"},{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"%\"}],\"init\":\"70\",\"min\":\"50\",\"max\":\"100\",\"step\":\"1\"}]}]}";
 }
-function getBase64CodeGranulator() { return "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MC4wIn0seyJmaWxlbmFtZSI6IkdyYW51bGF0b3IifSx7ImZpbHRlcnMubGliL25hbWUiOiJGYXVzdCBGaWx0ZXJzIExpYnJhcnkifSx7ImZpbHRlcnMubGliL3ZlcnNpb24iOiIwLjAifSx7Im1hdGhzLmxpYi9hdXRob3IiOiJHUkFNRSJ9LHsibWF0aHMubGliL2NvcHlyaWdodCI6IkdSQU1FIn0seyJtYXRocy5saWIvbGljZW5zZSI6IkxHUEwgd2l0aCBleGNlcHRpb24ifSx7Im1hdGhzLmxpYi9uYW1lIjoiRmF1c3QgTWF0aCBMaWJyYXJ5In0seyJtYXRocy5saWIvdmVyc2lvbiI6IjIuMSJ9LHsibmFtZSI6IkdyYW51bGF0b3IifSx7Im5vaXNlcy5saWIvbmFtZSI6IkZhdXN0IE5vaXNlIEdlbmVyYXRvciBMaWJyYXJ5In0seyJub2lzZXMubGliL3ZlcnNpb24iOiIwLjAifSx7InNpZ25hbHMubGliL25hbWUiOiJGYXVzdCBTaWduYWwgUm91dGluZyBMaWJyYXJ5In0seyJzaWduYWxzLmxpYi92ZXJzaW9uIjoiMC4wIn1dLCJ1aSI6W3sidHlwZSI6Imhncm91cCIsImxhYmVsIjoiR3JhbnVsYXRvciIsIml0ZW1zIjpbeyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiR3JhaW4gU2l6ZSIsImFkZHJlc3MiOiIvR3JhbnVsYXRvci9HcmFpbl9TaXplIiwiaW5kZXgiOiI2MzIiLCJtZXRhIjpbeyIxIjoiIn0seyJhY2MiOiIyIDAgLTEwIDAgMTAifSx7InN0eWxlIjoia25vYiJ9XSwiaW5pdCI6IjIwMCIsIm1pbiI6IjUiLCJtYXgiOiIyMjA1Iiwic3RlcCI6IjEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJTcGVlZCIsImFkZHJlc3MiOiIvR3JhbnVsYXRvci9TcGVlZCIsImluZGV4IjoiMjgiLCJtZXRhIjpbeyIyIjoiIn0seyJhY2MiOiIwIDEgLTEwIDAgMTAifSx7InN0eWxlIjoia25vYiJ9LHsidW5pdCI6Ikh6In1dLCJpbml0IjoiMTAiLCJtaW4iOiIxIiwibWF4IjoiMjAiLCJzdGVwIjoiMC4wMDAxIn0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiUHJvYmFiaWxpdHkiLCJhZGRyZXNzIjoiL0dyYW51bGF0b3IvUHJvYmFiaWxpdHkiLCJpbmRleCI6IjYwIiwibWV0YSI6W3siMyI6IiJ9LHsiYWNjIjoiMSAwIC0xMCAwIDEwIn0seyJzdHlsZSI6Imtub2IifSx7InVuaXQiOiIlIn1dLCJpbml0IjoiNzAiLCJtaW4iOiI1MCIsIm1heCI6IjEwMCIsInN0ZXAiOiIxIn1dfV19MA=="; }
+function getBase64CodeGranulator() { return "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MC4wIn0seyJmaWxlbmFtZSI6IkdyYW51bGF0b3IifSx7ImZpbHRlcnMubGliL25hbWUiOiJGYXVzdCBGaWx0ZXJzIExpYnJhcnkifSx7ImZpbHRlcnMubGliL3ZlcnNpb24iOiIwLjAifSx7Im1hdGhzLmxpYi9hdXRob3IiOiJHUkFNRSJ9LHsibWF0aHMubGliL2NvcHlyaWdodCI6IkdSQU1FIn0seyJtYXRocy5saWIvbGljZW5zZSI6IkxHUEwgd2l0aCBleGNlcHRpb24ifSx7Im1hdGhzLmxpYi9uYW1lIjoiRmF1c3QgTWF0aCBMaWJyYXJ5In0seyJtYXRocy5saWIvdmVyc2lvbiI6IjIuMSJ9LHsibmFtZSI6IkdyYW51bGF0b3IifSx7Im5vaXNlcy5saWIvbmFtZSI6IkZhdXN0IE5vaXNlIEdlbmVyYXRvciBMaWJyYXJ5In0seyJub2lzZXMubGliL3ZlcnNpb24iOiIwLjAifSx7InNpZ25hbHMubGliL25hbWUiOiJGYXVzdCBTaWduYWwgUm91dGluZyBMaWJyYXJ5In0seyJzaWduYWxzLmxpYi92ZXJzaW9uIjoiMC4wIn1dLCJ1aSI6W3sidHlwZSI6Imhncm91cCIsImxhYmVsIjoiR3JhbnVsYXRvciIsIml0ZW1zIjpbeyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiR3JhaW4gU2l6ZSIsImFkZHJlc3MiOiIvR3JhbnVsYXRvci9HcmFpbl9TaXplIiwiaW5kZXgiOiI2MzIiLCJtZXRhIjpbeyIxIjoiIn0seyJhY2MiOiIyIDAgLTEwIDAgMTAifSx7InN0eWxlIjoia25vYiJ9XSwiaW5pdCI6IjIwMCIsIm1pbiI6IjUiLCJtYXgiOiIyMjA1Iiwic3RlcCI6IjEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJTcGVlZCIsImFkZHJlc3MiOiIvR3JhbnVsYXRvci9TcGVlZCIsImluZGV4IjoiMjgiLCJtZXRhIjpbeyIyIjoiIn0seyJhY2MiOiIwIDEgLTEwIDAgMTAifSx7InN0eWxlIjoia25vYiJ9LHsidW5pdCI6Ikh6In1dLCJpbml0IjoiMTAiLCJtaW4iOiIxIiwibWF4IjoiMjAiLCJzdGVwIjoiMC4wMDAxIn0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiUHJvYmFiaWxpdHkiLCJhZGRyZXNzIjoiL0dyYW51bGF0b3IvUHJvYmFiaWxpdHkiLCJpbmRleCI6IjYwIiwibWV0YSI6W3siMyI6IiJ9LHsiYWNjIjoiMSAwIC0xMCAwIDEwIn0seyJzdHlsZSI6Imtub2IifSx7InVuaXQiOiIlIn1dLCJpbml0IjoiNzAiLCJtaW4iOiI1MCIsIm1heCI6IjEwMCIsInN0ZXAiOiIxIn1dfV19MA=="; }
 
 /*
  faust2wasm: GRAME 2017-2018
@@ -71,6 +71,10 @@ class GranulatorProcessor extends AudioWorkletProcessor {
                    || item.type === "vbargraph") {
             // Keep bargraph adresses
             obj.outputs_items.push(item.address);
+            obj.pathTable[item.address] = parseInt(item.index);
+        } else if (item.type === "soundfile") {
+            // Keep soundfile adresses
+            obj.soundfile_items.push(item.address);
             obj.pathTable[item.address] = parseInt(item.index);
         } else if (item.type === "vslider"
                    || item.type === "hslider"
@@ -152,6 +156,7 @@ class GranulatorProcessor extends AudioWorkletProcessor {
         // Memory allocator
         this.ptr_size = 4;
         this.sample_size = 4;
+        this.integer_size = 4;
         
         this.Granulator_instance = new WebAssembly.Instance(GranulatorProcessor.wasm_module, GranulatorProcessor.importObject);
   	   	this.factory = this.Granulator_instance.exports;
@@ -169,6 +174,9 @@ class GranulatorProcessor extends AudioWorkletProcessor {
 
         // input items
         this.inputs_items = [];
+        
+        // soundfile items
+        this.soundfile_items = [];
 
         // Start of HEAP index
 
@@ -182,12 +190,12 @@ class GranulatorProcessor extends AudioWorkletProcessor {
         // Setup buffer offset
         this.audio_heap_inputs = this.audio_heap_ptr_outputs + (this.numOut * this.ptr_size);
         this.audio_heap_outputs = this.audio_heap_inputs + (this.numIn * GranulatorProcessor.buffer_size * this.sample_size);
-
+        
         // Start of DSP memory : DSP is placed first with index 0
         this.dsp = 0;
 
         this.pathTable = [];
-
+     
         // Send output values to the AudioNode
         this.update_outputs = function ()
         {
@@ -197,6 +205,82 @@ class GranulatorProcessor extends AudioWorkletProcessor {
                     this.output_handler(this.outputs_items[i], this.HEAPF32[this.pathTable[this.outputs_items[i]] >> 2]);
                 }
             }
+        }
+        
+        this.loadFile = function (sound_index, sound_ptr, length, sample_rate, channels, buffers)
+        {
+            /*
+             Soundfile layout:
+            
+                FAUSTFLOAT** fBuffers;
+                int fLength;
+                int fSampleRate;
+                int fChannels;
+             
+                ===========
+                Soundfile struct
+                fBuffers[channels]
+                fBuffers0
+                fBuffers1
+                ...
+                Soundfile struct
+                fBuffers[channels]
+                fBuffers0
+                fBuffers1
+                ...
+                ===========
+            */
+            
+            var size_of_soundfile = this.ptr_size + (this.integer_size * 3);  // fBuffers, fLength, fSampleRate, fChannels
+            
+            //console.log("sound_ptr " + sound_ptr);
+            //console.log("size_of_soundfile " + size_of_soundfile);
+            
+            // end of sounfile
+            var end_of_soundfile_ptr = sound_ptr + size_of_soundfile;
+            
+            this.HEAP32[sound_ptr >> 2] = end_of_soundfile_ptr;
+            this.HEAP32[(sound_ptr + 4) >> 2] = length;      // fLength
+            this.HEAP32[(sound_ptr + 8) >> 2] = sample_rate; // fSampleRate
+            this.HEAP32[(sound_ptr + 12) >> 2] = channels;   // fChannels
+            
+            //console.log("end_of_soundfile_ptr " + end_of_soundfile_ptr);
+            
+            // Setup soundfile pointers
+            var start_of_soundfile_data_ptr = end_of_soundfile_ptr + this.ptr_size * channels;
+            
+            for (var i = 0; i < channels; i++) {
+                this.HEAP32[(end_of_soundfile_ptr + (i * this.ptr_size)) >> 2] = start_of_soundfile_data_ptr + (i * length * this.sample_size);
+            }
+            
+            // Setup soundfile buffer
+            for (var i = 0; i < channels; i++) {
+                
+                // start of sound buffer
+                var start_of_buffer_ptr = start_of_soundfile_data_ptr + (i * length * this.sample_size);
+                
+                // generate a 440 Hz signal
+                for (var j = 0; j < length; j++) {
+                    this.HEAPF32[(start_of_buffer_ptr + (j * this.sample_size)) >> 2] = 0.8 * Math.sin((j/length)*2*Math.PI);
+                }
+            }
+            
+            // Setup fSoundfile fields in the DSP structure
+            //console.log("sound_index " + sound_index);
+            //console.log("this.pathTable[this.soundfile_items[sound_index]] " + this.pathTable[this.soundfile_items[sound_index]]);
+            
+            this.HEAP32[this.pathTable[this.soundfile_items[sound_index]] >> 2] = sound_ptr;
+            
+            /*
+            console.log("start_of_soundfile_data_ptr " + start_of_soundfile_data_ptr);
+            console.log("length " + length);
+            console.log("channels " + channels);
+            console.log("this.sample_size " + this.sample_size);
+            console.log("END " + (start_of_soundfile_data_ptr + (channels * length * this.sample_size)));
+            */
+            
+            // End of buffer data;
+            return start_of_soundfile_data_ptr + (channels * length * this.sample_size);
         }
         
         this.initAux = function ()
@@ -232,6 +316,17 @@ class GranulatorProcessor extends AudioWorkletProcessor {
             // Parse UI
             GranulatorProcessor.parse_ui(this.json_object.ui, this, GranulatorProcessor.parse_item2);
             
+            /*
+            console.log("soundfile_items.length " + this.soundfile_items.length);
+            
+            // Setup soundfile offset (after audio data)
+            this.soundfile_ptr = this.audio_heap_outputs + (this.numOut * GranulatorProcessor.buffer_size * this.sample_size);
+            
+            var sound_ptr1 = this.soundfile_ptr;
+            var sound_ptr2 = this.loadFile(0, sound_ptr1, 44100/700, 44100, 2, null);
+            var sound_ptr3 = this.loadFile(1, sound_ptr2, 44100/500, 44100, 2, null);
+            */
+             
             // Init DSP
             this.factory.init(this.dsp, sampleRate); // 'sampleRate' is defined in AudioWorkletGlobalScope  
         }

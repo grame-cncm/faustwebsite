@@ -5408,14 +5408,14 @@ _f4u$t.main_loop = function() {
 $(document).ready(function() { _f4u$t.main_loop(); });
 
 /*
-Code generated with Faust version 2.6.1
+Code generated with Faust version 2.7.0
 Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONSNoiseS() {
-	return "{\"name\":\"Noises\",\"filename\":\"SNoiseS\",\"version\":\"2.6.1\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"40\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"ER\"},{\"filename\":\"SNoiseS\"},{\"name\":\"Noises\"},{\"version\":\"1.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Noises\",\"items\":[{\"type\":\"hslider\",\"label\":\"Noise Type\",\"address\":\"/Noises/Noise_Type\",\"index\":\"4\",\"meta\":[{\"acc\":\"0 0 -10 0 10\"}],\"init\":\"1\",\"min\":\"0\",\"max\":\"2\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Pink Noise Volume\",\"address\":\"/Noises/Pink_Noise_Volume\",\"index\":\"0\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"},{\"tooltip\":\"0=Mute, 1=White Noise, 2=Pink Noise\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"2\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"White Noise Volume\",\"address\":\"/Noises/White_Noise_Volume\",\"index\":\"32\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"2\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"Noises\",\"filename\":\"SNoiseS\",\"version\":\"2.7.0\",\"options\":\"wasm-ib, -scal -ftz 2\",\"size\":\"40\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"ER\"},{\"filename\":\"SNoiseS\"},{\"name\":\"Noises\"},{\"version\":\"1.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Noises\",\"items\":[{\"type\":\"hslider\",\"label\":\"Noise Type\",\"address\":\"/Noises/Noise_Type\",\"index\":\"4\",\"meta\":[{\"acc\":\"0 0 -10 0 10\"}],\"init\":\"1\",\"min\":\"0\",\"max\":\"2\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Pink Noise Volume\",\"address\":\"/Noises/Pink_Noise_Volume\",\"index\":\"0\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"},{\"tooltip\":\"0=Mute, 1=White Noise, 2=Pink Noise\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"2\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"White Noise Volume\",\"address\":\"/Noises/White_Noise_Volume\",\"index\":\"32\",\"meta\":[{\"acc\":\"1 0 -10 0 10\"},{\"style\":\"knob\"}],\"init\":\"0.5\",\"min\":\"0\",\"max\":\"2\",\"step\":\"0.01\"}]}]}";
 }
-function getBase64CodeSNoiseS() { return "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"; }
+function getBase64CodeSNoiseS() { return "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"; }
 
 /*
  faust2wasm: GRAME 2017-2018
@@ -5442,7 +5442,7 @@ class SNoiseSNode extends AudioWorkletNode {
         options.channelInterpretation = "speakers";
 
         super(context, 'SNoiseS', options);
-
+      
         // JSON parsing functions
         this.parse_ui = function(ui, obj)
         {
@@ -5538,6 +5538,12 @@ class SNoiseSNode extends AudioWorkletNode {
     {
         return getJSONSNoiseS();
     }
+    
+    // For WAP
+    getMetadata()
+    {
+        return getJSONSNoiseS();
+    }
 
     /**
      *  Set the control value at a given path.
@@ -5550,6 +5556,13 @@ class SNoiseSNode extends AudioWorkletNode {
         // Needed for sample accurate control
         this.parameters.get(path).setValueAtTime(val, 0);
     }
+    
+    // For WAP
+    setParam(path, val)
+    {
+        // Needed for sample accurate control
+        this.parameters.get(path).setValueAtTime(val, 0);
+    }
 
     /**
      *  Get the control value at a given path.
@@ -5557,6 +5570,12 @@ class SNoiseSNode extends AudioWorkletNode {
      * @return the current control value
      */
     getParamValue(path)
+    {
+        return this.parameters.get(path).value;
+    }
+    
+    // For WAP
+    getParam(path) 
     {
         return this.parameters.get(path).value;
     }
@@ -5590,11 +5609,28 @@ class SNoiseSNode extends AudioWorkletNode {
     {
         return parseInt(this.json_object.outputs);
     }
+    
+    // For WAP
+    inputChannelCount() 
+    {
+        return parseInt(this.json_object.inputs);
+    }
+
+    outputChannelCount() 
+    {
+        return parseInt(this.json_object.outputs);
+    }
 
     /**
      * Returns an array of all input paths (to be used with setParamValue/getParamValue)
      */
     getParams()
+    {
+        return this.inputs_items;
+    }
+    
+    // For WAP
+    getDescriptor() 
     {
         return this.inputs_items;
     }
@@ -5655,67 +5691,208 @@ class SNoiseSNode extends AudioWorkletNode {
         }
     }
     
+    // For WAP
+    onMidi(data) 
+    {
+     	midiMessage(data);
+    }
+    
+    /**
+     * @returns {Object} describes the path for each available param and its current value
+     */
+    async getState() 
+    {
+        var params = new Object();
+        for (let i = 0; i < this.getDescriptor().length; i++) {
+            Object.assign(params, { [this.getDescriptor()[i]]: `${this.getParam(this.getDescriptor()[i])}` });
+        }
+        return new Promise(resolve => {
+            resolve(params)
+        });
+    }
+
+    /**
+     * Sets each params with the value indicated in the state object
+     * @param {Object} state 
+     */
+    async setState(state) 
+    {
+        return new Promise(resolve => {
+            for (const param in state) {
+                if (state.hasOwnProperty(param)) this.setParam(param, state[param]);
+            }
+            try {
+                this.gui.setAttribute('state', JSON.stringify(state));
+            } catch (error) {
+                console.warn("Plugin without gui or GUI not defined", error);
+            }
+            resolve(state);
+        })
+    }
+    
+    /**
+     * A different call closer to the preset management
+     * @param {Object} patch to assign as a preset to the node
+     */
+    setPatch(patch) 
+    {
+        this.setState(this.presets[patch])
+    }
+    
     static remap(v, mn0, mx0, mn1, mx1)
     {
         return (1.0 * (v - mn0) / (mx0 - mn0)) * (mx1 - mn1) + mn1;
     }
+    
+    // Loads a sample and decode it
+    static loadAudioSample(context, url)
+    {
+        return new Promise(function(resolve, reject) {
+                           fetch(url)
+                           .then((response) => {
+                                 return response.arrayBuffer();
+                                 })
+                           .then((buffer) => {
+                                 context.decodeAudioData(buffer, (decodedAudioData) => {
+                                                         resolve(decodedAudioData);
+                                                         });
+                                 });
+                           });
+    }
+    
+    
+    
+    // Loads a sample
+    static loadSample(url)
+    {
+        return new Promise(function(resolve, reject) {
+                           fetch(url)
+                           .then((response) => {
+                                 resolve (response.arrayBuffer());
+                                 })
+                           });
+    }
+    
 }
 
 // Factory class
 
-class SNoiseS {
+window.SNoiseS = class SNoiseS {
 
     /**
      * Factory constructor.
      *
      * @param context - the audio context
-     * @param base_url - the base_url of the plugin folder
+     * @param baseUrl - the baseUrl of the plugin folder
      */
-    constructor(context, base_url)
+    constructor(context, baseUrl)
     {
     	// Resume audio context each time...
     	context.resume();
-
+    	
         this.context = context;
-        this.base_url = base_url;
+        this.baseUrl = baseUrl;
+        
+        this.pathTable = [];
+        
+        // soundfile items
+        this.soundfile_items = [];
     }
-
+    
+    // JSON parsing functions
+    parse_ui(ui)
+    {
+        for (var i = 0; i < ui.length; i++) {
+            this.parse_group(ui[i]);
+        }
+    }
+    
+    parse_group(group)
+    {
+        if (group.items) {
+            this.parse_items(group.items);
+        }
+    }
+    
+    parse_items(items)
+    {
+        for (var i = 0; i < items.length; i++) {
+            this.parse_item(items[i]);
+        }
+    }
+    
+    parse_item(item)
+    {
+        if (item.type === "vgroup"
+            || item.type === "hgroup"
+            || item.type === "tgroup") {
+            this.parse_items(item.items);
+        } else if (item.type === "soundfile") {
+            // Keep soundfile adresses
+            this.soundfile_items.push(item.address);
+            this.pathTable[item.address] = parseInt(item.index);
+        }
+    }
+  
     /**
      * Load additionnal resources to prepare the custom AudioWorkletNode. Returns a promise to be used with the created node.
      */
     load()
     {
     	return new Promise((resolve, reject) => {
-        		this.context.audioWorklet.addModule(this.base_url + "SNoiseS-processor.js").then(() => {
+                           
+                this.parse_ui(JSON.parse(getJSONSNoiseS()).ui);
+                           
+        		this.context.audioWorklet.addModule(this.baseUrl + "SNoiseS-processor.js").then(() => {
         		this.node = new SNoiseSNode(this.context, {});
                 this.node.onprocessorerror = () => { console.log('An error from SNoiseS-processor was detected.');}
         		return (this.node);
         	}).then((node) => {
+        		console.log(this.node.getDescriptor());
                 resolve(node);
             }).catch((e) => {
                 reject(e);
             });
         });
     }
-
-    loadGui()
+    
+    loadGui() 
     {
         return new Promise((resolve, reject) => {
             try {
-            	var link = document.createElement('link');
-            	link.rel = 'import';
-            	link.id = 'urlPlugin';
-            	link.href = this.base_url + "main.html";
-            	document.head.appendChild(link);
-            	var element = document.createElement("faust-SNoiseS");
-            	element._plug = this.node;
-            	resolve(element);
-        	} catch (e) {
-            	console.log(e);
-            	reject(e);
-        	}
-    	});
+                // DO THIS ONLY ONCE. If another instance has already been added, do not add the html file again
+                let url = this.baseUrl + "/main.html";
+
+                if (!this.linkExists(url)) {
+                    // LINK DOES NOT EXIST, let's add it to the document
+                    var link = document.createElement('link');
+                    link.rel = 'import';
+                    link.href = url;
+                    document.head.appendChild(link);
+                    link.onload = (e) => {
+                        // the file has been loaded, instanciate GUI
+                        // and get back the HTML elem
+                        // HERE WE COULD REMOVE THE HARD CODED NAME
+                        var element = createSNoiseSGUI(this.node);
+                        resolve(element);
+                    }
+                } else {
+                    // LINK EXIST, WE AT LEAST CREATED ONE INSTANCE PREVIOUSLY
+                    // so we can create another instance
+                    var element = createSNoiseSGUI(this.node);
+                    resolve(element);
+                }
+            } catch (e) {
+                console.log(e);
+                reject(e);
+            }
+        });
     };
+
+	linkExists(url) 
+	{
+    	return document.querySelectorAll(`link[href="${url}"]`).length > 0;
+   	}
 
 }
 </script>
@@ -5927,7 +6104,7 @@ function startSNoiseS()
 function startNewSNoiseS()
 {
      if (isWasm && workletAvailable()) {
-        factory = new SNoiseS(context, "");
+        factory = new window.SNoiseS(context, "");
         factory.load()
         .then((aw_node) => startSNoiseSAux(aw_node))
         .catch((error) => { console.log(error); console.log("Faust mydsp cannot be loaded or compiled"); });
