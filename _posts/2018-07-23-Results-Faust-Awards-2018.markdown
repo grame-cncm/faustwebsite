@@ -4,7 +4,8 @@ title:  "Faust Awards 2018 to iPlug 2 !"
 date:   2018-07-23 15:10:00
 categories: news
 ---
-*The Faust Open Source Software Competition aims at promoting innovative high-quality free audio software developed with Faust, a functional programming language for realtime signal processing and sound synthesis. The competition is sponsored by [GRAME](http://www.grame.fr), Centre National de Création Musicale* 
+*The Faust Open Source Software Competition aims at promoting innovative high-quality free audio software developed with Faust, a functional programming language for realtime signal processing and sound synthesis. The competition is sponsored by [GRAME](http://www.grame.fr), Centre National de Création Musicale.*
+ 
 ![Faust Awards 2018](/images/faustaward2018.png){: .center-image }
 
 ## Faust Award 2018 to [iPlug 2](https://github.com/iplug2)
@@ -30,6 +31,6 @@ The jury praised the quality, the ambition, and the usefulness of [iPlug 2](http
 ----------------------------------
 In parallel to the main competition, the *Faust Student Software Competition*, is intended to promote small, but innovative Faust applications, typically developed in the framework of student projects.
 
-The *student prize 2018* was awarded to [Cloud Generator](https://github.com/visstup/cloud-generator) a nine voice polyphonic synthesiser developed by Rittik Wystup. 
+The *student prize 2018* was awarded to [Cloud Generator](https://github.com/visstup/cloud-generator) a nine-voice polyphonic synthesizer developed by Rittik Wystup. 
 
 The jury praised the audio quality and the care taken by Rittik Wystup in his project! Check the Cloud Generator [demo here](https://youtu.be/3uzxZlojxuI).
