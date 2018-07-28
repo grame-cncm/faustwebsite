@@ -4,7 +4,7 @@ title:  "View Faust's evolution"
 date:   2018-07-23 15:10:00
 categories: news
 ---
-View the evolution of the [Faust project](https://github.com/grame-cncm/faust) from 2014 to 2018. 
+View the evolution of the [Faust project](https://github.com/grame-cncm/faust) from 2004 to 2018. 
 {% include youtube.html id="_xLJdYkd89E" %}
 
 The visualization was done using [Gource](http://gource.io/). Here is the command used (as suggested by [fullybacked](http://www.fullybaked.co.uk/articles/getting-gource-running-on-osx)):
