@@ -5856,8 +5856,9 @@ window.SNoise = class SNoise {
      */
     load()
     {
-    	return new Promise((resolve, reject) => {               
-            this.context.audioWorklet.addModule(this.baseUrl + "/SNoise-processor.js").then(() => {
+    	return new Promise((resolve, reject) => {   
+    		var file_url = (this.baseUrl === "")  ? "SNoise-processor.js" : (this.baseUrl + "/SNoise-processor.js"); 
+    	    this.context.audioWorklet.addModule(file_url).then(() => {
             this.node = new SNoiseNode(this.context, this.baseUrl, {});
             this.node.onprocessorerror = () => { console.log('An error from SNoise-processor was detected.');}
             return (this.node);
@@ -6116,7 +6117,7 @@ function startSNoise()
 
 function startNewSNoise()
 {
-     if (isWasm && workletAvailable()) {
+    if (isWasm && workletAvailable()) {
         factory = new window.SNoise(context, "");
         factory.load()
         .then((aw_node) => startSNoiseAux(aw_node))

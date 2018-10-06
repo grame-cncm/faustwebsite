@@ -5856,8 +5856,9 @@ window.Loop = class Loop {
      */
     load()
     {
-    	return new Promise((resolve, reject) => {               
-            this.context.audioWorklet.addModule(this.baseUrl + "/Loop-processor.js").then(() => {
+    	return new Promise((resolve, reject) => {   
+    		var file_url = (this.baseUrl === "")  ? "Loop-processor.js" : (this.baseUrl + "/Loop-processor.js"); 
+    	    this.context.audioWorklet.addModule(file_url).then(() => {
             this.node = new LoopNode(this.context, this.baseUrl, {});
             this.node.onprocessorerror = () => { console.log('An error from Loop-processor was detected.');}
             return (this.node);
@@ -6116,7 +6117,7 @@ function startLoop()
 
 function startNewLoop()
 {
-     if (isWasm && workletAvailable()) {
+    if (isWasm && workletAvailable()) {
         factory = new window.Loop(context, "");
         factory.load()
         .then((aw_node) => startLoopAux(aw_node))

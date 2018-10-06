@@ -5856,8 +5856,9 @@ window.STinkle = class STinkle {
      */
     load()
     {
-    	return new Promise((resolve, reject) => {               
-            this.context.audioWorklet.addModule(this.baseUrl + "/STinkle-processor.js").then(() => {
+    	return new Promise((resolve, reject) => {   
+    		var file_url = (this.baseUrl === "")  ? "STinkle-processor.js" : (this.baseUrl + "/STinkle-processor.js"); 
+    	    this.context.audioWorklet.addModule(file_url).then(() => {
             this.node = new STinkleNode(this.context, this.baseUrl, {});
             this.node.onprocessorerror = () => { console.log('An error from STinkle-processor was detected.');}
             return (this.node);
@@ -6116,7 +6117,7 @@ function startSTinkle()
 
 function startNewSTinkle()
 {
-     if (isWasm && workletAvailable()) {
+    if (isWasm && workletAvailable()) {
         factory = new window.STinkle(context, "");
         factory.load()
         .then((aw_node) => startSTinkleAux(aw_node))

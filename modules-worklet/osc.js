@@ -448,8 +448,9 @@ window.osc = class osc {
      */
     load()
     {
-    	return new Promise((resolve, reject) => {               
-            this.context.audioWorklet.addModule(this.baseUrl + "/osc-processor.js").then(() => {
+    	return new Promise((resolve, reject) => {   
+    		var file_url = (this.baseUrl === "")  ? "osc-processor.js" : (this.baseUrl + "/osc-processor.js"); 
+    	    this.context.audioWorklet.addModule(file_url).then(() => {
             this.node = new oscNode(this.context, this.baseUrl, {});
             this.node.onprocessorerror = () => { console.log('An error from osc-processor was detected.');}
             return (this.node);
