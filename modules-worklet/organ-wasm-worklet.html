@@ -119,10 +119,11 @@ function activateMIDIInput()
 function startorgan()
 {
     // Create the Faust generated node
-    var organ_factory = new organ(audio_context, "");
+    var organ_factory = new organPoly(audio_context, "");
     console.log(organ_factory);
     organ_factory.load()
     .then((aw_node) => {
+          activateMIDIInput();
             console.log(aw_node);
             organ_dsp = aw_node;
             console.log(organ_dsp.getJSON());
