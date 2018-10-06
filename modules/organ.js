@@ -1,11 +1,11 @@
 
 /*
-Code generated with Faust version 2.7.0
+Code generated with Faust version 2.11.5
 Compilation options: wasm-e, -scal -ftz 2
 */
 
 function getJSONorgan() {
-	return "{\"name\":\"organ\",\"filename\":\"organ\",\"version\":\"2.7.0\",\"options\":\"wasm-e, -scal -ftz 2\",\"size\":\"68\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"filename\":\"organ\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"organ\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"organ\",\"items\":[{\"type\":\"hslider\",\"label\":\"freq\",\"address\":\"/organ/freq\",\"index\":\"32\",\"meta\":[{\"unit\":\"Hz\"}],\"init\":\"440\",\"min\":\"20\",\"max\":\"20000\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"gain\",\"address\":\"/organ/gain\",\"index\":\"8\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"10\",\"step\":\"0.01\"},{\"type\":\"button\",\"label\":\"gate\",\"address\":\"/organ/gate\",\"index\":\"4\"},{\"type\":\"hslider\",\"label\":\"volume\",\"address\":\"/organ/volume\",\"index\":\"0\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"organ\",\"filename\":\"organ\",\"version\":\"2.11.5\",\"compile_options\":\"-scal -ftz 2\",\"library_list\":[\"/usr/local/share/faust/stdfaust.lib\",\"/usr/local/share/faust/maths.lib\"],\"include_pathnames\":[\".\",\"/usr/local/share/faust\",\"/usr/share/faust\"],\"size\":\"68\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"filename\":\"organ\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"organ\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"organ\",\"items\":[{\"type\":\"hslider\",\"label\":\"freq\",\"address\":\"/organ/freq\",\"index\":\"32\",\"meta\":[{\"unit\":\"Hz\"}],\"init\":\"440\",\"min\":\"20\",\"max\":\"20000\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"gain\",\"address\":\"/organ/gain\",\"index\":\"8\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"10\",\"step\":\"0.01\"},{\"type\":\"button\",\"label\":\"gate\",\"address\":\"/organ/gate\",\"index\":\"4\"},{\"type\":\"hslider\",\"label\":\"volume\",\"address\":\"/organ/volume\",\"index\":\"0\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"}]}]}";
 }
 /*
  faust2webaudio
@@ -202,7 +202,7 @@ faust.organ_poly = function (mixer_instance, dsp_instance, effect_instance, memo
     sp.allocVoice = function(voice)
     {
         sp.dsp_voices_date[voice] = sp.fDate++;
-        sp.dsp_voices_trigger[voice] = true;    //so that envelop is always re-initialized
+        sp.dsp_voices_trigger[voice] = true;    // so that envelop is always re-initialized
         sp.dsp_voices_state[voice] = sp.kActiveVoice;
         return voice;
     }
@@ -297,7 +297,7 @@ faust.organ_poly = function (mixer_instance, dsp_instance, effect_instance, memo
                 // Mix it in result
                 sp.dsp_voices_level[i] = sp.mixer.mixVoice(buffer_size, sp.numOut, sp.mixing, sp.outs);
                 // Check the level to possibly set the voice in kFreeVoice again
-                if ((sp.dsp_voices_level[i] < 0.001) && (sp.dsp_voices_state[i] === sp.kReleaseVoice)) {
+                if ((sp.dsp_voices_level[i] < 0.0005) && (sp.dsp_voices_state[i] === sp.kReleaseVoice)) {
                     sp.dsp_voices_state[i] = sp.kFreeVoice;
                 }
             }
@@ -576,6 +576,7 @@ faust.organ_poly = function (mixer_instance, dsp_instance, effect_instance, memo
         sp.factory.setParamValue(sp.dsp_voices[voice], sp.fFreqLabel, sp.midiToFreq(pitch));
         sp.factory.setParamValue(sp.dsp_voices[voice], sp.fGainLabel, velocity/127.);
         sp.dsp_voices_state[voice] = pitch;
+        sp.dsp_voices_trigger[voice] = true;
     }
 
     /**
@@ -588,7 +589,9 @@ faust.organ_poly = function (mixer_instance, dsp_instance, effect_instance, memo
     sp.keyOff = function (channel, pitch, velocity)
     {
         var voice = sp.getPlayingVoice(pitch);
-        if (voice !== sp.kNoVoice) {
+        if (voice !== sp.kNoVoice) { 
+            // Be sure the voice is not triggered
+            sp.dsp_voices_trigger[voice] = false;      
             if (faust.debug)
                 console.log("keyOff voice %d", voice);
             // No use of velocity for now...

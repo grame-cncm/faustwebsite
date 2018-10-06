@@ -1,13 +1,13 @@
 
 /*
-Code generated with Faust version 2.7.0
+Code generated with Faust version 2.11.5
 Compilation options: wasm-eb, -scal -ftz 2
 */
 
 function getJSONorgan() {
-	return "{\"name\":\"organ\",\"filename\":\"organ\",\"version\":\"2.7.0\",\"options\":\"wasm-eb, -scal -ftz 2\",\"size\":\"68\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"filename\":\"organ\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"organ\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"organ\",\"items\":[{\"type\":\"hslider\",\"label\":\"freq\",\"address\":\"/organ/freq\",\"index\":\"32\",\"meta\":[{\"unit\":\"Hz\"}],\"init\":\"440\",\"min\":\"20\",\"max\":\"20000\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"gain\",\"address\":\"/organ/gain\",\"index\":\"8\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"10\",\"step\":\"0.01\"},{\"type\":\"button\",\"label\":\"gate\",\"address\":\"/organ/gate\",\"index\":\"4\"},{\"type\":\"hslider\",\"label\":\"volume\",\"address\":\"/organ/volume\",\"index\":\"0\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"organ\",\"filename\":\"organ\",\"version\":\"2.11.5\",\"compile_options\":\"-scal -ftz 2\",\"library_list\":[\"/usr/local/share/faust/stdfaust.lib\",\"/usr/local/share/faust/maths.lib\"],\"include_pathnames\":[\".\",\"/usr/local/share/faust\",\"/usr/share/faust\"],\"size\":\"68\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"filename\":\"organ\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"organ\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"organ\",\"items\":[{\"type\":\"hslider\",\"label\":\"freq\",\"address\":\"/organ/freq\",\"index\":\"32\",\"meta\":[{\"unit\":\"Hz\"}],\"init\":\"440\",\"min\":\"20\",\"max\":\"20000\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"gain\",\"address\":\"/organ/gain\",\"index\":\"8\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"10\",\"step\":\"0.01\"},{\"type\":\"button\",\"label\":\"gate\",\"address\":\"/organ/gate\",\"index\":\"4\"},{\"type\":\"hslider\",\"label\":\"volume\",\"address\":\"/organ/volume\",\"index\":\"0\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"}]}]}";
 }
-function getBase64Codeorgan() { return "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XSwidWkiOlt7InR5cGUiOiJ2Z3JvdXAiLCJsYWJlbCI6Im9yZ2FuIiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJmcmVxIiwiYWRkcmVzcyI6Ii9vcmdhbi9mcmVxIiwiaW5kZXgiOiIzMiIsIm1ldGEiOlt7InVuaXQiOiJIeiJ9XSwiaW5pdCI6IjQ0MCIsIm1pbiI6IjIwIiwibWF4IjoiMjAwMDAiLCJzdGVwIjoiMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6ImdhaW4iLCJhZGRyZXNzIjoiL29yZ2FuL2dhaW4iLCJpbmRleCI6IjgiLCJpbml0IjoiMC41IiwibWluIjoiMCIsIm1heCI6IjEwIiwic3RlcCI6IjAuMDEifSx7InR5cGUiOiJidXR0b24iLCJsYWJlbCI6ImdhdGUiLCJhZGRyZXNzIjoiL29yZ2FuL2dhdGUiLCJpbmRleCI6IjQifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJ2b2x1bWUiLCJhZGRyZXNzIjoiL29yZ2FuL3ZvbHVtZSIsImluZGV4IjoiMCIsImluaXQiOiIwLjUiLCJtaW4iOiIwIiwibWF4IjoiMSIsInN0ZXAiOiIwLjAxIn1dfV19MA=="; }
+function getBase64Codeorgan() { return "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eyJtYXRocy5saWIvY29weXJpZ2h0IjoiR1JBTUUifSx7Im1hdGhzLmxpYi9saWNlbnNlIjoiTEdQTCB3aXRoIGV4Y2VwdGlvbiJ9LHsibWF0aHMubGliL25hbWUiOiJGYXVzdCBNYXRoIExpYnJhcnkifSx7Im1hdGhzLmxpYi92ZXJzaW9uIjoiMi4xIn0seyJuYW1lIjoib3JnYW4ifV0sInVpIjpbeyJ0eXBlIjoidmdyb3VwIiwibGFiZWwiOiJvcmdhbiIsIml0ZW1zIjpbeyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiZnJlcSIsImFkZHJlc3MiOiIvb3JnYW4vZnJlcSIsImluZGV4IjoiMzIiLCJtZXRhIjpbeyJ1bml0IjoiSHoifV0sImluaXQiOiI0NDAiLCJtaW4iOiIyMCIsIm1heCI6IjIwMDAwIiwic3RlcCI6IjEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJnYWluIiwiYWRkcmVzcyI6Ii9vcmdhbi9nYWluIiwiaW5kZXgiOiI4IiwiaW5pdCI6IjAuNSIsIm1pbiI6IjAiLCJtYXgiOiIxMCIsInN0ZXAiOiIwLjAxIn0seyJ0eXBlIjoiYnV0dG9uIiwibGFiZWwiOiJnYXRlIiwiYWRkcmVzcyI6Ii9vcmdhbi9nYXRlIiwiaW5kZXgiOiI0In0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoidm9sdW1lIiwiYWRkcmVzcyI6Ii9vcmdhbi92b2x1bWUiLCJpbmRleCI6IjAiLCJpbml0IjoiMC41IiwibWluIjoiMCIsIm1heCI6IjEiLCJzdGVwIjoiMC4wMSJ9XX1dfQ=="; }
 
 /*
  faust2wasm: GRAME 2017-2018
@@ -218,9 +218,9 @@ class organPolyProcessor extends AudioWorkletProcessor {
         this.dspInChannnels = [];
         this.dspOutChannnels = [];
         
-        this.fFreqLabel = "";
-        this.fGateLabel = "";
-        this.fGainLabel = "";
+        this.fFreqLabel = [];
+        this.fGateLabel = [];
+        this.fGainLabel = [];
         this.fDate = 0;
         
         this.fPitchwheelLabel = [];
@@ -335,9 +335,11 @@ class organPolyProcessor extends AudioWorkletProcessor {
         // wasm effect
         this.effect = (organPolyProcessor.wasm_effect_module) ? new WebAssembly.Instance(organPolyProcessor.wasm_effect_module, this.importObject).exports : null;
         
-        //console.log(this.mixer);
-        //console.log(this.factory);
-        //console.log(this.effect);
+        if (this.debug) {
+            console.log(this.mixer);
+            console.log(this.factory);
+            console.log(this.effect);
+        }
         
         // Start of DSP memory ('polyphony' DSP voices)
         this.polyphony = organPolyProcessor.polyphony;
@@ -390,7 +392,7 @@ class organPolyProcessor extends AudioWorkletProcessor {
         this.allocVoice = function(voice)
         {
             this.dsp_voices_date[voice] = this.fDate++;
-            this.dsp_voices_trigger[voice] = true;    //so that envelop is always re-initialized
+            this.dsp_voices_trigger[voice] = true;    // so that envelop is always re-initialized
             this.dsp_voices_state[voice] = this.kActiveVoice;
             return voice;
         }
@@ -500,19 +502,16 @@ class organPolyProcessor extends AudioWorkletProcessor {
             // keep 'keyOn/keyOff' labels
             for (i = 0; i < this.inputs_items.length; i++) {
                 if (this.inputs_items[i].endsWith("/gate")) {
-                    this.fGateLabel = this.pathTable[this.inputs_items[i]];
-                    console.log(this.fGateLabel);
+                    this.fGateLabel.push(this.pathTable[this.inputs_items[i]]);
                 } else if (this.inputs_items[i].endsWith("/freq")) {
-                    this.fFreqLabel = this.pathTable[this.inputs_items[i]];
-                    console.log(this.fFreqLabel);
+                    this.fFreqLabel.push(this.pathTable[this.inputs_items[i]]);
                 } else if (this.inputs_items[i].endsWith("/gain")) {
-                    this.fGainLabel = this.pathTable[this.inputs_items[i]];
-                    console.log(this.fGainLabel);
+                    this.fGainLabel.push(this.pathTable[this.inputs_items[i]]);
                 }
             }
             
             // Init DSP voices
-            for (i = 0; i <  this.polyphony; i++) {
+            for (i = 0; i < this.polyphony; i++) {
                 this.factory.init(this.dsp_voices[i], sampleRate);  // 'sampleRate' is defined in AudioWorkletGlobalScope
             }
             
@@ -528,20 +527,29 @@ class organPolyProcessor extends AudioWorkletProcessor {
             if (this.debug) {
                 console.log("keyOn voice %d", voice);
             }
-            this.factory.setParamValue(this.dsp_voices[voice], this.fFreqLabel, this.midiToFreq(pitch));
-            this.factory.setParamValue(this.dsp_voices[voice], this.fGainLabel, velocity/127.);
+            for (var i = 0; i < this.fFreqLabel.length; i++) {
+                this.factory.setParamValue(this.dsp_voices[voice], this.fFreqLabel[i], this.midiToFreq(pitch));
+            }
+            for (var i = 0; i < this.fGainLabel.length; i++) {
+                this.factory.setParamValue(this.dsp_voices[voice], this.fGainLabel[i], velocity/127.);
+            }
             this.dsp_voices_state[voice] = pitch;
+            this.dsp_voices_trigger[voice] = true;
         }
         
         this.keyOff = function (channel, pitch, velocity)
         {
             var voice = this.getPlayingVoice(pitch);
             if (voice !== this.kNoVoice) {
+                // Be sure the voice is not triggered
+                this.dsp_voices_trigger[voice] = false;	
                 if (this.debug) {
                     console.log("keyOff voice %d", voice);
                 }
                 // No use of velocity for now...
-                this.factory.setParamValue(this.dsp_voices[voice], this.fGateLabel, 0.0);
+                for (var i = 0; i < this.fGateLabel.length; i++) {
+                    this.factory.setParamValue(this.dsp_voices[voice], this.fGateLabel[i], 0.0);
+                }
                 // Release voice
                 this.dsp_voices_state[voice] = this.kReleaseVoice;
             } else {
@@ -553,8 +561,10 @@ class organPolyProcessor extends AudioWorkletProcessor {
         
         this.allNotesOff = function ()
         {
-            for (var i = 0; i <  this.polyphony; i++) {
-                this.factory.setParamValue(this.dsp_voices[i], this.fGateLabel, 0.0);
+            for (var i = 0; i < this.polyphony; i++) {
+                for (var j = 0; j < this.fGateLabel.length; j++) {
+                    this.factory.setParamValue(this.dsp_voices[i], this.fGateLabel[j], 0.0);
+                }
                 this.dsp_voices_state[i] = this.kReleaseVoice;
             }
         }
@@ -688,9 +698,13 @@ class organPolyProcessor extends AudioWorkletProcessor {
             if (this.dsp_voices_state[i] != this.kFreeVoice) {
                 if (this.dsp_voices_trigger[i]) {
                     // FIXME : properly cut the buffer in 2 slices...
-                    this.factory.setParamValue(this.dsp_voices[i], this.fGateLabel, 0.0);
+                    for (var j = 0; j < this.fGateLabel.length; j++) {
+                        this.factory.setParamValue(this.dsp_voices[i], this.fGateLabel[j], 0.0);
+                    }
                     this.factory.compute(this.dsp_voices[i], 1, this.ins, this.mixing);
-                    this.factory.setParamValue(this.dsp_voices[i], this.fGateLabel, 1.0);
+                    for (var j = 0; j < this.fGateLabel.length; j++) {
+                        this.factory.setParamValue(this.dsp_voices[i], this.fGateLabel[j], 1.0);
+                    }
                     this.factory.compute(this.dsp_voices[i], organPolyProcessor.buffer_size, this.ins, this.mixing);
                     this.dsp_voices_trigger[i] = false;
                 } else {
@@ -700,7 +714,7 @@ class organPolyProcessor extends AudioWorkletProcessor {
                 // Mix it in result
                 this.dsp_voices_level[i] = this.mixer.mixVoice(organPolyProcessor.buffer_size, this.numOut, this.mixing, this.outs);
                 // Check the level to possibly set the voice in kFreeVoice again
-                if ((this.dsp_voices_level[i] < 0.001) && (this.dsp_voices_state[i] === this.kReleaseVoice)) {
+                if ((this.dsp_voices_level[i] < 0.0005) && (this.dsp_voices_state[i] === this.kReleaseVoice)) {
                     this.dsp_voices_state[i] = this.kFreeVoice;
                 }
             }
