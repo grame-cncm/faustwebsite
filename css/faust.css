@@ -4,8 +4,15 @@
 
 .navbar-brand{
   margin-right: 3rem;
-  font-weight: bold;
-  font-size: 1.8rem;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.btn-outline-success {
+  color: white;
+  border-color: white;
 }
 
 /* Carousel base class */
@@ -22,8 +29,8 @@
 .carousel-item {
   height: 32rem;
   background-color: #777;
-  .transition(7s ease-in-out left) !important;
 }
+
 .carousel-item > img {
   position: absolute;
   top: 0;
@@ -50,6 +57,10 @@
 
 .copyright{
   text-align: center;
+}
+
+.default-container{
+  padding-top: 5rem;
 }
 
 .faust-doc {

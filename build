@@ -1,10 +1,14 @@
 #!/bin/sh
 
-DOMAIN="https://faust.grame.fr/new"
-#DOMAIN="file:///home/romain/reps/faustwebsite/site"
+#DOMAIN="https://faust.grame.fr/new"
+DOMAIN="file:///home/romain/reps/faustwebsite/site"
+#DOMAIN="127.0.0.1:8000"
 
 HEADER=$(cat lib/header.html | awk -v domain="$DOMAIN" '{gsub(/__DOMAIN__/,domain)}1')
-FOOTER=$(cat lib/footer-full.html)
+FOOTERF=$(cat lib/footer-full.html)
+FOOTERL=$(cat lib/footer-light.html)
+MDWPH="<main role=\"main\"><div class=\"container default-container\">"
+MDWPF="</div></main>"
 
 rm -rf site
 mkdir site
@@ -12,11 +16,22 @@ mkdir site
 cp -r src/img site
 cp -r css site
 
-echo "$HEADER$(cat src/main.html)$FOOTER" > site/index.html
+echo "$HEADER$(cat src/main.html)$FOOTERF" > site/index.html
 
 mkdir site/doc
-mkdir site/doc/manual
+echo "$HEADER$MDWPH$(pandoc src/doc/doc.md)$MDWPF$FOOTERF" > site/doc/index.html
 
+mkdir site/doc/libraries
+echo "$HEADER$(cat src/doc/libraries/libraries.html)$FOOTERL" > site/doc/libraries/index.html
+
+mkdir site/doc/manual
 cp -r src/doc/manual/img site/doc/manual/img
 cp -r src/doc/manual/misc site/doc/manual/misc 
-echo "$HEADER$(cat src/doc/manual/manual.html)$FOOTER" > site/doc/manual/index.html
+echo "$HEADER$(cat src/doc/manual/manual.html)$FOOTERL" > site/doc/manual/index.html
+
+mkdir site/community
+mkdir site/community/news
+echo "$HEADER$MDWPH$(pandoc src/community/news/news.md)$MDWPF$FOOTERF" > site/community/news/index.html
+
+mkdir site/tools
+echo "$HEADER$MDWPH$(pandoc src/tools/tools.md)$MDWPF$FOOTERF" > site/tools/index.html

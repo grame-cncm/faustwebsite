@@ -21,7 +21,7 @@
     <header>
       <div class="fixed-top">
         <nav class="navbar navbar-expand-md navbar-dark">
-          <a class="navbar-brand" href="__DOMAIN__">:> Faust</a>
+          <a class="navbar-brand" href="__DOMAIN__/index.html"><img src="__DOMAIN__/img/faustText.svg" width="150%"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -29,41 +29,33 @@
             <ul class="navbar-nav mr-auto">
               <li class="nav-item dropdown">
               <!--<li class="nav-item active">-->
-                <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Doc/Learn</a>
+                <a class="nav-link dropdown-toggle" href="__DOMAIN__/doc/index.html">Doc/Learn</a>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Overview/Index</a>
                   <a class="dropdown-item" href="#">Get Started</a>
-                  <a class="dropdown-item" href="__DOMAIN__/doc/manual">Faust Manual</a>
-                  <a class="dropdown-item" href="#">Libraries Documentation</a>
+                  <a class="dropdown-item" href="__DOMAIN__/doc/manual/index.html">Faust Manual</a>
+                  <a class="dropdown-item" href="__DOMAIN__/doc/libraries/index.html">Libraries Documentation</a>
                   <a class="dropdown-item" href="#">Cheat Sheet</a>
                   <a class="dropdown-item" href="#">Tutorials</a>
                   <a class="dropdown-item" href="#">Examples</a>
-                  <a class="dropdown-item" href="#">Singal Processing Courses</a>
+                  <a class="dropdown-item" href="#">Signal Processing Courses</a>
                 </div>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Download</a>
               </li>
               <li class="nav-item dropdown">
-                <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Online Platforms</a>
+                <a class="nav-link dropdown-toggle" href="__DOMAIN__/tools/index.html">Tools</a>
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="#">Web Editor</a>
-                  <a class="dropdown-item" href="#">Online Compiler</a>
                   <a class="dropdown-item" href="#">Faust Playground</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Tools</a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">FaustLive</a>
-                  <a class="dropdown-item" href="#">FaustWorks</a>
-                  <a class="dropdown-item" href="#">FaustGen</a>
+                  <a class="dropdown-item" href="#">Online Compiler</a>
+                  <a class="dropdown-item" href="#">Other Tools</a>
                 </div>
               </li>
               <li class="nav-item dropdown">
                 <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Community</a>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">News</a>
+                  <a class="dropdown-item" href="__DOMAIN__/community/news/index.html">News</a>
                   <a class="dropdown-item" href="#">Get Help (Mailing Lists)</a>
                   <a class="dropdown-item" href="#">Faust Conference</a>
                   <a class="dropdown-item" href="#">Academic Papers</a>
@@ -76,8 +68,9 @@
                 <a class="nav-link" href="#">Showcase</a>
               </li>
             </ul>
-            <form class="form-inline mt-2 mt-md-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <form class="form-inline mt-2 mt-md-0" action="https://www.google.com/search">
+              <input type="hidden" name="q" value="site:__DOMAIN__">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="q" alt="search">
               <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
           </div>
