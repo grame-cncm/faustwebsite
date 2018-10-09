@@ -6,6 +6,11 @@
   margin-right: 3rem;
 }
 
+.navzone {
+  width: 100%;
+  height: 3.5rem;
+}
+
 .dropdown:hover .dropdown-menu {
   display: block;
 }

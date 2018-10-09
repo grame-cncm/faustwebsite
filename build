@@ -4,7 +4,11 @@
 DOMAIN="file:///home/romain/reps/faustwebsite/site"
 #DOMAIN="127.0.0.1:8000"
 
-HEADER=$(cat lib/header.html | awk -v domain="$DOMAIN" '{gsub(/__DOMAIN__/,domain)}1')
+INCLUDES=$(cat lib/includes.html)
+HEADER=$(cat lib/std-header.html | awk -v includes="$INCLUDES" '{gsub(/<!-- INCLUDES -->/,includes)}1')
+NAVIGATION=$(cat lib/navigation.html)
+HEADER=$HEADER"<body>"$NAVIGATION
+HEADER=$(echo "$HEADER" | awk -v domain="$DOMAIN" '{gsub(/__DOMAIN__/,domain)}1')
 FOOTERF=$(cat lib/footer-full.html)
 FOOTERL=$(cat lib/footer-light.html)
 MDWPH="<main role=\"main\"><div class=\"container default-container\">"
@@ -36,5 +40,5 @@ echo "$HEADER$MDWPH$(pandoc src/community/news/news.md)$MDWPF$FOOTERF" > site/co
 mkdir site/tools
 echo "$HEADER$MDWPH$(pandoc src/tools/tools.md)$MDWPF$FOOTERF" > site/tools/index.html
 
-mkdir site/tools/editor
-cp -r src/tools/editor/fausteditorweb/* site/tools/editor
+cp -r src/tools/editor site/tools
+cat site/tools/editor/index.html | awk -v includes="$INCLUDES" '/<\/head>/{print includes}1' | awk -v nav="$NAVIGATION<main role=\"main\"><div class=\"container-fluid\"><div class=\"navzone\"></div><div class=\"row\">" '/<div class=\"application\">/{print nav}1' | awk '/<script src=\"codemirror\/lib\/codemirror.js\">/{print "</div></main>"}1' | awk -v domain="$DOMAIN" '{gsub(/__DOMAIN__/,domain)}1' > site/tools/editor/index2.html
