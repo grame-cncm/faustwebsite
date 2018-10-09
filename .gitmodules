@@ -1,0 +1,3 @@
+[submodule "src/tools/editor/fausteditorweb"]
+	path = src/tools/editor/fausteditorweb
+	url = https://github.com/grame-cncm/fausteditorweb
