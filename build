@@ -35,3 +35,6 @@ echo "$HEADER$MDWPH$(pandoc src/community/news/news.md)$MDWPF$FOOTERF" > site/co
 
 mkdir site/tools
 echo "$HEADER$MDWPH$(pandoc src/tools/tools.md)$MDWPF$FOOTERF" > site/tools/index.html
+
+mkdir site/tools/editor
+cp -r src/tools/editor/fausteditorweb/* site/tools/editor

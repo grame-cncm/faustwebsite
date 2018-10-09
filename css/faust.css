@@ -106,3 +106,50 @@ blockquote{
   margin-left: 3rem;
   border-left: solid 2px #ccc;
 }
+
+/******************************************************************************/
+/* Faust Editor */
+/******************************************************************************/
+
+.application {
+  width: 100%;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+
+.logozone {
+  background-color: rgb(120, 120, 120);
+}
+
+.actionzone {
+  width: 100%;
+  background-color: rgb(120, 120, 120);
+}
+
+.dynamic-button {
+  height: 2.5rem;
+  width: 5rem;
+  background-color: rgb(50,50,50);
+  color: #fff;
+}
+
+.action-button {
+  height: 2.5rem;
+  width: 5rem;
+  background-color: rgb(50,50,50);
+  color: #fff;
+}
+
+.editionzone {
+  width: calc(100vw - 6.9rem);
+  height: calc(100vh - 7rem);
+}
+
+.dropzone {
+  color: rgb(50,50,50);
+  border: 4px dashed rgb(120,120,120);
+}
+
+.dropzone input {
+  color: rgb(50,50,50);
+}
