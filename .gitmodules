@@ -1,3 +1,6 @@
 [submodule "src/tools/editor/fausteditorweb"]
 	path = src/tools/editor
 	url = https://github.com/grame-cncm/fausteditorweb
+[submodule "src/tools/faustplayground"]
+	path = src/tools/playground
+	url = https://github.com/grame-cncm/faustplayground
