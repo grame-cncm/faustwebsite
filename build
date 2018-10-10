@@ -45,3 +45,11 @@ echo "$HEADER$MDWPH$(pandoc src/tools/tools.md)$MDWPF$FOOTERF" > site/tools/inde
 
 cp -r src/tools/editor site/tools
 cat src/tools/editor/index.html | awk -v includes="$HEADERINCLUDES" '/<\/head>/{print includes}1' | awk -v nav="$NAVIGATION<main role=\"main\"><div class=\"container-fluid\"><div class=\"navzone\"></div><div class=\"row\">" '/<div class=\"application\">/{print nav}1' | awk '/<script src=\"codemirror\/lib\/codemirror.js\">/{print "</div></main>"}1' | awk '{gsub(/<img src=\"faust-logo.png\" width=58px alt=\"LOGO\">/,"")}1' | awk -v domain="$DOMAIN" '{gsub(/__DOMAIN__/,domain)}1' > site/tools/editor/index.html
+
+# Adding Faust Playground
+# TODO: we coul improve the integration of the Faust playground
+cp -r src/tools/playground site/tools
+
+# Adding Online Compiler
+# TODO: we coul improve the integration of the online compiler
+cp -r src/tools/onlinecompiler site/tools
