@@ -5408,14 +5408,14 @@ _f4u$t.main_loop = function() {
 $(document).ready(function() { _f4u$t.main_loop(); });
 
 /*
-Code generated with Faust version 2.11.5
+Code generated with Faust version 2.11.8
 Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONPeakEqualizer() {
-	return "{\"name\":\"Peak Equalizer\",\"filename\":\"PeakEqualizer\",\"version\":\"2.11.5\",\"compile_options\":\"-scal -ftz 2\",\"library_list\":[\"/usr/local/share/faust/stdfaust.lib\",\"/usr/local/share/faust/filters.lib\",\"/usr/local/share/faust/signals.lib\",\"/usr/local/share/faust/maths.lib\",\"/usr/local/share/faust/basics.lib\"],\"include_pathnames\":[\".\",\"/usr/local/share/faust\",\"/usr/share/faust\"],\"size\":\"56\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"filename\":\"PeakEqualizer\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Peak Equalizer\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Peak EQ\",\"items\":[{\"type\":\"hslider\",\"label\":\"Q - Filter Bandwidth\",\"address\":\"/Peak_EQ/Q_-_Filter_Bandwidth\",\"index\":\"28\",\"meta\":[{\"acc\":\"2 0 -10 0 10\"},{\"unit\":\"Hz\"}],\"init\":\"50\",\"min\":\"20\",\"max\":\"200\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Peak Frequency\",\"address\":\"/Peak_EQ/Peak_Frequency\",\"index\":\"12\",\"meta\":[{\"1\":\"\"},{\"acc\":\"0 1 -10 0 10\"},{\"scale\":\"log\"},{\"unit\":\"Hz\"}],\"init\":\"440\",\"min\":\"50\",\"max\":\"11000\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"Level\",\"address\":\"/Peak_EQ/Level\",\"index\":\"24\",\"meta\":[{\"2\":\"\"},{\"acc\":\"2 1 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"dB\"}],\"init\":\"0\",\"min\":\"-40\",\"max\":\"32\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"Peak Equalizer\",\"filename\":\"PeakEqualizer\",\"version\":\"2.11.8\",\"compile_options\":\"-scal -ftz 2\",\"library_list\":[\"/usr/local/share/faust/stdfaust.lib\",\"/usr/local/share/faust/filters.lib\",\"/usr/local/share/faust/signals.lib\",\"/usr/local/share/faust/maths.lib\",\"/usr/local/share/faust/basics.lib\"],\"include_pathnames\":[\".\",\"/usr/local/share/faust\",\"/usr/share/faust\"],\"size\":\"56\",\"inputs\":\"1\",\"outputs\":\"1\",\"meta\":[{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"filename\":\"PeakEqualizer\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"Peak Equalizer\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Peak EQ\",\"items\":[{\"type\":\"hslider\",\"label\":\"Q - Filter Bandwidth\",\"address\":\"/Peak_EQ/Q_-_Filter_Bandwidth\",\"index\":\"28\",\"meta\":[{\"acc\":\"2 0 -10 0 10\"},{\"unit\":\"Hz\"}],\"init\":\"50\",\"min\":\"20\",\"max\":\"200\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"Peak Frequency\",\"address\":\"/Peak_EQ/Peak_Frequency\",\"index\":\"12\",\"meta\":[{\"1\":\"\"},{\"acc\":\"0 1 -10 0 10\"},{\"scale\":\"log\"},{\"unit\":\"Hz\"}],\"init\":\"440\",\"min\":\"50\",\"max\":\"11000\",\"step\":\"0.01\"},{\"type\":\"hslider\",\"label\":\"Level\",\"address\":\"/Peak_EQ/Level\",\"index\":\"24\",\"meta\":[{\"2\":\"\"},{\"acc\":\"2 1 -10 0 10\"},{\"style\":\"knob\"},{\"unit\":\"dB\"}],\"init\":\"0\",\"min\":\"-40\",\"max\":\"32\",\"step\":\"0.01\"}]}]}";
 }
-function getBase64CodePeakEqualizer() { return "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YXVzdCIsIi91c3Ivc2hhcmUvZmF1c3QiXSwic2l6ZSI6IjU2IiwiaW5wdXRzIjoiMSIsIm91dHB1dHMiOiIxIiwibWV0YSI6W3siYmFzaWNzLmxpYi9uYW1lIjoiRmF1c3QgQmFzaWMgRWxlbWVudCBMaWJyYXJ5In0seyJiYXNpY3MubGliL3ZlcnNpb24iOiIwLjAifSx7ImZpbGVuYW1lIjoiUGVha0VxdWFsaXplciJ9LHsiZmlsdGVycy5saWIvbmFtZSI6IkZhdXN0IEZpbHRlcnMgTGlicmFyeSJ9LHsiZmlsdGVycy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsibWF0aHMubGliL2F1dGhvciI6IkdSQU1FIn0seyJtYXRocy5saWIvY29weXJpZ2h0IjoiR1JBTUUifSx7Im1hdGhzLmxpYi9saWNlbnNlIjoiTEdQTCB3aXRoIGV4Y2VwdGlvbiJ9LHsibWF0aHMubGliL25hbWUiOiJGYXVzdCBNYXRoIExpYnJhcnkifSx7Im1hdGhzLmxpYi92ZXJzaW9uIjoiMi4xIn0seyJuYW1lIjoiUGVhayBFcXVhbGl6ZXIifSx7InNpZ25hbHMubGliL25hbWUiOiJGYXVzdCBTaWduYWwgUm91dGluZyBMaWJyYXJ5In0seyJzaWduYWxzLmxpYi92ZXJzaW9uIjoiMC4wIn1dLCJ1aSI6W3sidHlwZSI6InZncm91cCIsImxhYmVsIjoiUGVhayBFUSIsIml0ZW1zIjpbeyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiUSAtIEZpbHRlciBCYW5kd2lkdGgiLCJhZGRyZXNzIjoiL1BlYWtfRVEvUV8tX0ZpbHRlcl9CYW5kd2lkdGgiLCJpbmRleCI6IjI4IiwibWV0YSI6W3siYWNjIjoiMiAwIC0xMCAwIDEwIn0seyJ1bml0IjoiSHoifV0sImluaXQiOiI1MCIsIm1pbiI6IjIwIiwibWF4IjoiMjAwIiwic3RlcCI6IjEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJQZWFrIEZyZXF1ZW5jeSIsImFkZHJlc3MiOiIvUGVha19FUS9QZWFrX0ZyZXF1ZW5jeSIsImluZGV4IjoiMTIiLCJtZXRhIjpbeyIxIjoiIn0seyJhY2MiOiIwIDEgLTEwIDAgMTAifSx7InNjYWxlIjoibG9nIn0seyJ1bml0IjoiSHoifV0sImluaXQiOiI0NDAiLCJtaW4iOiI1MCIsIm1heCI6IjExMDAwIiwic3RlcCI6IjAuMDEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJMZXZlbCIsImFkZHJlc3MiOiIvUGVha19FUS9MZXZlbCIsImluZGV4IjoiMjQiLCJtZXRhIjpbeyIyIjoiIn0seyJhY2MiOiIyIDEgLTEwIDAgMTAifSx7InN0eWxlIjoia25vYiJ9LHsidW5pdCI6ImRCIn1dLCJpbml0IjoiMCIsIm1pbiI6Ii00MCIsIm1heCI6IjMyIiwic3RlcCI6IjAuMDEifV19XX0="; }
+function getBase64CodePeakEqualizer() { return "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YXVzdCIsIi91c3Ivc2hhcmUvZmF1c3QiXSwic2l6ZSI6IjU2IiwiaW5wdXRzIjoiMSIsIm91dHB1dHMiOiIxIiwibWV0YSI6W3siYmFzaWNzLmxpYi9uYW1lIjoiRmF1c3QgQmFzaWMgRWxlbWVudCBMaWJyYXJ5In0seyJiYXNpY3MubGliL3ZlcnNpb24iOiIwLjAifSx7ImZpbGVuYW1lIjoiUGVha0VxdWFsaXplciJ9LHsiZmlsdGVycy5saWIvbmFtZSI6IkZhdXN0IEZpbHRlcnMgTGlicmFyeSJ9LHsiZmlsdGVycy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsibWF0aHMubGliL2F1dGhvciI6IkdSQU1FIn0seyJtYXRocy5saWIvY29weXJpZ2h0IjoiR1JBTUUifSx7Im1hdGhzLmxpYi9saWNlbnNlIjoiTEdQTCB3aXRoIGV4Y2VwdGlvbiJ9LHsibWF0aHMubGliL25hbWUiOiJGYXVzdCBNYXRoIExpYnJhcnkifSx7Im1hdGhzLmxpYi92ZXJzaW9uIjoiMi4xIn0seyJuYW1lIjoiUGVhayBFcXVhbGl6ZXIifSx7InNpZ25hbHMubGliL25hbWUiOiJGYXVzdCBTaWduYWwgUm91dGluZyBMaWJyYXJ5In0seyJzaWduYWxzLmxpYi92ZXJzaW9uIjoiMC4wIn1dLCJ1aSI6W3sidHlwZSI6InZncm91cCIsImxhYmVsIjoiUGVhayBFUSIsIml0ZW1zIjpbeyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiUSAtIEZpbHRlciBCYW5kd2lkdGgiLCJhZGRyZXNzIjoiL1BlYWtfRVEvUV8tX0ZpbHRlcl9CYW5kd2lkdGgiLCJpbmRleCI6IjI4IiwibWV0YSI6W3siYWNjIjoiMiAwIC0xMCAwIDEwIn0seyJ1bml0IjoiSHoifV0sImluaXQiOiI1MCIsIm1pbiI6IjIwIiwibWF4IjoiMjAwIiwic3RlcCI6IjEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJQZWFrIEZyZXF1ZW5jeSIsImFkZHJlc3MiOiIvUGVha19FUS9QZWFrX0ZyZXF1ZW5jeSIsImluZGV4IjoiMTIiLCJtZXRhIjpbeyIxIjoiIn0seyJhY2MiOiIwIDEgLTEwIDAgMTAifSx7InNjYWxlIjoibG9nIn0seyJ1bml0IjoiSHoifV0sImluaXQiOiI0NDAiLCJtaW4iOiI1MCIsIm1heCI6IjExMDAwIiwic3RlcCI6IjAuMDEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJMZXZlbCIsImFkZHJlc3MiOiIvUGVha19FUS9MZXZlbCIsImluZGV4IjoiMjQiLCJtZXRhIjpbeyIyIjoiIn0seyJhY2MiOiIyIDEgLTEwIDAgMTAifSx7InN0eWxlIjoia25vYiJ9LHsidW5pdCI6ImRCIn1dLCJpbml0IjoiMCIsIm1pbiI6Ii00MCIsIm1heCI6IjMyIiwic3RlcCI6IjAuMDEifV19XX0="; }
 
 /*
  faust2wasm: GRAME 2017-2018
@@ -5429,7 +5429,7 @@ if (typeof (AudioWorkletNode) === "undefined") {
 
 class PeakEqualizerNode extends AudioWorkletNode {
 
-    constructor(context, URL, options) {
+    constructor(context, baseURL, options) {
 
         var json_object = JSON.parse(getJSONPeakEqualizer());
 
@@ -5442,7 +5442,7 @@ class PeakEqualizerNode extends AudioWorkletNode {
         options.channelInterpretation = "speakers";
 
         super(context, 'PeakEqualizer', options);
-        this.URL = URL;
+        this.baseURL = baseURL;
       
         // JSON parsing functions
         this.parse_ui = function(ui, obj)
@@ -5546,7 +5546,8 @@ class PeakEqualizerNode extends AudioWorkletNode {
     async getMetadata() 
     {
         return new Promise(resolve => {
-        	fetch(this.URL + "/main.json").then(responseJSON => {
+            let real_url = (this.baseURL === "") ? "main.json" : (this.baseURL + "/main.json");
+            fetch(real_url).then(responseJSON => {
             	return responseJSON.json();
         	}).then(json => {
         		resolve(json);
@@ -5723,9 +5724,7 @@ class PeakEqualizerNode extends AudioWorkletNode {
         for (let i = 0; i < this.getParams().length; i++) {
             Object.assign(params, { [this.getParams()[i]]: `${this.getParam(this.getParams()[i])}` });
         }
-        return new Promise(resolve => {
-            resolve(params)
-        });
+        return new Promise(resolve => { resolve(params) });
     }
 
     /**
@@ -5800,15 +5799,15 @@ window.PeakEqualizer = class PeakEqualizer {
      * Factory constructor.
      *
      * @param context - the audio context
-     * @param baseUrl - the baseUrl of the plugin folder
+     * @param baseURL - the baseURL of the plugin folder
      */
-    constructor(context, baseUrl)
+    constructor(context, baseURL)
     {
     	// Resume audio context each time...
     	context.resume();
     	
         this.context = context;
-        this.baseUrl = baseUrl;
+        this.baseURL = baseURL;
         
         this.pathTable = [];
         
@@ -5857,9 +5856,9 @@ window.PeakEqualizer = class PeakEqualizer {
     load()
     {
     	return new Promise((resolve, reject) => {   
-            let real_url = (this.baseUrl === "") ? "PeakEqualizer-processor.js" : (this.baseUrl + "/PeakEqualizer-processor.js");
+            let real_url = (this.baseURL === "") ? "PeakEqualizer-processor.js" : (this.baseURL + "/PeakEqualizer-processor.js");
             this.context.audioWorklet.addModule(real_url).then(() => {
-            this.node = new PeakEqualizerNode(this.context, this.baseUrl, {});
+            this.node = new PeakEqualizerNode(this.context, this.baseURL, {});
             this.node.onprocessorerror = () => { console.log('An error from PeakEqualizer-processor was detected.');}
             return (this.node);
             }).then((node) => {
@@ -5876,7 +5875,7 @@ window.PeakEqualizer = class PeakEqualizer {
         return new Promise((resolve, reject) => {
             try {
                 // DO THIS ONLY ONCE. If another instance has already been added, do not add the html file again
-                let real_url = (this.baseUrl === "") ? "main.html" : (this.baseUrl + "/main.html");
+                let real_url = (this.baseURL === "") ? "main.html" : (this.baseURL + "/main.html");
                 if (!this.linkExists(real_url)) {
                     // LINK DOES NOT EXIST, let's add it to the document
                     var link = document.createElement('link');

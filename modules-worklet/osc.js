@@ -1,13 +1,13 @@
 
 /*
-Code generated with Faust version 2.11.5
+Code generated with Faust version 2.11.8
 Compilation options: wasm-ib, -scal -ftz 2
 */
 
 function getJSONosc() {
-	return "{\"name\":\"osc\",\"filename\":\"osc\",\"version\":\"2.11.5\",\"compile_options\":\"-scal -ftz 2\",\"library_list\":[\"/usr/local/share/faust/stdfaust.lib\",\"/usr/local/share/faust/oscillators.lib\",\"/usr/local/share/faust/maths.lib\",\"/usr/local/share/faust/basics.lib\",\"/usr/local/share/faust/signals.lib\"],\"include_pathnames\":[\".\",\"/usr/local/share/faust\",\"/usr/share/faust\"],\"size\":\"262184\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"Grame\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"copyright\":\"(c)GRAME 2009\"},{\"filename\":\"osc\"},{\"license\":\"BSD\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"osc\"},{\"oscillators.lib/name\":\"Faust Oscillator Library\"},{\"oscillators.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"},{\"version\":\"1.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Oscillator\",\"items\":[{\"type\":\"hslider\",\"label\":\"freq\",\"address\":\"/Oscillator/freq\",\"index\":\"262164\",\"meta\":[{\"unit\":\"Hz\"}],\"init\":\"1000\",\"min\":\"20\",\"max\":\"24000\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"volume\",\"address\":\"/Oscillator/volume\",\"index\":\"262144\",\"meta\":[{\"unit\":\"dB\"}],\"init\":\"0\",\"min\":\"-96\",\"max\":\"0\",\"step\":\"0.1\"}]}]}";
+	return "{\"name\":\"osc\",\"filename\":\"osc\",\"version\":\"2.11.8\",\"compile_options\":\"-scal -ftz 2\",\"library_list\":[\"/usr/local/share/faust/stdfaust.lib\",\"/usr/local/share/faust/oscillators.lib\",\"/usr/local/share/faust/maths.lib\",\"/usr/local/share/faust/basics.lib\",\"/usr/local/share/faust/signals.lib\"],\"include_pathnames\":[\".\",\"/usr/local/share/faust\",\"/usr/share/faust\"],\"size\":\"262184\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"author\":\"Grame\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"copyright\":\"(c)GRAME 2009\"},{\"filename\":\"osc\"},{\"license\":\"BSD\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"osc\"},{\"oscillators.lib/name\":\"Faust Oscillator Library\"},{\"oscillators.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"},{\"version\":\"1.0\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"Oscillator\",\"items\":[{\"type\":\"hslider\",\"label\":\"freq\",\"address\":\"/Oscillator/freq\",\"index\":\"262164\",\"meta\":[{\"unit\":\"Hz\"}],\"init\":\"1000\",\"min\":\"20\",\"max\":\"24000\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"volume\",\"address\":\"/Oscillator/volume\",\"index\":\"262144\",\"meta\":[{\"unit\":\"dB\"}],\"init\":\"0\",\"min\":\"-96\",\"max\":\"0\",\"step\":\"0.1\"}]}]}";
 }
-function getBase64Codeosc() { return "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bGliL2xpY2Vuc2UiOiJMR1BMIHdpdGggZXhjZXB0aW9uIn0seyJtYXRocy5saWIvbmFtZSI6IkZhdXN0IE1hdGggTGlicmFyeSJ9LHsibWF0aHMubGliL3ZlcnNpb24iOiIyLjEifSx7Im5hbWUiOiJvc2MifSx7Im9zY2lsbGF0b3JzLmxpYi9uYW1lIjoiRmF1c3QgT3NjaWxsYXRvciBMaWJyYXJ5In0seyJvc2NpbGxhdG9ycy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsic2lnbmFscy5saWIvbmFtZSI6IkZhdXN0IFNpZ25hbCBSb3V0aW5nIExpYnJhcnkifSx7InNpZ25hbHMubGliL3ZlcnNpb24iOiIwLjAifSx7InZlcnNpb24iOiIxLjAifV0sInVpIjpbeyJ0eXBlIjoidmdyb3VwIiwibGFiZWwiOiJPc2NpbGxhdG9yIiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJmcmVxIiwiYWRkcmVzcyI6Ii9Pc2NpbGxhdG9yL2ZyZXEiLCJpbmRleCI6IjI2MjE2NCIsIm1ldGEiOlt7InVuaXQiOiJIeiJ9XSwiaW5pdCI6IjEwMDAiLCJtaW4iOiIyMCIsIm1heCI6IjI0MDAwIiwic3RlcCI6IjEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJ2b2x1bWUiLCJhZGRyZXNzIjoiL09zY2lsbGF0b3Ivdm9sdW1lIiwiaW5kZXgiOiIyNjIxNDQiLCJtZXRhIjpbeyJ1bml0IjoiZEIifV0sImluaXQiOiIwIiwibWluIjoiLTk2IiwibWF4IjoiMCIsInN0ZXAiOiIwLjEifV19XX0="; }
+function getBase64Codeosc() { return "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Y2Vuc2UiOiJMR1BMIHdpdGggZXhjZXB0aW9uIn0seyJtYXRocy5saWIvbmFtZSI6IkZhdXN0IE1hdGggTGlicmFyeSJ9LHsibWF0aHMubGliL3ZlcnNpb24iOiIyLjEifSx7Im5hbWUiOiJvc2MifSx7Im9zY2lsbGF0b3JzLmxpYi9uYW1lIjoiRmF1c3QgT3NjaWxsYXRvciBMaWJyYXJ5In0seyJvc2NpbGxhdG9ycy5saWIvdmVyc2lvbiI6IjAuMCJ9LHsic2lnbmFscy5saWIvbmFtZSI6IkZhdXN0IFNpZ25hbCBSb3V0aW5nIExpYnJhcnkifSx7InNpZ25hbHMubGliL3ZlcnNpb24iOiIwLjAifSx7InZlcnNpb24iOiIxLjAifV0sInVpIjpbeyJ0eXBlIjoidmdyb3VwIiwibGFiZWwiOiJPc2NpbGxhdG9yIiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJmcmVxIiwiYWRkcmVzcyI6Ii9Pc2NpbGxhdG9yL2ZyZXEiLCJpbmRleCI6IjI2MjE2NCIsIm1ldGEiOlt7InVuaXQiOiJIeiJ9XSwiaW5pdCI6IjEwMDAiLCJtaW4iOiIyMCIsIm1heCI6IjI0MDAwIiwic3RlcCI6IjEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJ2b2x1bWUiLCJhZGRyZXNzIjoiL09zY2lsbGF0b3Ivdm9sdW1lIiwiaW5kZXgiOiIyNjIxNDQiLCJtZXRhIjpbeyJ1bml0IjoiZEIifV0sImluaXQiOiIwIiwibWluIjoiLTk2IiwibWF4IjoiMCIsInN0ZXAiOiIwLjEifV19XX0="; }
 
 /*
  faust2wasm: GRAME 2017-2018
@@ -21,7 +21,7 @@ if (typeof (AudioWorkletNode) === "undefined") {
 
 class oscNode extends AudioWorkletNode {
 
-    constructor(context, URL, options) {
+    constructor(context, baseURL, options) {
 
         var json_object = JSON.parse(getJSONosc());
 
@@ -34,7 +34,7 @@ class oscNode extends AudioWorkletNode {
         options.channelInterpretation = "speakers";
 
         super(context, 'osc', options);
-        this.URL = URL;
+        this.baseURL = baseURL;
       
         // JSON parsing functions
         this.parse_ui = function(ui, obj)
@@ -138,7 +138,8 @@ class oscNode extends AudioWorkletNode {
     async getMetadata() 
     {
         return new Promise(resolve => {
-        	fetch(this.URL + "/main.json").then(responseJSON => {
+            let real_url = (this.baseURL === "") ? "main.json" : (this.baseURL + "/main.json");
+            fetch(real_url).then(responseJSON => {
             	return responseJSON.json();
         	}).then(json => {
         		resolve(json);
@@ -315,9 +316,7 @@ class oscNode extends AudioWorkletNode {
         for (let i = 0; i < this.getParams().length; i++) {
             Object.assign(params, { [this.getParams()[i]]: `${this.getParam(this.getParams()[i])}` });
         }
-        return new Promise(resolve => {
-            resolve(params)
-        });
+        return new Promise(resolve => { resolve(params) });
     }
 
     /**
@@ -392,15 +391,15 @@ window.osc = class osc {
      * Factory constructor.
      *
      * @param context - the audio context
-     * @param baseUrl - the baseUrl of the plugin folder
+     * @param baseURL - the baseURL of the plugin folder
      */
-    constructor(context, baseUrl)
+    constructor(context, baseURL)
     {
     	// Resume audio context each time...
     	context.resume();
     	
         this.context = context;
-        this.baseUrl = baseUrl;
+        this.baseURL = baseURL;
         
         this.pathTable = [];
         
@@ -449,9 +448,9 @@ window.osc = class osc {
     load()
     {
     	return new Promise((resolve, reject) => {   
-            let real_url = (this.baseUrl === "") ? "osc-processor.js" : (this.baseUrl + "/osc-processor.js");
+            let real_url = (this.baseURL === "") ? "osc-processor.js" : (this.baseURL + "/osc-processor.js");
             this.context.audioWorklet.addModule(real_url).then(() => {
-            this.node = new oscNode(this.context, this.baseUrl, {});
+            this.node = new oscNode(this.context, this.baseURL, {});
             this.node.onprocessorerror = () => { console.log('An error from osc-processor was detected.');}
             return (this.node);
             }).then((node) => {
@@ -468,7 +467,7 @@ window.osc = class osc {
         return new Promise((resolve, reject) => {
             try {
                 // DO THIS ONLY ONCE. If another instance has already been added, do not add the html file again
-                let real_url = (this.baseUrl === "") ? "main.html" : (this.baseUrl + "/main.html");
+                let real_url = (this.baseURL === "") ? "main.html" : (this.baseURL + "/main.html");
                 if (!this.linkExists(real_url)) {
                     // LINK DOES NOT EXIST, let's add it to the document
                     var link = document.createElement('link');
