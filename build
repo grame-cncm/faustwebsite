@@ -1,7 +1,7 @@
 #!/bin/sh
 
-DOMAIN="https://faust.grame.fr/new"
-#DOMAIN="file:///home/romain/reps/faustwebsite/site"
+#DOMAIN="https://faust.grame.fr/new"
+DOMAIN="file:///home/romain/reps/faustwebsite/site"
 #DOMAIN="127.0.0.1:8000"
 
 HEADERINCLUDES=$(cat lib/header-includes.html)
@@ -23,18 +23,44 @@ mkdir site
 cp -r src/img site
 cp -r css site
 
+################################################################################
+# Generating main page
+################################################################################
 echo "$HEADER$(cat src/main.html)$FOOTERF" > site/index.html
 
+################################################################################
+# Making doc folder and generating index for it
+################################################################################
 mkdir site/doc
 echo "$HEADER$MDWPH$(pandoc src/doc/doc.md)$MDWPF$FOOTERF" > site/doc/index.html
 
-mkdir site/doc/libraries
-echo "$HEADER$(cat src/doc/libraries/libraries.html)$FOOTERL" > site/doc/libraries/index.html
-
+################################################################################
+# Generating Manual
+################################################################################
 mkdir site/doc/manual
 cp -r src/doc/manual/img site/doc/manual/img
 cp -r src/doc/manual/misc site/doc/manual/misc 
 echo "$HEADER$(cat src/doc/manual/manual.html)$FOOTERL" > site/doc/manual/index.html
+
+################################################################################
+# Generating Libraries Doc
+################################################################################
+mkdir site/doc/libraries
+echo "$HEADER$(cat src/doc/libraries/libraries.html)$FOOTERL" > site/doc/libraries/index.html
+
+################################################################################
+# Generating Cheat Sheet
+################################################################################
+mkdir site/doc/cheatsheet
+echo "$HEADER$MDWPH$(pandoc src/doc/cheatsheet/cheatsheet.md)$MDWPF$FOOTERF" > site/doc/cheatsheet/index.html
+
+################################################################################
+# Generating Tutorials
+################################################################################
+mkdir site/doc/tutorials
+cp -r src/doc/tutorials/img site/doc/tutorials/img
+cp -r src/doc/tutorials/misc site/doc/tutorials/misc 
+echo "$HEADER$(cat src/doc/tutorials/tutorials.html)$FOOTERL" > site/doc/tutorials/index.html
 
 mkdir site/community
 mkdir site/community/news
@@ -53,3 +79,6 @@ cp -r src/tools/playground site/tools
 # Adding Online Compiler
 # TODO: we coul improve the integration of the online compiler
 cp -r src/tools/onlinecompiler site/tools
+
+mkdir site/tools/other
+echo "$HEADER$MDWPH$(pandoc src/tools/other/other.md)$MDWPF$FOOTERF" > site/tools/other/index.html

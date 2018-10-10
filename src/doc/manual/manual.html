@@ -1,403 +1,403 @@
-<div class="container-fluid"><div class="row faust-doc"><nav id="TOC" class="col-3 faust-doc-content"><div style="height: 100%;overflow-y: scroll;"><ul class="nav flex-column"><ul>
-<li><a href="#introduction">Introduction</a><ul>
-<li><a href="#what-is-faust">What is Faust?</a></li>
-<li><a href="#what-is-faust-good-for">What is Faust Good For?</a></li>
-<li><a href="#what-is-faust-not-so-good-for">What is Faust Not (So) Good For?</a></li>
-<li><a href="#design-principles">Design Principles</a></li>
-<li><a href="#signal-processor-semantic">Signal Processor Semantic</a></li>
+<div class="container-fluid"><div class="row faust-doc"><nav id="TOC" class="col-3 faust-doc-content"><div style="height: 100%;overflow-y: scroll;"><ul class="nav nav-pills flex-column"><ul>
+<li><a class="nav-link" href="#introduction">Introduction</a><ul>
+<li><a class="nav-link" href="#what-is-faust">What is Faust?</a></li>
+<li><a class="nav-link" href="#what-is-faust-good-for">What is Faust Good For?</a></li>
+<li><a class="nav-link" href="#what-is-faust-not-so-good-for">What is Faust Not (So) Good For?</a></li>
+<li><a class="nav-link" href="#design-principles">Design Principles</a></li>
+<li><a class="nav-link" href="#signal-processor-semantic">Signal Processor Semantic</a></li>
 </ul></li>
-<li><a href="#quick-start">Quick Start</a></li>
-<li><a href="#overview-of-the-faust-universe">Overview of the Faust Universe</a><ul>
-<li><a href="#the-faust-distribution">The Faust Distribution</a><ul>
-<li><a href="#command-line-compiler">Command-Line Compiler</a></li>
-<li><a href="#libfaust"><code>libfaust</code></a></li>
-<li><a href="#faust2...-scripts"><code>faust2...</code> Scripts</a></li>
+<li><a class="nav-link" href="#quick-start">Quick Start</a></li>
+<li><a class="nav-link" href="#overview-of-the-faust-universe">Overview of the Faust Universe</a><ul>
+<li><a class="nav-link" href="#the-faust-distribution">The Faust Distribution</a><ul>
+<li><a class="nav-link" href="#command-line-compiler">Command-Line Compiler</a></li>
+<li><a class="nav-link" href="#libfaust"><code>libfaust</code></a></li>
+<li><a class="nav-link" href="#faust2...-scripts"><code>faust2...</code> Scripts</a></li>
 </ul></li>
-<li><a href="#web-tools">Web Tools</a><ul>
-<li><a href="#the-online-editor">The Online Editor</a></li>
-<li><a href="#the-faustplayground">The FaustPlayground</a></li>
-<li><a href="#the-faust-online-compiler">The Faust Online Compiler</a></li>
-<li><a href="#web-services">Web Services</a></li>
+<li><a class="nav-link" href="#web-tools">Web Tools</a><ul>
+<li><a class="nav-link" href="#the-online-editor">The Online Editor</a></li>
+<li><a class="nav-link" href="#the-faustplayground">The FaustPlayground</a></li>
+<li><a class="nav-link" href="#the-faust-online-compiler">The Faust Online Compiler</a></li>
+<li><a class="nav-link" href="#web-services">Web Services</a></li>
 </ul></li>
-<li><a href="#development-tools">Development Tools</a><ul>
-<li><a href="#faustlive">FaustLive</a></li>
-<li><a href="#faustworks">FaustWorks</a></li>
+<li><a class="nav-link" href="#development-tools">Development Tools</a><ul>
+<li><a class="nav-link" href="#faustlive">FaustLive</a></li>
+<li><a class="nav-link" href="#faustworks">FaustWorks</a></li>
 </ul></li>
-<li><a href="#a-quick-tour-of-the-faust-targets">A Quick Tour of the Faust Targets</a><ul>
-<li><a href="#faust2alqt"><code>faust2alqt</code></a></li>
-<li><a href="#faust2alsa"><code>faust2alsa</code></a></li>
-<li><a href="#faust2alsaconsole"><code>faust2alsaconsole</code></a></li>
-<li><a href="#faust2android"><code>faust2android</code></a></li>
-<li><a href="#faust2androidunity"><code>faust2androidunity</code></a></li>
-<li><a href="#faust2api"><code>faust2api</code></a></li>
-<li><a href="#faust2asmjs"><code>faust2asmjs</code></a></li>
-<li><a href="#faust2au"><code>faust2au</code></a></li>
-<li><a href="#faust2bela"><code>faust2bela</code></a></li>
-<li><a href="#faust2caqt"><code>faust2caqt</code></a></li>
-<li><a href="#faust2caqtios"><code>faust2caqtios</code></a></li>
-<li><a href="#faust2ck"><code>faust2ck</code></a></li>
-<li><a href="#faust2csound"><code>faust2csound</code></a></li>
-<li><a href="#faust2dssi"><code>faust2dssi</code></a></li>
-<li><a href="#faust2dummy"><code>faust2dummy</code></a></li>
-<li><a href="#faust2dummymem"><code>faust2dummymem</code></a></li>
-<li><a href="#faust2eps"><code>faust2eps</code></a></li>
-<li><a href="#faust2faustvst"><code>faust2faustvst</code></a></li>
-<li><a href="#faust2firefox"><code>faust2firefox</code></a></li>
-<li><a href="#faust2gen"><code>faust2gen</code></a></li>
-<li><a href="#faust2graph"><code>faust2graph</code></a></li>
-<li><a href="#faust2graphviewer"><code>faust2graphviewer</code></a></li>
-<li><a href="#faust2ios"><code>faust2ios</code></a></li>
-<li><a href="#faust2jack"><code>faust2jack</code></a></li>
-<li><a href="#faust2jackconsole"><code>faust2jackconsole</code></a></li>
-<li><a href="#faust2jackinternal"><code>faust2jackinternal</code></a></li>
-<li><a href="#faust2jackrust"><code>faust2jackrust</code></a></li>
-<li><a href="#faust2jackserver"><code>faust2jackserver</code></a></li>
-<li><a href="#faust2jaqt"><code>faust2jaqt</code></a></li>
-<li><a href="#faust2jaqtchain"><code>faust2jaqtchain</code></a></li>
-<li><a href="#faust2javaswing"><code>faust2javaswing</code></a></li>
-<li><a href="#faust2juce"><code>faust2juce</code></a></li>
-<li><a href="#faust2ladspa"><code>faust2ladspa</code></a></li>
-<li><a href="#faust2linuxunity"><code>faust2linuxunity</code></a></li>
-<li><a href="#faust2lv2"><code>faust2lv2</code></a></li>
-<li><a href="#faust2mathdoc"><code>faust2mathdoc</code></a></li>
-<li><a href="#faust2mathviewer"><code>faust2mathviewer</code></a></li>
-<li><a href="#faust2jmax6"><code>faust2jmax6</code></a></li>
-<li><a href="#faust2md"><code>faust2md</code></a></li>
-<li><a href="#faust2msp"><code>faust2msp</code></a></li>
-<li><a href="#faust2netjackconsole"><code>faust2netjackconsole</code></a></li>
-<li><a href="#faust2netjackqt"><code>faust2netjackqt</code></a></li>
-<li><a href="#faust2nodejs"><code>faust2nodejs</code></a></li>
-<li><a href="#faust2octave"><code>faust2octave</code></a></li>
-<li><a href="#faust2osxiosunity"><code>faust2osxiosunity</code></a></li>
-<li><a href="#faust2owl"><code>faust2owl</code></a></li>
-<li><a href="#faust2paqt"><code>faust2paqt</code></a></li>
-<li><a href="#faust2pdf"><code>faust2pdf</code></a></li>
-<li><a href="#faust2plot"><code>faust2plot</code></a></li>
-<li><a href="#faust2png"><code>faust2png</code></a></li>
-<li><a href="#faust2portaudiorust"><code>faust2portaudiorust</code></a></li>
-<li><a href="#faust2pure"><code>faust2pure</code></a></li>
-<li><a href="#faust2puredata"><code>faust2puredata</code></a></li>
-<li><a href="#faust2raqt"><code>faust2raqt</code></a></li>
-<li><a href="#faust2ros"><code>faust2ros</code></a></li>
-<li><a href="#faust2rosgtk"><code>faust2rosgtk</code></a></li>
-<li><a href="#faust2rpialsaconsole"><code>faust2rpialsaconsole</code></a></li>
-<li><a href="#faust2rpinetjackconsole"><code>faust2rpinetjackconsole</code></a></li>
-<li><a href="#faust2sam"><code>faust2sam</code></a></li>
-<li><a href="#faust2sig"><code>faust2sig</code></a></li>
-<li><a href="#faust2sigviewer"><code>faust2sigviewer</code></a></li>
-<li><a href="#faust2smartkeyb"><code>faust2smartkeyb</code></a></li>
-<li><a href="#faust2sndfile"><code>faust2sndfile</code></a></li>
-<li><a href="#faust2supercollider"><code>faust2supercollider</code></a></li>
-<li><a href="#faust2svg"><code>faust2svg</code></a></li>
-<li><a href="#faust2unity"><code>faust2unity</code></a></li>
-<li><a href="#faust2unitywin"><code>faust2unitywin</code></a></li>
-<li><a href="#faust2vst"><code>faust2vst</code></a></li>
-<li><a href="#faust2vsti"><code>faust2vsti</code></a></li>
-<li><a href="#faust2w32max6"><code>faust2w32max6</code></a></li>
-<li><a href="#faust2w32msp"><code>faust2w32msp</code></a></li>
-<li><a href="#faust2w32puredata"><code>faust2w32puredata</code></a></li>
-<li><a href="#faust2w32vst"><code>faust2w32vst</code></a></li>
-<li><a href="#faust2w64max6"><code>faust2w64max6</code></a></li>
-<li><a href="#faust2wasm"><code>faust2wasm</code></a></li>
-<li><a href="#faust2webaudio"><code>faust2webaudio</code></a></li>
-<li><a href="#faust2webaudioasm"><code>faust2webaudioasm</code></a></li>
-<li><a href="#faust2webaudiowasm"><code>faust2webaudiowasm</code></a></li>
-<li><a href="#faust2webaudiowast"><code>faust2webaudiowast</code></a></li>
-<li><a href="#faust2winunity"><code>faust2winunity</code></a></li>
-</ul></li>
-</ul></li>
-<li><a href="#compiling-and-installing-the-faust-compiler">Compiling and Installing the Faust Compiler</a><ul>
-<li><a href="#basic-faust-installation">Basic Faust Installation</a><ul>
-<li><a href="#unix-systems">Unix Systems</a><ul>
-<li><a href="#compiling-the-compiler">Compiling the Compiler</a></li>
-</ul></li>
-<li><a href="#windows-systems">Windows Systems</a></li>
-</ul></li>
-<li><a href="#advanced-faust-build">Advanced Faust Build</a><ul>
-<li><a href="#faust-backends">Faust Backends</a><ul>
-<li><a href="#selecting-your-backends">Selecting Your Backends</a></li>
-<li><a href="#review-the-compiled-backends">Review the Compiled Backends</a></li>
-</ul></li>
-<li><a href="#building-steps">Building Steps</a><ul>
-<li><a href="#project-generation">Project Generation</a></li>
-<li><a href="#project-form-and-location">Project Form and Location</a></li>
-<li><a href="#project-targets">Project Targets</a></li>
-<li><a href="#re-generating-the-project">Re-Generating the Project</a></li>
-<li><a href="#miscellaneous-project-configuration-targets">Miscellaneous Project Configuration Targets</a></li>
-</ul></li>
-<li><a href="#compiling-using-make-or-cmake">Compiling Using <code>make</code> or <code>cmake</code></a><ul>
-<li><a href="#standard-single-targets">Standard Single Targets</a></li>
-<li><a href="#single-targets-requiring-a-project-configuration">Single Targets Requiring a Project Configuration</a></li>
-<li><a href="#targets-excluded-from-all">Targets Excluded From All</a></li>
-<li><a href="#platform-specific-targets">Platform-Specific Targets</a></li>
-<li><a href="#invoking-targets-from-cmake">Invoking Targets From <code>cmake</code></a></li>
-<li><a href="#the-install-and-uninstall-targets">The Install and Uninstall Targets</a></li>
+<li><a class="nav-link" href="#a-quick-tour-of-the-faust-targets">A Quick Tour of the Faust Targets</a><ul>
+<li><a class="nav-link" href="#faust2alqt"><code>faust2alqt</code></a></li>
+<li><a class="nav-link" href="#faust2alsa"><code>faust2alsa</code></a></li>
+<li><a class="nav-link" href="#faust2alsaconsole"><code>faust2alsaconsole</code></a></li>
+<li><a class="nav-link" href="#faust2android"><code>faust2android</code></a></li>
+<li><a class="nav-link" href="#faust2androidunity"><code>faust2androidunity</code></a></li>
+<li><a class="nav-link" href="#faust2api"><code>faust2api</code></a></li>
+<li><a class="nav-link" href="#faust2asmjs"><code>faust2asmjs</code></a></li>
+<li><a class="nav-link" href="#faust2au"><code>faust2au</code></a></li>
+<li><a class="nav-link" href="#faust2bela"><code>faust2bela</code></a></li>
+<li><a class="nav-link" href="#faust2caqt"><code>faust2caqt</code></a></li>
+<li><a class="nav-link" href="#faust2caqtios"><code>faust2caqtios</code></a></li>
+<li><a class="nav-link" href="#faust2ck"><code>faust2ck</code></a></li>
+<li><a class="nav-link" href="#faust2csound"><code>faust2csound</code></a></li>
+<li><a class="nav-link" href="#faust2dssi"><code>faust2dssi</code></a></li>
+<li><a class="nav-link" href="#faust2dummy"><code>faust2dummy</code></a></li>
+<li><a class="nav-link" href="#faust2dummymem"><code>faust2dummymem</code></a></li>
+<li><a class="nav-link" href="#faust2eps"><code>faust2eps</code></a></li>
+<li><a class="nav-link" href="#faust2faustvst"><code>faust2faustvst</code></a></li>
+<li><a class="nav-link" href="#faust2firefox"><code>faust2firefox</code></a></li>
+<li><a class="nav-link" href="#faust2gen"><code>faust2gen</code></a></li>
+<li><a class="nav-link" href="#faust2graph"><code>faust2graph</code></a></li>
+<li><a class="nav-link" href="#faust2graphviewer"><code>faust2graphviewer</code></a></li>
+<li><a class="nav-link" href="#faust2ios"><code>faust2ios</code></a></li>
+<li><a class="nav-link" href="#faust2jack"><code>faust2jack</code></a></li>
+<li><a class="nav-link" href="#faust2jackconsole"><code>faust2jackconsole</code></a></li>
+<li><a class="nav-link" href="#faust2jackinternal"><code>faust2jackinternal</code></a></li>
+<li><a class="nav-link" href="#faust2jackrust"><code>faust2jackrust</code></a></li>
+<li><a class="nav-link" href="#faust2jackserver"><code>faust2jackserver</code></a></li>
+<li><a class="nav-link" href="#faust2jaqt"><code>faust2jaqt</code></a></li>
+<li><a class="nav-link" href="#faust2jaqtchain"><code>faust2jaqtchain</code></a></li>
+<li><a class="nav-link" href="#faust2javaswing"><code>faust2javaswing</code></a></li>
+<li><a class="nav-link" href="#faust2juce"><code>faust2juce</code></a></li>
+<li><a class="nav-link" href="#faust2ladspa"><code>faust2ladspa</code></a></li>
+<li><a class="nav-link" href="#faust2linuxunity"><code>faust2linuxunity</code></a></li>
+<li><a class="nav-link" href="#faust2lv2"><code>faust2lv2</code></a></li>
+<li><a class="nav-link" href="#faust2mathdoc"><code>faust2mathdoc</code></a></li>
+<li><a class="nav-link" href="#faust2mathviewer"><code>faust2mathviewer</code></a></li>
+<li><a class="nav-link" href="#faust2jmax6"><code>faust2jmax6</code></a></li>
+<li><a class="nav-link" href="#faust2md"><code>faust2md</code></a></li>
+<li><a class="nav-link" href="#faust2msp"><code>faust2msp</code></a></li>
+<li><a class="nav-link" href="#faust2netjackconsole"><code>faust2netjackconsole</code></a></li>
+<li><a class="nav-link" href="#faust2netjackqt"><code>faust2netjackqt</code></a></li>
+<li><a class="nav-link" href="#faust2nodejs"><code>faust2nodejs</code></a></li>
+<li><a class="nav-link" href="#faust2octave"><code>faust2octave</code></a></li>
+<li><a class="nav-link" href="#faust2osxiosunity"><code>faust2osxiosunity</code></a></li>
+<li><a class="nav-link" href="#faust2owl"><code>faust2owl</code></a></li>
+<li><a class="nav-link" href="#faust2paqt"><code>faust2paqt</code></a></li>
+<li><a class="nav-link" href="#faust2pdf"><code>faust2pdf</code></a></li>
+<li><a class="nav-link" href="#faust2plot"><code>faust2plot</code></a></li>
+<li><a class="nav-link" href="#faust2png"><code>faust2png</code></a></li>
+<li><a class="nav-link" href="#faust2portaudiorust"><code>faust2portaudiorust</code></a></li>
+<li><a class="nav-link" href="#faust2pure"><code>faust2pure</code></a></li>
+<li><a class="nav-link" href="#faust2puredata"><code>faust2puredata</code></a></li>
+<li><a class="nav-link" href="#faust2raqt"><code>faust2raqt</code></a></li>
+<li><a class="nav-link" href="#faust2ros"><code>faust2ros</code></a></li>
+<li><a class="nav-link" href="#faust2rosgtk"><code>faust2rosgtk</code></a></li>
+<li><a class="nav-link" href="#faust2rpialsaconsole"><code>faust2rpialsaconsole</code></a></li>
+<li><a class="nav-link" href="#faust2rpinetjackconsole"><code>faust2rpinetjackconsole</code></a></li>
+<li><a class="nav-link" href="#faust2sam"><code>faust2sam</code></a></li>
+<li><a class="nav-link" href="#faust2sig"><code>faust2sig</code></a></li>
+<li><a class="nav-link" href="#faust2sigviewer"><code>faust2sigviewer</code></a></li>
+<li><a class="nav-link" href="#faust2smartkeyb"><code>faust2smartkeyb</code></a></li>
+<li><a class="nav-link" href="#faust2sndfile"><code>faust2sndfile</code></a></li>
+<li><a class="nav-link" href="#faust2supercollider"><code>faust2supercollider</code></a></li>
+<li><a class="nav-link" href="#faust2svg"><code>faust2svg</code></a></li>
+<li><a class="nav-link" href="#faust2unity"><code>faust2unity</code></a></li>
+<li><a class="nav-link" href="#faust2unitywin"><code>faust2unitywin</code></a></li>
+<li><a class="nav-link" href="#faust2vst"><code>faust2vst</code></a></li>
+<li><a class="nav-link" href="#faust2vsti"><code>faust2vsti</code></a></li>
+<li><a class="nav-link" href="#faust2w32max6"><code>faust2w32max6</code></a></li>
+<li><a class="nav-link" href="#faust2w32msp"><code>faust2w32msp</code></a></li>
+<li><a class="nav-link" href="#faust2w32puredata"><code>faust2w32puredata</code></a></li>
+<li><a class="nav-link" href="#faust2w32vst"><code>faust2w32vst</code></a></li>
+<li><a class="nav-link" href="#faust2w64max6"><code>faust2w64max6</code></a></li>
+<li><a class="nav-link" href="#faust2wasm"><code>faust2wasm</code></a></li>
+<li><a class="nav-link" href="#faust2webaudio"><code>faust2webaudio</code></a></li>
+<li><a class="nav-link" href="#faust2webaudioasm"><code>faust2webaudioasm</code></a></li>
+<li><a class="nav-link" href="#faust2webaudiowasm"><code>faust2webaudiowasm</code></a></li>
+<li><a class="nav-link" href="#faust2webaudiowast"><code>faust2webaudiowast</code></a></li>
+<li><a class="nav-link" href="#faust2winunity"><code>faust2winunity</code></a></li>
 </ul></li>
 </ul></li>
+<li><a class="nav-link" href="#compiling-and-installing-the-faust-compiler">Compiling and Installing the Faust Compiler</a><ul>
+<li><a class="nav-link" href="#basic-faust-installation">Basic Faust Installation</a><ul>
+<li><a class="nav-link" href="#unix-systems">Unix Systems</a><ul>
+<li><a class="nav-link" href="#compiling-the-compiler">Compiling the Compiler</a></li>
 </ul></li>
-<li><a href="#faust-syntax">Faust Syntax</a><ul>
-<li><a href="#faust-program">Faust Program</a></li>
-<li><a href="#statements">Statements</a><ul>
-<li><a href="#metadata">Metadata</a></li>
-<li><a href="#global-metadata">Global Metadata</a></li>
-<li><a href="#function-metadata">Function Metadata</a></li>
-<li><a href="#standard-metadata">Standard Metadata</a></li>
-<li><a href="#imports">Imports</a></li>
-<li><a href="#documentation-tags">Documentation Tags</a></li>
+<li><a class="nav-link" href="#windows-systems">Windows Systems</a></li>
 </ul></li>
-<li><a href="#definitions">Definitions</a><ul>
-<li><a href="#simple-definitions">Simple Definitions</a></li>
+<li><a class="nav-link" href="#advanced-faust-build">Advanced Faust Build</a><ul>
+<li><a class="nav-link" href="#faust-backends">Faust Backends</a><ul>
+<li><a class="nav-link" href="#selecting-your-backends">Selecting Your Backends</a></li>
+<li><a class="nav-link" href="#review-the-compiled-backends">Review the Compiled Backends</a></li>
 </ul></li>
-<li><a href="#function-definitions">Function Definitions</a></li>
-<li><a href="#definitions-with-pattern-matching">Definitions with pattern matching</a></li>
-<li><a href="#expressions">Expressions</a><ul>
-<li><a href="#diagram-expressions">Diagram Expressions</a><ul>
-<li><a href="#diagram-composition-operations">Diagram Composition Operations</a></li>
-<li><a href="#parallel-composition">Parallel Composition</a></li>
-<li><a href="#sequential-composition">Sequential Composition</a></li>
-<li><a href="#split-composition">Split Composition</a></li>
-<li><a href="#merge-composition">Merge Composition</a></li>
-<li><a href="#recursive-composition">Recursive Composition</a></li>
-<li><a href="#inputs-and-outputs-of-an-expression">Inputs and Outputs of an Expression</a></li>
-<li><a href="#iterations">Iterations</a></li>
-<li><a href="#par-iteration"><code>par</code> Iteration</a></li>
-<li><a href="#seq-iteration"><code>seq</code> Iteration</a></li>
-<li><a href="#sum-iteration"><code>sum</code> Iteration</a></li>
-<li><a href="#prod-iteration"><code>prod</code> Iteration</a></li>
+<li><a class="nav-link" href="#building-steps">Building Steps</a><ul>
+<li><a class="nav-link" href="#project-generation">Project Generation</a></li>
+<li><a class="nav-link" href="#project-form-and-location">Project Form and Location</a></li>
+<li><a class="nav-link" href="#project-targets">Project Targets</a></li>
+<li><a class="nav-link" href="#re-generating-the-project">Re-Generating the Project</a></li>
+<li><a class="nav-link" href="#miscellaneous-project-configuration-targets">Miscellaneous Project Configuration Targets</a></li>
 </ul></li>
-<li><a href="#infix-notation-and-other-syntax-extensions">Infix Notation and Other Syntax Extensions</a><ul>
-<li><a href="#infix-operators">Infix Operators</a></li>
-<li><a href="#prefix-notation">Prefix Notation</a></li>
-<li><a href="#partial-application">Partial Application</a></li>
-</ul></li>
-<li><a href="#time-expression"><code>'</code> Time Expression</a></li>
-<li><a href="#time-expression-1"><code>@</code> Time Expression</a></li>
-<li><a href="#environment-expressions">Environment Expressions</a><ul>
-<li><a href="#with-expression"><code>with</code> Expression</a></li>
-<li><a href="#letrec-expression"><code>letrec</code> Expression</a></li>
-<li><a href="#environment-expression"><code>environment</code> Expression</a></li>
-<li><a href="#access-expression">Access Expression</a></li>
-<li><a href="#library-expression"><code>library</code> Expression</a></li>
-<li><a href="#component-expression"><code>component</code> Expression</a></li>
-<li><a href="#explicit-substitution">Explicit Substitution</a></li>
-</ul></li>
-<li><a href="#foreign-expressions">Foreign Expressions</a><ul>
-<li><a href="#ffunction"><code>ffunction</code></a></li>
-<li><a href="#signature">Signature</a></li>
-<li><a href="#types">Types</a></li>
-<li><a href="#variables-and-constants">Variables and Constants</a></li>
-<li><a href="#file-include">File Include</a></li>
-<li><a href="#library-file">Library File</a></li>
-</ul></li>
-<li><a href="#applications-and-abstractions">Applications and Abstractions</a><ul>
-<li><a href="#abstractions">Abstractions</a></li>
-<li><a href="#applications">Applications</a></li>
-<li><a href="#pattern-matching">Pattern Matching</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#primitives">Primitives</a><ul>
-<li><a href="#numbers">Numbers</a></li>
-<li><a href="#waveform-primitive"><code>waveform</code> Primitive</a></li>
-<li><a href="#soundfile-primitive"><code>soundfile</code> Primitive</a></li>
-<li><a href="#c-equivalent-primitives">C-Equivalent Primitives</a><ul>
-<li><a href="#integer-number">Integer Number</a></li>
-<li><a href="#floating-point-number">Floating Point Number</a></li>
-<li><a href="#identity-function">Identity Function</a></li>
-<li><a href="#cut-primitive">Cut Primitive</a></li>
-<li><a href="#int-primitive"><code>int</code> Primitive</a></li>
-<li><a href="#float-primitive"><code>float</code> Primitive</a></li>
-<li><a href="#add-primitive">Add Primitive</a></li>
-<li><a href="#subtract-primitive">Subtract Primitive</a></li>
-<li><a href="#multiply-primitive">Multiply Primitive</a></li>
-<li><a href="#divide-primitive">Divide Primitive</a></li>
-<li><a href="#power-primitive">Power Primitive</a></li>
-<li><a href="#modulo-primitive">Modulo Primitive</a></li>
-<li><a href="#and-primitive">AND Primitive</a></li>
-<li><a href="#or-primitive">OR Primitive</a></li>
-<li><a href="#xor-primitive">XOR Primitive</a></li>
-<li><a href="#left-shift-primitive">Left Shift Primitive</a></li>
-<li><a href="#right-shift-primitive">Right Shift Primitive</a></li>
-<li><a href="#smaller-than-primitive">Smaller Than Primitive</a></li>
-<li><a href="#smaller-or-equal-than-primitive">Smaller or Equal Than Primitive</a></li>
-<li><a href="#greater-than-primitive">Greater Than Primitive</a></li>
-<li><a href="#greater-or-equal-than-primitive">Greater or Equal Than Primitive</a></li>
-<li><a href="#equal-to-primitive">Equal to Primitive</a></li>
-<li><a href="#different-than-primitive">Different Than Primitive</a></li>
-</ul></li>
-<li><a href="#math.h-equivalent-primitives"><code>math.h</code>-Equivalent Primitives</a><ul>
-<li><a href="#acos-primitive"><code>acos</code> Primitive</a></li>
-<li><a href="#asin-primitive"><code>asin</code> Primitive</a></li>
-<li><a href="#atan-primitive"><code>atan</code> Primitive</a></li>
-<li><a href="#atan2-primitive"><code>atan2</code> Primitive</a></li>
-<li><a href="#cos-primitive"><code>cos</code> Primitive</a></li>
-<li><a href="#sin-primitive"><code>sin</code> Primitive</a></li>
-<li><a href="#tan-primitive"><code>tan</code> Primitive</a></li>
-<li><a href="#exp-primitive"><code>exp</code> Primitive</a></li>
-<li><a href="#log-primitive"><code>log</code> Primitive</a></li>
-<li><a href="#log10-primitive"><code>log10</code> Primitive</a></li>
-<li><a href="#pow-primitive"><code>pow</code> Primitive</a></li>
-<li><a href="#sqrt-primitive"><code>sqrt</code> Primitive</a></li>
-<li><a href="#abs-primitive"><code>abs</code> Primitive</a></li>
-<li><a href="#min-primitive"><code>min</code> Primitive</a></li>
-<li><a href="#max-primitive"><code>max</code> Primitive</a></li>
-<li><a href="#fmod-primitive"><code>fmod</code> Primitive</a></li>
-<li><a href="#remainder-primitive"><code>remainder</code> Primitive</a></li>
-<li><a href="#floor-primitive"><code>floor</code> Primitive</a></li>
-<li><a href="#ceil-primitive"><code>ceil</code> Primitive</a></li>
-<li><a href="#rint-primitive"><code>rint</code> Primitive</a></li>
-</ul></li>
-<li><a href="#delay-primitives-and-modifiers">Delay Primitives and Modifiers</a><ul>
-<li><a href="#mem-primitive"><code>mem</code> Primitive</a></li>
-<li><a href="#modifier"><code>'</code> Modifier</a></li>
-<li><a href="#primitive"><code>@</code> Primitive</a></li>
-</ul></li>
-<li><a href="#table-primitives">Table Primitives</a><ul>
-<li><a href="#rdtable-primitive"><code>rdtable</code> Primitive</a></li>
-<li><a href="#rwtable-primitive"><code>rwtable</code> Primitive</a></li>
-</ul></li>
-<li><a href="#selector-primitives">Selector Primitives</a><ul>
-<li><a href="#select2-primitives"><code>select2</code> Primitives</a></li>
-<li><a href="#select3-primitives"><code>select3</code> Primitives</a></li>
-</ul></li>
-<li><a href="#user-interface-primitives-and-configuration">User Interface Primitives and Configuration</a><ul>
-<li><a href="#button-primitive"><code>button</code> Primitive</a></li>
-<li><a href="#checkbox-primitive"><code>checkbox</code> Primitive</a></li>
-<li><a href="#hslider-primitive"><code>hslider</code> Primitive</a></li>
-<li><a href="#vslider-primitive"><code>vslider</code> Primitive</a></li>
-<li><a href="#nentry-primitive"><code>nentry</code> Primitive</a></li>
-<li><a href="#hgroup-primitive"><code>hgroup</code> Primitive</a></li>
-<li><a href="#vgroup-primitive"><code>vgroup</code> Primitive</a></li>
-<li><a href="#tgroup-primitive"><code>tgroup</code> Primitive</a></li>
-<li><a href="#vbargraph-primitive"><code>vbargraph</code> Primitive</a></li>
-<li><a href="#hbargraph-primitive"><code>hbargraph</code> Primitive</a></li>
-<li><a href="#attach-primitive"><code>attach</code> Primitive</a></li>
-<li><a href="#variable-parts-of-a-label">Variable Parts of a Label</a></li>
-<li><a href="#labels-as-pathnames">Labels as Pathnames</a></li>
-<li><a href="#smoothing">Smoothing</a></li>
-<li><a href="#links-to-generated-code">Links to Generated Code</a></li>
-</ul></li>
-<li><a href="#ui-label-metadata">UI Label Metadata</a><ul>
-<li><a href="#ordering-ui-elements">Ordering UI Elements</a></li>
-<li><a href="#global-ui-metadata">Global UI Metadata</a></li>
-<li><a href="#styleknob-metadata"><code>[style:knob]</code> Metadata</a></li>
-<li><a href="#stylemenu-metadata"><code>[style:menu]</code> Metadata</a></li>
-<li><a href="#styleradio-metadata"><code>[style:radio]</code> Metadata</a></li>
-<li><a href="#styleled-metadata"><code>[style:led]</code> Metadata</a></li>
-<li><a href="#unitdb-metadata"><code>[unit:dB]</code> Metadata</a></li>
-<li><a href="#unitxx-metadata"><code>[unit:xx]</code> Metadata</a></li>
-<li><a href="#scalexx-metadata"><code>[scale:xx]</code> Metadata</a></li>
-<li><a href="#tooltipxx-metadata"><code>[tooltip:xx]</code> Metadata</a></li>
-<li><a href="#hiddenxx-metadata"><code>[hidden:xx]</code> Metadata</a></li>
-</ul></li>
-<li><a href="#sensors-control-metadata">Sensors Control Metadata</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#using-the-faust-compiler">Using the Faust Compiler</a><ul>
-<li><a href="#structure-of-the-generated-code">Structure of the Generated Code</a></li>
-<li><a href="#compilation-options">Compilation Options</a></li>
-<li><a href="#controlling-code-generation">Controlling Code Generation</a><ul>
-<li><a href="#vector-code-generation">Vector Code Generation</a></li>
-<li><a href="#parallel-code-generation">Parallel Code Generation</a><ul>
-<li><a href="#the-openmp-code-generator">The OpenMP Code Generator</a></li>
-<li><a href="#adding-open-mp-directives">Adding Open MP Directives</a></li>
-<li><a href="#example-of-parallel-openmp-code">Example of Parallel OpenMP Code</a></li>
-<li><a href="#the-scheduler-code-generator">The Scheduler Code Generator</a></li>
-<li><a href="#example-of-parallel-scheduler-code">Example of Parallel Scheduler Code</a></li>
+<li><a class="nav-link" href="#compiling-using-make-or-cmake">Compiling Using <code>make</code> or <code>cmake</code></a><ul>
+<li><a class="nav-link" href="#standard-single-targets">Standard Single Targets</a></li>
+<li><a class="nav-link" href="#single-targets-requiring-a-project-configuration">Single Targets Requiring a Project Configuration</a></li>
+<li><a class="nav-link" href="#targets-excluded-from-all">Targets Excluded From All</a></li>
+<li><a class="nav-link" href="#platform-specific-targets">Platform-Specific Targets</a></li>
+<li><a class="nav-link" href="#invoking-targets-from-cmake">Invoking Targets From <code>cmake</code></a></li>
+<li><a class="nav-link" href="#the-install-and-uninstall-targets">The Install and Uninstall Targets</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
-<li><a href="#embedding-the-faust-compiler-using-libfaust">Embedding the Faust Compiler Using <code>libfaust</code></a><ul>
-<li><a href="#dynamic-compilation-chain">Dynamic Compilation Chain</a></li>
-<li><a href="#llvm">LLVM</a></li>
-<li><a href="#compiling-in-memory">Compiling in Memory</a></li>
-<li><a href="#savingrestoring-the-factory">Saving/Restoring the Factory</a></li>
-<li><a href="#additional-functions">Additional Functions</a></li>
-<li><a href="#using-the-libfaust-library">Using the <code>libfaust</code> Library</a></li>
-<li><a href="#use-case-examples">Use Case Examples</a></li>
+<li><a class="nav-link" href="#faust-syntax">Faust Syntax</a><ul>
+<li><a class="nav-link" href="#faust-program">Faust Program</a></li>
+<li><a class="nav-link" href="#statements">Statements</a><ul>
+<li><a class="nav-link" href="#metadata">Metadata</a></li>
+<li><a class="nav-link" href="#global-metadata">Global Metadata</a></li>
+<li><a class="nav-link" href="#function-metadata">Function Metadata</a></li>
+<li><a class="nav-link" href="#standard-metadata">Standard Metadata</a></li>
+<li><a class="nav-link" href="#imports">Imports</a></li>
+<li><a class="nav-link" href="#documentation-tags">Documentation Tags</a></li>
 </ul></li>
-<li><a href="#osc-support">OSC Support</a><ul>
-<li><a href="#overview">Overview</a></li>
-<li><a href="#simple-example">Simple Example</a></li>
-<li><a href="#automatic-port-allocation">Automatic Port Allocation</a></li>
-<li><a href="#discovering-osc-applications">Discovering OSC Applications</a></li>
-<li><a href="#discovering-the-osc-interface-of-an-application">Discovering the OSC Interface of an Application</a></li>
-<li><a href="#widgets-osc-address">Widget’s OSC Address</a></li>
-<li><a href="#controlling-the-application-via-osc">Controlling the Application Via OSC</a></li>
-<li><a href="#turning-transmission-on">Turning Transmission ON</a></li>
-<li><a href="#filtering-osc-messages">Filtering OSC Messages</a></li>
-<li><a href="#using-osc-aliases">Using OSC Aliases</a></li>
-<li><a href="#osc-cheat-sheet">OSC Cheat Sheet</a><ul>
-<li><a href="#default-ports">Default Ports</a></li>
-<li><a href="#command-line-options">Command Line Options</a></li>
-<li><a href="#discovery-messages">Discovery Messages</a></li>
-<li><a href="#control-messages">Control Messages</a></li>
-<li><a href="#alias">Alias</a></li>
+<li><a class="nav-link" href="#definitions">Definitions</a><ul>
+<li><a class="nav-link" href="#simple-definitions">Simple Definitions</a></li>
 </ul></li>
+<li><a class="nav-link" href="#function-definitions">Function Definitions</a></li>
+<li><a class="nav-link" href="#definitions-with-pattern-matching">Definitions with pattern matching</a></li>
+<li><a class="nav-link" href="#expressions">Expressions</a><ul>
+<li><a class="nav-link" href="#diagram-expressions">Diagram Expressions</a><ul>
+<li><a class="nav-link" href="#diagram-composition-operations">Diagram Composition Operations</a></li>
+<li><a class="nav-link" href="#parallel-composition">Parallel Composition</a></li>
+<li><a class="nav-link" href="#sequential-composition">Sequential Composition</a></li>
+<li><a class="nav-link" href="#split-composition">Split Composition</a></li>
+<li><a class="nav-link" href="#merge-composition">Merge Composition</a></li>
+<li><a class="nav-link" href="#recursive-composition">Recursive Composition</a></li>
+<li><a class="nav-link" href="#inputs-and-outputs-of-an-expression">Inputs and Outputs of an Expression</a></li>
+<li><a class="nav-link" href="#iterations">Iterations</a></li>
+<li><a class="nav-link" href="#par-iteration"><code>par</code> Iteration</a></li>
+<li><a class="nav-link" href="#seq-iteration"><code>seq</code> Iteration</a></li>
+<li><a class="nav-link" href="#sum-iteration"><code>sum</code> Iteration</a></li>
+<li><a class="nav-link" href="#prod-iteration"><code>prod</code> Iteration</a></li>
 </ul></li>
-<li><a href="#http-support">HTTP Support</a><ul>
-<li><a href="#a-simple-example">A Simple Example</a></li>
-<li><a href="#json-description-of-the-user-interface">JSON Description of the User Interface</a></li>
-<li><a href="#querying-the-state-of-the-application">Querying the State of the Application</a></li>
-<li><a href="#changing-the-value-of-a-widget">Changing the Value of a Widget</a></li>
-<li><a href="#proxy-control-access-to-the-web-server">Proxy Control Access to the Web Server</a></li>
-<li><a href="#http-cheat-sheet">HTTP Cheat Sheet</a><ul>
-<li><a href="#default-ports-1">Default Ports</a></li>
-<li><a href="#command-line-options-1">Command Line Options</a></li>
-<li><a href="#urls">URLs</a></li>
-<li><a href="#json">JSON</a></li>
+<li><a class="nav-link" href="#infix-notation-and-other-syntax-extensions">Infix Notation and Other Syntax Extensions</a><ul>
+<li><a class="nav-link" href="#infix-operators">Infix Operators</a></li>
+<li><a class="nav-link" href="#prefix-notation">Prefix Notation</a></li>
+<li><a class="nav-link" href="#partial-application">Partial Application</a></li>
 </ul></li>
+<li><a class="nav-link" href="#time-expression"><code>'</code> Time Expression</a></li>
+<li><a class="nav-link" href="#time-expression-1"><code>@</code> Time Expression</a></li>
+<li><a class="nav-link" href="#environment-expressions">Environment Expressions</a><ul>
+<li><a class="nav-link" href="#with-expression"><code>with</code> Expression</a></li>
+<li><a class="nav-link" href="#letrec-expression"><code>letrec</code> Expression</a></li>
+<li><a class="nav-link" href="#environment-expression"><code>environment</code> Expression</a></li>
+<li><a class="nav-link" href="#access-expression">Access Expression</a></li>
+<li><a class="nav-link" href="#library-expression"><code>library</code> Expression</a></li>
+<li><a class="nav-link" href="#component-expression"><code>component</code> Expression</a></li>
+<li><a class="nav-link" href="#explicit-substitution">Explicit Substitution</a></li>
 </ul></li>
-<li><a href="#midi-and-polyphony-support">MIDI and Polyphony Support</a><ul>
-<li><a href="#configuring-midi-in-faust">Configuring MIDI in Faust</a><ul>
-<li><a href="#midictrl-num-metadata"><code>[midi:ctrl num]</code> Metadata</a></li>
-<li><a href="#midikeyon-midikey-metadata"><code>[midi:keyon midikey]</code> Metadata</a></li>
-<li><a href="#midikeyoff-midikey-metadata"><code>[midi:keyoff midikey]</code> Metadata</a></li>
-<li><a href="#midikey-midikey-metadata"><code>[midi:key midikey]</code> Metadata</a></li>
-<li><a href="#midikeypress-midikey-metadata"><code>[midi:keypress midikey]</code> Metadata</a></li>
-<li><a href="#midipitchwheel-metadata"><code>[midi:pitchwheel]</code> Metadata</a></li>
-<li><a href="#midistart-metadata"><code>[midi:start]</code> Metadata</a></li>
-<li><a href="#midistop-metadata"><code>[midi:stop]</code> Metadata</a></li>
-<li><a href="#midiclock-metadata"><code>[midi:clock]</code> Metadata</a></li>
-<li><a href="#midi-sync">MIDI Sync</a></li>
+<li><a class="nav-link" href="#foreign-expressions">Foreign Expressions</a><ul>
+<li><a class="nav-link" href="#ffunction"><code>ffunction</code></a></li>
+<li><a class="nav-link" href="#signature">Signature</a></li>
+<li><a class="nav-link" href="#types">Types</a></li>
+<li><a class="nav-link" href="#variables-and-constants">Variables and Constants</a></li>
+<li><a class="nav-link" href="#file-include">File Include</a></li>
+<li><a class="nav-link" href="#library-file">Library File</a></li>
 </ul></li>
-<li><a href="#midi-polyphony-support">MIDI Polyphony Support</a><ul>
-<li><a href="#standard-polyphony-parameters">Standard Polyphony Parameters</a></li>
-<li><a href="#configuring-and-activating-polyphony">Configuring and Activating Polyphony</a></li>
-<li><a href="#audio-effects-and-polyphonic-synthesizer">Audio Effects and Polyphonic Synthesizer</a></li>
-<li><a href="#polyphony-and-continuous-pitch">Polyphony and Continuous Pitch</a></li>
-<li><a href="#complete-example-sustain-pedal-and-additional-parameters">Complete Example: Sustain Pedal and Additional Parameters</a></li>
+<li><a class="nav-link" href="#applications-and-abstractions">Applications and Abstractions</a><ul>
+<li><a class="nav-link" href="#abstractions">Abstractions</a></li>
+<li><a class="nav-link" href="#applications">Applications</a></li>
+<li><a class="nav-link" href="#pattern-matching">Pattern Matching</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#architecture-files">Architecture Files</a></li>
-<li><a href="#mathematical-documentation">Mathematical Documentation</a><ul>
-<li><a href="#goals-of-the-mathdoc">Goals of the Mathdoc</a></li>
-<li><a href="#installation-requirements">Installation Requirements</a></li>
-<li><a href="#generating-the-mathdoc">Generating the Mathdoc</a><ul>
-<li><a href="#invoking-the--mdoc-option">Invoking the <code>-mdoc</code> Option</a></li>
-<li><a href="#invoking-faust2mathdoc">Invoking <code>faust2mathdoc</code></a></li>
-<li><a href="#online-examples">Online Examples</a></li>
+<li><a class="nav-link" href="#primitives">Primitives</a><ul>
+<li><a class="nav-link" href="#numbers">Numbers</a></li>
+<li><a class="nav-link" href="#waveform-primitive"><code>waveform</code> Primitive</a></li>
+<li><a class="nav-link" href="#soundfile-primitive"><code>soundfile</code> Primitive</a></li>
+<li><a class="nav-link" href="#c-equivalent-primitives">C-Equivalent Primitives</a><ul>
+<li><a class="nav-link" href="#integer-number">Integer Number</a></li>
+<li><a class="nav-link" href="#floating-point-number">Floating Point Number</a></li>
+<li><a class="nav-link" href="#identity-function">Identity Function</a></li>
+<li><a class="nav-link" href="#cut-primitive">Cut Primitive</a></li>
+<li><a class="nav-link" href="#int-primitive"><code>int</code> Primitive</a></li>
+<li><a class="nav-link" href="#float-primitive"><code>float</code> Primitive</a></li>
+<li><a class="nav-link" href="#add-primitive">Add Primitive</a></li>
+<li><a class="nav-link" href="#subtract-primitive">Subtract Primitive</a></li>
+<li><a class="nav-link" href="#multiply-primitive">Multiply Primitive</a></li>
+<li><a class="nav-link" href="#divide-primitive">Divide Primitive</a></li>
+<li><a class="nav-link" href="#power-primitive">Power Primitive</a></li>
+<li><a class="nav-link" href="#modulo-primitive">Modulo Primitive</a></li>
+<li><a class="nav-link" href="#and-primitive">AND Primitive</a></li>
+<li><a class="nav-link" href="#or-primitive">OR Primitive</a></li>
+<li><a class="nav-link" href="#xor-primitive">XOR Primitive</a></li>
+<li><a class="nav-link" href="#left-shift-primitive">Left Shift Primitive</a></li>
+<li><a class="nav-link" href="#right-shift-primitive">Right Shift Primitive</a></li>
+<li><a class="nav-link" href="#smaller-than-primitive">Smaller Than Primitive</a></li>
+<li><a class="nav-link" href="#smaller-or-equal-than-primitive">Smaller or Equal Than Primitive</a></li>
+<li><a class="nav-link" href="#greater-than-primitive">Greater Than Primitive</a></li>
+<li><a class="nav-link" href="#greater-or-equal-than-primitive">Greater or Equal Than Primitive</a></li>
+<li><a class="nav-link" href="#equal-to-primitive">Equal to Primitive</a></li>
+<li><a class="nav-link" href="#different-than-primitive">Different Than Primitive</a></li>
 </ul></li>
-<li><a href="#automatic-documentation">Automatic Documentation</a></li>
-<li><a href="#manual-documentation">Manual Documentation</a><ul>
-<li><a href="#six-tags">Six Tags</a></li>
-<li><a href="#the-mdoc-top-level-tags">The <code>mdoc</code> Top-Level Tags</a></li>
+<li><a class="nav-link" href="#math.h-equivalent-primitives"><code>math.h</code>-Equivalent Primitives</a><ul>
+<li><a class="nav-link" href="#acos-primitive"><code>acos</code> Primitive</a></li>
+<li><a class="nav-link" href="#asin-primitive"><code>asin</code> Primitive</a></li>
+<li><a class="nav-link" href="#atan-primitive"><code>atan</code> Primitive</a></li>
+<li><a class="nav-link" href="#atan2-primitive"><code>atan2</code> Primitive</a></li>
+<li><a class="nav-link" href="#cos-primitive"><code>cos</code> Primitive</a></li>
+<li><a class="nav-link" href="#sin-primitive"><code>sin</code> Primitive</a></li>
+<li><a class="nav-link" href="#tan-primitive"><code>tan</code> Primitive</a></li>
+<li><a class="nav-link" href="#exp-primitive"><code>exp</code> Primitive</a></li>
+<li><a class="nav-link" href="#log-primitive"><code>log</code> Primitive</a></li>
+<li><a class="nav-link" href="#log10-primitive"><code>log10</code> Primitive</a></li>
+<li><a class="nav-link" href="#pow-primitive"><code>pow</code> Primitive</a></li>
+<li><a class="nav-link" href="#sqrt-primitive"><code>sqrt</code> Primitive</a></li>
+<li><a class="nav-link" href="#abs-primitive"><code>abs</code> Primitive</a></li>
+<li><a class="nav-link" href="#min-primitive"><code>min</code> Primitive</a></li>
+<li><a class="nav-link" href="#max-primitive"><code>max</code> Primitive</a></li>
+<li><a class="nav-link" href="#fmod-primitive"><code>fmod</code> Primitive</a></li>
+<li><a class="nav-link" href="#remainder-primitive"><code>remainder</code> Primitive</a></li>
+<li><a class="nav-link" href="#floor-primitive"><code>floor</code> Primitive</a></li>
+<li><a class="nav-link" href="#ceil-primitive"><code>ceil</code> Primitive</a></li>
+<li><a class="nav-link" href="#rint-primitive"><code>rint</code> Primitive</a></li>
 </ul></li>
-<li><a href="#an-example-of-manual-mathdoc">An Example of Manual Mathdoc</a><ul>
-<li><a href="#the--stripmdoc-option">The <code>-stripmdoc</code> Option</a></li>
+<li><a class="nav-link" href="#delay-primitives-and-modifiers">Delay Primitives and Modifiers</a><ul>
+<li><a class="nav-link" href="#mem-primitive"><code>mem</code> Primitive</a></li>
+<li><a class="nav-link" href="#modifier"><code>'</code> Modifier</a></li>
+<li><a class="nav-link" href="#primitive"><code>@</code> Primitive</a></li>
 </ul></li>
-<li><a href="#localization-of-mathdoc-files">Localization of Mathdoc Files</a></li>
-<li><a href="#summary-of-the-mathdoc-generation-steps">Summary of the Mathdoc Generation Steps</a></li>
+<li><a class="nav-link" href="#table-primitives">Table Primitives</a><ul>
+<li><a class="nav-link" href="#rdtable-primitive"><code>rdtable</code> Primitive</a></li>
+<li><a class="nav-link" href="#rwtable-primitive"><code>rwtable</code> Primitive</a></li>
 </ul></li>
-<li><a href="#acknowledgments">Acknowledgments</a></li>
-<li><a href="#tutorial-adding-faust-dsp-support-to-your-juce-plug-ins">Tutorial: Adding Faust DSP Support to Your JUCE Plug-ins</a><ul>
-<li><a href="#the-old-way-brut-force-method">“The Old Way”: Brut-Force Method</a></li>
-<li><a href="#simple-synth-plug-in">Simple Synth Plug-In</a><ul>
-<li><a href="#generating-the-dsp-engine">Generating the DSP Engine</a></li>
-<li><a href="#creating-an-empty-juce-plug-in-project">Creating an Empty JUCE Plug-In Project</a></li>
+<li><a class="nav-link" href="#selector-primitives">Selector Primitives</a><ul>
+<li><a class="nav-link" href="#select2-primitives"><code>select2</code> Primitives</a></li>
+<li><a class="nav-link" href="#select3-primitives"><code>select3</code> Primitives</a></li>
 </ul></li>
-<li><a href="#creating-and-using-a-polyphonic-faust-dsp-object">Creating and Using a Polyphonic Faust DSP Object</a></li>
+<li><a class="nav-link" href="#user-interface-primitives-and-configuration">User Interface Primitives and Configuration</a><ul>
+<li><a class="nav-link" href="#button-primitive"><code>button</code> Primitive</a></li>
+<li><a class="nav-link" href="#checkbox-primitive"><code>checkbox</code> Primitive</a></li>
+<li><a class="nav-link" href="#hslider-primitive"><code>hslider</code> Primitive</a></li>
+<li><a class="nav-link" href="#vslider-primitive"><code>vslider</code> Primitive</a></li>
+<li><a class="nav-link" href="#nentry-primitive"><code>nentry</code> Primitive</a></li>
+<li><a class="nav-link" href="#hgroup-primitive"><code>hgroup</code> Primitive</a></li>
+<li><a class="nav-link" href="#vgroup-primitive"><code>vgroup</code> Primitive</a></li>
+<li><a class="nav-link" href="#tgroup-primitive"><code>tgroup</code> Primitive</a></li>
+<li><a class="nav-link" href="#vbargraph-primitive"><code>vbargraph</code> Primitive</a></li>
+<li><a class="nav-link" href="#hbargraph-primitive"><code>hbargraph</code> Primitive</a></li>
+<li><a class="nav-link" href="#attach-primitive"><code>attach</code> Primitive</a></li>
+<li><a class="nav-link" href="#variable-parts-of-a-label">Variable Parts of a Label</a></li>
+<li><a class="nav-link" href="#labels-as-pathnames">Labels as Pathnames</a></li>
+<li><a class="nav-link" href="#smoothing">Smoothing</a></li>
+<li><a class="nav-link" href="#links-to-generated-code">Links to Generated Code</a></li>
 </ul></li>
-<li><a href="#tutorial-developing-new-faust-architectures">Tutorial: Developing New Faust Architectures</a></li>
+<li><a class="nav-link" href="#ui-label-metadata">UI Label Metadata</a><ul>
+<li><a class="nav-link" href="#ordering-ui-elements">Ordering UI Elements</a></li>
+<li><a class="nav-link" href="#global-ui-metadata">Global UI Metadata</a></li>
+<li><a class="nav-link" href="#styleknob-metadata"><code>[style:knob]</code> Metadata</a></li>
+<li><a class="nav-link" href="#stylemenu-metadata"><code>[style:menu]</code> Metadata</a></li>
+<li><a class="nav-link" href="#styleradio-metadata"><code>[style:radio]</code> Metadata</a></li>
+<li><a class="nav-link" href="#styleled-metadata"><code>[style:led]</code> Metadata</a></li>
+<li><a class="nav-link" href="#unitdb-metadata"><code>[unit:dB]</code> Metadata</a></li>
+<li><a class="nav-link" href="#unitxx-metadata"><code>[unit:xx]</code> Metadata</a></li>
+<li><a class="nav-link" href="#scalexx-metadata"><code>[scale:xx]</code> Metadata</a></li>
+<li><a class="nav-link" href="#tooltipxx-metadata"><code>[tooltip:xx]</code> Metadata</a></li>
+<li><a class="nav-link" href="#hiddenxx-metadata"><code>[hidden:xx]</code> Metadata</a></li>
+</ul></li>
+<li><a class="nav-link" href="#sensors-control-metadata">Sensors Control Metadata</a></li>
+</ul></li>
+</ul></li>
+<li><a class="nav-link" href="#using-the-faust-compiler">Using the Faust Compiler</a><ul>
+<li><a class="nav-link" href="#structure-of-the-generated-code">Structure of the Generated Code</a></li>
+<li><a class="nav-link" href="#compilation-options">Compilation Options</a></li>
+<li><a class="nav-link" href="#controlling-code-generation">Controlling Code Generation</a><ul>
+<li><a class="nav-link" href="#vector-code-generation">Vector Code Generation</a></li>
+<li><a class="nav-link" href="#parallel-code-generation">Parallel Code Generation</a><ul>
+<li><a class="nav-link" href="#the-openmp-code-generator">The OpenMP Code Generator</a></li>
+<li><a class="nav-link" href="#adding-open-mp-directives">Adding Open MP Directives</a></li>
+<li><a class="nav-link" href="#example-of-parallel-openmp-code">Example of Parallel OpenMP Code</a></li>
+<li><a class="nav-link" href="#the-scheduler-code-generator">The Scheduler Code Generator</a></li>
+<li><a class="nav-link" href="#example-of-parallel-scheduler-code">Example of Parallel Scheduler Code</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a class="nav-link" href="#embedding-the-faust-compiler-using-libfaust">Embedding the Faust Compiler Using <code>libfaust</code></a><ul>
+<li><a class="nav-link" href="#dynamic-compilation-chain">Dynamic Compilation Chain</a></li>
+<li><a class="nav-link" href="#llvm">LLVM</a></li>
+<li><a class="nav-link" href="#compiling-in-memory">Compiling in Memory</a></li>
+<li><a class="nav-link" href="#savingrestoring-the-factory">Saving/Restoring the Factory</a></li>
+<li><a class="nav-link" href="#additional-functions">Additional Functions</a></li>
+<li><a class="nav-link" href="#using-the-libfaust-library">Using the <code>libfaust</code> Library</a></li>
+<li><a class="nav-link" href="#use-case-examples">Use Case Examples</a></li>
+</ul></li>
+<li><a class="nav-link" href="#osc-support">OSC Support</a><ul>
+<li><a class="nav-link" href="#overview">Overview</a></li>
+<li><a class="nav-link" href="#simple-example">Simple Example</a></li>
+<li><a class="nav-link" href="#automatic-port-allocation">Automatic Port Allocation</a></li>
+<li><a class="nav-link" href="#discovering-osc-applications">Discovering OSC Applications</a></li>
+<li><a class="nav-link" href="#discovering-the-osc-interface-of-an-application">Discovering the OSC Interface of an Application</a></li>
+<li><a class="nav-link" href="#widgets-osc-address">Widget’s OSC Address</a></li>
+<li><a class="nav-link" href="#controlling-the-application-via-osc">Controlling the Application Via OSC</a></li>
+<li><a class="nav-link" href="#turning-transmission-on">Turning Transmission ON</a></li>
+<li><a class="nav-link" href="#filtering-osc-messages">Filtering OSC Messages</a></li>
+<li><a class="nav-link" href="#using-osc-aliases">Using OSC Aliases</a></li>
+<li><a class="nav-link" href="#osc-cheat-sheet">OSC Cheat Sheet</a><ul>
+<li><a class="nav-link" href="#default-ports">Default Ports</a></li>
+<li><a class="nav-link" href="#command-line-options">Command Line Options</a></li>
+<li><a class="nav-link" href="#discovery-messages">Discovery Messages</a></li>
+<li><a class="nav-link" href="#control-messages">Control Messages</a></li>
+<li><a class="nav-link" href="#alias">Alias</a></li>
+</ul></li>
+</ul></li>
+<li><a class="nav-link" href="#http-support">HTTP Support</a><ul>
+<li><a class="nav-link" href="#a-simple-example">A Simple Example</a></li>
+<li><a class="nav-link" href="#json-description-of-the-user-interface">JSON Description of the User Interface</a></li>
+<li><a class="nav-link" href="#querying-the-state-of-the-application">Querying the State of the Application</a></li>
+<li><a class="nav-link" href="#changing-the-value-of-a-widget">Changing the Value of a Widget</a></li>
+<li><a class="nav-link" href="#proxy-control-access-to-the-web-server">Proxy Control Access to the Web Server</a></li>
+<li><a class="nav-link" href="#http-cheat-sheet">HTTP Cheat Sheet</a><ul>
+<li><a class="nav-link" href="#default-ports-1">Default Ports</a></li>
+<li><a class="nav-link" href="#command-line-options-1">Command Line Options</a></li>
+<li><a class="nav-link" href="#urls">URLs</a></li>
+<li><a class="nav-link" href="#json">JSON</a></li>
+</ul></li>
+</ul></li>
+<li><a class="nav-link" href="#midi-and-polyphony-support">MIDI and Polyphony Support</a><ul>
+<li><a class="nav-link" href="#configuring-midi-in-faust">Configuring MIDI in Faust</a><ul>
+<li><a class="nav-link" href="#midictrl-num-metadata"><code>[midi:ctrl num]</code> Metadata</a></li>
+<li><a class="nav-link" href="#midikeyon-midikey-metadata"><code>[midi:keyon midikey]</code> Metadata</a></li>
+<li><a class="nav-link" href="#midikeyoff-midikey-metadata"><code>[midi:keyoff midikey]</code> Metadata</a></li>
+<li><a class="nav-link" href="#midikey-midikey-metadata"><code>[midi:key midikey]</code> Metadata</a></li>
+<li><a class="nav-link" href="#midikeypress-midikey-metadata"><code>[midi:keypress midikey]</code> Metadata</a></li>
+<li><a class="nav-link" href="#midipitchwheel-metadata"><code>[midi:pitchwheel]</code> Metadata</a></li>
+<li><a class="nav-link" href="#midistart-metadata"><code>[midi:start]</code> Metadata</a></li>
+<li><a class="nav-link" href="#midistop-metadata"><code>[midi:stop]</code> Metadata</a></li>
+<li><a class="nav-link" href="#midiclock-metadata"><code>[midi:clock]</code> Metadata</a></li>
+<li><a class="nav-link" href="#midi-sync">MIDI Sync</a></li>
+</ul></li>
+<li><a class="nav-link" href="#midi-polyphony-support">MIDI Polyphony Support</a><ul>
+<li><a class="nav-link" href="#standard-polyphony-parameters">Standard Polyphony Parameters</a></li>
+<li><a class="nav-link" href="#configuring-and-activating-polyphony">Configuring and Activating Polyphony</a></li>
+<li><a class="nav-link" href="#audio-effects-and-polyphonic-synthesizer">Audio Effects and Polyphonic Synthesizer</a></li>
+<li><a class="nav-link" href="#polyphony-and-continuous-pitch">Polyphony and Continuous Pitch</a></li>
+<li><a class="nav-link" href="#complete-example-sustain-pedal-and-additional-parameters">Complete Example: Sustain Pedal and Additional Parameters</a></li>
+</ul></li>
+</ul></li>
+<li><a class="nav-link" href="#architecture-files">Architecture Files</a></li>
+<li><a class="nav-link" href="#mathematical-documentation">Mathematical Documentation</a><ul>
+<li><a class="nav-link" href="#goals-of-the-mathdoc">Goals of the Mathdoc</a></li>
+<li><a class="nav-link" href="#installation-requirements">Installation Requirements</a></li>
+<li><a class="nav-link" href="#generating-the-mathdoc">Generating the Mathdoc</a><ul>
+<li><a class="nav-link" href="#invoking-the--mdoc-option">Invoking the <code>-mdoc</code> Option</a></li>
+<li><a class="nav-link" href="#invoking-faust2mathdoc">Invoking <code>faust2mathdoc</code></a></li>
+<li><a class="nav-link" href="#online-examples">Online Examples</a></li>
+</ul></li>
+<li><a class="nav-link" href="#automatic-documentation">Automatic Documentation</a></li>
+<li><a class="nav-link" href="#manual-documentation">Manual Documentation</a><ul>
+<li><a class="nav-link" href="#six-tags">Six Tags</a></li>
+<li><a class="nav-link" href="#the-mdoc-top-level-tags">The <code>mdoc</code> Top-Level Tags</a></li>
+</ul></li>
+<li><a class="nav-link" href="#an-example-of-manual-mathdoc">An Example of Manual Mathdoc</a><ul>
+<li><a class="nav-link" href="#the--stripmdoc-option">The <code>-stripmdoc</code> Option</a></li>
+</ul></li>
+<li><a class="nav-link" href="#localization-of-mathdoc-files">Localization of Mathdoc Files</a></li>
+<li><a class="nav-link" href="#summary-of-the-mathdoc-generation-steps">Summary of the Mathdoc Generation Steps</a></li>
+</ul></li>
+<li><a class="nav-link" href="#acknowledgments">Acknowledgments</a></li>
+<li><a class="nav-link" href="#tutorial-adding-faust-dsp-support-to-your-juce-plug-ins">Tutorial: Adding Faust DSP Support to Your JUCE Plug-ins</a><ul>
+<li><a class="nav-link" href="#the-old-way-brut-force-method">“The Old Way”: Brut-Force Method</a></li>
+<li><a class="nav-link" href="#simple-synth-plug-in">Simple Synth Plug-In</a><ul>
+<li><a class="nav-link" href="#generating-the-dsp-engine">Generating the DSP Engine</a></li>
+<li><a class="nav-link" href="#creating-an-empty-juce-plug-in-project">Creating an Empty JUCE Plug-In Project</a></li>
+</ul></li>
+<li><a class="nav-link" href="#creating-and-using-a-polyphonic-faust-dsp-object">Creating and Using a Polyphonic Faust DSP Object</a></li>
+</ul></li>
+<li><a class="nav-link" href="#tutorial-developing-new-faust-architectures">Tutorial: Developing New Faust Architectures</a></li>
 </ul>
 </div>
 </nav>
@@ -1189,9 +1189,9 @@ process = no.noise * hslider(&quot;gain&quot;,0,0,1, 0.1);</code></pre>
 <p>Metadata allow us to add elements which are not part of the language to Faust code. These can range to the name of a Faust program, its author, to potential compilation options or user interface element customizations.</p>
 <p>There are three different types of metadata in Faust:</p>
 <ul>
-<li><a href="#global-metadata">Global Metadata</a>: metadata global to a Faust code</li>
-<li><a href="#function-metadata">Function Metadata</a>: metadata specific to a function</li>
-<li><a href="#ui-label-metadata">UI Metadata</a>: metadata specific to a UI element</li>
+<li><a class="nav-link" href="#global-metadata">Global Metadata</a>: metadata global to a Faust code</li>
+<li><a class="nav-link" href="#function-metadata">Function Metadata</a>: metadata specific to a function</li>
+<li><a class="nav-link" href="#ui-label-metadata">UI Metadata</a>: metadata specific to a UI element</li>
 </ul>
 <p>Note that some <a href="#global-metadata">Global Metadata</a> have standard names and can be used for specific tasks. Their role is described in the <a href="#standard-metadata">Standard Metadata</a> section.</p>
 <h3 id="global-metadata">Global Metadata</h3>
@@ -1306,11 +1306,11 @@ count((x,xs)) = 1+count(xs);</code></pre>
 <h4 id="diagram-composition-operations">Diagram Composition Operations</h4>
 <p>Five binary <em>composition operations</em> are available to combine block-diagrams:</p>
 <ul>
-<li><a href="#recursion-composition"><em>recursion</em></a> (<code>~</code>),</li>
-<li><a href="#parallel-composition"><em>parallel</em></a> (<code>,</code>),</li>
-<li><a href="#sequential-composition"><em>sequential</em></a> (<code>:</code>),</li>
-<li><a href="#split-composition"><em>split</em></a> (<code>&lt;:</code>),</li>
-<li><a href="#merge-composition"><em>merge</em></a> (<code>:&gt;</code>).</li>
+<li><a class="nav-link" href="#recursion-composition"><em>recursion</em></a> (<code>~</code>),</li>
+<li><a class="nav-link" href="#parallel-composition"><em>parallel</em></a> (<code>,</code>),</li>
+<li><a class="nav-link" href="#sequential-composition"><em>sequential</em></a> (<code>:</code>),</li>
+<li><a class="nav-link" href="#split-composition"><em>split</em></a> (<code>&lt;:</code>),</li>
+<li><a class="nav-link" href="#merge-composition"><em>merge</em></a> (<code>:&gt;</code>).</li>
 </ul>
 <p>One can think of each of these composition operations as a particular way to connect two block diagrams.</p>
 <p><img src="img/diagcomposition.svg" class="mx-auto d-block"></p>
@@ -3923,11 +3923,11 @@ m_factory = NULL;</code></pre>
 <h2 id="use-case-examples">Use Case Examples</h2>
 <p>The dynamic compilation chain has been used in several projects:</p>
 <ul>
-<li><a href="TODO">FaustLive</a>: an integrated IDE for Faust development offering on-the-fly compilation and execution features</li>
-<li><a href="TODO">Faustgen</a>: a generic Faust <a href="https://cycling74.com/products/max/">Max/MSP</a> object</li>
-<li><a href="TODO">Faust for CSOUND</a>: a <a href="https://csound.com/">CSOUND</a> opcode running the Faust compiler internally</li>
-<li><a href="TODO">LibAudioStream</a>: a framework to manipulate audio ressources through the concept of streams</li>
-<li><a href="TODO">Faust for JUCE</a>: a tool integrating the Faust compiler to <a href="https://juce.com/">JUCE</a> developed by Oliver Larkin and available as part of the <a href="https://github.com/olilarkin/pMix2">pMix2 project</a></li>
+<li><a class="nav-link" href="TODO">FaustLive</a>: an integrated IDE for Faust development offering on-the-fly compilation and execution features</li>
+<li><a class="nav-link" href="TODO">Faustgen</a>: a generic Faust <a href="https://cycling74.com/products/max/">Max/MSP</a> object</li>
+<li><a class="nav-link" href="TODO">Faust for CSOUND</a>: a <a href="https://csound.com/">CSOUND</a> opcode running the Faust compiler internally</li>
+<li><a class="nav-link" href="TODO">LibAudioStream</a>: a framework to manipulate audio ressources through the concept of streams</li>
+<li><a class="nav-link" href="TODO">Faust for JUCE</a>: a tool integrating the Faust compiler to <a href="https://juce.com/">JUCE</a> developed by Oliver Larkin and available as part of the <a href="https://github.com/olilarkin/pMix2">pMix2 project</a></li>
 <li>An experimental integration of Faust in <a href="http://forumnet.ircam.fr/product/antescofo-en/">Antescofo</a></li>
 <li>FaucK: the combination of the <a href="http://chuck.cs.princeton.edu/">ChucK Programming Language</a> and Faust</li>
 </ul>
@@ -5043,8 +5043,8 @@ wrong place for it. -->
 <h3 id="online-examples">Online Examples</h3>
 <p>To get an idea of the results of this mathematical documentation, which captures the mathematical semantic of Faust programs, you can look at two pdf files online:</p>
 <ul>
-<li><a href="http://faust.grame.fr/pdf/karplus.pdf" class="uri">http://faust.grame.fr/pdf/karplus.pdf</a> (automatic documentation),</li>
-<li><a href="http://faust.grame.fr/pdf/noise.pdf" class="uri">http://faust.grame.fr/pdf/noise.pdf</a> (manual documentation).</li>
+<li><a class="nav-link" href="http://faust.grame.fr/pdf/karplus.pdf" class="uri">http://faust.grame.fr/pdf/karplus.pdf</a> (automatic documentation),</li>
+<li><a class="nav-link" href="http://faust.grame.fr/pdf/noise.pdf" class="uri">http://faust.grame.fr/pdf/noise.pdf</a> (manual documentation).</li>
 </ul>
 <p>You can also generate all <em>mdoc</em> pdfs at once, simply invoking the <code>make  mathdoc</code> command inside the <code>examples/</code> directory:</p>
 <ul>

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Generating html version of markdown
+PHTML=$(pandoc --standalone --toc --toc-depth=4 --metadata pagetitle="Faust Manual" --mathjax src/introduction.md src/tuto-juce.md src/tuto-new-archs.md)
+
+source ../../../script/buildtuto
+
+echo "$RESULT" > tutorials.html

@@ -11,6 +11,11 @@
   height: 3.5rem;
 }
 
+.nav-link{
+  padding: 0.2rem;
+  display: inline;
+}
+
 .dropdown:hover .dropdown-menu {
   display: block;
 }
