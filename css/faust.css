@@ -15,6 +15,10 @@
   display: block;
 }
 
+.dropdown-item {
+  color: #212529 !important;
+}
+
 .btn-outline-success {
   color: white;
   border-color: white;
@@ -157,4 +161,9 @@ blockquote{
 
 .dropzone input {
   color: rgb(50,50,50);
+}
+
+.modalwrapper {
+  height:auto;
+  top:auto;
 }

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+scp -r site/* faust@faust.grame.fr:www/new 
