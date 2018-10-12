@@ -24,18 +24,18 @@ cp -r src/img site
 cp -r css site
 
 ################################################################################
-# Generating main page
+# MAIN PAGE
 ################################################################################
 echo "$HEADER$(cat src/main.html)$FOOTERF" > site/index.html
 
 ################################################################################
-# Making doc folder and generating index for it
+# DOC/LEARN
 ################################################################################
 mkdir site/doc
 echo "$HEADER$MDWPH$(pandoc src/doc/doc.md)$MDWPF$FOOTERF" > site/doc/index.html
 
 ################################################################################
-# Generating Manual
+# MANUAL
 ################################################################################
 mkdir site/doc/manual
 cp -r src/doc/manual/img site/doc/manual/img
@@ -43,42 +43,118 @@ cp -r src/doc/manual/misc site/doc/manual/misc
 echo "$HEADER$(cat src/doc/manual/manual.html)$FOOTERL" > site/doc/manual/index.html
 
 ################################################################################
-# Generating Libraries Doc
+# LIBRARIES DOC
 ################################################################################
 mkdir site/doc/libraries
 echo "$HEADER$(cat src/doc/libraries/libraries.html)$FOOTERL" > site/doc/libraries/index.html
 
 ################################################################################
-# Generating Cheat Sheet
+# CHEAT SHEET
 ################################################################################
 mkdir site/doc/cheatsheet
 echo "$HEADER$MDWPH$(pandoc src/doc/cheatsheet/cheatsheet.md)$MDWPF$FOOTERF" > site/doc/cheatsheet/index.html
 
 ################################################################################
-# Generating Tutorials
+# TUTORIALS
 ################################################################################
 mkdir site/doc/tutorials
 cp -r src/doc/tutorials/img site/doc/tutorials/img
 cp -r src/doc/tutorials/misc site/doc/tutorials/misc 
 echo "$HEADER$(cat src/doc/tutorials/tutorials.html)$FOOTERL" > site/doc/tutorials/index.html
 
-mkdir site/community
-mkdir site/community/news
-echo "$HEADER$MDWPH$(pandoc src/community/news/news.md)$MDWPF$FOOTERF" > site/community/news/index.html
+################################################################################
+# EXAMPLES
+################################################################################
+mkdir site/doc/examples
+cp -r src/doc/examples/img site/doc/examples/img 
+echo "$HEADER$(cat src/doc/examples/examples.html)$FOOTERL" > site/doc/examples/index.html
 
+################################################################################
+# DOWNLOADS
+################################################################################
+mkdir site/downloads
+echo "$HEADER$MDWPH$(pandoc src/downloads/downloads.md)$MDWPF$FOOTERF" > site/downloads/index.html
+
+################################################################################
+# TOOLS
+################################################################################
 mkdir site/tools
 echo "$HEADER$MDWPH$(pandoc src/tools/tools.md)$MDWPF$FOOTERF" > site/tools/index.html
 
+################################################################################
+# EDITOR
+################################################################################
 cp -r src/tools/editor site/tools
 cat src/tools/editor/index.html | awk -v includes="$HEADERINCLUDES" '/<\/head>/{print includes}1' | awk -v nav="$NAVIGATION<main role=\"main\"><div class=\"container-fluid\"><div class=\"navzone\"></div><div class=\"row\">" '/<div class=\"application\">/{print nav}1' | awk '/<script src=\"codemirror\/lib\/codemirror.js\">/{print "</div></main>"}1' | awk '{gsub(/<img src=\"faust-logo.png\" width=58px alt=\"LOGO\">/,"")}1' | awk -v domain="$DOMAIN" '{gsub(/__DOMAIN__/,domain)}1' > site/tools/editor/index.html
 
-# Adding Faust Playground
+################################################################################
+# PLAYGROUND
+################################################################################
 # TODO: we coul improve the integration of the Faust playground
 cp -r src/tools/playground site/tools
 
-# Adding Online Compiler
+################################################################################
+# ONLINE COMPILER
+################################################################################
 # TODO: we coul improve the integration of the online compiler
 cp -r src/tools/onlinecompiler site/tools
 
+################################################################################
+# OTHER TOOLS
+################################################################################
 mkdir site/tools/other
 echo "$HEADER$MDWPH$(pandoc src/tools/other/other.md)$MDWPF$FOOTERF" > site/tools/other/index.html
+
+################################################################################
+# COMMUNITY
+################################################################################
+mkdir site/community
+echo "$HEADER$MDWPH$(pandoc src/community/community.md)$MDWPF$FOOTERF" > site/community/index.html
+
+################################################################################
+# NEWS
+################################################################################
+mkdir site/community/news
+echo "$HEADER$MDWPH$(pandoc src/community/news/news.md)$MDWPF$FOOTERF" > site/community/news/index.html
+
+################################################################################
+# MAILING-LISTS
+################################################################################
+mkdir site/community/mailing-lists
+echo "$HEADER$MDWPH$(pandoc src/community/mailing-lists/mailing-lists.md)$MDWPF$FOOTERF" > site/community/mailing-lists/index.html
+
+################################################################################
+# FAUST CONFERENCE
+################################################################################
+mkdir site/community/ifc
+echo "$HEADER$MDWPH$(pandoc src/community/ifc/ifc.md)$MDWPF$FOOTERF" > site/community/ifc/index.html
+
+################################################################################
+# ACADEMIC PUBLICATIONS
+################################################################################
+mkdir site/community/publications
+echo "$HEADER$MDWPH$(pandoc src/community/publications/publications.md)$MDWPF$FOOTERF" > site/community/publications/index.html
+
+################################################################################
+# PRESS
+################################################################################
+mkdir site/community/press
+echo "$HEADER$MDWPH$(pandoc src/community/press/press.md)$MDWPF$FOOTERF" > site/community/press/index.html
+
+################################################################################
+# BUG
+################################################################################
+mkdir site/community/bug
+echo "$HEADER$MDWPH$(pandoc src/community/bug/bug.md)$MDWPF$FOOTERF" > site/community/bug/index.html
+
+################################################################################
+# MADE WITH FAUST
+################################################################################
+mkdir site/community/made-with-faust
+echo "$HEADER$MDWPH$(pandoc src/community/made-with-faust/made-with-faust.md)$MDWPF$FOOTERF" > site/community/made-with-faust/index.html
+
+################################################################################
+# SHOWCASE
+################################################################################
+mkdir site/showcase
+echo "$HEADER$(cat src/showcase/showcase.html)$FOOTERF" > site/showcase/index.html
