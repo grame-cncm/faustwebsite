@@ -9,7 +9,7 @@ HEADER=$(cat lib/std-header.html | awk -v includes="$HEADERINCLUDES" '{gsub(/<!-
 NAVIGATION=$(cat lib/navigation.html)
 HEADER=$HEADER"<body>"$NAVIGATION
 HEADER=$(echo "$HEADER" | awk -v domain="$DOMAIN" '{gsub(/__DOMAIN__/,domain)}1')
-FOOTERCONTENT=$(cat lib/footer-content.html)
+FOOTERCONTENT=$(cat lib/footer-content.html | awk -v domain="$DOMAIN" '{gsub(/__DOMAIN__/,domain)}1')
 FOOTERINCLUDES=$(cat lib/footer-includes.html)
 PAGECLOSING="</body></html>"
 FOOTERL=$FOOTERINCLUDES$PAGECLOSING
@@ -146,6 +146,12 @@ echo "$HEADER$MDWPH$(pandoc src/community/press/press.md)$MDWPF$FOOTERF" > site/
 ################################################################################
 mkdir site/community/bug
 echo "$HEADER$MDWPH$(pandoc src/community/bug/bug.md)$MDWPF$FOOTERF" > site/community/bug/index.html
+
+################################################################################
+# SPONSORS
+################################################################################
+mkdir site/community/sponsors
+echo "$HEADER$(cat src/community/sponsors/sponsors.html)$FOOTERF" > site/community/sponsors/index.html
 
 ################################################################################
 # MADE WITH FAUST
