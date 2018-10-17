@@ -49,12 +49,6 @@ mkdir site/doc/libraries
 echo "$HEADER$(cat src/doc/libraries/libraries.html)$FOOTERL" > site/doc/libraries/index.html
 
 ################################################################################
-# CHEAT SHEET
-################################################################################
-mkdir site/doc/cheatsheet
-echo "$HEADER$MDWPH$(pandoc src/doc/cheatsheet/cheatsheet.md)$MDWPF$FOOTERF" > site/doc/cheatsheet/index.html
-
-################################################################################
 # TUTORIALS
 ################################################################################
 mkdir site/doc/tutorials

@@ -8,14 +8,14 @@
 </ul></li>
 <li><a class="nav-link" href="#creating-and-using-a-polyphonic-faust-dsp-object">Creating and Using a Polyphonic Faust DSP Object</a></li>
 </ul></li>
-<li><a class="nav-link" href="#tutorial-developing-new-faust-architectures">Tutorial: Developing New Faust Architectures</a></li>
 </ul>
 </div>
 </nav>
 <main role="main" class="col-9 ml-sm-auto px-4 faust-doc-content">
-<div data-spy="scroll" data-target="#TOC" data-offset="0" style="height: 100%;overflow-y: scroll;">
+<div data-spy="scroll" data-target="#TOC" data-offset="100" style="height: 100%;overflow-y: scroll;">
 <h1 id="introduction">Introduction</h1>
-<p>TODO</p>
+<p>This page gathers various tutorials around the Faust programming language and some of its associated tools. This is an ongoing project and it will soon be populated with more elements.</p>
+<p>Should you have any question, feel free to send an e-mail to the <a href="../community/mailing-lists/index.html#users-list">Faust user mailing list</a>.</p>
 <h1 id="tutorial-adding-faust-dsp-support-to-your-juce-plug-ins">Tutorial: Adding Faust DSP Support to Your JUCE Plug-ins</h1>
 <blockquote>
 <p>This tutorial doesn’t belong to the Faust manual. It will eventually live in its own page. It has been placed here for now for convenience and rapid prototyping.</p>
@@ -328,9 +328,4 @@ dspFaust.setVoiceParamValue(&quot;/synth/gate&quot;,voiceID,1);
 dspFaust.deleteVoice(voiceID);</code></pre>
 <p>Using <code>setParamValue</code> as we’re doing in the current example, we can set the value of a parameter for all the voices of the DSP engine. Unlike <code>setVoiceParamValue</code>, the parameter path must be the complete path provided in the README of the DSP package generated with <code>faust2api</code>. So once again, for <code>setVoiceParamValue</code>, the short path is enough but for <code>setParamValue</code>, the complete path is needed.</p>
 <p>You might wonder why the path is much more complex with a polyphonic DSP engine than with a regular one. <code>Sequencer</code> is the full object (poly synth + effect), <code>DSP1</code> is the synth (<code>DSP2</code> is the effect), <code>Polyphonic</code> is the polyphonic layer of the object, and finally <code>Voices</code> addresses all the voices at once.</p>
-<p>That’s it folks! Try to compile and run your plug-in, it should just work. Of course, things could be significantly improved here but at this point, you should be able to sail on your own.</p>
-<h1 id="tutorial-developing-new-faust-architectures">Tutorial: Developing New Faust Architectures</h1>
-<!-- TODO -->
-<blockquote>
-<p>This tutorial doesn’t belong to the doc and will lend in its own page eventually.</p>
-</blockquote></div></div></div></main>
+<p>That’s it folks! Try to compile and run your plug-in, it should just work. Of course, things could be significantly improved here but at this point, you should be able to sail on your own.</p></div></div></div></main>

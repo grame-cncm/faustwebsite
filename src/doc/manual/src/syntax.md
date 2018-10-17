@@ -3318,6 +3318,68 @@ This feature is commonly used when making apps for Android and iOS using
 * iOS 
 * Android
 
-### Sensors Control Metadata
+### Sensors Control Metadatas
 
-<!-- TODO -->
+Sensors control metadata can be used to map the built-in sensors of mobile
+devices to some of the parameters of a Faust program.
+
+**Compatibility**
+
+These metadatas are compatible with the following Faust targets and no 
+additional step is required for them to be taken into account when the
+corresponding app is generated:
+
+* [`faust2android`](#faust2android)
+* [`faust2ios`](#faust2ios)
+* [`faust2smartkeyb`](#faust2smartkeyb)
+
+Sensors control metadatas have five parameters and follow the following syntax:
+
+```
+[acc: a b c d e] // for accelerometer
+[gyr a b c d e] // for gyroscope
+```
+
+They can be used in a Faust UI parameter declaration:
+
+```
+parameter = nentry("UIparamName[acc: a b c d e]",def,min,max,step);
+```
+
+with:
+
+* `a`: the accelerometer axis (**0**: x, **1**: y, **2**: z)
+* `b`: the accelerometer curve (see figure below)
+* `c`: the minimum acceleration (m/s^2)
+* `d`: the center acceleration (m/s^2)
+* `e`: the maximum acceleration (m/s^2)
+* `def`: the default/init value of the parameter
+* `min`: the minimum value of the parameter
+* `max`: the maximum value of the parameter
+* `step`: the step of the parameter (precision)
+
+This allows for the implementation of complex linear and non-linear mappings 
+that are summarized in this figure:
+
+<img src="img/accelMapping.jpg" class="mx-auto d-block" width="80%">
+
+For example, controlling the gain of a synthesizer using the X axis of the 
+accelerometer can be easily done simply by writing something like:
+
+```
+g = nentry("gain[acc: 0 0 -10 0 10]",0.5,0,1,0.01);
+```
+
+With this configuration, `g = 0` when the device is standing vertically on its 
+right side, `g = 0.5` when the device is standing horizontally with screen 
+facing up, and `g = 1` when the device is standing vertically on its left side.
+
+Finally, in this slightly more complex mapping, `g = 0` when the device is 
+tilted on its right side and the value of `g` increases towards 1 when the 
+device is tilted on its left side:
+
+```
+g = nentry("gain[acc: 0 0 0 0 10]",0,0,1,0.01);
+```
+
+Complex nonlinear mappings can be implemented using this system.

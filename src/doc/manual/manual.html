@@ -300,7 +300,7 @@
 <li><a class="nav-link" href="#tooltipxx-metadata"><code>[tooltip:xx]</code> Metadata</a></li>
 <li><a class="nav-link" href="#hiddenxx-metadata"><code>[hidden:xx]</code> Metadata</a></li>
 </ul></li>
-<li><a class="nav-link" href="#sensors-control-metadata">Sensors Control Metadata</a></li>
+<li><a class="nav-link" href="#sensors-control-metadatas">Sensors Control Metadatas</a></li>
 </ul></li>
 </ul></li>
 <li><a class="nav-link" href="#using-the-faust-compiler">Using the Faust Compiler</a><ul>
@@ -3200,8 +3200,40 @@ process = os.sawtooth(freq);</code></pre>
 <li>iOS</li>
 <li>Android</li>
 </ul>
-<h3 id="sensors-control-metadata">Sensors Control Metadata</h3>
-<!-- TODO -->
+<h3 id="sensors-control-metadatas">Sensors Control Metadatas</h3>
+<p>Sensors control metadata can be used to map the built-in sensors of mobile devices to some of the parameters of a Faust program.</p>
+<p><strong>Compatibility</strong></p>
+<p>These metadatas are compatible with the following Faust targets and no additional step is required for them to be taken into account when the corresponding app is generated:</p>
+<ul>
+<li><a class="nav-link" href="#faust2android"><code>faust2android</code></a></li>
+<li><a class="nav-link" href="#faust2ios"><code>faust2ios</code></a></li>
+<li><a class="nav-link" href="#faust2smartkeyb"><code>faust2smartkeyb</code></a></li>
+</ul>
+<p>Sensors control metadatas have five parameters and follow the following syntax:</p>
+<pre><code>[acc: a b c d e] // for accelerometer
+[gyr a b c d e] // for gyroscope</code></pre>
+<p>They can be used in a Faust UI parameter declaration:</p>
+<pre><code>parameter = nentry(&quot;UIparamName[acc: a b c d e]&quot;,def,min,max,step);</code></pre>
+<p>with:</p>
+<ul>
+<li><code>a</code>: the accelerometer axis (<strong>0</strong>: x, <strong>1</strong>: y, <strong>2</strong>: z)</li>
+<li><code>b</code>: the accelerometer curve (see figure below)</li>
+<li><code>c</code>: the minimum acceleration (m/s^2)</li>
+<li><code>d</code>: the center acceleration (m/s^2)</li>
+<li><code>e</code>: the maximum acceleration (m/s^2)</li>
+<li><code>def</code>: the default/init value of the parameter</li>
+<li><code>min</code>: the minimum value of the parameter</li>
+<li><code>max</code>: the maximum value of the parameter</li>
+<li><code>step</code>: the step of the parameter (precision)</li>
+</ul>
+<p>This allows for the implementation of complex linear and non-linear mappings that are summarized in this figure:</p>
+<p><img src="img/accelMapping.jpg" class="mx-auto d-block" width="80%"></p>
+<p>For example, controlling the gain of a synthesizer using the X axis of the accelerometer can be easily done simply by writing something like:</p>
+<pre><code>g = nentry(&quot;gain[acc: 0 0 -10 0 10]&quot;,0.5,0,1,0.01);</code></pre>
+<p>With this configuration, <code>g = 0</code> when the device is standing vertically on its right side, <code>g = 0.5</code> when the device is standing horizontally with screen facing up, and <code>g = 1</code> when the device is standing vertically on its left side.</p>
+<p>Finally, in this slightly more complex mapping, <code>g = 0</code> when the device is tilted on its right side and the value of <code>g</code> increases towards 1 when the device is tilted on its left side:</p>
+<pre><code>g = nentry(&quot;gain[acc: 0 0 0 0 10]&quot;,0,0,1,0.01);</code></pre>
+<p>Complex nonlinear mappings can be implemented using this system.</p>
 <h1 id="using-the-faust-compiler">Using the Faust Compiler</h1>
 <p>While the Faust compiler is available in different forms (e.g., <a href="TODO">Embedded Compiler</a>, etc.), its most “common” one is the command line version, which can be invoked using the <code>faust</code> command. It translates a Faust program into code in a wide range of languages (C, O-C++, C++, Rust, JAVA, JavaScript, ASM JavaScript, LLVM, C-LLVM, FIR, and WebAssembly). The generated code can be wrapped into an optional <em>architecture file</em> allowing to directly produce a fully operational program.</p>
 <p>A typical call of the Faust command line compiler is:</p>

@@ -1,7 +1,21 @@
 #!/bin/sh
 
+#EXDIR=$(ls ../faust/examples)
+FAUSTEXAMPLES="../../../../faust/examples"
+
+for folder in $(ls "$FAUSTEXAMPLES")
+do
+  if [ -d "$FAUSTEXAMPLES/$folder" ]
+  then
+    CURRENTFILE="src/$folder.md"
+    FILECONTENT="# $folder" 
+    echo "$FILECONTENT" > "$CURRENTFILE"
+    FILESLIST="$FILESLIST $CURRENTFILE"
+  fi
+done
+
 # Generating html version of markdown
-PHTML=$(pandoc --standalone --toc --toc-depth=4 --metadata pagetitle="Faust Examples" --mathjax src/introduction.md)
+PHTML=$(pandoc --standalone --toc --toc-depth=4 --metadata pagetitle="Faust Examples" --mathjax src/introduction.md $FILESLIST)
 
 source ../../../script/buildtuto
 
