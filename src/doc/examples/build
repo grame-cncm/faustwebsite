@@ -1,14 +1,30 @@
 #!/bin/sh
 
-#EXDIR=$(ls ../faust/examples)
 FAUSTEXAMPLES="../../../../faust/examples"
+
+rm -rf img
+mkdir img
+mkdir img/src
+
+rm -rf src/generated
+mkdir src/generated
 
 for folder in $(ls "$FAUSTEXAMPLES")
 do
   if [ -d "$FAUSTEXAMPLES/$folder" ]
   then
-    CURRENTFILE="src/$folder.md"
-    FILECONTENT="# $folder" 
+    CURRENTFILE="src/generated/$folder.md"
+    FILECONTENT="# $folder"$'\n\n' 
+    for exFile in $(ls "$FAUSTEXAMPLES/$folder")
+    do
+      if [[ $exFile == *".dsp" && $exFile != "multibandFilter.dsp" && $exFile != "guitarix.dsp" && $exFile != "mixer.dsp" ]]
+      then 
+        FILECONTENT="$FILECONTENT## ${exFile%.dsp}"$'\n\n'
+        FILECONTENT="$FILECONTENT<!-- faust-run -->"$'\n```\n'
+        FILECONTENT="$FILECONTENT$(cat $FAUSTEXAMPLES/$folder/$exFile)"$'\n```\n'
+        FILECONTENT="$FILECONTENT<!-- /faust-run -->"$'\n\n'
+      fi
+    done
     echo "$FILECONTENT" > "$CURRENTFILE"
     FILESLIST="$FILESLIST $CURRENTFILE"
   fi
