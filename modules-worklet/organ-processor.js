@@ -1,13 +1,13 @@
 
 /*
-Code generated with Faust version 2.11.8
+Code generated with Faust version 2.11.10
 Compilation options: wasm-eb, -scal -ftz 2
 */
 
 function getJSONorgan() {
-	return "{\"name\":\"organ\",\"filename\":\"organ\",\"version\":\"2.11.8\",\"compile_options\":\"-scal -ftz 2\",\"library_list\":[\"/usr/local/share/faust/stdfaust.lib\",\"/usr/local/share/faust/maths.lib\"],\"include_pathnames\":[\".\",\"/usr/local/share/faust\",\"/usr/share/faust\"],\"size\":\"68\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"filename\":\"organ\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"organ\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"organ\",\"items\":[{\"type\":\"hslider\",\"label\":\"freq\",\"address\":\"/organ/freq\",\"index\":\"32\",\"meta\":[{\"unit\":\"Hz\"}],\"init\":\"440\",\"min\":\"20\",\"max\":\"20000\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"gain\",\"address\":\"/organ/gain\",\"index\":\"8\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"10\",\"step\":\"0.01\"},{\"type\":\"button\",\"label\":\"gate\",\"address\":\"/organ/gate\",\"index\":\"4\"},{\"type\":\"hslider\",\"label\":\"volume\",\"address\":\"/organ/volume\",\"index\":\"0\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"}]}]}";
+	return "{\"name\":\"organ\",\"filename\":\"organ\",\"version\":\"2.11.10\",\"compile_options\":\"-scal -ftz 2\",\"library_list\":[\"/usr/local/share/faust/stdfaust.lib\",\"/usr/local/share/faust/maths.lib\"],\"include_pathnames\":[\".\",\"/usr/local/share/faust\",\"/usr/share/faust\",\"/Documents/faustwebsite-github/modules-worklet\"],\"size\":\"68\",\"inputs\":\"0\",\"outputs\":\"1\",\"meta\":[{\"filename\":\"organ\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"organ\"}],\"ui\":[{\"type\":\"vgroup\",\"label\":\"organ\",\"items\":[{\"type\":\"hslider\",\"label\":\"freq\",\"address\":\"/organ/freq\",\"index\":\"32\",\"meta\":[{\"unit\":\"Hz\"}],\"init\":\"440\",\"min\":\"20\",\"max\":\"20000\",\"step\":\"1\"},{\"type\":\"hslider\",\"label\":\"gain\",\"address\":\"/organ/gain\",\"index\":\"8\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"10\",\"step\":\"0.01\"},{\"type\":\"button\",\"label\":\"gate\",\"address\":\"/organ/gate\",\"index\":\"4\"},{\"type\":\"hslider\",\"label\":\"volume\",\"address\":\"/organ/volume\",\"index\":\"0\",\"init\":\"0.5\",\"min\":\"0\",\"max\":\"1\",\"step\":\"0.01\"}]}]}";
 }
-function getBase64Codeorgan() { return "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eyJtYXRocy5saWIvY29weXJpZ2h0IjoiR1JBTUUifSx7Im1hdGhzLmxpYi9saWNlbnNlIjoiTEdQTCB3aXRoIGV4Y2VwdGlvbiJ9LHsibWF0aHMubGliL25hbWUiOiJGYXVzdCBNYXRoIExpYnJhcnkifSx7Im1hdGhzLmxpYi92ZXJzaW9uIjoiMi4xIn0seyJuYW1lIjoib3JnYW4ifV0sInVpIjpbeyJ0eXBlIjoidmdyb3VwIiwibGFiZWwiOiJvcmdhbiIsIml0ZW1zIjpbeyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoiZnJlcSIsImFkZHJlc3MiOiIvb3JnYW4vZnJlcSIsImluZGV4IjoiMzIiLCJtZXRhIjpbeyJ1bml0IjoiSHoifV0sImluaXQiOiI0NDAiLCJtaW4iOiIyMCIsIm1heCI6IjIwMDAwIiwic3RlcCI6IjEifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJnYWluIiwiYWRkcmVzcyI6Ii9vcmdhbi9nYWluIiwiaW5kZXgiOiI4IiwiaW5pdCI6IjAuNSIsIm1pbiI6IjAiLCJtYXgiOiIxMCIsInN0ZXAiOiIwLjAxIn0seyJ0eXBlIjoiYnV0dG9uIiwibGFiZWwiOiJnYXRlIiwiYWRkcmVzcyI6Ii9vcmdhbi9nYXRlIiwiaW5kZXgiOiI0In0seyJ0eXBlIjoiaHNsaWRlciIsImxhYmVsIjoidm9sdW1lIiwiYWRkcmVzcyI6Ii9vcmdhbi92b2x1bWUiLCJpbmRleCI6IjAiLCJpbml0IjoiMC41IiwibWluIjoiMCIsIm1heCI6IjEiLCJzdGVwIjoiMC4wMSJ9XX1dfQ=="; }
+function getBase64Codeorgan() { return "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eyJmaWxlbmFtZSI6Im9yZ2FuIn0seyJtYXRocy5saWIvYXV0aG9yIjoiR1JBTUUifSx7Im1hdGhzLmxpYi9jb3B5cmlnaHQiOiJHUkFNRSJ9LHsibWF0aHMubGliL2xpY2Vuc2UiOiJMR1BMIHdpdGggZXhjZXB0aW9uIn0seyJtYXRocy5saWIvbmFtZSI6IkZhdXN0IE1hdGggTGlicmFyeSJ9LHsibWF0aHMubGliL3ZlcnNpb24iOiIyLjEifSx7Im5hbWUiOiJvcmdhbiJ9XSwidWkiOlt7InR5cGUiOiJ2Z3JvdXAiLCJsYWJlbCI6Im9yZ2FuIiwiaXRlbXMiOlt7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJmcmVxIiwiYWRkcmVzcyI6Ii9vcmdhbi9mcmVxIiwiaW5kZXgiOiIzMiIsIm1ldGEiOlt7InVuaXQiOiJIeiJ9XSwiaW5pdCI6IjQ0MCIsIm1pbiI6IjIwIiwibWF4IjoiMjAwMDAiLCJzdGVwIjoiMSJ9LHsidHlwZSI6ImhzbGlkZXIiLCJsYWJlbCI6ImdhaW4iLCJhZGRyZXNzIjoiL29yZ2FuL2dhaW4iLCJpbmRleCI6IjgiLCJpbml0IjoiMC41IiwibWluIjoiMCIsIm1heCI6IjEwIiwic3RlcCI6IjAuMDEifSx7InR5cGUiOiJidXR0b24iLCJsYWJlbCI6ImdhdGUiLCJhZGRyZXNzIjoiL29yZ2FuL2dhdGUiLCJpbmRleCI6IjQifSx7InR5cGUiOiJoc2xpZGVyIiwibGFiZWwiOiJ2b2x1bWUiLCJhZGRyZXNzIjoiL29yZ2FuL3ZvbHVtZSIsImluZGV4IjoiMCIsImluaXQiOiIwLjUiLCJtaW4iOiIwIiwibWF4IjoiMSIsInN0ZXAiOiIwLjAxIn1dfV19"; }
 
 /*
  faust2wasm: GRAME 2017-2018
@@ -234,11 +234,11 @@ class organPolyProcessor extends AudioWorkletProcessor {
         this.ptr_size = 4;
         this.sample_size = 4;
         
-        this.memory = organPolyProcessor.createMemory(organPolyProcessor.buffer_size, organPolyProcessor.polyphony);
+        var wasm_memory = organPolyProcessor.createMemory(organPolyProcessor.buffer_size, organPolyProcessor.polyphony);
 
         // Create Mixer
-        this.mixObject = { imports: { print: arg => console.log(arg) } }
-        this.mixObject["memory"] = { "memory": this.memory };
+        this.mixerObject = { imports: { print: arg => console.log(arg) } }
+        this.mixerObject["memory"] = { "memory": wasm_memory };
 
         this.importObject = {
             env: {
@@ -290,20 +290,30 @@ class organPolyProcessor extends AudioWorkletProcessor {
                 _sqrt: Math.sqrt,
                 _tan: Math.tan,
                 
-                memory: this.memory,
+                memory: wasm_memory,
                 
                 table: new WebAssembly.Table({ initial: 0, element: 'anyfunc' })
             }
         }
 
+        // wasm mixer
+        this.mixer = new WebAssembly.Instance(organPolyProcessor.wasm_mixer_module, this.mixerObject).exports;
+
+        // wasm instance
         this.factory = new WebAssembly.Instance(organPolyProcessor.wasm_module, this.importObject).exports;
-        this.HEAP = this.memory.buffer;
+        
+        // wasm effect
+        this.effect = (organPolyProcessor.wasm_effect_module) ? new WebAssembly.Instance(organPolyProcessor.wasm_effect_module, this.importObject).exports : null;
+        
+        this.HEAP = wasm_memory.buffer;
         this.HEAP32 = new Int32Array(this.HEAP);
         this.HEAPF32 = new Float32Array(this.HEAP);
         
-        //console.log(this.HEAP);
-        //console.log(this.HEAP32);
-        //console.log(this.HEAPF32);
+        /*
+        console.log(this.HEAP);
+        console.log(this.HEAP32);
+        console.log(this.HEAPF32);
+        */
         
         // bargraph
         this.outputs_timer = 5;
@@ -313,8 +323,7 @@ class organPolyProcessor extends AudioWorkletProcessor {
         this.inputs_items = [];
         
         // Start of HEAP index
-        // this.audio_heap_ptr = 0; Fails when 0...
-        this.audio_heap_ptr = 65536;
+        this.audio_heap_ptr = 0; // Fails when 0...
         
         // Setup pointers offset
         this.audio_heap_ptr_inputs = this.audio_heap_ptr;
@@ -328,12 +337,6 @@ class organPolyProcessor extends AudioWorkletProcessor {
         
         // Setup DSP voices offset
         this.dsp_start = this.audio_heap_mixing + (this.numOut * organPolyProcessor.buffer_size * this.sample_size);
-        
-        // wasm mixer
-        this.mixer = new WebAssembly.Instance(organPolyProcessor.wasm_mixer_module, this.mixObject).exports;
-        
-        // wasm effect
-        this.effect = (organPolyProcessor.wasm_effect_module) ? new WebAssembly.Instance(organPolyProcessor.wasm_effect_module, this.importObject).exports : null;
         
         if (this.debug) {
             console.log(this.mixer);
@@ -369,6 +372,28 @@ class organPolyProcessor extends AudioWorkletProcessor {
         
         // Effect memory starts after last voice
         this.effect_start = this.dsp_voices[this.polyphony - 1] + parseInt(this.json_object.size);
+        
+        this.printMemory = function ()
+        {
+            console.log("============== Memory layout ==============");
+            console.log("json_object.size: " + this.json_object.size);
+            
+            console.log("audio_heap_ptr: " + this.audio_heap_ptr);
+            
+            console.log("audio_heap_ptr_inputs: " + this.audio_heap_ptr_inputs);
+            console.log("audio_heap_ptr_outputs: " + this.audio_heap_ptr_outputs);
+            console.log("audio_heap_ptr_mixing: " + this.audio_heap_ptr_mixing);
+            
+            console.log("audio_heap_inputs: " + this.audio_heap_inputs);
+            console.log("audio_heap_outputs: " + this.audio_heap_outputs);
+            console.log("audio_heap_mixing: " + this.audio_heap_mixing);
+            
+            console.log("dsp_start: " + this.dsp_start);
+            for (var i = 0; i <  this.polyphony; i++) {
+                console.log("dsp_voices[i]: " + i + " " + this.dsp_voices[i]);
+            }
+            console.log("effect_start: " + this.effect_start);
+        }
     
         this.getPlayingVoice = function(pitch)
         {
@@ -519,6 +544,9 @@ class organPolyProcessor extends AudioWorkletProcessor {
             if (this.effect) {
                 this.effect.init(this.effect_start, sampleRate);
             }
+            
+            // Print memory layout
+            this.printMemory();
         }
         
         this.keyOn = function (channel, pitch, velocity)

@@ -7,11 +7,11 @@
 <rect x="30.450000" y="312.000000" width="64.500000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#477881;"/>
 <text x="62.700000" y="326.000000" font-family="Arial" font-size="7" text-anchor="middle" fill="#FFFFFF">checkbox(play)</text>
 <circle cx="32.450000" cy="314.000000" r="1"/>
-<a xlink:href="pulsen-0x7f87bbc3f210.svg">
+<a xlink:href="pulsen-0x7fc080e7cca0.svg">
 <rect x="25.000000" y="345.000000" width="77.400000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#cccccc;"/>
 <rect x="24.000000" y="344.000000" width="77.400000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#003366;"/>
 </a>
-<a xlink:href="pulsen-0x7f87bbc3f210.svg">
+<a xlink:href="pulsen-0x7fc080e7cca0.svg">
 <text x="62.700000" y="358.000000" font-family="Arial" font-size="7" text-anchor="middle" fill="#FFFFFF">pulsen(10)(4400)</text>
 </a>
 <circle cx="26.000000" cy="346.000000" r="1"/>
@@ -23,201 +23,201 @@
 <line x1="114.400000" y1="337.000000" x2="117.400000" y2="336.000000"  transform="rotate(0.000000,117.400000,336.000000)" style="stroke: black; stroke-width:0.25;"/>
 <line x1="114.400000" y1="343.000000" x2="117.400000" y2="344.000000"  transform="rotate(0.000000,117.400000,344.000000)" style="stroke: black; stroke-width:0.25;"/>
 <line x1="114.400000" y1="345.000000" x2="117.400000" y2="344.000000"  transform="rotate(0.000000,117.400000,344.000000)" style="stroke: black; stroke-width:0.25;"/>
-<a xlink:href="djembe-0x7f87be81fbb0.svg">
+<a xlink:href="djembe-0x7fc083a066d0.svg">
 <rect x="326.400000" y="25.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#cccccc;"/>
 <rect x="325.400000" y="24.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#003366;"/>
 </a>
-<a xlink:href="djembe-0x7f87be81fbb0.svg">
+<a xlink:href="djembe-0x7fc083a066d0.svg">
 <text x="396.350000" y="38.000000" font-family="Arial" font-size="7" text-anchor="middle" fill="#FFFFFF">djembe(20.0f)...00000000001f)(1)</text>
 </a>
 <circle cx="327.400000" cy="26.000000" r="1"/>
 <line x1="322.400000" y1="35.000000" x2="325.400000" y2="36.000000"  transform="rotate(0.000000,325.400000,36.000000)" style="stroke: black; stroke-width:0.25;"/>
 <line x1="322.400000" y1="37.000000" x2="325.400000" y2="36.000000"  transform="rotate(0.000000,325.400000,36.000000)" style="stroke: black; stroke-width:0.25;"/>
-<a xlink:href="djembe-0x7f87be9a9dd0.svg">
+<a xlink:href="djembe-0x7fc083d81fb0.svg">
 <rect x="326.400000" y="57.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#cccccc;"/>
 <rect x="325.400000" y="56.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#003366;"/>
 </a>
-<a xlink:href="djembe-0x7f87be9a9dd0.svg">
+<a xlink:href="djembe-0x7fc083d81fb0.svg">
 <text x="396.350000" y="70.000000" font-family="Arial" font-size="7" text-anchor="middle" fill="#FFFFFF">djembe(27.071...00000000001f)(1)</text>
 </a>
 <circle cx="327.400000" cy="58.000000" r="1"/>
 <line x1="322.400000" y1="67.000000" x2="325.400000" y2="68.000000"  transform="rotate(0.000000,325.400000,68.000000)" style="stroke: black; stroke-width:0.25;"/>
 <line x1="322.400000" y1="69.000000" x2="325.400000" y2="68.000000"  transform="rotate(0.000000,325.400000,68.000000)" style="stroke: black; stroke-width:0.25;"/>
-<a xlink:href="djembe-0x7f87befe5140.svg">
+<a xlink:href="djembe-0x7fc084192710.svg">
 <rect x="326.400000" y="89.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#cccccc;"/>
 <rect x="325.400000" y="88.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#003366;"/>
 </a>
-<a xlink:href="djembe-0x7f87befe5140.svg">
+<a xlink:href="djembe-0x7fc084192710.svg">
 <text x="396.350000" y="102.000000" font-family="Arial" font-size="7" text-anchor="middle" fill="#FFFFFF">djembe(34.142...00000000001f)(1)</text>
 </a>
 <circle cx="327.400000" cy="90.000000" r="1"/>
 <line x1="322.400000" y1="99.000000" x2="325.400000" y2="100.000000"  transform="rotate(0.000000,325.400000,100.000000)" style="stroke: black; stroke-width:0.25;"/>
 <line x1="322.400000" y1="101.000000" x2="325.400000" y2="100.000000"  transform="rotate(0.000000,325.400000,100.000000)" style="stroke: black; stroke-width:0.25;"/>
-<a xlink:href="djembe-0x7f87bf330150.svg">
+<a xlink:href="djembe-0x7fc084505120.svg">
 <rect x="326.400000" y="121.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#cccccc;"/>
 <rect x="325.400000" y="120.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#003366;"/>
 </a>
-<a xlink:href="djembe-0x7f87bf330150.svg">
+<a xlink:href="djembe-0x7fc084505120.svg">
 <text x="396.350000" y="134.000000" font-family="Arial" font-size="7" text-anchor="middle" fill="#FFFFFF">djembe(41.213...00000000001f)(1)</text>
 </a>
 <circle cx="327.400000" cy="122.000000" r="1"/>
 <line x1="322.400000" y1="131.000000" x2="325.400000" y2="132.000000"  transform="rotate(0.000000,325.400000,132.000000)" style="stroke: black; stroke-width:0.25;"/>
 <line x1="322.400000" y1="133.000000" x2="325.400000" y2="132.000000"  transform="rotate(0.000000,325.400000,132.000000)" style="stroke: black; stroke-width:0.25;"/>
-<a xlink:href="djembe-0x7f87c000d820.svg">
+<a xlink:href="djembe-0x7fc085029e40.svg">
 <rect x="326.400000" y="153.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#cccccc;"/>
 <rect x="325.400000" y="152.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#003366;"/>
 </a>
-<a xlink:href="djembe-0x7f87c000d820.svg">
+<a xlink:href="djembe-0x7fc085029e40.svg">
 <text x="396.350000" y="166.000000" font-family="Arial" font-size="7" text-anchor="middle" fill="#FFFFFF">djembe(48.284...00000000001f)(1)</text>
 </a>
 <circle cx="327.400000" cy="154.000000" r="1"/>
 <line x1="322.400000" y1="163.000000" x2="325.400000" y2="164.000000"  transform="rotate(0.000000,325.400000,164.000000)" style="stroke: black; stroke-width:0.25;"/>
 <line x1="322.400000" y1="165.000000" x2="325.400000" y2="164.000000"  transform="rotate(0.000000,325.400000,164.000000)" style="stroke: black; stroke-width:0.25;"/>
-<a xlink:href="djembe-0x7f87bf69d860.svg">
+<a xlink:href="djembe-0x7fc0853cd7a0.svg">
 <rect x="326.400000" y="185.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#cccccc;"/>
 <rect x="325.400000" y="184.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#003366;"/>
 </a>
-<a xlink:href="djembe-0x7f87bf69d860.svg">
+<a xlink:href="djembe-0x7fc0853cd7a0.svg">
 <text x="396.350000" y="198.000000" font-family="Arial" font-size="7" text-anchor="middle" fill="#FFFFFF">djembe(55.355...00000000001f)(1)</text>
 </a>
 <circle cx="327.400000" cy="186.000000" r="1"/>
 <line x1="322.400000" y1="195.000000" x2="325.400000" y2="196.000000"  transform="rotate(0.000000,325.400000,196.000000)" style="stroke: black; stroke-width:0.25;"/>
 <line x1="322.400000" y1="197.000000" x2="325.400000" y2="196.000000"  transform="rotate(0.000000,325.400000,196.000000)" style="stroke: black; stroke-width:0.25;"/>
-<a xlink:href="djembe-0x7f87c0694970.svg">
+<a xlink:href="djembe-0x7fc085810880.svg">
 <rect x="326.400000" y="217.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#cccccc;"/>
 <rect x="325.400000" y="216.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#003366;"/>
 </a>
-<a xlink:href="djembe-0x7f87c0694970.svg">
+<a xlink:href="djembe-0x7fc085810880.svg">
 <text x="396.350000" y="230.000000" font-family="Arial" font-size="7" text-anchor="middle" fill="#FFFFFF">djembe(62.426...00000000001f)(1)</text>
 </a>
 <circle cx="327.400000" cy="218.000000" r="1"/>
 <line x1="322.400000" y1="227.000000" x2="325.400000" y2="228.000000"  transform="rotate(0.000000,325.400000,228.000000)" style="stroke: black; stroke-width:0.25;"/>
 <line x1="322.400000" y1="229.000000" x2="325.400000" y2="228.000000"  transform="rotate(0.000000,325.400000,228.000000)" style="stroke: black; stroke-width:0.25;"/>
-<a xlink:href="djembe-0x7f87c1aa7d10.svg">
+<a xlink:href="djembe-0x7fc085d471a0.svg">
 <rect x="326.400000" y="249.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#cccccc;"/>
 <rect x="325.400000" y="248.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#003366;"/>
 </a>
-<a xlink:href="djembe-0x7f87c1aa7d10.svg">
+<a xlink:href="djembe-0x7fc085d471a0.svg">
 <text x="396.350000" y="262.000000" font-family="Arial" font-size="7" text-anchor="middle" fill="#FFFFFF">djembe(69.497...00000000001f)(1)</text>
 </a>
 <circle cx="327.400000" cy="250.000000" r="1"/>
 <line x1="322.400000" y1="259.000000" x2="325.400000" y2="260.000000"  transform="rotate(0.000000,325.400000,260.000000)" style="stroke: black; stroke-width:0.25;"/>
 <line x1="322.400000" y1="261.000000" x2="325.400000" y2="260.000000"  transform="rotate(0.000000,325.400000,260.000000)" style="stroke: black; stroke-width:0.25;"/>
-<a xlink:href="djembe-0x7f87c1ac6640.svg">
+<a xlink:href="djembe-0x7fc0860b28c0.svg">
 <rect x="326.400000" y="281.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#cccccc;"/>
 <rect x="325.400000" y="280.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#003366;"/>
 </a>
-<a xlink:href="djembe-0x7f87c1ac6640.svg">
+<a xlink:href="djembe-0x7fc0860b28c0.svg">
 <text x="396.350000" y="294.000000" font-family="Arial" font-size="7" text-anchor="middle" fill="#FFFFFF">djembe(76.568...00000000001f)(1)</text>
 </a>
 <circle cx="327.400000" cy="282.000000" r="1"/>
 <line x1="322.400000" y1="291.000000" x2="325.400000" y2="292.000000"  transform="rotate(0.000000,325.400000,292.000000)" style="stroke: black; stroke-width:0.25;"/>
 <line x1="322.400000" y1="293.000000" x2="325.400000" y2="292.000000"  transform="rotate(0.000000,325.400000,292.000000)" style="stroke: black; stroke-width:0.25;"/>
-<a xlink:href="djembe-0x7f87c1fe6000.svg">
+<a xlink:href="djembe-0x7fc08643fa70.svg">
 <rect x="326.400000" y="313.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#cccccc;"/>
 <rect x="325.400000" y="312.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#003366;"/>
 </a>
-<a xlink:href="djembe-0x7f87c1fe6000.svg">
+<a xlink:href="djembe-0x7fc08643fa70.svg">
 <text x="396.350000" y="326.000000" font-family="Arial" font-size="7" text-anchor="middle" fill="#FFFFFF">djembe(83.639...00000000001f)(1)</text>
 </a>
 <circle cx="327.400000" cy="314.000000" r="1"/>
 <line x1="322.400000" y1="323.000000" x2="325.400000" y2="324.000000"  transform="rotate(0.000000,325.400000,324.000000)" style="stroke: black; stroke-width:0.25;"/>
 <line x1="322.400000" y1="325.000000" x2="325.400000" y2="324.000000"  transform="rotate(0.000000,325.400000,324.000000)" style="stroke: black; stroke-width:0.25;"/>
-<a xlink:href="djembe-0x7f87c24198f0.svg">
+<a xlink:href="djembe-0x7fc086746df0.svg">
 <rect x="326.400000" y="345.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#cccccc;"/>
 <rect x="325.400000" y="344.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#003366;"/>
 </a>
-<a xlink:href="djembe-0x7f87c24198f0.svg">
+<a xlink:href="djembe-0x7fc086746df0.svg">
 <text x="396.350000" y="358.000000" font-family="Arial" font-size="7" text-anchor="middle" fill="#FFFFFF">djembe(90.710...00000000001f)(1)</text>
 </a>
 <circle cx="327.400000" cy="346.000000" r="1"/>
 <line x1="322.400000" y1="355.000000" x2="325.400000" y2="356.000000"  transform="rotate(0.000000,325.400000,356.000000)" style="stroke: black; stroke-width:0.25;"/>
 <line x1="322.400000" y1="357.000000" x2="325.400000" y2="356.000000"  transform="rotate(0.000000,325.400000,356.000000)" style="stroke: black; stroke-width:0.25;"/>
-<a xlink:href="djembe-0x7f87c2988370.svg">
+<a xlink:href="djembe-0x7fc086c09660.svg">
 <rect x="326.400000" y="377.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#cccccc;"/>
 <rect x="325.400000" y="376.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#003366;"/>
 </a>
-<a xlink:href="djembe-0x7f87c2988370.svg">
+<a xlink:href="djembe-0x7fc086c09660.svg">
 <text x="396.350000" y="390.000000" font-family="Arial" font-size="7" text-anchor="middle" fill="#FFFFFF">djembe(97.781...00000000001f)(1)</text>
 </a>
 <circle cx="327.400000" cy="378.000000" r="1"/>
 <line x1="322.400000" y1="387.000000" x2="325.400000" y2="388.000000"  transform="rotate(0.000000,325.400000,388.000000)" style="stroke: black; stroke-width:0.25;"/>
 <line x1="322.400000" y1="389.000000" x2="325.400000" y2="388.000000"  transform="rotate(0.000000,325.400000,388.000000)" style="stroke: black; stroke-width:0.25;"/>
-<a xlink:href="djembe-0x7f87c25823d0.svg">
+<a xlink:href="djembe-0x7fc086f5bba0.svg">
 <rect x="326.400000" y="409.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#cccccc;"/>
 <rect x="325.400000" y="408.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#003366;"/>
 </a>
-<a xlink:href="djembe-0x7f87c25823d0.svg">
+<a xlink:href="djembe-0x7fc086f5bba0.svg">
 <text x="396.350000" y="422.000000" font-family="Arial" font-size="7" text-anchor="middle" fill="#FFFFFF">djembe(104.85...00000000001f)(1)</text>
 </a>
 <circle cx="327.400000" cy="410.000000" r="1"/>
 <line x1="322.400000" y1="419.000000" x2="325.400000" y2="420.000000"  transform="rotate(0.000000,325.400000,420.000000)" style="stroke: black; stroke-width:0.25;"/>
 <line x1="322.400000" y1="421.000000" x2="325.400000" y2="420.000000"  transform="rotate(0.000000,325.400000,420.000000)" style="stroke: black; stroke-width:0.25;"/>
-<a xlink:href="djembe-0x7f87bd99ad20.svg">
+<a xlink:href="djembe-0x7fc087231090.svg">
 <rect x="326.400000" y="441.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#cccccc;"/>
 <rect x="325.400000" y="440.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#003366;"/>
 </a>
-<a xlink:href="djembe-0x7f87bd99ad20.svg">
+<a xlink:href="djembe-0x7fc087231090.svg">
 <text x="396.350000" y="454.000000" font-family="Arial" font-size="7" text-anchor="middle" fill="#FFFFFF">djembe(111.92...00000000001f)(1)</text>
 </a>
 <circle cx="327.400000" cy="442.000000" r="1"/>
 <line x1="322.400000" y1="451.000000" x2="325.400000" y2="452.000000"  transform="rotate(0.000000,325.400000,452.000000)" style="stroke: black; stroke-width:0.25;"/>
 <line x1="322.400000" y1="453.000000" x2="325.400000" y2="452.000000"  transform="rotate(0.000000,325.400000,452.000000)" style="stroke: black; stroke-width:0.25;"/>
-<a xlink:href="djembe-0x7f87c32b4a60.svg">
+<a xlink:href="djembe-0x7fc0875c19a0.svg">
 <rect x="326.400000" y="473.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#cccccc;"/>
 <rect x="325.400000" y="472.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#003366;"/>
 </a>
-<a xlink:href="djembe-0x7f87c32b4a60.svg">
+<a xlink:href="djembe-0x7fc0875c19a0.svg">
 <text x="396.350000" y="486.000000" font-family="Arial" font-size="7" text-anchor="middle" fill="#FFFFFF">djembe(118.99...00000000001f)(1)</text>
 </a>
 <circle cx="327.400000" cy="474.000000" r="1"/>
 <line x1="322.400000" y1="483.000000" x2="325.400000" y2="484.000000"  transform="rotate(0.000000,325.400000,484.000000)" style="stroke: black; stroke-width:0.25;"/>
 <line x1="322.400000" y1="485.000000" x2="325.400000" y2="484.000000"  transform="rotate(0.000000,325.400000,484.000000)" style="stroke: black; stroke-width:0.25;"/>
-<a xlink:href="djembe-0x7f87c3773210.svg">
+<a xlink:href="djembe-0x7fc087968fc0.svg">
 <rect x="326.400000" y="505.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#cccccc;"/>
 <rect x="325.400000" y="504.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#003366;"/>
 </a>
-<a xlink:href="djembe-0x7f87c3773210.svg">
+<a xlink:href="djembe-0x7fc087968fc0.svg">
 <text x="396.350000" y="518.000000" font-family="Arial" font-size="7" text-anchor="middle" fill="#FFFFFF">djembe(126.06...00000000001f)(1)</text>
 </a>
 <circle cx="327.400000" cy="506.000000" r="1"/>
 <line x1="322.400000" y1="515.000000" x2="325.400000" y2="516.000000"  transform="rotate(0.000000,325.400000,516.000000)" style="stroke: black; stroke-width:0.25;"/>
 <line x1="322.400000" y1="517.000000" x2="325.400000" y2="516.000000"  transform="rotate(0.000000,325.400000,516.000000)" style="stroke: black; stroke-width:0.25;"/>
-<a xlink:href="djembe-0x7f87c3a31f80.svg">
+<a xlink:href="djembe-0x7fc087d0c9d0.svg">
 <rect x="326.400000" y="537.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#cccccc;"/>
 <rect x="325.400000" y="536.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#003366;"/>
 </a>
-<a xlink:href="djembe-0x7f87c3a31f80.svg">
+<a xlink:href="djembe-0x7fc087d0c9d0.svg">
 <text x="396.350000" y="550.000000" font-family="Arial" font-size="7" text-anchor="middle" fill="#FFFFFF">djembe(133.13...00000000001f)(1)</text>
 </a>
 <circle cx="327.400000" cy="538.000000" r="1"/>
 <line x1="322.400000" y1="547.000000" x2="325.400000" y2="548.000000"  transform="rotate(0.000000,325.400000,548.000000)" style="stroke: black; stroke-width:0.25;"/>
 <line x1="322.400000" y1="549.000000" x2="325.400000" y2="548.000000"  transform="rotate(0.000000,325.400000,548.000000)" style="stroke: black; stroke-width:0.25;"/>
-<a xlink:href="djembe-0x7f87c3cc5580.svg">
+<a xlink:href="djembe-0x7fc087e4cac0.svg">
 <rect x="326.400000" y="569.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#cccccc;"/>
 <rect x="325.400000" y="568.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#003366;"/>
 </a>
-<a xlink:href="djembe-0x7f87c3cc5580.svg">
+<a xlink:href="djembe-0x7fc087e4cac0.svg">
 <text x="396.350000" y="582.000000" font-family="Arial" font-size="7" text-anchor="middle" fill="#FFFFFF">djembe(140.20...00000000001f)(1)</text>
 </a>
 <circle cx="327.400000" cy="570.000000" r="1"/>
 <line x1="322.400000" y1="579.000000" x2="325.400000" y2="580.000000"  transform="rotate(0.000000,325.400000,580.000000)" style="stroke: black; stroke-width:0.25;"/>
 <line x1="322.400000" y1="581.000000" x2="325.400000" y2="580.000000"  transform="rotate(0.000000,325.400000,580.000000)" style="stroke: black; stroke-width:0.25;"/>
-<a xlink:href="djembe-0x7f87c41719c0.svg">
+<a xlink:href="djembe-0x7fc088537780.svg">
 <rect x="326.400000" y="601.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#cccccc;"/>
 <rect x="325.400000" y="600.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#003366;"/>
 </a>
-<a xlink:href="djembe-0x7f87c41719c0.svg">
+<a xlink:href="djembe-0x7fc088537780.svg">
 <text x="396.350000" y="614.000000" font-family="Arial" font-size="7" text-anchor="middle" fill="#FFFFFF">djembe(147.27...00000000001f)(1)</text>
 </a>
 <circle cx="327.400000" cy="602.000000" r="1"/>
 <line x1="322.400000" y1="611.000000" x2="325.400000" y2="612.000000"  transform="rotate(0.000000,325.400000,612.000000)" style="stroke: black; stroke-width:0.25;"/>
 <line x1="322.400000" y1="613.000000" x2="325.400000" y2="612.000000"  transform="rotate(0.000000,325.400000,612.000000)" style="stroke: black; stroke-width:0.25;"/>
-<a xlink:href="djembe-0x7f87c4414990.svg">
+<a xlink:href="djembe-0x7fc08882f980.svg">
 <rect x="326.400000" y="633.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#cccccc;"/>
 <rect x="325.400000" y="632.000000" width="141.900000" height="24.000000" rx="0" ry="0" style="stroke:none;fill:#003366;"/>
 </a>
-<a xlink:href="djembe-0x7f87c4414990.svg">
+<a xlink:href="djembe-0x7fc08882f980.svg">
 <text x="396.350000" y="646.000000" font-family="Arial" font-size="7" text-anchor="middle" fill="#FFFFFF">djembe(154.35...00000000001f)(1)</text>
 </a>
 <circle cx="327.400000" cy="634.000000" r="1"/>
