@@ -1,3 +1,5 @@
+<!-- doc-begin -->
+
 # Introduction 
 
 ## What is Faust?

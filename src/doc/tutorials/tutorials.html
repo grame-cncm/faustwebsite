@@ -1,5 +1,5 @@
 <div class="container-fluid"><div class="row faust-doc"><nav id="TOC" class="col-3 faust-doc-content"><div style="height: 100%;overflow-y: scroll;"><ul class="nav nav-pills flex-column"><ul>
-<li><a class="nav-link" href="#introduction">Introduction</a></li>
+<li><a class="nav-link" href="#faust-tutorials">Faust Tutorials</a></li>
 <li><a class="nav-link" href="#tutorial-adding-faust-dsp-support-to-your-juce-plug-ins">Tutorial: Adding Faust DSP Support to Your JUCE Plug-ins</a><ul>
 <li><a class="nav-link" href="#the-old-way-brut-force-method">“The Old Way”: Brut-Force Method</a></li>
 <li><a class="nav-link" href="#simple-synth-plug-in">Simple Synth Plug-In</a><ul>
@@ -13,7 +13,8 @@
 </nav>
 <main role="main" class="col-9 ml-sm-auto px-4 faust-doc-content">
 <div data-spy="scroll" data-target="#TOC" data-offset="100" style="height: 100%;overflow-y: scroll;">
-<h1 id="introduction">Introduction</h1>
+<!-- doc-begin -->
+<h1 id="faust-tutorials">Faust Tutorials</h1>
 <p>This page gathers various tutorials around the Faust programming language and some of its associated tools. This is an ongoing project and it will soon be populated with more elements.</p>
 <p>Should you have any question, feel free to send an e-mail to the <a href="../community/mailing-lists/index.html#users-list">Faust user mailing list</a>.</p>
 <h1 id="tutorial-adding-faust-dsp-support-to-your-juce-plug-ins">Tutorial: Adding Faust DSP Support to Your JUCE Plug-ins</h1>
@@ -45,7 +46,7 @@ gain = nentry(&quot;gain&quot;,0.5,0,1,0.01) : si.smoo;
 gate = button(&quot;gate&quot;) : si.smoo;
 cutoff = nentry(&quot;cutoff&quot;,10000,50,10000,0.01) : si.smoo;
 process = os.sawtooth(freq)*gain*gate : fi.lowpass(3,cutoff) &lt;: _,_;</code></pre>
-<a href="https://faust.grame.fr/new/tools/editor?code=https://faust.grame.fr/new/manual/img/src/exfaust0/exfaust0.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="https://faust.grame.fr/tools/editor?code=https://faust.grame.fr/manual/img/src/exfaust0/exfaust0.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <p>Feel free to run it in the web editor to see how it sounds!</p>
 <blockquote>
 <p>The output of the lowpass is split into 2 signals to create a stereo object.</p>
@@ -225,7 +226,7 @@ gate = button(&quot;gate&quot;) : si.smoo;
 cutoff = nentry(&quot;cutoff&quot;,10000,50,10000,0.01) : si.smoo;
 process = os.sawtooth(freq)*gain*gate : fi.lowpass(3,cutoff) &lt;: _,_ ;
 effect = dm.zita_light;</code></pre>
-<a href="https://faust.grame.fr/new/tools/editor?code=https://faust.grame.fr/new/manual/img/src/exfaust1/exfaust1.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="https://faust.grame.fr/tools/editor?code=https://faust.grame.fr/manual/img/src/exfaust1/exfaust1.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <p>Note that the <code>freq</code>, <code>gain</code>, and <code>gate</code> parameters are declared, which means that this Faust program can be turned into a polyphonic synth (see the <a href="TODO">MIDI polyphonic documentation</a>). Hence, in the current configuration multiple instances (voices) of <code>process</code> will be created and connected to a single instance of <code>effect</code>.</p>
 <p>A polyphonic DSP engine for JUCE can be generated from this code by running:</p>
 <pre><code>faust2api -juce -nvoices 12 filteredSawtoothPoly.dsp</code></pre>

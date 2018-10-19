@@ -31,7 +31,7 @@ do
 done
 
 # Generating html version of markdown
-PHTML=$(pandoc --standalone --toc --toc-depth=4 --metadata pagetitle="Faust Examples" --mathjax src/introduction.md $FILESLIST)
+PHTML=$(pandoc --standalone --toc --toc-depth=4 --metadata pagetitle="Faust Examples" --mathjax src/faust-examples.md $FILESLIST)
 
 source ../../../script/buildtuto
 

@@ -1,0 +1,522 @@
+<html>
+<body>
+<H1>
+zitaRev <br></H1>
+<H4>
+<button onclick="startBenchmark()">Start benchmark</button>
+<br>
+MBytes/sec :
+<input id="megapersec" "type="text" "value="">
+<br>
+CPU load (in % of a 1024 frames, 44.1 kHz audio buffer) :
+<input id="cpu" "type="text" "value="">
+<script>
+
+/*
+Code generated with Faust version 2.5.12
+Compilation options: wasm, -scal -ftz 2
+*/
+
+function getJSONzitaRev() {
+	return "{\"name\":\"zitaRev\",\"version\":\"2.5.12\",\"options\":\"wasm, -scal -ftz 2\",\"size\":\"959048\",\"inputs\":\"2\",\"outputs\":\"2\",\"meta\":[{\"author\":\"JOS, Revised by RM\"},{\"basics.lib/name\":\"Faust Basic Element Library\"},{\"basics.lib/version\":\"0.0\"},{\"delays.lib/name\":\"Faust Delay Library\"},{\"delays.lib/version\":\"0.0\"},{\"description\":\"Example GUI for `zita_rev1_stereo` (mostly following the Linux `zita-rev1` GUI).\"},{\"filters.lib/name\":\"Faust Filters Library\"},{\"filters.lib/version\":\"0.0\"},{\"maths.lib/author\":\"GRAME\"},{\"maths.lib/copyright\":\"GRAME\"},{\"maths.lib/license\":\"LGPL with exception\"},{\"maths.lib/name\":\"Faust Math Library\"},{\"maths.lib/version\":\"2.1\"},{\"name\":\"zitaRev\"},{\"reverbs.lib/name\":\"Faust Reverb Library\"},{\"reverbs.lib/version\":\"0.0\"},{\"routes.lib/name\":\"Faust Signal Routing Library\"},{\"routes.lib/version\":\"0.0\"},{\"signals.lib/name\":\"Faust Signal Routing Library\"},{\"signals.lib/version\":\"0.0\"},{\"version\":\"0.0\"}],\"ui\":[{\"type\":\"hgroup\",\"label\":\"Zita_Rev1\",\"meta\":[{\"0\":\"\"},{\"tooltip\":\"~ ZITA REV1 FEEDBACK DELAY NETWORK (FDN) & SCHROEDER  ALLPASS-COMB REVERBERATOR (8x8). See Faust's reverbs.lib for documentation and  references\"}],\"items\":[{\"type\":\"hgroup\",\"label\":\"Input\",\"meta\":[{\"1\":\"\"}],\"items\":[{\"type\":\"vslider\",\"label\":\"In Delay\",\"address\":\"/Zita_Rev1/Input/In_Delay\",\"index\":\"262260\",\"meta\":[{\"1\":\"\"},{\"style\":\"knob\"},{\"tooltip\":\"Delay in ms   before reverberation begins\"},{\"unit\":\"ms\"}],\"init\":\"60\",\"min\":\"20\",\"max\":\"100\",\"step\":\"1\"}]},{\"type\":\"hgroup\",\"label\":\"Decay Times in Bands (see tooltips)\",\"meta\":[{\"2\":\"\"}],\"items\":[{\"type\":\"vslider\",\"label\":\"LF X\",\"address\":\"/Zita_Rev1/Decay_Times_in_Bands_(see_tooltips)/LF_X\",\"index\":\"65620\",\"meta\":[{\"1\":\"\"},{\"scale\":\"log\"},{\"style\":\"knob\"},{\"tooltip\":\"Crossover frequency (Hz) separating low and middle frequencies\"},{\"unit\":\"Hz\"}],\"init\":\"200\",\"min\":\"50\",\"max\":\"1000\",\"step\":\"1\"},{\"type\":\"vslider\",\"label\":\"Low RT60\",\"address\":\"/Zita_Rev1/Decay_Times_in_Bands_(see_tooltips)/Low_RT60\",\"index\":\"65612\",\"meta\":[{\"2\":\"\"},{\"scale\":\"log\"},{\"style\":\"knob\"},{\"tooltip\":\"T60 = time (in seconds) to decay 60dB in low-frequency band\"},{\"unit\":\"s\"}],\"init\":\"3\",\"min\":\"1\",\"max\":\"8\",\"step\":\"0.1\"},{\"type\":\"vslider\",\"label\":\"Mid RT60\",\"address\":\"/Zita_Rev1/Decay_Times_in_Bands_(see_tooltips)/Mid_RT60\",\"index\":\"65600\",\"meta\":[{\"3\":\"\"},{\"scale\":\"log\"},{\"style\":\"knob\"},{\"tooltip\":\"T60 = time (in seconds) to decay 60dB in middle band\"},{\"unit\":\"s\"}],\"init\":\"2\",\"min\":\"1\",\"max\":\"8\",\"step\":\"0.1\"},{\"type\":\"vslider\",\"label\":\"HF Damping\",\"address\":\"/Zita_Rev1/Decay_Times_in_Bands_(see_tooltips)/HF_Damping\",\"index\":\"65608\",\"meta\":[{\"4\":\"\"},{\"scale\":\"log\"},{\"style\":\"knob\"},{\"tooltip\":\"Frequency (Hz) at which the high-frequency T60 is half the middle-band's T60\"},{\"unit\":\"Hz\"}],\"init\":\"6000\",\"min\":\"1500\",\"max\":\"23520\",\"step\":\"1\"}]},{\"type\":\"hgroup\",\"label\":\"RM Peaking Equalizer 1\",\"meta\":[{\"3\":\"\"}],\"items\":[{\"type\":\"vslider\",\"label\":\"Eq1 Freq\",\"address\":\"/Zita_Rev1/RM_Peaking_Equalizer_1/Eq1_Freq\",\"index\":\"65584\",\"meta\":[{\"1\":\"\"},{\"scale\":\"log\"},{\"style\":\"knob\"},{\"tooltip\":\"Center-frequency of second-order Regalia-Mitra peaking equalizer section 1\"},{\"unit\":\"Hz\"}],\"init\":\"315\",\"min\":\"40\",\"max\":\"2500\",\"step\":\"1\"},{\"type\":\"vslider\",\"label\":\"Eq1 Level\",\"address\":\"/Zita_Rev1/RM_Peaking_Equalizer_1/Eq1_Level\",\"index\":\"65588\",\"meta\":[{\"2\":\"\"},{\"style\":\"knob\"},{\"tooltip\":\"Peak level   in dB of second-order Regalia-Mitra peaking equalizer section 1\"},{\"unit\":\"dB\"}],\"init\":\"0\",\"min\":\"-15\",\"max\":\"15\",\"step\":\"0.1\"}]},{\"type\":\"hgroup\",\"label\":\"RM Peaking Equalizer 2\",\"meta\":[{\"4\":\"\"}],\"items\":[{\"type\":\"vslider\",\"label\":\"Eq2 Freq\",\"address\":\"/Zita_Rev1/RM_Peaking_Equalizer_2/Eq2_Freq\",\"index\":\"65576\",\"meta\":[{\"1\":\"\"},{\"scale\":\"log\"},{\"style\":\"knob\"},{\"tooltip\":\"Center-frequency of second-order Regalia-Mitra peaking equalizer section 2\"},{\"unit\":\"Hz\"}],\"init\":\"1500\",\"min\":\"160\",\"max\":\"10000\",\"step\":\"1\"},{\"type\":\"vslider\",\"label\":\"Eq2 Level\",\"address\":\"/Zita_Rev1/RM_Peaking_Equalizer_2/Eq2_Level\",\"index\":\"65580\",\"meta\":[{\"2\":\"\"},{\"style\":\"knob\"},{\"tooltip\":\"Peak level   in dB of second-order Regalia-Mitra peaking equalizer section 2\"},{\"unit\":\"dB\"}],\"init\":\"0\",\"min\":\"-15\",\"max\":\"15\",\"step\":\"0.1\"}]},{\"type\":\"hgroup\",\"label\":\"Output\",\"meta\":[{\"5\":\"\"}],\"items\":[{\"type\":\"vslider\",\"label\":\"Dry/Wet Mix\",\"address\":\"/Zita_Rev1/Output/Dry/Wet_Mix\",\"index\":\"65552\",\"meta\":[{\"1\":\"\"},{\"style\":\"knob\"},{\"tooltip\":\"-1 = dry, 1 = wet\"}],\"init\":\"0\",\"min\":\"-1\",\"max\":\"1\",\"step\":\"0.01\"},{\"type\":\"vslider\",\"label\":\"Level\",\"address\":\"/Zita_Rev1/Output/Level\",\"index\":\"0\",\"meta\":[{\"2\":\"\"},{\"style\":\"knob\"},{\"tooltip\":\"Output scale   factor\"},{\"unit\":\"dB\"}],\"init\":\"-20\",\"min\":\"-70\",\"max\":\"40\",\"step\":\"0.1\"}]}]}]}";
+}
+
+'use strict';
+
+var faust = faust || {};
+
+// Standard Faust zitaRev
+faust.zitaRev = function (instance, buffer_size, sample_rate) {
+
+    var output_handler = null;
+    var ins, outs;
+    
+    var dspInChannnels = [];
+    var dspOutChannnels = [];
+   
+    // Keep JSON parsed object
+    var json_object = JSON.parse(getJSONzitaRev());
+    
+    console.log("Compiled with wasm backend, libfaust version : %s, options : %s", json_object.version, json_object.options);
+      
+    var numIn = parseInt(json_object.inputs);
+    var numOut = parseInt(json_object.outputs);
+     
+    // Memory allocator
+    var ptr_size = 4;
+    var sample_size = 4;  // float
+    
+    function pow2limit (x)
+    {
+        var n = 65536; // Minimum = 64 kB
+        while (n < x) { n = 2 * n; }
+        return n;
+    }
+     
+    var factory = instance.exports;
+    
+    var HEAP = instance.exports.memory.buffer;
+    var HEAP32 = new Int32Array(HEAP);
+    var HEAPF32 = new Float32Array(HEAP);
+  
+    // bargraph
+    var outputs_timer = 5;
+    var outputs_items = [];
+     
+    // input items
+    var inputs_items = [];
+    
+    // buttons items
+    var buttons_items = [];
+    
+    // default values
+    var default_values = [];
+    
+    // zitaRev is placed first with index 0. Audio buffer start at the end of zitaRev.
+    var audio_heap_ptr = parseInt(json_object.size);
+  
+    // Setup pointers offset
+    var audio_heap_ptr_inputs = audio_heap_ptr; 
+    var audio_heap_ptr_outputs = audio_heap_ptr_inputs + (numIn * ptr_size);
+     
+    // Setup buffer offset
+    var audio_heap_inputs = audio_heap_ptr_outputs + (numOut * ptr_size);
+    var audio_heap_outputs = audio_heap_inputs + (numIn * buffer_size * sample_size);
+    
+    // Start of zitaRev memory : zitaRev is placed first with index 0
+    var dsp = 0;
+    
+    var pathTable = [];
+    
+    function update_outputs () 
+    {
+        if (outputs_items.length > 0 && output_handler && outputs_timer-- === 0) {
+            outputs_timer = 5;
+            for (var i = 0; i < outputs_items.length; i++) {
+                output_handler(outputs_items[i], factory.getParamValue(dsp, pathTable[outputs_items[i]]));
+            }
+        }
+    }
+    
+    function computeAux (inputs, outputs)
+    {
+        var i, j;
+        
+        // Read inputs
+        for (i = 0; i < numIn; i++) {
+            var input = inputs[i];
+            var dspInput = dspInChannnels[i];
+            for (j = 0; j < buffer_size; j++) {
+                dspInput[j] = input[j];
+            }
+        }
+        
+        // Compute
+        factory.compute(dsp, buffer_size, ins, outs);
+       
+        // Update bargraph
+        update_outputs();
+        
+        // Write outputs
+        for (i = 0; i < numOut; i++) {
+            var output = outputs[i];
+            var dspOutput = dspOutChannnels[i];
+            for (j = 0; j < buffer_size; j++) {
+                output[j] = dspOutput[j];
+            }
+        }
+    };
+         
+    // JSON parsing
+    function parse_ui (ui) 
+    {
+        for (var i = 0; i < ui.length; i++) {
+            parse_group(ui[i]);
+        }
+    }
+    
+    function parse_group (group) 
+    {
+        if (group.items) {
+            parse_items(group.items);
+        }
+    }
+    
+    function parse_items (items) 
+    {
+        var i;
+        for (i = 0; i < items.length; i++) {
+            parse_item(items[i]);
+        }
+    }
+    
+    function parse_item (item) 
+    {
+        if (item.type === "vgroup" 
+        	|| item.type === "hgroup" 
+        	|| item.type === "tgroup") {
+            parse_items(item.items);
+        } else if (item.type === "hbargraph" 
+        	|| item.type === "vbargraph") {
+            // Keep bargraph adresses
+            outputs_items.push(item.address);
+            pathTable[item.address] = parseInt(item.index);
+        } else if (item.type === "vslider" 
+        	|| item.type === "hslider" 
+        	|| item.type === "button" 
+        	|| item.type === "checkbox" 
+        	|| item.type === "nentry") {
+            // Keep inputs adresses
+            inputs_items.push(item.address);
+            pathTable[item.address] = parseInt(item.index);
+            if (item.type === "button") {
+                buttons_items.push(item.address);
+                default_values.push(0);
+            } else if (item.type === "checkbox") {
+            	default_values.push(0);
+            } else {
+                default_values.push(parseFloat(item.init));
+            }
+        }
+    }
+      
+    function init ()
+    {
+        var i;
+        
+        if (numIn > 0) {
+            ins = audio_heap_ptr_inputs; 
+            for (i = 0; i < numIn; i++) { 
+                HEAP32[(ins >> 2) + i] = audio_heap_inputs + ((buffer_size * sample_size) * i);
+           	}
+     
+            // Prepare Ins buffer tables
+            var dspInChans = HEAP32.subarray(ins >> 2, (ins + numIn * ptr_size) >> 2);
+            for (i = 0; i < numIn; i++) {
+                dspInChannnels[i] = HEAPF32.subarray(dspInChans[i] >> 2, (dspInChans[i] + buffer_size * sample_size) >> 2);
+            }
+        }
+        
+        if (numOut > 0) {
+            outs = audio_heap_ptr_outputs; 
+            for (i = 0; i < numOut; i++) { 
+                HEAP32[(outs >> 2) + i] = audio_heap_outputs + ((buffer_size * sample_size) * i);
+            }
+          
+            // Prepare Out buffer tables
+            var dspOutChans = HEAP32.subarray(outs >> 2, (outs + numOut * ptr_size) >> 2);
+            for (i = 0; i < numOut; i++) {
+                dspOutChannnels[i] = HEAPF32.subarray(dspOutChans[i] >> 2, (dspOutChans[i] + buffer_size * sample_size) >> 2);
+            }
+        }
+                                
+        // bargraph
+        parse_ui(json_object.ui);
+        
+        // Init zitaRev
+        factory.init(dsp, sample_rate);
+    }
+    
+    init();
+    
+    // External API
+    return {
+     	
+        getSampleRate : function () 
+        {
+            return factory.getSampleRate(dsp);
+        },
+        
+        getNumInputs : function () 
+        {
+            return parseInt(json_object.inputs);
+        },
+        
+        getNumOutputs : function () 
+        {
+            return parseInt(json_object.outputs);
+        },
+               
+        init : function (sample_rate) 
+        {
+            factory.init(dsp, sample_rate);
+        },
+        
+        instanceInit : function (sample_rate) 
+        {
+            factory.instanceInit(dsp, sample_rate);
+        },
+        
+        instanceConstants : function (sample_rate) 
+        {
+            factory.instanceConstants(dsp, sample_rate);
+        },
+        
+        instanceResetUserInterface : function () 
+        {
+            factory.instanceResetUserInterface(dsp);
+        },
+        
+        instanceClear : function () 
+        {
+            factory.instanceClear(dsp);
+        },
+        
+        setOutputParamHandler : function (handler)
+        {
+            output_handler = handler;
+        },
+        
+        getOutputParamHandler : function ()
+        {
+            return output_handler;
+        },
+        
+        setParamValue : function (path, val)
+        {
+            factory.setParamValue(dsp, pathTable[path], val);
+        },
+
+        getParamValue : function (path) 
+        {
+            return factory.getParamValue(dsp, pathTable[path]);
+        },
+        
+        getParams : function()
+        {
+            return inputs_items;
+        },
+        
+        getButtonsParams : function()
+        {
+            return buttons_items;
+        },
+        
+        getJSON : function ()
+        {
+            return getJSONzitaRev();
+        },
+        
+        compute : function (inputs, outputs)
+        {
+            computeAux(inputs, outputs);
+        },
+        
+        checkDefaults : function ()
+		{
+			for (var i = 0; i < default_values.length; i++) {
+				if (default_values[i] !== factory.getParamValue(dsp, pathTable[inputs_items[i]])) return false;
+			}
+			return true;
+		},
+	
+		initRandom : function ()
+		{
+			for (var i = 0; i < default_values.length; i++) {
+                factory.setParamValue(dsp, pathTable[inputs_items[i]], 0.123456789);
+			}
+		}
+    };
+};
+
+// Bench code
+var buffer_size = 1024;
+var sample_rate = 44100;
+var inputs = [];
+var outputs = [];
+var run = -1;
+var bench_num = 3;
+
+var NV = 4096;
+var input_index = 0;
+var output_index = 0;
+
+var createBuffers = function(ins, outs)
+{
+    console.log("Allocate ins/outs buffers");
+	for (var i = 0; i < ins; i++) {
+		var input = new Float32Array(buffer_size * NV);
+		// Init input with noise
+		for (var j = 0; j < buffer_size * NV; j++) {
+			input[j] = (Math.random() * 2) - 1.0;
+		}
+		inputs.push(input);
+	}
+	for (var i = 0; i < outs; i++) {
+		outputs.push(new Float32Array(buffer_size * NV));
+	}
+}
+
+function benchOne(dsp, run)
+{
+   var time1 = new Date().getTime();
+
+    // Bench zitaRev
+    while (run-- > 0) {
+		var ins_slice = [];
+		var outs_slice = [];
+		for (var i = 0; i < dsp.getNumInputs(); i++) {
+			ins_slice.push(inputs[i].subarray(input_index * buffer_size, (input_index + 1) * buffer_size));
+			input_index = (1 + input_index) % NV;
+		}
+		for (var i = 0; i < dsp.getNumOutputs(); i++) {
+			outs_slice.push(outputs[i].subarray(output_index * buffer_size, (output_index + 1) * buffer_size));
+			output_index = (1 + output_index) % NV;
+		}
+		dsp.compute(ins_slice, outs_slice);
+    }
+
+    var time2 = new Date().getTime();
+    return (time2 - time1);
+}
+
+function megapersec(frames, chans, dur)
+{
+	// Use 4 bytes for samples
+	return (frames * chans * 4) / (1024 * 1024 * dur);
+}
+
+function bench(instance, display_handler)
+{
+    // Creates zitaRev
+    var zitaRev = faust.zitaRev(instance, buffer_size, sample_rate);
+ 
+    // First call : create buffers and estimate a proper 'run' value
+    if (run === -1) {
+        // Setup buffers
+        createBuffers(zitaRev.getNumInputs(), zitaRev.getNumOutputs(), buffer_size);
+        // Setup a good value for 'run'
+        var delta = benchOne(zitaRev, 1000);
+        console.log("Delta : " + delta);
+        run = (1000 / delta) * 5000;
+    }
+    
+    var mega_results = [];
+    var cpu_results = [];
+
+	for (var i = 0; i < bench_num; i++) {
+	
+ 		// Do the bench and keep result
+		var duration = benchOne(zitaRev, run);
+		var cpu = (duration * sample_rate) / (run * buffer_size * 10);
+		var mega = megapersec(buffer_size, (zitaRev.getNumInputs() + zitaRev.getNumOutputs()), duration/run/1000);
+		
+		mega_results.push(mega);
+		cpu_results.push(cpu);
+    	
+		console.log("MBytes/sec : " + mega.toFixed(2));
+		console.log("zitaRev CPU % : " + cpu.toFixed(2));
+    }
+    
+    // Compute mean 
+    var mega_sum = 0.;
+    var cpu_sum = 0.;
+    for (var i = 0; i < bench_num; i++) {
+    	mega_sum += mega_results[i];
+    	cpu_sum += cpu_results[i];
+    }
+    
+    var mega_mean = mega_sum/bench_num;
+    var cpu_mean = cpu_sum/bench_num;
+    
+	console.log("MBytes/sec mean: " + mega_mean.toFixed(2));
+	console.log("zitaRev CPU mean % : " + cpu_mean.toFixed(2));
+
+    if (display_handler) {
+    	display_handler(mega_mean, cpu_mean);
+    }
+}
+
+faust.createzitaRev = function(display_handler)
+{
+    var module_memory = new WebAssembly.Memory({ initial: 512 });
+    
+    var importObject = {
+        env: {
+            memoryBase: 0,
+            tableBase: 0,
+                
+            // Integer version
+            _abs: Math.abs,
+                
+            // Float version
+            _acosf: Math.acos,
+            _asinf: Math.asin,
+            _atanf: Math.atan,
+            _atan2f: Math.atan2,
+            _ceilf: Math.ceil,
+            _cosf: Math.cos,
+            _expf: Math.exp,
+            _floorf: Math.floor,
+            _fmodf: function(x, y) { return x % y; },
+            _logf: Math.log,
+            _log10f: Math.log10,
+            _max_f: Math.max,
+            _min_f: Math.min,
+            _remainderf: function(x, y) { return x - Math.round(x/y) * y; },
+            _powf: Math.pow,
+            _roundf: Math.fround,
+            _sinf: Math.sin,
+            _sqrtf: Math.sqrt,
+            _tanf: Math.tan,
+                
+            // Double version
+            _acos: Math.acos,
+            _asin: Math.asin,
+            _atan: Math.atan,
+            _atan2: Math.atan2,
+            _ceil: Math.ceil,
+            _cos: Math.cos,
+            _exp: Math.exp,
+            _floor: Math.floor,
+            _fmod: function(x, y) { return x % y; },
+            _log: Math.log,
+            _log10: Math.log10,
+            _max_: Math.max,
+            _min_: Math.min,
+            _remainder:function(x, y) { return x - Math.round(x/y) * y; },
+            _pow: Math.pow,
+            _round: Math.fround,
+            _sin: Math.sin,
+            _sqrt: Math.sqrt,
+            _tan: Math.tan,
+            
+            memory: module_memory,
+            table: new WebAssembly.Table({ initial: 0, element: 'anyfunc' })
+        }
+    };
+    
+    if (typeof window !== "undefined") {
+        fetch('zitaRev.wasm')
+        .then(dsp_file => dsp_file.arrayBuffer())
+        .then(dsp_bytes => WebAssembly.instantiate(dsp_bytes, importObject))
+        .then(dsp_module => bench(dsp_module.instance, display_handler))
+        .catch(function(error) { console.log(error); faust.error_msg = "Faust zitaRev cannot be loaded or compiled"; });
+    } else {
+        var dsp_bytes = os.file.readFile('zitaRev.wasm', 'binary');
+        WebAssembly.instantiate(dsp_bytes, importObject)
+        .then(dsp_module => bench(dsp_module.instance, display_handler))
+        .catch(function(error) { console.log(error); faust.error_msg = "Faust karplus cannot be loaded or compiled"; });
+    }
+}
+
+// Startup
+if (typeof window !== "undefined") {
+    startBenchmark = function() {
+        faust.createzitaRev(function(v1, v2) {
+            document.getElementById("megapersec").value = v1.toFixed(2);
+            document.getElementById("cpu").value = v2.toFixed(2);
+        });
+    }
+} else {
+    startBenchmark = function() {
+        faust.createzitaRev(function(v1, v2) {
+            console.log('MBits/s', v1.toFixed(2));
+            console.log('CPU', v2.toFixed(2));
+        });
+    }();
+}
+
+</script>
+</body>
+</html>

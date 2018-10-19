@@ -1,0 +1,3 @@
+<!-- doc-begin -->
+
+# Faust News
