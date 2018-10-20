@@ -1,5 +1,19 @@
 #!/bin/sh
 
+while [ $1 ]
+do
+	p=$1
+  if [ "$p" = "-d" ]; then
+    shift
+    if [[ -n "$1" ]]; then
+			DOMAIN=$1
+    else
+      echo "No domain specified after -d"
+    fi
+  fi
+  shift
+done
+
 # Generating html version of markdown
 PHTML=$(pandoc --standalone --toc --toc-depth=4 --metadata pagetitle="Faust Downloads" --mathjax src/faust-downloads.md src/compiler.md src/libfaust.md src/faustlive.md src/faustgen.md src/faustworks.md src/others.md)
 

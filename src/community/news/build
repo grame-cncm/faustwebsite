@@ -1,5 +1,19 @@
 #!/bin/sh
 
+while [ $1 ]
+do
+	p=$1
+  if [ "$p" = "-d" ]; then
+    shift
+    if [[ -n "$1" ]]; then
+			DOMAIN=$1
+    else
+      echo "No domain specified after -d"
+    fi
+  fi
+  shift
+done
+
 MDFILES=$(ls -r src | awk '$0="src/"$0')
 
 # Generating html version of markdown

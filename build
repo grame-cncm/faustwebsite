@@ -23,17 +23,17 @@ done
 
 if [ $BUILDALL -eq 1 ]; then
   cd src/doc/examples
-  ./build
+  ./build -d "$DOMAIN"
   cd ../libraries 
   ./build
   cd ../manual
-  ./build
+  ./build -d "$DOMAIN"
   cd ../tutorials
-  ./build
+  ./build -d "$DOMAIN"
   cd ../../downloads
-  ./build
+  ./build -d "$DOMAIN"
   cd ../community/news
-  ./build
+  ./build -d "$DOMAIN"
   cd ../../..
 fi
 
