@@ -1,6 +1,5 @@
-#!/bin/sh
+#!/bin/bash
 
-echo "Domain: $DOMAIN"
 if [ -z "$DOMAIN" ]; then
   FAUST_SERVER="https://faust.grame.fr"
 else 
