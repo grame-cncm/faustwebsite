@@ -44,6 +44,8 @@ do
   fi
 done
 
+CURRENTFOLDER="/doc/examples/"
+
 # Generating html version of markdown
 PHTML=$(pandoc --standalone --toc --toc-depth=4 --metadata pagetitle="Faust Examples" --mathjax src/faust-examples.md $FILESLIST)
 

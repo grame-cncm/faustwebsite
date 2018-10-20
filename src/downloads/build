@@ -14,6 +14,8 @@ do
   shift
 done
 
+CURRENTFOLDER="/downloads/"
+
 # Generating html version of markdown
 PHTML=$(pandoc --standalone --toc --toc-depth=4 --metadata pagetitle="Faust Downloads" --mathjax src/faust-downloads.md src/compiler.md src/libfaust.md src/faustlive.md src/faustgen.md src/faustworks.md src/others.md)
 

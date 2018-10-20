@@ -16,6 +16,8 @@ done
 
 MDFILES=$(ls -r src | awk '$0="src/"$0')
 
+CURRENTFOLDER="/community/news/"
+
 # Generating html version of markdown
 PHTML=$(pandoc --standalone --toc --toc-depth=1 --metadata pagetitle="News" --mathjax $MDFILES)
 

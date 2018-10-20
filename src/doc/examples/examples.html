@@ -203,7 +203,7 @@ r4 = hslider(&quot;Radius4&quot;, 1.0, 0, 5, 0.001) : si.smooth(ba.tau2pole(0.02
 a4 = hslider(&quot;Angle4&quot;, 0, ma.PI*(-2), ma.PI*2, 0.001) : si.smooth(ba.tau2pole(0.02));
 
 process(sig1, sig2, sig3, sig4) = ho.map(3, sig1, r1, a1), ho.map(3, sig2, r2, a2), ho.map(3, sig3, r3, a3), ho.map(3, sig4, r4, a4) :&gt; ho.optimInPhase(3) : ho.decoder(3, 8);</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust0/exfaust0.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust0/exfaust0.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="onesourcetostereo">oneSourceToStereo</h2>
 <div class="faust-run"><a href="img/src/exfaust1/exfaust1-svg/process.svg" target="_blank"><img src="img/src/exfaust1/exfaust1-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;oneSourceToStereo&quot;;
@@ -218,7 +218,7 @@ r1 = hslider(&quot;Radius&quot;, 1.0, 0, 5, 0.001) : si.smooth(ba.tau2pole(0.02)
 a1 = hslider(&quot;Angle&quot;, 0, ma.PI*(-2), ma.PI*2, 0.001) : si.smooth(ba.tau2pole(0.02));
 
 process(sig) = ho.map(7, sig, r1, a1) : ho.optimInPhase(7) : ho.decoderStereo(7);</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust1/exfaust1.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust1/exfaust1.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h1 id="analysis">analysis</h1>
 <h2 id="dbmeter">dbmeter</h2>
 <div class="faust-run"><a href="img/src/exfaust2/exfaust2-svg/process.svg" target="_blank"><img src="img/src/exfaust2/exfaust2-svg/process.svg" class="mx-auto d-block"></a>
@@ -241,7 +241,7 @@ hmeter(x)       = attach(x, envelop(x) : hbargraph(&quot;[unit:dB]&quot;, -70, 1
 envelop         = abs : max(ba.db2linear(-70)) : ba.linear2db : min(10)  : max ~ -(80.0/ma.SR);
 null(x)         = attach(0,x);
 process         = hgroup(&quot;8 channels dB meter&quot;, par(i,8, vgroup(&quot;%i&quot;, vmeter : null)));</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust2/exfaust2.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust2/exfaust2.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="fft">FFT</h2>
 <div class="faust-run"><a href="img/src/exfaust3/exfaust3-svg/process.svg" target="_blank"><img src="img/src/exfaust3/exfaust3-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>// Radix 2 FFT, decimation in time, real and imag parts interleaved
@@ -270,7 +270,7 @@ signal = amp * cosine with {
 };
 
 process = signal : dm.fft_spectral_level_demo(N) &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust3/exfaust3.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust3/exfaust3.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="spectrallevel">spectralLevel</h2>
 <div class="faust-run"><a href="img/src/exfaust4/exfaust4-svg/process.svg" target="_blank"><img src="img/src/exfaust4/exfaust4-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;spectralLevel&quot;;
@@ -281,7 +281,7 @@ declare description &quot;Demonstrates mth_octave_spectral_level in a standalone
 import(&quot;stdfaust.lib&quot;);
 
 process = dm.spectral_level_demo;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust4/exfaust4.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust4/exfaust4.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="spectraltiltlab">spectralTiltLab</h2>
 <div class="faust-run"><a href="img/src/exfaust5/exfaust5-svg/process.svg" target="_blank"><img src="img/src/exfaust5/exfaust5-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>// example exercising filters.lib&#39;s spectral_tilt_demo
@@ -304,7 +304,7 @@ with {
     sag(x) = vgroup(
      &quot;[4] Spectrum Analyzer [tooltip: See Faust&#39;s filters.lib for spectral_level_demo]&quot;,x);
 };</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust5/exfaust5.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust5/exfaust5.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="vumeter">vumeter</h2>
 <div class="faust-run"><a href="img/src/exfaust6/exfaust6-svg/process.svg" target="_blank"><img src="img/src/exfaust6/exfaust6-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name        &quot;vumeter&quot;;
@@ -326,7 +326,7 @@ hmeter(x)       = attach(x, envelop(x) : hbargraph(&quot;[2][unit:dB]&quot;, -70
 envelop         = abs : max ~ -(1.0/ma.SR) : max(ba.db2linear(-70)) : ba.linear2db;
 
 process         = hmeter,hmeter;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust6/exfaust6.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust6/exfaust6.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h1 id="bela">bela</h1>
 <h2 id="additivesynth_analog">AdditiveSynth_Analog</h2>
 <div class="faust-run"><a href="img/src/exfaust7/exfaust7-svg/process.svg" target="_blank"><img src="img/src/exfaust7/exfaust7-svg/process.svg" class="mx-auto d-block"></a>
@@ -378,7 +378,7 @@ partiel(rang) = os.oscrs(gFreq*(rang+1))*volume
     };
 
 process = par(i, 8, partiel(i)) :&gt; / (8);</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust7/exfaust7.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust7/exfaust7.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="additivesynth">AdditiveSynth</h2>
 <div class="faust-run"><a href="img/src/exfaust8/exfaust8-svg/process.svg" target="_blank"><img src="img/src/exfaust8/exfaust8-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>import(&quot;stdfaust.lib&quot;);
@@ -424,7 +424,7 @@ partiel(rang) = os.oscrs(gFreq*(rang+1))*volume
     };
 
 process = par(i, 8, partiel(i)) :&gt; / (8);</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust8/exfaust8.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust8/exfaust8.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="crossdelay2">crossDelay2</h2>
 <div class="faust-run"><a href="img/src/exfaust9/exfaust9-svg/process.svg" target="_blank"><img src="img/src/exfaust9/exfaust9-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>import(&quot;stdfaust.lib&quot;);
@@ -478,7 +478,7 @@ routeur(a,b,c,d) = ((a*CrossFeedb):fi.lowpass(2,crossLF):fi.highpass(2,crossHF))
                     ((b*CrossFeedb):fi.lowpass(2,crossLF):fi.highpass(2,crossHF))+((a*feedback):fi.lowpass(2,feedbLF):fi.highpass(2,feedbHF))+d;
 
 process = (de.sdelay(65536, 512,preDelL),de.sdelay(65536, 512,preDelR)):(routeur : de.sdelay(65536, 512,delL) , de.sdelay(65536, 512,delR))~(ef.transpose(512, 256, pitchL) , ef.transpose(512, 256, pitchR));</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust9/exfaust9.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust9/exfaust9.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="fmsynth2_analog">FMSynth2_Analog</h2>
 <div class="faust-run"><a href="img/src/exfaust10/exfaust10-svg/process.svg" target="_blank"><img src="img/src/exfaust10/exfaust10-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>import(&quot;all.lib&quot;);
@@ -538,7 +538,7 @@ FMfeedback(frq) = (+(_,frq):os.osci) ~ (* (feedb));
 FMall(f) = os.osci(f+ (FMdepth*FMfeedback(f*modFreqRatio)));
 
 process = FMall(gFreq) * vol;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust10/exfaust10.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust10/exfaust10.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="fmsynth2">FMSynth2</h2>
 <div class="faust-run"><a href="img/src/exfaust11/exfaust11-svg/process.svg" target="_blank"><img src="img/src/exfaust11/exfaust11-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>import(&quot;all.lib&quot;);
@@ -600,7 +600,7 @@ FMfeedback(frq) = (+(_,frq):os.osci ) ~ (* (feedb));
 FMall(f) = os.osci(f+(FMdepth*FMfeedback(f*modFreqRatio)));
 
 process = FMall(gFreq) * vol;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust11/exfaust11.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust11/exfaust11.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="fmsynth2_fx_analog">FMSynth2_FX_Analog</h2>
 <div class="faust-run"><a href="img/src/exfaust12/exfaust12-svg/process.svg" target="_blank"><img src="img/src/exfaust12/exfaust12-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>import(&quot;all.lib&quot;);
@@ -744,7 +744,7 @@ dry_wet(dw,x,y) = wet*y + dry*x
 effect = _ *(volFX) : ef.cubicnl_nodc(drive, 0.1) : flanger : panno : reverb;
 
 process = FMall(gFreq) * vol;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust12/exfaust12.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust12/exfaust12.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="fmsynth2_fx">FMSynth2_FX</h2>
 <div class="faust-run"><a href="img/src/exfaust13/exfaust13-svg/process.svg" target="_blank"><img src="img/src/exfaust13/exfaust13-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>import(&quot;all.lib&quot;);
@@ -885,7 +885,7 @@ dry_wet(dw,x,y) = wet*y + dry*x
 effect = _ *(volFX) : ef.cubicnl_nodc(drive, 0.1) : flanger : panno : reverb;
 
 process = FMall(gFreq) * vol;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust13/exfaust13.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust13/exfaust13.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="fxchaine2">FXChaine2</h2>
 <div class="faust-run"><a href="img/src/exfaust14/exfaust14-svg/process.svg" target="_blank"><img src="img/src/exfaust14/exfaust14-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>import(&quot;stdfaust.lib&quot;);
@@ -1033,7 +1033,7 @@ dry_wetST(dw,x1,x2,y1,y2) = (wet*y1 + dry*x1),(wet*y2 + dry*x2)
         wet = 0.5*(dw+1.0);
         dry = 1.0-wet;
     };</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust14/exfaust14.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust14/exfaust14.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="graingenerator">GrainGenerator</h2>
 <div class="faust-run"><a href="img/src/exfaust15/exfaust15-svg/process.svg" target="_blank"><img src="img/src/exfaust15/exfaust15-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1134,7 +1134,7 @@ routeur (a, b, c, d, e) = a, b, a, c, a, d, a, e;
 
 processus = _ , cloc : routeur : (unGrain, unGrain, unGrain, unGrain) :&gt; fi.dcblockerat(20);
 process = _,_: ((+(_,_) :processus) ~(*(feedback))),((+(_,_) :processus) ~(*(feedback)));</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust15/exfaust15.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust15/exfaust15.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="granulator">granulator</h2>
 <div class="faust-run"><a href="img/src/exfaust16/exfaust16-svg/process.svg" target="_blank"><img src="img/src/exfaust16/exfaust16-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>// FROM FAUST DEMO
@@ -1206,7 +1206,7 @@ process = vgroup(&quot;Granulator&quot;, environment {
     proba = hslider (&quot;[3]Probability[BELA: ANALOG_2]&quot;, 70,50,100,1) * (0.01):fi.lowpass(1,1);
     duree_env = 1/(speed: / (ratio_env*(0.25)*fade));
 }.process);</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust16/exfaust16.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust16/exfaust16.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="repeater">repeater</h2>
 <div class="faust-run"><a href="img/src/exfaust17/exfaust17-svg/process.svg" target="_blank"><img src="img/src/exfaust17/exfaust17-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>// REPEATER:
@@ -1283,7 +1283,7 @@ rampePlayer(reset) = rampe
         rampe = _~(+(1):*(1-rst));
         toZero = _ : ba.if(reset&lt;0.5,0,_);
     };</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust17/exfaust17.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust17/exfaust17.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="simplefx_analog">simpleFX_Analog</h2>
 <div class="faust-run"><a href="img/src/exfaust18/exfaust18-svg/process.svg" target="_blank"><img src="img/src/exfaust18/exfaust18-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>import(&quot;stdfaust.lib&quot;);
@@ -1370,7 +1370,7 @@ dry_wet(dw,x,y) = wet*y + dry*x
 effets = _ *(vol) : ef.cubicnl_nodc(drive, 0.1) : flanger : panno : reverb;
 
 process = effets;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust18/exfaust18.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust18/exfaust18.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="simplefx">simpleFX</h2>
 <div class="faust-run"><a href="img/src/exfaust19/exfaust19-svg/process.svg" target="_blank"><img src="img/src/exfaust19/exfaust19-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>import(&quot;stdfaust.lib&quot;);
@@ -1453,7 +1453,7 @@ dry_wet(dw,x,y) = wet*y + dry*x
 effets = _ *(vol) : ef.cubicnl_nodc(drive, 0.1) : flanger : panno : reverb;
 
 process = effets;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust19/exfaust19.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust19/exfaust19.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="simplesynth_analog">simpleSynth_Analog</h2>
 <div class="faust-run"><a href="img/src/exfaust20/exfaust20-svg/process.svg" target="_blank"><img src="img/src/exfaust20/exfaust20-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>import(&quot;stdfaust.lib&quot;);
@@ -1537,7 +1537,7 @@ synth = (oscillo(allfreq) :ve.moog_vcf(res,cutoff)) * volume;
 
 // PROCESS /////////////////////////////////////////////
 process = synth;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust20/exfaust20.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust20/exfaust20.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="simplesynth">simpleSynth</h2>
 <div class="faust-run"><a href="img/src/exfaust21/exfaust21-svg/process.svg" target="_blank"><img src="img/src/exfaust21/exfaust21-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>import(&quot;stdfaust.lib&quot;);
@@ -1619,7 +1619,7 @@ synth = (oscillo(allfreq) :ve.moog_vcf(res,cutoff)) * volume;
 
 // PROCESS /////////////////////////////////////////////
 process = synth;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust21/exfaust21.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust21/exfaust21.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="simplesynth_fx_analog">simpleSynth_FX_Analog</h2>
 <div class="faust-run"><a href="img/src/exfaust22/exfaust22-svg/process.svg" target="_blank"><img src="img/src/exfaust22/exfaust22-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>import(&quot;stdfaust.lib&quot;);
@@ -1787,7 +1787,7 @@ effect = _ *(volFX) : ef.cubicnl_nodc(drive, 0.1) : flanger : panno : reverb;
 
 // PROCESS /////////////////////////////////////////////
 process = synth;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust22/exfaust22.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust22/exfaust22.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="simplesynth_fx">simpleSynth_FX</h2>
 <div class="faust-run"><a href="img/src/exfaust23/exfaust23-svg/process.svg" target="_blank"><img src="img/src/exfaust23/exfaust23-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>import(&quot;stdfaust.lib&quot;);
@@ -1948,7 +1948,7 @@ effect = _ *(volFX) : ef.cubicnl_nodc(drive, 0.1) : flanger : panno : reverb;
 
 // PROCESS /////////////////////////////////////////////
 process = synth;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust23/exfaust23.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust23/exfaust23.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="wavesynth_analog">WaveSynth_Analog</h2>
 <div class="faust-run"><a href="img/src/exfaust24/exfaust24-svg/process.svg" target="_blank"><img src="img/src/exfaust24/exfaust24-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>import(&quot;stdfaust.lib&quot;);
@@ -2019,7 +2019,7 @@ wfosc(freq) = (rdtable(tablesize, wt1, faze)*(moov : scanner(4,0)))+(rdtable(tab
     };
 
 process = wfosc(gFreq) * vol;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust24/exfaust24.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust24/exfaust24.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="wavesynth">WaveSynth</h2>
 <div class="faust-run"><a href="img/src/exfaust25/exfaust25-svg/process.svg" target="_blank"><img src="img/src/exfaust25/exfaust25-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>import(&quot;stdfaust.lib&quot;);
@@ -2089,7 +2089,7 @@ with {
 };
 
 process = wfosc(gFreq) * vol;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust25/exfaust25.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust25/exfaust25.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="wavesynth_fx_analog">WaveSynth_FX_Analog</h2>
 <div class="faust-run"><a href="img/src/exfaust26/exfaust26-svg/process.svg" target="_blank"><img src="img/src/exfaust26/exfaust26-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>import(&quot;stdfaust.lib&quot;);
@@ -2243,7 +2243,7 @@ dry_wet(dw,x,y) = wet*y + dry*x
 effect = _ *(volFX) : ef.cubicnl_nodc(drive, 0.1) : flanger : panno : reverb;
 
 process = wfosc(gFreq) * vol;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust26/exfaust26.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust26/exfaust26.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="wavesynth_fx">WaveSynth_FX</h2>
 <div class="faust-run"><a href="img/src/exfaust27/exfaust27-svg/process.svg" target="_blank"><img src="img/src/exfaust27/exfaust27-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>import(&quot;stdfaust.lib&quot;);
@@ -2391,7 +2391,7 @@ dry_wet(dw,x,y) = wet*y + dry*x
 effect = _ *(volFX) : ef.cubicnl_nodc(drive, 0.1) : flanger : panno : reverb;
 
 process = wfosc(gFreq) * vol;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust27/exfaust27.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust27/exfaust27.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h1 id="delayecho">delayEcho</h1>
 <h2 id="echo">echo</h2>
 <div class="faust-run"><a href="img/src/exfaust28/exfaust28-svg/process.svg" target="_blank"><img src="img/src/exfaust28/exfaust28-svg/process.svg" class="mx-auto d-block"></a>
@@ -2410,7 +2410,7 @@ declare copyright   &quot;(c)GRAME 2006&quot;;
 import(&quot;stdfaust.lib&quot;);
 
 process = vgroup(&quot;echo-simple&quot;, ef.echo1s);</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust28/exfaust28.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust28/exfaust28.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="quadecho">quadEcho</h2>
 <div class="faust-run"><a href="img/src/exfaust29/exfaust29-svg/process.svg" target="_blank"><img src="img/src/exfaust29/exfaust29-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>// WARNING: This a &quot;legacy example based on a deprecated library&quot;. Check misceffects.lib
@@ -2434,7 +2434,7 @@ process = vgroup(&quot;stereo echo&quot;, multi(ef.echo1s, 4))
         multi(f,n) = f,multi(f,n-1);
     };                          
     </code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust29/exfaust29.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust29/exfaust29.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="smoothdelay">smoothDelay</h2>
 <div class="faust-run"><a href="img/src/exfaust30/exfaust30-svg/process.svg" target="_blank"><img src="img/src/exfaust30/exfaust30-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name    &quot;smoothDelay&quot;;
@@ -2462,7 +2462,7 @@ process = par(i, 2, voice)
         dtime   = hslider(&quot;delay[unit:ms][style:knob]&quot;, 0, 0, 5000, 0.1)*ma.SR/1000.0;
         fback   = hslider(&quot;feedback[style:knob]&quot;,0,0,100,0.1)/100.0; 
     };</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust30/exfaust30.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust30/exfaust30.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="stereoecho">stereoEcho</h2>
 <div class="faust-run"><a href="img/src/exfaust31/exfaust31-svg/process.svg" target="_blank"><img src="img/src/exfaust31/exfaust31-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>// WARNING: This a &quot;legacy example based on a deprecated library&quot;. Check misceffects.lib
@@ -2481,7 +2481,7 @@ declare copyright   &quot;(c)GRAME 2007&quot;;
 import(&quot;stdfaust.lib&quot;);
 
 process = vgroup(&quot;stereo echo&quot;, (ef.echo1s, ef.echo1s));</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust31/exfaust31.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust31/exfaust31.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="tapiir">tapiir</h2>
 <div class="faust-run"><a href="img/src/exfaust32/exfaust32-svg/process.svg" target="_blank"><img src="img/src/exfaust32/exfaust32-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name        &quot;tapiir&quot;;
@@ -2530,7 +2530,7 @@ tapiir(taps,lines)  =   vgroup(&quot;Tapiir&quot;,
                         );
 
 process             =  tapiir(6,2);</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust32/exfaust32.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust32/exfaust32.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h1 id="dynamic">dynamic</h1>
 <h2 id="compressor">compressor</h2>
 <div class="faust-run"><a href="img/src/exfaust33/exfaust33-svg/process.svg" target="_blank"><img src="img/src/exfaust33/exfaust33-svg/process.svg" class="mx-auto d-block"></a>
@@ -2542,7 +2542,7 @@ declare description &quot;Compressor demo application&quot;;
 import(&quot;stdfaust.lib&quot;);
 
 process = dm.compressor_demo;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust33/exfaust33.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust33/exfaust33.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="distortion">distortion</h2>
 <div class="faust-run"><a href="img/src/exfaust34/exfaust34-svg/process.svg" target="_blank"><img src="img/src/exfaust34/exfaust34-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;distortion&quot;;
@@ -2553,7 +2553,7 @@ declare description &quot;Distortion demo application.&quot;;
 import(&quot;stdfaust.lib&quot;);
 
 process = dm.cubicnl_demo;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust34/exfaust34.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust34/exfaust34.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="gatecompressor">gateCompressor</h2>
 <div class="faust-run"><a href="img/src/exfaust35/exfaust35-svg/process.svg" target="_blank"><img src="img/src/exfaust35/exfaust35-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;gateCompressor&quot;;
@@ -2568,7 +2568,7 @@ process =
    vgroup(&quot;[3]&quot;, dm.compressor_demo) :&gt;
    vgroup(&quot;[4]&quot;, dm.spectral_level_demo) &lt;:
     _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust35/exfaust35.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust35/exfaust35.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="noisegate">noiseGate</h2>
 <div class="faust-run"><a href="img/src/exfaust36/exfaust36-svg/process.svg" target="_blank"><img src="img/src/exfaust36/exfaust36-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;noiseGate&quot;;
@@ -2579,7 +2579,7 @@ declare description &quot;Gate demo application.&quot;;
 import(&quot;stdfaust.lib&quot;);
 
 process = dm.gate_demo;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust36/exfaust36.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust36/exfaust36.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="volume">volume</h2>
 <div class="faust-run"><a href="img/src/exfaust37/exfaust37-svg/process.svg" target="_blank"><img src="img/src/exfaust37/exfaust37-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name        &quot;volume&quot;;
@@ -2597,7 +2597,7 @@ import(&quot;stdfaust.lib&quot;);
 gain        = vslider(&quot;[1]&quot;, 0, -70, +4, 0.1) : ba.db2linear : si.smoo;
 
 process     = *(gain);</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust37/exfaust37.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust37/exfaust37.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h1 id="filtering">filtering</h1>
 <h2 id="apf">APF</h2>
 <div class="faust-run"><a href="img/src/exfaust38/exfaust38-svg/process.svg" target="_blank"><img src="img/src/exfaust38/exfaust38-svg/process.svg" class="mx-auto d-block"></a>
@@ -2613,7 +2613,7 @@ F = hslider(&quot;Freq&quot;, 1000, 100, 10000, 1);
 Q = hslider(&quot;Q&quot;, 1, 0.01, 100, 0.01);
 
 process(x) = APF(x,F,G,Q);</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust38/exfaust38.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust38/exfaust38.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="bandfilter">bandFilter</h2>
 <div class="faust-run"><a href="img/src/exfaust39/exfaust39-svg/process.svg" target="_blank"><img src="img/src/exfaust39/exfaust39-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>// WARNING: This a &quot;legacy example based on a deprecated library&quot;. Check filters.lib
@@ -2660,7 +2660,7 @@ bandfilter(F)   = filter(   nentry(&quot;Q factor [style:knob]&quot;,50,0.1,100,
 //------------------------- Process --------------------------------
 
 process         = vgroup(&quot;Bandfilter&quot;, bandfilter(1000));</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust39/exfaust39.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust39/exfaust39.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="bpf">BPF</h2>
 <div class="faust-run"><a href="img/src/exfaust40/exfaust40-svg/process.svg" target="_blank"><img src="img/src/exfaust40/exfaust40-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>// WARNING: This a &quot;legacy example based on a deprecated library&quot;. Check filters.lib
@@ -2675,14 +2675,14 @@ F = hslider(&quot;Freq&quot;, 1000, 100, 10000, 1);
 Q = hslider(&quot;Q&quot;, 1, 0.01, 100, 0.01);
 
 process(x) = BPF(x,F,G,Q);</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust40/exfaust40.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust40/exfaust40.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="crybaby">cryBaby</h2>
 <div class="faust-run"><a href="img/src/exfaust41/exfaust41-svg/process.svg" target="_blank"><img src="img/src/exfaust41/exfaust41-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;cryBaby&quot;;
 declare description &quot;Application demonstrating the CryBaby wah pedal emulation&quot;;
 import(&quot;stdfaust.lib&quot;);
 process = dm.crybaby_demo;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust41/exfaust41.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust41/exfaust41.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="dnn">DNN</h2>
 <div class="faust-run"><a href="img/src/exfaust42/exfaust42-svg/process.svg" target="_blank"><img src="img/src/exfaust42/exfaust42-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>// Forward Deep Neural Net (DNN), any number of layers of any size each
@@ -2710,7 +2710,7 @@ with {
   nl(n,x) = x * (x&gt;0); // ReLU
   bus(N) = par(k,N,_);
 };</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust42/exfaust42.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust42/exfaust42.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="filterbank">filterBank</h2>
 <div class="faust-run"><a href="img/src/exfaust43/exfaust43-svg/process.svg" target="_blank"><img src="img/src/exfaust43/exfaust43-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;filterBank&quot;;
@@ -2719,7 +2719,7 @@ declare description &quot;Graphic Equalizer consisting of a filter-bank driving 
 import(&quot;stdfaust.lib&quot;);
 
 process = dm.filterbank_demo;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust43/exfaust43.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust43/exfaust43.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="graphiceqlab">graphicEqLab</h2>
 <div class="faust-run"><a href="img/src/exfaust44/exfaust44-svg/process.svg" target="_blank"><img src="img/src/exfaust44/exfaust44-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;graphicEqLab&quot;;
@@ -2733,7 +2733,7 @@ process =
  vgroup(&quot;[2]&quot;,dm.filterbank_demo) : 
  vgroup(&quot;[3]&quot;,dm.spectral_level_demo) &lt;:
   _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust44/exfaust44.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust44/exfaust44.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="highshelf">highShelf</h2>
 <div class="faust-run"><a href="img/src/exfaust45/exfaust45-svg/process.svg" target="_blank"><img src="img/src/exfaust45/exfaust45-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>// WARNING: This a &quot;legacy example based on a deprecated library&quot;. Check filters.lib
@@ -2748,7 +2748,7 @@ F = hslider(&quot;Freq&quot;, 1000, 100, 10000, 1);
 Q = hslider(&quot;Q&quot;, 1, 0.01, 100, 0.01);
 
 process(x) = highShelf(x,F,G,Q);</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust45/exfaust45.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust45/exfaust45.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="hpf">HPF</h2>
 <div class="faust-run"><a href="img/src/exfaust46/exfaust46-svg/process.svg" target="_blank"><img src="img/src/exfaust46/exfaust46-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>// WARNING: This a &quot;legacy example based on a deprecated library&quot;. Check filters.lib
@@ -2763,7 +2763,7 @@ F = hslider(&quot;Freq&quot;, 1000, 100, 10000, 1);
 Q = hslider(&quot;Q&quot;, 1, 0.01, 100, 0.01);
 
 process(x) = HPF(x,F,G,Q);</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust46/exfaust46.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust46/exfaust46.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="lfboost">lfBoost</h2>
 <div class="faust-run"><a href="img/src/exfaust47/exfaust47-svg/process.svg" target="_blank"><img src="img/src/exfaust47/exfaust47-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>// WARNING: This a &quot;legacy example based on a deprecated library&quot;. Check filters.lib
@@ -2806,7 +2806,7 @@ lfboost(F,G)    = fi.TF2((1 + sqrt(2*V)*K + V*K*K) / denom,
 
 process = vgroup(&quot;lowboost&quot;, lfboost(nentry(&quot;freq [unit:Hz][style:knob]&quot;, 100, 20, 150, 1),
                                     vslider(&quot;gain [unit:dB]&quot;, 0, -20, 20, 0.1)));</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust47/exfaust47.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust47/exfaust47.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="lowboost">lowBoost</h2>
 <div class="faust-run"><a href="img/src/exfaust48/exfaust48-svg/process.svg" target="_blank"><img src="img/src/exfaust48/exfaust48-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>// WARNING: This a &quot;legacy example based on a deprecated library&quot;. Check filters.lib
@@ -2848,7 +2848,7 @@ gain                = hslider(&quot;[2]gain [unit:dB][style:knob]&quot;, 0, -20,
 //----------------------------------- Process -------------------------------------
 
 process             = vgroup(&quot;low-freq shelving boost&quot;, lfboost(freq,gain));</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust48/exfaust48.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust48/exfaust48.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="lowcut">lowCut</h2>
 <div class="faust-run"><a href="img/src/exfaust49/exfaust49-svg/process.svg" target="_blank"><img src="img/src/exfaust49/exfaust49-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>// WARNING: This a &quot;legacy example based on a deprecated library&quot;. Check filters.lib
@@ -2890,7 +2890,7 @@ att             = hslider(&quot;attenuation [unit:dB][style:knob]&quot;, 0, -96,
 //----------------------------------- Process -------------------------------------
 
 process         = vgroup(&quot;low-freq shelving cut&quot;, lfcut(freq,att));</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust49/exfaust49.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust49/exfaust49.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="lowshelf">lowShelf</h2>
 <div class="faust-run"><a href="img/src/exfaust50/exfaust50-svg/process.svg" target="_blank"><img src="img/src/exfaust50/exfaust50-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>// WARNING: This a &quot;legacy example based on a deprecated library&quot;. Check filters.lib
@@ -2905,7 +2905,7 @@ F = hslider(&quot;Freq&quot;, 1000, 100, 10000, 1);
 Q = hslider(&quot;Q&quot;, 1, 0.01, 100, 0.01);
 
 process(x) = lowShelf(x,F,G,Q);</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust50/exfaust50.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust50/exfaust50.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="lpf">LPF</h2>
 <div class="faust-run"><a href="img/src/exfaust51/exfaust51-svg/process.svg" target="_blank"><img src="img/src/exfaust51/exfaust51-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>// WARNING: This a &quot;legacy example based on a deprecated library&quot;. Check filters.lib
@@ -2920,7 +2920,7 @@ F = hslider(&quot;Freq&quot;, 1000, 100, 10000, 1);
 Q = hslider(&quot;Q&quot;, 1, 0.01, 100, 0.01);
 
 process(x) = LPF(x,F,G,Q);</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust51/exfaust51.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust51/exfaust51.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="moogvcf">moogVCF</h2>
 <div class="faust-run"><a href="img/src/exfaust52/exfaust52-svg/process.svg" target="_blank"><img src="img/src/exfaust52/exfaust52-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;moogVCF&quot;;
@@ -2929,7 +2929,7 @@ declare description &quot;Exercise and compare three Moog VCF implementations&qu
 import(&quot;stdfaust.lib&quot;);
 
 process = dm.moog_vcf_demo;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust52/exfaust52.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust52/exfaust52.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="notch">notch</h2>
 <div class="faust-run"><a href="img/src/exfaust53/exfaust53-svg/process.svg" target="_blank"><img src="img/src/exfaust53/exfaust53-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>// WARNING: This a &quot;legacy example based on a deprecated library&quot;. Check filters.lib
@@ -2944,7 +2944,7 @@ F = hslider(&quot;Freq&quot;, 1000, 100, 10000, 1);
 Q = hslider(&quot;Q&quot;, 1, 0.01, 100, 0.01);
 
 process(x) = notch(x,F,G,Q);</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust53/exfaust53.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust53/exfaust53.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="parametriceqlab">parametricEqLab</h2>
 <div class="faust-run"><a href="img/src/exfaust54/exfaust54-svg/process.svg" target="_blank"><img src="img/src/exfaust54/exfaust54-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;parametricEqLab&quot;;
@@ -2959,7 +2959,7 @@ process =
   vgroup(&quot;[2]&quot;, dm.parametric_eq_demo) :
   vgroup(&quot;[3]&quot;, dm.mth_octave_spectral_level_demo(2))
   &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust54/exfaust54.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust54/exfaust54.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="parametricequalizer">parametricEqualizer</h2>
 <div class="faust-run"><a href="img/src/exfaust55/exfaust55-svg/process.svg" target="_blank"><img src="img/src/exfaust55/exfaust55-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;parametricEqualizer&quot;;
@@ -2968,7 +2968,7 @@ declare description &quot;Exercise and compare Parametric Equalizer sections on 
 import(&quot;stdfaust.lib&quot;);
 
 process = dm.parametric_eq_demo;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust55/exfaust55.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust55/exfaust55.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="peakingeq">peakingEQ</h2>
 <div class="faust-run"><a href="img/src/exfaust56/exfaust56-svg/process.svg" target="_blank"><img src="img/src/exfaust56/exfaust56-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>// WARNING: This a &quot;legacy example based on a deprecated library&quot;. Check filters.lib
@@ -2983,7 +2983,7 @@ F = hslider(&quot;Freq&quot;, 1000, 100, 10000, 1);
 Q = hslider(&quot;Q&quot;, 1, 0.01, 100, 0.01);
 
 process(x) = peakingEQ(x,F,G,Q);</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust56/exfaust56.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust56/exfaust56.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="peaknotch">peakNotch</h2>
 <div class="faust-run"><a href="img/src/exfaust57/exfaust57-svg/process.svg" target="_blank"><img src="img/src/exfaust57/exfaust57-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>// WARNING: This a &quot;legacy example based on a deprecated library&quot;. Check filters.lib
@@ -2998,7 +2998,7 @@ F = hslider(&quot;Freq&quot;, 1000, 100, 10000, 1);
 Q = hslider(&quot;Q&quot;, 1, 0.01, 100, 0.01);
 
 process(x) = peakNotch(x,F,G,Q);</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust57/exfaust57.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust57/exfaust57.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="spectraltilt">spectralTilt</h2>
 <div class="faust-run"><a href="img/src/exfaust58/exfaust58-svg/process.svg" target="_blank"><img src="img/src/exfaust58/exfaust58-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;spectralTilt&quot;;
@@ -3009,7 +3009,7 @@ import(&quot;stdfaust.lib&quot;);
 O = 2; // filter order
 
 process = dm.spectral_tilt_demo(2);</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust58/exfaust58.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust58/exfaust58.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="vcfwahlab">vcfWahLab</h2>
 <div class="faust-run"><a href="img/src/exfaust59/exfaust59-svg/process.svg" target="_blank"><img src="img/src/exfaust59/exfaust59-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>import(&quot;stdfaust.lib&quot;);
@@ -3027,7 +3027,7 @@ process =
  vgroup(&quot;[4]&quot;, dm.moog_vcf_demo) : 
  vgroup(&quot;[5]&quot;, dm.spectral_level_demo) &lt;:
   _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust59/exfaust59.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust59/exfaust59.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="vocoder">vocoder</h2>
 <div class="faust-run"><a href="img/src/exfaust60/exfaust60-svg/process.svg" target="_blank"><img src="img/src/exfaust60/exfaust60-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;Vocoder&quot;;
@@ -3038,7 +3038,7 @@ declare description &quot;Use example of the vocoder function where an impulse t
 import(&quot;stdfaust.lib&quot;);
 
 process = dm.vocoder_demo;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust60/exfaust60.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust60/exfaust60.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="wahpedal">wahPedal</h2>
 <div class="faust-run"><a href="img/src/exfaust61/exfaust61-svg/process.svg" target="_blank"><img src="img/src/exfaust61/exfaust61-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;wahPedal&quot;;
@@ -3047,7 +3047,7 @@ declare description &quot;Demonstrate the Fourth-Order Wah pedal (similar to the
 import(&quot;stdfaust.lib&quot;);
 
 process = dm.wah4_demo;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust61/exfaust61.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust61/exfaust61.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h1 id="gameaudio">gameaudio</h1>
 <h2 id="bubble">bubble</h2>
 <div class="faust-run"><a href="img/src/exfaust62/exfaust62-svg/process.svg" target="_blank"><img src="img/src/exfaust62/exfaust62-svg/process.svg" class="mx-auto d-block"></a>
@@ -3094,7 +3094,7 @@ bubble(f0,trig) = os.osc(f) * (exp(-damp*time) : si.smooth(0.99))
     };
 
 process = button(&quot;drop&quot;) : bubble(hslider(&quot;v:bubble/freq&quot;, 600, 150, 2000, 1)) &lt;: dm.freeverb_demo;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust62/exfaust62.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust62/exfaust62.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="rain">rain</h2>
 <div class="faust-run"><a href="img/src/exfaust63/exfaust63-svg/process.svg" target="_blank"><img src="img/src/exfaust63/exfaust63-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>//----------------------`rain`--------------------------
@@ -3124,7 +3124,7 @@ process  =  rain (
                 hslider(&quot;v:rain/density&quot;, 300, 0, 1000, 1) / 1000,
                 hslider(&quot;v:rain/volume&quot;, 0.5, 0, 1, 0.01)
             );</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust63/exfaust63.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust63/exfaust63.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="wind">wind</h2>
 <div class="faust-run"><a href="img/src/exfaust64/exfaust64-svg/process.svg" target="_blank"><img src="img/src/exfaust64/exfaust64-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>//----------------------`wind`--------------------------
@@ -3150,7 +3150,7 @@ wind(force) = no.multinoise(2) : par(i, 2, ve.moog_vcf_2bn(force,freq)) : par(i,
     };
 
 process = wind ( hslider(&quot;v:wind/force&quot;,0.66,0,1,0.01) : si.smooth (0.997) );</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust64/exfaust64.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust64/exfaust64.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h1 id="generator">generator</h1>
 <h2 id="filterosc">filterOsc</h2>
 <div class="faust-run"><a href="img/src/exfaust65/exfaust65-svg/process.svg" target="_blank"><img src="img/src/exfaust65/exfaust65-svg/process.svg" class="mx-auto d-block"></a>
@@ -3162,7 +3162,7 @@ declare description &quot;Simple application demoing filter based oscillators.&q
 import(&quot;stdfaust.lib&quot;);
 
 process = dm.oscrs_demo;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust65/exfaust65.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust65/exfaust65.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="noise">noise</h2>
 <div class="faust-run"><a href="img/src/exfaust66/exfaust66-svg/process.svg" target="_blank"><img src="img/src/exfaust66/exfaust66-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>// WARNING: This a &quot;legacy example based on a deprecated library&quot;. Check noises.lib
@@ -3217,7 +3217,7 @@ You might be careful of certain information and naming conventions used in this 
 The following listing shows the input Faust code, parsed to compile this mathematical documentation.
 &lt;listing/&gt;
 &lt;/mdoc&gt;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust66/exfaust66.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust66/exfaust66.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="noisemetadata">noiseMetadata</h2>
 <div class="faust-run"><a href="img/src/exfaust67/exfaust67-svg/process.svg" target="_blank"><img src="img/src/exfaust67/exfaust67-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>// WARNING: This a &quot;legacy example based on a deprecated library&quot;. Check noises.lib
@@ -3294,7 +3294,7 @@ You might be careful of certain information and naming conventions used in this 
 The following listing shows the input Faust code, parsed to compile this mathematical documentation.
 &lt;listing mdoctags=&quot;false&quot; dependencies=&quot;false&quot; distributed=&quot;false&quot; /&gt;
 &lt;/mdoc&gt;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust67/exfaust67.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust67/exfaust67.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="osc">osc</h2>
 <div class="faust-run"><a href="img/src/exfaust68/exfaust68-svg/process.svg" target="_blank"><img src="img/src/exfaust68/exfaust68-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name        &quot;osc&quot;;
@@ -3313,7 +3313,7 @@ vol             = hslider(&quot;volume [unit:dB]&quot;, 0, -96, 0, 0.1) : ba.db2
 freq            = hslider(&quot;freq [unit:Hz]&quot;, 1000, 20, 24000, 1);
 
 process         = vgroup(&quot;Oscillator&quot;, os.osc(freq) * vol);</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust68/exfaust68.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust68/exfaust68.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="osci">osci</h2>
 <div class="faust-run"><a href="img/src/exfaust69/exfaust69-svg/process.svg" target="_blank"><img src="img/src/exfaust69/exfaust69-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name        &quot;osci&quot;;
@@ -3333,7 +3333,7 @@ vol             = hslider(&quot;volume [unit:dB]&quot;, 0, -96, 0, 0.1) : ba.db2
 freq            = hslider(&quot;freq [unit:Hz]&quot;, 1000, 20, 24000, 1);
 
 process         = vgroup(&quot;Oscillator&quot;, os.osci(freq) * vol);</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust69/exfaust69.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust69/exfaust69.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="sawtoothlab">sawtoothLab</h2>
 <div class="faust-run"><a href="img/src/exfaust70/exfaust70-svg/process.svg" target="_blank"><img src="img/src/exfaust70/exfaust70-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;sawtoothLab&quot;;
@@ -3344,7 +3344,7 @@ declare description &quot;An application demonstrating the different sawtooth os
 import(&quot;stdfaust.lib&quot;);
 
 process = dm.sawtooth_demo;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust70/exfaust70.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust70/exfaust70.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="virtualanalog">virtualAnalog</h2>
 <div class="faust-run"><a href="img/src/exfaust71/exfaust71-svg/process.svg" target="_blank"><img src="img/src/exfaust71/exfaust71-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;VirtualAnalog&quot;;
@@ -3355,7 +3355,7 @@ declare description &quot;Virtual analog oscillator demo application.&quot;;
 import(&quot;stdfaust.lib&quot;);
 
 process = dm.virtual_analog_oscillator_demo;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust71/exfaust71.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust71/exfaust71.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="virtualanaloglab">virtualAnalogLab</h2>
 <div class="faust-run"><a href="img/src/exfaust72/exfaust72-svg/process.svg" target="_blank"><img src="img/src/exfaust72/exfaust72-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;virtualAnalogLab&quot;;
@@ -3368,7 +3368,7 @@ process =
  vgroup(&quot;[3]&quot;, dm.spectral_level_demo)
  // See also: vgroup(&quot;[3]&quot;, dm.fft_spectral_level_demo(32))
   &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust72/exfaust72.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust72/exfaust72.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h1 id="misc">misc</h1>
 <h2 id="capture">capture</h2>
 <div class="faust-run"><a href="img/src/exfaust73/exfaust73-svg/process.svg" target="_blank"><img src="img/src/exfaust73/exfaust73-svg/process.svg" class="mx-auto d-block"></a>
@@ -3396,7 +3396,7 @@ capture = *(B) : (+ : de.delay(8*65536, D-1)) ~ *(1.0-B) ;
 level       = hslider(&quot;level (db)&quot;, 0, -96, 4, 0.1) : ba.db2linear : si.smoo;
 
 process     = vgroup( &quot;Audio Capture&quot;, capture : *(level) ) ;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust73/exfaust73.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust73/exfaust73.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="matrix">matrix</h2>
 <div class="faust-run"><a href="img/src/exfaust74/exfaust74-svg/process.svg" target="_blank"><img src="img/src/exfaust74/exfaust74-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name        &quot;matrix&quot;;
@@ -3416,7 +3416,7 @@ Mixer(N,out)    = hgroup(&quot;Output %out&quot;, par(in, N, *(Fader(in)) ) :&gt
 Matrix(N,M)     = tgroup(&quot;Matrix %N x %M&quot;, par(in, N, _) &lt;: par(out, M, Mixer(N, out)));
 
 process = Matrix(8, 8);</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust74/exfaust74.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust74/exfaust74.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="miditester">midiTester</h2>
 <div class="faust-run"><a href="img/src/exfaust75/exfaust75-svg/process.svg" target="_blank"><img src="img/src/exfaust75/exfaust75-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name        &quot;midiTester&quot;;
@@ -3486,7 +3486,7 @@ with{
 valuetest = hslider(&quot;Pitchwheel Value IN  [midi:pitchwheel]&quot;, 0, -8192, 8191, 1) : hbargraph(&quot;Pitchwheel Value OUT[midi:pitchwheel]&quot;, -8192, 8191);
 booltest = checkbox(&quot;Pitchwheel Bool IN [midi:pitchwheel]&quot;) : hbargraph(&quot;Pitchwheel Bool OUT [midi:pitchwheel]&quot;, 0, 1);
 };</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust75/exfaust75.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust75/exfaust75.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="switcher">switcher</h2>
 <div class="faust-run"><a href="img/src/exfaust76/exfaust76-svg/process.svg" target="_blank"><img src="img/src/exfaust76/exfaust76-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name        &quot;switcher&quot;;
@@ -3510,7 +3510,7 @@ switch(c,x0,x1,y0,y1) = sel(c,x0,y0), sel(c,x1,y1)
 process = switch(hslider(&quot;source 0 &lt;-&gt; source 1&quot;,0,0,1,1));
 
                  </code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust76/exfaust76.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust76/exfaust76.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="tester2">tester2</h2>
 <div class="faust-run"><a href="img/src/exfaust77/exfaust77-svg/process.svg" target="_blank"><img src="img/src/exfaust77/exfaust77-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name        &quot;tester2&quot;;
@@ -3546,7 +3546,7 @@ process     = vgroup(&quot;Stereo Audio Tester&quot;,
                 testsignal*vol 
                 &lt;: par(i, 2, *((dest &amp; (i+1)) != 0 : transition(4410))) 
             );</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust77/exfaust77.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust77/exfaust77.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="tester">tester</h2>
 <div class="faust-run"><a href="img/src/exfaust78/exfaust78-svg/process.svg" target="_blank"><img src="img/src/exfaust78/exfaust78-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name        &quot;tester&quot;;
@@ -3583,7 +3583,7 @@ process         = vgroup( &quot;Audio Tester&quot;,
                     testsignal*vol 
                     &lt;: par(i, 8, *(dest==i)) 
                   );</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust78/exfaust78.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust78/exfaust78.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="uitester">UITester</h2>
 <div class="faust-run"><a href="img/src/exfaust79/exfaust79-svg/process.svg" target="_blank"><img src="img/src/exfaust79/exfaust79-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;UITester&quot;;
@@ -3656,7 +3656,7 @@ process =       tgroup(&quot;grp 1&quot;,
                     knobs,
                     vmisc,
                     hmisc);</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust79/exfaust79.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust79/exfaust79.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h1 id="old">old</h1>
 <h2 id="freeverb">freeverb</h2>
 <div class="faust-run"><a href="img/src/exfaust80/exfaust80-svg/process.svg" target="_blank"><img src="img/src/exfaust80/exfaust80-svg/process.svg" class="mx-auto d-block"></a>
@@ -3769,7 +3769,7 @@ fxctrl(g,w,Fx) =  _,_ &lt;: (*(g),*(g) : Fx : *(w),*(w)), *(1-w), *(1-w) +&gt; _
 freeverb = vgroup(&quot;Freeverb&quot;, fxctrl(fixedgain, wetSlider, stereoReverb(combfeed, allpassfeed, dampSlider, stereospread)));
 
 process = freeverb;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust80/exfaust80.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust80/exfaust80.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h1 id="phasing">phasing</h1>
 <h2 id="flanger">flanger</h2>
 <div class="faust-run"><a href="img/src/exfaust81/exfaust81-svg/process.svg" target="_blank"><img src="img/src/exfaust81/exfaust81-svg/process.svg" class="mx-auto d-block"></a>
@@ -3781,7 +3781,7 @@ declare description &quot;Flanger effect application.&quot;;
 import(&quot;stdfaust.lib&quot;);
 
 process = dm.flanger_demo;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust81/exfaust81.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust81/exfaust81.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="phaser">phaser</h2>
 <div class="faust-run"><a href="img/src/exfaust82/exfaust82-svg/process.svg" target="_blank"><img src="img/src/exfaust82/exfaust82-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;phaser&quot;;
@@ -3792,7 +3792,7 @@ declare description &quot;Phaser demo application.&quot;;
 import(&quot;stdfaust.lib&quot;);
 
 process = dm.phaser2_demo;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust82/exfaust82.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust82/exfaust82.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="phaserflangerlab">phaserFlangerLab</h2>
 <div class="faust-run"><a href="img/src/exfaust83/exfaust83-svg/process.svg" target="_blank"><img src="img/src/exfaust83/exfaust83-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;phaserFlangerLab&quot;;
@@ -3810,7 +3810,7 @@ fx_stack =
 level_viewer(x,y) = attach(x, vgroup(&quot;[4]&quot;, dm.spectral_level_demo(x+y))),y;
 
 process = fx_stack : level_viewer;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust83/exfaust83.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust83/exfaust83.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h1 id="physicalmodeling">physicalModeling</h1>
 <h2 id="brass">brass</h2>
 <div class="faust-run"><a href="img/src/exfaust84/exfaust84-svg/process.svg" target="_blank"><img src="img/src/exfaust84/exfaust84-svg/process.svg" class="mx-auto d-block"></a>
@@ -3822,7 +3822,7 @@ declare copyright &quot;(c)Romain Michon, CCRMA (Stanford University), GRAME&quo
 import(&quot;stdfaust.lib&quot;);
 
 process = pm.brass_ui &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust84/exfaust84.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust84/exfaust84.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="brassmidi">brassMIDI</h2>
 <div class="faust-run"><a href="img/src/exfaust85/exfaust85-svg/process.svg" target="_blank"><img src="img/src/exfaust85/exfaust85-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;BrassMIDI&quot;;
@@ -3833,7 +3833,7 @@ declare copyright &quot;(c)Romain Michon, CCRMA (Stanford University), GRAME&quo
 import(&quot;stdfaust.lib&quot;);
 
 process = pm.brass_ui_MIDI &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust85/exfaust85.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust85/exfaust85.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="churchbell">churchBell</h2>
 <div class="faust-run"><a href="img/src/exfaust86/exfaust86-svg/process.svg" target="_blank"><img src="img/src/exfaust86/exfaust86-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;ChurchBell&quot;;
@@ -3844,7 +3844,7 @@ declare copyright &quot;(c)Romain Michon, CCRMA (Stanford University), GRAME&quo
 import(&quot;stdfaust.lib&quot;);
 
 process = pm.churchBell_ui &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust86/exfaust86.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust86/exfaust86.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="clarinet">clarinet</h2>
 <div class="faust-run"><a href="img/src/exfaust87/exfaust87-svg/process.svg" target="_blank"><img src="img/src/exfaust87/exfaust87-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;Clarinet&quot;;
@@ -3855,7 +3855,7 @@ declare copyright &quot;(c)Romain Michon, CCRMA (Stanford University), GRAME&quo
 import(&quot;stdfaust.lib&quot;);
 
 process = pm.clarinet_ui &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust87/exfaust87.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust87/exfaust87.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="clarinetmidi">clarinetMIDI</h2>
 <div class="faust-run"><a href="img/src/exfaust88/exfaust88-svg/process.svg" target="_blank"><img src="img/src/exfaust88/exfaust88-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;ClarinetMIDI&quot;;
@@ -3866,7 +3866,7 @@ declare copyright &quot;(c)Romain Michon, CCRMA (Stanford University), GRAME&quo
 import(&quot;stdfaust.lib&quot;);
 
 process = pm.clarinet_ui_MIDI &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust88/exfaust88.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust88/exfaust88.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="djembemidi">djembeMIDI</h2>
 <div class="faust-run"><a href="img/src/exfaust89/exfaust89-svg/process.svg" target="_blank"><img src="img/src/exfaust89/exfaust89-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;DjembeMIDI&quot;;
@@ -3877,7 +3877,7 @@ declare copyright &quot;(c)Romain Michon, CCRMA (Stanford University), GRAME&quo
 import(&quot;stdfaust.lib&quot;);
 
 process = pm.djembe_ui_MIDI &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust89/exfaust89.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust89/exfaust89.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="elecguitarmidi">elecGuitarMIDI</h2>
 <div class="faust-run"><a href="img/src/exfaust90/exfaust90-svg/process.svg" target="_blank"><img src="img/src/exfaust90/exfaust90-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;ElecGuitarMidi&quot;;
@@ -3890,7 +3890,7 @@ import(&quot;stdfaust.lib&quot;);
 // TODO: We could potentially add an audio effect chain here
 
 process = pm.elecGuitar_ui_MIDI &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust90/exfaust90.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust90/exfaust90.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="englishbell">englishBell</h2>
 <div class="faust-run"><a href="img/src/exfaust91/exfaust91-svg/process.svg" target="_blank"><img src="img/src/exfaust91/exfaust91-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;EnglishChurchBell&quot;;
@@ -3901,7 +3901,7 @@ declare copyright &quot;(c)Romain Michon, CCRMA (Stanford University), GRAME&quo
 import(&quot;stdfaust.lib&quot;);
 
 process = pm.englishBell_ui &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust91/exfaust91.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust91/exfaust91.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="flute">flute</h2>
 <div class="faust-run"><a href="img/src/exfaust92/exfaust92-svg/process.svg" target="_blank"><img src="img/src/exfaust92/exfaust92-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;Flute&quot;;
@@ -3912,7 +3912,7 @@ declare copyright &quot;(c)Romain Michon, CCRMA (Stanford University), GRAME&quo
 import(&quot;stdfaust.lib&quot;);
 
 process = pm.flute_ui &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust92/exfaust92.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust92/exfaust92.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="flutemidi">fluteMIDI</h2>
 <div class="faust-run"><a href="img/src/exfaust93/exfaust93-svg/process.svg" target="_blank"><img src="img/src/exfaust93/exfaust93-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;FluteMIDI&quot;;
@@ -3923,7 +3923,7 @@ declare copyright &quot;(c)Romain Michon, CCRMA (Stanford University), GRAME&quo
 import(&quot;stdfaust.lib&quot;);
 
 process = pm.flute_ui_MIDI &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust93/exfaust93.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust93/exfaust93.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="frenchbell">frenchBell</h2>
 <div class="faust-run"><a href="img/src/exfaust94/exfaust94-svg/process.svg" target="_blank"><img src="img/src/exfaust94/exfaust94-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;FrenchChurchBell&quot;;
@@ -3934,7 +3934,7 @@ declare copyright &quot;(c)Romain Michon, CCRMA (Stanford University), GRAME&quo
 import(&quot;stdfaust.lib&quot;);
 
 process = pm.frenchBell_ui &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust94/exfaust94.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust94/exfaust94.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="germanbell">germanBell</h2>
 <div class="faust-run"><a href="img/src/exfaust95/exfaust95-svg/process.svg" target="_blank"><img src="img/src/exfaust95/exfaust95-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;GermanChurchBell&quot;;
@@ -3945,7 +3945,7 @@ declare copyright &quot;(c)Romain Michon, CCRMA (Stanford University), GRAME&quo
 import(&quot;stdfaust.lib&quot;);
 
 process = pm.germanBell_ui &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust95/exfaust95.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust95/exfaust95.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="guitarmidi">guitarMIDI</h2>
 <div class="faust-run"><a href="img/src/exfaust96/exfaust96-svg/process.svg" target="_blank"><img src="img/src/exfaust96/exfaust96-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;GuitarMidi&quot;;
@@ -3956,7 +3956,7 @@ declare copyright &quot;(c)Romain Michon, CCRMA (Stanford University), GRAME&quo
 import(&quot;stdfaust.lib&quot;);
 
 process = pm.guitar_ui_MIDI &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust96/exfaust96.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust96/exfaust96.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="karplus">karplus</h2>
 <div class="faust-run"><a href="img/src/exfaust97/exfaust97-svg/process.svg" target="_blank"><img src="img/src/exfaust97/exfaust97-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;KarplusStrong&quot;;
@@ -3967,7 +3967,7 @@ declare copyright &quot;(c)Romain Michon, CCRMA (Stanford University), GRAME&quo
 import(&quot;stdfaust.lib&quot;);
 
 process = pm.ks_ui_MIDI &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust97/exfaust97.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust97/exfaust97.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="marimbamidi">marimbaMIDI</h2>
 <div class="faust-run"><a href="img/src/exfaust98/exfaust98-svg/process.svg" target="_blank"><img src="img/src/exfaust98/exfaust98-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>// WARNING: this model is incomplete and is only here for testing purposes
@@ -3980,7 +3980,7 @@ declare copyright &quot;(c)Romain Michon, CCRMA (Stanford University), GRAME&quo
 import(&quot;stdfaust.lib&quot;);
 
 process = pm.marimba_ui_MIDI &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust98/exfaust98.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust98/exfaust98.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="modularinterpinstrmidi">modularInterpInstrMIDI</h2>
 <div class="faust-run"><a href="img/src/exfaust99/exfaust99-svg/process.svg" target="_blank"><img src="img/src/exfaust99/exfaust99-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;ModularInterpInstrMidi&quot;;
@@ -3991,7 +3991,7 @@ declare copyright &quot;(c)Romain Michon &amp; John Granzow, CCRMA (Stanford Uni
 import(&quot;stdfaust.lib&quot;);
 
 process = pm.modularInterpInstr_ui_MIDI &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust99/exfaust99.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust99/exfaust99.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="nylonguitarmidi">nylonGuitarMIDI</h2>
 <div class="faust-run"><a href="img/src/exfaust100/exfaust100-svg/process.svg" target="_blank"><img src="img/src/exfaust100/exfaust100-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;NylonGuitarMidi&quot;;
@@ -4002,7 +4002,7 @@ declare copyright &quot;(c)Romain Michon, CCRMA (Stanford University), GRAME&quo
 import(&quot;stdfaust.lib&quot;);
 
 process = pm.nylonGuitar_ui_MIDI &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust100/exfaust100.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust100/exfaust100.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="russianbell">russianBell</h2>
 <div class="faust-run"><a href="img/src/exfaust101/exfaust101-svg/process.svg" target="_blank"><img src="img/src/exfaust101/exfaust101-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;RussianChurchBell&quot;;
@@ -4013,7 +4013,7 @@ declare copyright &quot;(c)Romain Michon, CCRMA (Stanford University), GRAME&quo
 import(&quot;stdfaust.lib&quot;);
 
 process = pm.russianBell_ui &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust101/exfaust101.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust101/exfaust101.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="standardbell">standardBell</h2>
 <div class="faust-run"><a href="img/src/exfaust102/exfaust102-svg/process.svg" target="_blank"><img src="img/src/exfaust102/exfaust102-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;StandardChurchBell&quot;;
@@ -4024,7 +4024,7 @@ declare copyright &quot;(c)Romain Michon, CCRMA (Stanford University), GRAME&quo
 import(&quot;stdfaust.lib&quot;);
 
 process = pm.standardBell_ui &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust102/exfaust102.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust102/exfaust102.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="violin">violin</h2>
 <div class="faust-run"><a href="img/src/exfaust103/exfaust103-svg/process.svg" target="_blank"><img src="img/src/exfaust103/exfaust103-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;Violin&quot;;
@@ -4035,7 +4035,7 @@ declare copyright &quot;(c)Romain Michon, CCRMA (Stanford University), GRAME&quo
 import(&quot;stdfaust.lib&quot;);
 
 process = pm.violin_ui &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust103/exfaust103.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust103/exfaust103.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="violinmidi">violinMIDI</h2>
 <div class="faust-run"><a href="img/src/exfaust104/exfaust104-svg/process.svg" target="_blank"><img src="img/src/exfaust104/exfaust104-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;ViolinMidi&quot;;
@@ -4046,7 +4046,7 @@ declare copyright &quot;(c)Romain Michon, CCRMA (Stanford University), GRAME&quo
 import(&quot;stdfaust.lib&quot;);
 
 process = pm.violin_ui_MIDI &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust104/exfaust104.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust104/exfaust104.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="vocalbp">vocalBP</h2>
 <div class="faust-run"><a href="img/src/exfaust105/exfaust105-svg/process.svg" target="_blank"><img src="img/src/exfaust105/exfaust105-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;Vocal BandPass&quot;;
@@ -4057,7 +4057,7 @@ declare copyright &quot;(c)Romain Michon, CCRMA (Stanford University), GRAME&quo
 import(&quot;stdfaust.lib&quot;);
 
 process = pm.SFFormantModelBP_ui &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust105/exfaust105.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust105/exfaust105.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="vocalbpmidi">vocalBPMIDI</h2>
 <div class="faust-run"><a href="img/src/exfaust106/exfaust106-svg/process.svg" target="_blank"><img src="img/src/exfaust106/exfaust106-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;Vocal BandPass MIDI&quot;;
@@ -4068,7 +4068,7 @@ declare copyright &quot;(c)Romain Michon, CCRMA (Stanford University), GRAME&quo
 import(&quot;stdfaust.lib&quot;);
 
 process = pm.SFFormantModelBP_ui_MIDI &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust106/exfaust106.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust106/exfaust106.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="vocalfof">vocalFOF</h2>
 <div class="faust-run"><a href="img/src/exfaust107/exfaust107-svg/process.svg" target="_blank"><img src="img/src/exfaust107/exfaust107-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;Vocal FOF&quot;;
@@ -4079,7 +4079,7 @@ declare copyright &quot;(c)Mike Olsen, CCRMA (Stanford University)&quot;;
 import(&quot;stdfaust.lib&quot;);
 
 process = pm.SFFormantModelFofSmooth_ui &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust107/exfaust107.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust107/exfaust107.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="vocalfofmidi">vocalFOFMIDI</h2>
 <div class="faust-run"><a href="img/src/exfaust108/exfaust108-svg/process.svg" target="_blank"><img src="img/src/exfaust108/exfaust108-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;Vocal FOF MIDI&quot;;
@@ -4090,7 +4090,7 @@ declare copyright &quot;(c)Mike Olsen, CCRMA (Stanford University)&quot;;
 import(&quot;stdfaust.lib&quot;);
 
 process = pm.SFFormantModelFofSmooth_ui_MIDI &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust108/exfaust108.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust108/exfaust108.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h1 id="pitchshifting">pitchShifting</h1>
 <h2 id="pitchshifter">pitchShifter</h2>
 <div class="faust-run"><a href="img/src/exfaust109/exfaust109-svg/process.svg" target="_blank"><img src="img/src/exfaust109/exfaust109-svg/process.svg" class="mx-auto d-block"></a>
@@ -4114,7 +4114,7 @@ pitchshifter = vgroup(&quot;Pitch Shifter&quot;, ef.transpose(
                 );
 
 process = pitchshifter;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust109/exfaust109.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust109/exfaust109.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h1 id="psychoacoustic">psychoacoustic</h1>
 <h2 id="harmonicexciter">harmonicExciter</h2>
 <div class="faust-run"><a href="img/src/exfaust110/exfaust110-svg/process.svg" target="_blank"><img src="img/src/exfaust110/exfaust110-svg/process.svg" class="mx-auto d-block"></a>
@@ -4128,7 +4128,7 @@ declare description &quot;Psychoacoustic harmonic exciter, with GUI&quot;;
 import(&quot;stdfaust.lib&quot;);
 
 process = dm.exciter;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust110/exfaust110.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust110/exfaust110.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h1 id="reverb">reverb</h1>
 <h2 id="fdnrev">fdnRev</h2>
 <div class="faust-run"><a href="img/src/exfaust111/exfaust111-svg/process.svg" target="_blank"><img src="img/src/exfaust111/exfaust111-svg/process.svg" class="mx-auto d-block"></a>
@@ -4140,7 +4140,7 @@ declare description &quot;A feedback delay network reverb.&quot;;
 import(&quot;stdfaust.lib&quot;);
 
 process = dm.fdnrev0_demo(16,5,3);</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust111/exfaust111.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust111/exfaust111.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="freeverb-1">freeverb</h2>
 <div class="faust-run"><a href="img/src/exfaust112/exfaust112-svg/process.svg" target="_blank"><img src="img/src/exfaust112/exfaust112-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;freeverb&quot;;
@@ -4151,7 +4151,7 @@ declare description &quot;Freeverb demo application.&quot;;
 import(&quot;stdfaust.lib&quot;);
 
 process = dm.freeverb_demo;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust112/exfaust112.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust112/exfaust112.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="reverbdesigner">reverbDesigner</h2>
 <div class="faust-run"><a href="img/src/exfaust113/exfaust113-svg/process.svg" target="_blank"><img src="img/src/exfaust113/exfaust113-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;reverbDesigner&quot;;
@@ -4163,7 +4163,7 @@ NB =  5;    // Number of T60-controlled frequency-bands (3 or more)
 BSO =  3;   // Order of each lowpass/highpass bandsplit (odd positive integer)
 
 process = dm.fdnrev0_demo(N,NB,BSO);</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust113/exfaust113.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust113/exfaust113.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="reverbtester">reverbTester</h2>
 <div class="faust-run"><a href="img/src/exfaust114/exfaust114-svg/process.svg" target="_blank"><img src="img/src/exfaust114/exfaust114-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;reverbTester&quot;;
@@ -4174,7 +4174,7 @@ declare description &quot;Handy test inputs for reverberator demos below.&quot;;
 import(&quot;stdfaust.lib&quot;);
 
 process = dm.stereo_reverb_tester;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust114/exfaust114.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust114/exfaust114.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="zitarev">zitaRev</h2>
 <div class="faust-run"><a href="img/src/exfaust115/exfaust115-svg/process.svg" target="_blank"><img src="img/src/exfaust115/exfaust115-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;zitaRev&quot;;
@@ -4185,7 +4185,7 @@ declare description &quot;Example GUI for `zita_rev1_stereo` (mostly following t
 import(&quot;stdfaust.lib&quot;);
 
 process = dm.zita_rev1; </code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust115/exfaust115.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust115/exfaust115.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="zitarevfdn">zitaRevFDN</h2>
 <div class="faust-run"><a href="img/src/exfaust116/exfaust116-svg/process.svg" target="_blank"><img src="img/src/exfaust116/exfaust116-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name &quot;zitaRevFDN&quot;;
@@ -4196,7 +4196,7 @@ declare description &quot;Reverb demo application based on `zita_rev_fdn`.&quot;
 import(&quot;stdfaust.lib&quot;);
 
 process = dm.zita_rev_fdn_demo;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust116/exfaust116.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust116/exfaust116.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h1 id="sam">SAM</h1>
 <h1 id="smartkeyboard">smartKeyboard</h1>
 <h2 id="acguitar">acGuitar</h2>
@@ -4301,7 +4301,7 @@ guitar = par(i,nStrings,
     pm.nylonGuitarModel(sl(i),pluckPosition)) :&gt; _;
 
 process = guitar &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust117/exfaust117.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust117/exfaust117.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="bells">bells</h2>
 <div class="faust-run"><a href="img/src/exfaust118/exfaust118-svg/process.svg" target="_blank"><img src="img/src/exfaust118/exfaust118-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>//################################ bells.dsp ###################################
@@ -4384,7 +4384,7 @@ bells =
     (kb1k1status : pm.strikeModel(10,strikeCutoff,strikeSharpness,strikeGain) : pm.russianBellModel(nModes,exPos,t60,1,3)) :&gt; *(0.2);
 
 process = bells &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust118/exfaust118.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust118/exfaust118.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="bowed">bowed</h2>
 <div class="faust-run"><a href="img/src/exfaust119/exfaust119-svg/process.svg" target="_blank"><img src="img/src/exfaust119/exfaust119-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>//##################################### bowed.dsp ########################################
@@ -4474,7 +4474,7 @@ with{
 };
 
 process = synthSet &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust119/exfaust119.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust119/exfaust119.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="brass-1">brass</h2>
 <div class="faust-run"><a href="img/src/exfaust120/exfaust120-svg/process.svg" target="_blank"><img src="img/src/exfaust120/exfaust120-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>//############################### brass.dsp ###################################
@@ -4559,7 +4559,7 @@ model =
   pm.brassModel(tubeLength,lipsTension,mute);
 
 process = model &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust120/exfaust120.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust120/exfaust120.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="clarinet-1">clarinet</h2>
 <div class="faust-run"><a href="img/src/exfaust121/exfaust121-svg/process.svg" target="_blank"><img src="img/src/exfaust121/exfaust121-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>//############################### clarinet.dsp #################################
@@ -4675,7 +4675,7 @@ model(pressure) = pm.clarinetModel(tubeLength,pressure,reedStiffness,bellOpening
 
 // pressure is estimated from mic signal
 process = an.amp_follower_ud(0.02,0.02)*0.7 : model &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust121/exfaust121.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust121/exfaust121.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="crazyguiro">crazyGuiro</h2>
 <div class="faust-run"><a href="img/src/exfaust122/exfaust122-svg/process.svg" target="_blank"><img src="img/src/exfaust122/exfaust122-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>//################################### crazyGuiro.dsp #####################################
@@ -4774,7 +4774,7 @@ q = 8;
 reverb(wet,res)  =  _ &lt;: *(1-wet),(*(wet) : re.mono_freeverb(res, 0.5, 0.5, 0)) :&gt; _;
 
 process = sy.popFilterDrum(drumResFreq,q,gate) : reverb(wet,res) &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust122/exfaust122.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust122/exfaust122.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="drums">drums</h2>
 <div class="faust-run"><a href="img/src/exfaust123/exfaust123-svg/process.svg" target="_blank"><img src="img/src/exfaust123/exfaust123-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>//##################################### drums.dsp ########################################
@@ -4851,7 +4851,7 @@ with{
 };
 
 process = drumModel &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust123/exfaust123.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust123/exfaust123.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="dubdub">dubDub</h2>
 <div class="faust-run"><a href="img/src/exfaust124/exfaust124-svg/process.svg" target="_blank"><img src="img/src/exfaust124/exfaust124-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>//################################### dubDub.dsp #####################################
@@ -4941,7 +4941,7 @@ generalGain = gain : ba.lin2LogGain : si.smoo;
 //========================================================================================
 
 process = sy.dubDub(freq,filterCutoff,q,gate)*generalGain &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust124/exfaust124.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust124/exfaust124.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="elecguitar">elecGuitar</h2>
 <div class="faust-run"><a href="img/src/exfaust125/exfaust125-svg/process.svg" target="_blank"><img src="img/src/exfaust125/exfaust125-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>//################################### elecGuitar.dsp #####################################
@@ -5011,7 +5011,7 @@ pluckPosition = 0.8;
 mute = gate : si.polySmooth(gate,0.999,1);
 
 process = pm.elecGuitar(stringLength,pluckPosition,mute,gain,gate) &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust125/exfaust125.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust125/exfaust125.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="fm">fm</h2>
 <div class="faust-run"><a href="img/src/exfaust126/exfaust126-svg/process.svg" target="_blank"><img src="img/src/exfaust126/exfaust126-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>//###################################### fm.dsp ##########################################
@@ -5092,7 +5092,7 @@ modIndex = y*1000 : si.smoo;
 fmSynth = sy.fm((cFreq,modFreq),(modIndex))*(gate : si.smoo)*0.5;
 
 process = fmSynth;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust126/exfaust126.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust126/exfaust126.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="frog">frog</h2>
 <div class="faust-run"><a href="img/src/exfaust127/exfaust127-svg/process.svg" target="_blank"><img src="img/src/exfaust127/exfaust127-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>//################################### frog.dsp #####################################
@@ -5169,7 +5169,7 @@ filterCutoff = cutoff : si.smoo;
 //========================================================================================
 
 process = sy.dubDub(freq,filterCutoff,q,gate) &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust127/exfaust127.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust127/exfaust127.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="harp">harp</h2>
 <div class="faust-run"><a href="img/src/exfaust128/exfaust128-svg/process.svg" target="_blank"><img src="img/src/exfaust128/exfaust128-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>//######################################## harp.dsp ######################################
@@ -5256,7 +5256,7 @@ stringFreq = freq;
 //========================================================================================
 
 process = sy.combString(freq,res,gate);</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust128/exfaust128.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust128/exfaust128.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="midionly">midiOnly</h2>
 <div class="faust-run"><a href="img/src/exfaust129/exfaust129-svg/process.svg" target="_blank"><img src="img/src/exfaust129/exfaust129-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>//################################### midiOnly.dsp ######################################
@@ -5321,7 +5321,7 @@ modFreqRatio = kb0k1x;
 envelope = gain*gate : si.smoo;
 
 process = sy.fm((freq,freq + freq*modFreqRatio),index*envelope)*envelope &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust129/exfaust129.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust129/exfaust129.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="multisynth">multiSynth</h2>
 <div class="faust-run"><a href="img/src/exfaust130/exfaust130-svg/process.svg" target="_blank"><img src="img/src/exfaust130/exfaust130-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>//################################### multiSynth.dsp ######################################
@@ -5399,7 +5399,7 @@ with{
 };
 
 process = synths &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust130/exfaust130.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust130/exfaust130.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="toy">toy</h2>
 <div class="faust-run"><a href="img/src/exfaust131/exfaust131-svg/process.svg" target="_blank"><img src="img/src/exfaust131/exfaust131-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>//##################################### toy.dsp #######################################
@@ -5473,7 +5473,7 @@ echo = +~(de.delay(65536,del*ma.SR)*fb);
 
 // putting it together
 process = os.lf_imptrain(impFreq) : fi.resonlp(resFreq,q,1) : echo : ef.cubicnl(y1,0)*0.95 &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust131/exfaust131.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust131/exfaust131.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="trumpet">trumpet</h2>
 <div class="faust-run"><a href="img/src/exfaust132/exfaust132-svg/process.svg" target="_blank"><img src="img/src/exfaust132/exfaust132-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>//################################### trumpet.dsp #####################################
@@ -5535,7 +5535,7 @@ cutoff = y*4000+50;
 envelope = gate*gain : si.smoo;
 
 process = os.sawtooth(freq)*envelope : fi.lowpass(3,cutoff) &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust132/exfaust132.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust132/exfaust132.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="turenas">turenas</h2>
 <div class="faust-run"><a href="img/src/exfaust133/exfaust133-svg/process.svg" target="_blank"><img src="img/src/exfaust133/exfaust133-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>//################################### turenas.dsp ########################################
@@ -5652,7 +5652,7 @@ modeRes = res : si.smoo;
 //========================================================================================
 
 process = sy.additiveDrum(freq,modeFreqRatios,modeGains,0.8,0.001,modeRes,gate)*0.05;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust133/exfaust133.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust133/exfaust133.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="violin2">violin2</h2>
 <div class="faust-run"><a href="img/src/exfaust134/exfaust134-svg/process.svg" target="_blank"><img src="img/src/exfaust134/exfaust134-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>//############################### violin2.dsp ##################################
@@ -5739,7 +5739,7 @@ bowPress = 0.5;
 model = par(i,4,pm.violinModel(sl(i),bowPress,bowVel*as(i),bowPos)) :&gt; _;
 
 process = model &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust134/exfaust134.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust134/exfaust134.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="violin-1">violin</h2>
 <div class="faust-run"><a href="img/src/exfaust135/exfaust135-svg/process.svg" target="_blank"><img src="img/src/exfaust135/exfaust135-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>//############################### violin.dsp ###################################
@@ -5833,7 +5833,7 @@ bowPos = 0.7;
 model = par(i,4,pm.violinModel(sl(i),bowPress,bowVel*as(i),bowPos)) :&gt; _;
 
 process = model &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust135/exfaust135.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust135/exfaust135.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="vocal">vocal</h2>
 <div class="faust-run"><a href="img/src/exfaust136/exfaust136-svg/process.svg" target="_blank"><img src="img/src/exfaust136/exfaust136-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>//######################################## vocal.dsp #####################################
@@ -5879,7 +5879,7 @@ freq = x*200 + 50;
 voiceFreq = freq*(os.osc(6)*vibrato+1);
 
 process = pm.SFFormantModelBP(1,vowel,0,voiceFreq,gain) &lt;: _,_;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust136/exfaust136.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust136/exfaust136.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h1 id="spat">spat</h1>
 <h2 id="panpot">panpot</h2>
 <div class="faust-run"><a href="img/src/exfaust137/exfaust137-svg/process.svg" target="_blank"><img src="img/src/exfaust137/exfaust137-svg/process.svg" class="mx-auto d-block"></a>
@@ -5899,7 +5899,7 @@ panpot(x)   = sqrt(c)*x, sqrt(1-c)*x
             };
 
 process     = panpot;</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust137/exfaust137.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust137/exfaust137.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div>
 <h2 id="spat-1">spat</h2>
 <div class="faust-run"><a href="img/src/exfaust138/exfaust138-svg/process.svg" target="_blank"><img src="img/src/exfaust138/exfaust138-svg/process.svg" class="mx-auto d-block"></a>
 <pre><code>declare name        &quot;spat&quot;;
@@ -5925,4 +5925,4 @@ angle           = hslider(&quot;angle&quot;,    0.0, 0, 1, 0.01);
 distance        = hslider(&quot;distance&quot;, 0.5, 0, 1, 0.01);
 
 process         = vgroup(&quot;Spatializer 1x8&quot;, sp.spat(8, angle, distance));</code></pre>
-<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/manual/img/src/exfaust138/exfaust138.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div></div></div></div></main>
+<a href="file:///home/romain/reps/faustwebsite/site/tools/editor?code=file:///home/romain/reps/faustwebsite/site/doc/examples/img/src/exfaust138/exfaust138.dsp"><button type="button" class="btn btn-primary">Try it Yourself >></button></a></div></div></div></div></main>

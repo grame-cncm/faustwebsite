@@ -14,6 +14,8 @@ do
   shift
 done
 
+CURRENTFOLDER="/doc/examples/"
+
 # Generating html version of markdown
 PHTML=$(pandoc --standalone --toc --toc-depth=4 --metadata pagetitle="Faust Tutorials" --mathjax src/faust-tutorials.md src/tuto-juce.md)
 

@@ -1,3 +1,6 @@
 # Learning Faust
 
-TODO: give an overview of the doc resources on this website.
+Multiple ressources are available to learn how to use Faust and some of its
+associated tools. Keep in mind 
+
+If you're in hurry or
