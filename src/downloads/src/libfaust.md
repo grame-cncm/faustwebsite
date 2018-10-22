@@ -1,7 +1,0 @@
-# `libfaust`
-
-## MacOS
-
-## Linux
-
-## Windows

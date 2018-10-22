@@ -5,6 +5,7 @@ DOMAIN="file:///home/romain/reps/faustwebsite/site"
 
 BUILDALL=0
 VERBOSE=0
+NEWSMISC=0
 
 while [ $1 ]
 do
@@ -13,6 +14,8 @@ do
     BUILDALL=1
   elif [ "$p" = "-v" ]; then
     VERBOSE=1
+  elif [ "$p" = "-nm" ]; then
+    NEWSMISC=1
   elif [ "$p" = "-d" ]; then
     shift
     if [[ -n "$1" ]]; then
@@ -74,8 +77,11 @@ MDWPF="</div></main>"
 if [ $VERBOSE -eq 1 ]; then
   echo "Creating site folder"
 fi
-rm -rf site
-mkdir site
+if [ $BUILDALL -eq 1 ]; then
+  rm -rf site
+fi
+
+mkdir -p site
 
 cp -r src/img site
 cp -r css site
@@ -94,7 +100,7 @@ echo "$HEADER$(cat src/main.html)$FOOTERF" > site/index.html
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating doc index page"
 fi
-mkdir site/doc
+mkdir -p site/doc
 echo "$HEADER$MDWPH$(pandoc src/doc/doc.md)$MDWPF$FOOTERF" > site/doc/index.html
 
 ################################################################################
@@ -103,7 +109,7 @@ echo "$HEADER$MDWPH$(pandoc src/doc/doc.md)$MDWPF$FOOTERF" > site/doc/index.html
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating manual page"
 fi
-mkdir site/doc/manual
+mkdir -p site/doc/manual
 cp -r src/doc/manual/img site/doc/manual/img
 cp -r src/doc/manual/misc site/doc/manual/misc 
 echo "$HEADER$(cat src/doc/manual/manual.html)$FOOTERL" > site/doc/manual/index.html
@@ -114,7 +120,7 @@ echo "$HEADER$(cat src/doc/manual/manual.html)$FOOTERL" > site/doc/manual/index.
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating libraries doc page"
 fi
-mkdir site/doc/libraries
+mkdir -p site/doc/libraries
 echo "$HEADER$(cat src/doc/libraries/libraries.html)$FOOTERL" > site/doc/libraries/index.html
 
 ################################################################################
@@ -123,7 +129,7 @@ echo "$HEADER$(cat src/doc/libraries/libraries.html)$FOOTERL" > site/doc/librari
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating tutorials page"
 fi
-mkdir site/doc/tutorials
+mkdir -p site/doc/tutorials
 cp -r src/doc/tutorials/img site/doc/tutorials/img
 cp -r src/doc/tutorials/misc site/doc/tutorials/misc 
 echo "$HEADER$(cat src/doc/tutorials/tutorials.html)$FOOTERL" > site/doc/tutorials/index.html
@@ -134,7 +140,7 @@ echo "$HEADER$(cat src/doc/tutorials/tutorials.html)$FOOTERL" > site/doc/tutoria
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating examples page"
 fi
-mkdir site/doc/examples
+mkdir -p site/doc/examples
 cp -r src/doc/examples/img site/doc/examples/img 
 echo "$HEADER$(cat src/doc/examples/examples.html)$FOOTERL" > site/doc/examples/index.html
 
@@ -144,7 +150,7 @@ echo "$HEADER$(cat src/doc/examples/examples.html)$FOOTERL" > site/doc/examples/
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating downloads page"
 fi
-mkdir site/downloads
+mkdir -p site/downloads
 echo "$HEADER$(cat src/downloads/downloads.html)$FOOTERL" > site/downloads/index.html
 
 ################################################################################
@@ -153,7 +159,7 @@ echo "$HEADER$(cat src/downloads/downloads.html)$FOOTERL" > site/downloads/index
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating tools index page"
 fi
-mkdir site/tools
+mkdir -p site/tools
 echo "$HEADER$MDWPH$(pandoc src/tools/tools.md)$MDWPF$FOOTERF" > site/tools/index.html
 
 ################################################################################
@@ -189,7 +195,7 @@ cp -r src/tools/onlinecompiler site/tools
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating other tools page"
 fi
-mkdir site/tools/other
+mkdir -p site/tools/other
 echo "$HEADER$MDWPH$(pandoc src/tools/other/other.md)$MDWPF$FOOTERF" > site/tools/other/index.html
 
 ################################################################################
@@ -198,7 +204,7 @@ echo "$HEADER$MDWPH$(pandoc src/tools/other/other.md)$MDWPF$FOOTERF" > site/tool
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating community index page"
 fi
-mkdir site/community
+mkdir -p site/community
 echo "$HEADER$MDWPH$(pandoc src/community/community.md)$MDWPF$FOOTERF" > site/community/index.html
 
 ################################################################################
@@ -207,9 +213,11 @@ echo "$HEADER$MDWPH$(pandoc src/community/community.md)$MDWPF$FOOTERF" > site/co
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating news page"
 fi
-mkdir site/community/news
+mkdir -p site/community/news
 cp -r src/community/news/img site/community/news
-cp -r src/community/news/misc site/community/news
+if [ $NEWSMISC -eq 1 ] || [ $BUILDALL -eq 1 ]; then
+  cp -r src/community/news/misc site/community/news
+fi
 echo "$HEADER$(cat src/community/news/news.html)$FOOTERL" > site/community/news/index.html
 
 ################################################################################
@@ -218,7 +226,7 @@ echo "$HEADER$(cat src/community/news/news.html)$FOOTERL" > site/community/news/
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating mailinglists page"
 fi
-mkdir site/community/mailing-lists
+mkdir -p site/community/mailing-lists
 echo "$HEADER$MDWPH$(pandoc src/community/mailing-lists/mailing-lists.md)$MDWPF$FOOTERF" > site/community/mailing-lists/index.html
 
 ################################################################################
@@ -227,7 +235,7 @@ echo "$HEADER$MDWPH$(pandoc src/community/mailing-lists/mailing-lists.md)$MDWPF$
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating Faust conference page"
 fi
-mkdir site/community/ifc
+mkdir -p site/community/ifc
 echo "$HEADER$MDWPH$(pandoc src/community/ifc/ifc.md)$MDWPF$FOOTERF" > site/community/ifc/index.html
 
 ################################################################################
@@ -236,7 +244,7 @@ echo "$HEADER$MDWPH$(pandoc src/community/ifc/ifc.md)$MDWPF$FOOTERF" > site/comm
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating publications page"
 fi
-mkdir site/community/publications
+mkdir -p site/community/publications
 echo "$HEADER$MDWPH$(pandoc src/community/publications/publications.md)$MDWPF$FOOTERF" > site/community/publications/index.html
 
 ################################################################################
@@ -245,7 +253,7 @@ echo "$HEADER$MDWPH$(pandoc src/community/publications/publications.md)$MDWPF$FO
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating press page"
 fi
-mkdir site/community/press
+mkdir -p site/community/press
 echo "$HEADER$MDWPH$(pandoc src/community/press/press.md)$MDWPF$FOOTERF" > site/community/press/index.html
 
 ################################################################################
@@ -254,7 +262,7 @@ echo "$HEADER$MDWPH$(pandoc src/community/press/press.md)$MDWPF$FOOTERF" > site/
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating bug page"
 fi
-mkdir site/community/bug
+mkdir -p site/community/bug
 echo "$HEADER$MDWPH$(pandoc src/community/bug/bug.md)$MDWPF$FOOTERF" > site/community/bug/index.html
 
 ################################################################################
@@ -263,7 +271,7 @@ echo "$HEADER$MDWPH$(pandoc src/community/bug/bug.md)$MDWPF$FOOTERF" > site/comm
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating sponsors page"
 fi
-mkdir site/community/sponsors
+mkdir -p site/community/sponsors
 echo "$HEADER$(cat src/community/sponsors/sponsors.html)$FOOTERF" > site/community/sponsors/index.html
 
 ################################################################################
@@ -272,7 +280,7 @@ echo "$HEADER$(cat src/community/sponsors/sponsors.html)$FOOTERF" > site/communi
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating made with faust page"
 fi
-mkdir site/community/made-with-faust
+mkdir -p site/community/made-with-faust
 echo "$HEADER$MDWPH$(pandoc src/community/made-with-faust/made-with-faust.md)$MDWPF$FOOTERF" > site/community/made-with-faust/index.html
 
 ################################################################################
@@ -281,7 +289,7 @@ echo "$HEADER$MDWPH$(pandoc src/community/made-with-faust/made-with-faust.md)$MD
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating misc page"
 fi
-mkdir site/community/misc
+mkdir -p site/community/misc
 cp -r src/community/misc/img site/community/misc
 echo "$HEADER$MDWPH$(pandoc src/community/misc/misc.md)$MDWPF$FOOTERF" > site/community/misc/index.html
 
@@ -291,5 +299,5 @@ echo "$HEADER$MDWPH$(pandoc src/community/misc/misc.md)$MDWPF$FOOTERF" > site/co
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating showcase"
 fi
-mkdir site/showcase
+mkdir -p site/showcase
 echo "$HEADER$(cat src/showcase/showcase.html)$FOOTERF" > site/showcase/index.html

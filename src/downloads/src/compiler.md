@@ -1,4 +1,4 @@
-# Faust Compiler
+# Faust Compiler & `libfaust`
 
 While of series of packages containing pre-compiled versions of the Faust
 compiler for [MacOS](#macos), [Linux](#linux), and [Windows](#windows) are 
@@ -8,12 +8,15 @@ Faust from scratch using the
 
 ## Source (Latest Stable Release)
 
-* [TODO (Name of the package)](#TODO)
+* [Latest stable release of the Faust compiler and of `libfaust`](https://github.com/grame-cncm/faust/releases/latest)
+* [Latest snapshot of the development branch (potentially unstable) of the Faust compiler and `libfaust`](https://github.com/grame-cncm/faust/archive/master-dev.zip)
 
-TODO: what to do with the package.
-
+<!--
 ## MacOS
 
 ## Linux
 
 ## Windows
+-->
+
+---
