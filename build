@@ -190,15 +190,6 @@ fi
 cp -r src/tools/onlinecompiler site/tools
 
 ################################################################################
-# OTHER TOOLS
-################################################################################
-if [ $VERBOSE -eq 1 ]; then
-  echo "Generating other tools page"
-fi
-mkdir -p site/tools/other
-echo "$HEADER$MDWPH$(pandoc src/tools/other/other.md)$MDWPF$FOOTERF" > site/tools/other/index.html
-
-################################################################################
 # COMMUNITY
 ################################################################################
 if [ $VERBOSE -eq 1 ]; then
@@ -236,6 +227,7 @@ if [ $VERBOSE -eq 1 ]; then
   echo "Generating Faust conference page"
 fi
 mkdir -p site/community/ifc
+cp -r src/community/ifc/img site/community/ifc
 echo "$HEADER$MDWPH$(pandoc src/community/ifc/ifc.md)$MDWPF$FOOTERF" > site/community/ifc/index.html
 
 ################################################################################
