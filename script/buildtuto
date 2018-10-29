@@ -40,7 +40,7 @@ do
   # Formating Faust runnable examples in html
   FAUST_HEADER="<div class=\"faust-run\"><a href=\"$EXFAUSTDIR$CNT/exfaust$CNT-svg/process.svg\" target=\"_blank\"><img src=\"$EXFAUSTDIR$CNT/exfaust$CNT-svg/process.svg\" class=\"mx-auto d-block\"></a>"
   PHTML=$(echo "$PHTML" | awk -v var="$FAUST_HEADER" '/<!-- faust-run -->/ && n==0 {sub(/<!-- faust-run -->/,var);++n}{print}')
-  FAUST_FOOTER="<a href=\"$FAUST_SERVER/tools/editor?code=$FAUST_SERVER$CURRENTFOLDER$CURRENT_FAUST_FILE\"><button type=\"button\" class=\"btn btn-primary\">Try it Yourself >></button></a></div>"
+  FAUST_FOOTER="<a href=\"$FAUST_SERVER/tools/editor?code=$FAUST_SERVER$CURRENTFOLDER$CURRENT_FAUST_FILE\" target=\"_blank\"><button type=\"button\" class=\"btn btn-primary\">Try it Yourself >></button></a></div>"
   PHTML=$(echo "$PHTML" | awk -v var="$FAUST_FOOTER" '/<!-- \/faust-run -->/ && n==0 {sub(/<!-- \/faust-run -->/,var);++n}{print}')
   # Going to next code...
   ((CNT++))

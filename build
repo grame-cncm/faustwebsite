@@ -5,17 +5,18 @@ DOMAIN="file:///home/romain/reps/faustwebsite/site"
 
 BUILDALL=0
 VERBOSE=0
-NEWSMISC=0
+CPLARGE=0
 
 while [ $1 ]
 do
 	p=$1
   if [ $p = "-a" ]; then
     BUILDALL=1
+		CPLARGE=1
   elif [ "$p" = "-v" ]; then
     VERBOSE=1
-  elif [ "$p" = "-nm" ]; then
-    NEWSMISC=1
+  elif [ "$p" = "-cpl" ]; then
+    CPLARGE=1
   elif [ "$p" = "-d" ]; then
     shift
     if [[ -n "$1" ]]; then
@@ -110,8 +111,10 @@ if [ $VERBOSE -eq 1 ]; then
   echo "Generating manual page"
 fi
 mkdir -p site/doc/manual
-cp -r src/doc/manual/img site/doc/manual/img
-cp -r src/doc/manual/misc site/doc/manual/misc 
+if [ $CPLARGE -eq 1 ]; then
+	cp -r src/doc/manual/img site/doc/manual/img
+	cp -r src/doc/manual/misc site/doc/manual/misc
+fi 
 echo "$HEADER$(cat src/doc/manual/manual.html)$FOOTERL" > site/doc/manual/index.html
 
 ################################################################################
@@ -130,8 +133,10 @@ if [ $VERBOSE -eq 1 ]; then
   echo "Generating tutorials page"
 fi
 mkdir -p site/doc/tutorials
-cp -r src/doc/tutorials/img site/doc/tutorials/img
-cp -r src/doc/tutorials/misc site/doc/tutorials/misc 
+if [ $CPLARGE -eq 1 ]; then
+	cp -r src/doc/tutorials/img site/doc/tutorials/img
+	cp -r src/doc/tutorials/misc site/doc/tutorials/misc
+fi
 echo "$HEADER$(cat src/doc/tutorials/tutorials.html)$FOOTERL" > site/doc/tutorials/index.html
 
 ################################################################################
@@ -141,7 +146,9 @@ if [ $VERBOSE -eq 1 ]; then
   echo "Generating examples page"
 fi
 mkdir -p site/doc/examples
-cp -r src/doc/examples/img site/doc/examples/img 
+if [ $CPLARGE -eq 1 ]; then
+	cp -r src/doc/examples/img site/doc/examples/img 
+fi
 echo "$HEADER$(cat src/doc/examples/examples.html)$FOOTERL" > site/doc/examples/index.html
 
 ################################################################################
@@ -168,8 +175,10 @@ echo "$HEADER$MDWPH$(pandoc src/tools/tools.md)$MDWPF$FOOTERF" > site/tools/inde
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating editor page"
 fi
-cp -r src/tools/editor site/tools
-cat src/tools/editor/index.html | awk -v includes="$HEADERINCLUDES" '/<\/head>/{print includes}1' | awk -v nav="$NAVIGATION<main role=\"main\"><div class=\"container-fluid\"><div class=\"navzone\"></div><div class=\"row\">" '/<div class=\"application\">/{print nav}1' | awk '/<script src=\"codemirror\/lib\/codemirror.js\">/{print "</div></main>"}1' | awk '{gsub(/<img src=\"faust-logo.png\" width=58px alt=\"LOGO\">/,"")}1' | awk -v domain="$DOMAIN" '{gsub(/__DOMAIN__/,domain)}1' > site/tools/editor/index.html
+if [ $CPLARGE -eq 1 ]; then
+	cp -r src/tools/editor site/tools
+	cat src/tools/editor/index.html | awk -v includes="$HEADERINCLUDES" '/<\/head>/{print includes}1' | awk -v nav="$NAVIGATION<main role=\"main\"><div class=\"container-fluid\"><div class=\"navzone\"></div><div class=\"row\">" '/<div class=\"application\">/{print nav}1' | awk '/<script src=\"codemirror\/lib\/codemirror.js\">/{print "</div></main>"}1' | awk '{gsub(/<img src=\"faust-logo.png\" width=58px alt=\"LOGO\">/,"")}1' | awk -v domain="$DOMAIN" '{gsub(/__DOMAIN__/,domain)}1' > site/tools/editor/index.html
+fi
 
 ################################################################################
 # PLAYGROUND
@@ -178,7 +187,9 @@ if [ $VERBOSE -eq 1 ]; then
   echo "Generating playground page"
 fi
 # TODO: we coul improve the integration of the Faust playground
-cp -r src/tools/playground site/tools
+if [ $CPLARGE -eq 1 ]; then
+	cp -r src/tools/playground site/tools
+fi
 
 ################################################################################
 # ONLINE COMPILER
@@ -187,7 +198,9 @@ if [ $VERBOSE -eq 1 ]; then
   echo "Generating online compiler page"
 fi
 # TODO: we coul improve the integration of the online compiler
-cp -r src/tools/onlinecompiler site/tools
+if [ $CPLARGE -eq 1 ]; then
+	cp -r src/tools/onlinecompiler site/tools
+fi
 
 ################################################################################
 # COMMUNITY
@@ -206,9 +219,6 @@ if [ $VERBOSE -eq 1 ]; then
 fi
 mkdir -p site/community/news
 cp -r src/community/news/img site/community/news
-if [ $NEWSMISC -eq 1 ] || [ $BUILDALL -eq 1 ]; then
-  cp -r src/community/news/misc site/community/news
-fi
 echo "$HEADER$(cat src/community/news/news.html)$FOOTERL" > site/community/news/index.html
 
 ################################################################################
@@ -264,6 +274,7 @@ if [ $VERBOSE -eq 1 ]; then
   echo "Generating sponsors page"
 fi
 mkdir -p site/community/sponsors
+cp -r src/community/sponsors/img site/community/sponsors
 echo "$HEADER$(cat src/community/sponsors/sponsors.html)$FOOTERF" > site/community/sponsors/index.html
 
 ################################################################################
@@ -273,7 +284,8 @@ if [ $VERBOSE -eq 1 ]; then
   echo "Generating made with faust page"
 fi
 mkdir -p site/community/made-with-faust
-echo "$HEADER$MDWPH$(pandoc src/community/made-with-faust/made-with-faust.md)$MDWPF$FOOTERF" > site/community/made-with-faust/index.html
+cp -r src/community/made-with-faust/img site/community/made-with-faust
+echo "$HEADER$(cat src/community/made-with-faust/made-with-faust.html)$FOOTERF" > site/community/made-with-faust/index.html
 
 ################################################################################
 # MISC
@@ -292,4 +304,5 @@ if [ $VERBOSE -eq 1 ]; then
   echo "Generating showcase"
 fi
 mkdir -p site/showcase
+cp -r src/showcase/img site/showcase
 echo "$HEADER$(cat src/showcase/showcase.html)$FOOTERF" > site/showcase/index.html

@@ -2,6 +2,8 @@
 
 ## 2018
 
+* CDM, [Vadim is a master of the dark arts of DSP – listen to him explain filters](http://cdm.link/2018/10/vadim-is-a-master-of-the-dark-arts-of-dsp-listen-to-him-explain-filters/), October 19, 2018.
+
 * France Musique, [Bernard Cavanna, compositeur agité ! - Albums "À l’agité du bocal" & "Le caillou dans la chaussure"](https://www.francemusique.fr/emissions/le-portrait-contemporain/bernard-cavanna-compositeur-65336), October 10, 2018.
 
 * BNEWS, [Цифровая осень в Алматы: Молодые музыканты исполнили современные произведения с помощью гаджетов](https://bnews.kz/ru/news/tsifrovaya_osen_v_almati_molodie_muzikanti_ispolnili_sovremennie_proizvedeniya_s_pomoshchu_gadzhetov), October 18, 2018.

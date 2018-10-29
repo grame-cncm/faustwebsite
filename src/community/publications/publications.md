@@ -73,7 +73,7 @@ programming language.
 
 * R. Michon, M. Johns, S. O’Modhrain, N. Gang, N. Gowda, D. Sirkin, C. Chafe, M. Wright and W. Ju, "A Faust Based Driving Simulator Sound Synthesis Engine," in *Proceedings of the Sound and Music Computing Conference (SMC-16)*, Hamburg, Germany, 2016.
 
-Y. Orlarey and P.Jouvelot, "Signal Rate Inference for Multidimensional Faust," in *Proceedings of the 28th Symposium on the Implementation and Application of Functional Programming Languages*, Leuven, Belgium, 2016.
+* Y. Orlarey and P.Jouvelot, "Signal Rate Inference for Multidimensional Faust," in *Proceedings of the 28th Symposium on the Implementation and Application of Functional Programming Languages*, Leuven, Belgium, 2016.
 
 * P. Donat-Bouillud, J.L. Giavitto, A. Cont, N. Schmidt and Y. Orlarey, "Embedding native audio-processing in a score following system with quasi sample accuracy," in *Proceedings of the 42nd International Computer Music Conference (ICMC-16)*, Utrecht, Netherlands, 2016.
 
