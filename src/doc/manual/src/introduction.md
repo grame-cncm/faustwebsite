@@ -2,6 +2,9 @@
 
 # Introduction 
 
+> **WARNING:** This new manual for the Faust language is a work in progress! 
+It might have missing parts, typos, "TODOs", etc.
+
 ## What is Faust?
 
 Faust (Functional Audio Stream) is a functional programming language for sound 
