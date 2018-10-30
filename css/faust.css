@@ -135,26 +135,24 @@ blockquote{
 }
 
 .logozone {
-  background-color: rgb(120, 120, 120);
+  background-color: rgb(30, 30, 30);
 }
 
 .actionzone {
   width: 100%;
-  background-color: rgb(120, 120, 120);
+  background-color: rgb(30, 30, 30);
 }
 
 .dynamic-button {
   height: 2.5rem;
   width: 5rem;
-  background-color: rgb(50,50,50);
-  color: #fff;
+  color: black;
 }
 
 .action-button {
   height: 2.5rem;
   width: 5rem;
-  background-color: rgb(50,50,50);
-  color: #fff;
+  color: black;
 }
 
 .editionzone {
@@ -163,15 +161,73 @@ blockquote{
 }
 
 .dropzone {
-  color: rgb(50,50,50);
-  border: 4px dashed rgb(120,120,120);
+  border: 4px dashed rgb(30, 30, 30);
+}
+
+.dropzone:hover {
+  border: 4px dashed #FF3366;
 }
 
 .dropzone input {
-  color: rgb(50,50,50);
+  color: black;
 }
 
 .modalwrapper {
-  height:auto;
   top:auto;
+}
+
+#run{
+  background-color: #BCF0FF;
+}
+
+#upload{
+  background-color: #FF3366;
+}
+
+#save{
+  background-color: #2D8AC4;
+}
+
+#doc{
+  background-color: #2EC4B6;
+}
+
+#export{
+  background-color: #E3D26F;
+}
+
+#block{
+  background-color: #FF6B42;
+}
+
+#config{
+  background-color: #486AAF;
+}
+
+#run:hover{
+  background-color: #566E74;
+}
+
+#upload:hover{
+  background-color: #A32141;
+}
+
+#save:hover{
+  background-color: #1D587D;
+}
+
+#doc:hover{
+  background-color: #1E7D74;
+}
+
+#export:hover{
+  background-color: #918647;
+}
+
+#block:hover{
+  background-color: #74311E;
+}
+
+#config:hover{
+  background-color: #213150;
 }
