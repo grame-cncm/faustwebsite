@@ -735,9 +735,9 @@ placed in series, it can be used to implement a full peak equalizer:
 import("stdfaust.lib");
 nBands = 8;
 filterBank(N) = hgroup("Filter Bank",seq(i,N,oneBand(i)))
-with{
+with {
 	oneBand(j) = vgroup("[%j]Band %a",fi.peak_eq(l,f,b))
-	with{
+	with {
 		a = j+1; // just so that band numbers don't start at 0
 		l = vslider("[2]Level[unit:db]",0,-70,12,0.01) : si.smoo;
 		f = nentry("[1]Freq",(80+(1000*8/N*(j+1)-80)),20,20000,0.01) : si.smoo;
@@ -1432,31 +1432,28 @@ is very low because of the low resolution of the triangle waveform.
 
 ### `soundfile` Primitive
 
-The `soundfile("label[url:path]", n)` primitive allows for the access of 
-externally defined sound file/resource. `soundfile` has one input (the read 
-index in the sound), three fixed outputs: 
+The `soundfile("label[url:{'path1';'path2';'path3'}]", n)` primitive allows for the access a list of 
+externally defined sound resources, described as the list of their filename, or complete paths. The `soundfile("label[url:path]", n)` simplified syntax allows to use a single file. A `soundfile` has: 
 
-* the audio wave length in frames
-* the audio wave nominal sample rate
-* the audio wave number of channels
-
-and several more outputs for the audio channels themselves. 
+* two inputs: the sound number (as a integer between 0 and 255 checked at compilation time), and the read index in the sound (which will access the last sample of the sound if the read index is greater than the sound length)
+* two fixed outputs: the first one is the currently accessed sound length in frames, the second one is the currently accessed sound nominal sample rate in frames
+* several more outputs for the sound channels themselvese* the audio wave number of channels
 
 If more outputs than the actual number of channels in the sound file are used, 
 the audio channels will be automatically duplicated up to the wanted number of 
 outputs (so for instance, if a stereo file is used with four output channels, 
 the same group of two channels will be duplicated).
 
-If the sound file cannot be loaded for whatever reason, a default sound with 
-one channel, a length of 1024 frames and null outputs (with samples of value 
-0) will be used. Note also that sound files are entirely loaded in memory by 
-the architecture file.
+If the soundfile cannot be loaded for whatever reason, a default sound with one channel, a length of 1024 
+frames and null outputs (with samples of value 0) will be used. Note also that soundfiles are entirely 
+loaded in memory by the architecture file, so that the read index signal can access any sample.
 
 Architecture files are responsible to load the actual soundfile. The 
 `SoundUI` C++ class located in the `faust/gui/SoundUI.h` file in the 
 [Faust repository](https://github.com/grame-cncm/faust) implements the 
 `void  addSoundfile(label, path, sf_zone)` method, which loads the actual 
-soundfiles using the `libsndfile` library, and set up the `sf_zone` sound 
+soundfiles using the `libsndfile` library, or possibly specific audio file loading code 
+(in the case of the JUCE framework for instance), and set up the `sf_zone` sound 
 memory pointers. If *label* is used without any *url* metadata, it will be 
 considered as the soundfile pathname. 
 
@@ -1696,7 +1693,7 @@ process = _~+(1) : -(1) : %(10);
 ```
 <!-- /faust-run -->	
 
-will output a signal: `(0,1,2,3,4,5,6,7,8,9,0,1,2,3,4)`
+will output a signal: `(0,1,2,3,4,5,6,7,8,9,0,1,2,3,4)`.
 
 #### AND Primitive
 
@@ -1754,7 +1751,7 @@ Left shift can be expressed in Faust with the `<<` primitive.
 
 <!-- faust-run -->
 ```
-process = 1 << 2 ;
+process = 1 << 2;
 ```
 <!-- /faust-run -->	
 
@@ -1769,7 +1766,7 @@ Right shift can be expressed in Faust with the `>>` primitive.
 
 <!-- faust-run -->
 ```
-process = 1 >> 2 ;
+process = 1 >> 2;
 ```
 <!-- /faust-run -->	
 
@@ -1787,7 +1784,7 @@ The following code will output 1 if the input signal is smaller than 0.5 and
 
 <!-- faust-run -->
 ```
-process = <(0.5) ;
+process = <(0.5);
 ```
 <!-- /faust-run -->	
 
@@ -1806,7 +1803,7 @@ The following code will output 1 if the input signal is smaller or equal than
 
 <!-- faust-run -->
 ```
-process = <=(0.5) ;
+process = <=(0.5);
 ```
 <!-- /faust-run -->	
 
@@ -1824,7 +1821,7 @@ The following code will output 1 if the input signal is greater than 0.5 and
 
 <!-- faust-run -->
 ```
-process = >(0.5) ;
+process = >(0.5);
 ```
 <!-- /faust-run -->	
 
@@ -1843,7 +1840,7 @@ The following code will output 1 if the input signal is greater or equal than
 
 <!-- faust-run -->
 ```
-process = >=(0.5) ;
+process = >=(0.5);
 ```
 <!-- /faust-run -->	
 
@@ -2464,7 +2461,7 @@ process = sig;
 ```
 <!-- /faust-run -->	
 
-Note that `select2` could be easily implemented from scratch in Faust using
+Note that `select3` could be easily implemented from scratch in Faust using
 Boolean primitives:
 
 <!-- faust-run -->
@@ -3337,7 +3334,7 @@ Sensors control metadatas have five parameters and follow the following syntax:
 
 ```
 [acc: a b c d e] // for accelerometer
-[gyr a b c d e] // for gyroscope
+[gyr: a b c d e] // for gyroscope
 ```
 
 They can be used in a Faust UI parameter declaration:

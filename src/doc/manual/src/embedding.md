@@ -7,7 +7,7 @@ The combination of the awesome [LLVM technology](https://llvm.org/) and
 compile and execute Faust DSP programs on the fly at full speed and without
 making compromises. In this section, we demonstrate how the Faust dynamic 
 compilation chain can be used to embed the Faust compiler technology directly 
-in applications or plugins.
+in applications or plug-ins.
 
 ## Dynamic Compilation Chain
 

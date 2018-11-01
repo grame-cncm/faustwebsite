@@ -61,7 +61,7 @@ Makefile               : makefile used to build and install Faust
 README.md              : instructions on how to build and install Faust
 syntax-highlighting/   : support for syntax highlighting for several editors
 tests/                 : various tests
-tools/                 : tools to produce audio applications and plugins
+tools/                 : tools to produce audio applications and plug-ins
 windows/               : Windows related ressources
 ```
 
@@ -221,7 +221,7 @@ for additional help and options.
 ### `faust2androidunity`
 
 `faust2android` converts a Faust program into an android library (`armeabi-v7a` 
-and `x86`) for the [Faust unity plugin](TODO).
+and `x86`) for the [Faust unity plug-in](TODO).
 
 <!-- TODO: there might a webpage about this project -->
 
@@ -336,7 +336,7 @@ for additional help and options.
 
 ### `faust2bela`
 
-`faust2bela` converts a Faust program into a [BELA](TODO) plug-in.
+`faust2bela` converts a Faust program into a [BELA](TODO) application.
 
 **Platforms**
 
@@ -498,7 +498,7 @@ for additional help and options.
 
 `faust2faustvst` converts a Faust program into a block diagram and opens it
 in the default web browser of the system. It can be seen as a subset of
-[`faust2svg`](#faust2svg)
+[`faust2svg`](#faust2svg).
 
 **Platforms**
 

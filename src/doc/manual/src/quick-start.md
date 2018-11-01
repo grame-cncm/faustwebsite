@@ -405,13 +405,13 @@ Make a string physical model based on a feedback comb filter:
 import("stdfaust.lib");
 // freq, res and gate definitions go here
 string(frequency,resonance,trigger) = trigger : ba.impulsify : fi.fb_fcomb(1024,del,1,resonance)
-with{
+with {
 	del = ma.SR/frequency;
 };
 process = string(freq,res,gate);
 ```
 
-Sampling rate is defined in [`math.lib`](../libraries/index.html#math.lib) as 
+Sampling rate is defined in [`maths.lib`](../libraries/index.html#maths.lib) as 
 [`SR`](../libraries/index.html#ma.sr). We're using it here to compute the 
 length of the delay of the comb filter. [`with{}`](#with-expression) is a Faust 
 primitive to attach local variables to a function. So in the current case, 

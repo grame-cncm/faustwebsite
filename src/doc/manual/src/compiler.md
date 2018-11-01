@@ -14,7 +14,7 @@ A typical call of the Faust command line compiler is:
 faust [OPTIONS] faustFile.dsp
 ```
 
-The Faust compiler outputs C++ code by default therefore running 
+The Faust compiler outputs C++ code by default therefore running: 
 
 ```
 faust noise.dsp 

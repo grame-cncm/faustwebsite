@@ -59,7 +59,7 @@ represented as block diagrams** such as filters, waveguide physical models,
 virtual analog elements, etc.
 
 **Faust is very concise**, for example, here's the implementation of a one pole 
-filter/integrator equivalent to $y(n) = x(x) + a_{1}y(n-1)$ (where $a_{1}$ is 
+filter/integrator equivalent to $y(n) = x(n) + a_{1}y(n-1)$ (where $a_{1}$ is 
 the pole):
 
 <!-- faust-run -->
@@ -131,7 +131,7 @@ five composition operations: `: , ~ <: :>` (see the section on
 [Diagram Composition Operations](#diagram-composition-operations) for more
 details).
 * Thanks to the concept of *architecture*, Faust programs can be easily 
-deployed on a large variety of audio platforms and plugin formats without any 
+deployed on a large variety of audio platforms and plug-in formats without any 
 change to the Faust code.
 
 ## Signal Processor Semantic

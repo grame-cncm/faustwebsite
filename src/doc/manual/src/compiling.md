@@ -100,7 +100,7 @@ and print the corresponding C++ code to the standard output.
 
 This C++ code has to be embedded into an architecture file (that describes how 
 to relate the audio computation to the external world) before being compiled 
-into standalone application or an audio plugin. For that, you will need to 
+into standalone application or an audio plug-in. For that, you will need to 
 install some development packages depending of your targets. For example, in
 order to compile a Faust program as a [Jack](http://jackaudio.org/) (or 
 [ALSA](https://www.alsa-project.org/main/index.php/Main_Page)) application with 
@@ -119,7 +119,7 @@ generate the corresponding application:
 faust2alqt foo.dsp
 ```
 
-for an ALSA application with a Qt interface
+for an ALSA application with a Qt interface.
 
 ```
 faust2jaqt foo.dsp
@@ -274,7 +274,7 @@ For example:
 make GENERATOR=Xcode
 ```
 
-will generate an Xcode project in the `faustdir` subfolder
+will generate an Xcode project in the `faustdir` subfolder.
 
 ```
 make FAUSTDIR=macos GENERATOR=Xcode
@@ -403,7 +403,7 @@ to build your project from the command line whether it’s Makefile-based or
 IDE-based (e.g. Xcode or Visual Studio).
 
 The following sequence creates and build a project using Visual Studio on 
-Windows in release mode :
+Windows in release mode:
 
 ```
 cd your_build_folder
