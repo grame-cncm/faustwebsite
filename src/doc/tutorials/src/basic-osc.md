@@ -127,26 +127,15 @@ process = phasor(f);
 
 ## Generating a Sine Wave
 
-* Almost there! Now we want our counter to go from 0 to 2pi so that we can plug
+* Almost there! Now we want our phasor to go from 0 to 2pi so that we can plug
 it to the `sin` function:
 
 <!-- faust-run -->
 ```
 import("stdfaust.lib");
 f = hslider("freq",440,50,2000,0.01);
-phasor(freq) = (+(freq/ma.SR) ~ ma.decimal)*2*ma.PI;
-process = phasor(f);
-```
-<!-- /faust-run -->
-
-* At this point, all we have to do is to plug the phasor to the sine function:
-
-<!-- faust-run -->
-```
-import("stdfaust.lib");
-f = hslider("freq",440,50,2000,0.01);
-phasor(freq) = (+(freq/ma.SR) ~ ma.decimal)*2*ma.PI;
-osc(freq) = sin(phasor(freq));
+phasor(freq) = (+(freq/ma.SR) ~ ma.decimal);
+osc(freq) = sin(phasor(freq)*2*ma.PI);
 process = osc(f);
 ```
 <!-- /faust-run -->
@@ -165,8 +154,8 @@ possible to "sculpt" a sound.
 ```
 import("stdfaust.lib");
 f = hslider("freq",440,50,2000,0.01);
-phasor(freq) = (+(freq/ma.SR) ~ ma.decimal)*2*ma.PI;
-osc(freq) = sin(phasor(freq));
+phasor(freq) = (+(freq/ma.SR) ~ ma.decimal);
+osc(freq) = sin(phasor(freq)*2*ma.PI);
 organ(freq) = (osc(freq) + osc(freq*2) + osc(freq*3))/3;
 process = organ(f)/3;
 ``` 
@@ -185,8 +174,8 @@ import("stdfaust.lib");
 f = hslider("freq",440,50,2000,0.01);
 g = hslider("gain",1,0,1,0.01);
 t = button("gate");
-phasor(freq) = (+(freq/ma.SR) ~ ma.decimal)*2*ma.PI;
-osc(freq) = sin(phasor(freq));
+phasor(freq) = (+(freq/ma.SR) ~ ma.decimal);
+osc(freq) = sin(phasor(freq)*2*ma.PI);
 organ(freq) = (osc(freq) + osc(freq*2) + osc(freq*3))/3;
 process = organ(f)*g*t/3;
 ```
@@ -200,8 +189,8 @@ import("stdfaust.lib");
 f = hslider("freq",440,50,2000,0.01);
 g = hslider("gain",1,0,1,0.01);
 t = si.smoo(button("gate"));
-phasor(freq) = (+(freq/ma.SR) ~ ma.decimal)*2*ma.PI;
-osc(freq) = sin(phasor(freq));
+phasor(freq) = (+(freq/ma.SR) ~ ma.decimal);
+osc(freq) = sin(phasor(freq)*2*ma.PI);
 organ(freq) = (osc(freq) + osc(freq*2) + osc(freq*3))/3;
 process = organ(f)*g*t/3;
 ```
@@ -219,8 +208,8 @@ with accelerometers:
 ```
 import("stdfaust.lib");
 f = hslider("freq[acc: 0 0 -10 0 10]",1000,50,2000,0.01) : si.smoo;
-phasor(freq) = (+(freq/ma.SR) ~ ma.decimal)*2*ma.PI;
-osc(freq) = sin(phasor(freq));
+phasor(freq) = (+(freq/ma.SR) ~ ma.decimal);
+osc(freq) = sin(phasor(freq)*2*ma.PI);
 organ(freq) = (osc(freq) + osc(freq*2) + osc(freq*3))/3;
 process = organ(f)/3;
 ```
