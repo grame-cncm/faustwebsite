@@ -1,7 +1,9 @@
 #!/bin/bash
 
-DOMAIN="https://faust.grame.fr"
-#DOMAIN="file:///home/romain/reps/faustwebsite/site"
+#DOMAIN="https://faust.grame.fr"
+DOMAIN="file:///home/romain/reps/faustwebsite/site"
+
+DEPLOY=site
 
 BUILDALL=0
 VERBOSE=0
@@ -23,6 +25,13 @@ do
 			DOMAIN=$1
     else
       echo "No domain specified after -d"
+    fi
+	elif [ "$p" = "-t" ]; then
+    shift
+    if [[ -n "$1" ]]; then
+			DEPLOY=$1
+    else
+      echo "No target path specified after -t"
     fi
   fi
   shift
@@ -79,13 +88,13 @@ if [ $VERBOSE -eq 1 ]; then
   echo "Creating site folder"
 fi
 if [ $BUILDALL -eq 1 ]; then
-  rm -rf site
+  rm -rf $DEPLOY
 fi
 
-mkdir -p site
+mkdir -p $DEPLOY
 
-cp -r src/img site
-cp -r css site
+cp -r src/img $DEPLOY
+cp -r css $DEPLOY
 
 ################################################################################
 # MAIN PAGE
@@ -93,7 +102,7 @@ cp -r css site
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating main page"
 fi
-echo "$HEADER$(cat src/main.html)$FOOTERF" > site/index.html
+echo "$HEADER$(cat src/main.html)$FOOTERF" > $DEPLOY/index.html
 
 ################################################################################
 # DOC/LEARN
@@ -101,8 +110,8 @@ echo "$HEADER$(cat src/main.html)$FOOTERF" > site/index.html
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating doc index page"
 fi
-mkdir -p site/doc
-echo "$HEADER$MDWPH$(pandoc src/doc/doc.md)$MDWPF$FOOTERF" > site/doc/index.html
+mkdir -p $DEPLOY/doc
+echo "$HEADER$MDWPH$(pandoc src/doc/doc.md)$MDWPF$FOOTERF" > $DEPLOY/doc/index.html
 
 ################################################################################
 # MANUAL
@@ -110,12 +119,12 @@ echo "$HEADER$MDWPH$(pandoc src/doc/doc.md)$MDWPF$FOOTERF" > site/doc/index.html
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating manual page"
 fi
-mkdir -p site/doc/manual
+mkdir -p $DEPLOY/doc/manual
 if [ $CPLARGE -eq 1 ]; then
-	cp -r src/doc/manual/img site/doc/manual/img
-	cp -r src/doc/manual/misc site/doc/manual/misc
+	cp -r src/doc/manual/img $DEPLOY/doc/manual/img
+	cp -r src/doc/manual/misc $DEPLOY/doc/manual/misc
 fi 
-echo "$HEADER$(cat src/doc/manual/manual.html)$FOOTERL" > site/doc/manual/index.html
+echo "$HEADER$(cat src/doc/manual/manual.html)$FOOTERL" > $DEPLOY/doc/manual/index.html
 
 ################################################################################
 # LIBRARIES DOC
@@ -123,8 +132,8 @@ echo "$HEADER$(cat src/doc/manual/manual.html)$FOOTERL" > site/doc/manual/index.
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating libraries doc page"
 fi
-mkdir -p site/doc/libraries
-echo "$HEADER$(cat src/doc/libraries/libraries.html)$FOOTERL" > site/doc/libraries/index.html
+mkdir -p $DEPLOY/doc/libraries
+echo "$HEADER$(cat src/doc/libraries/libraries.html)$FOOTERL" > $DEPLOY/doc/libraries/index.html
 
 ################################################################################
 # TUTORIALS
@@ -132,12 +141,12 @@ echo "$HEADER$(cat src/doc/libraries/libraries.html)$FOOTERL" > site/doc/librari
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating tutorials page"
 fi
-mkdir -p site/doc/tutorials
+mkdir -p $DEPLOY/doc/tutorials
 if [ $CPLARGE -eq 1 ]; then
-	cp -r src/doc/tutorials/img site/doc/tutorials/img
-	cp -r src/doc/tutorials/misc site/doc/tutorials/misc
+	cp -r src/doc/tutorials/img $DEPLOY/doc/tutorials/img
+	cp -r src/doc/tutorials/misc $DEPLOY/doc/tutorials/misc
 fi
-echo "$HEADER$(cat src/doc/tutorials/tutorials.html)$FOOTERL" > site/doc/tutorials/index.html
+echo "$HEADER$(cat src/doc/tutorials/tutorials.html)$FOOTERL" > $DEPLOY/doc/tutorials/index.html
 
 ################################################################################
 # EXAMPLES
@@ -145,11 +154,11 @@ echo "$HEADER$(cat src/doc/tutorials/tutorials.html)$FOOTERL" > site/doc/tutoria
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating examples page"
 fi
-mkdir -p site/doc/examples
+mkdir -p $DEPLOY/doc/examples
 if [ $CPLARGE -eq 1 ]; then
-	cp -r src/doc/examples/img site/doc/examples/img 
+	cp -r src/doc/examples/img $DEPLOY/doc/examples/img 
 fi
-echo "$HEADER$(cat src/doc/examples/examples.html)$FOOTERL" > site/doc/examples/index.html
+echo "$HEADER$(cat src/doc/examples/examples.html)$FOOTERL" > $DEPLOY/doc/examples/index.html
 
 ################################################################################
 # DOWNLOADS
@@ -157,8 +166,8 @@ echo "$HEADER$(cat src/doc/examples/examples.html)$FOOTERL" > site/doc/examples/
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating downloads page"
 fi
-mkdir -p site/downloads
-echo "$HEADER$(cat src/downloads/downloads.html)$FOOTERL" > site/downloads/index.html
+mkdir -p $DEPLOY/downloads
+echo "$HEADER$(cat src/downloads/downloads.html)$FOOTERL" > $DEPLOY/downloads/index.html
 
 ################################################################################
 # TOOLS
@@ -166,8 +175,8 @@ echo "$HEADER$(cat src/downloads/downloads.html)$FOOTERL" > site/downloads/index
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating tools index page"
 fi
-mkdir -p site/tools
-echo "$HEADER$MDWPH$(pandoc src/tools/tools.md)$MDWPF$FOOTERF" > site/tools/index.html
+mkdir -p $DEPLOY/tools
+echo "$HEADER$MDWPH$(pandoc src/tools/tools.md)$MDWPF$FOOTERF" > $DEPLOY/tools/index.html
 
 ################################################################################
 # EDITOR
@@ -176,8 +185,8 @@ if [ $VERBOSE -eq 1 ]; then
   echo "Generating editor page"
 fi
 if [ $CPLARGE -eq 1 ]; then
-	cp -r src/tools/editor site/tools
-	cat src/tools/editor/index.html | awk -v includes="$HEADERINCLUDES" '/<\/head>/{print includes}1' | awk -v nav="$NAVIGATION<main role=\"main\"><div class=\"navzone\"></div><div class=\"container-fluid\"><div class=\"row\">" '/<div class=\"application\">/{print nav}1' | awk '/<script src=\"codemirror\/lib\/codemirror.js\">/{print "</div></main>"}1' | awk '{gsub(/<img src=\"faust-logo.png\" width=58px alt=\"LOGO\">/,"")}1' | awk -v domain="$DOMAIN" '{gsub(/__DOMAIN__/,domain)}1' > site/tools/editor/index.html
+	cp -r src/tools/editor $DEPLOY/tools
+	cat src/tools/editor/index.html | awk -v includes="$HEADERINCLUDES" '/<\/head>/{print includes}1' | awk -v nav="$NAVIGATION<main role=\"main\"><div class=\"navzone\"></div><div class=\"container-fluid\"><div class=\"row\">" '/<div class=\"application\">/{print nav}1' | awk '/<script src=\"codemirror\/lib\/codemirror.js\">/{print "</div></main>"}1' | awk '{gsub(/<img src=\"faust-logo.png\" width=58px alt=\"LOGO\">/,"")}1' | awk -v domain="$DOMAIN" '{gsub(/__DOMAIN__/,domain)}1' > $DEPLOY/tools/editor/index.html
 fi
 
 ################################################################################
@@ -188,7 +197,7 @@ if [ $VERBOSE -eq 1 ]; then
 fi
 # TODO: we coul improve the integration of the Faust playground
 if [ $CPLARGE -eq 1 ]; then
-	cp -r src/tools/playground site/tools
+	cp -r src/tools/playground $DEPLOY/tools
 fi
 
 ################################################################################
@@ -199,7 +208,7 @@ if [ $VERBOSE -eq 1 ]; then
 fi
 # TODO: we coul improve the integration of the online compiler
 if [ $CPLARGE -eq 1 ]; then
-	cp -r src/tools/onlinecompiler site/tools
+	cp -r src/tools/onlinecompiler $DEPLOY/tools
 fi
 
 ################################################################################
@@ -208,8 +217,8 @@ fi
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating community index page"
 fi
-mkdir -p site/community
-echo "$HEADER$MDWPH$(pandoc src/community/community.md)$MDWPF$FOOTERF" > site/community/index.html
+mkdir -p $DEPLOY/community
+echo "$HEADER$MDWPH$(pandoc src/community/community.md)$MDWPF$FOOTERF" > $DEPLOY/community/index.html
 
 ################################################################################
 # NEWS
@@ -217,9 +226,9 @@ echo "$HEADER$MDWPH$(pandoc src/community/community.md)$MDWPF$FOOTERF" > site/co
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating news page"
 fi
-mkdir -p site/community/news
-cp -r src/community/news/img site/community/news
-echo "$HEADER$(cat src/community/news/news.html)$FOOTERL" > site/community/news/index.html
+mkdir -p $DEPLOY/community/news
+cp -r src/community/news/img $DEPLOY/community/news
+echo "$HEADER$(cat src/community/news/news.html)$FOOTERL" > $DEPLOY/community/news/index.html
 
 ################################################################################
 # MAILING-LISTS
@@ -227,8 +236,8 @@ echo "$HEADER$(cat src/community/news/news.html)$FOOTERL" > site/community/news/
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating mailinglists page"
 fi
-mkdir -p site/community/mailing-lists
-echo "$HEADER$MDWPH$(pandoc src/community/mailing-lists/mailing-lists.md)$MDWPF$FOOTERF" > site/community/mailing-lists/index.html
+mkdir -p $DEPLOY/community/mailing-lists
+echo "$HEADER$MDWPH$(pandoc src/community/mailing-lists/mailing-lists.md)$MDWPF$FOOTERF" > $DEPLOY/community/mailing-lists/index.html
 
 ################################################################################
 # FAUST CONFERENCE
@@ -236,9 +245,9 @@ echo "$HEADER$MDWPH$(pandoc src/community/mailing-lists/mailing-lists.md)$MDWPF$
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating Faust conference page"
 fi
-mkdir -p site/community/ifc
-cp -r src/community/ifc/img site/community/ifc
-echo "$HEADER$MDWPH$(pandoc src/community/ifc/ifc.md)$MDWPF$FOOTERF" > site/community/ifc/index.html
+mkdir -p $DEPLOY/community/ifc
+cp -r src/community/ifc/img $DEPLOY/community/ifc
+echo "$HEADER$MDWPH$(pandoc src/community/ifc/ifc.md)$MDWPF$FOOTERF" > $DEPLOY/community/ifc/index.html
 
 ################################################################################
 # ACADEMIC PUBLICATIONS
@@ -246,8 +255,8 @@ echo "$HEADER$MDWPH$(pandoc src/community/ifc/ifc.md)$MDWPF$FOOTERF" > site/comm
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating publications page"
 fi
-mkdir -p site/community/publications
-echo "$HEADER$MDWPH$(pandoc src/community/publications/publications.md)$MDWPF$FOOTERF" > site/community/publications/index.html
+mkdir -p $DEPLOY/community/publications
+echo "$HEADER$MDWPH$(pandoc src/community/publications/publications.md)$MDWPF$FOOTERF" > $DEPLOY/community/publications/index.html
 
 ################################################################################
 # PRESS
@@ -255,8 +264,8 @@ echo "$HEADER$MDWPH$(pandoc src/community/publications/publications.md)$MDWPF$FO
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating press page"
 fi
-mkdir -p site/community/press
-echo "$HEADER$MDWPH$(pandoc src/community/press/press.md)$MDWPF$FOOTERF" > site/community/press/index.html
+mkdir -p $DEPLOY/community/press
+echo "$HEADER$MDWPH$(pandoc src/community/press/press.md)$MDWPF$FOOTERF" > $DEPLOY/community/press/index.html
 
 ################################################################################
 # BUG
@@ -264,8 +273,8 @@ echo "$HEADER$MDWPH$(pandoc src/community/press/press.md)$MDWPF$FOOTERF" > site/
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating bug page"
 fi
-mkdir -p site/community/bug
-echo "$HEADER$MDWPH$(pandoc src/community/bug/bug.md)$MDWPF$FOOTERF" > site/community/bug/index.html
+mkdir -p $DEPLOY/community/bug
+echo "$HEADER$MDWPH$(pandoc src/community/bug/bug.md)$MDWPF$FOOTERF" > $DEPLOY/community/bug/index.html
 
 ################################################################################
 # SPONSORS
@@ -273,9 +282,9 @@ echo "$HEADER$MDWPH$(pandoc src/community/bug/bug.md)$MDWPF$FOOTERF" > site/comm
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating sponsors page"
 fi
-mkdir -p site/community/sponsors
-cp -r src/community/sponsors/img site/community/sponsors
-echo "$HEADER$(cat src/community/sponsors/sponsors.html)$FOOTERF" > site/community/sponsors/index.html
+mkdir -p $DEPLOY/community/sponsors
+cp -r src/community/sponsors/img $DEPLOY/community/sponsors
+echo "$HEADER$(cat src/community/sponsors/sponsors.html)$FOOTERF" > $DEPLOY/community/sponsors/index.html
 
 ################################################################################
 # MADE WITH FAUST
@@ -283,9 +292,9 @@ echo "$HEADER$(cat src/community/sponsors/sponsors.html)$FOOTERF" > site/communi
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating made with faust page"
 fi
-mkdir -p site/community/made-with-faust
-cp -r src/community/made-with-faust/img site/community/made-with-faust
-echo "$HEADER$(cat src/community/made-with-faust/made-with-faust.html)$FOOTERF" > site/community/made-with-faust/index.html
+mkdir -p $DEPLOY/community/made-with-faust
+cp -r src/community/made-with-faust/img $DEPLOY/community/made-with-faust
+echo "$HEADER$(cat src/community/made-with-faust/made-with-faust.html)$FOOTERF" > $DEPLOY/community/made-with-faust/index.html
 
 ################################################################################
 # MISC
@@ -293,9 +302,9 @@ echo "$HEADER$(cat src/community/made-with-faust/made-with-faust.html)$FOOTERF" 
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating misc page"
 fi
-mkdir -p site/community/misc
-cp -r src/community/misc/img site/community/misc
-echo "$HEADER$MDWPH$(pandoc src/community/misc/misc.md)$MDWPF$FOOTERF" > site/community/misc/index.html
+mkdir -p $DEPLOY/community/misc
+cp -r src/community/misc/img $DEPLOY/community/misc
+echo "$HEADER$MDWPH$(pandoc src/community/misc/misc.md)$MDWPF$FOOTERF" > $DEPLOY/community/misc/index.html
 
 ################################################################################
 # SHOWCASE
@@ -303,6 +312,6 @@ echo "$HEADER$MDWPH$(pandoc src/community/misc/misc.md)$MDWPF$FOOTERF" > site/co
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating showcase"
 fi
-mkdir -p site/showcase
-cp -r src/showcase/img site/showcase
-echo "$HEADER$(cat src/showcase/showcase.html)$FOOTERF" > site/showcase/index.html
+mkdir -p $DEPLOY/showcase
+cp -r src/showcase/img $DEPLOY/showcase
+echo "$HEADER$(cat src/showcase/showcase.html)$FOOTERF" > $DEPLOY/showcase/index.html

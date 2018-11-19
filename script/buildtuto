@@ -34,11 +34,13 @@ do
   echo "$FAUSTCODES" | awk '1;/<!-- \/faust-run -->/{exit}' | awk '{gsub(/<!-- faust-run -->/,"")}1' | awk '{gsub(/<!-- \/faust-run -->/,"")}1' | awk '{gsub(/<pre><code>/,"")}1' | awk '{gsub(/<\/code><\/pre>/,"")}1' | awk '{gsub(/&quot;/,"\"")}1' | awk '{gsub(/&lt;/,"<")}1' | awk '{gsub(/&gt;/,">")}1' | awk '{gsub(/&#39;/,"\x27")}1' | awk '{gsub(/&amp;/,"\\&")}1' > $CURRENT_FAUST_FILE
   # Generating SVG
   faust2svg $CURRENT_FAUST_FILE
+  mv $EXFAUSTDIR$CNT/exfaust$CNT-svg/process.svg $EXFAUSTDIR$CNT
+  rm -r $EXFAUSTDIR$CNT/exfaust$CNT-svg
   # Cleaning current example
   CODE_LENGTH=$(cat $CURRENT_FAUST_FILE | wc -l)
   FAUSTCODES=$(echo "$FAUSTCODES" | tail -n +$((CODE_LENGTH+1)))
   # Formating Faust runnable examples in html
-  FAUST_HEADER="<div class=\"faust-run\"><a href=\"$EXFAUSTDIR$CNT/exfaust$CNT-svg/process.svg\" target=\"_blank\"><img src=\"$EXFAUSTDIR$CNT/exfaust$CNT-svg/process.svg\" class=\"mx-auto d-block\"></a>"
+  FAUST_HEADER="<div class=\"faust-run\"><img src=\"$EXFAUSTDIR$CNT/process.svg\" class=\"mx-auto d-block\">"
   PHTML=$(echo "$PHTML" | awk -v var="$FAUST_HEADER" '/<!-- faust-run -->/ && n==0 {sub(/<!-- faust-run -->/,var);++n}{print}')
   FAUST_FOOTER="<a href=\"$FAUST_SERVER/tools/editor?code=$FAUST_SERVER$CURRENTFOLDER$CURRENT_FAUST_FILE\" target=\"editor\"><button type=\"button\" class=\"btn btn-primary\">Try it Yourself >></button></a></div>"
   PHTML=$(echo "$PHTML" | awk -v var="$FAUST_FOOTER" '/<!-- \/faust-run -->/ && n==0 {sub(/<!-- \/faust-run -->/,var);++n}{print}')

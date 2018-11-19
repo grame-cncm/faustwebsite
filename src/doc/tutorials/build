@@ -17,7 +17,7 @@ done
 CURRENTFOLDER="/doc/examples/"
 
 # Generating html version of markdown
-PHTML=$(pandoc --standalone --toc --toc-depth=4 --metadata pagetitle="Faust Tutorials" --mathjax src/faust-tutorials.md src/tuto-juce.md)
+PHTML=$(pandoc --standalone --toc --toc-depth=4 --metadata pagetitle="Faust Tutorials" --mathjax src/faust-tutorials.md src/juce.md src/basic-osc.md)
 
 source ../../../script/buildtuto
 

@@ -1,4 +1,4 @@
-# Tutorial: Adding Faust DSP Support to Your JUCE Plug-ins
+# Adding Faust DSP Support to Your JUCE Plug-ins
 
 > This tutorial doesn't belong to the Faust manual. It will eventually
 live in its own page. It has been placed here for now for convenience and
