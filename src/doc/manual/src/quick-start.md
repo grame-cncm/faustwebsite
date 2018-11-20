@@ -171,9 +171,8 @@ process = no.noise <: filter,filter;
 <!-- /faust-run -->
 
 > Note that this example allows us to have 2 separate filters for each channel.
-Since both filters currently have the same parameters, a more efficient way of
-writing this would have been: `process = no.noise : filter <: _,_;`. In that
-case, only one filter is created.
+Since both filters currently have the same parameters, another way of
+writing this could be: `process = no.noise : filter <: _,_;`.
 
 Since `filter,filter` is considered here as a full expression, we cannot use the 
 `:` operator to connect `no.noise` to the two filters in parallel because 
@@ -285,7 +284,7 @@ Note that we were able to
 [order parameters in the interface](#ordering-ui-elements) by numbering them in 
 the parameter name field using squared brackets. 
 
-Faust user interface elements run at a slower rate than the audio rate. Thus, 
+Faust user interface elements run at control rate. Thus, 
 you might have noticed that clicks are produced when moving sliders quickly. 
 This problem can be easily solved by "smoothing" down the output of the sliders 
 using the [`si.smoo`](../libraries/index.html#smoo) function:

@@ -413,8 +413,10 @@ process = os.sawtooth(freq)*envelope;
 ```
 <!-- /faust-run -->
 
+<!--
 > Note that the `[midi:on]` metadata must also be declared in order to be able
 to control this program with an external MIDI keyboard.
+-->
 
 which when compiled running (for example):
 
@@ -439,8 +441,7 @@ increased CPU cost.
 
 Similarly to `process`, Faust allows for the declaration of an `effect` line,
 which identifies an audio effect to be connected to the output of the 
-polyphonic synthesizer. `effect` is a standard variable in Faust (just like
-`process`).
+polyphonic synthesizer.
 
 For example, a simple reverb can be added to the previous example simply by
 writing:
