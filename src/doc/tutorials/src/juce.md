@@ -1,10 +1,6 @@
 # Adding Faust DSP Support to Your JUCE Plug-ins
 
-> This tutorial doesn't belong to the Faust manual. It will eventually
-live in its own page. It has been placed here for now for convenience and
-rapid prototyping.
-
-[JUCE](https:/.com/) is a well known framework for creating audio plug-ins
+[JUCE](https:/juce.com/) is a well-known framework for creating audio plug-ins
 (i.e., VST, AU, AAX, etc.) and applications for a wide range of platforms. 
 Faust can be used to generate ready-to-use JUCE applications and plug-ins
 implementing the standard user interface (UI) described in the Faust code using
@@ -17,7 +13,7 @@ a JUCE audio engine from Faust and how to interface it with your JUCE
 plug-in/UI. We'll cover basic examples as well as more advanced applications
 involving polyphony, etc.
 
-## "The Old Way": Brut-Force Method 
+## "The Old Way": Brute-Force Method 
 
 > If you're not interested by this brief page of history, you can jump directly 
 to the [next section](#simple-synth-plug-in).
@@ -48,13 +44,13 @@ In this section, we demonstrate how to use a Faust synth to build a plug-in
 in JUCE with a custom UI from scratch.
 
 > This tutorial only demonstrates how to make a JUCE plug-in. Making a JUCE
-standalone application following the same method is perfhttp://faust.grame.fr/manual/ectly possible with 
+standalone application following the same method is perfectly possible with 
 some adjustments.
 
 ### Generating the DSP Engine
 
 First, let's implement a basic subtractive synthesizer in Faust based on a
-filtered sawtooth wave ([`filteredSawtooth.dsp`](misc/filteredSawtooth.dsp)):
+filtered sawtooth wave ([`synth.dsp`](misc/filteredSawtooth.dsp)):
 
 <!-- faust-run -->
 ```
@@ -78,7 +74,7 @@ exponential envelope when the trigger signal is sent, etc.
 
 Since Faust will not build its own UI here, the type of UI element used in this
 code doesn't really matter. They just serve as a point of entry to control the
-parameters of the audio engine we're about to generate. So `nentry`, could be
+parameters of the audio engine we're about to generate. So `nentry` could be
 replaced by `hslider` or `vslider`, it would not make any difference.
 However, we encourage you to always write "coherent" interfaces in case
 someone would like to use your Faust code "as such" at some point.
@@ -88,12 +84,13 @@ running the following command (assuming that Faust is properly installed on
 your system):
 
 ```
-faust2api -juce filterSawtooth.dsp
+faust2api -juce synth.dsp
 ```
 
 Alternatively (i.e., if you're an unfortunate Windows user), you can use the
 Faust web editor to carry out the same task by choosing `source/juce` in the
-export function.
+export function (don't forget to change the name of your Faust program to 
+`synth.dsp` in the drop area).
 
 In both cases, you'll end up with with a zip file containing a C++ file and
 its companion header file as well as some automatically generated markdown
