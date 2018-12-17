@@ -1437,7 +1437,7 @@ externally defined sound resources, described as the list of their filename, or 
 
 * two inputs: the sound number (as a integer between 0 and 255 checked at compilation time), and the read index in the sound (which will access the last sample of the sound if the read index is greater than the sound length)
 * two fixed outputs: the first one is the currently accessed sound length in frames, the second one is the currently accessed sound nominal sample rate in frames
-* several more outputs for the sound channels themselvese* the audio wave number of channels
+* several more outputs for the sound channels themselves
 
 If more outputs than the actual number of channels in the sound file are used, 
 the audio channels will be automatically duplicated up to the wanted number of 
