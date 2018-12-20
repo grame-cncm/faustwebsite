@@ -9,7 +9,7 @@ This project features a series of tools to design Mass-Interaction physical mode
 
 ## Creating Models with MIMS
 
-[Mass Interaction Model Scripter](TODO) is a simple graphical or command-line tool written in Python to generate structured Faust code from a textual description of a physical model.
+[Mass Interaction Model Scripter](https://github.com/mi-creative/MIMS) is a simple graphical or command-line tool written in Python to generate structured Faust code from a textual description of a physical model.
 
 Models are described in a format similar to the PNSL language: each physical element has a specific label, specific physical parameters and/or initial conditions, etc.
 Parameters can be added to this description and shared by any number of physical modules, allowing global variation of the physical attributes (i.e., stiffness, damping, mass, etc.) of a subset of modules in real-time.
