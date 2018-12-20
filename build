@@ -297,6 +297,17 @@ cp -r src/community/made-with-faust/img $DEPLOY/community/made-with-faust
 echo "$HEADER$(cat src/community/made-with-faust/made-with-faust.html)$FOOTERF" > $DEPLOY/community/made-with-faust/index.html
 
 ################################################################################
+# MI FAUST
+################################################################################
+if [ $VERBOSE -eq 1 ]; then
+  echo "Generating MI Faust page"
+fi
+mkdir -p $DEPLOY/community/made-with-faust/mi-faust
+cp -r src/community/made-with-faust/mi-faust/img $DEPLOY/community/made-with-faust/mi-faust
+cp -r src/community/made-with-faust/mi-faust/code $DEPLOY/community/made-with-faust/mi-faust
+echo "$HEADER$MDWPH$(pandoc src/community/made-with-faust/mi-faust/mi-faust.md)$MDWPF$FOOTERF" > $DEPLOY/community/made-with-faust/mi-faust/index.html
+
+################################################################################
 # MISC
 ################################################################################
 if [ $VERBOSE -eq 1 ]; then
