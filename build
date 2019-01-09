@@ -1,9 +1,6 @@
 #!/bin/bash
 
-DOMAIN="https://faust.grame.fr"
-#DOMAIN="file:///home/romain/reps/faustwebsite/site"
-
-DEPLOY=site
+. config
 
 BUILDALL=0
 VERBOSE=0

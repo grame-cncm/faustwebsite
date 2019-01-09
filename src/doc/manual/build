@@ -1,5 +1,7 @@
 #!/bin/bash
 
+../../../config
+
 while [ $1 ]
 do
 	p=$1
