@@ -26,7 +26,7 @@ The website uses [Bootstrap](https://getbootstrap.com/) (which is dynamically in
 
 The `build` script can be called to generate the website (in `site` by default).
 
-When generating the website for the first time, you should should run
+When generating the website for the first time, you should should run:
 
 ```
 ./build -a
@@ -81,6 +81,10 @@ Write new content in the current page and then run the main `build` script to re
 ### Tutorial Pages
 
 Write new content and then either run the local `build` script and then the main one (without the `-a` option) or just run the main `build` script with the `-a` option. This last option is much slower since it will call all the local `build` script of the website.
+
+### News
+
+News should be added directly to `src/main.html` with a link to a longer article/version to one of the pages on the website to a section of `src/community/news`.
 
 ### Deploy
 
