@@ -70,9 +70,9 @@ They will then appear in the corresponding HTML page as a Faust block diagram fo
 
 ## Dependencies
 
-The Faust website relies on various git sub-modules that should be cloned with this repository (i.e., `git clone --recursive [...]`).
-
-Also, in order for the example page to build properly, the main `faust` repository (<https://github.com/grame-cncm/faust>) should be placed in the same parent folder as this repository. 
+* `pandoc` (>= 2.3)
+* The Faust website relies on various git sub-modules that should be cloned with this repository (i.e., `git clone --recursive [...]`).
+* Also, in order for the example page to build properly, the main `faust` repository (<https://github.com/grame-cncm/faust>) should be placed in the same parent folder as this repository. 
 
 ## Contributing
 

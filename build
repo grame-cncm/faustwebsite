@@ -192,20 +192,9 @@ fi
 if [ $VERBOSE -eq 1 ]; then
   echo "Generating playground page"
 fi
-# TODO: we coul improve the integration of the Faust playground
+# TODO: we could improve the integration of the Faust playground
 if [ $CPLARGE -eq 1 ]; then
 	cp -r src/tools/playground $DEPLOY/tools
-fi
-
-################################################################################
-# ONLINE COMPILER
-################################################################################
-if [ $VERBOSE -eq 1 ]; then
-  echo "Generating online compiler page"
-fi
-# TODO: we coul improve the integration of the online compiler
-if [ $CPLARGE -eq 1 ]; then
-	cp -r src/tools/onlinecompiler $DEPLOY/tools
 fi
 
 ################################################################################

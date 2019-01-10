@@ -4,6 +4,3 @@
 [submodule "src/tools/faustplayground"]
 	path = src/tools/playground
 	url = https://github.com/grame-cncm/faustplayground
-[submodule "src/tools/onlinecompiler"]
-	path = src/tools/onlinecompiler
-	url = https://github.com/grame-cncm/onlinecompiler
