@@ -198,7 +198,7 @@ process = organ(f)*g*t/3;
 
 * This synth can be controlled with a midi keyboard.
 
-## Tun it Into an Android App
+## Turn it Into an Android App
 
 * Use the export function of the Faust editor and choose `android/smartkeyb`
 install the app on the phone and have fun!
