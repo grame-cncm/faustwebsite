@@ -78,6 +78,7 @@
 
 .faust-doc {
   height: 100vh;
+  flex-wrap: nowrap!important;
 }
 
 .faust-doc-content {
