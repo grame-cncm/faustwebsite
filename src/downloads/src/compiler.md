@@ -8,15 +8,15 @@ Faust from scratch using the
 
 ## Source (Latest Stable Release)
 
-* [Latest stable release of the Faust compiler and of `libfaust`](https://github.com/grame-cncm/faust/releases/latest)
+* [Latest stable release of the Faust compiler and of `libfaust`](https://github.com/grame-cncm/faust/archive/2.14.4.zip)
 * [Latest snapshot of the development branch (potentially unstable) of the Faust compiler and `libfaust`](https://github.com/grame-cncm/faust/archive/master-dev.zip)
 
-<!--
 ## MacOS
 
-## Linux
+* [Latest pre-compiled binaries of the Faust compiler (Faust 2.14.4) for MaxOS (32/64 bits)](https://github.com/grame-cncm/faust/releases/download/2.14.4/Faust-2.14.4.dmg)
 
 ## Windows
--->
+
+* [Latest pre-compiled binaries of the Faust compiler (Faust 2.14.4) for Windows (64 bits)](https://github.com/grame-cncm/faust/releases/download/2.14.4/Faust-2.14.4-win64.exe)
 
 ---
