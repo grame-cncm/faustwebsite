@@ -3231,7 +3231,7 @@ process = _ <: attach(_,abs : ba.linear2db : vbargraph("Level[style:led]",-60,0)
 
 #### `[style:numerical]` Metadata
 
-The `[style:lnumerical]` metadata turns a [`vbargraph`](#vbargraph-metadata) or a 
+The `[style:numerical]` metadata turns a [`vbargraph`](#vbargraph-metadata) or a 
 [`hbargraph`](#hbargraph-metadata) into a numerical zone (thus the bargraph itself is no more displayed).
 
 **Example: Level Display**
