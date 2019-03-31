@@ -787,7 +787,7 @@ current oscillator.
 
 #### `prod` Iteration
 
-The `sum` iteration can be used to duplicate an expression as a product. Just
+The `prod` iteration can be used to duplicate an expression as a product. Just
 like other types of iterations in Faust: 
 
 * its first argument is a variable name containing the number of the current 
@@ -3226,6 +3226,20 @@ intensity).
 ```
 import("stdfaust.lib");
 process = _ <: attach(_,abs : ba.linear2db : vbargraph("Level[style:led]",-60,0));
+```
+<!-- /faust-run -->
+
+#### `[style:numerical]` Metadata
+
+The `[style:lnumerical]` metadata turns a [`vbargraph`](#vbargraph-metadata) or a 
+[`hbargraph`](#hbargraph-metadata) into a numerical zone (thus the bargraph itself is no more displayed).
+
+**Example: Level Display**
+
+<!-- faust-run -->
+```
+import("stdfaust.lib");
+process = _ <: attach(_,abs : ba.linear2db : vbargraph("Level[style:numerical]",-60,0));
 ```
 <!-- /faust-run -->
 
