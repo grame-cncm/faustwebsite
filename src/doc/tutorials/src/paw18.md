@@ -182,5 +182,20 @@ A global effect can be added by providing a definition for `effect`.
 effect = dm.zita_light;
 ```
 
+<!-- faust-run -->
+```
+import("stdfaust.lib");
+decimalpart(x) = x-int(x);
+phase(f) = f/ma.SR : (+ : decimalpart) ~ _ ;
+timbre(f) = osc(f)*0.5 + osc(f*2)*0.25 + osc(f*3)*0.125;
+
+process = timbre(hslider("freq", 440, 20, 10000, 1)) 
+* hslider("gain", 0.5, 0, 1, 0.01) 
+* (button("gate") : en.adsr(0.1,0.1,0.98,0.1));
+
+effect = dm.zita_light;
+```
+<!-- /faust-run -->
+
 <img src="img/poly-effect.png" width="80%" class="mx-auto d-block">
 
