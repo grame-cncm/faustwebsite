@@ -187,7 +187,7 @@ effect = dm.zita_light;
 import("stdfaust.lib");
 decimalpart(x) = x-int(x);
 phase(f) = f/ma.SR : (+ : decimalpart) ~ _ ;
-timbre(f) = osc(f)*0.5 + osc(f*2)*0.25 + osc(f*3)*0.125;
+timbre(f) = os.osc(f)*0.5 + os.osc(f*2)*0.25 + os.osc(f*3)*0.125;
 
 process = timbre(hslider("freq", 440, 20, 10000, 1)) 
 * hslider("gain", 0.5, 0, 1, 0.01) 
