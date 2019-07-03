@@ -171,6 +171,21 @@ teensy36.build.flags.defs=-D__MK66FX1M0__ -DTEENSYDUINO=146 -DAUDIO_BLOCK_SAMPLE
 
 Similarly, the sampling rate (44100KHz by default) can be set using the `AUDIO_SAMPLE_RATE_EXACT` macro. Note that computing the "exact" sampling rate compatible with the clock of your Teensy might be a bit tricky. For example, `AUDIO_SAMPLE_RATE_EXACT` is 44117.64706 by default and not 44100, etc.
 
+### Warning!!!
+
+In the latest version of the Teensy Audio Library, a "weird" correction to the code of the built-in freeverb function has been made an will prevent you from using a block size of 8 samples. Here's a fix to this problem that should be made in the installed version of `effect_freeverb.cpp`:
+
+```
+0, 0, 0, {
+0, 0, 0, 0, 0, 0, 0, 0,
+#if AUDIO_BLOCK_SAMPLES > 8
+0, 0, 0, 0, 0, 0, 0, 0,
+#endif
+#if AUDIO_BLOCK_SAMPLES > 16
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+#endif
+```
+
 ## Notes About Computational Power and Memory Footprint
 
 While the Teensy 3.6 is relatively powerful and can be used to run complex DSP algorithm (up to 90 Faust sine waves in parallel), it doesn't have a lot of RAM. For that reason, algorithms with a large memory footprint (e.g., anything using delay a lot such a reverbs, wave table oscillators, etc.) might have to be adapted to be run on the Teensy. For example, the default Faust sine wave oscillator uses a table of 65536 samples which is to big to be loaded in the Teensy RAM. Hence, its definition should be adapted, e.g.:
