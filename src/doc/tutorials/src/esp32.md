@@ -13,7 +13,7 @@ DSP engines produced by `faust2esp32` are compatible with both the C++ and the A
 
 ## Using the ESP32 C++ Development Environment
 
-> The final source code of this tutorial can be found [here](misc/esp32-C++.zip).
+> The final source code of this tutorial can be found [here](misc/esp32-c++.zip).
 
 Programming the ESP32 with its native C++ environment offers many advantages. In particular, it allows for a very fine tuning of the board configuration and compilation options. For example, if your DSP algorithm will have a large memory footprint, you might have no other option since external RAM will have to be activated (see [Using the External RAM of the ESP32](#using-the-external-ram-of-the-esp32) section).
 
