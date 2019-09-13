@@ -2289,7 +2289,7 @@ Where:
 
 * `n`: the table size
 * `s`: the table
-* `r`: the read index (an `int` between 0 and `n`)
+* `r`: the read index (an `int` between 0 and `n-1`)
 
 **Example: Basic Triangle Wave Oscillator Using the `waveform` Primitive**
 
@@ -2344,8 +2344,8 @@ Where:
 
 * `n`: the table size
 * `s`: the table
-* `w`: the write index (an `int` between 0 and `n`) 
-* `r`: the read index (an `int` between 0 and `n`)
+* `w`: the write index (an `int` between 0 and `n-1`) 
+* `r`: the read index (an `int` between 0 and `n-1`)
 
 Note that the fourth argument of `rwtable` corresponds to the input of the 
 table.
