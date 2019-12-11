@@ -55,7 +55,7 @@ filtered sawtooth wave ([`synth.dsp`](misc/filteredSawtooth.dsp)):
 <!-- faust-run -->
 ```
 import("stdfaust.lib");
-freq = nentry("freq",50,200,1000,0.01);
+freq = nentry("freq",500,200,1000,0.01);
 gain = nentry("gain",0.5,0,1,0.01) : si.smoo;
 gate = button("gate") : si.smoo;
 cutoff = nentry("cutoff",10000,50,10000,0.01) : si.smoo;
@@ -363,7 +363,7 @@ except that [we declared a global effect using the `effect` standard variable](T
 <!-- faust-run -->
 ```
 import("stdfaust.lib");
-freq = nentry("freq",50,200,1000,0.01) : si.smoo;
+freq = nentry("freq",500,200,1000,0.01) : si.smoo;
 gain = nentry("gain",0.5,0,1,0.01) : si.smoo;
 gate = button("gate") : si.smoo;
 cutoff = nentry("cutoff",10000,50,10000,0.01) : si.smoo;

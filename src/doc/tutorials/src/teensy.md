@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The [Teensy](https://www.pjrc.com/teensy) is a development board series based on a microcontroller and distributed by [PJRC](https://www.pjrc.com). The Teensys 3.(2+) are based on an ARM Cortex-M4 providing plenty of computational power for real-time audio signal processing applications. In particular, the Cortex-M4 used on the [Teensy 3.6](https://www.pjrc.com/teensy/techspecs.html) (MK66FX1M0VMD18) hosts a Floating Point Unit (FPU) and has a clock of 180MHz (overclockable at 240MHz). When combined with its [audio shield](https://www.pjrc.com/store/teensy3_audio.html) (also distributed by PJRC), the Teensy 3.6 can be used to synthesize and process sound with advanced algorithms, etc. [This paper](https://zenodo.org/record/3249282#.XRxurXVfhjE) provides a survey on the performances of such system when used with Faust-generated DSP objects.
+The [Teensy](https://www.pjrc.com/teensy) is a development board series based on a microcontroller and distributed by [PJRC](https://www.pjrc.com). The Teensys 3.(2+) are based on an ARM Cortex-M4 providing plenty of computational power for real-time audio signal processing applications. In particular, the Cortex-M4 used on the [Teensy 3.6](https://www.pjrc.com/teensy/techspecs.html) (MK66FX1M0VMD18) hosts a Floating Point Unit (FPU) and has a clock of 180MHz (overclockable at 240MHz). Also, PJRC recently released the [Teensy 4.0](https://www.pjrc.com/store/teensy40.html) which is based on a Cortex-M7 (FPU) with a clock of 600MHz and much more memory than the 3.6. When combined with their respective [audio shields](https://www.pjrc.com/store/teensy3_audio.html) (also distributed by PJRC), the Teensy 3.6/4.0 can be used to synthesize and process sound with advanced algorithms, etc. [This paper](https://zenodo.org/record/3249282#.XRxurXVfhjE) provides a survey on the performances of such system when used with Faust-generated DSP objects.
 
 <img src="img/teensy.jpg" class="mx-auto d-block" width="40%">
 <center>*The Teensy and Its Audio Shield*</center>
@@ -16,7 +16,7 @@ Using this type of chip for embedded real-time audio DSP presents a wide range o
 
 The Teensy/[Teensyduino](https://www.pjrc.com/teensy/teensyduino.html) comes with an [Audio Library](https://www.pjrc.com/teensy/td_libs_Audio.html) that can be used to synthesize sound directly on the Teensy. It uses a patching paradigm where DSP objects can be connected together using virtual patch chords. An [online tool](https://www.pjrc.com/teensy/gui/index.html) provides a user interface to this system and allows for the implementation of sound processing algorithms in a "Max/MSP way." Various elements can be used as the input and the output of the system (e.g., built-in Teensy DAC/ADC, audio shield, etc.). More information and tutorials can be found on the [Audio Library webpage](https://www.pjrc.com/teensy/td_libs_Audio.html).
 
-The current DSP objects of the Teensy Audio Library can be used to implement simple algorithms but their scope is relatively limited (i.e., basic oscillators, filters, etc.). `faust2teensy` can be used to implement new objects for the Teensy Audio Library using Faust. Since Faust is currently not able to produce fixed-point DSP C++ code, generated object use floating point arithmetic internally. The main consequence is that this system will only work efficiently if it's used on a Teensy board hosting an FPU. Hence, we strongly recommend you to use the Teensy 3.6 for this (things will work on the 3.2, but computational power will be extremely limited). 
+The current DSP objects of the Teensy Audio Library can be used to implement simple algorithms but their scope is relatively limited (i.e., basic oscillators, filters, etc.). `faust2teensy` can be used to implement new objects for the Teensy Audio Library using Faust. Since Faust is currently not able to produce fixed-point DSP C++ code, generated object use floating point arithmetic internally. The main consequence is that this system will only work efficiently if it's used on a Teensy board hosting an FPU. Hence, we strongly recommend you to use the Teensy 3.6/4.0 for this (things will work on the 3.2, but computational power will be extremely limited). 
 
 This tutorial walks you through the steps of synthesizing sound with Faust on the Teensy.
 
@@ -73,7 +73,7 @@ void loop() {
 }
 ``` 
 
-First, the header file (`.h`) of the object generated with `faust2teensy` is included. An instance of `FaustSawtooth` is then created. Since the Teensy 3.6 that we're using for this tutorial is equipped with a Teensy Audio Shied, we also create an instance of `AudioOutputI2S` and `AudioControlSGTL5000`. We then connect the Faust object to the 2 outputs of the audio shield using `AudioConnection`s. Note that if the Faust object had a stereo output (i.e., `process = os.sawtooth(freq)*gain <: _,_`), the following should have been written instead:
+First, the header file (`.h`) of the object generated with `faust2teensy` is included. An instance of `FaustSawtooth` is then created. Since the Teensy (3.6/4.0) that we're using for this tutorial is equipped with a Teensy Audio Shied, we also create an instance of `AudioOutputI2S` and `AudioControlSGTL5000`. We then connect the Faust object to the 2 outputs of the audio shield using `AudioConnection`s. Note that if the Faust object had a stereo output (i.e., `process = os.sawtooth(freq)*gain <: _,_`), the following should have been written instead:
 
 ```
 AudioConnection patchCord0(faustSawtooth,0,out,0);
@@ -88,7 +88,11 @@ The number of inputs and outputs of objects generated with `faust2teensy` corres
 
 The value of the `freq` and `gain` parameters can be set using the `setParamValue` method. Note that for larger Faust objects, parameter paths might be used instead. Here, the value of `freq` is randomly generated every 50ms.
 
-Before this program can be compiled and uploaded to the Teensy, some modifications need to be made to the configuration file used by the compilation script used by Teensyduino (`boards.txt`). You should be able to find it in `hardware/teensy/avr` in the source of the Arduino software (its location will vary depending on the platform your using). The most important thing to do here is to use `g++` instead of `gcc` for linking so (assuming that you're using a Teensy 3.6): 
+After making these changes, you should be able to compile and upload your sketch to the Teensy 4.0.
+
+### Special Note About the Teensy 3.6
+
+Before this program can be compiled and uploaded to the Teensy 3.6, some modifications need to be made to the configuration file used by the compilation script used by Teensyduino (`boards.txt`). You should be able to find it in `hardware/teensy/avr` in the source of the Arduino software (its location will vary depending on the platform your using). The most important thing to do here is to use `g++` instead of `gcc` for linking, so: 
 
 ```
 teensy36.build.command.linker=arm-none-eabi-gcc
@@ -102,7 +106,7 @@ teensy36.build.command.linker=arm-none-eabi-g++
 
 in `boards.txt`. Beware that on older versions of Teensyduino, these changes should be made directly to `platform.txt`.
 
-After making these changes, you should be able to compile and upload your sketch to the Teensy.
+After making these changes, you should be able to compile and upload your sketch to the Teensy 3.6.
 
 ## Audio Effect
 
@@ -168,6 +172,20 @@ with:
 ```
 teensy36.build.flags.defs=-D__MK66FX1M0__ -DTEENSYDUINO=146 -DAUDIO_BLOCK_SAMPLES=8
 ```
+
+on the Teensy 3.6, and:
+
+```
+teensy40.build.flags.defs=-D__MK66FX1M0__ -DTEENSYDUINO=146
+```
+
+with:
+
+```
+teensy40.build.flags.defs=-D__MK66FX1M0__ -DTEENSYDUINO=146 -DAUDIO_BLOCK_SAMPLES=8
+```
+
+on the Teensy 4.0.
 
 Similarly, the sampling rate (44100KHz by default) can be set using the `AUDIO_SAMPLE_RATE_EXACT` macro. Note that computing the "exact" sampling rate compatible with the clock of your Teensy might be a bit tricky. For example, `AUDIO_SAMPLE_RATE_EXACT` is 44117.64706 by default and not 44100, etc.
 
