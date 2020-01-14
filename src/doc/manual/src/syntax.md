@@ -2343,7 +2343,7 @@ _ : rwtable(n,s,w,_,r) : _
 Where:
 
 * `n`: the table size
-* `s`: the table
+* `s`: the initial table content
 * `w`: the write index (an `int` between 0 and `n-1`) 
 * `r`: the read index (an `int` between 0 and `n-1`)
 
