@@ -2288,7 +2288,7 @@ rdtable(n,s,r) : _
 Where:
 
 * `n`: the table size
-* `s`: the table
+* `s`: the table content
 * `r`: the read index (an `int` between 0 and `n-1`)
 
 **Example: Basic Triangle Wave Oscillator Using the `waveform` Primitive**
