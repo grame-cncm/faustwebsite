@@ -244,7 +244,7 @@ Note that this last definition is a convenient alternative to the more verbose:
 ```
 duplicate = case { 
   (1,x) => x; 
-  (n,x) => duplicate(n-1,x); 
+  (n,x) => x, duplicate(n-1,x); 
 };
 ```
 
