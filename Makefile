@@ -16,7 +16,27 @@ EXTFRAME	:= header.html extfooter.html
 PANDOCFRAME	:= pandocheader.html pandocfooter.html
 
 # list of output html files
-OUT			:= $(DEPLOY)/index.html $(DOC)/index.html $(DOC)/manual/index.html $(DOC)/libraries/index.html $(DOC)/tutorials/index.html $(DOC)/examples/index.html $(DEPLOY)/downloads/index.html $(DEPLOY)/tools/index.html $(COMMUNITY)/index.html $(COMMUNITY)/news/index.html $(COMMUNITY)/mailing-lists/index.html $(COMMUNITY)/ifc/index.html $(COMMUNITY)/publications/index.html $(COMMUNITY)/press/index.html $(COMMUNITY)/bug/index.html $(COMMUNITY)/sponsors/index.html $(MWF)/index.html $(MWF)/mi-faust/index.html $(COMMUNITY)/misc/index.html $(DEPLOY)/showcase/index.html #$(DEPLOY)/tools/editor/index.html
+OUT		:= 	$(DEPLOY)/index.html \
+			$(DOC)/index.html \
+			$(DOC)/manual/index.html \
+			$(DOC)/libraries/index.html \
+			$(DOC)/tutorials/index.html \
+			$(DOC)/examples/index.html \
+			$(DEPLOY)/downloads/index.html \
+			$(DEPLOY)/tools/index.html \
+			$(COMMUNITY)/index.html \
+			$(COMMUNITY)/news/index.html \
+			$(COMMUNITY)/mailing-lists/index.html \
+			$(COMMUNITY)/ifc/index.html \
+			$(COMMUNITY)/publications/index.html \
+			$(COMMUNITY)/press/index.html \
+			$(COMMUNITY)/bug/index.html \
+			$(COMMUNITY)/sponsors/index.html \
+			$(MWF)/index.html \
+			$(MWF)/mi-faust/index.html \
+			$(COMMUNITY)/misc/index.html \
+			$(DEPLOY)/showcase/index.html
+#			$(DEPLOY)/tools/editor/index.html
 
 # list of folders that will be copied from to $(DEPLOY)
 RSRCDIRS := doc/manual/img \
@@ -63,13 +83,7 @@ clean :
 	rm -rf $(DEPLOY)
 	rm -f $(STDFRAME) $(EXTFRAME) $(PANDOCFRAME)
 
-
-html : $(OUT)
-
-news :
-	@echo building faust news
-	cd src/community/news && ./build -d $(DOMAIN)
-	
+html : $(OUT)	
 
 mkdir = $(shell [ -d $(DEPLOY)/$(d) ] || mkdir -p $(DEPLOY)/$(d) ]; cp -r src/$(d)/*  $(DEPLOY)/$(d)/)
 rsrc:
@@ -109,9 +123,9 @@ pandocfooter.html: lib/footer-content.html lib/footer-includes.html
 
 ############################################
 # special rule to build editor index.html 
-$(DEPLOY)/tools/editor/index.html: $(SRC)/tools/editor/index.html
-	@[ -d $(@D) ] || mkdir -p $(@D)
-	cat $< | awk -v includes="$HEADERINCLUDES" '/<\/head>/{print includes}1' | awk -v nav="$NAVIGATION<main role=\"main\"><div class=\"navzone\"></div><div class=\"container-fluid\"><div class=\"row\">" '/<div class=\"application\">/{print nav}1' | awk '/<script src=\"codemirror\/lib\/codemirror.js\">/{print "</div></main>"}1' | awk '{gsub(/<img src=\"faust-logo.png\" width=58px alt=\"LOGO\">/,"")}1' | awk -v domain="$DOMAIN" '{gsub(/__DOMAIN__/,domain)}1' > $@
+# $(DEPLOY)/tools/editor/index.html: $(SRC)/tools/editor/index.html
+# 	@[ -d $(@D) ] || mkdir -p $(@D)
+# 	cat $< | awk -v includes="$HEADERINCLUDES" '/<\/head>/{print includes}1' | awk -v nav="$NAVIGATION<main role=\"main\"><div class=\"navzone\"></div><div class=\"container-fluid\"><div class=\"row\">" '/<div class=\"application\">/{print nav}1' | awk '/<script src=\"codemirror\/lib\/codemirror.js\">/{print "</div></main>"}1' | awk '{gsub(/<img src=\"faust-logo.png\" width=58px alt=\"LOGO\">/,"")}1' | awk -v domain="$DOMAIN" '{gsub(/__DOMAIN__/,domain)}1' > $@
 
 	
 ############################################
