@@ -13,6 +13,14 @@ community.
 
 <img src="img/ifc0.jpg" class="mx-auto d-block" width="80%">
 
+## Next Edition
+
+### IFC-20 - MSH Paris Nord Saint-Denis (France)
+
+The [next edition of the International Faust Conference (IFC-20)](https://musidanse.univ-paris8.fr/spip.php?article1518) 
+will take place at the [Maison des Sciences de l’Homme Paris Nord](https://www.mshparisnord.fr/contacts/plan-telephone-adresse/) on May 14-15, 2020.
+
+
 ## Past Editions
 
 ### IFC-18 - JGU, Mainz (Germany)
