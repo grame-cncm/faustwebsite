@@ -15,35 +15,17 @@ STDFRAME	:= header.html footer.html
 EXTFRAME	:= header.html extfooter.html
 PANDOCFRAME	:= pandocheader.html pandocfooter.html
 
+IN := $(shell find src -name "index.*html") $(shell find src -name "index.md")
+OO  := $(IN:src/%=$(DEPLOY)/%)
+OM  := $(OO:%.md=%.html) 
 # list of output html files
-OUT		:= 	$(DEPLOY)/index.html \
-			$(DOC)/index.html \
-			$(DOC)/manual/index.html \
-			$(DOC)/libraries/index.html \
-			$(DOC)/tutorials/index.html \
-			$(DOC)/examples/index.html \
-			$(DEPLOY)/downloads/index.html \
-			$(DEPLOY)/tools/index.html \
-			$(COMMUNITY)/index.html \
-			$(COMMUNITY)/news/index.html \
-			$(COMMUNITY)/mailing-lists/index.html \
-			$(COMMUNITY)/ifc/index.html \
-			$(COMMUNITY)/publications/index.html \
-			$(COMMUNITY)/press/index.html \
-			$(COMMUNITY)/bug/index.html \
-			$(COMMUNITY)/sponsors/index.html \
-			$(MWF)/index.html \
-			$(MWF)/mi-faust/index.html \
-			$(COMMUNITY)/misc/index.html \
-			$(DEPLOY)/showcase/index.html
-#			$(DEPLOY)/tools/editor/index.html
+OUT := $(OM:%.ext.html=%.html) $(DOC)/manual/index.html $(DOC)/examples/index.html $(DOC)/tutorials/index.html $(COMMUNITY)/news/index.html
 
 # list of folders that will be copied from to $(DEPLOY)
 RSRCDIRS := doc/manual/img \
 			doc/manual/misc \
 			doc/tutorials/img \
 			doc/tutorials/misc \
-			doc/examples/img \
 			community/misc/img \
 			community/news/img \
 			community/ifc/img \
@@ -61,7 +43,9 @@ all:
 	$(MAKE) rsrc
 
 test:
-	@echo $(OUTDIRS)
+	@echo $(IN)
+	@echo ---- 
+	@echo $(OUT)
 
 help:
 	@echo "-------- Faust website generation --------"
@@ -71,6 +55,9 @@ help:
 	@echo " 'html'         : build the html pages"
 	@echo " 'rsrc'         : copy the static resources"
 	@echo " 'news'         : build faust news"
+	@echo " 'manual'       : build faust user manual"
+	@echo " 'examples'     : build faust examples"
+	@echo " 'tutorials'    : build faust tutorials"
 	@echo "Utilities:"
 	@echo " 'serve'        : launch a python server on port 8000"
 	@echo " 'clean'        : remove intermediate files (headers and footers) and $(DEPLOY) folder"
@@ -82,10 +69,15 @@ help:
 clean :
 	rm -rf $(DEPLOY)
 	rm -f $(STDFRAME) $(EXTFRAME) $(PANDOCFRAME)
+	rm -f $(SRC)/doc/manual/index.html
+	make -C $(SRC)/doc/manual clean
+	make -C $(SRC)/doc/examples clean
+	make -C $(SRC)/doc/tutorials clean
+	make -C $(SRC)/community/news clean
 
 html : $(OUT)	
 
-mkdir = $(shell [ -d $(DEPLOY)/$(d) ] || mkdir -p $(DEPLOY)/$(d) ]; cp -r src/$(d)/*  $(DEPLOY)/$(d)/)
+mkdir = $(shell [ -d $(DEPLOY)/$(d) ] || mkdir -p $(DEPLOY)/$(d); cp -r src/$(d)/*  $(DEPLOY)/$(d)/)
 rsrc:
 	$(foreach d,$(RSRCDIRS),$(mkdir))
 	@[ -d $(DEPLOY)/css ] || mkdir -p $(DEPLOY)/css
@@ -127,6 +119,52 @@ pandocfooter.html: lib/footer-content.html lib/footer-includes.html
 # 	@[ -d $(@D) ] || mkdir -p $(@D)
 # 	cat $< | awk -v includes="$HEADERINCLUDES" '/<\/head>/{print includes}1' | awk -v nav="$NAVIGATION<main role=\"main\"><div class=\"navzone\"></div><div class=\"container-fluid\"><div class=\"row\">" '/<div class=\"application\">/{print nav}1' | awk '/<script src=\"codemirror\/lib\/codemirror.js\">/{print "</div></main>"}1' | awk '{gsub(/<img src=\"faust-logo.png\" width=58px alt=\"LOGO\">/,"")}1' | awk -v domain="$DOMAIN" '{gsub(/__DOMAIN__/,domain)}1' > $@
 
+
+############################################
+# special rule for the user manual
+manual:
+	$(MAKE) -C $(SRC)/doc/manual/
+
+$(SRC)/doc/manual/index.html:
+	$(MAKE) -C $(SRC)/doc/manual/
+
+$(DEPLOY)/doc/manual/index.html: $(SRC)/doc/manual/index.html
+	@[ -d $(@D) ] || mkdir -p $(@D)
+	cp $(SRC)/doc/manual/index.html $@
+
+############################################
+# special rule for examples
+examples:
+	$(MAKE) -C $(SRC)/doc/examples/
+
+$(SRC)/doc/examples/index.html:
+	$(MAKE) -C $(SRC)/doc/examples/
+
+$(DEPLOY)/doc/examples/index.html: $(SRC)/doc/examples/index.html
+	@[ -d $(@D) ] || mkdir -p $(@D)
+	cp $(SRC)/doc/examples/index.html $@
+
+############################################
+# special rule for tutorial
+tutorials:
+	$(MAKE) -C $(SRC)/doc/tutorials/
+
+$(SRC)/doc/tutorials/index.html:
+	$(MAKE) -C $(SRC)/doc/tutorials/
+
+$(DEPLOY)/doc/tutorials/index.html: $(SRC)/doc/tutorials/index.html
+	@[ -d $(@D) ] || mkdir -p $(@D)
+	cp $(SRC)/doc/tutorials/index.html $@
+
+############################################
+# special rule for news
+news:
+	$(MAKE) -C $(SRC)/community/news/
+
+$(DEPLOY)/community/news/index.html: 
+	$(MAKE) -C $(SRC)/community/news/
+	@[ -d $(@D) ] || mkdir -p $(@D)
+	cp $(SRC)/community/news/index.html $@
 	
 ############################################
 # rules to build html from html and md files 
