@@ -1,5 +1,6 @@
 
 MAKE	?= make
+AWK	    ?= awk
 DEPLOY	?= newsite
 
 #DOMAIN	?= https:\/\/faust.grame.fr
@@ -36,7 +37,7 @@ test :
 	echo $(MD)
 
 $(OUT) : $(MD) $(HEADER) $(FOOTER) $(SCRIPTS)/toc.awk $(SCRIPTS)/faustcode.awk Makefile 
-	pandoc --standalone --toc --toc-depth=4 --metadata pagetitle="Faust Examples" --mathjax $(MD) | sed -e 's/<a href/<a class=nav-link href/' | awk -f $(SCRIPTS)/toc.awk | awk -f $(SCRIPTS)/faustcode.awk LOCATION=doc/examples> $(TMP)
+	pandoc --standalone --toc --toc-depth=4 --metadata pagetitle="Faust Examples" --mathjax $(MD) | sed -e 's/<a href/<a class=nav-link href/' | $(AWK) -f $(SCRIPTS)/toc.awk | $(AWK) -f $(SCRIPTS)/faustcode.awk LOCATION=doc/examples> $(TMP)
 	cat $(HEADER) $(TMP) $(FOOTER) | sed -e 's/__DOMAIN__/$(DOMAIN)/g' > $@
 	rm -f $(TMP)
 	make svg

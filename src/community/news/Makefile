@@ -1,5 +1,6 @@
 
 MAKE	?= make
+AWK	    ?= awk
 DEPLOY	?= newsite
 
 #DOMAIN	?= https:\/\/faust.grame.fr
@@ -21,7 +22,7 @@ help:
 	@echo " 'all' (default): build all the resources required by the news"
 
 $(OUT) : $(SRC) $(HEADER) $(FOOTER) $(SCRIPTS)/toc.awk Makefile 
-	pandoc --standalone --toc --toc-depth=1 --metadata pagetitle="News" --mathjax $(SRC) | sed -e 's/<a href/<a class=nav-link href/' | awk -f $(SCRIPTS)/toc.awk > $(TMP)
+	pandoc --standalone --toc --toc-depth=1 --metadata pagetitle="News" --mathjax $(SRC) | sed -e 's/<a href/<a class=nav-link href/' | $(AWK) -f $(SCRIPTS)/toc.awk > $(TMP)
 	cat $(HEADER) $(TMP) $(FOOTER) | sed -e 's/__DOMAIN__/$(DOMAIN)/g' > $@
 	rm -f $(TMP)
 
