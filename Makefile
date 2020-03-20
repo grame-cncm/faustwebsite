@@ -31,6 +31,7 @@ help:
 	@echo "Development specific targets are available:"
 	@echo "  all      : generates all the necessary files from the src folder"
 	@echo "  news     : build the news md file"
+	@echo "  clean    : remove generated files (news.md)"
 	@echo "Making the current version publicly available:"
 	@echo "  publish  : make all + build and make sure that CNAME is preserved"
 
@@ -49,8 +50,8 @@ serve:
 all:
 	$(MAKE) news
 
-
 clean:
+	rm -r $(DSTCOMM)/news.md $(DSTARCH)/news.md
 
 publish:
 	$(MAKE) build
@@ -60,7 +61,7 @@ publish:
 
 ####################################################################
 # building news
-news : $(DSTCOMM) $(DSTCOMM)/news.md $(DSTARCH)/news.md
+news : $(DSTCOMM) $(DSTCOMM)/news.md # $(DSTARCH)/news.md
 
 $(DSTCOMM)/news.md : $(NEWS)
 	cat $(NEWS) > $@
