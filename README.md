@@ -19,7 +19,7 @@ To generate the web site, type:
 ~~~~~~~~~~~~~~~~
 $ make build
 ~~~~~~~~~~~~~~~~
-
+You'll find the web site in the ./docs folder.
 
 ### Testing and generating
 
