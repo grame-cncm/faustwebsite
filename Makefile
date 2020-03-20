@@ -51,7 +51,7 @@ all:
 	$(MAKE) news
 
 clean:
-	rm -r $(DSTCOMM)/news.md $(DSTARCH)/news.md
+	rm -f $(DSTCOMM)/news.md $(DSTARCH)/news.md
 
 publish:
 	$(MAKE) build
