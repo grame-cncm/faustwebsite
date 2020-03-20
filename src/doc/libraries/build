@@ -1,6 +1,0 @@
-#!/bin/bash
-
-../../../config
-
-HEADER="<div class=\"container-fluid\"><div class=\"row faust-doc\"><nav id=\"TOC\" class=\"col-3 faust-doc-content\"><div style=\"height: 100%;overflow-y: scroll;\"><ul class=\"nav nav-pills flex-column\">"
-echo $HEADER$(tail -n +24 ../../tools/playground/faustlibraries/doc/library.html | head -n -3 | awk '{gsub(/<div class=\"col-sm-8\" style=\"height: 100%;overflow-y: scroll\">/,"<main role=\"main\" class=\"col-9 ml-sm-auto px-4 faust-doc-content\">\n<div data-spy=\"scroll\" data-target=\"#TOC\" data-offset=\"0\" style=\"height: 100%;overflow-y: scroll;\">")}1' | awk '{gsub(/<li><a/,"<li><a class=\"nav-link\"")}1') > libraries.html

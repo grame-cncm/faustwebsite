@@ -1,5 +1,0 @@
-#!/bin/bash
-
-DOMAIN="https://faust.grame.fr"
-#DOMAIN="file:///home/romain/reps/faustwebsite/site"
-DEPLOY=site
