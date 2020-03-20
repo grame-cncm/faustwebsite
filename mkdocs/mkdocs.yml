@@ -1,0 +1,59 @@
+site_name: Faust
+site_description: Faust Programming Language.
+copyright: Copyright &copy; 2020 <a href="http://www.grame.fr">Grame-CNCM</a>
+nav:
+    - Home: index.md
+    - Documentation:
+        - 'Faust Language' : https://faustdoc.grame.fr
+        - 'Faust Libraries': https://faustlibdoc.grame.fr
+    - Download: download.md
+    - Tools:
+         - 'Web Editor': https://fausteditor.grame.fr
+         - 'Faust IDE': https://faustide.grame.fr
+         - 'Faust Playground': https://faustplayground.grame.fr
+    - Community:
+        - 'News': community/news.md
+        - 'Channels': community/channels.md
+        - 'Faust Conference': community/ifc.md
+        - 'Academic Publications': community/publications.md
+        - 'Press': community/press.md
+        - 'Sponsors': community/sponsors.md
+        - 'Made with Faust': community/madewfaust.md
+        - 'Logos': community/logos.md
+
+
+    - About: about.md
+
+theme: flatly
+#The available installed themes are: mkdocs, readthedocs, cinder, cosmo, flatly, spacelab, united, yeti
+
+site_dir: ../docs
+
+
+extra:
+    social:
+        - type: github
+          link: https://github.com/grame-cncm/faust
+        - type: home
+          link: https://faust.grame.fr
+        - type: envelope
+          link: mailto:orlarey@grame.fr
+
+plugins:
+    - search
+    - pdf-export:
+          verbose: false
+          media_type: print
+          combined: true
+          combined_output_path: Faust-Documentation.pdf
+          enabled_if_env: ENABLE_PDF_EXPORT
+
+extra_css:
+   - '/css/faust.css'
+
+#extra_javascript:
+#  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full
+
+markdown_extensions:
+    - markdown_include.include:
+        base_path: './docs'

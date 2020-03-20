@@ -1,0 +1,3 @@
+# Faust News
+
+---
