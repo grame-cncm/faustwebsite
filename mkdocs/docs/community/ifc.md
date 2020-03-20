@@ -11,7 +11,7 @@ language. Open spaces for demos and workshops are usually available for
 participants to openly share their ongoing projects with the rest of the 
 community.
 
-![ifc](img/ifc0.jpg)
+![ifc](ifc/ifc0.jpg)
 
 ## Next Edition
 
@@ -30,4 +30,4 @@ The [first edition of the International Faust Conference (IFC-18)](http://www.if
 took place at the [Johannes Gutenberg University](http://www.uni-mainz.de/) of 
 Mainz (Germany) on July 17-18, 2018.
 
-![ifc18](img/ifc1.jpg)
+![ifc18](ifc/ifc1.jpg)
