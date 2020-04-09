@@ -42,6 +42,7 @@ test:
 build:
 	$(MAKE) all
 	cd $(MKDIR) && mkdocs build
+	git checkout docs/CNAME
 	
 serve:
 	@echo "you can browse the site at http://localhost:8000"
