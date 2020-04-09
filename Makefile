@@ -2,6 +2,13 @@
 MAKE 	?= make
 AWK		?= awk
 
+UNAME := $(shell uname)
+
+MAXDEPTH := '-d'
+ifeq ($(UNAME), Linux)
+MAXDEPTH := '-maxdepth'
+endif
+
 MKDIR    := mkdocs
 DOCDIR   := $(MKDIR)/docs
 
@@ -11,8 +18,8 @@ NEWSARCH := $(NEWSDIR)/archive
 DSTCOMM := $(MKDIR)/docs/community
 DSTARCH := $(DSTCOMM)/archive
 
-NEWS	 := $(shell find $(NEWSDIR) -depth 1 -name "*.md" | sort -r) 
-ARCHNEWS := $(shell find $(NEWSARCH) -depth 1 -name "*.md" | sort -r) 
+NEWS	 := $(shell find $(NEWSDIR) $(MAXDEPTH) 1 -name "*.md" | sort -r) 
+ARCHNEWS := $(shell find $(NEWSARCH) $(MAXDEPTH) 1 -name "*.md" | sort -r) 
 
 
 .PHONY: build
