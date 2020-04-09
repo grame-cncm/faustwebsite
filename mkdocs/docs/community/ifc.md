@@ -17,8 +17,9 @@ community.
 
 ### IFC-20 - MSH Paris Nord Saint-Denis (France)
 
-The [next edition of the International Faust Conference (IFC-20)](https://musidanse.univ-paris8.fr/spip.php?article1518) 
-will take place at the [Maison des Sciences de l’Homme Paris Nord](https://www.mshparisnord.fr/contacts/plan-telephone-adresse/) on May 14-15, 2020.
+The [next edition of the International Faust Conference (IFC-20)](https://ifc20.sciencesconf.org/) 
+will take place at the [Maison des Sciences de l’Homme Paris Nord](https://www.mshparisnord.fr/contacts/plan-telephone-adresse/) on May 14-15, 2020.  
+<span style="color: red; font-size: 110%;">Due to the COVID-19 pandemic, the conference is postponed to December 1-2.</span>
 
 ---
 
