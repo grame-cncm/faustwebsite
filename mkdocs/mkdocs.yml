@@ -5,7 +5,7 @@ nav:
     - Home: index.md
     - Documentation:
         - 'Faust Language' : https://faustdoc.grame.fr
-        - 'Faust Libraries': https://faustlibdoc.grame.fr
+        - 'Faust Libraries': https://faustlibraries.grame.fr
     - Download: download.md
     - Tools:
          - 'Web Editor': https://fausteditor.grame.fr
