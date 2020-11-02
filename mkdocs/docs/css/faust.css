@@ -14,3 +14,8 @@
 }
 
 .madewfaust {    width: 50%; }
+
+.bs-sidebar {
+  overflow-y: auto;
+  max-height: 90%;
+}
