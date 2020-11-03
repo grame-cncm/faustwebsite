@@ -47,5 +47,3 @@
 * France Info, [SmartFaust, l'application qui transforme les portables en instruments](https://culturebox.francetvinfo.fr/opera-classique/smartfaust-l-application-qui-transforme-les-portables-en-instruments-220128), December, 6, 2016.
 
 * Le Parisien, ["SmartFaust", des applis pour jouer de la musique avec son portable](http://www.leparisien.fr/high-tech/smartfaust-des-applis-pour-jouer-de-la-musique-avec-son-portable-26-03-2016-5662703.php), March 26, 2016.
-
----

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Made with Faust - Faust</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../.."><img src="../../img/faustText.svg" width="150px"></a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="https://faustdoc.grame.fr/manual/quick-start/" class="dropdown-item">Quick Start</a>
+</li>
+                                    
+<li>
+    <a href="https://faustdoc.grame.fr" class="dropdown-item">Faust Language</a>
+</li>
+                                    
+<li>
+    <a href="https://faustlibraries.grame.fr" class="dropdown-item">Faust Libraries</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../downloads/" class="nav-link">Downloads</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tools <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="https://faustide.grame.fr" class="dropdown-item">Faust Web IDE</a>
+</li>
+                                    
+<li>
+    <a href="https://faustplayground.grame.fr" class="dropdown-item">Faust Playground</a>
+</li>
+                                    
+<li>
+    <a href="https://fausteditor.grame.fr" class="dropdown-item">Faust Web Editor</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../news/" class="dropdown-item">News</a>
+</li>
+                                    
+<li>
+    <a href="../help/" class="dropdown-item">Getting Help</a>
+</li>
+                                    
+<li>
+    <a href="../bugs/" class="dropdown-item">Reporting Bugs</a>
+</li>
+                                    
+<li>
+    <a href="../ifc/" class="dropdown-item">Faust Conference</a>
+</li>
+                                    
+<li>
+    <a href="../publications/" class="dropdown-item">Academic Publications</a>
+</li>
+                                    
+<li>
+    <a href="../press/" class="dropdown-item">Press</a>
+</li>
+                                    
+<li>
+    <a href="../sponsors/" class="dropdown-item">Sponsors</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Made with Faust</a>
+</li>
+                                    
+<li>
+    <a href="../logos/" class="dropdown-item">Logos</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="https://fast.grame.fr" class="dropdown-item">FAST</a>
+</li>
+                                    
+<li>
+    <a href="https://amstramgrame.fr/english" class="dropdown-item">Amstramgrame</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <div class="container">
+            <div class="row"><div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#made-with-faust" class="nav-link">Made With Faust</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#mofortes-geoshred" class="nav-link">moForte's GeoShred</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#faustworks" class="nav-link">FaustWorks</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#faustlive" class="nav-link">FaustLive</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#guitarix" class="nav-link">Guitarix</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pure-language" class="nav-link">Pure Language</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#snd-rt" class="nav-link">Snd-RT</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#fauck" class="nav-link">FaucK</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#foo-yc20" class="nav-link">Foo YC20</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#rdk" class="nav-link">RDK</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#faust-vst" class="nav-link">faust-vst</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#faust-lv2" class="nav-link">faust-lv2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#owl" class="nav-link">Owl</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#moforte-powerstomp" class="nav-link">moForte PowerStomp</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#moforte-guitar" class="nav-link">moForte Guitar</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pmix" class="nav-link">pMix</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#faustpy" class="nav-link">FaustPy</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ambisonicxyz" class="nav-link">Ambisonic.xyz</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ambisonic-decoder-toolbox" class="nav-link">Ambisonic Decoder Toolbox</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ambitools" class="nav-link">Ambitools</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#hoa-library" class="nav-link">HOA Library</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#bela" class="nav-link">BELA</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#radium" class="nav-link">Radium</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#audiokit" class="nav-link">AudioKit</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#eartone-toolbox" class="nav-link">EarTone Toolbox</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#bart-brouns-projects" class="nav-link">Bart Brouns' Projects</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#the-bladeaxe" class="nav-link">The BladeAxe</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#the-plateaxe" class="nav-link">The PlateAxe</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#otto" class="nav-link">OTTO</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#nuance" class="nav-link">Nuance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#sharc-dsp-board" class="nav-link">SHARC DSP Board</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#dynamic-pedalboard" class="nav-link">Dynamic PedalBoard</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#faust-mass-interaction" class="nav-link">Faust Mass-Interaction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9 main-container" role="main">
+
+<h1 id="made-with-faust">Made With Faust</h1>
+<h2 id="mofortes-geoshred">moForte's GeoShred</h2>
+<p><a href="http://www.moforte.com/"><img class="mx-auto d-block" src="img/geo.jpg" alt="Card image cap"></a>    </p>
+<p>An electric guitar app using physical modeling. Faust was used to implement its sound synthesis/processing engine.</p>
+<h2 id="faustworks">FaustWorks</h2>
+<p><a href="../../doc/manual/index.html#faustworks"><img  class="mx-auto d-block" src="img/faustworks.jpg" alt="Card image cap"></a>    </p>
+<p>An IDE for Faust. Allows Faust programmers to visualize block diagrams, corresponding C++ code, compile to various Faust targets, etc.</p>
+<h2 id="faustlive">FaustLive</h2>
+<p><a href="../../doc/manual/index.html#faustlive"><img  class="mx-auto d-block" src="img/faustlive.jpg" alt="Card image cap"></a>  </p>
+<p>An on-the-fly compiler for the Faust programming language using the LLVM technology.</p>
+<h2 id="guitarix">Guitarix</h2>
+<p><a href="http://guitarix.org/"><img  class="mx-auto d-block" src="img/guitarix.jpg" alt="Card image cap"></a>  </p>
+<p>An audio plug-in for guitar effects who's sound processing engine is written in Faust.</p>
+<h2 id="pure-language">Pure Language</h2>
+<p><a href="https://agraef.github.io/pure-lang/"><img  class="mx-auto d-block" src="img/pure.jpg" alt="Card image cap"></a>  </p>
+<p>Pure is a dynamically typed, functional programming language based on term rewriting. It has been created by Albert Gräf.</p>
+<h2 id="snd-rt">Snd-RT</h2>
+<p><a href="https://github.com/kmatheussen/snd-rt"><img  class="mx-auto d-block" src="img/sndrt.jpg" alt="Card image cap"></a>  </p>
+<p>Snd-RT is the realtime extension for the sound editor SND.</p>
+<h2 id="fauck">FaucK</h2>
+<p><a href="https://ccrma.stanford.edu/~rmichon/fauck/"><img  class="mx-auto d-block" src="img/fauck.jpg" alt="Card image cap"></a>  </p>
+<p>FaucK is a Chugin allowing to combine the Faust language with the strongly-timed ChucK audio programming language.</p>
+<h2 id="foo-yc20">Foo YC20</h2>
+<p><a href="http://foo-yc20.codeforcode.com/"><img  class="mx-auto d-block" src="img/yc20.jpg" alt="Card image cap"></a>  </p>
+<p>Foo YC20 is an open source implementation of the Yamaha YC-20 combo organ from 1969.</p>
+<h2 id="rdk">RDK</h2>
+<p><a href="http://chiselapp.com/user/jcage/repository/rdk/doc/www/www/revdev.html"><img  class="mx-auto d-block" src="img/reverb.jpg"></a>  </p>
+<p>Reverberation Development Kit.</p>
+<h2 id="faust-vst">faust-vst</h2>
+<p><a href="https://bitbucket.org/agraef/faust-vst"><img  class="mx-auto d-block" src="img/vst.svg" alt="Card image cap"></a>  </p>
+<p>This project provides a VST plugin architecture for the Faust programming language.</p>
+<h2 id="faust-lv2">faust-lv2</h2>
+<p><a href="https://bitbucket.org/agraef/faust-lv2"><img  class="mx-auto d-block" src="img/lv2.jpg" alt="Card image cap"></a>  </p>
+<p>This project provides an LV2 plugin architecture for the Faust programming language. </p>
+<h2 id="owl">Owl</h2>
+<p><a href="https://hoxtonowl.com/"><img  class="mx-auto d-block" src="img/owl.jpg"></a>  </p>
+<p>The OWL is an open source, programmable audio platform made for musicians, hackers and programmers alike.</p>
+<h2 id="moforte-powerstomp">moForte PowerStomp</h2>
+<p><a href="http://www.moforte.com/powerstomp-fall-2016/"><img  class="mx-auto d-block" src="img/powerstomp.jpg"></a>  </p>
+<p>An app implementing various guitar effects to be used on stage.</p>
+<h2 id="moforte-guitar">moForte Guitar</h2>
+<p><a href="http://www.moforte.com/moforte-guitar-app/"><img  class="mx-auto d-block" src="img/moforteg.jpg"></a>  </p>
+<p>An app that can be used as an electric guitar and whose sound synthesis engine is implemented in Faust.</p>
+<h2 id="pmix">pMix</h2>
+<p><a href="https://github.com/olilarkin/pMix2"><img  class="mx-auto d-block" src="img/pmix.jpg"></a>  </p>
+<p>pMix (short for preset mixer) is a sound design, composition and performance tool that facilitates the control of multiple parameters using an intuitive graphical interface.</p>
+<h2 id="faustpy">FaustPy</h2>
+<p><a href="https://github.com/marcecj/faust_python"><img  class="mx-auto d-block" src="img/python.jpg"></a>  </p>
+<p>FaustPy is a Python wrapper for Faust. It is implemented using the CFFI and hence creates the wrapper dynamically at run-time.</p>
+<h2 id="ambisonicxyz">Ambisonic.xyz</h2>
+<p><a href="http://ambisonic.xyz/"><img  class="mx-auto d-block" src="img/xyz.jpg"></a>  </p>
+<p>A set tools around Ambisonics.</p>
+<h2 id="ambisonic-decoder-toolbox">Ambisonic Decoder Toolbox</h2>
+<p><a href="https://bitbucket.org/ambidecodertoolbox/adt.git"><img  class="mx-auto d-block" src="img/ambbox.jpg  "></a>  </p>
+<p>The Ambisonic Decoder Toolbox is a collection of MATLAB and GNU Octave functions for creating Ambisonic Decoders.</p>
+<h2 id="ambitools">Ambitools</h2>
+<p><a href="http://www.sekisushai.net/ambitools/"><img  class="mx-auto d-block" src="img/ambitools.jpg"></a>  </p>
+<p>Ambitools is a collection of plug-ins and  tools for 3D sound field synthesis using Higher Order Ambisonics (HOA).</p>
+<h2 id="hoa-library">HOA Library</h2>
+<p><a href="http://hoalibrary.mshparisnord.fr/en"><img  class="mx-auto d-block" src="img/hoa.jpg"></a>  </p>
+<p>HOA Library allows musicians and composers to synthesize, transform and render sound fields in a creative and artistic way.</p>
+<h2 id="bela">BELA</h2>
+<p><a href="http://bela.io/"><img  class="mx-auto d-block" src="img/bela.jpg  "></a>  </p>
+<p>Bela is a maker platform for creating beautifully responsive audio and interactive applications.</p>
+<h2 id="radium">Radium</h2>
+<p><a href="http://users.notam02.no/~kjetism/radium/"><img  class="mx-auto d-block" src="img/radium.jpg"></a>  </p>
+<p>Radium is a music editor with a new type of interface.</p>
+<h2 id="audiokit">AudioKit</h2>
+<p><a href="https://audiokit.io/"><img  class="mx-auto d-block" src="img/audiokit.jpg"></a>  </p>
+<p>AudioKit allows developers to quickly add professional audio functionality to iOS, macOS, and Apple Watch apps.</p>
+<h2 id="eartone-toolbox">EarTone Toolbox</h2>
+<p><a href="https://ccrma.stanford.edu/~chechile/eartonetoolbox/main.html"><img  class="mx-auto d-block" src="img/eartone.jpg  "></a>  </p>
+<p>The Ear Tone Toolbox is a collection of unit generators for the production of auditory distortion product synthesis. </p>
+<h2 id="bart-brouns-projects">Bart Brouns' Projects</h2>
+<p><a href="https://github.com/magnetophon"><img  class="mx-auto d-block" src="img/brouns.jpg"></a>  </p>
+<p>A collection of projects by Bart Brouns and based on Faust.</p>
+<h2 id="the-bladeaxe">The BladeAxe</h2>
+<p><a href="https://ccrma.stanford.edu/~rmichon/bladeaxe/"><img  class="mx-auto d-block" src="img/ba.jpg"></a>  </p>
+<p>The BladeAxe is an electric guitar physical model controller using Faust for sound synthesis and processing.</p>
+<h2 id="the-plateaxe">The PlateAxe</h2>
+<p><a href="https://ccrma.stanford.edu/~rmichon/bladeaxe/"><img  class="mx-auto d-block" src="img/plateaxe.jpg  "></a>  </p>
+<p>The PlateAxe is a percussion instrument physical model controller using Faust for sound synthesis and processing.</p>
+<h2 id="otto">OTTO</h2>
+<p><a href="https://github.com/topisani/OTTO"><img  class="mx-auto d-block" src="img/otto.jpg"></a>  </p>
+<p>The OTTO is a complete hardware and software solution, with synths, a sampler, effects, sequencers, and  studio modules.</p>
+<h2 id="nuance">Nuance</h2>
+<p><a href="https://ccrma.stanford.edu/~rmichon/nuance/"><img  class="mx-auto d-block" src="img/nuance.jpg"></a>  </p>
+<p>Nuance is a pressure sensitive music controller that uses Faust for sound synthesis and processing.</p>
+<h2 id="sharc-dsp-board">SHARC DSP Board</h2>
+<p><a href="https://youtu.be/iUB8ru-76qw"><img  class="mx-auto d-block" src="img/sam.jpg"></a>  </p>
+<p>The ADI SHARC DSP board fully supports Faust.</p>
+<h2 id="dynamic-pedalboard">Dynamic PedalBoard</h2>
+<p><a href="https://wasabi.i3s.unice.fr/dynamicPedalboard/"><img  class="mx-auto d-block" src="img/wasabi.jpg"></a>  </p>
+<p>Dynamic PedalBoard allows users to plug different stompboxes together in a web browser.</p>
+<h2 id="faust-mass-interaction">Faust Mass-Interaction</h2>
+<p><a href="mi-faust/index.html"><img  class="mx-auto d-block" src="img/topo.jpg"></a>  </p>
+<p>Collection of tools for mass-interaction physical modeling in Faust.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2020 <a href="http://www.grame.fr">Grame-CNCM</a></p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

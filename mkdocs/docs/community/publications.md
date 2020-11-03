@@ -5,6 +5,28 @@ programming language.
 
 > If you think one of your papers is missing, let us know and we'll add it!
 
+## 2020
+
+* M. Buffa, J. Lebrun, S. Ren, S. Letz, Y. Orlarey, R. Michon and D. Fober, "Emerging W3C APIs opened up commercial opportunities for computer music applications," in *Proceedings of the The Web Conference 2020*, Taipei, Taiwan, 2020.
+
+* R. Michon, D. Overholt, S. Letz, Y. Orlarey, D. Fober and C. Dumitrascu, "A Faust architecture for the ESP32 microcontroller," in *Proceedings of the Sound and Music Computing Conference 2020*, Turin, Italy, 2020.
+
+* M. Caren, R. Michon and M. Wright, "The KeyWI: An Expressive and Accessible Electronic Wind Instrument," in *Proceedings of the International Conference on New Interfaces for Musical Expression (NIME-20)*, Birmingham City University, 2020.
+
+---
+
+## 2019
+
+* S. Ren, S. Letz, Y. Orlarey, R. Michon, D. Fober, M. Buffa, E. Ammari and J. Lebrun, "Develop WebAudio Plugins in a Web Browser," in *Proceedings of the Web Audio Conference (WAC-19)*, Trondheim, Norway, 2019.
+
+* S. Ren, S. Letz, Y. Orlarey, R. Michon, D. Fober, M. Buffa, E. Ammari and J. Lebrun, "FAUST online IDE: dynamically compile and publish FAUST code as WebAudio Plugins," in *Proceedings of the Web Audio Conference (WAC-19)*, Trondheim, Norway, 2019.
+
+* J. Leonard, J. Villeneuve, R. Michon, Y. Orlarey and S. Letz, "Formalizing mass-interaction physical modeling in FAUST," in *Proceedings of the Linux Audio Conference (LAC-19)*, Stanford, California, 2019.
+
+* R. Michon, Y. Orlarey, S. Letz and D. Fober, "Real time audio digital signal processing with Faust and the Teensy," in *Proceedings of the Sound and Music Computing Conference (SMC-19)*, Malaga, Spain, 2019.
+
+---
+
 ## 2018
 
 * N. Gang, S. Sibi, R. Michon, B. Mok, C. Chafe and W. Ju, "Don’t Be Alarmed: Sonifying Autonomous Vehicle Perception to Increase Situation Awareness," in *Proceedings of the 10th International Conference on Automotive User Interfaces and Interactive Vehicular Applications*, Toronto, Canada, 2018.
@@ -241,6 +263,6 @@ programming language.
 
 ## 2002
 
-Y. Orlarey, D. Fober and S. Letz, "An Algebraic Approach to Block Diagram Constructions," in *Proceedings of the Journée de l'Informatique Musicale (JIM-2002)*, Marseille, France, 2002.
+* Y. Orlarey, D. Fober and S. Letz, "An Algebraic Approach to Block Diagram Constructions," in *Proceedings of the Journée de l'Informatique Musicale (JIM-2002)*, Marseille, France, 2002.
 
-Y. Orlarey, D. Fober and S. Letz, "An Algebra for Block Diagram Languages," in *Proceedings of International Computer Music Conference (ICMC-2002)*, Gothenburg, Sweden, 2002.
+* Y. Orlarey, D. Fober and S. Letz, "An Algebra for Block Diagram Languages," in *Proceedings of International Computer Music Conference (ICMC-2002)*, Gothenburg, Sweden, 2002.
