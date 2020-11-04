@@ -1,3 +1,31 @@
+.navbar-brand{
+	font-size: 16pt;
+	padding-right: 20px;
+}
+
+.btn {
+	margin-bottom: 20px;
+}
+
+pre {
+	background-color: #e9edf2 !important;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+.try_it {
+	border: 1px solid #666666;
+	border-radius: 5px;
+	background-color: #4CAF50;
+	color: white;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.try_it:focus 	{ outline: none; }
+
 .faust-tools {
     background-color: #F8F8F8;
     font-size: 90%
@@ -142,9 +170,9 @@ code.code-large, .rst-content tt.code-large {
 
 code {
     padding: 2px 5px;
-    background: #fff;
+    background-color: #e9edf2 !important;
     border: solid 1px #e1e4e5;
-    color: #333;
+    color: #775177;
     white-space: pre-wrap;
     word-wrap: break-word;
 }
@@ -156,7 +184,7 @@ pre code {
     white-space: pre;
     word-wrap: normal;
     font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 kbd {

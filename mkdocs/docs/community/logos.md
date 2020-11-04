@@ -2,7 +2,7 @@
 
 The Faust logo is available in several variants (Full Logo, Simple Logo, Faust Award, and Made with Faust).
 
-The Adobe Illustrator file is available [here](LOGO_FAUST_VECTORIEL_EDITABLE.ai)
+The Adobe Illustrator file is available [here](logos/misc/LOGO_FAUST_VECTORIEL_EDITABLE.ai)
 
 ## Full Logo
 

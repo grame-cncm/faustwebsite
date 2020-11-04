@@ -63,7 +63,7 @@
             <div class="container">
 
                 {%- block site_name %}
-                <a class="navbar-brand" href="{{ nav.homepage.url|url }}"><img src="{{ nav.homepage.url|url }}/img/faustText.svg" width="150px"></a>
+                <a class="navbar-brand" href="{{ nav.homepage.url|url }}"><img src="{{ nav.homepage.url|url }}/img/faustText.svg" width="150px"> {{ config.title_brand }}</a>
                 {%- endblock %}
 
                 {%- if nav|length>1 or (page and (page.next_page or page.previous_page)) or config.repo_url %}
@@ -146,7 +146,7 @@
             </div>
         </div>
         
-        {% if page and page.is_homepage %}
+        {% if page and page.is_homepage and config.faust_banner %}
           <div class="banner-home">
             <img src="img/faustText.svg" width=300px>
             <p>Functional Programming Language for Real Time Signal Processing</p>
