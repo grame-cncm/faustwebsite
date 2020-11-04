@@ -1,3 +1,8 @@
 .sass-cache
-_site
+site
 .DS_Store
+src/community/news/news.html
+src/doc/examples/examples.html
+src/doc/manual/manual.html
+src/doc/tutorials/tutorials.html
+mkdocs/docs/community/news.md
