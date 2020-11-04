@@ -20,13 +20,13 @@ An app that can be used as an electric guitar and whose sound synthesis engine i
 
 ## FaustWorks
 
-<a href="../../doc/manual/index.html#faustworks"><img  class="mx-auto d-block" src="img/faustworks.jpg" alt="Card image cap"></a>    
+<a href="https://github.com/grame-cncm/faustworks"><img  class="mx-auto d-block" src="img/faustworks.jpg" alt="Card image cap"></a>    
 
 An IDE for Faust. Allows Faust programmers to visualize block diagrams, corresponding C++ code, compile to various Faust targets, etc.
 
 ## FaustLive
 
-<a href="../../doc/manual/index.html#faustlive"><img  class="mx-auto d-block" src="img/faustlive.jpg" alt="Card image cap"></a>  
+<a href="https://github.com/grame-cncm/faustlive"><img  class="mx-auto d-block" src="img/faustlive.jpg" alt="Card image cap"></a>  
 
 An on-the-fly compiler for the Faust programming language using the LLVM technology.
 
@@ -80,7 +80,7 @@ This project provides an LV2 plugin architecture for the Faust programming langu
                   
 ## OWL
 
-<a href="https://hoxtonowl.com/"><img  class="mx-auto d-block" src="img/owl.jpg"></a>  
+<a href="https://www.rebeltech.org/"><img  class="mx-auto d-block" src="img/owl.jpg"></a>  
 
 The OWL is an open source, programmable audio platform made for musicians, hackers and programmers alike.
 
@@ -164,7 +164,7 @@ Nuance is a pressure sensitive music controller that uses Faust for sound synthe
 
 ## SHARC DSP Board
 
-<a href="https://youtu.be/iUB8ru-76qw"><img  class="mx-auto d-block" src="img/sam.jpg"></a>  
+<a href="https://wiki.analog.com/resources/tools-software/sharc-audio-module/faust"><img  class="mx-auto d-block" src="img/sam.jpg"></a>  
 
 The ADI SHARC DSP board fully supports Faust.
  
@@ -176,7 +176,7 @@ Dynamic PedalBoard allows users to plug different stompboxes together in a web b
                             
 ## Faust Mass-Interaction
 
-<a href="mi-faust/index.html"><img  class="mx-auto d-block" src="img/topo.jpg"></a>  
+<a href="http://mi-creative.eu/tool_miFaust.html"><img  class="mx-auto d-block" src="img/topo.jpg"></a>  
 
 Collection of tools for mass-interaction physical modeling in Faust.
 
