@@ -10,7 +10,7 @@ If you'd like to follow the development of Faust and of its associated tools and
 
 * [**the Faust Developers Mailing List**](https://sourceforge.net/projects/faudiostream/lists/faudiostream-devel) 
 
-## Slack Channel
+## Faust slack channel
 
 Slack is probably the fastest way to get help with Faust: <https://faustaudio.slack.com>.
 
