@@ -6,6 +6,18 @@
 
 An electric guitar app using physical modeling. Faust was used to implement its sound synthesis/processing engine.
 
+## moForte PowerStomp
+
+<a href="http://www.moforte.com/powerstomp-fall-2016/"><img  class="mx-auto d-block" src="img/powerstomp.jpg"></a>  
+
+An app implementing various guitar effects to be used on stage.
+
+## moForte Guitar
+
+<a href="http://www.moforte.com/moforte-guitar-app/"><img  class="mx-auto d-block" src="img/moforteg.jpg"></a>  
+
+An app that can be used as an electric guitar and whose sound synthesis engine is implemented in Faust.
+
 ## FaustWorks
 
 <a href="../../doc/manual/index.html#faustworks"><img  class="mx-auto d-block" src="img/faustworks.jpg" alt="Card image cap"></a>    
@@ -66,29 +78,11 @@ This project provides a VST plugin architecture for the Faust programming langua
 
 This project provides an LV2 plugin architecture for the Faust programming language. 
                   
-## Owl
+## OWL
 
 <a href="https://hoxtonowl.com/"><img  class="mx-auto d-block" src="img/owl.jpg"></a>  
 
 The OWL is an open source, programmable audio platform made for musicians, hackers and programmers alike.
-        
-## moForte PowerStomp
-
-<a href="http://www.moforte.com/powerstomp-fall-2016/"><img  class="mx-auto d-block" src="img/powerstomp.jpg"></a>  
-
-An app implementing various guitar effects to be used on stage.
-                
-## moForte Guitar
-
-<a href="http://www.moforte.com/moforte-guitar-app/"><img  class="mx-auto d-block" src="img/moforteg.jpg"></a>  
-
-An app that can be used as an electric guitar and whose sound synthesis engine is implemented in Faust.
-                  
-## pMix
-
-<a href="https://github.com/olilarkin/pMix2"><img  class="mx-auto d-block" src="img/pmix.jpg"></a>  
-
-pMix (short for preset mixer) is a sound design, composition and performance tool that facilitates the control of multiple parameters using an intuitive graphical interface.
 
 ## FaustPy        
 
@@ -162,12 +156,6 @@ The BladeAxe is an electric guitar physical model controller using Faust for sou
 
 The PlateAxe is a percussion instrument physical model controller using Faust for sound synthesis and processing.
  
-## OTTO
-
-<a href="https://github.com/topisani/OTTO"><img  class="mx-auto d-block" src="img/otto.jpg"></a>  
-
-The OTTO is a complete hardware and software solution, with synths, a sampler, effects, sequencers, and  studio modules.
-
 ## Nuance
 
 <a href="https://ccrma.stanford.edu/~rmichon/nuance/"><img  class="mx-auto d-block" src="img/nuance.jpg"></a>  
@@ -191,3 +179,21 @@ Dynamic PedalBoard allows users to plug different stompboxes together in a web b
 <a href="mi-faust/index.html"><img  class="mx-auto d-block" src="img/topo.jpg"></a>  
 
 Collection of tools for mass-interaction physical modeling in Faust.
+
+## Temper JUCE plugin
+
+<a href="https://github.com/creativeintent/temper"><img  class="mx-auto d-block" src="img/temper.jpg"></a>  
+
+Temper is a digital distortion written with Faust, and compiled with JUCE for the various build targets.
+
+## pMix
+
+<a href="https://github.com/olilarkin/pMix2"><img  class="mx-auto d-block" src="img/pmix.jpg"></a>  
+
+pMix (short for preset mixer) is a sound design, composition and performance tool that facilitates the control of multiple parameters using an intuitive graphical interface.
+
+## iPlug2
+
+<a href="https://iplug2.github.io"><img  class="mx-auto d-block" src="img/iplug2.png"></a>  
+
+iPlug 2 is a simple-to-use C++ framework for developing cross platform audio plug-ins/apps and targeting multiple plug-in APIs with the same minimalistic code, support for the Faust programming language, and the libfaust JIT compiler.
