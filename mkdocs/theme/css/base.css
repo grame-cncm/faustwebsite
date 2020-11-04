@@ -107,22 +107,25 @@ body > .container {
 
 h1 {
     color: #243b55;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 42px;
 }
 
 h2 {
     color: #243b55;
-    font-weight: 300;
+    font-weight: 500;
+    margin-top: 3rem;
 }
 
 h3, h4, h5, h6 {
     color:#243b55;
-    font-weight: 270;
+    font-weight: 400;
+    margin-top: 3rem;
 }
 
 hr {
-    border-top: 1px solid #aaa;
+    margin-top: 3rem;
+    border-top: 2px solid #243b55;
 }
 
 pre, .rst-content tt {
