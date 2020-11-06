@@ -486,7 +486,7 @@ keyOff = function (channel, pitch, velocity)
 * Gently terminates all the active voices.
 */
 allNotesOff = function ()
-````
+```
 
 Look at the JavaScript public documentation section for the complete description. 
 
@@ -682,7 +682,7 @@ virtual void instanceInit(int samplingFreq) {
     instanceClear();
 }
 ...
-````
+```
 
 The two **itbl0** and **ftbl0** tables are static class arrays. They are filled in the **classInit** method. The architecture code will typically call the **init** method (which calls **classInit**) on a given DSP, to allocate class related arrays and the DSP itself. If several DSP are going to be allocated, calling **classInit** only once then the **instanceInit** method on each allocated DSP is the way to go.
 
