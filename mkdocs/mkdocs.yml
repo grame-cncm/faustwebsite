@@ -47,6 +47,9 @@ extra:
 
 plugins:
     - search
+    - redirects:
+        redirect_maps:
+            'editor.md': 'https://fausteditor.grame.fr'
 
 #extra_javascript:
 #  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full

@@ -90,6 +90,7 @@ install:
 	pip install mkdocs-pdf-export-plugin
 	pip install markdown-include
 	pip install mkdocs-bootswatch
+	pip install mkdocs-redirects
 	
 
 uninstall:
