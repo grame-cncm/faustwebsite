@@ -345,6 +345,38 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="3"><a href="#extended-control-with-comb-parameter" class="nav-link">Extended control with -comb parameter</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#generating-fully-working-self-contained-html-pages" class="nav-link">Generating fully working self-contained HTML pages</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#webassembly-module-optimization" class="nav-link">WebAssembly module optimization</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#deploying-dynamically-compiled-faust-webaudio-nodes" class="nav-link">Deploying dynamically compiled Faust WebAudio nodes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#float-denormal-handling_1" class="nav-link">Float denormal handling</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#2017-06-16-memory-allocator" class="nav-link">2017-06-16: Memory allocator</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#using-a-custom-memory-allocator" class="nav-link">Using a custom memory allocator</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#faust-mem-option-to-control-memory-related-code-generation" class="nav-link">Faust -mem option to control memory related code generation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="3"><a href="#control-of-the-dsp-memory-allocation" class="nav-link">Control of the DSP memory allocation</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="4"><a href="#controlling-the-table-memory-allocation" class="nav-link">Controlling the table memory allocation</a>
@@ -897,202 +929,168 @@ keyOff = function (channel, pitch, velocity)
 * Gently terminates all the active voices.
 */
 allNotesOff = function ()
-````
-
-Look at the JavaScript public documentation section for the complete description. 
-
-### Extended control with -comb parameter
-
-The **faust2wasm** tool can be used with the **-comb** parameter to compile several DSP files and contatenate all JavaScript code in a unique resulting **comb.js** file (possibly to be used in -poly mode also).   
-
-### Generating fully working self-contained HTML pages
-
-The **faust2webaudiowasm** script can be used to generate a fully working self-contained HTML page, with a SVG/CSS a Graphical User Interface. From the **osc.dsp** Faust DSP source file, it will generate an **osc.html** file:
-
-    faust2webaudiowasm osc.dsp
-
-Assuming that the compiled Faust DSP file is polyphonic ready, the **-poly** parameter can be used to generate a polyphonic MIDI controlable instrument, to be used with a MIDI application or device. 
-
-The **-links** generates the  DSP processor SVG representation, and links to the original DSP file as well as generated SVG files, so that the HTML page can possibly be deployed as a reusable Faust DSP resource. 
-
-### WebAssembly module optimization
-
-Assuming that you have [Binaryen tools](https://github.com/WebAssembly/binaryen) installed on your machine, the **faust2wasm** and **faust2webaudiowasm** scripts can take an additional **-opt** parameter to allow WebAssembly module optimization.
-
-## Deploying dynamically compiled Faust WebAudio nodes
-
-Since the **libfaust** library is available for the Web, it becomes possible to **embed the complete dynamic compilation chain in a Web page**, from the Faust DSP source to the executable WebAudio node. First the following resources (located on the Faust GitHub in architecture/webaudio folder) have to be loaded in the page:
-
-    &lt;!-- Load 'libfaust' library and wrapper code --&gt;
-    &lt;script src=&quot;libfaust-wasm.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;webaudio-wasm-wrapper.js&quot;&gt;&lt;/script&gt;
-
-Then the two following functions are used to generate factories, creating later on *monophonic* or *polyphonic* instances (this is necessary because of the way internal WebAssembly memory is managed): 
-
 </code></pre>
 
-<p>/<em><em>
+<p>Look at the JavaScript public documentation section for the complete description. </p>
+<h3 id="extended-control-with-comb-parameter">Extended control with -comb parameter</h3>
+<p>The <strong>faust2wasm</strong> tool can be used with the <strong>-comb</strong> parameter to compile several DSP files and contatenate all JavaScript code in a unique resulting <strong>comb.js</strong> file (possibly to be used in -poly mode also).   </p>
+<h3 id="generating-fully-working-self-contained-html-pages">Generating fully working self-contained HTML pages</h3>
+<p>The <strong>faust2webaudiowasm</strong> script can be used to generate a fully working self-contained HTML page, with a SVG/CSS a Graphical User Interface. From the <strong>osc.dsp</strong> Faust DSP source file, it will generate an <strong>osc.html</strong> file:</p>
+<pre><code>faust2webaudiowasm osc.dsp
+</code></pre>
+<p>Assuming that the compiled Faust DSP file is polyphonic ready, the <strong>-poly</strong> parameter can be used to generate a polyphonic MIDI controlable instrument, to be used with a MIDI application or device. </p>
+<p>The <strong>-links</strong> generates the  DSP processor SVG representation, and links to the original DSP file as well as generated SVG files, so that the HTML page can possibly be deployed as a reusable Faust DSP resource. </p>
+<h3 id="webassembly-module-optimization">WebAssembly module optimization</h3>
+<p>Assuming that you have <a href="https://github.com/WebAssembly/binaryen">Binaryen tools</a> installed on your machine, the <strong>faust2wasm</strong> and <strong>faust2webaudiowasm</strong> scripts can take an additional <strong>-opt</strong> parameter to allow WebAssembly module optimization.</p>
+<h2 id="deploying-dynamically-compiled-faust-webaudio-nodes">Deploying dynamically compiled Faust WebAudio nodes</h2>
+<p>Since the <strong>libfaust</strong> library is available for the Web, it becomes possible to <strong>embed the complete dynamic compilation chain in a Web page</strong>, from the Faust DSP source to the executable WebAudio node. First the following resources (located on the Faust GitHub in architecture/webaudio folder) have to be loaded in the page:</p>
+<pre><code>&lt;!-- Load 'libfaust' library and wrapper code --&gt;
+&lt;script src="libfaust-wasm.js"&gt;&lt;/script&gt;
+&lt;script src="webaudio-wasm-wrapper.js"&gt;&lt;/script&gt;
+</code></pre>
+<p>Then the two following functions are used to generate factories, creating later on <em>monophonic</em> or <em>polyphonic</em> instances (this is necessary because of the way internal WebAssembly memory is managed): </p>
+<pre><code>/**
 * Create a DSP factory from source code as a string to be used to create monophonic DSP 
 *
-</em> @param code - the source code as a string
+* @param code - the source code as a string
 * @param argv - an array of parameters to be given to the Faust compiler
 * @param callback - a callback taking the created DSP factory as parameter, 
 * or null in case of error
-</em>/
-faust.createDSPFactory = function (code, argv, callback) </p>
-<pre><code>
+*/
+faust.createDSPFactory = function (code, argv, callback) 
 </code></pre>
 
-<p>/<em><em>
+<pre><code>/**
 * Create a DSP factory from source code as a string to be used to create polyphonic DSP 
 *
-</em> @param code - the source code as a string
+* @param code - the source code as a string
 * @param argv - an array of parameters to be given to the Faust compiler
 * @param callback - a callback taking the created DSP factory as parameter, 
 * or null in case of error
-</em>/
-faust.createPolyDSPFactory = function (code, argv, callback) </p>
-<pre><code>
-The two following functions are used to generate *monophonic* or *polyphonic* Faust WebAudio nodes:
-
+*/
+faust.createPolyDSPFactory = function (code, argv, callback) 
 </code></pre>
 
-<p>/<em><em>
+<p>The two following functions are used to generate <em>monophonic</em> or <em>polyphonic</em> Faust WebAudio nodes:</p>
+<pre><code>/**
 * Create a ScriptProcessorNode Web Audio object from a factory
 *
-</em> @param factory - the DSP factory
+* @param factory - the DSP factory
 * @param context - the Web Audio context
 * @param buffer_size - the buffer_size in frames
 * @param callback - a callback taking the created ScriptProcessorNode as parameter, 
 * or null in case of error
-</em>/
-faust.createDSPInstance = function (factory, context, buffer_size, callback) </p>
-<pre><code>
+*/
+faust.createDSPInstance = function (factory, context, buffer_size, callback) 
 </code></pre>
 
-<p>/<em><em>
+<pre><code>/**
 * Create a 'polyphonic' 'ScriptProcessorNode Web Audio object from a factory
 *
-</em> @param factory - the DSP factory
+* @param factory - the DSP factory
 * @param context - the Web Audio context
 * @param buffer_size - the buffer_size in frames
 * @param polyphony - the number of polyphonic voices
 * @param callback - a callback taking the created ScriptProcessorNode as parameter, 
 * or null in case of error
-</em>/
-faust.createPolyDSPInstance = function (factory, context, buffer_size, polyphony, callback) </p>
-<pre><code>
-The resulting nodes have the same API as statically compiled nodes described in the first section, so can be controlled the same way, including the polyphonic ones. Here is a code example using **faust.createDSPFactory** and **faust.createDSPInstance**:
-
+*/
+faust.createPolyDSPInstance = function (factory, context, buffer_size, polyphony, callback) 
 </code></pre>
 
-<p>var isWebKitAudio = (typeof (webkitAudioContext) !== "undefined");
+<p>The resulting nodes have the same API as statically compiled nodes described in the first section, so can be controlled the same way, including the polyphonic ones. Here is a code example using <strong>faust.createDSPFactory</strong> and <strong>faust.createDSPInstance</strong>:</p>
+<pre><code>var isWebKitAudio = (typeof (webkitAudioContext) !== &quot;undefined&quot;);
 var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
-var dsp_code = "import(\"stdfaust.lib\"); vol = hslider(\"volume [unit:dB]\", 0, -96, 0, 0.1) : ba.db2linear : si.smoo; freq = hslider(\"freq [unit:Hz]\", 1000, 20, 24000, 1); process = vgroup(\"Oscillator\", os.osc(freq) * vol);";
+var dsp_code = &quot;import(\&quot;stdfaust.lib\&quot;); vol = hslider(\&quot;volume [unit:dB]\&quot;, 0, -96, 0, 0.1) : ba.db2linear : si.smoo; freq = hslider(\&quot;freq [unit:Hz]\&quot;, 1000, 20, 24000, 1); process = vgroup(\&quot;Oscillator\&quot;, os.osc(freq) * vol);&quot;;
 var osc = null;
-var libraries_url = "/modules/libraries/";</p>
-<p>function startosc()
+var libraries_url = &quot;/modules/libraries/&quot;;
+
+function startosc()
 {
     // Prepare argv list
     var argv = [];
-    argv.push("-ftz");
-    argv.push("2");
-    argv.push("-I");
-    argv.push(libraries_url);</p>
-<pre><code>// Dynamically create the Faust generated node from explicit DSP source in 'dsp_code'
-faust.createDSPFactory(dsp_code,
-                        argv,
-                        function (factory) {
-                            faust.createDSPInstance(factory, audio_context, 1024
-                                                    function (node) {
-                                                        osc = node;
-                                                        console.log(osc.getJSON());
-                                                        // Print paths to be used with 'setParamValue'
-                                                        console.log(osc.getParams());
-                                                        // Connect it to output as a regular WebAudio node
-                                                        osc.connect(audio_context.destination);
-                                                    })});
-</code></pre>
-<p>}</p>
-<pre><code>
-The [Dynamic OSC](/dynamic/dynamic-osc-wasm.html) page demonstrates the dynamic OSC complete code (based on the example seen before). The [Dynamic Organ](/dynamic/dynamic-organ-wasm.html) page demonstrates a polyphonic organ instrument, which loads a DSP from an url, and ready to be controlled with a MIDI device or application. Look at the [Dynamic Faust compiler](/dynamic/faustlive-wasm.html) page for a more complete use-case of the dynamic compiler.
+    argv.push(&quot;-ftz&quot;);
+    argv.push(&quot;2&quot;);
+    argv.push(&quot;-I&quot;);
+    argv.push(libraries_url);
 
-## Float denormal handling
-
-A specific problem occurs when audio computation produces denormal float values, which is quite common with recursive filters, and can be extremely costly to compute on some processors like the Intel family for instance. A Flush To Zero (FTZ) mode for denormals can usually be set at hardware level, but it not yet available in the WebAssembly MVP version, which strictly conform to the IEEE 754 norm 8. 
-
-Thus an automatic software strategy which consists in adding FTZ code in all recursive loops has been implemented in the Faust compiler. To activate it, the **-ftz** compilation parameter must be used at compilation time. 
-
-The **-ftz 1** mode adds a test in each recursive loop which uses the *fabs* function and a threshold to detect subnormal samples (slower). The **-ftz 2** mode adds a test in each recursive loop which uses a mask to detect subnormal samples (faster). 
-
-Use for example the following line to active software denormal handing when using **faust2wasm** tool:
-
-    faust2wasm -ftz 2 foo.dsp 
-
-The same for the **faust2webaudiowasm** tool:
-
-    faust2webaudiowasm -ftz 2 foo.dsp 
-
-For dynamic compilation, the **-ftz v** flag will have to be added in the *argv* parameter in **faust.createDSPFactory** or **faust.createPolyDSPFactory**, like for instance:
-
-    faust.createPolyFactory(dsp_code, ['-ftz', '2'], callback);
-
----
-## **2017-06-16:** Memory allocator
-
-### Using a custom memory allocator
-
-From a DSP source file, the Faust compiler typically generates a C++ class. When a **rdtable** item is used on the source code, the C++ class will contain a table shared by all instances of the class. By default, this table is generated as a static class array, and so allocated in the application global static memory. 
-
-In some specific case (usually in more constrained deployment cases), managing where this data is allocated is crucial. By extension this post explains how a custom memory allocator can be used to precisely control the DSP memory allocation.
-
-### Faust -mem option to control memory related code generation
-
-A new **-mem** compiler parameter has been added in the Faust compiler, starting from the 0.9.103 version (or 2.1.4 in Faust2 branch). This parameter will change the way static shared tables are generated. The table is allocated as a class static pointer allocated using a **custom memory allocator**, which has the following propotype: 
-
+    // Dynamically create the Faust generated node from explicit DSP source in 'dsp_code'
+    faust.createDSPFactory(dsp_code,
+                            argv,
+                            function (factory) {
+                                faust.createDSPInstance(factory, audio_context, 1024
+                                                        function (node) {
+                                                            osc = node;
+                                                            console.log(osc.getJSON());
+                                                            // Print paths to be used with 'setParamValue'
+                                                            console.log(osc.getParams());
+                                                            // Connect it to output as a regular WebAudio node
+                                                            osc.connect(audio_context.destination);
+                                                        })});
+}
 </code></pre>
 
-<p>struct dsp_memory_manager {</p>
-<pre><code>virtual ~dsp_memory_manager() {}
-
-virtual void* allocate(size_t size) = 0;
-virtual void destroy(void* ptr) = 0;
+<p>The <a href="/dynamic/dynamic-osc-wasm.html">Dynamic OSC</a> page demonstrates the dynamic OSC complete code (based on the example seen before). The <a href="/dynamic/dynamic-organ-wasm.html">Dynamic Organ</a> page demonstrates a polyphonic organ instrument, which loads a DSP from an url, and ready to be controlled with a MIDI device or application. Look at the <a href="/dynamic/faustlive-wasm.html">Dynamic Faust compiler</a> page for a more complete use-case of the dynamic compiler.</p>
+<h2 id="float-denormal-handling_1">Float denormal handling</h2>
+<p>A specific problem occurs when audio computation produces denormal float values, which is quite common with recursive filters, and can be extremely costly to compute on some processors like the Intel family for instance. A Flush To Zero (FTZ) mode for denormals can usually be set at hardware level, but it not yet available in the WebAssembly MVP version, which strictly conform to the IEEE 754 norm 8. </p>
+<p>Thus an automatic software strategy which consists in adding FTZ code in all recursive loops has been implemented in the Faust compiler. To activate it, the <strong>-ftz</strong> compilation parameter must be used at compilation time. </p>
+<p>The <strong>-ftz 1</strong> mode adds a test in each recursive loop which uses the <em>fabs</em> function and a threshold to detect subnormal samples (slower). The <strong>-ftz 2</strong> mode adds a test in each recursive loop which uses a mask to detect subnormal samples (faster). </p>
+<p>Use for example the following line to active software denormal handing when using <strong>faust2wasm</strong> tool:</p>
+<pre><code>faust2wasm -ftz 2 foo.dsp
 </code></pre>
-<p>};</p>
-<pre><code>
-Taking the following Faust DSP example:
+<p>The same for the <strong>faust2webaudiowasm</strong> tool:</p>
+<pre><code>faust2webaudiowasm -ftz 2 foo.dsp
+</code></pre>
+<p>For dynamic compilation, the <strong>-ftz v</strong> flag will have to be added in the <em>argv</em> parameter in <strong>faust.createDSPFactory</strong> or <strong>faust.createPolyDSPFactory</strong>, like for instance:</p>
+<pre><code>faust.createPolyFactory(dsp_code, ['-ftz', '2'], callback);
+</code></pre>
+<hr />
+<h2 id="2017-06-16-memory-allocator"><strong>2017-06-16:</strong> Memory allocator</h2>
+<h3 id="using-a-custom-memory-allocator">Using a custom memory allocator</h3>
+<p>From a DSP source file, the Faust compiler typically generates a C++ class. When a <strong>rdtable</strong> item is used on the source code, the C++ class will contain a table shared by all instances of the class. By default, this table is generated as a static class array, and so allocated in the application global static memory. </p>
+<p>In some specific case (usually in more constrained deployment cases), managing where this data is allocated is crucial. By extension this post explains how a custom memory allocator can be used to precisely control the DSP memory allocation.</p>
+<h3 id="faust-mem-option-to-control-memory-related-code-generation">Faust -mem option to control memory related code generation</h3>
+<p>A new <strong>-mem</strong> compiler parameter has been added in the Faust compiler, starting from the 0.9.103 version (or 2.1.4 in Faust2 branch). This parameter will change the way static shared tables are generated. The table is allocated as a class static pointer allocated using a <strong>custom memory allocator</strong>, which has the following propotype: </p>
+<pre><code>struct dsp_memory_manager {
 
+    virtual ~dsp_memory_manager() {}
+
+    virtual void* allocate(size_t size) = 0;
+    virtual void destroy(void* ptr) = 0;
+};
 </code></pre>
 
-<p>process = (waveform {10,20,30,40,50,60,70}, %(7)~+(3) : rdtable), 
-          (waveform {1.1,2.2,3.3,4.4,5.5,6.6,7.7}, %(7)~+(3) : rdtable);</p>
-<pre><code>
-Here is the generated code in default mode:
-
+<p>Taking the following Faust DSP example:</p>
+<pre><code>process = (waveform {10,20,30,40,50,60,70}, %(7)~+(3) : rdtable), 
+          (waveform {1.1,2.2,3.3,4.4,5.5,6.6,7.7}, %(7)~+(3) : rdtable);
 </code></pre>
 
-<p>...
+<p>Here is the generated code in default mode:</p>
+<pre><code>...
 int mydsp::itbl0[7];
-float mydsp::ftbl0[7];</p>
-<p>static void classInit(int samplingFreq) {
+float mydsp::ftbl0[7];
+
+static void classInit(int samplingFreq) {
     SIG0 sig0;
     sig0.init(samplingFreq);
     sig0.fill(7,itbl0);
     SIG1 sig1;
     sig1.init(samplingFreq);
     sig1.fill(7,ftbl0);
-}</p>
-<p>virtual void init(int samplingFreq) {
+}
+
+virtual void init(int samplingFreq) {
     classInit(samplingFreq);
     instanceInit(samplingFreq);
-}</p>
-<p>virtual void instanceInit(int samplingFreq) {
+}
+
+virtual void instanceInit(int samplingFreq) {
     instanceConstants(samplingFreq);
     instanceResetUserInterface();
     instanceClear();
 }
 ...
-````</p>
+</code></pre>
+
 <p>The two <strong>itbl0</strong> and <strong>ftbl0</strong> tables are static class arrays. They are filled in the <strong>classInit</strong> method. The architecture code will typically call the <strong>init</strong> method (which calls <strong>classInit</strong>) on a given DSP, to allocate class related arrays and the DSP itself. If several DSP are going to be allocated, calling <strong>classInit</strong> only once then the <strong>instanceInit</strong> method on each allocated DSP is the way to go.</p>
 <p>In the new <strong>-mem</strong> mode, the generated C++ code is now:</p>
 <pre><code>...
