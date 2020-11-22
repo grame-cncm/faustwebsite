@@ -182,7 +182,7 @@ Collection of tools for mass-interaction physical modeling in Faust.
 
 ## Temper JUCE plugin
 
-<a href="https://github.com/creativeintent/temper"><img  class="mx-auto d-block" src="img/temper.jpg"></a>  
+<a href="https://github.com/creativeintent/temper"><img  width="70%" class="mx-auto d-block" src="img/temper.jpg"></a>  
 
 Temper is a digital distortion written with Faust, and compiled with JUCE for the various build targets.
 
@@ -194,6 +194,13 @@ pMix (short for preset mixer) is a sound design, composition and performance too
 
 ## iPlug2
 
-<a href="https://iplug2.github.io"><img  class="mx-auto d-block" src="img/iplug2.png"></a>  
+<a href="https://iplug2.github.io"><img  width="70%" class="mx-auto d-block" src="img/iplug2.png"></a>  
 
 iPlug 2 is a simple-to-use C++ framework for developing cross platform audio plug-ins/apps and targeting multiple plug-in APIs with the same minimalistic code, support for the Faust programming language, and the libfaust JIT compiler.
+
+## Mephisto LV2 
+
+<a href="https://open-music-kontrollers.ch/lv2/mephisto/"><img  width="50%" class="mx-auto d-block" src="img/mephisto.png"></a>  
+
+Mephisto LV2 a Just-in-Time Faust compiler embedded in an LV2 plugin. Write LV2 audio/cv instruments/filters directly in your host in Faust DSP language without any need to restart/reload host or plugin upon code changes.
+
