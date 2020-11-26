@@ -18,6 +18,7 @@ nav:
         - 'Getting Help': community/help.md
         - 'Reporting Bugs': community/bugs.md
         - 'Faust Conference': community/ifc.md
+        - 'Learning Faust': community/learning.md
         - 'Academic Publications': community/publications.md
         - 'Press': community/press.md
         - 'Sponsors': community/sponsors.md
