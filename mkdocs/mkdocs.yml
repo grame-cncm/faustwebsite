@@ -26,7 +26,7 @@ nav:
         - 'Logos': community/logos.md
     - Projects:
         - 'FAST': https://fast.grame.fr
-        - 'Amstramgrame': https://amstramgrame.fr/english
+        - 'Amstramgrame': https://amstramgrame.fr/en
     - About: about.md
 
 theme: 
