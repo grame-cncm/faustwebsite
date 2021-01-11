@@ -82,6 +82,10 @@
 </li>
                                     
 <li>
+    <a href="../events/" class="dropdown-item">Events</a>
+</li>
+                                    
+<li>
     <a href="../help/" class="dropdown-item">Getting Help</a>
 </li>
                                     
@@ -91,6 +95,10 @@
                                     
 <li>
     <a href="../ifc/" class="dropdown-item">Faust Conference</a>
+</li>
+                                    
+<li>
+    <a href="../learning/" class="dropdown-item">Learning Faust</a>
 </li>
                                     
 <li>
@@ -123,7 +131,7 @@
 </li>
                                     
 <li>
-    <a href="https://amstramgrame.fr/english" class="dropdown-item">Amstramgrame</a>
+    <a href="https://amstramgrame.fr/en" class="dropdown-item">Amstramgrame</a>
 </li>
                                 </ul>
                             </li>
@@ -835,7 +843,6 @@ C++ and LLVM IR code has been compiled with the <em>-Ofast</em> optimization fla
 */
 faust.createosc = function(context, buffer_size, callback)
 </code></pre>
-
 <p>The resulting object is an extended ScriptProcessorNode, to be used as a regular node (like connected to other WebAudio nodes), but which also adds the Faust specific API as defined in the equivalent C++ generated <strong>dsp</strong> class (see the <strong>architecture/faust/dsp/dsp.h</strong> header for more technical details), as well as JavaScript more specific functions. For instance the following ones will have to be used to control the node:</p>
 <pre><code>var paths = node.getParams(); // get the set of paths to read/write input control parameters
 </code></pre>
@@ -866,7 +873,6 @@ function changeVolume(event)
     noise.setParamValue(&quot;/Noise/Volume&quot;, parseFloat(event.target.value));
 }
 </code></pre>
-
 <p>A <strong>startnoise</strong> function which creates the Faust WebAudio node is defined with:</p>
 <pre><code>function startnoise()
 {
@@ -882,7 +888,6 @@ function changeVolume(event)
         });
 }
 </code></pre>
-
 <p>An finally the load handler is defined to activate the code:</p>
 <pre><code>window.addEventListener("load", startnoise);
 </code></pre>
@@ -903,7 +908,6 @@ function changeVolume(event)
 */
 faust.createmydsp_poly = function(context, buffer_size, polyphony, callback)
 </code></pre>
-
 <p>Polyphonic nodes have an extended API to be controled with MIDI messages: </p>
 <pre><code>/**
 * Instantiates a new polyphonic voice. 
@@ -914,7 +918,6 @@ faust.createmydsp_poly = function(context, buffer_size, polyphony, callback)
 */
 keyOn = function (channel, pitch, velocity) 
 </code></pre>
-
 <pre><code>/**
 * De-instantiates a polyphonic voice. 
 *
@@ -924,13 +927,11 @@ keyOn = function (channel, pitch, velocity)
 */
 keyOff = function (channel, pitch, velocity)
 </code></pre>
-
 <pre><code>/**
 * Gently terminates all the active voices.
 */
 allNotesOff = function ()
 </code></pre>
-
 <p>Look at the JavaScript public documentation section for the complete description. </p>
 <h3 id="extended-control-with-comb-parameter">Extended control with -comb parameter</h3>
 <p>The <strong>faust2wasm</strong> tool can be used with the <strong>-comb</strong> parameter to compile several DSP files and contatenate all JavaScript code in a unique resulting <strong>comb.js</strong> file (possibly to be used in -poly mode also).   </p>
@@ -959,7 +960,6 @@ allNotesOff = function ()
 */
 faust.createDSPFactory = function (code, argv, callback) 
 </code></pre>
-
 <pre><code>/**
 * Create a DSP factory from source code as a string to be used to create polyphonic DSP 
 *
@@ -970,7 +970,6 @@ faust.createDSPFactory = function (code, argv, callback)
 */
 faust.createPolyDSPFactory = function (code, argv, callback) 
 </code></pre>
-
 <p>The two following functions are used to generate <em>monophonic</em> or <em>polyphonic</em> Faust WebAudio nodes:</p>
 <pre><code>/**
 * Create a ScriptProcessorNode Web Audio object from a factory
@@ -983,7 +982,6 @@ faust.createPolyDSPFactory = function (code, argv, callback)
 */
 faust.createDSPInstance = function (factory, context, buffer_size, callback) 
 </code></pre>
-
 <pre><code>/**
 * Create a 'polyphonic' 'ScriptProcessorNode Web Audio object from a factory
 *
@@ -996,7 +994,6 @@ faust.createDSPInstance = function (factory, context, buffer_size, callback)
 */
 faust.createPolyDSPInstance = function (factory, context, buffer_size, polyphony, callback) 
 </code></pre>
-
 <p>The resulting nodes have the same API as statically compiled nodes described in the first section, so can be controlled the same way, including the polyphonic ones. Here is a code example using <strong>faust.createDSPFactory</strong> and <strong>faust.createDSPInstance</strong>:</p>
 <pre><code>var isWebKitAudio = (typeof (webkitAudioContext) !== &quot;undefined&quot;);
 var audio_context = (isWebKitAudio) ? new webkitAudioContext() : new AudioContext();
@@ -1028,7 +1025,6 @@ function startosc()
                                                         })});
 }
 </code></pre>
-
 <p>The <a href="/dynamic/dynamic-osc-wasm.html">Dynamic OSC</a> page demonstrates the dynamic OSC complete code (based on the example seen before). The <a href="/dynamic/dynamic-organ-wasm.html">Dynamic Organ</a> page demonstrates a polyphonic organ instrument, which loads a DSP from an url, and ready to be controlled with a MIDI device or application. Look at the <a href="/dynamic/faustlive-wasm.html">Dynamic Faust compiler</a> page for a more complete use-case of the dynamic compiler.</p>
 <h2 id="float-denormal-handling_1">Float denormal handling</h2>
 <p>A specific problem occurs when audio computation produces denormal float values, which is quite common with recursive filters, and can be extremely costly to compute on some processors like the Intel family for instance. A Flush To Zero (FTZ) mode for denormals can usually be set at hardware level, but it not yet available in the WebAssembly MVP version, which strictly conform to the IEEE 754 norm 8. </p>
@@ -1058,12 +1054,10 @@ function startosc()
     virtual void destroy(void* ptr) = 0;
 };
 </code></pre>
-
 <p>Taking the following Faust DSP example:</p>
 <pre><code>process = (waveform {10,20,30,40,50,60,70}, %(7)~+(3) : rdtable), 
           (waveform {1.1,2.2,3.3,4.4,5.5,6.6,7.7}, %(7)~+(3) : rdtable);
 </code></pre>
-
 <p>Here is the generated code in default mode:</p>
 <pre><code>...
 int mydsp::itbl0[7];
@@ -1090,7 +1084,6 @@ virtual void instanceInit(int samplingFreq) {
 }
 ...
 </code></pre>
-
 <p>The two <strong>itbl0</strong> and <strong>ftbl0</strong> tables are static class arrays. They are filled in the <strong>classInit</strong> method. The architecture code will typically call the <strong>init</strong> method (which calls <strong>classInit</strong>) on a given DSP, to allocate class related arrays and the DSP itself. If several DSP are going to be allocated, calling <strong>classInit</strong> only once then the <strong>instanceInit</strong> method on each allocated DSP is the way to go.</p>
 <p>In the new <strong>-mem</strong> mode, the generated C++ code is now:</p>
 <pre><code>...
@@ -1123,7 +1116,6 @@ virtual void instanceInit(int samplingFreq) {
 }
 ...
 </code></pre>
-
 <p>The two <strong>itbl0</strong> and <strong>ftbl0</strong> tables are generated a class static pointers. The <strong>classInit</strong> method takes the additional <strong>dsp_memory_manager</strong> object used to allocate tables. A new <strong>classDestroy</strong> method is available to deallocate the tables. Finally the <strong>init</strong> method is now empty, since the architecure file is supposed to use the <strong>classInit/classDestroy</strong> method once to allocate and deallocate static tables, and the <strong>instanceInit</strong> method on each allocated DSP.</p>
 <h3 id="control-of-the-dsp-memory-allocation">Control of the DSP memory allocation</h3>
 <p>An architecture file can now define its custom memory manager by subclassing the <strong>dsp_memory_manager</strong>  abstract base class, and implement the two required <strong>allocate</strong> and <strong>destroy</strong> methods. Here is an example of a simple heap allocating manager:</p>
@@ -1144,7 +1136,6 @@ virtual void instanceInit(int samplingFreq) {
 
 };
 </code></pre>
-
 <h4 id="controlling-the-table-memory-allocation">Controlling the table memory allocation</h4>
 <p>To control table memory allocation, the architecture file will have to do:</p>
 <pre><code>// Allocate a custom memory allocator
@@ -1171,7 +1162,6 @@ delete dsp;
 // Deallocate static tables (using the custom memory allocator)
 mydsp::classDestroy();
 </code></pre>
-
 <h4 id="controlling-the-complete-dsp-memory-allocation">Controlling the complete DSP memory allocation</h4>
 <p>Full control the DSP memory allocation can be done using <a href="https://en.wikipedia.org/wiki/Placement_syntax">C++ placement new</a>:</p>
 <pre><code>#include &lt;new&gt;
@@ -1203,7 +1193,6 @@ manager.destroy(dsp);
 // Deallocate static tables (using the custom memory allocator)
 mydsp::classDestroy();
 </code></pre>
-
 <p>More complex custom memory allocators can be developed by refining this <strong>malloc_memory_manager</strong> example, possibly defining real-time memory allocators...etc... The OWL architecture file already uses this new custom memory allocator model.</p>
 <p>This is a work in progress: </p>
 <ul>
@@ -1228,7 +1217,6 @@ mydsp::classDestroy();
     cout &lt;&lt; name &lt;&lt; &quot; CPU use : &quot; &lt;&lt; mes.getStats() &lt;&lt; endl;
 }
 </code></pre>
-
 <p>Only part of the Faust2 branch and defined in the <strong>faust/dsp/dsp-optimizer.h</strong> file, the dsp_optimizer class uses the libfaust library and its LLVM backend to dynamically compile DSP objects produced with different Faust compiler options, and then measure their DSP CPU. Here is a C++ code example of its use: </p>
 <pre><code>static void dynamic_bench(const string&amp; dsp_source)
 {
@@ -1246,7 +1234,6 @@ mydsp::classDestroy();
     cout &lt;&lt; endl;
 }
 </code></pre>
-
 <h3 id="using-the-faustbench-tool">Using the faustbench tool</h3>
 <p>The <strong>faustbench</strong> tool uses the C++ backend to generate a set of C++ files produced with different Faust compiler options. All files are then compiled in a unique binary that will measure DSP CPU of all versions of the compiled DSP. The tool is supposed to be launched in a terminal, but it can be used to generate an iOS project, ready to be launched and tested in Xcode. Here are the available options:</p>
 <pre><code>faustbench [-ios] [Additional Faust options (-vec -vs 8...)] &lt;file.dsp&gt;
@@ -1254,7 +1241,6 @@ Use '-ios' to generate an iOS project
 Use 'export CXX=/path/to/compiler' before running faustbench to change the C++ compiler
 Use 'export CXXFLAGS=options' before running faustbench to change the C++ compiler options
 </code></pre>
-
 <p>Here is a trace of its use:</p>
 <pre><code>faustbench karplus32.dsp 
 Selected compiler is g++ with CXXFLAGS = -Ofast
@@ -1268,7 +1254,6 @@ Selected compiler is g++ with CXXFLAGS = -Ofast
 -vec -lv 1 -vs 512 -g : 135.352
 Best value is : 136.235 with -vec -lv 0 -vs 512
 </code></pre>
-
 <h3 id="using-the-faustbench-llvm-tool">Using the faustbench-llvm tool</h3>
 <p>Available in the <strong>faust2</strong> branch only, the <strong>faustbench-llvm</strong> tool uses the libfaust library and its LLVM backend to dynamically compile DSP objects produced with different Faust compiler options, and then measure their DSP CPU. In the main Faust folder, use <strong>make bench &amp;&amp; sudo make install</strong> to build and install the tool. Here is a trace of its use:</p>
 <pre><code>faustbench-llvm karplus32.dsp 
@@ -1295,7 +1280,6 @@ Refined with -mcd
 -vec -lv 0 -vs 256 -g -mcd 256 : 139.345
 Best value is for 'karplus32.dsp' is : 142.473 with -vec -lv 0 -vs 256 -dfs -mcd 64 w
 </code></pre>
-
 <hr />
 <h2 id="2017-02-21-faust-meets-juce"><strong>2017-02-21:</strong> Faust meets JUCE</h2>
 <p><a href="http://www.juce.com">JUCE</a>  is an open-source cross-platform C++ application framework, used for the development of desktop and mobile applications. JUCE is used in particular for its GUI and plugins libraries. </p>
@@ -1445,7 +1429,6 @@ implemented. </p>
         dsp* createDSPInstance();
 };
 </code></pre>
-
 <p>Note that the library keeps an internal cache of all allocated factories so that the compilation of the same DSP code, that is same source code and same set of 'normalized' (= sorted in a canonical order) compilations options, will return the same (reference counted) factory pointer. You will have to explicitly use <strong>deleteInterpreterDSPFactory</strong> to properly decrement the reference counter when the factory is no more needed. You can get a unique SHA1 key of the created factory using its <strong>getSHAKey</strong> method. </p>
 <p>Next, the <strong>createDSPInstance</strong> function, corresponding to the <strong>new className</strong> of C++, instantiates a <strong>interpreter-dsp</strong> pointer to be used through its interface, connected to the audio chain and controller interfaces. When finished, simply use <strong>delete</strong> to destroy the dsp instance.</p>
 <pre><code>class interpreter_dsp : public dsp {
@@ -1468,7 +1451,6 @@ implemented. </p>
 
 };
 </code></pre>
-
 <p>Since <strong>interpreter_dsp</strong> is a subclass of the <strong>dsp</strong> base class, an object of this type can be used with all already available audio and UI classes, in essence reusing all architecture files already developed for the static C++ class compilation scheme (like OSCUI, httpdUI interfaces etc.), see <a href="#developing-a-new-architecture-file">Developing a new architecture file</a>.</p>
 <h4 id="savingrestoring-the-factory">Saving/restoring the factory</h4>
 <p>After the DSP factory has been compiled, your application or plugin may want to save/restore it in order to save Faust to interpreter bytecode compilation at next use. To get the internal factory compiled code, several functions are available:</p>
@@ -1598,7 +1580,7 @@ implemented. </p>
                 </p>
                 <form>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
                 <div id="mkdocs-search-results"></div>

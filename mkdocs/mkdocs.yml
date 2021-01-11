@@ -15,6 +15,7 @@ nav:
          - 'Faust Web Editor': https://fausteditor.grame.fr
     - Community:
         - 'News': community/news.md
+        - 'Events': community/events.md
         - 'Getting Help': community/help.md
         - 'Reporting Bugs': community/bugs.md
         - 'Faust Conference': community/ifc.md
