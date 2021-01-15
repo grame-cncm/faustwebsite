@@ -2,7 +2,7 @@
 
 ## Faust Physical Modeling Workshop
 
-Faust has been used for the physical modeling of musical instruments for many years now. Various tools have been developed recently to address the needs of various modeling techniques (e.g., finite difference scheme, waveguides, mass interaction, etc.).
+Faust has been used for the physical modeling of musical instruments for many years now. Different tools have been developed recently to address the needs of various modeling techniques (e.g., finite difference scheme, waveguides, mass interaction, etc.).
 
 The goal of this one day workshop is to provide a series of interactive one-hour tutorials on these tools as well as some background on their related modeling techniques.
 
@@ -12,7 +12,7 @@ This event will take place online on **Feb. 1, 2021, 3-9pm GMT-1**.
 
 ### How to Participate?
 
-To register to this free online event, just **fill up [this form](https://forms.gle/AzoPwBX7wwRcLBEf7)**.  
+To register for this free online event, just **fill up [this form](https://forms.gle/AzoPwBX7wwRcLBEf7)**.  
 
 ### Program
 
