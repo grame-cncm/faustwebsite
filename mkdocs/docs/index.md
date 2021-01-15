@@ -45,6 +45,14 @@ Check out [**the Faust Kadenze course**](https://www.kadenze.com/courses/real-ti
 
 ## Faust News
 
+### **>>** February 1, 2021: Faust Physical Modeling Workshop -- Online Event
+
+Faust has been used for the physical modeling of musical instruments for many years now. Various tools have been developed recently to address the needs of various modeling techniques (e.g., finite difference scheme, waveguides, mass interaction, etc.).
+
+The goal of this one day workshop is to provide a series of interactive one-hour tutorials on these tools as well as some background on their related modeling techniques.
+
+It will take place online on Feb. 1, 2021, 3-9pm GMT-1. Additional information about this event can be found [here](community/events.md#faust-physical-modeling-workshop).
+
 ### **>>** November 21, 2020: Programmable Audio Workshop (PAW-20) -- Online Event
 
 With a combination of talks and workshops, PAW is an intensive day devoted to electronic sounds and programmable audio technologies! PAW-20 will be a fully online event. Information about **the free registration process** will be posted soon!
