@@ -20,7 +20,9 @@ To register to this free online event, just **fill up [this form](https://forms.
 
 Wave-digital models are a well researched and popular approach for creating virtual-analog models of audio circuits for use in audio processing. `wdmodels.lib` is a new addition to the Faust Libraries that supports easy creation of these models in Faust. In this workshop, we will introduce the technique of wave-digital modeling of circuits by analyzing several audio circuits and exploring their implementation in `wdmodels.lib`. We also will discuss library support of more complex implementation tasks associated with wave-digital models, such as R-type adaptors and Multiple/Multiport non-linearities. Finally, we will conclude by exploring the capacity of Faust to "circuit-bend" our wave-digital models.
 
-#### **4pm-5pm:** *Mass Interaction Physical Modeling in Faust* -- James Leonard
+#### **4pm-5pm:** *An Introduction to Mass-Interaction Modelling in Faust* -- James Leonard and Jérôme Villeneuve
+
+This workshop proposes an introduction to mass-interaction (sometimes referred to as mass-spring) modelling for sound synthesis in the Faust environment. After a brief historic introduction to this field, we will give a hands on tutorial on the `mi_faust` library, which allows simulating modular physical constructions in Faust, as well as online model scripting tools that allow for efficient model design and code generation. We will conclude with ongoing developments and perspectives, in particular regarding performance issues, possible extensions to 3-DoF physics, and the importance of modelling frameworks that allow for a creative approach to physical model design.
 
 #### **5pm-6pm:** *Finite Difference Schemes Synthesis in Faust* -- Riccardo Russo
 
@@ -34,6 +36,8 @@ By the end of the tutorial you should have quite an understanding on the basic p
 
 #### **7pm-8pm:** *Introduction to the Faust Physical Modeling Toolkit* -- Romain Michon
 
+A series of tools to facilitate the implementation of waveguide and modal physical models of musical instruments have been developed over the years by the Faust team to become the "Faust Physical Modeling Toolkit." This comprises the Faust Physical Modeling library (`pm.lib`) as well as `mesh2faust`, a tool to convert 3D meshes into modal physical models compatible with `pm.lib`.
+
+During this workshop, we will provide a step-by-step tutorial on how to use these different tools to implement various kinds of physical models from scratch.  
+
 #### **8pm-9pm:** *Introduction to Physical Modeling Formulations and Faust Implementations* -- Julius O. Smith
-
-
