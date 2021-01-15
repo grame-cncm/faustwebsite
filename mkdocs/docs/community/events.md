@@ -16,9 +16,24 @@ To register to this free online event, just **fill up [this form](https://forms.
 
 ### Program
 
-* 3pm-4pm: Dirk Roosenburg on the Faust Wave Digital Filter library
-* 4pm-5pm: James Leonard on Mass Interaction Physical Modeling in Faust
-* 5pm-6pm: Riccardo Russo on Finite Difference Scheme in Faust
-* 6pm-7pm: break
-* 7pm-8pm: Romain Michon on the Faust Physical Modeling Toolkit
-* 8pm-9pm: Julius O. Smith on *Introduction to Physical Modeling Techniques and to their Implementation in Faust, research trends in the field, etc.*
+#### **3pm-4pm:** *Creating Circuit-Bendable Wave-Digital Models of Analog Audio Circuits in Faust* -- Dirk Roosenburg
+
+Wave-digital models are a well researched and popular approach for creating virtual-analog models of audio circuits for use in audio processing. `wdmodels.lib` is a new addition to the Faust Libraries that supports easy creation of these models in Faust. In this workshop, we will introduce the technique of wave-digital modeling of circuits by analyzing several audio circuits and exploring their implementation in `wdmodels.lib`. We also will discuss library support of more complex implementation tasks associated with wave-digital models, such as R-type adaptors and Multiple/Multiport non-linearities. Finally, we will conclude by exploring the capacity of Faust to "circuit-bend" our wave-digital models.
+
+#### **4pm-5pm:** *Mass Interaction Physical Modeling in Faust* -- James Leonard
+
+#### **5pm-6pm:** *Finite Difference Schemes Synthesis in Faust* -- Riccardo Russo
+
+Over the years, Faust proved to be a powerful tool for developing physical modeling synthesis. However, coding finite difference schemes models has always been complicated, in fact, their implementation in imperative programming languages is typically achieved using data structures, which are not available in Faust. This workshop will introduce the fds library, a new tool which allows to code linear, explicit finite difference schemes physical models in Faust, based on a cellular automata formalism.
+
+We will start with a brief introduction on how finite difference schemes work and what is their place within the scope physical modeling techniques. Then, we will focus on how to implement the algorithms we obtained on paper in Faust and, lastly, we will see how the fds library can be used to code such algorithms in a much easier way.  
+
+By the end of the tutorial you should have quite an understanding on the basic principles of finite difference schemes, on the roles of the different functions inside the fds library and on how they can be used to easily obtain a working fds physical model.
+
+#### **6pm-7pm:** *break*
+
+#### **7pm-8pm:** *Introduction to the Faust Physical Modeling Toolkit* -- Romain Michon
+
+#### **8pm-9pm:** *Introduction to Physical Modeling Formulations and Faust Implementations* -- Julius O. Smith
+
+
