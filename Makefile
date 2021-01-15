@@ -50,6 +50,7 @@ build:
 	$(MAKE) all
 	cd $(MKDIR) && mkdocs build
 	git checkout docs/CNAME
+	git checkout docs/syfala
 	
 serve:
 	@echo "you can browse the site at http://localhost:8000"

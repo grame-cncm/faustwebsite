@@ -1,0 +1,171 @@
+body{
+  background-color: #0811380f;
+  color: hsl(16, 10%, 22%);
+}
+
+h1 {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  font-size: 4rem;
+  color: #29235C;
+  font-weight: regular;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+h2{
+  margin-top: 5rem;
+  font-size: 2.5rem;
+  font-weight: regular;
+  color: #29235C;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+h3 {
+  margin-top: 3rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #29235C;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+h4 {
+  font-size: 1.25rem;
+  color: #29235C;
+  font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+a{
+  color:#F25620;
+}
+
+.navbar{
+  background-color: rgba(241, 196, 15,0.9) !important;
+}
+
+.ping{
+  padding-right: 0.8rem;
+}
+
+.navbar-brand{
+  margin-right: 3rem;
+  margin-left: 2rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #29235C !important;
+}
+
+.navbar-nav{
+  padding-left: 2.5rem;
+  border-left: 1px solid; 
+  border-color: #29235C;
+}
+
+.nav-link{
+  font-size: 1.1rem;
+  color: #29235C !important;
+  padding-right: 0.8rem !important;
+  padding-left: 0.8rem !important;
+}
+
+.nav-link:hover{
+  color: rgba(41,35,92,0.8) !important;
+}
+
+
+.dropdown-item{
+  color: rgba(41,35,92,1);
+}
+
+.banner-h1{
+  font-size: 8rem;
+  font-weight: bold;
+  color: #F0F3F4  !important;
+}
+
+.banner-h2{
+  font-size: 4rem;
+  color: #F0F3F4 !important;
+}
+
+.banner-h3{
+  font-size: 2rem;
+  color: #F0F3F4 !important;
+}
+
+/* Carousel base class */
+#myCarousel {
+}
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  color: white;
+  bottom: 10rem;
+  z-index: 10;
+  right: 5%;
+  left: 5%;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 60rem;
+  background-color: black;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.col{
+  /*text-align: justify;*/
+}
+
+p{
+  text-align: justify;
+}
+
+.footer {
+  margin-top: 2rem;
+  bottom: 0;
+  width: 100%;
+  background-color: #B3B6B7  !important;
+}
+
+.footer-content{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.copyright{
+  text-align: center;
+}
+
+td, th{
+  text-align: center;
+  padding: 0.5rem;
+  border-bottom: 1px solid;
+}
+
+hr{
+  background-color: #29235C;
+}
+
+.logos{
+  text-align: center;
+}
+
+.btn{
+  background-color: #F25620 !important;
+  border-color: #F25620 !important;
+  color: #081138 !important;
+}
+
+footer{
+  background-color: rgba(241, 196, 15,1) !important;
+}
+
+.time{
+  font-weight: bold;
+}

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap" rel="stylesheet">
+
+  <link href="css/syfala.css" rel="stylesheet">
+
+  <title>SyFaLa -- Synthétiseur Faible Latence sur FPGA</title>
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#"><b>SyFaLa</b></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="">About</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#overview">Overview</a>
+              <a class="dropdown-item" href="#background">Background</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tools">Tools</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="">Partners</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#grame">GRAME-CNCM</a>
+              <a class="dropdown-item" href="#citi">CITI Lab</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main role="main">
+
+    <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="first-slide" src="img/banner.png" alt="First slide">
+          <div class="container">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1 class="banner-h1">SyFaLa</h1>
+                <h2 class="banner-h2">Synthétiseur Faible Latence sur FPGA<br><i>Low-Latency Synthesizer on FPGA</i></h2>
+                <h2 class="banner-h3">GRAME-CNCM // INSA Lyon</h3>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+    <div class="container">
+      
+      <h1><center><b style="font-size:7rem;">SyFaLa</b><br>Synthétiseur Faible Latence sur FPGA<br><i>Low-Latency Synthesizer on FPGA</i></center></h1>
+      
+      <hr>
+      
+      <h1 id="about">About SyFaLa</h1>
+      
+      <h2 id="overview">Overview</h2>
+      
+      <p>SyFaLa aims at facilitating the programming of FPGA platforms for real-time audio Digital Signal Processing applications through the use of the <a href="https://faust.grame.fr">Faust programming language</a>. This project gathers the strengths of <a href="http://www.grame.fr">GRAME-CNCM</a> and <a href="http://www.citi-lab.fr/">CITI Lab</a> at <a href="https://www.insa-lyon.fr">INSA Lyon</a> and is funded by the <a href="https://fil.cnrs.fr/">Fédération Informatique de Lyon (FIL)</a>.</p>
+      
+      <h2 id="background">Background</h2>
+      
+      <p>Embedded systems for audio and multimedia are increasingly used in the arts and culture (e.g., interactive systems  musical instruments, virtual and augmented reality, artistic creation tools, musical composition and performance, etc.). However, programming them can be out of reach of artists, creators, or non-specialized engineers. In parallel with the emergence of the "<a href="https://makerfaire.com/maker-movement">maker culture</a>," progress have been made to make these types of systems more accessible, bringing more flexibility in digital approaches to artistic creation. Domain Specific programming Languages (DSL) such as Faust facilitated the implementation of real-time audio Digital Signal Processing (DSP) algorithms.</p>
+      
+      <p>However, many limitations remain, especially for real-time applications where latency plays a crucial role (e.g., efficient active control of sound where audio processing should be faster than the propagation of sound, digital musical instruments playability, digital audio effects, etc.).  While latency can be potentially reduced on "standard" computing platforms such as personal computers based on a CPU (Central Processing Unit), going under the "one millisecond threshold" is usually impossible due to buffering.</p>
+      
+      <p>FPGAs (Field Programmable Gate Arrays) can help to solve this problem as well as most of the limitations of traditional computing platforms used for musical and artistic applications. These chips are known for their high computational capabilities and very low-latency performances. They also provide a large number of GPIOs (General Purpose Inputs and Outputs) which can be exploited to implement modern real-time multi-channel processing algorithms (e.g., sound fields capture using a very large number of digital microphones, active sound control over a large spatial region, etc.).</p>
+      
+      <p>But FPGAs remain extremely complex to program, even with state-of-the-art high-level tools, making them largely inaccessible to musicians, digital artists and makers communities. FPGAs are configured/programmed using a Hardware Description Language (HDL) such as VHDL or Verilog. The learning curve and the electrical engineering skills required to master these types of environments make them out of reach of the real-time audio DSP community.  Solutions exist to program FPGAs at a higher level (i.e., LabVIEW, Vivado HLS, etc.), but none of them is specifically dedicated nor adapted to real-time audio DSP.</p>
+      
+      <p><b>The goal of Syfala is to design an FPGA-based platform for  multichannel ultra-low-latency audio Digital Signal Processing programmable at a high-level with Faust and usable for various applications ranging from sound synthesis and processing to active sound control and artificial sound field/room acoustics.</b></p>
+      
+      <h1 id="tools">Tools</h1>
+      
+      <p>A series of tools are currently being developed around SyFaLa. While none of them has been officially released yet, you can follow their development/evolution on the project Git repository: <a href="https://gitlab.inria.fr/risset/syfala">https://gitlab.inria.fr/risset/syfala</a></p>
+      
+      <h1 id="partners">Partners/Team</h1>
+      
+      <p>This project gathers the strengths of <a href="http://www.grame.fr">GRAME-CNCM</a> and <a href="http://www.citi-lab.fr/">CITI Lab</a> at <a href="https://www.insa-lyon.fr">INSA Lyon</a> and is funded by the <a href="https://fil.cnrs.fr/">Fédération Informatique de Lyon (FIL)</a>.</p>
+      
+      <h2 id="grame">GRAME-CNCM</h2>
+      
+      <p>Grame is a ``Centre National de Création Musicale'' (CNCM) organized in three departments: music production, transmission/mediation, and computer music research. Grame's research department has been leading the development of the Faust programming language since its creation in 2004. It has expertise in computer science (compilation), audio DSP, digital lutherie, HCI (Human Computer Interaction) in general, and music representation. Thanks to the proximity of all three departments at Grame, research outcomes can easily find their way to professional musical productions and be shared with a general public through the organization of workshops and tight collaborations with the French ministry of education.</p>
+      
+      <h2 id="citi">CITI Lab</h2>
+      
+      <p>CITI is an academic laboratory associated with INSA Lyon and INRIA. The CITI Laboratory develops research activities bringing together computer science, networking, and digital communications to address the challenging issues related to the development of Internet. This world scale network offers a seamless communication path between heterogeneous nodes (persons, objects, sensors, phones, etc.) in an heterogeneous architecture including wireless access, offering mobility, ubiquity and adaptability. Cutting-edge technologies are expected in various fields to provide seamless, self-adaptive and secured solutions fitting with the specific constraints of many applicative frameworks. The full cross-layer expertise the CITI acquired during the past ten years makes it a very original, challenging and almost unique place in France.</p>
+      
+    </div>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <div id="logos" class="logos">
+          <a href="https://faust.grame.fr"><img src=img/logoFaust.png width=30%></a>
+          <a href="http://grame.fr"><img src=img/logoGrame.png width=20%></a>
+          <a href="http://www.citi-lab.fr/"><img src=img/logoCITI.png width=20%></a>
+          <a href="http://www.insa-lyon.fr/"><img src=img/logoINSA.png width=20%></a>
+          <a href="http://www.inria.fr/"><img src=img/logoINRIA.png width=20%></a>
+          <a href="https://fil.cnrs.fr/"><img src=img/logoFIL.png width=20%></a>
+        </div>
+        <div class="copyright">
+          <hr>
+          <p style="text-align:center;">Made with ♥ at <a href="http://grame.fr ">GRAME-CNCM</a> and <a href="http://www.citi-lab.fr/">CITI Lab</a></p>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
