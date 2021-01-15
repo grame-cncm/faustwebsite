@@ -40,4 +40,4 @@ A series of tools to facilitate the implementation of waveguide and modal physic
 
 During this workshop, we will provide a step-by-step tutorial on how to use these different tools to implement various kinds of physical models from scratch.  
 
-#### **8pm-9pm:** *Introduction to Physical Modeling Formulations and Faust Implementations* -- Julius O. Smith
+#### **8pm-9pm:** *Overview of Physical Modeling Formulations and Faust Implementations* -- Julius O. Smith
