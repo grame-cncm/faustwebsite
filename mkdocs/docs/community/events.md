@@ -8,7 +8,7 @@ The goal of this one day workshop is to provide a series of interactive one-hour
 
 ### When and Where?
 
-This event will take place online on **Feb. 1, 2021, 3-9pm GMT-1**. 
+This event will take place online on **Feb. 1, 2021, 3-9pm GMT+1**. 
 
 ### How to Participate?
 

@@ -51,7 +51,7 @@ Faust has been used for the physical modeling of musical instruments for many ye
 
 The goal of this one day workshop is to provide a series of interactive one-hour tutorials on these tools as well as some background on their related modeling techniques.
 
-It will take place online on Feb. 1, 2021, 3-9pm GMT-1. Additional information about this event can be found [here](community/events.md#faust-physical-modeling-workshop).
+It will take place online on Feb. 1, 2021, 3-9pm GMT+1. Additional information about this event can be found [here](community/events.md#faust-physical-modeling-workshop).
 
 ### **>>** November 21, 2020: Programmable Audio Workshop (PAW-20) -- Online Event
 
