@@ -2,6 +2,10 @@
 
 ## Faust Physical Modeling Workshop
 
+<center>
+<img src="img/faust-pm.png" class="mx-auto d-block" width="80%">
+</center>
+
 Faust has been used for the physical modeling of musical instruments for many years now. Different tools have been developed recently to address the needs of various modeling techniques (e.g., finite difference scheme, waveguides, mass interaction, etc.).
 
 The goal of this one day workshop is to provide a series of interactive one-hour tutorials on these tools as well as some background on their related modeling techniques.
