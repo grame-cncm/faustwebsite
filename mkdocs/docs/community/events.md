@@ -4,6 +4,7 @@
 
 <center>
 <img src="img/faust-pm.png" class="mx-auto d-block" width="80%">
+<p style="font-size:30px">Streaming Link: <a href="https://youtu.be/xQ8aNgMaR5k">https://youtu.be/xQ8aNgMaR5k</a></p>
 </center>
 
 Faust has been used for the physical modeling of musical instruments for many years now. Different tools have been developed recently to address the needs of various modeling techniques (e.g., finite difference scheme, waveguides, mass interaction, etc.).
@@ -12,7 +13,7 @@ The goal of this one day workshop is to provide a series of interactive one-hour
 
 ### When and Where?
 
-This event will take place online on **Feb. 1, 2021, 3-9pm GMT+1**. 
+This event will take place online (<https://youtu.be/xQ8aNgMaR5k>) on **Feb. 1, 2021, 3-9pm GMT+1**. 
 
 ### How to Participate?
 
@@ -45,3 +46,5 @@ A series of tools to facilitate the implementation of waveguide and modal physic
 During this workshop, we will provide a step-by-step tutorial on how to use these different tools to implement various kinds of physical models from scratch.  
 
 #### **8pm-9pm:** *Overview of Physical Modeling Formulations and Faust Implementations* -- Julius O. Smith
+
+A summary of methods for physical modeling is followed by some examples in Faust.  Physical models normally start out as differential equations which are then digitized to yield finite-difference schemes as were discussed earlier in this workshop.  Wave digital and digital waveguide formulations were also discussed.  Two additional topics are state-space models and modal representations which can be obtained by diagonalizing state-space models.  As a result, this talk focuses primarily on state-space models and how to diagonalize them.
