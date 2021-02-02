@@ -16,6 +16,10 @@ The goal of this one day online workshop which took place on Feb. 1, 2021 was to
 <iframe width="800" height="450" src="https://www.youtube.com/embed/TWsoXXJG-zU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 
+<center>
+**Download this workshop's code [here](events/misc/dirk.zip)**
+</center>
+
 Wave-digital models are a well researched and popular approach for creating virtual-analog models of audio circuits for use in audio processing. `wdmodels.lib` is a new addition to the Faust Libraries that supports easy creation of these models in Faust. In this workshop, we will introduce the technique of wave-digital modeling of circuits by analyzing several audio circuits and exploring their implementation in `wdmodels.lib`. We also will discuss library support of more complex implementation tasks associated with wave-digital models, such as R-type adaptors and Multiple/Multiport non-linearities. Finally, we will conclude by exploring the capacity of Faust to "circuit-bend" our wave-digital models.
 
 ### An Introduction to Mass-Interaction Modelling in Faust -- James Leonard and Jérôme Villeneuve
@@ -24,12 +28,20 @@ Wave-digital models are a well researched and popular approach for creating virt
 <iframe width="800" height="450" src="https://www.youtube.com/embed/zYL10nal29c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 
+<center>
+**Download this workshop's code [here](https://github.com/mi-creative/FaustPM_2021_examples)**
+</center>
+
 This workshop proposes an introduction to mass-interaction (sometimes referred to as mass-spring) modelling for sound synthesis in the Faust environment. After a brief historic introduction to this field, we will give a hands on tutorial on the `mi_faust` library, which allows simulating modular physical constructions in Faust, as well as online model scripting tools that allow for efficient model design and code generation. We will conclude with ongoing developments and perspectives, in particular regarding performance issues, possible extensions to 3-DoF physics, and the importance of modelling frameworks that allow for a creative approach to physical model design.
 
 ### Finite Difference Schemes Synthesis in Faust -- Riccardo Russo
 
 <center>
 <iframe width="800" height="450" src="https://www.youtube.com/embed/lfN_MG1Id74" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+
+<center>
+**Download this workshop's code [here](events/misc/riccardo.zip)**
 </center>
 
 Over the years, Faust proved to be a powerful tool for developing physical modeling synthesis. However, coding finite difference schemes models has always been complicated, in fact, their implementation in imperative programming languages is typically achieved using data structures, which are not available in Faust. This workshop will introduce the fds library, a new tool which allows to code linear, explicit finite difference schemes physical models in Faust, based on a cellular automata formalism.
@@ -44,6 +56,10 @@ By the end of the tutorial you should have quite an understanding on the basic p
 
 <center>
 <iframe width="800" height="450" src="https://www.youtube.com/embed/u8WTnQPzL2w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+
+<center>
+**Download this workshop's code [here](events/misc/romain.zip)**
 </center>
 
 A series of tools to facilitate the implementation of waveguide and modal physical models of musical instruments have been developed over the years by the Faust team to become the "Faust Physical Modeling Toolkit." This comprises the Faust Physical Modeling library (`pm.lib`) as well as `mesh2faust`, a tool to convert 3D meshes into modal physical models compatible with `pm.lib`.
