@@ -72,6 +72,10 @@ During this workshop, we will provide a step-by-step tutorial on how to use thes
 <iframe width="800" height="450" src="https://www.youtube.com/embed/493vRGqx_pE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 
+<center>
+**Download this workshop's code is available at <https://ccrma.stanford.edu/~jos/aspf/Appendix_A_State_Space_Models.html#code:statespace> and <https://ccrma.stanford.edu/~jos/aspf/State_Space_BiQuad_FAUST.html#code:statespaceBiquad>**
+</center>
+
 A summary of methods for physical modeling is followed by some examples in Faust.  Physical models normally start out as differential equations which are then digitized to yield finite-difference schemes as were discussed earlier in this workshop.  Wave digital and digital waveguide formulations were also discussed.  Two additional topics are state-space models and modal representations which can be obtained by diagonalizing state-space models.  As a result, this talk focuses primarily on state-space models and how to diagonalize them.
 
 <center>
