@@ -41,7 +41,7 @@ This workshop proposes an introduction to mass-interaction (sometimes referred t
 </center>
 
 <center>
-**Download this workshop's code [here](events/misc/riccardo.zip)**
+**Download this workshop's code [here](https://github.com/Rickr922/Faust-FDS/tree/master/FaustPM_Workshop_2021)**
 </center>
 
 Over the years, Faust proved to be a powerful tool for developing physical modeling synthesis. However, coding finite difference schemes models has always been complicated, in fact, their implementation in imperative programming languages is typically achieved using data structures, which are not available in Faust. This workshop will introduce the fds library, a new tool which allows to code linear, explicit finite difference schemes physical models in Faust, based on a cellular automata formalism.
