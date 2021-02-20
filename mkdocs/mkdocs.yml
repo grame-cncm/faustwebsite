@@ -38,6 +38,12 @@ theme:
 site_dir: ../docs
 
 
+extra_css:
+    - '/css/pubs.css'
+
+extra_javascript:
+  - /js/pubs.js
+
 extra:
     social:
         - type: github

@@ -1,0 +1,67 @@
+.publications {
+    padding-top: 0;
+}
+
+.pub_year { 
+    border-bottom: 2px solid #aaaaaa;
+}
+
+.pub_entry { 
+    margin-left: 15px; 
+    padding-top: 0.5em; 
+    padding-bottom: 0.5em; 
+}
+
+.pub_type  { 
+    color: grey; 
+    font-style: italic; 
+}
+
+.pub_title { 
+    /* margin-left: 10px;  */
+	font-weight: bold; 
+	color: #3C5067
+}
+
+.pub_title::before { 
+	content: "\25BA  "; 
+    margin-left: -20px;
+}
+
+/*
+.pub_authors { }
+.pub_ref     { } 
+*/
+
+/* pub_button style is applied to Abstract and Bibtex items */
+.pub_button { 
+    color:#257AB5; 
+    padding-right: 10px;
+    font-size: 90%;
+}
+.pub_button:hover { cursor: pointer; }
+
+.pub_pdf { 
+    float: right; 
+    margin-right: 10px;
+}
+
+.pub_abstract { 
+    border-left-style: solid; 
+    border-color: #3C5067; 
+    border-width: 5px; 
+    font-size: 85%; 
+    margin-top: 5px; 
+    /* margin-left: 20px;  */
+    padding-left: 20px;
+}
+
+.pub_bibtex { 
+    border-width: 1px; 
+    border-radius: 5px; 
+    color: rgb(26, 27, 32); 
+    font-size: 70%; 
+    background-color: #efefef;
+    /* margin-left: 20px; */
+    margin-top: 10px;
+}
