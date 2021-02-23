@@ -51,8 +51,8 @@ function displayPaper(paper, index) {
 
     let url = paper["files_s"];
     let link = "";
-    if (url && url.length) link = makeLink (url[0], "/img/pdficon.gif", 35);
-    else link = makeLink (paper["uri_s"], "/img/HAL.png", 35);
+    if (url && url.length) link = makeLink (url[0], "img/pdficon.gif", 35);
+    else link = makeLink (paper["uri_s"], "img/HAL.png", 35);
 
     let titles = paper["title_s"];
     let title = (titles && titles.length) ? makeEntry(titles[0], "div", "pub_title") : "---";
