@@ -114,15 +114,22 @@ function display (result, div, menu) {
 // ---------------------------------------------------------------------
 function getPublications (url, destdiv) {
     return new Promise( function (resolve, failure) {
+		document.body.style.cursor = "wait";
         const request = new XMLHttpRequest();
         request.open("GET", url);
-        request.send();
         request.onreadystatechange = function() {
-        if (this.status==200) {
-            if (this.readyState==4) resolve(request.responseText);
+            if (this.status==200) {
+                if (this.readyState==4) {
+                    document.body.style.cursor = "default";
+                    resolve(request.responseText);
+                }
+            }
+            else {
+                document.body.style.cursor = "default";
+                failure ("Error #" + request.status + ": fetching publications list could not be completed.");
+            }
         }
-        else failure (request.status);
-        }
+        request.send();
     });
 }
 
@@ -151,5 +158,7 @@ if (pubdiv) {
     let menu = getMenu ("menuholder");
     const url = "https://api.archives-ouvertes.fr/search/FAUST" 
     const options = "indent=true&wt=json&rows=2000&fl=*&sort=publicationDateY_i%20desc";
-    getPublications(url + "?" + options).then ( (result) => { display(result, pubdiv, menu); });
+    getPublications(url + "?" + options)
+        .then ( (result) => { display(result, pubdiv, menu); })
+        .catch ( (error) => { pubdiv.innerHTML = error; } );
 }
