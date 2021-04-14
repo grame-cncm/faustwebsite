@@ -1,5 +1,5 @@
 # Made With Faust
-    
+
 ## moForte's GeoShred
 
 <a href="http://www.moforte.com/"><img class="mx-auto d-block" src="img/geo.jpg" alt="Card image cap"></a>    
@@ -53,7 +53,7 @@ Snd-RT is the realtime extension for the sound editor SND.
 <a href="https://ccrma.stanford.edu/~rmichon/fauck/"><img  class="mx-auto d-block" src="img/fauck.jpg" alt="Card image cap"></a>  
 
 FaucK is a Chugin allowing to combine the Faust language with the strongly-timed ChucK audio programming language.
- 
+
 ## Foo YC20
 
 <a href="http://foo-yc20.codeforcode.com/"><img  class="mx-auto d-block" src="img/yc20.jpg" alt="Card image cap"></a>  
@@ -155,7 +155,7 @@ The BladeAxe is an electric guitar physical model controller using Faust for sou
 <a href="https://ccrma.stanford.edu/~rmichon/bladeaxe/"><img  class="mx-auto d-block" src="img/plateaxe.jpg  "></a>  
 
 The PlateAxe is a percussion instrument physical model controller using Faust for sound synthesis and processing.
- 
+
 ## Nuance
 
 <a href="https://ccrma.stanford.edu/~rmichon/nuance/"><img  class="mx-auto d-block" src="img/nuance.jpg"></a>  
@@ -167,7 +167,7 @@ Nuance is a pressure sensitive music controller that uses Faust for sound synthe
 <a href="https://wiki.analog.com/resources/tools-software/sharc-audio-module/faust"><img  class="mx-auto d-block" src="img/sam.jpg"></a>  
 
 The ADI SHARC DSP board fully supports Faust.
- 
+
 ## Dynamic PedalBoard
 
 <a href="https://wasabi.i3s.unice.fr/dynamicPedalboard/"><img  class="mx-auto d-block" src="img/wasabi.jpg"></a>  
@@ -204,3 +204,8 @@ iPlug 2 is a simple-to-use C++ framework for developing cross platform audio plu
 
 Mephisto LV2 a Just-in-Time Faust compiler embedded in an LV2 plugin. Write LV2 audio/cv instruments/filters directly in your host in Faust DSP language without any need to restart/reload host or plugin upon code changes.
 
+## TouchDesigner
+
+<a href="https://github.com/DBraun/TD-Faust/"><img  width="60%" class="mx-auto d-block" src="img/touchdesigner.png"></a>  
+
+TD-Faust enables Faust code to run inside [TouchDesigner](https://derivative.ca). Follow the [demo here](https://www.youtube.com/watch?v=0qi2lp_TgE0).
