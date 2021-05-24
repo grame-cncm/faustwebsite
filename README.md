@@ -31,7 +31,6 @@ More details about the build process. Type:
 $ make help
 ~~~~~~~~~~~~~~~~
 
-
 ### Publishing 
 
 The docs folder at rool level contains all files that will be published. To make the current version publicly available:

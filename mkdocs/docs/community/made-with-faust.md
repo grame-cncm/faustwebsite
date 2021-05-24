@@ -64,7 +64,7 @@ Foo YC20 is an open source implementation of the Yamaha YC-20 combo organ from 1
 
 <a href="http://chiselapp.com/user/jcage/repository/rdk/doc/www/www/revdev.html"><img  class="mx-auto d-block" src="img/reverb.jpg"></a>  
 
-Reverberation Development Kit.
+A Reverberation Development Kit.
         
 ## faust-vst
 
@@ -94,7 +94,7 @@ FaustPy is a Python wrapper for Faust. It is implemented using the CFFI and henc
 
 <a href="http://ambisonic.xyz/"><img  class="mx-auto d-block" src="img/xyz.jpg"></a>  
 
-A set tools around Ambisonics.
+A set of tools around Ambisonics.
                 
 ## Ambisonic Decoder Toolbox
 
@@ -209,3 +209,9 @@ Mephisto LV2 a Just-in-Time Faust compiler embedded in an LV2 plugin. Write LV2 
 <a href="https://github.com/DBraun/TD-Faust/"><img  width="60%" class="mx-auto d-block" src="img/touchdesigner.png"></a>  
 
 TD-Faust enables Faust code to run inside [TouchDesigner](https://derivative.ca). Follow the [demo here](https://www.youtube.com/watch?v=0qi2lp_TgE0).
+
+## Web Synth and Digial Audio Workstation
+
+<a href="https://github.com/Ameobea/web-synth"><img  width="80%" class="mx-auto d-block" src="img/web_synth.png"></a>  
+
+This is a web-based DAW (Digital Audio Workstation) written in Rust/WebAssembly and TypeScript with extensive Faust language integration with dynamic remote code compilation and executing via WebAssembly. Follow the [demo here](https://www.youtube.com/watch?v=DDWYhueiqOc).
