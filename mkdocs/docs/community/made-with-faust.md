@@ -210,7 +210,7 @@ Mephisto LV2 a Just-in-Time Faust compiler embedded in an LV2 plugin. Write LV2 
 
 TD-Faust enables Faust code to run inside [TouchDesigner](https://derivative.ca). Follow the [demo here](https://www.youtube.com/watch?v=0qi2lp_TgE0).
 
-## Web Synth and Digial Audio Workstation
+## Web Synth and Digital Audio Workstation
 
 <a href="https://github.com/Ameobea/web-synth"><img  width="80%" class="mx-auto d-block" src="img/web_synth.png"></a>  
 
