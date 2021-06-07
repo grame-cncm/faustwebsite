@@ -240,3 +240,10 @@ Fragment Audio Server (FAS) is a high performance pixels-based graphical audio s
 
 [master_me](https://github.com/trummerschlunk/master_me)  is an automatic audio dynamics processor that smoothly balances sound during streaming events and live recordings. Preventing clipping and distortion, the software connects an effective leveling process with a mastering chain modeled after the analog audio path of Berlin-based Mastering Engineer Klaus Scheuermann.
 
+
+## Making Sound Machines
+
+<a href="https://makingsoundmachines.com"><img  width="60%" class="mx-auto d-block" src="img/makingsoundmachines.png"></a>  
+
+[Making Sound Machines](https://makingsoundmachines.com) are a duo of makers from Düsseldorf, Germany. We build kits, modules and DIY projects, and use the projects we’ve built to make music. Faust is used in several projects.
+
