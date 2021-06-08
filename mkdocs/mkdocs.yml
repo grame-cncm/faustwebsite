@@ -23,7 +23,7 @@ nav:
         - 'Academic Publications': community/publications.md
         - 'Press': community/press.md
         - 'Sponsors': community/sponsors.md
-        - 'Made with Faust': community/made-with-faust.md
+        - 'Using Faust': community/made-with-faust.md
         - 'Logos': community/logos.md
     - Projects:
         - 'FAST': https://fast.grame.fr
