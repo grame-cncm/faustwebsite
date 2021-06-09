@@ -245,7 +245,7 @@ Pure is a dynamically typed, functional programming language based on term rewri
 
 An audio plug-in for guitar effects who's sound processing engine is written in Faust.
 
-## moForte's GeoShred
+## moForte GeoShred
 
 <a href="http://www.moforte.com/"><img class="mx-auto d-block" src="img/geo.jpg" alt="Card image cap"></a>    
 
