@@ -254,3 +254,15 @@ Fragment Audio Server (FAS) is a high performance pixels-based graphical audio s
 
 [Making Sound Machines](https://makingsoundmachines.com) are a duo of makers from Düsseldorf, Germany. We build kits, modules and DIY projects, and use the projects we’ve built to make music. Faust is used in several projects.
 
+## PureTones
+
+<a href="https://puretones.sadharani.com"><img  width="50%" class="mx-auto d-block" src="img/puretones.png"></a>  
+
+[PureTones](https://puretones.sadharani.com) PureTones is a family of software tools for Indian Classical music. They are built based on an in-depth study and exploration of Indian Classical music to understand the role of harmonics, microtones and consonance in Indian Ragas and musical scales:
+
+- [PureTones Drone](https://puretones.sadharani.com/drone/) is a digital Tanpura with controls for fine tuning the strings and adjusting their harmonic envelope.
+- [PureTones Musical Scale](https://puretones.sadharani.com/scale/) is a digital 12 note keyboard with controls for fine tuning each key to be consonant with an accompanying drone track.
+- [PureTones Sequencer](https://puretones.sadharani.com/sequencer/) is a sequencer which enables composition of melodies and musical works in Indian Classical music using notes from a fine tuned musical scale.
+
+All applications have been developed using Faust and WebAudio tools.
+
