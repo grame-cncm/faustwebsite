@@ -1,5 +1,12 @@
 # Using Faust
 
+## Amati
+
+<a href="https://github.com/glocq/Amati"><img  width="70%" class="mx-auto d-block" src="img/amati.png"></a>  
+
+[Amati](https://github.com/glocq/Amati) is a VST plugin for live-coding effects in the Faust programming language. As of now it only provides basic functionality. 
+
+
 ## PureTones
 
 <a href="https://puretones.sadharani.com"><img  width="50%" class="mx-auto d-block" src="img/puretones.png"></a>  
