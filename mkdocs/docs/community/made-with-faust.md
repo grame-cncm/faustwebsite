@@ -1,5 +1,11 @@
 # Using Faust
 
+## faustgen2~
+
+<a href="https://github.com/agraef/pd-faustgen"><img  width="60%" class="mx-auto d-block" src="img/faustgen2.png"></a>  
+
+The [faustgen2~](https://github.com/agraef/pd-faustgen) object is a Faust external for Pd a.k.a. [Pure Data](http://msp.ucsd.edu/software.html), Miller Puckette's interactive multimedia programming environment. 
+
 ## Amati
 
 <a href="https://github.com/glocq/Amati"><img  width="70%" class="mx-auto d-block" src="img/amati.png"></a>  
