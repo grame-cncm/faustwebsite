@@ -52,13 +52,11 @@ Sample-accurate Looper/Delay with free mode and midi-clock sync mode.
 
 XY Surround Matrix for one Source (Mono Input) with 4 Outputs (Left, Right, Surround Left, Surround Right) and Position Lock.
 
-## STM32 synthesizers (Jacek Wieczorek)
+## stm32-faust-synth
 
-<a href="https://www.youtube.com/watch?v=7w-DwwoFKhU"><img  width="70%" class="mx-auto d-block" src="img/stm32synth.png"></a>  
+<a href="https://github.com/Jacajack/stm32-faust-synth"><img  width="70%" class="mx-auto d-block" src="img/stm32synth.png"></a>  
 
-- [STM32 synthesizer](https://www.youtube.com/watch?v=7w-DwwoFKhU): a short presentation of a polyphonic synthesizer based on STM32F405 µC. Faust is used for signal processing and a TLV320AIC23B stereo codec serves as DAC. 
-
-- [STM32 synthesizer](https://www.youtube.com/watch?v=xQMCDbAZJKs): this an early (previously unpublished) demo of my STM32 synthesizer. I am making it public now because of the interest in my other video involving PPG wavetable synthesis. Here you can hear it at 2:20. I gave up the idea of performing wavetable synthesis on this platform soon after I recorded this video and then decided to turn it into a separate project instead (µsynth a.k.a. Smalldorf a.k.a. Waldwarf).
+[STM32 synthesizer video](https://www.youtube.com/watch?v=7w-DwwoFKhU) is a short presentation of a polyphonic synthesizer based on STM32F405 µC. Faust is used for signal processing and a TLV320AIC23B stereo codec serves as DAC. Another more recent video is [here](https://www.youtube.com/watch?v=sdmgSUM9pkg).
 
 
 ## faustgen2~
