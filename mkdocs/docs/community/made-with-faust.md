@@ -1,5 +1,56 @@
 # Using Faust
 
+## sonejostudios
+
+A set of tools written using Faust.
+
+### Panoramix
+
+<a href="https://github.com/sonejostudios/Panoramix"><img  width="40%" class="mx-auto d-block" src="img/panoramix.png"></a>  
+
+Stereo Panorama/Balance and Volume Automation Tool.
+
+### Mixer4x
+
+<a href="https://github.com/sonejostudios/Mixer4x"><img  width="40%" class="mx-auto d-block" src="img/mixer4x11.png"></a>  
+
+A simple 4-channel stereo mixer. The main goal is to use it as a submixer on a 4 channel track, but you can use it everywhere you need a small 4 channel stereo mixer.
+
+### faustdrumseq
+
+<a href="https://github.com/sonejostudios/faustdrumseq"><img  width="40%" class="mx-auto d-block" src="img/faustdrumseq.png"></a>  
+
+A very simple drum sequencer written with Faust, using the new soundfile object.
+
+### MidiClockClick
+
+<a href="https://github.com/sonejostudios/MidiClockClick"><img  width="30%" class="mx-auto d-block" src="img/midiclockclick.png"></a>  
+
+A simple metronom driven by MidiClock.
+
+### SuperBeatRepeater
+
+<a href="https://github.com/sonejostudios/SuperBeatRepeater"><img  width="40%" class="mx-auto d-block" src="img/SuperBeatRepeater.png"></a>  
+
+Beat Repeater with Sidechain Beat Recognation and Midi-Clock Sync. Very useful i.e to add musical diversity by looping short parts of the stream (i.e drums).
+
+### SuperCutSequencer
+
+<a href="https://github.com/sonejostudios/SuperCutSequencer"><img  width="50%" class="mx-auto d-block" src="img/SuperCutSequencer.png"></a>  
+
+Cut "On/Off" Sequencer (8 steps with smooth) synced to Midi-Clock Beats and Midi-Clock Start/Stop. Very useful i.e to add musical diversity in looped tracks (very nice with i.e bass lines).
+
+### DeLooper
+
+<a href="https://github.com/sonejostudios/DeLooper"><img  width="30%" class="mx-auto d-block" src="img/DeLooper.png"></a>  
+
+Sample-accurate Looper/Delay with free mode and midi-clock sync mode.
+
+### XYMatrix
+
+<a href="https://github.com/sonejostudios/XYMatrix"><img  width="60%" class="mx-auto d-block" src="img/xymatrix.png"></a>  
+
+XY Surround Matrix for one Source (Mono Input) with 4 Outputs (Left, Right, Surround Left, Surround Right) and Position Lock.
 
 ## STM32 synthesizers (Jacek Wieczorek)
 
