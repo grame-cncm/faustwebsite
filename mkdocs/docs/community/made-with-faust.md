@@ -1,5 +1,15 @@
 # Using Faust
 
+
+## STM32 synthesizers (Jacek Wieczorek)
+
+<a href="https://www.youtube.com/watch?v=7w-DwwoFKhU"><img  width="70%" class="mx-auto d-block" src="img/stm32synth.png"></a>  
+
+- [STM32 synthesizer](https://www.youtube.com/watch?v=7w-DwwoFKhU). A short presentation of a polyphonic synthesizer based on STM32F405 µC. Faust is used for signal processing and a TLV320AIC23B stereo codec serves as DAC. 
+
+- [STM32 synthesizer](https://www.youtube.com/watch?v=xQMCDbAZJKs). This an early (previously unpublished) demo of my STM32 synthesizer. I am making it public now because of the interest in my other video involving PPG wavetable synthesis. Here you can hear it at 2:20. I gave up the idea of performing wavetable synthesis on this platform soon after I recorded this video and then decided to turn it into a separate project instead (µsynth a.k.a. Smalldorf a.k.a. Waldwarf).
+
+
 ## faustgen2~
 
 <a href="https://github.com/agraef/pd-faustgen"><img  width="60%" class="mx-auto d-block" src="img/faustgen2.png"></a>  
