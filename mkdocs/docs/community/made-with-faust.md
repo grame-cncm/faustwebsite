@@ -82,6 +82,8 @@ The [faustgen2~](https://github.com/agraef/pd-faustgen) object is a Faust extern
 - [PureTones Musical Scale](https://puretones.sadharani.com/scale/) is a digital 12 note keyboard with controls for fine tuning each key to be consonant with an accompanying drone track.
 - [PureTones Sequencer](https://puretones.sadharani.com/sequencer/) is a sequencer which enables composition of melodies and musical works in Indian Classical music using notes from a fine tuned musical scale.
 
+The [Ragatronics project](https://ragatronics.sadharani.com) combines Ragas from Indian Classical music with elements from Rock, Jazz and Electronic music.
+
 All applications [have been developed](https://github.com/aravind-sadharani/puretones) using Faust and WebAudio tools.
 
 ## Making Sound Machines
