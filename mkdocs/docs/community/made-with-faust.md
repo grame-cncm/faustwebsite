@@ -1,5 +1,15 @@
 # Make With Faust
 
+## Gwion
+
+## [Gwion](https://github.com/Gwion/Gwion)
+
+<a href="https://github.com/Gwion/gwion-plug/tree/master/Faust"><img  width="80%" class="mx-auto d-block" src="img/gwion.png"></a>  
+
+Gwion is a programming language aimed at making music. It is strongly inspired by [ChucK](http://chuck.stanford.edu) and can use a set of [plugins for Gwion](https://github.com/Gwion/gwion-plug). One allows to use the [libfaust](https://github.com/Gwion/gwion-plug/tree/master/Faust) library to JIT compile and run DSP code on the fly. The [faust2gw](https://github.com/Gwion/gwion-plug/tree/master/faust2gw) tool allows to produce statically compiled modules.
+
+### [Panoramix](https://github.com/sonejostudios/Panoramix)
+
 ## sonejostudios
 
 A set of tools written using Faust.
@@ -339,5 +349,5 @@ An on-the-fly compiler for the Faust programming language using the LLVM technol
 
 
 
-                  
+​                  
 
