@@ -1,6 +1,6 @@
 # Make With Faust
 
-## [JSPacher](https://github.com/Fr0stbyteR/jspatcher)
+## [JSPatcher](https://github.com/Fr0stbyteR/jspatcher)
 
 <a href="https://github.com/Fr0stbyteR/jspatcher"><img  width="70%" class="mx-auto d-block" src="img/jspatcher.png"></a>  
 
