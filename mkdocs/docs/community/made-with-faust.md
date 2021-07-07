@@ -1,5 +1,11 @@
 # Make With Faust
 
+## [JSPacher](https://github.com/Fr0stbyteR/jspatcher)
+
+<a href="https://github.com/Fr0stbyteR/jspatcher"><img  width="70%" class="mx-auto d-block" src="img/jspatcher.png"></a>  
+
+JSPatcher is a Visual Programming Language (VPL) in Max/PureData style on the web.
+
 ## [Gwion](https://github.com/Gwion/Gwion)
 
 <a href="https://github.com/Gwion/gwion-plug/tree/master/Faust"><img  width="80%" class="mx-auto d-block" src="img/gwion.png"></a>  
