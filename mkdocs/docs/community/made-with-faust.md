@@ -1,4 +1,4 @@
-# Make With Faust
+# Made With Faust
 
 ## [JSPatcher](https://github.com/Fr0stbyteR/jspatcher)
 
