@@ -1,5 +1,11 @@
 # Made With Faust
 
+## [React Web Audio Guitar Studio](https://github.com/Kutalia/react-webaudio-5150)
+
+<a href="https://github.com/Kutalia/react-webaudio-5150"><img  width="65%" class="mx-auto d-block" src="img/reactwebaudio5150.png"></a>  
+
+React Web Audio Guitar Studio is an online real-time Web Audio based all-in-one guitar studio, using native plugins written on Faust, compiled on-demand, and ran in a browser.
+
 ## [JSPatcher](https://github.com/Fr0stbyteR/jspatcher)
 
 <a href="https://github.com/Fr0stbyteR/jspatcher"><img  width="70%" class="mx-auto d-block" src="img/jspatcher.png"></a>  
