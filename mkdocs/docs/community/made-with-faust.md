@@ -1,5 +1,13 @@
 # Made With Faust
 
+## [The KeyWi](https://ccrma.stanford.edu/~mcaren/keyWI/)
+
+<a href="https://ccrma.stanford.edu/~mcaren/keyWI/"><img  width="60%" class="mx-auto d-block" src="img/keywi-image-transparent.jpg"></a>  
+
+An Expressive and Accessible Electronic Wind Instrument, where the sound is synthesized with Faust running on the Bela Mini processing board.
+
+## 
+
 ## [React Web Audio Guitar Studio](https://github.com/Kutalia/react-webaudio-5150)
 
 <a href="https://github.com/Kutalia/react-webaudio-5150"><img  width="65%" class="mx-auto d-block" src="img/reactwebaudio5150.png"></a>  
