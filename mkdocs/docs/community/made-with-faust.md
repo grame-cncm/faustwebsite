@@ -10,7 +10,7 @@ React Web Audio Guitar Studio is an online real-time Web Audio based all-in-one 
 
 <a href="https://github.com/Fr0stbyteR/jspatcher"><img  width="70%" class="mx-auto d-block" src="img/jspatcher.png"></a>  
 
-JSPatcher is a Visual Programming Language (VPL) in Max/PureData style on the web.
+JSPatcher is a Visual Programming Language (VPL) in Max/PureData style on the web. Customized AudioWorklet DSPs can be written with Faust.
 
 ## [Gwion](https://github.com/Gwion/Gwion)
 
