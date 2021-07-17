@@ -2,6 +2,13 @@
 
 This page lists the projects using Faust in different ways: plugins, standalone applications, integration in existing audio programing environments, development tools, Web applications, etc.
 
+
+## [FASELUNARE Microcosmos](http://www.faselunare.com)
+
+<a href="http://www.faselunare.com"><img  width="55%" class="mx-auto d-block" src="img/microcosmos.png"></a>  
+
+Microcosmos is a small open-source electronic board, developed by ​Faselunare (Italy), aimed at prototyping electronic musical instruments and learning electronics, microcontroller programming and audio DSP, and programmable with Faust. A demo video of the project can be [seen here](https://www.youtube.com/watch?v=bsdKUMoJwOM).
+
 ## [Audio Anywhere](https://muses-dmi.github.io/audio_anywhere/overview/)
 
 <a href="https://muses-dmi.github.io/audio_anywhere/overview/"><img  width="60%" class="mx-auto d-block" src="img/audio-anywhere.png"></a>  
@@ -17,8 +24,6 @@ The goal of Audio Anywhere is to explore the idea of compile once, run anywhere 
 <a href="https://ccrma.stanford.edu/~mcaren/keyWI/"><img  width="60%" class="mx-auto d-block" src="img/keywi-image-transparent.jpg"></a>  
 
 An Expressive and Accessible Electronic Wind Instrument, where the sound is synthesized with Faust running on the Bela Mini processing board.
-
-## 
 
 ## [React Web Audio Guitar Studio](https://github.com/Kutalia/react-webaudio-5150)
 
