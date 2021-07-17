@@ -1,6 +1,6 @@
 # Made With Faust
 
-This page lists the projects using Faust in different ways: plugins, standalone applications, integration in existing audio programing environments, development tools, Web applications, etc.
+This page lists the projects using Faust in different ways: plugins, standalone applications, integration in audio programing environments, development tools, research projects, Web applications, etc.
 
 ## [Live concatenative granular processing](https://github.com/dariosanfilippo/concatenative_granulation)
 
