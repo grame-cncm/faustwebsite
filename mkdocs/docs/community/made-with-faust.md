@@ -1,6 +1,6 @@
 # Made With Faust
 
-This page list projects which are using Faust in different manners: plugins, standalone applications, integration in existing audio programing environement, developement tools, Web applications, etc.
+This page lists the projects using Faust in different ways: plugins, standalone applications, integration in existing audio programing environments, development tools, Web applications, etc.
 
 ## [Audio Anywhere](https://muses-dmi.github.io/audio_anywhere/overview/)
 
