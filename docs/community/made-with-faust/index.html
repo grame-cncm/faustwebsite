@@ -168,6 +168,14 @@
             
             <li class="nav-item" data-level="1"><a href="#made-with-faust" class="nav-link">Made With Faust</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#live-concatenative-granular-processing" class="nav-link">Live concatenative granular processing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#fb_suppression" class="nav-link">fb_suppression</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#ossia-score" class="nav-link">ossia score</a>
               <ul class="nav flex-column">
               </ul>
@@ -425,6 +433,13 @@
 
 <h1 id="made-with-faust">Made With Faust</h1>
 <p>This page lists the projects using Faust in different ways: plugins, standalone applications, integration in existing audio programing environments, development tools, Web applications, etc.</p>
+<h2 id="live-concatenative-granular-processing"><a href="https://github.com/dariosanfilippo/concatenative_granulation">Live concatenative granular processing</a></h2>
+<p><a href="https://github.com/dariosanfilippo/concatenative_granulation"><img  width="40%" class="mx-auto d-block" src="img/concatenative-granular.png"></a>  </p>
+<p>This algorithm addresses signal discontinuity and concatenation artefacts in real-time granular processing with rectangular windowing. By combining zero-crossing synchronicity, first-order derivative analysis, and Lagrange polynomials, we can generate streams of uncorrelated and non-overlapping sonic fragments with minimal low-order derivatives discontinuities. </p>
+<p>The resulting open-source algorithm, implemented in the Faust language, provides a versatile real-time software for dynamical looping, wavetable oscillation, and granulation with reduced artefacts due to rectangular windowing and no artefacts from overlap-add-to-one techniques commonly deployed in granular processing.</p>
+<h2 id="fb_suppression"><a href="https://github.com/dariosanfilippo/automatic_larsen_suppression">fb_suppression</a></h2>
+<p><a href="https://github.com/dariosanfilippo/automatic_larsen_suppression"><img  width="40%" class="mx-auto d-block" src="img/automatic-larsen.png"></a>  </p>
+<p>ALS - Automatic Larsen Suppression algorithms implementing adaptive filtering through spectral centroid calculation, and adaptive ferquency shifting through RMS calculation.</p>
 <h2 id="ossia-score"><a href="https://ossia.io">ossia score</a></h2>
 <p><a href="https://ossia.io"><img  width="55%" class="mx-auto d-block" src="img/ossia-score.png"></a>  </p>
 <p>Ossia score is a sequencer for audio-visual artists, designed to enable the creation of interactive shows, museum installations, intermedia digital artworks, interactive music and more in an intuitive user interface. Faust can be used to <a href="https://ossia.io/score/features.html">create advanced audio processes</a>. A demo video of the Faust integration can be <a href="https://www.youtube.com/watch?time_continue=1&amp;v=yvTjJMrFxR0&amp;feature=emb_logo">seen here</a>.</p>

@@ -2,6 +2,19 @@
 
 This page lists the projects using Faust in different ways: plugins, standalone applications, integration in existing audio programing environments, development tools, Web applications, etc.
 
+## [Live concatenative granular processing](https://github.com/dariosanfilippo/concatenative_granulation)
+
+<a href="https://github.com/dariosanfilippo/concatenative_granulation"><img  width="40%" class="mx-auto d-block" src="img/concatenative-granular.png"></a>  
+
+This algorithm addresses signal discontinuity and concatenation artefacts in real-time granular processing with rectangular windowing. By combining zero-crossing synchronicity, first-order derivative analysis, and Lagrange polynomials, we can generate streams of uncorrelated and non-overlapping sonic fragments with minimal low-order derivatives discontinuities. 
+
+The resulting open-source algorithm, implemented in the Faust language, provides a versatile real-time software for dynamical looping, wavetable oscillation, and granulation with reduced artefacts due to rectangular windowing and no artefacts from overlap-add-to-one techniques commonly deployed in granular processing.
+
+## [fb_suppression](https://github.com/dariosanfilippo/automatic_larsen_suppression)
+
+<a href="https://github.com/dariosanfilippo/automatic_larsen_suppression"><img  width="40%" class="mx-auto d-block" src="img/automatic-larsen.png"></a>  
+
+ALS - Automatic Larsen Suppression algorithms implementing adaptive filtering through spectral centroid calculation, and adaptive ferquency shifting through RMS calculation.
 
 ## [ossia score](https://ossia.io)
 
