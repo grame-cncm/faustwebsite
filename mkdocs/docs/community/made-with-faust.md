@@ -1,5 +1,17 @@
 # Made With Faust
 
+This page list projects which are using Faust in different manners: plugins, standalone applications, integration in existing audio programing environement, developement tools, Web applications, etc.
+
+## [Audio Anywhere](https://muses-dmi.github.io/audio_anywhere/overview/)
+
+<a href="https://muses-dmi.github.io/audio_anywhere/overview/"><img  width="60%" class="mx-auto d-block" src="img/audio-anywhere.png"></a>  
+
+The goal of Audio Anywhere is to explore the idea of compile once, run anywhere for audio DSP code. Audio Anywhere combines Faust, for audio DSP code, and HTML5 to enable development of modern audio synthesis and effects tools. There are currently three main repos for this work:
+
+- [AA examples](https://github.com/bgaster/aa_examples)
+- [AA standalone app](https://github.com/bgaster/aa_standalone)
+- [AA Wasmtime runtime](https://github.com/bgaster/aa_wasmtime)
+
 ## [The KeyWi](https://ccrma.stanford.edu/~mcaren/keyWI/)
 
 <a href="https://ccrma.stanford.edu/~mcaren/keyWI/"><img  width="60%" class="mx-auto d-block" src="img/keywi-image-transparent.jpg"></a>  
