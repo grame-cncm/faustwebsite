@@ -14,7 +14,7 @@ The resulting open-source algorithm, implemented in the Faust language, provides
 
 <a href="https://github.com/dariosanfilippo/automatic_larsen_suppression"><img  width="40%" class="mx-auto d-block" src="img/automatic-larsen.png"></a>  
 
-ALS - Automatic Larsen Suppression algorithms implementing adaptive filtering through spectral centroid calculation, and adaptive ferquency shifting through RMS calculation.
+ALS - Automatic Larsen Suppression algorithms implementing adaptive filtering through spectral centroid calculation, and adaptive frequency shifting through RMS calculation.
 
 ## [ossia score](https://ossia.io)
 
