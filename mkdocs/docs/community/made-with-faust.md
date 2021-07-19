@@ -2,6 +2,12 @@
 
 This page lists the projects using Faust in different ways: plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
 
+## [EchoMatrix](https://improvoid.github.io)
+
+<a href="https://improvoid.github.io"><img  width="40%" class="mx-auto d-block" src="img/echomatrix.png"></a>  
+
+The EchoMatrix was designed to provide some of the functionality of the Yamaha UD Stomp pedal as used be Alan Holdsworth. This project will be submitted to the KVR Developer Challenge 2021 contest to highlight the power of the Faust DSP development environment and the JUCE framework to create a non-trivial effect VST3 using a managable amount of Faust DSP code.
+
 ## [The Striso board](https://www.striso.org)
 
 <a href="https://www.striso.org"><img  width="50%" class="mx-auto d-block" src="img/striso.jpg"></a>  
