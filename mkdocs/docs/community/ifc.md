@@ -8,8 +8,7 @@ Participants share their work through paper presentations. A series of round  ta
 
 ## Next Edition: IFC-22 - June 7-8, 2022 - During SMC-22 at St-Etienne (France)
 
-The third edition of the International Faust Conference (IFC-22)https://ifc20.sciencesconf.org/
-will take place during [SMC-22](https://smc22.grame.fr) at St-Etienne (France) on June 7-8, 2022.  
+The third edition of the International Faust Conference (IFC-22) will take place during [SMC-22](https://smc22.grame.fr) at St-Etienne (France) on June 7-8, 2022.  
 
 ## Past Editions
 
