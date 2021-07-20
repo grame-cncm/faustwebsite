@@ -17,6 +17,8 @@ The third edition of the International Faust Conference (IFC-22) will take place
 The [second edition of the International Faust Conference (IFC-20)](https://ifc20.sciencesconf.org/) 
 took place at the [Maison des Sciences de l’Homme Paris Nord](https://www.mshparisnord.fr/contacts/plan-telephone-adresse/) on December 1-2, 2020.  
 
+<img src="img/ifc2020.jpg" class="mx-auto d-block" width="80%">
+
 ### IFC-18 - JGU, Mainz (Germany)
 
 The [first edition of the International Faust Conference (IFC-18)](http://www.ifc18.uni-mainz.de/) 
