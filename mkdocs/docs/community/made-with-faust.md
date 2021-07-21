@@ -12,7 +12,9 @@ The EchoMatrix was designed to provide some of the functionality of the Yamaha U
 
 <a href="https://www.striso.org"><img  width="50%" class="mx-auto d-block" src="img/striso.jpg"></a>  
 
-The Striso board is a very expressive music instrument which combines multidimensionally sensitive keys with an innovative note layout that helps understand the structures in music. The keys capture each subtle finger movement, which allows for levels of musical expression previously only known to acoustic instruments. Additionally, accents and sound effects can be added by shaking and moving the instrument as a whole.  The [firmware source code](https://github.com/striso/striso-control-firmware) for the Striso board MPE MIDI uses Faust for the DSP.
+The Striso board is a very expressive music instrument which combines multidimensionally sensitive keys with an innovative note layout that helps understand the structures in music. The keys capture each subtle finger movement, which allows for levels of musical expression previously only known to acoustic instruments. Additionally, accents and sound effects can be added by shaking and moving the instrument as a whole. 
+
+The internal sound is written in Faust, and is controlled directly by the signals from the keys and motion sensor. External synthesizers can be controlled using MPE MIDI, or using OSC which is easier to set up for Faust synthesizers. The [firmware source code](https://github.com/striso/striso-control-firmware) is released as open source.
 
 
 ## [Live concatenative granular processing](https://github.com/dariosanfilippo/concatenative_granulation)
