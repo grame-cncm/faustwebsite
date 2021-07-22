@@ -2,6 +2,12 @@
 
 This page lists the projects using Faust in different ways: plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
 
+## [SynthSpace](https://synthspace.rocks)
+
+<a href="https://synthspace.rocks"><img  width="60%" class="mx-auto d-block" src="img/synthspace.png"></a>  
+
+Synthspace is the ultimate virtual synthesizer. It combines the familiarity of real instruments with the possibilities of virtual worlds. Nodes for  Synthspace [can be developed in Faust](https://github.com/brightlightrx/synthspace-audio-layer). 
+
 ## [Bass21](https://github.com/jpcima/Bass21)
 
 <a href="https://github.com/jpcima/Bass21"><img  width="70%" class="mx-auto d-block" src="img/bass21.png"></a>  
