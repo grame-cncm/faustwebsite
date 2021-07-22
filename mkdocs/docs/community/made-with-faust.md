@@ -2,6 +2,13 @@
 
 This page lists the projects using Faust in different ways: plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
 
+## [Bass21](https://github.com/jpcima/Bass21)
+
+<a href="https://github.com/jpcima/Bass21"><img  width="70%" class="mx-auto d-block" src="img/bass21.png"></a>  
+
+This VST3 is a virtual-analog simulation of the famous Bass Driver DI Version 1 preamp pedal from Tech21. The discretization, while far from being exact, is moderately close to the original.
+The potentiometers are identical to these physically present on the BDDI pedal, apart from the pregain which is specific to this digital version. The DSP code is written in Faust.
+
 ## [EchoMatrix](https://improvoid.github.io)
 
 <a href="https://improvoid.github.io"><img  width="40%" class="mx-auto d-block" src="img/echomatrix.png"></a>  
