@@ -184,7 +184,7 @@ master_me is an automatic audio dynamics processor that smoothly balances sound 
 
 <a href="http://blanchemain.info/Documents/Programmation/index.php?page=metaSurface"><img  width="60%" class="mx-auto d-block" src="img/metaSurface.png"></a>  
 
-metaSurface64 is a real-time continuous sound transformation control surface that features both its own loop generator for up to 64 voices and a multi-effects FX engine.
+metaSurface64 is a real-time continuous sound transformation control surface that features both its own loop generator for up to 64 voices and a multi-effects FX engine. The application embeds the libfaust dynamic version of the Faust compiler.
 
 ## [Fragment Audio Server](https://github.com/grz0zrg/fas) and Fragment
 
