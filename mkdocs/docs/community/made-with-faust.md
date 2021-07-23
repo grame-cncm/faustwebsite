@@ -6,7 +6,7 @@ This page lists the projects using Faust in different ways: plugins, standalone 
 
 <a href="https://github.com/Frando/studiox-switcher"><img  width="22%" class="mx-auto d-block" src="img/studiox-switcher.png"></a>  
 
- Studiox-switcher is input switcher and silence detector for JACK.It can switch between 3 stereo inputs, a fallback channel is activated if the active input is below a volume threshold for some amount of seconds and channels may be switched via OSC and HTTP. The core DSP engine is done via Faust for switching, silence detection and level metering.
+ Studiox-switcher is an input switcher and silence detector for JACK. It can switch between 3 stereo inputs, a fallback channel is activated if the active input is below a volume threshold for some amount of seconds, and channels may be switched via OSC and HTTP. The core DSP engine is done via Faust for switching, silence detection and level metering.
 
 ## [SynthSpace](https://synthspace.rocks)
 
