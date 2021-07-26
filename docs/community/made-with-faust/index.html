@@ -168,6 +168,10 @@
             
             <li class="nav-item" data-level="1"><a href="#made-with-faust" class="nav-link">Made With Faust</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#soundjack" class="nav-link">Soundjack</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#studiox-switcher" class="nav-link">studiox-switcher</a>
               <ul class="nav flex-column">
               </ul>
@@ -453,6 +457,9 @@
 
 <h1 id="made-with-faust">Made With Faust</h1>
 <p>This page lists the projects using Faust in different ways: plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.</p>
+<h2 id="soundjack"><a href="https://www.soundjack.eu">Soundjack</a></h2>
+<p><a href="https://www.soundjack.eu"><img  width="50%" class="mx-auto d-block" src="img/soundjack.png"></a>  </p>
+<p>The Soundjack realtime communication application is extended by a server cloud to handle up to 60 musicians of an orchestra, developed with Faust programming language.  Each musician is connected to a Soundjack UDP client. An individual stereo mix of the multiple audio streams originating from the multiple Soundjack clients has to be provided to each listening musician. An extended epresentation of the system can be found in this <a href="http://www.ifc18.uni-mainz.de/papers/kuhr.pdf">IFC 2028 paper</a>.</p>
 <h2 id="studiox-switcher"><a href="https://github.com/Frando/studiox-switcher">studiox-switcher</a></h2>
 <p><a href="https://github.com/Frando/studiox-switcher"><img  width="22%" class="mx-auto d-block" src="img/studiox-switcher.png"></a>  </p>
 <p>Studiox-switcher is an input switcher and silence detector for JACK. It can switch between 3 stereo inputs, a fallback channel is activated if the active input is below a volume threshold for some amount of seconds, and channels may be switched via OSC and HTTP. The core DSP engine is done via Faust for switching, silence detection and level metering.</p>
