@@ -1,6 +1,13 @@
-# Made With Faust
+# Powered With Faust
 
 This page lists the projects using Faust in different ways: plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
+
+## [PICO DSP](https://www.crowdsupply.com/ohmic/pico-dsp)
+
+<a href="https://www.crowdsupply.com/ohmic/pico-dsp"><img  width="60%" class="mx-auto d-block" src="img/pico-dsp.png"></a>  
+
+PICO DSP is an open-source, Arduino-compatible ESP32 development board for audio and digital signal processing (DSP) applications. It offers an expansive audio-processing feature set on a small-format, breadboard-friendly device that provides audio inputs, audio outputs, a low-noise microphone array, an integrated test-speaker option, additional memory, battery-charge management, and ESD protection all on one tiny PCB. The board can be programmed [using Faust](https://github.com/ohmic-net/pico_dsp).
+
 
 ## [Soundjack](https://www.soundjack.eu)
 
