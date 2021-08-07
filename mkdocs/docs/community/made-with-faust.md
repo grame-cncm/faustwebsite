@@ -13,7 +13,7 @@ PICO DSP is an open-source, Arduino-compatible ESP32 development board for audio
 
 <a href="https://www.soundjack.eu"><img  width="50%" class="mx-auto d-block" src="img/soundjack.png"></a>  
 
-The Soundjack realtime communication application is extended by a server cloud to handle up to 60 musicians of an orchestra, developed with Faust programming language.  Each musician is connected to a Soundjack UDP client. An individual stereo mix of the multiple audio streams originating from the multiple Soundjack clients has to be provided to each listening musician. An extended epresentation of the system can be found in this [IFC 2028 paper](http://www.ifc18.uni-mainz.de/papers/kuhr.pdf).
+The Soundjack realtime communication application is extended by a server cloud to handle up to 60 musicians of an orchestra, developed with the Faust programming language.  Each musician is connected to a Soundjack UDP client. An individual stereo mix of the multiple audio streams originating from the multiple Soundjack clients has to be provided to each listening musician. An extended presentation of the system can be found in this [IFC 2028 paper](http://www.ifc18.uni-mainz.de/papers/kuhr.pdf).
 
 ## [studiox-switcher](https://github.com/Frando/studiox-switcher)
 
