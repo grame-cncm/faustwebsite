@@ -20,7 +20,7 @@ The regular [sound synthesis class](https://www.ak.tu-berlin.de/menue/lehre/verg
 
 ## HPI Potsdam
 
-The class [Data Sonification & Opportunities of Sound](https://hpi.de/en/studies/courses/data-engineering-ma/course/wise-20-21-3154-data-sonification--opportunities-of-sound.html) at Hasso Plattner Institute, University of Potsdam Potsdam, is an interdisciplinary format, exploring the use of sonification and sound synthesis in the context of design thinking, neurosience and medical applications. The signal processing part is taught by [Henrik von Coler](http://hvc.berlin/about/).
+The class [Data Sonification & Opportunities of Sound](https://hpi.de/studium/im-studium/lehrveranstaltungen/cybersecurity-ma/lehrveranstaltung/wise-20-21-3154-data-sonification--opportunities-of-sound.html) at Hasso Plattner Institute, University of Potsdam Potsdam, is an interdisciplinary format, exploring the use of sonification and sound synthesis in the context of design thinking, neurosience and medical applications. The signal processing part is taught by [Henrik von Coler](http://hvc.berlin/about/).
 
 ## [Université Paris 8](https://www.univ-paris8.fr)
 A 24 hours introduction to Faust is given by [Alain Bonardi](http://alainbonardi.net) during the first semester to undergraduated students (L3, 3rd year after the french 'baccalauréat') in the framework of the course "Programming Languages in Computer Music 1" offered in the "Music creation with computers" minor.
