@@ -4,10 +4,9 @@ This page lists the projects using Faust in different ways: plugins, standalone 
 
 ## [Integrating 1-DoF force feedback interactions in self-contained DMIs](https://escholarship.mcgill.ca/concern/theses/b5644x49k)
 
-<a href="https://escholarship.mcgill.ca/concern/theses/b5644x49k"><img  width="60%" class="mx-auto d-block" src="img/thesis-kirkegaard.png"></a>  
+<div><a href="https://escholarship.mcgill.ca/concern/theses/b5644x49k"><img  width="50%" class="mx-auto d-block" src="img/thesis-kirkegaard.png"></a>  </div>
 
-
-By [Mathias Kirkegaard](http://www-new.idmil.org/people/mathias-kirkegaard/). This thesis presents a system for designers of Digital Musical Instruments (DMIs) to explore the integration of 1 degree of freedom (DoF) force feedback interactions in new self-contained instruments. The system developed consists of an open-source graphical tool and a rotary force-feedback device made from commercially available components to facilitate the authoring of audio-haptic applications. Implementing an early prototype is used to inform the development of the graphical editing tool and its integration in an embedded audio-haptic environment using the functional programming language FAUST for real-time signal processing.
+By [Mathias Kirkegaard](http://www-new.idmil.org/people/mathias-kirkegaard/). This thesis presents a system for designers of Digital Musical Instruments (DMIs) to explore the integration of 1 degree of freedom (DoF) force feedback interactions in new self-contained instruments. The system developed consists of an open-source graphical tool and a rotary force-feedback device made from commercially available components to facilitate the authoring of audio-haptic applications. Implementing an early prototype is used to inform the development of the graphical editing tool and its integration in an embedded audio-haptic environment using the functional programming language Faust for real-time signal processing.
 
 
 ## [Guide de la synthèse sonore](https://sebastien-clara.github.io/guide_de_la_synthese_sonore/index.html)
