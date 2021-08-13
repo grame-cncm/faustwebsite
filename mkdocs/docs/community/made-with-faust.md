@@ -8,7 +8,7 @@ This page lists the projects using Faust in different ways: plugins, standalone 
 
 By [Sebastien Clara](https://sebastienclara.wordpress.com/). In this guide, I try to demystify how sound synthesis works. To do so, I present the fundamental principles of sound synthesis. I accompany these explanations with small sound applications that you can manipulate in your web browser and thus, you will be able to notice the impact of a parameter on the sound.
 
-Most of the sound examples are written in Faust and run in the web page. This guide is currenlty only in french.
+Most of the sound examples are written in Faust and run in the web pages. This guide is currently only in french.
 
 ## [PICO DSP](https://www.crowdsupply.com/ohmic/pico-dsp)
 
