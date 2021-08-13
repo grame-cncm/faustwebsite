@@ -2,6 +2,14 @@
 
 This page lists the projects using Faust in different ways: plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
 
+## [Guide de la synthèse sonore](https://sebastien-clara.github.io/guide_de_la_synthese_sonore/index.html)
+
+<a href="https://sebastien-clara.github.io/guide_de_la_synthese_sonore/index.html"><img  width="60%" class="mx-auto d-block" src="img/guide-clara.png"></a>  
+
+By [Sebastien Clara](https://sebastienclara.wordpress.com/). In this guide, I try to demystify how sound synthesis works. To do so, I present the fundamental principles of sound synthesis. I accompany these explanations with small sound applications that you can manipulate in your web browser and thus, you will be able to notice the impact of a parameter on the sound.
+
+Most of the sound examples are written in Faust and run in the web page. This guide is currenlty only in french.
+
 ## [PICO DSP](https://www.crowdsupply.com/ohmic/pico-dsp)
 
 <a href="https://www.crowdsupply.com/ohmic/pico-dsp"><img  width="60%" class="mx-auto d-block" src="img/pico-dsp.png"></a>  
