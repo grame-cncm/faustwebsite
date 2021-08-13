@@ -2,11 +2,18 @@
 
 This page lists the projects using Faust in different ways: plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
 
+
 ## [Integrating 1-DoF force feedback interactions in self-contained DMIs](https://escholarship.mcgill.ca/concern/theses/b5644x49k)
 
 <div><a href="https://escholarship.mcgill.ca/concern/theses/b5644x49k"><img  width="50%" class="mx-auto d-block" src="img/thesis-kirkegaard.png"></a>  </div>
 
 By [Mathias Kirkegaard](http://www-new.idmil.org/people/mathias-kirkegaard/). This thesis presents a system for designers of Digital Musical Instruments (DMIs) to explore the integration of 1 degree of freedom (DoF) force feedback interactions in new self-contained instruments. The system developed consists of an open-source graphical tool and a rotary force-feedback device made from commercially available components to facilitate the authoring of audio-haptic applications. Implementing an early prototype is used to inform the development of the graphical editing tool and its integration in an embedded audio-haptic environment using the functional programming language Faust for real-time signal processing.
+
+## [BEYOND KEY VELOCITY: CONTINUOUS SENSING FOR EXPRESSIVE CONTROL ON THE HAMMOND ORGAN AND DIGITAL KEYBOARDS](http://instrumentslab.org/data/giulio/giulioMoroThesis.pdf)
+
+<div><a href="http://instrumentslab.org/data/giulio/giulioMoroThesis.pdf"><img  width="50%" class="mx-auto d-block" src="img/thesis-moro.png"></a>  </div>
+
+By [Giulio Moro](https://scholar.google.co.uk/citations?user=1P92P3kAAAAJ&hl=en). In this thesis we seek to explore the potential for continuous key position to be used as an expressive control in keyboard musical instruments, and how pre- existing skills can be adapted to leverage this additional control. The nonlinear waveguide physical model of a flute has been developed in Faust.
 
 
 ## [Guide de la synthèse sonore](https://sebastien-clara.github.io/guide_de_la_synthese_sonore/index.html)
