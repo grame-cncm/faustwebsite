@@ -9,7 +9,7 @@ This page lists the projects using Faust in different ways: plugins, standalone 
 
 By [Mathias Kirkegaard](http://www-new.idmil.org/people/mathias-kirkegaard/). This thesis presents a system for designers of Digital Musical Instruments (DMIs) to explore the integration of 1 degree of freedom (DoF) force feedback interactions in new self-contained instruments. The system developed consists of an open-source graphical tool and a rotary force-feedback device made from commercially available components to facilitate the authoring of audio-haptic applications. Implementing an early prototype is used to inform the development of the graphical editing tool and its integration in an embedded audio-haptic environment using the functional programming language Faust for real-time signal processing.
 
-## [BEYOND KEY VELOCITY: CONTINUOUS SENSING FOR EXPRESSIVE CONTROL ON THE HAMMOND ORGAN AND DIGITAL KEYBOARDS](http://instrumentslab.org/data/giulio/giulioMoroThesis.pdf)
+## [Beyond Key Velocity: Continuous Sensing for Expressive Control on the Hammond Organ and Digital Keyboards](http://instrumentslab.org/data/giulio/giulioMoroThesis.pdf)
 
 <div><a href="http://instrumentslab.org/data/giulio/giulioMoroThesis.pdf"><img  width="50%" class="mx-auto d-block" src="img/thesis-moro.png"></a>  </div>
 
