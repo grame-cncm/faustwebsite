@@ -2,6 +2,14 @@
 
 This page lists the projects using Faust in different ways: plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
 
+## [Trombone Simulator](https://nuchi.github.io/trombone/)
+
+<div><a href="https://nuchi.github.io/trombone/"><img  width="60%" class="mx-auto d-block" src="img/trombone.jpg"></a>  </div>
+
+This simulator is a physical model of a trombone. Physical models of the lips, mouthpiece, slide, and bell are digitally simulated. The controls are listed at the top. The main controls are to move the cursor (or your finger on a touch device) left and right on the picture to adjust the embouchure, and up and down to extend and retract the slide. The diagonal colored lines are a guide to where the resonances are: playing over a resonance means that the embouchure and slide length are matched. Playing over white space means that one is between resonances and the note quality won't be as good. The big gray wedge on the upper right indicates that the resonances are very close together there. The vertical dashed lines indicate the rough locations of B-flat (thick lines) and F (thin lines). Other notes are unmarked, and likewise the slide positions. (Just like on a real trombone!) The off-key resonances (7th, 11th, 13th, and 14th) are marked in red. The g and f keys can be used to growl and flutter-tongue, respectively.
+
+The audio simulation is written in Faust, which conveniently compiles to WebAssembly and a Web Audio API wrapper. The overall approach used was a digital waveguide model, as described in J. O. Smith III's Digital Waveguide Theory. The lips and bell are adapted from F. Scott's masters thesis.
+
 
 ## [Integrating 1-DoF force feedback interactions in self-contained DMIs](https://escholarship.mcgill.ca/concern/theses/b5644x49k)
 
