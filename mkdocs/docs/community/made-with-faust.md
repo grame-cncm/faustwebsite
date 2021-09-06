@@ -2,6 +2,18 @@
 
 This page lists the projects using Faust in different ways: plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
 
+
+## [Virtual Rhizome](https://www.vrcarinola.com/virtual-rhizome)
+
+<div><a href="https://www.youtube.com/watch?v=cGZB44KI9Y0"><img  width="60%" class="mx-auto d-block" src="img/virtual-rhizome.png"></a>  </div>
+
+By [Vincent Carinola](https://www.vrcarinola.com). [Virtual Rhizome](https://www.vrcarinola.com/virtual-rhizome) responds to a proposal by [Christophe Lebreton and Jean Geoffroy](https://www.lisilog.com/shc/) to compose a work for the original Smart Hand Computer system, developed at the GRAME-CNCM using the Faust language and allowing to play smartphones as an instrument.
+
+The work takes the form of a labyrinth, a kind of virtual architecture that could be compared to Borges' "garden of branching paths", within which the musician evolves by adapting his gestures to the constraints of different types of situations. Each situation is characterized by an autonomous functioning of the system, that the musician must apprehend in order to find the key allowing him to modify it and to move towards another situation. But in order to orientate himself well, he must create a mental representation of the structure of the work. The performer then becomes an explorer of a world that he unveils, but isn't that what he has always been?
+
+Virtual rhizome owes much to the availability and enthusiasm of Jean Geoffroy and Christophe Lebreton. It is amicably dedicated to them.
+
+
 ## [Trombone Simulator](https://nuchi.github.io/trombone/)
 
 <div><a href="https://nuchi.github.io/trombone/"><img  width="60%" class="mx-auto d-block" src="img/trombone.jpg"></a>  </div>
