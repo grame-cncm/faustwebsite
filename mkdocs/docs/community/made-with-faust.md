@@ -1,6 +1,6 @@
 # Powered With Faust
 
-This page lists the projects using Faust in different ways: plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
+This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
 
 
 ## [Virtual Rhizome](https://www.vrcarinola.com/virtual-rhizome)
