@@ -3,6 +3,12 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
 
 
+## [INScore](https://inscore.grame.fr)
+
+<div><a href="https://inscore.grame.fr"><img  width="70%" class="mx-auto d-block" src="img/inscore.jpg"></a>  </div>
+
+INScore is an open source framework for the design of interactive, augmented, live music scores. Augmented music scores are graphic spaces providing representation, composition and manipulation of heterogeneous and arbitrary music objects (music scores but also images, text, signals...), both in the graphic and time domains. Audio DSP processes and effects can be described using Faust.
+
 ## [Virtual Rhizome](https://www.vrcarinola.com/virtual-rhizome)
 
 <div><a href="https://www.youtube.com/watch?v=cGZB44KI9Y0"><img  width="60%" class="mx-auto d-block" src="img/virtual-rhizome.png"></a>  </div>
