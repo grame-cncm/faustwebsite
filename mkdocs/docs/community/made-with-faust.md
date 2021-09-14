@@ -7,7 +7,7 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 <div><a href="https://inscore.grame.fr"><img  width="70%" class="mx-auto d-block" src="img/inscore.jpg"></a>  </div>
 
-INScore is an open source framework for the design of interactive, augmented, live music scores. Augmented music scores are graphic spaces providing representation, composition and manipulation of heterogeneous and arbitrary music objects (music scores but also images, text, signals...), both in the graphic and time domains. Audio DSP processes and effects can be described using Faust.
+INScore is an open source framework for the design of interactive, augmented, live music scores. Augmented music scores are graphic spaces providing representation, composition and manipulation of heterogeneous and arbitrary music objects (music scores but also images, text, signals...), both in the graphic and time domains. Audio DSP processes and effects can be described using Faust. The entire environment also [runs in the Web](https://inscoreweb.grame.fr) including Faust programs. 
 
 ## [Virtual Rhizome](https://www.vrcarinola.com/virtual-rhizome)
 
