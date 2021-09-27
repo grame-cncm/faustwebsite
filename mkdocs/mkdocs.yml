@@ -14,16 +14,16 @@ nav:
          - 'Faust Playground': https://faustplayground.grame.fr
          - 'Faust Web Editor': https://fausteditor.grame.fr
     - Community:
-        - 'News': community/news.md
+        - 'Powered With Faust': community/made-with-faust.md
         - 'Events': community/events.md
         - 'Getting Help': community/help.md
         - 'Reporting Bugs': community/bugs.md
         - 'Faust Conference': community/ifc.md
         - 'Learning Faust': community/learning.md
         - 'Academic Publications': community/publications.md
+        - 'News up to 2018': community/news.md
         - 'Press': community/press.md
         - 'Sponsors': community/sponsors.md
-        - 'Powered With Faust': community/made-with-faust.md
         - 'Logos': community/logos.md
     - Projects:
         - 'FAST': https://fast.grame.fr
