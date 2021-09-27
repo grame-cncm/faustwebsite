@@ -2,6 +2,12 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
 
+## [Motion Vox](https://motionvox.app/)
+
+<div><a href="https://motionvox.app/"><img  width="35%" class="mx-auto d-block" src="img/motionvox.png"></a>  </div>
+
+A mobile music creation and performance workstation with a built-in motion-based controller, sequencer and synthesis engine. The controller unites XY pad, accelerometer and gyroscope events with complex data ﬁltering engine. Performance process consists of touching the active area on the screen with the index finger and moving the cursor while moving the device in space. Smartphone position in space and finger movement on a screen affect various parameters of sound or generate realtime MIDI output. The app was inspired by the SmartFaust project of GRAME. The audio engine of the app is made with FAUST.
+
 
 ## [INScore](https://inscore.grame.fr)
 
