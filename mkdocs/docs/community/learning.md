@@ -25,3 +25,14 @@ The class [Data Sonification & Opportunities of Sound](https://hpi.de/studium/im
 ## [Université Paris 8](https://www.univ-paris8.fr)
 A 24 hours introduction to Faust is given by [Alain Bonardi](http://alainbonardi.net) during the first semester to undergraduated students (L3, 3rd year after the french 'baccalauréat') in the framework of the course "Programming Languages in Computer Music 1" offered in the "Music creation with computers" minor.
 
+
+## Universidad Nacional de Quilmes  
+
+Several courses on Faust in spanish prepared by [Juan Ramos](http://jaoramos.com.ar):
+
+- Intro video [here](https://www.youtube.com/watch?v=DnBI7r273BE)
+
+- Then six classes located [here](https://www.youtube.com/channel/UCD6aeS3GdkEmt86KUehr8LQ/videos)
+
+  
+
