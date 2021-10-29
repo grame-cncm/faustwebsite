@@ -1,4 +1,4 @@
-# The Faust Project
+‹# The Faust Project
 
 The Faust Project has started in 2002. It is actively developped by the [Grame Research Lab](https://www.grame.fr/recherche).
 
