@@ -26,13 +26,15 @@ The class [Data Sonification & Opportunities of Sound](https://hpi.de/studium/im
 A 24 hours introduction to Faust is given by [Alain Bonardi](http://alainbonardi.net) during the first semester to undergraduated students (L3, 3rd year after the french 'baccalauréat') in the framework of the course "Programming Languages in Computer Music 1" offered in the "Music creation with computers" minor.
 
 
-## Universidad Nacional de Quilmes  
+## [Universidad Nacional de Quilmes](http://www.unq.edu.ar/)
 
-Several courses on Faust in spanish prepared by [Juan Ramos](http://jaoramos.com.ar):
+Cursos de Faust / DSP en español, realizados por [Juan Ramos](http://jaoramos.com.ar). Incluyen las clases del "Seminario de Actualización en Sonido, Ciencia y Tecnología II", dictado en la Universidad Nacional de Quilmes (Argentina) en 2021.
 
-- Intro video [here](https://www.youtube.com/watch?v=DnBI7r273BE)
+Faust / DSP courses in Spanish, prepared by [Juan Ramos](http://jaoramos.com.ar). They include the classes of the "Update Seminar on Sound, Science and Technology II", held at the National University of Quilmes (Argentina) in 2021:
 
-- Then six classes located [here](https://www.youtube.com/channel/UCD6aeS3GdkEmt86KUehr8LQ/videos)
+- An intro video is [available here](https://www.youtube.com/watch?v=DnBI7r273BE)
+
+- All available classes are [located here](https://www.youtube.com/channel/UCD6aeS3GdkEmt86KUehr8LQ/videos)
 
   
 
