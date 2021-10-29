@@ -39,6 +39,7 @@ Faust / DSP courses in Spanish, prepared by [Juan Ramos](http://jaoramos.com.ar)
 ### Professional Masters of RIM & RAN
 
 The [Professional RIM & RAN Masters](https://musinf.univ-st-etienne.fr/indexGB.html) are aimed at developing students applied knowledge and understanding of electronic and digital technologies for the creation, prepare them to the professions of *Producer in Computer Music (RIM - Réalisateur en Informatique Musicale) and in Digital Arts (RAN - Réalisateur en Arts Numériques)*. These producers are direct actors in musical and artistic productions, and work at the interface between software developers, applied computer scientists, composers, artists, etc. and all people likely to integrate video, image and sound in their activities.
+
 Most of the courses concerning signal processing are given around the Faust language (M1 Romain Michon 12h / M2 Yann Orlarey 20h).
 
 
