@@ -2,6 +2,13 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
 
+## [Antescofo](https://antescofo-doc.ircam.fr/UserGuide/intro/)
+
+<div><a href="https://antescofo-doc.ircam.fr/UserGuide/intro"><img  width="50%" class="mx-auto d-block" src="img/antescofo.png"></a>  </div>
+
+Antescofo is a coupling of a real-time listening machine with a reactive and timed synchronous language developed at [IRCAM](https://www.ircam.fr). The language is used for authoring of music pieces involving live musicians and computer processes, and the real-time system assures its correct performance and synchronization despite listening or performance errors. Antescofo DSP processes [can be described with Faust](First steps toward embedding real-time audio computing in Antescofo). 
+
+
 ## [Motion Vox](https://motionvox.app/)
 
 <div><a href="https://motionvox.app/"><img  width="35%" class="mx-auto d-block" src="img/motionvox.png"></a>  </div>
