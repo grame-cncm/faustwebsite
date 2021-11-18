@@ -240,13 +240,13 @@ Amati is a VST plugin for live-coding effects in the Faust programming language.
 
 [PureTones](https://puretones.sadharani.com) PureTones is a family of software tools for Indian Classical music. They are built based on an in-depth study and exploration of Indian Classical music to understand the role of harmonics, microtones and consonance in Indian Ragas and musical scales:
 
-- [PureTones Drone](https://puretones.sadharani.com/drone/) is a digital Tanpura with controls for fine tuning the strings and adjusting their harmonic envelope.
-- [PureTones Musical Scale](https://puretones.sadharani.com/scale/) is a digital 12 note keyboard with controls for fine tuning each key to be consonant with an accompanying drone track.
-- [PureTones Sequencer](https://puretones.sadharani.com/sequencer/) is a sequencer which enables composition of melodies and musical works in Indian Classical music using notes from a fine tuned musical scale.
+- [PureTones Drone (using first tab)](https://puretones.sadharani.com/app/), is a digital Tanpura with controls for fine tuning the strings and adjusting their harmonic envelope.
+- [PureTones Musical Scale (using second tab)](https://puretones.sadharani.com/app/) is a digital 12 note keyboard with controls for fine tuning each key to be consonant with an accompanying drone track.
+- [PureTones Sequencer (using third tab)](https://puretones.sadharani.com/app/) is a sequencer which enables composition of melodies and musical works in Indian Classical music using notes from a fine tuned musical scale.
 
 The [Ragatronics project](https://ragatronics.sadharani.com) combines Ragas from Indian Classical music with elements from Rock, Jazz and Electronic music.
 
-All applications [have been developed](https://github.com/aravind-sadharani/puretones) using Faust and WebAudio tools.
+All applications [have been developed](https://github.com/aravind-sadharani/puretones-music-room) using Faust and WebAudio tools.
 
 ## [Making Sound Machines](https://makingsoundmachines.com)
 
