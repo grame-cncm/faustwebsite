@@ -4,7 +4,7 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 ## [Antescofo](https://antescofo-doc.ircam.fr/UserGuide/intro/)
 
-<div><a href="https://antescofo-doc.ircam.fr/UserGuide/intro"><img  width="50%" class="mx-auto d-block" src="img/antescofo.png"></a>  </div>
+<div><a href="https://antescofo-doc.ircam.fr/UserGuide/intro"><img  width="55%" class="mx-auto d-block" src="img/antescofo.png"></a>  </div>
 
 Antescofo is a coupling of a real-time listening machine with a reactive and timed synchronous language developed at [IRCAM](https://www.ircam.fr). The language is used for authoring of music pieces involving live musicians and computer processes, and the real-time system assures its correct performance and synchronization despite listening or performance errors. Antescofo DSP processes [can be described with Faust](https://hal.archives-ouvertes.fr/hal-01257524/document). 
 
