@@ -2,6 +2,17 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
 
+
+## [sfizz](https://sfz.tools/sfizz/)
+
+<div><a href="https://github.com/sfztools/sfizz"><img  width="55%" class="mx-auto d-block" src="img/sfizz.png"></a>  </div>
+
+
+[sfizz](https://sfz.tools/sfizz/) is a sample-based musical synthesizer. It features the well-established SFZ instrument format at its core, which permits to use existing instrument libraries, or create personal instruments with ease. Not only is sfizz ready-to-use as an instrument plugin of its own, the library allows developers to create instruments of their own, taking advantage of the abilities of SFZ. 
+
+The sfizz project uses the SFZ parser and synth c++ library, providing AU / LV2 / VST3 plugins and JACK standalone client. Some effects are [developed in Faust](https://github.com/sfztools/sfizz/tree/master/src/sfizz/effects/dsp) are well as [several filters](https://github.com/sfztools/sfizz/tree/master/src/sfizz/dsp/filters).
+
+
 ## [Antescofo](https://antescofo-doc.ircam.fr/UserGuide/intro/)
 
 <div><a href="https://antescofo-doc.ircam.fr/UserGuide/intro"><img  width="55%" class="mx-auto d-block" src="img/antescofo.png"></a>  </div>
