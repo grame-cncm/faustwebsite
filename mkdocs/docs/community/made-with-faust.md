@@ -7,7 +7,6 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 <div><a href="https://github.com/sfztools/sfizz"><img  width="55%" class="mx-auto d-block" src="img/sfizz.png"></a>  </div>
 
-
 [sfizz](https://sfz.tools/sfizz/) is a sample-based musical synthesizer. It features the well-established SFZ instrument format at its core, which permits to use existing instrument libraries, or create personal instruments with ease. Not only is sfizz ready-to-use as an instrument plugin of its own, the library allows developers to create instruments of their own, taking advantage of the abilities of SFZ. 
 
 The sfizz project uses the SFZ parser and synth c++ library, providing AU / LV2 / VST3 plugins and JACK standalone client. Some effects are [developed in Faust](https://github.com/sfztools/sfizz/tree/master/src/sfizz/effects/dsp) are well as [several filters](https://github.com/sfztools/sfizz/tree/master/src/sfizz/dsp/filters).
@@ -17,7 +16,7 @@ The sfizz project uses the SFZ parser and synth c++ library, providing AU / LV2 
 
 <div><a href="https://antescofo-doc.ircam.fr/UserGuide/intro"><img  width="55%" class="mx-auto d-block" src="img/antescofo.png"></a>  </div>
 
-Antescofo is a coupling of a real-time listening machine with a reactive and timed synchronous language developed at [IRCAM](https://www.ircam.fr). The language is used for authoring of music pieces involving live musicians and computer processes, and the real-time system assures its correct performance and synchronization despite listening or performance errors. Antescofo audio DSP processes [can be described with Faust](https://hal.archives-ouvertes.fr/hal-01257524/document). 
+Antescofo is a coupling of a real-time listening machine with a reactive and timed synchronous language developed at [IRCAM](https://www.ircam.fr). The language is used for authoring of music pieces involving live musicians and computer processes, and the real-time system assures its correct performance and synchronization despite listening or performance errors. Antescofo audio DSP processes [can be described with Faust](https://hal.archives-ouvertes.fr/hal-01257524/document), using libfaust dynamic version of the Faust compiler. 
 
 
 ## [Motion Vox](https://motionvox.app/)
