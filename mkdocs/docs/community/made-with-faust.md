@@ -329,19 +329,21 @@ iPlug 2 is a simple-to-use C++ framework for developing cross platform audio plu
 
 <a href="https://github.com/olilarkin/pMix2"><img  class="mx-auto d-block" src="img/pmix.jpg"></a>  
 
-pMix (short for preset mixer) is a sound design, composition and performance tool that facilitates the control of multiple parameters using an intuitive graphical interface.
+pMix (short for preset mixer) is a sound design, composition and performance tool that facilitates the control of multiple parameters using an intuitive graphical interface. It includes a graphical patcher for creating a network of audio synthesis or processing nodes. A node could be a VST2, VST3, AU or LADSPA plug-in or it could a JIT compiled FAUST script. FAUST is a first class citizen in pMix and an integrated code editor and SVG display makes it a nice environment for FAUST development.
 
 ## [Temper JUCE plugin](https://github.com/creativeintent/temper)
 
 <a href="https://github.com/creativeintent/temper"><img  width="70%" class="mx-auto d-block" src="img/temper.jpg"></a>  
 
-Temper is a digital distortion written with Faust, and compiled with JUCE for the various build targets.
+Temper is a digital distortion audio plugin targeting VST, VST3, and AU for OS X and Windows. It builds upon traditional waveshaping techniques using modulated filter coefficients to produce a unique phase distortion. The primary signal processing loop is written with Faust, and compiled with JUCE for the various build targets.
 
 ## [Faust Mass-Interaction](http://mi-creative.eu/tool_miFaust.html)
 
 <a href="http://mi-creative.eu/tool_miFaust.html"><img  class="mx-auto d-block" src="img/topo.jpg"></a>  
 
-Collection of tools for mass-interaction physical modeling in Faust.
+mi_faust implements 1D mass-interaction models in the FAUST programming language. Starting from a scripted model description (see MIMS), mi_faust compiles a physical model into FAUST code. It handles this by generating routing functions between all the masses and all the interactions in the model.
+
+Head over to the FAUST community page to see examples of a series of instruments created in mi_faust, and available as web-apps !
 
 ## [Dynamic PedalBoard](https://wasabi.i3s.unice.fr/dynamicPedalboard/)
 
@@ -395,31 +397,40 @@ AudioKit allows developers to quickly add professional audio functionality to iO
 
 <a href="http://users.notam02.no/~kjetism/radium/"><img  class="mx-auto d-block" src="img/radium.jpg"></a>  
 
-Radium is a music editor with a new type of interface.
+Radium is a music editor with a new type of interface. It includes a Faust audio DSP development environment.
+
+- Compared to the normal sequencer interface editing is quicker and more musical data fits on the screen. 
+- Compared to trackers, note positions and effects are edited graphically, which should be quicker, provide more vertical space and give a better musically overview. (Everything can also be edited by text, like in a normal tracker)
+- Radium can also be used as a normal multitracker to mix and record audio.
+                  
                   
 ## [BELA](http://bela.io/)
 
 <a href="http://bela.io/"><img  class="mx-auto d-block" src="img/bela.jpg  "></a>  
 
-Bela is a maker platform for creating beautifully responsive audio and interactive applications.
+Bela is a maker platform for creating beautifully responsive audio and interactive applications. Designed for artists, musicians, researchers and makers, Bela brings the power of ultra-low latency interactive audio and sensors to your digital projects. It can be [programmed with Faust](https://learn.bela.io/using-bela/languages/faust-experimental/).
+
+
 
 ## [HOA Library](http://hoalibrary.mshparisnord.fr/en)
 
 <a href="http://hoalibrary.mshparisnord.fr/en"><img  class="mx-auto d-block" src="img/hoa.jpg"></a>  
 
-HOA Library allows musicians and composers to synthesize, transform and render sound fields in a creative and artistic way.
+HOA Library allows musicians and composers to synthesize, transform and render sound fields in a creative and artistic way. This library facilitates the understanding and the appropriation of key concepts of ambisonics. Thanks to original graphical interfaces a lot of new signal processings are allowed like diffuse sound field synthesis, perspective distorsion or spatial filtering. HOA library is open-source and free and offers a set of C++ and [FAUST classes](http://hoalibrary.mshparisnord.fr/en/downloads/faust/) and implementation for Max, PureData and Unity.
 
 ## [Ambitools](http://www.sekisushai.net/ambitools/)
 
 <a href="http://www.sekisushai.net/ambitools/"><img  class="mx-auto d-block" src="img/ambitools.jpg"></a>  
 
-Ambitools is a collection of plug-ins and  tools for 3D sound field synthesis using Higher Order Ambisonics (HOA).
+Ambitools is a collection of plug-ins and  tools for 3D sound field synthesis using Higher Order Ambisonics (HOA). The plugins are [written in the Faust language](http://sekisushai.net/git/sekisushai/ambitools), which allows them to be compiled for a multitude of architectures and platforms (Windows, Mac, Linux, WebAudio, embedded systems, etc.)
+
+Moreover, the code is written in a scalable way: there is no limit to the maximum Ambisonic order! Other tools are also available, such as a 3D Visualizer written in the Processing language. 
 
 ## [Ambisonic Decoder Toolbox](https://bitbucket.org/ambidecodertoolbox/adt.git)
 
 <a href="https://bitbucket.org/ambidecodertoolbox/adt.git"><img  class="mx-auto d-block" src="img/ambbox.jpg  "></a>  
 
-The Ambisonic Decoder Toolbox is a collection of MATLAB and GNU Octave functions for creating Ambisonic Decoders.                  
+The Ambisonic Decoder Toolbox is a collection of MATLAB and GNU Octave functions for creating Ambisonic Decoders.  Currently, it implements: (1) the AllRAD design technique, (2) inversion or mode-matching, (3) truncated mode-matching, constant energy, (4) linear combinations of 2 and 3, and (5) Slepian function basis (EPAD). The DSP code is written in  MATLAB and Faust.         
 
 ## [Ambisonic.xyz](http://ambisonic.xyz/)
 
@@ -433,53 +444,58 @@ A set of tools around Ambisonics.
 
 FaustPy is a Python wrapper for Faust. It is implemented using the CFFI and hence creates the wrapper dynamically at run-time.
         
-## [OWL](https://www.rebeltech.org/)
+## [Rebel Technology](https://www.rebeltech.org/)
 
 <a href="https://www.rebeltech.org/"><img  class="mx-auto d-block" src="img/owl.jpg"></a>  
 
-The OWL is an open source, programmable audio platform made for musicians, hackers and programmers alike.
+The OWL Pedal is an open source, programmable stage effects pedal, made for guitarists, musicians, hackers and programmers. Users can program their own effects, or download ready-made patches from our growing online patch library.
 
 ## [faust-vst](https://bitbucket.org/agraef/faust-vst)
 
 <a href="https://bitbucket.org/agraef/faust-vst"><img  class="mx-auto d-block" src="img/vst.svg" alt="Card image cap"></a>  
 
-This project provides a VST plugin architecture for the Faust programming language.
+This project provides a VST plugin architecture for the Faust programming language. The package contains the Faust architecture, faustvst.cpp, the faust2faustvst helper script which provides a quick way to compile a plugin, a collection of sample plugins written in Faust, and a generic GNU Makefile for compiling and installing the plugins. 
                 
 ## [faust-lv2](https://bitbucket.org/agraef/faust-lv2)
 
 <a href="https://bitbucket.org/agraef/faust-lv2"><img  class="mx-auto d-block" src="img/lv2.jpg" alt="Card image cap"></a>  
 
-This project provides an LV2 plugin architecture for the Faust programming language. 
+This project provides an LV2 plugin architecture for the Faust programming language. The package contains the Faust architecture and templates for the needed LV2 manifest (ttl) files, a collection of sample plugins written in Faust, and a generic GNU Makefile as well as a shell script to compile plugins using the architecture.
 
 ## [RDK](http://chiselapp.com/user/jcage/repository/rdk/doc/www/www/revdev.html)
 
 <a href="http://chiselapp.com/user/jcage/repository/rdk/doc/www/www/revdev.html"><img  class="mx-auto d-block" src="img/reverb.jpg"></a>  
 
-A Reverberation Development Kit.
+Reverb Design is about creating a spacial impression aimed at sweetening the listening experience for a given context. The ambiguity of auditory and visual cues in reproduced sound makes it necessary to create an auditory illusion: To make this illusion work, I propose an aesthetic concept of simplicity and intelligibility based on psychoacoustic facts and recording practice as professional producer.
         
 ## [Foo YC20](http://foo-yc20.codeforcode.com/)
 
 <a href="http://foo-yc20.codeforcode.com/"><img  class="mx-auto d-block" src="img/yc20.jpg" alt="Card image cap"></a>  
 
-Foo YC20 is an open source implementation of the Yamaha YC-20 combo organ from 1969.
+The Foo YC20 is an open source implementation of the Yamaha YC-20 combo organ from 1969. Processing for the organ is based on original schematics and measurements from a working specimen. This instrument simulates the circutry as a whole to realisticly reproduce the features and flaws of the real deal.
                   
 ## [FaucK](https://ccrma.stanford.edu/~rmichon/fauck/)
 
 <a href="https://ccrma.stanford.edu/~rmichon/fauck/"><img  class="mx-auto d-block" src="img/fauck.jpg" alt="Card image cap"></a>  
 
-FaucK is a Chugin allowing to combine the Faust language with the strongly-timed ChucK audio programming language.
+FaucK is a Chugin allowing to combine the powerful, succinct Functional AUdio STream (Faust) language with the strongly-timed ChucK audio programming language. FaucK allows programmers to on-the-fly evaluate Faust code directly from ChucK code and control Faust signal processors using ChucK's sample-precise timing and concurrency mechanisms. The goal is to create an amalgam that plays to the strengths of each language, giving rise to new possibilities for rapid prototyping, interaction design and controller mapping, pedagogy, and new ways of working with both Faust and ChucK.
 
 ## [Snd-RT](https://github.com/kmatheussen/snd-rt)
 
 <a href="https://github.com/kmatheussen/snd-rt"><img  class="mx-auto d-block" src="img/sndrt.jpg" alt="Card image cap"></a>  
 
-Snd-RT is the realtime extension for the sound editor SND.
+Snd-RT is the realtime extension for the sound editor SND and consists of two parts:
+
+- the RT Engine - An engine for doing realtime signal processing.
+- the RT Compiler - A compiler for a scheme-like programming language to generate realtime-safe code understood by the RT Engine.
 
 ## [Pure Language](https://agraef.github.io/pure-lang/)
 
 <a href="https://agraef.github.io/pure-lang/"><img  class="mx-auto d-block" src="img/pure.jpg" alt="Card image cap"></a>  
 
-Pure is a dynamically typed, functional programming language based on term rewriting. It has been created by Albert Gräf.
+[Pure is a modern-style functional programming language based on term rewriting. It offers equational definitions with pattern matching, full symbolic rewriting capabilities, dynamic typing, eager and lazy evaluation, lexical closures, built-in list and matrix support and an easy-to-use C interface. The interpreter uses LLVM as a backend to JIT-compile Pure programs to fast native code. It has been created by Albert Gräf.
+
+[pd-faust](https://github.com/agraef/pure-lang/wiki/Addons#pd-faust) is a collection of Pd objects written using pd-pure which lets you run Faust programs inside Pd. It combines the functionality of pure-faust and faust2pd in a single package, and also features dynamic reloading of Faust plugins, automatic generation of controller GUIs and MIDI/OSC controller mappings, as well as OSC-based controller automation. It thus provides a complete solution for interactively developing Faust dsps in Pd.
 
 ## [Guitarix](http://guitarix.org/)        
 
