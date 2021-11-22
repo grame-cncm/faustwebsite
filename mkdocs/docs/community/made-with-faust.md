@@ -2,6 +2,11 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
 
+## [Stone phaser](https://github.com/jpcima/stone-phaser)
+
+<div><a href="https://github.com/jpcima/stone-phaser"><img  width="35%" class="mx-auto d-block" src="img/stone-phaser.png"></a>  </div>
+
+A classic analog phaser effect. This is an analog phaser with similarity to the Small Stone. It has a color switch, which makes the phasing stronger when on, and adds some feedback controls. A stereo variant of the phaser is included. This effect is supported on MOD devices. The DSP code is [developed in Faust](https://github.com/jpcima/stone-phaser/tree/master/dsp).
 
 ## [sfizz](https://sfz.tools/sfizz/)
 
