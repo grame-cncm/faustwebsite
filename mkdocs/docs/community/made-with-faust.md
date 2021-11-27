@@ -2,6 +2,13 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
 
+## [Zynthian platform](https://zynthian.org)
+
+<div><a href="https://zynthian.org"><img  width="50%" class="mx-auto d-block" src="img/Zynthian.png"></a>  </div>
+
+Zynthian is a new class of musical device. A powerful multitimbral synthesizer and audio processor, capable of managing up to 16 audio chains simultaneously. Also, it's a MIDI processor and router, equipped with standard MIDI ports, USB, WIFI & wired networks.  Zynthian is a community-driven project and it's 100% open source. The Zynthian platform can be [programmed with Faust](https://francescoganassin.files.wordpress.com/2021/03/the-tale-of-faust-and-zynthian.pdf) with some [DSP examples here](https://github.com/francescoganassin/FaustDSP-synths).
+
+
 ## [GxPlugins.lv2](https://github.com/brummer10/GxPlugins.lv2)
 
 <div><a href="https://github.com/brummer10/GxPlugins.lv2"><img  width="35%" class="mx-auto d-block" src="img/GxSuppaToneBender.png"></a>  </div>
