@@ -2,6 +2,13 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
 
+## [GxPlugins.lv2](https://github.com/brummer10/GxPlugins.lv2)
+
+<div><a href="https://github.com/brummer10/GxPlugins.lv2"><img  width="35%" class="mx-auto d-block" src="img/GxSuppaToneBender.png"></a>  </div>
+
+GxPlugins.lv2 is a set of more than 40 extra standalone lv2 plugins designed to compliment the Guitarix project. Each plugin exists as its own submodule under this repository. The DSP code has been written with Faust.
+
+
 ## [Stone phaser](https://github.com/jpcima/stone-phaser)
 
 <div><a href="https://github.com/jpcima/stone-phaser"><img  width="35%" class="mx-auto d-block" src="img/stone-phaser.png"></a>  </div>
