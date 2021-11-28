@@ -5,9 +5,9 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 ## [ER-301 Sound Computer](http://www.orthogonaldevices.com/er-301.html)
 
-<div><a href="http://www.orthogonaldevices.com/er-301.html"><img  width="50%" class="mx-auto d-block" src="img/er-301-original-flavor.png"></a>  </div>
+<div><a href="http://www.orthogonaldevices.com/er-301.html"><img  width="40%" class="mx-auto d-block" src="img/er-301-original-flavor.png"></a>  </div>
 
-The ER-301 is a voltage-controllable canvas for digital signal processing algorithms. It can be programed using Faust using the [faust2er301]( https://github.com/ljwall/faust2er301) tool and some units [are developed here](https://github.com/ljwall/er-301-units). Note thjat is is still a [WIP](https://forum.orthogonaldevices.com/t/using-faust-for-er-301-dsp-development/5890).
+The ER-301 is a voltage-controllable canvas for digital signal processing algorithms. It can be programed with Faust using the [faust2er301]( https://github.com/ljwall/faust2er301) tool and some units [are developed here](https://github.com/ljwall/er-301-units). Note that it is still a WIP, read the [discussion here](https://forum.orthogonaldevices.com/t/using-faust-for-er-301-dsp-development/5890).
 
 ## [Zynthian platform](https://zynthian.org)
 
