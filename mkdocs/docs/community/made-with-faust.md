@@ -3,6 +3,12 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
 
 
+## [Elk Audio OS](https://elk.audio/audio-os/)
+
+<div><a href="https://elk.audio/audio-os/"><img  width="55%" class="mx-auto d-block" src="img/elk-audio.jpg"></a>  </div>
+
+Elk is an Audio Operating System developed from the ground up to deliver real time audio performances in embedded systems and remote networks. It can run on [several hardware](https://elk.audio/store/). Faust can be used to [generate VST2 plugins](https://forum.elk.audio/t/writing-plugins-for-elk-using-faust/175) to run on the plaform.
+
 ## [ER-301 Sound Computer](http://www.orthogonaldevices.com/er-301.html)
 
 <div><a href="http://www.orthogonaldevices.com/er-301.html"><img  width="40%" class="mx-auto d-block" src="img/er-301.png"></a>  </div>
