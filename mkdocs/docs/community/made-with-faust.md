@@ -3,6 +3,13 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
 
 
+## [Daisy based audio boards](https://www.electro-smith.com/daisy)
+
+<div><a href="https://www.electro-smith.com/daisy"><img  width="35%" class="mx-auto d-block" src="img/daisy.png"></a>  </div>
+
+Daisy is an embedded platform for music. It features everything you need for creating high fidelity audio hardware devices. Just plug in a USB cable and start making sound! No soldering required. It can be programed with Faust using the [faust2daisy](https://github.com/grame-cncm/faust/tree/master-dev/architecture/daisy) tool.
+
+
 ## [Elk Audio OS](https://elk.audio/audio-os/)
 
 <div><a href="https://elk.audio/audio-os/"><img  width="55%" class="mx-auto d-block" src="img/elk-audio.jpg"></a>  </div>
