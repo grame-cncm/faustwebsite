@@ -3,6 +3,13 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
 
 
+## [Drum Module](https://github.com/andreaco/miosix-drum)
+
+<div><a href="https://github.com/andreaco/miosix-drum"><img  width="50%" class="mx-auto d-block" src="img/drum-module.jpeg"></a>  </div>
+
+This project aims at integrating a digital drum synthesizer [using Faust](https://andreaco.github.io/miosix-drum/) and Miosix real time OS on an STM32F407VG Discovery Board. To do this, a user interface by means of buttons, sliders, encoders, and an LCD has been implemented to control the synthesizer. Moreover, a serial MIDI input port has been added in order to control the synthesizer externally by using an external sequencer or controller.
+
+
 ## [Daisy based audio boards](https://www.electro-smith.com/daisy)
 
 <div><a href="https://www.electro-smith.com/daisy"><img  width="35%" class="mx-auto d-block" src="img/daisy.png"></a>  </div>
