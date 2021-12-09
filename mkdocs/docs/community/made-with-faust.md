@@ -3,6 +3,12 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
 
 
+## [Bass Preamp Drive](https://github.com/jujudusud/BPD)
+
+<div><a href="https://github.com/jujudusud/BPD"><img  width="40%" class="mx-auto d-block" src="img/ampeg.jpeg"></a>  </div>
+
+The goal of this project is to digitally reproduce the behavior of a well-known electric bass preamp: Ampeg SVT3 Pro. This preamp has been copied by several manufacturers. So we have an almost perfect copy with the Bugera BVP5500 which has four preamplifier tubes. An analog copy is also available as a pedal, the Tech 21 BDDI. The project is based on advances in the simulation of analog circuits made available by the Guitarix project and the excellent Faust from Grame cncm.
+
 ## [Drum Module](https://github.com/andreaco/miosix-drum)
 
 <div><a href="https://github.com/andreaco/miosix-drum"><img  width="50%" class="mx-auto d-block" src="img/drum-module.jpeg"></a>  </div>
