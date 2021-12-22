@@ -16,6 +16,12 @@ The HarmonicExciter is based on a half wave clipper, allow to add harmonics to t
 
 The Rumor is pure, nasty growling bass fuzz pedal, with bold out-front presence, and cutting articulation. The DSP is [written in Faust](https://github.com/brummer10/Rumor/blob/master/Rumor/rumor.dsp). The code is distibuted as a LV2 plugin.
 
+## [CollisionDrive](https://github.com/brummer10/CollisionDrive)
+
+<div><a href="https://github.com/brummer10/CollisionDrive"><img  width="25%" class="mx-auto d-block" src="img/CollisionDrive.png"></a>  </div>
+
+Overdrive/Distortion. The DSP is [written in Faust](https://github.com/brummer10/CollisionDrive/blob/main/CollisionDrive/dsp/CollisionDrivesim.dsp). The code is distibuted as a LV2 plugin.
+
 ## [Bass Preamp Drive](https://github.com/jujudusud/BPD)
 
 <div><a href="https://github.com/jujudusud/BPD"><img  width="40%" class="mx-auto d-block" src="img/ampeg.jpeg"></a>  </div>
