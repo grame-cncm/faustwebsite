@@ -3,24 +3,11 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
 
 
-## [HarmonicExciter.lv2](https://github.com/brummer10/HarmonicExciter)
+## [XPlugs.lv2](https://github.com/brummer10/XPlugs.lv2)
 
-<div><a href="https://github.com/brummer10/HarmonicExciter"><img  width="60%" class="mx-auto d-block" src="img/HarmonicExciter.png"></a>  </div>
+<div><a href="https://github.com/brummer10/XPlugs.lv2"><img  width="35%" class="mx-auto d-block" src="img/HarmonicExciter.png"></a>  </div>
 
-The HarmonicExciter is based on a half wave clipper, allow to add harmonics to the source by mix them in. The DSP is [written in Faust](https://github.com/brummer10/HarmonicExciter/blob/main/Harmonic_Exiter/harmonic_exciter.dsp). The code is distibuted as a LV2 plugin.
-
-
-## [Rumor.lv2](https://github.com/brummer10/Rumor)
-
-<div><a href="https://github.com/brummer10/Rumor"><img  width="30%" class="mx-auto d-block" src="img/Rumor.png"></a>  </div>
-
-The Rumor is pure, nasty growling bass fuzz pedal, with bold out-front presence, and cutting articulation. The DSP is [written in Faust](https://github.com/brummer10/Rumor/blob/master/Rumor/rumor.dsp). The code is distibuted as a LV2 plugin.
-
-## [CollisionDrive.lv2](https://github.com/brummer10/CollisionDrive)
-
-<div><a href="https://github.com/brummer10/CollisionDrive"><img  width="25%" class="mx-auto d-block" src="img/CollisionDrive.png"></a>  </div>
-
-Overdrive/Distortion. The DSP is [written in Faust](https://github.com/brummer10/CollisionDrive/blob/main/CollisionDrive/dsp/CollisionDrivesim.dsp). The code is distibuted as a LV2 plugin.
+This repository contain the LV2 plugins developed using libxputty/XUidesigner. The included makfile allows the build of all plugins against a single checkout of libxputty. Each plugin exists as its own submodule under this repository. Some of the DSP code has been written with Faust.
 
 ## [Bass Preamp Drive](https://github.com/jujudusud/BPD)
 
