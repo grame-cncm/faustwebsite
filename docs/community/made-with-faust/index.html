@@ -168,6 +168,10 @@
             
             <li class="nav-item" data-level="1"><a href="#powered-with-faust" class="nav-link">Powered With Faust</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#sonobus" class="nav-link">Sonobus</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#xplugslv2" class="nav-link">XPlugs.lv2</a>
               <ul class="nav flex-column">
               </ul>
@@ -533,10 +537,14 @@
 
 <h1 id="powered-with-faust">Powered With Faust</h1>
 <p>This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.</p>
-<h2 id="xplugslv2"><a href="https://github.com/brummer10/XPlugs.lv2">XPlugs.lv2</a></h2>
-<div><a href="https://github.com/brummer10/XPlugs.lv2"><img  width="35%" class="mx-auto d-block" src="img/HarmonicExciter.png"></a>  </div>
+<h2 id="sonobus"><a href="https://sonobus.net">Sonobus</a></h2>
+<div><a href="https://sonobus.net"><img  width="50%" class="mx-auto d-block" src="img/sonobus.png"></a>  </div>
 
-<p>This repository contain the LV2 plugins developed using libxputty/XUidesigner. The included makfile allow the build of all plugs against a single checkout of libxputty. Each plugin exists as its own submodule under this repository. Some of the DSP code has been written with Faust.</p>
+<p>SonoBus is an easy to use application for streaming high-quality, low-latency peer-to-peer audio between devices over the internet or a local network. Several DSP effects (<a href="https://github.com/sonosaurus/sonobus/blob/main/Source/faustCompressor.h">Compressor</a>, <a href="https://github.com/sonosaurus/sonobus/blob/main/Source/faustExpander.h">Expander</a>, <a href="https://github.com/sonosaurus/sonobus/blob/main/Source/faustLimiter.h">Limiter</a>, <a href="https://github.com/sonosaurus/sonobus/blob/main/Source/faustParametricEQ.h">ParametricEQ</a>, <a href="https://github.com/sonosaurus/sonobus/blob/main/Source/zitaRev.h">Reverb</a>) have been <a href="https://github.com/sonosaurus/sonobus/tree/main/scripts">written in Faust</a>, compiles as C++ code and include in the <a href="https://github.com/sonosaurus/sonobus">JUCE project</a>. </p>
+<h2 id="xplugslv2"><a href="https://github.com/brummer10/XPlugs.lv2">XPlugs.lv2</a></h2>
+<div><a href="https://github.com/brummer10/XPlugs.lv2"><img  width="45%" class="mx-auto d-block" src="img/HarmonicExciter.png"></a>  </div>
+
+<p>This repository contain the LV2 plugins developed using libxputty/XUidesigner. The included makfile allows the build of all plugins against a single checkout of libxputty. Each plugin exists as its own submodule under this repository. Some of the DSP code has been written with Faust.</p>
 <h2 id="bass-preamp-drive"><a href="https://github.com/jujudusud/BPD">Bass Preamp Drive</a></h2>
 <div><a href="https://github.com/jujudusud/BPD"><img  width="40%" class="mx-auto d-block" src="img/ampeg.jpeg"></a>  </div>
 
