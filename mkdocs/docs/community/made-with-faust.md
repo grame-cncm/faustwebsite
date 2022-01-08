@@ -2,26 +2,19 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
-
-
 ## [Dataflow Based FPGA Program Synthesis](https://github.com/jgelfman/Dataflow-Based-FPGA-Program-Synthesis-Capstone)
 
 <div><a href="https://github.com/jgelfman/Dataflow-Based-FPGA-Program-Synthesis-Capstone"><img  width="70%" class="mx-auto d-block" src="img/Dataflow-FPGA.png"></a>  </div>
 
-
 A Yale-NUS BSc. (Hons) in Mathematical, Computational, and Statistical Sciences Capstone: an FPGA Program Generator written in Python that takes dsp-sig XML Dataflow Graphs created using FAUST to produce FPGA programs in VHDL.
-
-
 
 ## [DSPedal](https://github.com/jmiskovic/DSPedal)
 
 <div><a href="https://github.com/jmiskovic/DSPedal"><img  width="50%" class="mx-auto d-block" src="img/DSPedal.png"></a>  </div>
 
-
 DSPedal is a custom hardware platform for real-time sound effects. It is operated by few knobs, external expression pedal, couple of buttons and a small graphical LCD.
 
 Processing effect is written in Faust programming language and compiled into C code. So far the Cortex M4 core clocked at 204 MHz has proven to be capable of executing relatively complex effects like wah, but effect-chaining quickly reaches the limits of processing power.
-
 
 ## [Tambura](https://github.com/olilarkin/Tambura)
 
@@ -38,13 +31,11 @@ The model uses a few tricks to produce a Tambura-like sound, and should probably
 drumbox is a fun and powerful drum synthesizer for your Android device. Start from a preset and tweak the sounds and appearance to make it your own.
 Freestyle on the drum pads, record a sequence or both...it's up to you! 
 
-
 ## [Granola](https://github.com/jlp6k/faust-things)
 
 <div><a href="https://github.com/jlp6k/faust-things"><img  width="50%" class="mx-auto d-block" src="img/Granola.png"></a>  </div>
 
 Granola is a monophonic granular live feed processor. The grain processor is inspired by the Mutable Instruments Beads. The grain window shape control is inspired by the GR-1 Granular synthesizer from Tasty Chips Electronics. The DSP code is written in Faust.
-
 
 ## [fverb](https://github.com/jpcima/fverb)
 
@@ -58,11 +49,9 @@ A stereo variant of the reverberator by Jon Dattorro coded in Faust.
 
 This study has been developed as a proof-of-concept for data pattern sonification. We've implemented data pattern sonification using FM synthesis coded in Faust. Air pollution data, which is temporal, is retrieved from the server and is done pattern mining. Then  pattern data sonification is done.
 
-
 ## [GULA Plugins](https://github.com/steveb/gula-plugins)
 
 A collection of guitar effect LV2 plugins ([The Vibey](https://github.com/steveb/gula-plugins#the-vibey), [The Splits](https://github.com/steveb/gula-plugins#the-splits), [The Fades](https://github.com/steveb/gula-plugins#the-fades), [SSaP Tone](https://github.com/steveb/gula-plugins#ssap-tone), [Sweabed](https://github.com/steveb/gula-plugins#sweabed), [Pequed](https://github.com/steveb/gula-plugins#pequed), [Peak audio to CV](https://github.com/steveb/gula-plugins#peak-audio-to-cv), [LFO CV](https://github.com/steveb/gula-plugins#lfo-cv)) with [MOD Devices](https://www.moddevices.com) user interfaces.
-
 
 ## [FAUST filters](https://github.com/SpotlightKid/faustfilters)
 
@@ -74,7 +63,6 @@ A collection of virtual-analog filters(Diode Ladder, Korg 35 HPF, Korg 35 LPF, M
 
 Yet another look-ahead limiter code in Faust. The novel aspect of this limiter is that it uses N cascaded one-pole filters for amplitude profiling, which improves smoothness in the first to N-1 order derivatives and reduces total harmonic distortion. This design uses four cascaded one-pole lowpass filters, following the cut-off correction formula (8.9) found in [Zavalishin 2012].  
 
-
 ## [Web Audio Modules](https://github.com/webaudiomodules)
 
 <div><a href="https://github.com/webaudiomodules"><img  width="65%" class="mx-auto d-block" src="img/wam-modules.png"></a>  </div>
@@ -82,13 +70,11 @@ Yet another look-ahead limiter code in Faust. The novel aspect of this limiter i
 Web Audio Modules are an open source framework facilitating the development of high-performance Web Audio plugins (instruments, realtime audio effects and MIDI processors). They can be developed using JavaScript and Web standards or compiled from C, C++ code, and domain-specific languages such as Faust or Csound.
 The [Faust Web IDE](https://faustide.grame.fr) contains an integrated GUI builder, read a [tutorial here](https://docs.google.com/document/d/1HDEm4m_cD47YBuDilzGYiANYQDktj56Njyv0umGYO6o/edit?usp=sharing).
 
-
 ## [Kapitonov Plugins Pack](https://github.com/olegkapitonov/Kapitonov-Plugins-Pack)
 
 <div><a href="https://github.com/olegkapitonov/Kapitonov-Plugins-Pack"><img  width="45%" class="mx-auto d-block" src="img/Kapitonov.jpg"></a>  </div>
 
 Set of 7 plugins for guitar sound processing, compiled in LADSPA and LV2 formats. Compatible with hosts such as Ardour, Qtractor, Carla, guitarix, jack-rack. The DSP of all of them is written in Faust.
-
 
 ## [tubeAmp Designer](https://github.com/olegkapitonov/tubeAmp-Designer)
 
@@ -96,13 +82,11 @@ Set of 7 plugins for guitar sound processing, compiled in LADSPA and LV2 formats
 
 Standalone software guitar processor, editor of *.tapf profile files for tubeAmp (KPP) and guitar amp profiler.
 
-
 ## [BioSignals](https://github.com/pingdynasty/BioSignals)
 
 <div><a href="https://github.com/pingdynasty/BioSignals"><img  width="50%" class="mx-auto d-block" src="img/BioSignalsTop.png"></a>  </div>
 
 BioSignals is a data aquisition and processing device for EMG, ECG and EEG signals. Since it is using the [OpenWare](https://github.com/pingdynasty/OpenWare) firmware, it can be programmed with Faust.
-
 
 ## [Scale it](https://github.com/pavelhusa/Scaleit)
 
@@ -134,18 +118,15 @@ A free, open source transient shaping audio plugin that operates on a specified 
 
 This plugin is meant to be comparable to the excellent Spiff plugin in its core functionality, but lacks many of the nice features and polished UI. The DSP is [coded in Faust](https://github.com/unicornsasfuel/whetstone/blob/main/whetstone.dsp).
 
-
 ## [Reverb Trickery](https://github.com/unicornsasfuel/reverb_trickery)
 
 <div><a href="https://github.com/unicornsasfuel/reverb_trickery"><img  width="35%" class="mx-auto d-block" src="img/reverb-trickery.png"></a>  </div>
 
 A free, open source audio plugin implementing various creative reverb effects, including octave-shifted, distorted, hi-pass/low-passed, gated, and narrowing reverb, [coded in Faust](https://github.com/unicornsasfuel/reverb_trickery/blob/main/reverbtrickery.dsp).
 
-
 ## [b259wf](https://github.com/yorgoszachos/b259wf)
 
 <div><a href="https://github.com/yorgoszachos/b259wf"><img  width="40%" class="mx-auto d-block" src="img/b259wf.png"></a>  </div>
-
 
 This is a model of the "tibre" circuit of the Buchla 259 Complex Wave Generator, made in [Faust](http://faust.grame.fr/). The model follows the circuit modelling
 as seen on the paper  [Virtual Analog Buchkla 259 wavefolder](http://www.dafx17.eca.ed.ac.uk/papers/DAFx17_paper_82.pdf), using 5 folds. 
@@ -191,7 +172,6 @@ Jonatan Liljedahl at [Kymatica AB](http://kymatica.com) makes iOS music apps, el
 <div><a href="https://github.com/modularev/Nemesis"><img  width="50%" class="mx-auto d-block" src="img/nemesis.jpg"></a>  </div>
 
 Nemesis is multichannel dsp platform for eurorack. It can be [programmed with Faust](https://github.com/modularev/Nemesis/tree/main/software). 
-
 
 ## [Sonobus](https://sonobus.net)
 
