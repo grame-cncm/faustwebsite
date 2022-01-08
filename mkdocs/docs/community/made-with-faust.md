@@ -109,7 +109,7 @@ Virtual rhizome owes much to the availability and enthusiasm of Jean Geoffroy an
 
 ## [SmartFaust](https://www.grame.fr/articles/smartfaust-5d839e9c3a877)
 
-<div><a href="https://www.grame.fr/articles/smartfaust-5d839e9c3a877"><img  width="25%" class="mx-auto d-block" src="img/smartfaust.png"></a>  </div>
+<div><a href="https://www.grame.fr/articles/smartfaust-5d839e9c3a877"><img  width="50%" class="mx-auto d-block" src="img/smartfaust.png"></a>  </div>
 
 SmartFaust is a concept of musical applications for smartphones. These applications have the particularity of only using the user's gestures and not by tapping on the device's screen. Made for iOS and Android, they can also use the motion sensors of these devices to make them real musical instruments.
 
