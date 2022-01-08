@@ -107,6 +107,19 @@ The work takes the form of a labyrinth, a kind of virtual architecture that coul
 
 Virtual rhizome owes much to the availability and enthusiasm of Jean Geoffroy and Christophe Lebreton. It is amicably dedicated to them.
 
+## [SmartFaust](https://www.grame.fr/articles/smartfaust-5d839e9c3a877)
+
+<div><a href="https://www.grame.fr/articles/smartfaust-5d839e9c3a877"><img  width="25%" class="mx-auto d-block" src="img/smartfaust.png"></a>  </div>
+
+SmartFaust is a concept of musical applications for smartphones. These applications have the particularity of only using the user's gestures and not by tapping on the device's screen. Made for iOS and Android, they can also use the motion sensors of these devices to make them real musical instruments.
+
+Smartfaust applications are based on the Faust (Functional Audio Stream) programming language developed by Grame over the last 15 years and recognized as a standard in the field of real-time signal processing for audio. 
+
+The SmartFaust applications were first used for the creation of the pieces Mephisto (for drums and cell phone ensemble), Belzebuth (participative piece for public equipped with Smartphones), Iblis (for clarinet and cell phone ensemble) and Bélial (for harp and cell phone ensemble) written by the composer Xavier Garcia.
+
+From this same technology were later created the applications "Geek Bagatelles" (2016) and "GameLan" (2019).
+
+Download here: [Android](https://play.google.com/store/search?q=smartfaust&c=apps) & [iOS](https://www.apple.com/fr/search/smartfaust?src=globalnav)
 
 ## [Trombone Simulator](https://nuchi.github.io/trombone/)
 
