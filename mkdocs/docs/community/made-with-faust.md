@@ -4,7 +4,7 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 ## [Nemesis](https://github.com/modularev/Nemesis)
 
-<div><a href="https://github.com/modularev/Nemesis"><img  width="50%" class="mx-auto d-block" src="img/nemesis.jpeg"></a>  </div>
+<div><a href="https://github.com/modularev/Nemesis"><img  width="50%" class="mx-auto d-block" src="img/nemesis.jpg"></a>  </div>
 
 Nemesis is multichannel dsp platform for eurorack. It can be [programmed with Faust](https://github.com/modularev/Nemesis/tree/main/software). 
 
@@ -116,7 +116,7 @@ Virtual rhizome owes much to the availability and enthusiasm of Jean Geoffroy an
 
 ## [SmartFaust](https://www.grame.fr/articles/smartfaust-5d839e9c3a877)
 
-<div><a href="https://www.grame.fr/articles/smartfaust-5d839e9c3a877"><img  width="50%" class="mx-auto d-block" src="img/smartfaust.png"></a>  </div>
+<div><a href="https://www.grame.fr/articles/smartfaust-5d839e9c3a877"><img  width="50%" class="mx-auto d-block" src="img/smartfaust.jpg"></a>  </div>
 
 SmartFaust is a concept of musical applications for smartphones. These applications have the particularity of only using the user's gestures and not by tapping on the device's screen. Made for iOS and Android, they can also use the motion sensors of these devices to make them real musical instruments.
 
