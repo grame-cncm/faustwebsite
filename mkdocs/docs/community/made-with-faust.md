@@ -2,6 +2,13 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
 
+## [Nemesis](https://github.com/modularev/Nemesis)
+
+<div><a href="https://github.com/modularev/Nemesis"><img  width="50%" class="mx-auto d-block" src="img/nemesis.jpeg"></a>  </div>
+
+Nemesis is multichannel dsp platform for eurorack. It can be [programmed with Faust](https://github.com/modularev/Nemesis/tree/main/software). 
+
+
 ## [Sonobus](https://sonobus.net)
 
 <div><a href="https://sonobus.net"><img  width="50%" class="mx-auto d-block" src="img/sonobus.png"></a>  </div>
