@@ -2,6 +2,18 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
 
+## [Kymatica.com](http://kymatica.com)
+
+<div><a href="http://kymatica.com"><img  width="35%" class="mx-auto d-block" src="img/kymatica.png"></a>  </div>
+
+Jonatan Liljedahl at [Kymatica AB](http://kymatica.com) makes iOS music apps, electronic music, and a little bit of audio hardware. The following [iOS applications](http://kymatica.com/apps/) have DSP code developed using Faust:
+
+- [AU3FX:Push](http://kymatica.com/apps/au3fx_push): AUv3 dynamics processor with noise gate, compressor/expander with external side-chain input, brick-wall look-ahead limiter and hard/soft clipper.
+- [AU3FX:Space](http://kymatica.com/apps/au3fx_space): High quality tweakable AUv3 reverb with resonant filters. For everything between small rooms, resonators, and infinitely large spaces.
+- [AU3FX:Dub](http://kymatica.com/apps/au3fx_dub): Stereo AUv3 delay effect for everything from clean digital delays to filthy dub echoes, ping-pong flangers, and broken cassette tapes.
+
+- [AU3FX:PeakQ](http://kymatica.com/apps/aufx_peakq): (currently stuck in App Review since december!). A versatile 4-band parametric stereo equalizer for everything between subtle frequency enhancements and agressive boosting/cutting or special resonator effects.
+
 ## [Nemesis](https://github.com/modularev/Nemesis)
 
 <div><a href="https://github.com/modularev/Nemesis"><img  width="50%" class="mx-auto d-block" src="img/nemesis.jpg"></a>  </div>
