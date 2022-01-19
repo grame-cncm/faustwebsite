@@ -14,7 +14,7 @@ Jonatan Liljedahl at [Kymatica AB](http://kymatica.com) makes iOS music apps, el
 
 - [AU3FX:Dub](http://kymatica.com/apps/au3fx_dub): Stereo AUv3 delay effect for everything from clean digital delays to filthy dub echoes, ping-pong flangers, and broken cassette tapes.
 
-- [AU3FX:PeakQ](http://kymatica.com/apps/aufx_peakq): (currently stuck in App Review since december!). A versatile 4-band parametric stereo equalizer for everything between subtle frequency enhancements and agressive boosting/cutting or special resonator effects.
+- [AUFX:PeakQ](http://kymatica.com/apps/aufx_peakq): A versatile 4-band parametric stereo equalizer for everything between subtle frequency enhancements and agressive boosting/cutting or special resonator effects.
 
 ## [Nemesis](https://github.com/modularev/Nemesis)
 
