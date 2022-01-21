@@ -168,6 +168,10 @@
             
             <li class="nav-item" data-level="1"><a href="#powered-with-faust" class="nav-link">Powered With Faust</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#metafx" class="nav-link">metaFx</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#kymaticacom" class="nav-link">Kymatica.com</a>
               <ul class="nav flex-column">
               </ul>
@@ -549,6 +553,12 @@
 
 <h1 id="powered-with-faust">Powered With Faust</h1>
 <p>This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.</p>
+<h2 id="metafx"><a href="https://github.com/dblanchemain/metaFx">metaFx</a></h2>
+<div><a href="https://github.com/dblanchemain/metaFx"><img  width="35%" class="mx-auto d-block" src="img/metaFx.png"></a>  </div>
+
+<p>The <a href="http://blanchemain.info/Documents/Programmation/index.php?page=metaFx">metaFx</a> is a control surface for continuous sound transformations in real time, just like the metaSurface64.</p>
+<p>Like <a href="https://faust.grame.fr/community/made-with-faust/#metasurface64">metaSurface64</a>, it has both its own loop generator and a multi-effects FX engine, but its operation is different, especially for the management of plugin chains and pads.</p>
+<p>Each mixer on this surface can directly control the gain and the attached plug-ins. It is also possible to control the tracks of an external sequencer (Ardour or Reaper). To do this, the application uses OSC controllable modules that come from the Faust language library that is embedded in the application. Its interest lies in the construction of a parallel sound processing chain in the form of a graph.</p>
 <h2 id="kymaticacom"><a href="http://kymatica.com">Kymatica.com</a></h2>
 <div><a href="http://kymatica.com"><img  width="35%" class="mx-auto d-block" src="img/kymatica.png"></a>  </div>
 

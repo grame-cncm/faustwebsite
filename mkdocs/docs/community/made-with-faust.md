@@ -2,6 +2,16 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
 
+## [metaFx](https://github.com/dblanchemain/metaFx)
+
+<div><a href="https://github.com/dblanchemain/metaFx"><img  width="35%" class="mx-auto d-block" src="img/metaFx.png"></a>  </div>
+
+The [metaFx](http://blanchemain.info/Documents/Programmation/index.php?page=metaFx) is a control surface for continuous sound transformations in real time, just like the metaSurface64.
+
+Like [metaSurface64](https://faust.grame.fr/community/made-with-faust/#metasurface64), it has both its own loop generator and a multi-effects FX engine, but its operation is different, especially for the management of plugin chains and pads.
+
+Each mixer on this surface can directly control the gain and the attached plug-ins. It is also possible to control the tracks of an external sequencer (Ardour or Reaper). To do this, the application uses OSC controllable modules that come from the Faust language library that is embedded in the application. Its interest lies in the construction of a parallel sound processing chain in the form of a graph.
+
 ## [Kymatica.com](http://kymatica.com)
 
 <div><a href="http://kymatica.com"><img  width="35%" class="mx-auto d-block" src="img/kymatica.png"></a>  </div>
