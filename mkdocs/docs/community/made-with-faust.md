@@ -2,6 +2,13 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
 
+
+## [string-machine](https://github.com/jpcima/string-machine)
+
+<div><a href="https://github.com/jpcima/string-machine"><img  width="70%" class="mx-auto d-block" src="img/string-machine.png"></a>  </div>
+
+This is a virtual-analog string ensemble synthesizer. The implementation is based on a digital model designed by Peter Whiting. The improvement of the model adds various abilities, in particular a virtual-analog emulation of the bucket brigade delay circuit. Most of the [DSP code](https://github.com/jpcima/string-machine/tree/master/sources/dsp) is developed using Faust.  Three VST or LV2 are generated: **string-machine**, **string-machine-chorus** and **string-machine-chorus-stereo**. 
+
 ## [metaFx](https://github.com/dblanchemain/metaFx)
 
 <div><a href="https://github.com/dblanchemain/metaFx"><img  width="35%" class="mx-auto d-block" src="img/metaFx.png"></a>  </div>
