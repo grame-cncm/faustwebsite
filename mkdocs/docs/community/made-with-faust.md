@@ -2,6 +2,19 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
 
+## [b259wf](https://github.com/yorgoszachos/b259wf)
+
+<div><a href="https://github.com/yorgoszachos/b259wf"><img  width="40%" class="mx-auto d-block" src="img/b259wf.png"></a>  </div>
+
+
+This is a model of the "tibre" circuit of the Buchla 259 Complex Wave Generator, made in [Faust](http://faust.grame.fr/). The model follows the circuit modelling
+as seen on the paper  [Virtual Analog Buchkla 259 wavefolder](http://www.dafx17.eca.ed.ac.uk/papers/DAFx17_paper_82.pdf), using 5 folds. 
+
+The proposed 2-point BLAMP antialiasing method has been attempted for arbitrary sources as shown [here](http://dafx16.vutbr.cz/dafxpapers/18-DAFx-16_paper_33-PN.pdf), but it is
+not sufficient for high frequencies and/or more complex signals. Instead, filtering and light cubic nonlinearity distiorion has been used to round corners and for
+clipping. 
+
+The user interface consists of the controls **fold** for the folding amount, **offset** for offseting the signal before folding, and **lowpass** as a final stage one-pole filtering to control the character (too much folding might introduce unwanted higher harmonics for certain signals). The final output is dc-blocked.
 
 ## [string-machine](https://github.com/jpcima/string-machine)
 

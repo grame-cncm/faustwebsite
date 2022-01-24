@@ -168,6 +168,10 @@
             
             <li class="nav-item" data-level="1"><a href="#powered-with-faust" class="nav-link">Powered With Faust</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#b259wf" class="nav-link">b259wf</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#string-machine" class="nav-link">string-machine</a>
               <ul class="nav flex-column">
               </ul>
@@ -557,6 +561,15 @@
 
 <h1 id="powered-with-faust">Powered With Faust</h1>
 <p>This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.</p>
+<h2 id="b259wf"><a href="https://github.com/yorgoszachos/b259wf">b259wf</a></h2>
+<div><a href="https://github.com/yorgoszachos/b259wf"><img  width="40%" class="mx-auto d-block" src="img/b259wf.png"></a>  </div>
+
+<p>This is a model of the "tibre" circuit of the Buchla 259 Complex Wave Generator, made in <a href="http://faust.grame.fr/">Faust</a>. The model follows the circuit modelling
+as seen on the paper  <a href="http://www.dafx17.eca.ed.ac.uk/papers/DAFx17_paper_82.pdf">Virtual Analog Buchkla 259 wavefolder</a>, using 5 folds. </p>
+<p>The proposed 2-point BLAMP antialiasing method has been attempted for arbitrary sources as shown <a href="http://dafx16.vutbr.cz/dafxpapers/18-DAFx-16_paper_33-PN.pdf">here</a>, but it is
+not sufficient for high frequencies and/or more complex signals. Instead, filtering and light cubic nonlinearity distiorion has been used to round corners and for
+clipping. </p>
+<p>The user interface consists of the controls <strong>fold</strong> for the folding amount, <strong>offset</strong> for offseting the signal before folding, and <strong>lowpass</strong> as a final stage one-pole filtering to control the character (too much folding might introduce unwanted higher harmonics for certain signals). The final output is dc-blocked.</p>
 <h2 id="string-machine"><a href="https://github.com/jpcima/string-machine">string-machine</a></h2>
 <div><a href="https://github.com/jpcima/string-machine"><img  width="70%" class="mx-auto d-block" src="img/string-machine.png"></a>  </div>
 
