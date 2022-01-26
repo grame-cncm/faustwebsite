@@ -446,7 +446,7 @@ Fragment Audio Server (FAS) is a high performance pixels-based graphical audio s
 
 <a href="https://github.com/resonantdsp/swankyamp"><img  width="70%" class="mx-auto d-block" src="img/swankyamp.png"></a>  
 
-Swanky Amp is a tube amplifier simulation DSP plugin which aims to capture the details in the dynamics of tube amplifiers. The DSP is primarily written in [Faust](https://faust.grame.fr/), whereas the UI is written in C++ using the [JUCE](https://www.juce.com). Follow the [demo here](https://www.youtube.com/watch?v=pz3v87VMQfk).
+Swanky Amp is a tube amplifier simulation DSP plugin which aims to capture the details in the dynamics of tube amplifiers. The DSP is primarily written in [Faust](https://faust.grame.fr/), whereas the UI is written in C++ using the [JUCE](https://www.juce.com). Follow the [demo here](https://www.youtube.com/watch?v=pz3v87VMQfk). A commercial version is [available here](https://www.resonantdsp.com/swankyamp/).
 
 ## [Web Synth](https://github.com/Ameobea/web-synth)
 
