@@ -2,6 +2,31 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programing environments, development tools, research projects, embedded devices, Web applications, etc.
 
+
+## [Level Rider](https://github.com/unicornsasfuel/levelrider)
+
+<div><a href="https://github.com/unicornsasfuel/levelrider"><img  width="40%" class="mx-auto d-block" src="img/level-rider.png"></a>  </div>
+
+This is an audio plugin [written in Faust](https://github.com/unicornsasfuel/levelrider/blob/main/levelrider.dsp) that automates gain level adjustments, based on a target gain level, a time window over which overall loudness is calculated via RMS, and a maximum adjustment threshold.
+
+This plugin is comparable to Waves Vocal Rider or Waves Bass Rider in its functionality, but is free and open-source.
+
+## [Whetstone Transient Shaper](https://github.com/unicornsasfuel/whetstone)
+
+<div><a href="https://github.com/unicornsasfuel/whetstone"><img  width="30%" class="mx-auto d-block" src="img/whetstone.png"></a>  </div>
+
+A free, open source transient shaping audio plugin that operates on a specified frequency band. Whetstone will extract a certain frequency band based on a low cutoff and high cutoff that you choose, apply transient shaping to it, and then reintegrate the shaped band back into the original signal. 
+
+This plugin is meant to be comparable to the excellent Spiff plugin in its core functionality, but lacks many of the nice features and polished UI. The DSP is [coded in Faust](https://github.com/unicornsasfuel/whetstone/blob/main/whetstone.dsp).
+
+
+## [Reverb Trickery](https://github.com/unicornsasfuel/reverb_trickery)
+
+<div><a href="https://github.com/unicornsasfuel/reverb_trickery"><img  width="35%" class="mx-auto d-block" src="img/reverb-trickery.png"></a>  </div>
+
+A free, open source audio plugin implementing various creative reverb effects, including octave-shifted, distorted, hi-pass/low-passed, gated, and narrowing reverb, [coded in Faust](https://github.com/unicornsasfuel/reverb_trickery/blob/main/reverbtrickery.dsp).
+
+
 ## [b259wf](https://github.com/yorgoszachos/b259wf)
 
 <div><a href="https://github.com/yorgoszachos/b259wf"><img  width="40%" class="mx-auto d-block" src="img/b259wf.png"></a>  </div>
@@ -20,7 +45,7 @@ The user interface consists of the controls **fold** for the folding amount, **o
 
 <div><a href="https://github.com/jpcima/string-machine"><img  width="70%" class="mx-auto d-block" src="img/string-machine.png"></a>  </div>
 
-This is a virtual-analog string ensemble synthesizer. The implementation is based on a digital model designed by Peter Whiting. The improvement of the model adds various abilities, in particular a virtual-analog emulation of the bucket brigade delay circuit. Most of the [DSP code](https://github.com/jpcima/string-machine/tree/master/sources/dsp) is developed using Faust.  Three VST or LV2 are generated: **string-machine**, **string-machine-chorus** and **string-machine-chorus-stereo**. 
+This is a virtual-analog string ensemble synthesizer. The implementation is based on a digital model designed by Peter Whiting. The improvement of the model adds various abilities, in particular a virtual-analog emulation of the bucket brigade delay circuit. Most of the [DSP code](https://github.com/jpcima/string-machine/tree/master/sources/dsp) is developed using Faust. Three VST or LV2 are generated: **string-machine**, **string-machine-chorus** and **string-machine-chorus-stereo**. 
 
 ## [metaFx](https://github.com/dblanchemain/metaFx)
 
