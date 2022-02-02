@@ -3,6 +3,12 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects, embedded devices, Web applications, etc.
 
 
+## [JackTrip](https://www.jacktrip.com)
+
+<div><a href="https://www.jacktrip.com"><img  width="40%" class="mx-auto d-block" src="img/jacktrip.png"></a>  </div>
+
+[JackTrip](https://github.com/jacktrip/jacktrip) is a Linux, macOS, or Windows multi-machine audio system used for network music performance over the Internet. It supports any number of channels (as many as the computer/network can handle) of bidirectional, high quality, uncompressed audio signal streaming. Several DSP effects ([compressor](https://github.com/jacktrip/jacktrip/blob/main/faust-src/compressordsp.dsp), [freeverb](https://github.com/jacktrip/jacktrip/blob/main/faust-src/freeverbdsp.dsp), [zitarev](https://github.com/jacktrip/jacktrip/blob/main/faust-src/zitarevdsp.dsp), [limiter](https://github.com/jacktrip/jacktrip/blob/main/faust-src/limiterdsp.dsp)) are written in Faust,  compiled as C++ code, and included in [project sources](https://github.com/jacktrip/jacktrip/tree/main/src).
+
 ## [Level Rider](https://github.com/unicornsasfuel/levelrider)
 
 <div><a href="https://github.com/unicornsasfuel/levelrider"><img  width="40%" class="mx-auto d-block" src="img/level-rider.png"></a>  </div>
