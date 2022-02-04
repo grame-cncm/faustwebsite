@@ -7,7 +7,7 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 <div><a href="https://github.com/pingdynasty/BioSignals"><img  width="50%" class="mx-auto d-block" src="img/BioSignalsTop.png"></a>  </div>
 
-BioSignals is a data aquisition and processing device for EMG, ECG and EEG signals. Since it is using the [OpenWare](https://github.com/pingdynasty/OpenWare) firmware, it can be programmmed with Faust.
+BioSignals is a data aquisition and processing device for EMG, ECG and EEG signals. Since it is using the [OpenWare](https://github.com/pingdynasty/OpenWare) firmware, it can be programmed with Faust.
 
 
 ## [Scale it](https://github.com/pavelhusa/Scaleit)
