@@ -3,6 +3,13 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research (possibly non musical) projects, embedded devices, Web applications, etc.
 
 
+## [BioSignals](https://github.com/pingdynasty/BioSignals)
+
+<div><a href="https://github.com/pingdynasty/BioSignals"><img  width="50%" class="mx-auto d-block" src="img/BioSignalsTop.png"></a>  </div>
+
+BioSignals is a data aquisition and processing device for EMG, ECG and EEG signals. Since it is using the [OpenWare](https://github.com/pingdynasty/OpenWare) firmware, it can be programmmed with Faust.
+
+
 ## [Scale it](https://github.com/pavelhusa/Scaleit)
 
 EEG music neurofeedback project, using Faust to generate [PureData modules](https://github.com/pavelhusa/Scaleit/tree/master/PDcompiled).
