@@ -2,6 +2,12 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research (possibly non musical) projects, embedded devices, Web applications, etc.
 
+## [Kapitonov Plugins Pack](https://github.com/olegkapitonov/Kapitonov-Plugins-Pack)
+
+<div><a href="https://github.com/olegkapitonov/Kapitonov-Plugins-Pack"><img  width="45%" class="mx-auto d-block" src="img/Kapitonov.jpg"></a>  </div>
+
+Set of 7 plugins for guitar sound processing, compiled in LADSPA and LV2 formats. Compatible with hosts such as Ardour, Qtractor, Carla, guitarix, jack-rack. The DSP of all of them is written in Faust.
+
 
 ## [BioSignals](https://github.com/pingdynasty/BioSignals)
 
