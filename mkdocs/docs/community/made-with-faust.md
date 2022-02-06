@@ -16,9 +16,9 @@ Set of 7 plugins for guitar sound processing, compiled in LADSPA and LV2 formats
 BioSignals is a data aquisition and processing device for EMG, ECG and EEG signals. Since it is using the [OpenWare](https://github.com/pingdynasty/OpenWare) firmware, it can be programmed with Faust.
 
 
-## [Scale it](https://github.com/pavelhusa/Scaleit)
-
-EEG music neurofeedback project, using Faust to generate [PureData modules](https://github.com/pavelhusa/Scaleit/tree/master/PDcompiled).
+<!---  Desactived for now ---> 
+<!---  ## [Scale it](https://github.com/pavelhusa/Scaleit) ---> 
+<!--- EEG music neurofeedback project, using Faust to generate [PureData modules](https://github.com/pavelhusa/Scaleit/tree/master/PDcompiled). ---> 
 
 ## [JackTrip](https://www.jacktrip.com)
 
