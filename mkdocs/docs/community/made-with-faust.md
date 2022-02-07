@@ -18,7 +18,7 @@ BioSignals is a data aquisition and processing device for EMG, ECG and EEG signa
 
 ## [Scale it](https://github.com/pavelhusa/Scaleit)
 
-<div><a href="https://github.com/pingdynasty/BioSignals"><img  width="45%" class="mx-auto d-block" src="img/ScaleIt.png"></a>  </div>
+<div><a href="https://github.com/pavelhusa/Scaleit"><img  width="45%" class="mx-auto d-block" src="img/ScaleIt.png"></a>  </div>
 
 *Scale it* is an open source program (written in graphical programming language Pure data and in Faust) that allows sonification of a signal distribution in real time. There are two different possibilities of sonification of the signal. One of the objects, tone, generates changes in pitch of a monophonic tone. The other object, chord, expresses the input value in width of polyphony. 
 
