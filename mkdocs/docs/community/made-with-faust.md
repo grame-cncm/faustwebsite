@@ -16,9 +16,13 @@ Set of 7 plugins for guitar sound processing, compiled in LADSPA and LV2 formats
 BioSignals is a data aquisition and processing device for EMG, ECG and EEG signals. Since it is using the [OpenWare](https://github.com/pingdynasty/OpenWare) firmware, it can be programmed with Faust.
 
 
-<!---  Desactived for now ---> 
-<!---  ## [Scale it](https://github.com/pavelhusa/Scaleit) ---> 
-<!--- EEG music neurofeedback project, using Faust to generate [PureData modules](https://github.com/pavelhusa/Scaleit/tree/master/PDcompiled). ---> 
+## [Scale it](https://github.com/pavelhusa/Scaleit)
+
+<div><a href="https://github.com/pingdynasty/BioSignals"><img  width="45%" class="mx-auto d-block" src="img/ScaleIt.png"></a>  </div>
+
+*Scale it* is an open source program (written in graphical programming language Pure data and in Faust) that allows sonification of a signal distribution in real time. There are two different possibilities of sonification of the signal. One of the objects, tone, generates changes in pitch of a monophonic tone. The other object, chord, expresses the input value in width of polyphony. 
+
+*Scale it*  is being developed primarily for neurofeedback purposes. To allow straightforward and customizable instruments to carry sonic feedback about EEG activity in specific regions of the neocortex.
 
 ## [JackTrip](https://www.jacktrip.com)
 
