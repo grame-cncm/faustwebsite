@@ -45,6 +45,15 @@ Check out [**the Faust Kadenze course**](https://www.kadenze.com/courses/real-ti
 
 ## Faust News
 
+### **>>** February 5, 2022: Open Science Award for Open Source Research Software for Faust
+
+<center>
+<div><a href="https://www.ouvrirlascience.fr/open-science-free-software-award-ceremony"><img  width="40%" class="mx-auto d-block" src="img/OSEC22_Faust.png"></a>  </div>
+</center>
+Great birthday present for the 20th anniversary of the Faust language! Developed by Grame since 2002, supported by a whole community of users and contributors, Faust is [one of the four winners](https://www.ouvrirlascience.fr/open-science-free-software-award-ceremony/) of the Open Science Award for Open Source Research Software (documentation category) awarded at the Open Science European Conference (OSEC).
+
+
+
 ### **>>** February 1, 2021: Faust Physical Modeling Workshop -- Online Event
 
 <center>
