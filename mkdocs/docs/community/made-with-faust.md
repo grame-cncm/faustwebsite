@@ -4,10 +4,10 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 ## [Web Audio Modules](https://github.com/webaudiomodules)
 
-<div><a href="https://github.com/webaudiomodules"><img  width="60%" class="mx-auto d-block" src="img/wam-modules.png"></a>  </div>
+<div><a href="https://github.com/webaudiomodules"><img  width="65%" class="mx-auto d-block" src="img/wam-modules.png"></a>  </div>
 
 Web Audio Modules are an open source framework facilitating the development of high-performance Web Audio plugins (instruments, realtime audio effects and MIDI processors). They can be developed using JavaScript and Web standards or compiled from C, C++ code, and domain-specific languages such as Faust or Csound.
-The Faust Web IDE contains an integrated GUI builder, read a [tutorial here](https://docs.google.com/document/d/1HDEm4m_cD47YBuDilzGYiANYQDktj56Njyv0umGYO6o/edit?usp=sharing).
+The [Faust Web IDE](https://faustide.grame.fr) contains an integrated GUI builder, read a [tutorial here](https://docs.google.com/document/d/1HDEm4m_cD47YBuDilzGYiANYQDktj56Njyv0umGYO6o/edit?usp=sharing).
 
 
 ## [Kapitonov Plugins Pack](https://github.com/olegkapitonov/Kapitonov-Plugins-Pack)
