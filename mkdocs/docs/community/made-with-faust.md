@@ -2,6 +2,14 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research (possibly non musical) projects, embedded devices, Web applications, etc.
 
+## [Web Audio Modules](https://github.com/webaudiomodules)
+
+<div><a href="https://github.com/webaudiomodules"><img  width="60%" class="mx-auto d-block" src="img/wam-modules.png"></a>  </div>
+
+Web Audio Modules are an open source framework facilitating the development of high-performance Web Audio plugins (instruments, realtime audio effects and MIDI processors). They can be developed using JavaScript and Web standards or compiled from C, C++ code, and domain-specific languages such as Faust or Csound.
+The Faust Web IDE contains an integrated GUI builder, read a [tutorial here](https://docs.google.com/document/d/1HDEm4m_cD47YBuDilzGYiANYQDktj56Njyv0umGYO6o/edit?usp=sharing).
+
+
 ## [Kapitonov Plugins Pack](https://github.com/olegkapitonov/Kapitonov-Plugins-Pack)
 
 <div><a href="https://github.com/olegkapitonov/Kapitonov-Plugins-Pack"><img  width="45%" class="mx-auto d-block" src="img/Kapitonov.jpg"></a>  </div>
@@ -353,7 +361,15 @@ React Web Audio Guitar Studio is an online real-time Web Audio based all-in-one 
 
 <a href="https://github.com/Fr0stbyteR/jspatcher"><img  width="70%" class="mx-auto d-block" src="img/jspatcher.png"></a>  
 
-JSPatcher is a Visual Programming Language (VPL) in Max/PureData style on the web. Customized AudioWorklet DSPs can be written with Faust.
+JSPatcher is a Visual Programming Language (VPL) in Max/PureData style on the web with following features:
+
+- Patch WebAudio native AudioNodes
+- Play with JavaScript Web APIs
+- Import and patch external JavaScript modules
+- Customize AudioWorklet DSPs with Faust
+
+
+A presentation video can be [seen here]( https://www.youtube.com/watch?v=ttdXz_hjbAM). 
 
 ## [Gwion](https://github.com/Gwion/Gwion)
 
