@@ -4,7 +4,7 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 ## [limiterStereo](https://github.com/dariosanfilippo/limiterStereo)
 
-<div><a href="https://github.com/dariosanfilippo/limiterStereo"><img  width="55%" class="mx-auto d-block" src="img/limiterStereo.png"></a>  </div>
+<div><a href="https://github.com/dariosanfilippo/limiterStereo"><img  width="50%" class="mx-auto d-block" src="img/limiterStereo.png"></a>  </div>
 
 Yet another look-ahead limiter code in Faust. The novel aspect of this limiter is that it uses N cascaded one-pole filters for amplitude profiling, which improves smoothness in the first to N-1 order derivatives and reduces total harmonic distortion. This design uses four cascaded one-pole lowpass filters, following the cut-off correction formula (8.9) found in [Zavalishin 2012].  
 
