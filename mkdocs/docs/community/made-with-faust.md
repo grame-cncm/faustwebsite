@@ -2,6 +2,15 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research (possibly non musical) projects, embedded devices, Web applications, etc.
 
+<!---
+## [drumbox](https://drumbox.app/)
+
+<div><a href="https://drumbox.app/"><img  width="30%" class="mx-auto d-block" src="img/drumbox.png"></a>  </div>
+
+drumbox is a fun and powerful drum synthesizer for your Android device. Start from a preset and tweak the sounds and appearance to make it your own.
+Freestyle on the drum pads, record a sequence or both...it's up to you! 
+--->
+
 ## [GULA Plugins](https://github.com/steveb/gula-plugins)
 
 A collection of guitar effect LV2 plugins ([The Vibey](https://github.com/steveb/gula-plugins#the-vibey), [The Splits](https://github.com/steveb/gula-plugins#the-splits), [The Fades](https://github.com/steveb/gula-plugins#the-fades), [SSaP Tone](https://github.com/steveb/gula-plugins#ssap-tone), [Sweabed](https://github.com/steveb/gula-plugins#sweabed), [Pequed](https://github.com/steveb/gula-plugins#pequed), [Peak audio to CV](https://github.com/steveb/gula-plugins#peak-audio-to-cv), [LFO CV](https://github.com/steveb/gula-plugins#lfo-cv)) with [MOD Devices](https://www.moddevices.com) user interfaces.
