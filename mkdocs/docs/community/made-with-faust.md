@@ -33,6 +33,13 @@ The [Faust Web IDE](https://faustide.grame.fr) contains an integrated GUI builde
 Set of 7 plugins for guitar sound processing, compiled in LADSPA and LV2 formats. Compatible with hosts such as Ardour, Qtractor, Carla, guitarix, jack-rack. The DSP of all of them is written in Faust.
 
 
+## [tubeAmp Designer](https://github.com/olegkapitonov/tubeAmp-Designer)
+
+<div><a href="https://github.com/olegkapitonov/tubeAmp-Designer"><img  width="50%" class="mx-auto d-block" src="img/tAD.jpg"></a>  </div>
+
+Standalone software guitar processor, editor of *.tapf profile files for tubeAmp (KPP) and guitar amp profiler.
+
+
 ## [BioSignals](https://github.com/pingdynasty/BioSignals)
 
 <div><a href="https://github.com/pingdynasty/BioSignals"><img  width="50%" class="mx-auto d-block" src="img/BioSignalsTop.png"></a>  </div>
