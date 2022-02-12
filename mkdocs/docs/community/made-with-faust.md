@@ -2,6 +2,11 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research (possibly non musical) projects, embedded devices, Web applications, etc.
 
+## [GULA Plugins](https://github.com/steveb/gula-plugins)
+
+A collection of guitar effect LV2 plugins ([The Vibey](https://github.com/steveb/gula-plugins#the-vibey), [The Splits](https://github.com/steveb/gula-plugins#the-splits), [The Fades](https://github.com/steveb/gula-plugins#the-fades), [SSaP Tone](https://github.com/steveb/gula-plugins#ssap-tone), [Sweabed](https://github.com/steveb/gula-plugins#sweabed), [Pequed](https://github.com/steveb/gula-plugins#pequed), [Peak audio to CV](https://github.com/steveb/gula-plugins#peak-audio-to-cv), [LFO CV](https://github.com/steveb/gula-plugins#lfo-cv)) with [MOD Devices](https://www.moddevices.com) user interfaces.
+
+
 ## [FAUST filters](https://github.com/SpotlightKid/faustfilters)
 
 A collection of virtual-analog filters(Diode Ladder, Korg 35 HPF, Korg 35 LPF, Moog Ladder LPF, Moog Half Ladder LPF, Oberheim Multi-mode Filter) from the FAUST standard library packaged as multi-format plugins via the [DISTRHO Plugin Framework](https://github.com/DISTRHO/DPF).
