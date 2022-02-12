@@ -2,6 +2,10 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research (possibly non musical) projects, embedded devices, Web applications, etc.
 
+## [FAUST filters](https://github.com/SpotlightKid/faustfilters)
+
+A collection of virtual-analog filters(Diode Ladder, Korg 35 HPF, Korg 35 LPF, Moog Ladder LPF, Moog Half Ladder LPF, Oberheim Multi-mode Filter) from the FAUST standard library packaged as multi-format plugins via the [DISTRHO Plugin Framework](https://github.com/DISTRHO/DPF).
+
 ## [limiterStereo](https://github.com/dariosanfilippo/limiterStereo)
 
 <div><a href="https://github.com/dariosanfilippo/limiterStereo"><img  width="50%" class="mx-auto d-block" src="img/limiterStereo.png"></a>  </div>
