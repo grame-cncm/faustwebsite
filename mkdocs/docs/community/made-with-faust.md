@@ -2,6 +2,14 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research (possibly non musical) projects, embedded devices, Web applications, etc.
 
+
+## [Sonification](https://github.com/face2Sato/Sonification)
+
+<div><a href="https://github.com/face2Sato/Sonification"><img  width="50%" class="mx-auto d-block" src="img/sonification.png"></a>  </div>
+
+This study has been developed as a proof-of-concept for data pattern sonification. We've implemented data pattern sonification using FM synthesis coded in Faust. Air pollution data, which is temporal, is retrieved from the server and is done pattern mining. Then  pattern data sonification is done.
+
+
 <!---
 ## [drumbox](https://drumbox.app/)
 
