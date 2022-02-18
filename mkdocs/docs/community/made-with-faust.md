@@ -766,16 +766,18 @@ An app that can be used as an electric guitar and whose sound synthesis engine i
 
 <a href="https://github.com/grame-cncm/faustworks"><img  class="mx-auto d-block" src="img/faustworks.jpg" alt="Card image cap"></a>    
 
-An IDE for Faust. Allows Faust programmers to visualize block diagrams, corresponding C++ code, compile to various Faust targets, etc.
+FaustWorks is an IDE (Integrated Development Environment) for the Faust dsp programming language. You must have Faust installed to 
+be able to use FaustWorks. Platforms supported are Linux and OSX.
 
 ## [FaustLive](https://github.com/grame-cncm/faustlive)
 
 <a href="https://github.com/grame-cncm/faustlive"><img  class="mx-auto d-block" src="img/faustlive.jpg" alt="Card image cap"></a>  
 
-An on-the-fly compiler for the Faust programming language using the LLVM technology.
+FaustLive is an advanced self-contained prototyping environment for the Faust programming language with an ultra-short edit-compile-run cycle. Thanks to its fully embedded compilation chain, FaustLive is simple to install and doesn't require any external compiler, development toolchain or SDK to run.
 
+FaustLive is the ideal tool for fast prototyping. Faust programs can be compiled and run on the fly by simple drag and drop. They can even be edited and recompiled while running, without sound interruption. It supports also native applications generation using the Faust online compiler.
 
-
+FaustLive is based on the Faust library and on LLVM.
 
 ​                  
 
