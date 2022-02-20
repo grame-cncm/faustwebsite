@@ -2,6 +2,13 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Granola](https://github.com/jlp6k/faust-things)
+
+<div><a href="https://github.com/jlp6k/faust-things"><img  width="50%" class="mx-auto d-block" src="img/Granola.png"></a>  </div>
+
+Granola is a monophonic granular live feed processor. The grain processor is inspired by the Mutable Instruments Beads. The grain window shape control is inspired by the GR-1 Granular synthesizer from Tasty Chips Electronics. The DSP code is written in Faust.
+
+
 ## [fverb](https://github.com/jpcima/fverb)
 
 <div><a href="https://github.com/jpcima/fverb"><img  width="25%" class="mx-auto d-block" src="img/fverb.png"></a>  </div>
