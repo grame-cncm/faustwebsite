@@ -2,6 +2,14 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [drumbox](https://drumbox.app/)
+
+<div><a href="https://drumbox.app/"><img  width="30%" class="mx-auto d-block" src="img/drumbox.png"></a>  </div>
+
+drumbox is a fun and powerful drum synthesizer for your Android device. Start from a preset and tweak the sounds and appearance to make it your own.
+Freestyle on the drum pads, record a sequence or both...it's up to you! 
+
+
 ## [Granola](https://github.com/jlp6k/faust-things)
 
 <div><a href="https://github.com/jlp6k/faust-things"><img  width="50%" class="mx-auto d-block" src="img/Granola.png"></a>  </div>
@@ -21,15 +29,6 @@ A stereo variant of the reverberator by Jon Dattorro coded in Faust.
 
 This study has been developed as a proof-of-concept for data pattern sonification. We've implemented data pattern sonification using FM synthesis coded in Faust. Air pollution data, which is temporal, is retrieved from the server and is done pattern mining. Then  pattern data sonification is done.
 
-
-<!---
-## [drumbox](https://drumbox.app/)
-
-<div><a href="https://drumbox.app/"><img  width="30%" class="mx-auto d-block" src="img/drumbox.png"></a>  </div>
-
-drumbox is a fun and powerful drum synthesizer for your Android device. Start from a preset and tweak the sounds and appearance to make it your own.
-Freestyle on the drum pads, record a sequence or both...it's up to you! 
---->
 
 ## [GULA Plugins](https://github.com/steveb/gula-plugins)
 
