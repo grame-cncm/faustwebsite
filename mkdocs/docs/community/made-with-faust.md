@@ -554,7 +554,7 @@ This is a web-based DAW (Digital Audio Workstation) written in Rust/WebAssembly 
 
 DawDreamer is an audio-processing Python framework supporting core [DAW](https://en.wikipedia.org/wiki/Digital_audio_workstation) features such as audio playback, VST MIDI instruments, VST effects, [Faust](http://faust.grame.fr/), and parameter automation. DawDreamer is written with [JUCE](https://github.com/julianstorer/JUCE), with a user-friendly Python interface thanks to [pybind11](https://github.com/pybind/pybind11). DawDreamer draws from an earlier VSTi audio "renderer", [RenderMan](https://github.com/fedden/RenderMan).
 
-## [TouchDesigner](https://github.com/DBraun/TD-Faust/)
+## [TD-Faust](https://github.com/DBraun/TD-Faust/)
 
 <a href="https://github.com/DBraun/TD-Faust/"><img  width="60%" class="mx-auto d-block" src="img/touchdesigner.png"></a>  
 
