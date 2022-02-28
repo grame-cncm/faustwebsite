@@ -2,6 +2,14 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Tambura](https://github.com/olilarkin/Tambura)
+
+<div><a href="https://github.com/olilarkin/Tambura"><img  width="50%" class="mx-auto d-block" src="img/Tambura.png"></a>  </div>
+
+Waveguide physical model of an Indian Tambura/Tanpura. This is a FAUST patch inspired by the Indian Tambura/Tanpura - a four string drone instrument, known for its unique rich harmonic timbre.
+
+The model uses a few tricks to produce a Tambura-like sound, and should probably be referred to as a "pseudo" physical model, because it does not attempt to accurately recreate the physics of the string-bridge interaction. It includes a range of parameters selected to allow control of the qualities of the excitation/pluck, string behavior and sympathetic resonance. It can produce some beautiful evolving drones, which can vary from very synthetic to quite natural. The model can be [tested here](https://olilarkin.github.io/Tambura/). 
+
 ## [drumbox](https://drumbox.app/)
 
 <div><a href="https://drumbox.app/"><img  width="30%" class="mx-auto d-block" src="img/drumbox.png"></a>  </div>
