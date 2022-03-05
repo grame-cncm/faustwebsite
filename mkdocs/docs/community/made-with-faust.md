@@ -2,6 +2,17 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+
+## [DSPedal](https://github.com/jmiskovic/DSPedal)
+
+<div><a href="https://github.com/jmiskovic/DSPedal"><img  width="50%" class="mx-auto d-block" src="img/DSPedal.png"></a>  </div>
+
+
+DSPedal is a custom hardware platform for real-time sound effects. It is operated by few knobs, external expression pedal, couple of buttons and a small graphical LCD.
+
+Processing effect is written in Faust programming language and compiled into C code. So far the Cortex M4 core clocked at 204 MHz has proven to be capable of executing relatively complex effects like wah, but effect-chaining quickly reaches the limits of processing power.
+
+
 ## [Tambura](https://github.com/olilarkin/Tambura)
 
 <div><a href="https://github.com/olilarkin/Tambura"><img  width="50%" class="mx-auto d-block" src="img/Tambura.png"></a>  </div>
