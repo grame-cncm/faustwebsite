@@ -6,7 +6,7 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 ## [Dataflow Based FPGA Program Synthesis](https://github.com/jgelfman/Dataflow-Based-FPGA-Program-Synthesis-Capstone)
 
-<div><a href="https://github.com/jgelfman/Dataflow-Based-FPGA-Program-Synthesis-Capstonel"><img  width="70%" class="mx-auto d-block" src="img/Dataflow-FPGA.png"></a>  </div>
+<div><a href="https://github.com/jgelfman/Dataflow-Based-FPGA-Program-Synthesis-Capstone"><img  width="70%" class="mx-auto d-block" src="img/Dataflow-FPGA.png"></a>  </div>
 
 
 A Yale-NUS BSc. (Hons) in Mathematical, Computational, and Statistical Sciences Capstone: an FPGA Program Generator written in Python that takes dsp-sig XML Dataflow Graphs created using FAUST to produce FPGA programs in VHDL.
