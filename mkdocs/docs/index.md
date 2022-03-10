@@ -45,14 +45,22 @@ Check out [**the Faust Kadenze course**](https://www.kadenze.com/courses/real-ti
 
 ## Faust News
 
+### **>>** March 7, 2022: GRAME has been selected as a Google Summer of Code 2022 mentor organization
+
+<center>
+<div><a href="https://www.ouvrirlascience.fr/open-science-free-software-award-ceremony"><img  width="50%" class="mx-auto d-block" src="img/gsoc-logo.png"></a>  </div>
+</center>
+
+[Google Summer of Code](https://summerofcode.withgoogle.com) is a global, online program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ week programming project under the guidance of mentors.
+
+GRAME has been [selected as a  mentor organization](https://summerofcode.withgoogle.com/programs/2022/organizations/grame) for the Faust project. 
+
 ### **>>** February 5, 2022: Open Science Award for Open Source Research Software for Faust
 
 <center>
 <div><a href="https://www.ouvrirlascience.fr/open-science-free-software-award-ceremony"><img  width="50%" class="mx-auto d-block" src="img/OSEC22_Faust.png"></a>  </div>
 </center>
 Great birthday present for the 20th anniversary of the Faust language! Developed by Grame since 2002, supported by a whole community of users and contributors, Faust is [one of the four winners](https://www.ouvrirlascience.fr/open-science-free-software-award-ceremony/) of the Open Science Award for Open Source Research Software (documentation category) awarded at the Open Science European Conference (OSEC).
-
-
 
 ### **>>** February 1, 2021: Faust Physical Modeling Workshop -- Online Event
 
