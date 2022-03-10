@@ -51,9 +51,7 @@ Check out [**the Faust Kadenze course**](https://www.kadenze.com/courses/real-ti
 <div><a href="https://www.ouvrirlascience.fr/open-science-free-software-award-ceremony"><img  width="50%" class="mx-auto d-block" src="img/gsoc-logo.png"></a>  </div>
 </center>
 
-[Google Summer of Code](https://summerofcode.withgoogle.com) is a global, online program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ week programming project under the guidance of mentors.
-
-GRAME has been [selected as a  mentor organization](https://summerofcode.withgoogle.com/programs/2022/organizations/grame) for the Faust project. 
+[Google Summer of Code](https://summerofcode.withgoogle.com) is a global, online program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ week programming project under the guidance of mentors. GRAME has been [selected as a  mentor organization](https://summerofcode.withgoogle.com/programs/2022/organizations/grame) for the Faust project. 
 
 ### **>>** February 5, 2022: Open Science Award for Open Source Research Software for Faust
 

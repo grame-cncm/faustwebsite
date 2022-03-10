@@ -179,7 +179,6 @@ Nemesis is multichannel dsp platform for eurorack. It can be [programmed with Fa
 
 SonoBus is an easy to use application for streaming high-quality, low-latency peer-to-peer audio between devices over the internet or a local network. Several DSP effects ([Compressor](https://github.com/sonosaurus/sonobus/blob/main/Source/faustCompressor.h), [Expander](https://github.com/sonosaurus/sonobus/blob/main/Source/faustExpander.h), [Limiter](https://github.com/sonosaurus/sonobus/blob/main/Source/faustLimiter.h), [ParametricEQ](https://github.com/sonosaurus/sonobus/blob/main/Source/faustParametricEQ.h), [Reverb](https://github.com/sonosaurus/sonobus/blob/main/Source/zitaRev.h)) have been [written in Faust](https://github.com/sonosaurus/sonobus/tree/main/scripts), compiled as C++ code, and included in the [JUCE project](https://github.com/sonosaurus/sonobus). 
 
-
 ## [XPlugs.lv2](https://github.com/brummer10/XPlugs.lv2)
 
 <div><a href="https://github.com/brummer10/XPlugs.lv2"><img  width="45%" class="mx-auto d-block" src="img/HarmonicExciter.png"></a>  </div>
@@ -197,7 +196,6 @@ The goal of this project is to digitally reproduce the behavior of a well-known 
 <div><a href="https://github.com/andreaco/miosix-drum"><img  width="50%" class="mx-auto d-block" src="img/drum-module.jpeg"></a>  </div>
 
 This project aims at integrating a digital drum synthesizer [using Faust](https://andreaco.github.io/miosix-drum/) and Miosix real time OS on an STM32F407VG Discovery Board. To do this, a user interface by means of buttons, sliders, encoders, and an LCD has been implemented to control the synthesizer. Moreover, a serial MIDI input port has been added in order to control the synthesizer externally by using an external sequencer or controller.
-
 
 ## [Daisy based audio boards](https://www.electro-smith.com/daisy)
 
@@ -224,13 +222,11 @@ The ER-301 is a voltage-controllable canvas for digital signal processing algori
 
 Zynthian is a new class of musical device. A powerful multitimbral synthesizer and audio processor, capable of managing up to 16 audio chains simultaneously. Also, it's a MIDI processor and router, equipped with standard MIDI ports, USB, WIFI & wired networks.  Zynthian is a community-driven project and it's 100% open source. The Zynthian platform can be [programmed with Faust](https://francescoganassin.files.wordpress.com/2021/03/the-tale-of-faust-and-zynthian.pdf) with some [DSP examples here](https://github.com/francescoganassin/FaustDSP-synths).
 
-
 ## [GxPlugins.lv2](https://github.com/brummer10/GxPlugins.lv2)
 
 <div><a href="https://github.com/brummer10/GxPlugins.lv2"><img  width="35%" class="mx-auto d-block" src="img/GxSuppaToneBender.png"></a>  </div>
 
 GxPlugins.lv2 is a set of more than 40 extra standalone lv2 plugins designed to compliment the Guitarix project. Each plugin exists as its own submodule under this repository. The DSP code has been written with Faust.
-
 
 ## [Stone phaser](https://github.com/jpcima/stone-phaser)
 
@@ -246,13 +242,11 @@ A classic analog phaser effect. This is an analog phaser with similarity to the 
 
 The sfizz project uses the SFZ parser and synth c++ library, providing AU / LV2 / VST3 plugins and JACK standalone client. Some effects are [developed in Faust](https://github.com/sfztools/sfizz/tree/master/src/sfizz/effects/dsp) are well as [several filters](https://github.com/sfztools/sfizz/tree/master/src/sfizz/dsp/filters).
 
-
 ## [Antescofo](https://antescofo-doc.ircam.fr/UserGuide/intro/)
 
 <div><a href="https://antescofo-doc.ircam.fr/UserGuide/intro"><img  width="55%" class="mx-auto d-block" src="img/antescofo.png"></a>  </div>
 
 Antescofo is a coupling of a real-time listening machine with a reactive and timed synchronous language developed at [IRCAM](https://www.ircam.fr). The language is used for authoring of music pieces involving live musicians and computer processes, and the real-time system assures its correct performance and synchronization despite listening or performance errors. Antescofo audio DSP processes [can be described with Faust](https://hal.archives-ouvertes.fr/hal-01257524/document), using libfaust dynamic version of the Faust compiler. 
-
 
 ## [Motion Vox](https://motionvox.app/)
 
