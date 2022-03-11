@@ -3,9 +3,9 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
 
-## [Genius Eurorack Module](https://community.rebeltech.org/t/genius-eurorack-module/1857)
+## [Genius Eurorack Module](https://www.rebeltech.org/product/genius/)
 
-<div><a href="https://community.rebeltech.org/t/genius-eurorack-module/1857"><img  width="20%" class="mx-auto d-block" src="img/genius.jpg"></a>  </div>
+<div><a href="https://www.rebeltech.org/product/genius/"><img  width="20%" class="mx-auto d-block" src="img/genius.jpg"></a>  </div>
 
 The Genius is the next evolutionary step for the OWL platform, and the first product released based on a Cortex M7 microcontroller. It runs the OWL firmware and so can be programmed with Faust. A demo running bells from thee [physical library](https://faustlibraries.grame.fr/libs/physmodels/) can be [listened to here](https://www.youtube.com/watch?v=AnytPyN9mLE&feature=emb_imp_woyt). 
 
