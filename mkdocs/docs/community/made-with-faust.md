@@ -3,6 +3,12 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
 
+## [weather_organ](https://github.com/myklemykle/weather_organ)
+
+<div><a href="https://github.com/myklemykle/weather_organ"><img  width="50%" class="mx-auto d-block" src="img/weather_organ.png"></a>  </div>
+
+Weather Organ is a Faust instrument for manipulating sparse noise to imitate slowly-changing natural sound sources such as rain, wind, surf, fire, Geiger counters and volcanic activity, and to create interesting new textures of sound. It is the product of various discoveries made while using Faust to explore the definition, synthesis and experience of acoustic noise while, simultaneously using the exploration of noise as as focus for learning Faust.
+
 ## [Genius Eurorack Module](https://www.rebeltech.org/product/genius/)
 
 <div><a href="https://www.rebeltech.org/product/genius/"><img  width="20%" class="mx-auto d-block" src="img/genius.jpg"></a>  </div>
