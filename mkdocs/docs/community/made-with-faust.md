@@ -3,6 +3,10 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
 
+## [Mephisto](https://github.com/aonurdemir/Mephisto)
+
+Mephisto is a transpiler for converting sound patches designed using the graphical computer music environment Pure Data to the functional DSP programming language Faust. Faust itself compiles into highly-optimized C++ code. The aim of the transpiler is to enable creating highly optimized C++ code embeddable in games or other interactive media for sound designers, musicians and sound engineers.
+
 ## [weather_organ](https://github.com/myklemykle/weather_organ)
 
 <div><a href="https://github.com/myklemykle/weather_organ"><img  width="50%" class="mx-auto d-block" src="img/weather_organ.png"></a>  </div>
