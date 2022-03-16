@@ -2,6 +2,25 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Kiwi](https://github.com/Musicoll/Kiwi)
+
+<div><a href="https://github.com/Musicoll/Kiwi"><img  width="60%" class="mx-auto d-block" src="img/kiwi.png"></a>  </div>
+
+Kiwi is a graphical programming environment dedicated to music and sound creation, such as Max or Pure Data softwares, but offering a real-time collaborative approach: Kiwi allows several distant users to work simultaneously on the same patch hosted online.
+
+Kiwi is part of the French ANR-funded MUSICOLL project that unites the CICM and OhmForce. The main goal of this project is to study how collaboration can enhance the way digital audio music composition is taught and more generally how it can renew music creation practices and improve its workflow.
+
+Faust DSP programs can be dynamically compiled as objects included in the patch. An extended presentation of the system can be found in this [IFC 2020 paper](https://ifc20.sciencesconf.org/332586/document).
+
+## [Brainwave Virtual Instrument](https://github.com/nicodaleman/brainwave_virtual_instrument)
+
+<div><a href="https://github.com/nicodaleman/brainwave_virtual_instrument"><img  width="40%" class="mx-auto d-block" src="img/BVIGUI.png"></a>  </div>
+
+The Brainwave Virtual Instrument (BVI) is an open-source software synthesizer built in the programming language Faust. Its purpose is to facilitate the exploration of electroencephalogram (EEG) and other brain data through sonification. Pre-recorded data is translated as parameter controls of the instrument in the form of Open Source Control (OSC) messages that are generated and streamed by a small python program. 
+
+The instrument can easily be distributed and compiled to different targets thanks to Faust’s flexibility. Frequency Modulation synthesis provides a comprehensive approach to textural parameters of sounds, so that musical composition and improvisation based on a creative use of brain data become feasible. This is exemplified by the Brainwave Etudes (BE), a series of compositions inspired by measurements of brain activity during different states of mind. 
+
+The BVI was created for two major purposes: on the one hand, to find musical structures that relate to each other in order to present an aesthetic proposal, and on the other, to create a tool that familiarizes scientists and researchers in the field of neuroscience with sonification techniques, and the exploration of brain activity through sound. An extended presentation of the system can be found in this [IFC 2020 paper](https://ifc20.sciencesconf.org/332720/document).
 
 ## [Mephisto](https://github.com/aonurdemir/Mephisto)
 
@@ -345,7 +364,7 @@ PICO DSP is an open-source, Arduino-compatible ESP32 development board for audio
 
 <a href="https://www.soundjack.eu"><img  width="50%" class="mx-auto d-block" src="img/soundjack.png"></a>  
 
-The Soundjack realtime communication application is extended by a server cloud to handle up to 60 musicians of an orchestra, developed with the Faust programming language.  Each musician is connected to a Soundjack UDP client. An individual stereo mix of the multiple audio streams originating from the multiple Soundjack clients has to be provided to each listening musician. An extended presentation of the system can be found in this [IFC 2028 paper](http://www.ifc18.uni-mainz.de/papers/kuhr.pdf).
+The Soundjack realtime communication application is extended by a server cloud to handle up to 60 musicians of an orchestra, developed with the Faust programming language.  Each musician is connected to a Soundjack UDP client. An individual stereo mix of the multiple audio streams originating from the multiple Soundjack clients has to be provided to each listening musician. An extended presentation of the system can be found in this [IFC 2018 paper](http://www.ifc18.uni-mainz.de/papers/kuhr.pdf).
 
 ## [studiox-switcher](https://github.com/Frando/studiox-switcher)
 
