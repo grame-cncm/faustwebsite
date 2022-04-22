@@ -3,6 +3,16 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
 
+## [Organelle](https://www.critterandguitari.com/organelle)
+
+<div><a href="https://www.critterandguitari.com/organelle"><img  width="70%" class="mx-auto d-block" src="img/organelle.jpg"></a>  </div>
+
+The Organelle makes it easy to explore new sounds and experiment with new ways of making music. It combines playful and intuitive controls with a powerful and flexible sound engine. The result is an instrument that is limitless in musical possibility and a joy to play.
+
+At the heart of the Organelle's sound engine is a robust computer that runs patches. A patch allows the instrument to take on different forms. Onboard hardware for sound input and output and mappable knobs, keys and buttons enable patches to synthesize, sample, effect, and anything in between!
+
+The Organelle can be programed with Faust as explained [here](https://forum.critterandguitari.com/t/faustgen-for-max7/1586) and with this [PD external using Faust](https://forum.critterandguitari.com/t/playing-patching-with-pd-and-organelle/8260/7). 
+
 ## [Zrythm](https://github.com/zrythm/zrythm)
 
 <div><a href="https://github.com/zrythm/zrythm"><img  width="60%" class="mx-auto d-block" src="img/zrythm.png"></a>  </div>
