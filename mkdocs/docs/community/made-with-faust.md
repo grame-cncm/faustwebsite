@@ -2,6 +2,9 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Arduino Audio Tools](https://github.com/zrythm/zrythm)
+
+Some basic header-only C++ classes that can be used for Audio Processing provided as Arduino Library. Code can be written [using Faust](https://github.com/pschatzmann/arduino-audio-tools/wiki/Examples#faust-dsp).
 
 ## [Organelle](https://www.critterandguitari.com/organelle)
 
@@ -18,7 +21,6 @@ The Organelle can be programed with Faust as explained [here](https://forum.crit
 <div><a href="https://github.com/zrythm/zrythm"><img  width="60%" class="mx-auto d-block" src="img/zrythm.png"></a>  </div>
 
 Zrythm is a digital audio workstation designed to be featureful and easy to use. It offers streamlined editing workflows with flexible tools, limitless automation capabilities, powerful mixing features, chord assistance and support for various plugin and file formats. A set of [Faust effects](https://github.com/zrythm/zrythm/tree/master/data/plugins) are compiled as [LV2 plugins](https://github.com/zrythm/zrythm/tree/master/data/plugins/generated) and included in the application.
-
 
 ## [Patches for the OWL Pedal/Eurorack Module](https://github.com/olilarkin/OL-OWLPatches)
 
