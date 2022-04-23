@@ -2,9 +2,9 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
-## [Arduino Audio Tools](https://github.com/zrythm/zrythm)
+## [Arduino Audio Tools](https://github.com/pschatzmann/arduino-audio-tools)
 
-Some basic header-only C++ classes that can be used for Audio Processing provided as Arduino Library. Code can be written [using Faust](https://github.com/pschatzmann/arduino-audio-tools/wiki/Examples#faust-dsp).
+Some basic header-only C++ classes that can be used for Audio Processing provided as Arduino Library. A simple Interface class to use Faust with Arduino Audio Tools [is provided](https://www.pschatzmann.ch/home/2022/04/22/using-faust-dsp-with-my-arduino-audio-tools/). Code can be written [using Faust](https://github.com/pschatzmann/arduino-audio-tools/wiki/Examples#faust-dsp).
 
 ## [Organelle](https://www.critterandguitari.com/organelle)
 
