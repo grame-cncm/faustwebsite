@@ -6,7 +6,7 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 <div><a href="https://spaskalev.com/Karpsichord/"><img  width="80%" class="mx-auto d-block" src="img/karpsichord.png"></a>  </div>
 
-A virtual harpsichord based on Karplus-Strong string synthesis, implement [in Faust](https://github.com/spaskalev/karpsichord/blob/main/karpsichord.dsp).
+A virtual harpsichord based on Karplus-Strong string synthesis, implemented [in Faust](https://github.com/spaskalev/karpsichord/blob/main/karpsichord.dsp).
 
 
 ## [Arduino Audio Tools](https://github.com/pschatzmann/arduino-audio-tools)
