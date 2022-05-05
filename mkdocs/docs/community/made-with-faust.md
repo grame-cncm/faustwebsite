@@ -2,6 +2,13 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Karpsichord](https://spaskalev.com/Karpsichord/)
+
+<div><a href="https://spaskalev.com/Karpsichord/"><img  width="80%" class="mx-auto d-block" src="img/karpsichord.png"></a>  </div>
+
+A virtual harpsichord based on Karplus-Strong string synthesis, implement [in Faust](https://github.com/spaskalev/karpsichord/blob/main/karpsichord.dsp).
+
+
 ## [Arduino Audio Tools](https://github.com/pschatzmann/arduino-audio-tools)
 
 Some basic header-only C++ classes that can be used for Audio Processing provided as Arduino Library. A simple Interface class to use Faust with Arduino Audio Tools [is provided](https://www.pschatzmann.ch/home/2022/04/22/using-faust-dsp-with-my-arduino-audio-tools/). Code can be written [using Faust](https://github.com/pschatzmann/arduino-audio-tools/wiki/Examples#faust-dsp).
