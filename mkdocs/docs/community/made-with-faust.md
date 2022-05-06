@@ -2,12 +2,15 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [AFDN-reverb](https://github.com/nickgang/AFDN-reverb)
+
+(High-Order) Ambisonics Feedback Delay Network Reverb. Code is [developed in Faust](https://github.com/nickgang/AFDN-reverb/tree/master/Source/Faust) and Max. 
+
 ## [Karpsichord](https://spaskalev.com/Karpsichord/)
 
 <div><a href="https://spaskalev.com/Karpsichord/"><img  width="80%" class="mx-auto d-block" src="img/karpsichord.png"></a>  </div>
 
 A virtual harpsichord based on Karplus-Strong string synthesis, implemented [in Faust](https://github.com/spaskalev/karpsichord/blob/main/karpsichord.dsp).
-
 
 ## [Arduino Audio Tools](https://github.com/pschatzmann/arduino-audio-tools)
 
