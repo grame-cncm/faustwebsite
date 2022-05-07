@@ -2,6 +2,12 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Typebeat](https://github.com/kofigumbs/typebeat)
+
+<div><a href="https://github.com/kofigumbs/typebeat"><img  width="50%" class="mx-auto d-block" src="img/typebeat.png"></a>  </div>
+
+Typebeat is a virtual groovebox that’s entirely keyboard-operated. Typebeat draws inspiration from two computing environments. Effects are developped in Faust then generated as [Rust modules](https://github.com/kofigumbs/typebeat/tree/main/src/effects). 
+
 ## [AFDN-reverb](https://github.com/nickgang/AFDN-reverb)
 
 (High-Order) Ambisonics Feedback Delay Network Reverb. Code is [developed in Faust](https://github.com/nickgang/AFDN-reverb/tree/master/Source/Faust) and Max. 
