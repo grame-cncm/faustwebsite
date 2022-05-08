@@ -60,6 +60,11 @@ Check out [**the Faust Kadenze course**](https://www.kadenze.com/courses/real-ti
 </center>
 Great birthday present for the 20th anniversary of the Faust language! Developed by Grame since 2002, supported by a whole community of users and contributors, Faust is [one of the four winners](https://www.ouvrirlascience.fr/open-science-free-software-award-ceremony/) of the Open Science Award for Open Source Research Software (documentation category) awarded at the Open Science European Conference (OSEC).
 
+### **>>** December 18, 2021: Programmable Audio Workshop (PAW-21) 
+
+With a combination of talks and workshops, PAW is an intensive day devoted to electronic sounds and programmable audio technologies! The 6 talks and 4 workshops of [PAW 2021](https://paw.grame.fr/), will offer a unique opportunity to discover Procedural Audio in relation with video game engines!
+
+
 ### **>>** February 1, 2021: Faust Physical Modeling Workshop -- Online Event
 
 <center>
