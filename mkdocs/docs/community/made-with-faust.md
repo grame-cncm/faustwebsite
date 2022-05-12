@@ -2,6 +2,15 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Screamer](https://github.com/mzuther/Screamer)
+
+<div><a href="https://github.com/mzuther/Screamer"><img  width="80%" class="mx-auto d-block" src="img/Screamer.png"></a>  </div>
+
+Version 1.0 is the [accurate Faust reproduction](https://github.com/mzuther/Screamer/tree/master/modules) of a VST plug-in written in 2003. In later versions, the parameter ranges is modified  and some new functionality are added.
+
+This signal mangler features a weird kind of overdrive (see source code for exact formula), a hard-clip distortion, LFO-modulated bit reduction and the possibility of calculating the modulo of a signal.
+
+
 ## [Typebeat](https://github.com/kofigumbs/typebeat)
 
 <div><a href="https://github.com/kofigumbs/typebeat"><img  width="50%" class="mx-auto d-block" src="img/typebeat.png"></a>  </div>
