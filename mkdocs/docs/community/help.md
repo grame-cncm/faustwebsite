@@ -12,7 +12,7 @@ If you'd like to follow the development of Faust and of its associated tools and
 
 ## Faust slack channel
 
-Slack is probably the fastest way to get help with Faust: <https://faustaudio.slack.com>.
+Slack is probably the fastest way to get help with Faust: <https://faustaudio.slack.com> or [this link](https://join.slack.com/t/faustaudio/shared_invite/zt-a624szlz-fL4v2DTR~ZGlI7wARryT7g).
 
 ## Faust discord channel
 
