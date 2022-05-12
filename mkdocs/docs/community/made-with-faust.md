@@ -2,6 +2,14 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+
+## [GameLAN](https://github.com/grame-cncm/GameLAN)
+
+<div><a href="https://github.com/grame-cncm/GameLAN"><img  width="25%" class="mx-auto d-block" src="img/Gamelan.png"></a>  </div>
+
+GameLAN is a set of musical applications designed by [Grame](https://www.grame.fr), National Center of Musical Creation. They are based on [Faust technology](https://faust.grame.fr/) and have been designed to be played using only the movements of the smartphone. No musical prerequisite, only your gestures will make you a musician!
+
+
 ## [Screamer](https://github.com/mzuther/Screamer)
 
 <div><a href="https://github.com/mzuther/Screamer"><img  width="80%" class="mx-auto d-block" src="img/Screamer.png"></a>  </div>
