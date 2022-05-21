@@ -45,10 +45,24 @@ Check out [**the Faust Kadenze course**](https://www.kadenze.com/courses/real-ti
 
 ## Faust News
 
+### **>>** May 20, 2022: Two Google Summer of Code projects attributed
+
+<center>
+<div><a href="https://summerofcode.withgoogle.com"><img  width="50%" class="mx-auto d-block" src="img/gsoc-logo.png"></a>  </div>
+</center>
+
+Two projects have finally been attributed to GRAME:
+
+-  **Faust Integration in HISE** aims at integrating support for the Faust audio programming language into [HISE](http://www.hise.audio), an extensive framework for the creation of sample-based virtual musical instruments. The project will be worked on by [Roman Sommer](https://github.com/romsom/).
+
+-  **Integrating Faust Into the Bespoke DAW** aims at extending the modular [Bespoke engine](https://www.bespokesynth.com) with Faust, allowing for both static compilation of modules, and potentially dynamic programming within Bespoke. The project will be worked on by [Drew James](https://protodrew.website/).
+
+Welcome to both of you in the Faust community !
+
 ### **>>** March 7, 2022: GRAME has been selected as a Google Summer of Code 2022 mentor organization
 
 <center>
-<div><a href="https://www.ouvrirlascience.fr/open-science-free-software-award-ceremony"><img  width="50%" class="mx-auto d-block" src="img/gsoc-logo.png"></a>  </div>
+<div><a href="https://summerofcode.withgoogle.com"><img  width="50%" class="mx-auto d-block" src="img/gsoc-logo.png"></a>  </div>
 </center>
 
 [Google Summer of Code](https://summerofcode.withgoogle.com) is a global, online program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ week programming project under the guidance of mentors. GRAME has been [selected as a  mentor organization](https://summerofcode.withgoogle.com/programs/2022/organizations/grame) for the Faust project. 
