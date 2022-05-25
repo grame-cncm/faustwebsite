@@ -35,11 +35,11 @@ Typebeat is a virtual groovebox that’s entirely keyboard-operated. Typebeat dr
 
 (High-Order) Ambisonics Feedback Delay Network Reverb. Code is [developed in Faust](https://github.com/nickgang/AFDN-reverb/tree/master/Source/Faust) and Max. 
 
-## [Karpsichord](https://spaskalev.com/Karpsichord/)
+## [Karpsichord](https://github.com/spaskalev/karpsichord/)
 
-<div><a href="https://spaskalev.com/Karpsichord/"><img  width="80%" class="mx-auto d-block" src="img/karpsichord.png"></a>  </div>
+<div><a href="https://github.com/spaskalev/karpsichord/"><img  width="80%" class="mx-auto d-block" src="img/karpsichord.png"></a>  </div>
 
-A virtual harpsichord based on Karplus-Strong string synthesis, implemented [in Faust](https://github.com/spaskalev/karpsichord/blob/main/karpsichord.dsp).
+A virtual harpsichord based on Karplus-Strong string synthesis, implemented [in Faust](https://github.com/spaskalev/karpsichord/blob/main/karpsichord.dsp) and [running in the Web](https://spaskalev.com/Karpsichord/ ).
 
 ## [Arduino Audio Tools](https://github.com/pschatzmann/arduino-audio-tools)
 
