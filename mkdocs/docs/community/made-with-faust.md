@@ -3,6 +3,12 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
 
+## [eurorack-blocks](https://github.com/ohmtech-rdi/eurorack-blocks)
+
+<div><a href="https://github.com/ohmtech-rdi/eurorack-blocks"><img  width="20%" class="mx-auto d-block" src="img/eurorack-blocks.png"></a>  </div>
+
+The eurorack-blocks project allows to develop your own custom Eurorack module for either prototyping or fun in the comfort of your day-to-day IDE with the C++ or [Faust language](https://github.com/ohmtech-rdi/eurorack-blocks/tree/main/samples/faust), or using the Cycling '74 Max environment, testing and debugging in a virtual Eurorack environment, and when ready, to auto-magically generate all the needed files to manufacture the eurorack module for you to use in a real Eurorack modular system.
+
 ## [GameLAN](https://github.com/grame-cncm/GameLAN)
 
 <div><a href="https://github.com/grame-cncm/GameLAN"><img  width="25%" class="mx-auto d-block" src="img/Gamelan.png"></a>  </div>
