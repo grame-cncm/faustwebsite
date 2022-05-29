@@ -22,6 +22,8 @@ The goal of this one day online workshop which took place on Feb. 1, 2021 was to
 
 Wave-digital models are a well researched and popular approach for creating virtual-analog models of audio circuits for use in audio processing. `wdmodels.lib` is a new addition to the Faust Libraries that supports easy creation of these models in Faust. In this workshop, we will introduce the technique of wave-digital modeling of circuits by analyzing several audio circuits and exploring their implementation in `wdmodels.lib`. We also will discuss library support of more complex implementation tasks associated with wave-digital models, such as R-type adaptors and Multiple/Multiport non-linearities. Finally, we will conclude by exploring the capacity of Faust to "circuit-bend" our wave-digital models.
 
+**Note**: the workshop's code has been adapted to work with the latest version of the `wdmodels.lib` library embedded in the Faust Web IDE. You'll see some tiny syntax differences between the video and the new syntax.
+
 ### An Introduction to Mass-Interaction Modelling in Faust -- James Leonard and Jérôme Villeneuve
 
 <center>
