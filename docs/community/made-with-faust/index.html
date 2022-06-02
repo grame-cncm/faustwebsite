@@ -168,6 +168,14 @@
             
             <li class="nav-item" data-level="1"><a href="#powered-by-faust" class="nav-link">Powered By Faust</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#dsp-speech-processor" class="nav-link">DSP Speech Processor</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#squaring-loop-synchronous-am-isb-demodulator" class="nav-link">Squaring Loop Synchronous AM ISB Demodulator</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#eurorack-blocks" class="nav-link">eurorack-blocks</a>
               <ul class="nav flex-column">
               </ul>
@@ -697,6 +705,14 @@
 
 <h1 id="powered-by-faust">Powered By Faust</h1>
 <p>This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.</p>
+<h2 id="dsp-speech-processor"><a href="http://homepages.ihug.com.au/~daz2002/tech/Faust/proc.html">DSP Speech Processor</a></h2>
+<div><a href="http://homepages.ihug.com.au/~daz2002/tech/Faust/proc.html"><img  width="40%" class="mx-auto d-block" src="img/speech-processor.png"></a>  </div>
+
+<p>A Faust based DSP Speech Processor. Based on the Daz DSP v2.1 Speech Processor firmware, with improvements. Compiled into Webassembly format. Runs in a web browser! </p>
+<h2 id="squaring-loop-synchronous-am-isb-demodulator"><a href="http://homepages.ihug.com.au/~daz2002/tech/Faust/AM.html">Squaring Loop Synchronous AM ISB Demodulator</a></h2>
+<div><a href="http://homepages.ihug.com.au/~daz2002/tech/Faust/AM.html"><img  width="100%" class="mx-auto d-block" src="img/demodulator.png"></a>  </div>
+
+<p>This demodulator uses a squaring loop to regenerate the AM carrier from the sidebands during signal fades. This allows it to maintain carrier lock even without a carrier! The squaring loop multiplies the signal with itself, causing a 2F carrier to be generated. Carrier + carrier = 2F. LSB + USB = 2F.</p>
 <h2 id="eurorack-blocks"><a href="https://github.com/ohmtech-rdi/eurorack-blocks">eurorack-blocks</a></h2>
 <div><a href="https://github.com/ohmtech-rdi/eurorack-blocks"><img  width="20%" class="mx-auto d-block" src="img/eurorack-blocks.png"></a>  </div>
 
