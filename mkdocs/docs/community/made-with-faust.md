@@ -2,6 +2,11 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Squaring Loop Synchronous AM ISB Demodulator](http://homepages.ihug.com.au/~daz2002/tech/Faust/AM.html)
+
+<div><a href="http://homepages.ihug.com.au/~daz2002/tech/Faust/AM.html"><img  width="40%" class="mx-auto d-block" src="img/eurorack-blocks.png"></a>  </div>
+
+This demodulator uses a squaring loop to regenerate the AM carrier from the sidebands during signal fades. This allows it to maintain carrier lock even without a carrier! The squaring loop multiplies the signal with itself, causing a 2F carrier to be generated. Carrier + carrier = 2F. LSB + USB = 2F.
 
 ## [eurorack-blocks](https://github.com/ohmtech-rdi/eurorack-blocks)
 
