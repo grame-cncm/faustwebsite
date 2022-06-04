@@ -61,7 +61,7 @@ Most Faust related presentations are obviously part of IFC, but [several SMC pre
 
 The [International Faust Conference](https://smc22.grame.fr/ifc.html) aims at gathering researchers, developers, musicians, computer artists using the Faust programming language. The Third International Faust Conference (IFC-22) will propose sessions of paper presentations, as well as thematic round tables, demonstrations, and tutorials. Participants are encouraged to present current works, projects, etc. and to discuss future directions for Faust and its community.
 
-IFC-22 is organized by [GRAME-CNCM](https://faust.grame.fr), [INRIA](https://inria.fr), and [Université Jean Monnet](https://www.univ-st-etienne.fr) in conjunction with  [SMC 2022](https://smc22.grame.fr). It will take place on June 7, 2022 at the Centre des Savoirs pour l’Innovation (CSI) of the Université Jean Monnet of Saint-Etienne (France).
+IFC-22 is organized by [GRAME-CNCM](https://www.grame.fr), [INRIA](https://inria.fr), and [Université Jean Monnet](https://www.univ-st-etienne.fr) in conjunction with  [SMC 2022](https://smc22.grame.fr). It will take place on June 7, 2022 at the Centre des Savoirs pour l’Innovation (CSI) of the Université Jean Monnet of Saint-Etienne (France).
 
 <center>
 <div><a href="https://smc22.grame.fr/ifc.html"><img  width="60%" class="mx-auto d-block" src="img/ifc-22.png"></a>  </div>
