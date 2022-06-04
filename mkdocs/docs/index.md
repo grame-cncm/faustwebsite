@@ -53,12 +53,9 @@ SMC-22 will be a combination of a [Summer School](https://smc22.grame.fr/school.
 
 Most Faust related presentations are obviously part of IFC, but [several SMC presentations](https://smc22.grame.fr/program.html) are related to Faust.
 
-<figure>
-<img src="img/smc-22.png" class="mx-auto d-block" width="50%">
 <center>
+<div><a href="https://smc22.grame.fr"><img  width="50%" class="mx-auto d-block" src="img/smc-22.png"></a>  </div>
 </center>
-</figure>
-
 
 ### **>>** June 7, 2022: Third International Faust Conference (IFC-22) in conjunction with SMC 2022 at Saint-Etienne (France)
 
@@ -66,11 +63,9 @@ The [International Faust Conference](https://smc22.grame.fr/ifc.html) aims at ga
 
 IFC-22 is organized by [GRAME-CNCM](https://faust.grame.fr), [INRIA](https://inria.fr), and [Université Jean Monnet](https://www.univ-st-etienne.fr) in conjunction with  [SMC 2022](https://smc22.grame.fr). It will take place on June 7, 2022 at the Centre des Savoirs pour l’Innovation (CSI) of the Université Jean Monnet of Saint-Etienne (France).
 
-<figure>
-<img src="img/ifc-22.png" class="mx-auto d-block" width="60%">
 <center>
+<div><a href="https://smc22.grame.fr/ifc.html"><img  width="60%" class="mx-auto d-block" src="img/ifc-22.png"></a>  </div>
 </center>
-</figure>
 
 ### **>>** May 20, 2022: Two Google Summer of Code projects attributed
 
