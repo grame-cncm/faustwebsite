@@ -45,6 +45,33 @@ Check out [**the Faust Kadenze course**](https://www.kadenze.com/courses/real-ti
 
 ## Faust News
 
+### **>>** June 5-12, 2022: Sound Music Computing (SMC-22) at Saint-Etienne (France)
+
+[SMC-22](https://smc22.grame.fr) (Sound and Music Computing) is a multifaceted event around acoustics, music, and audio technology. It will take place in Saint-Étienne (France) on June 4-12, 2022 and will have the following theme: Music Technology and Design. As the first "in person" edition of SMC after 2 years of COVID-19 pandemic, we aim at widening the public of this event by (i) broadening the scope of SMC concerts through a digital art festival opened to the public, (ii) involving local schools and publics, and (iii) strengthening connections between academia and the industry.
+
+SMC-22 will be a combination of a [Summer School](https://smc22.grame.fr/school.html) (June 5-7, 2022), the [International Faust Conference](https://smc22.grame.fr/ifc.html) (June 7, 2022), the [SMC Scientific Conference](https://smc22.grame.fr/conferences.html), [Industry-Oriented Events](https://smc22.grame.fr/conferences.html), a [Festival](https://smc22.grame.fr/festival.html) (June 8-11, 2022), and a [STEAM (Science Technology Engineering Arts and Mathematics) Fair - "Faites du son!"](https://smc22.grame.fr/faites.html) (June 9-12).
+
+Most Faust related presentations are obviously part of IFC, but [several SMC presentations](https://smc22.grame.fr/program.html) are related to Faust.
+
+<figure>
+<img src="img/smc-22.png" class="mx-auto d-block" width="50%">
+<center>
+</center>
+</figure>
+
+
+### **>>** June 7, 2022: Third International Faust Conference (IFC-22) in conjunction with SMC 2022 at Saint-Etienne (France)
+
+The International Faust Conference aims at gathering researchers, developers, musicians, computer artists using the Faust programming language. The Third International Faust Conference (IFC-22) will propose sessions of paper presentations, as well as thematic round tables, demonstrations, and tutorials. Participants are encouraged to present current works, projects, etc. and to discuss future directions for Faust and its community.
+
+IFC-22 is organized by [GRAME-CNCM](https://faust.grame.fr), [INRIA](https://inria.fr), and [Université Jean Monnet](https://www.univ-st-etienne.fr) in conjunction with  [SMC 2022](https://smc22.grame.fr). It will take place on June 7, 2022 at the Centre des Savoirs pour l’Innovation (CSI) of the Université Jean Monnet of Saint-Etienne (France).
+
+<figure>
+<img src="img/ifc-22.png" class="mx-auto d-block" width="60%">
+<center>
+</center>
+</figure>
+
 ### **>>** May 20, 2022: Two Google Summer of Code projects attributed
 
 <center>
