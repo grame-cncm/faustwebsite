@@ -2,6 +2,15 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [XUiDesigner](https://github.com/brummer10/XUiDesigner)
+
+<div><a href="https://github.com/brummer10/XUiDesigner"><img  width="50%" class="mx-auto d-block" src="img/XUiDesigner.png"></a>  </div>
+
+A WYSIWYG LV2 X11UI GUI creator tool.  Provide a easy to use GUI generator tool to create X11 UI's for LV2 plugins. Currently only libxputty is supported, but the generated GUI C file could be used probably with other widget tool-kits as well, just a wrapper file is needed to translate the generated file to the needs of a toolkit.
+
+XUiDesigner could now parse faust (.dsp) files and generate a full LV2 Bundle for them. A faust (.dsp) file could be given by the command-line parameter -f or simply by drag it on the Designer window. It will create all control widgets which you could then rework to your needs before you save your Bundle.
+
+
 ## [DSP Speech Processor](http://homepages.ihug.com.au/~daz2002/tech/Faust/proc.html)
 
 <div><a href="http://homepages.ihug.com.au/~daz2002/tech/Faust/proc.html"><img  width="40%" class="mx-auto d-block" src="img/speech-processor.png"></a>  </div>
