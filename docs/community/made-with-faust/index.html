@@ -168,6 +168,10 @@
             
             <li class="nav-item" data-level="1"><a href="#powered-by-faust" class="nav-link">Powered By Faust</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#sttera" class="nav-link">Sttera</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#xuidesigner" class="nav-link">XUiDesigner</a>
               <ul class="nav flex-column">
               </ul>
@@ -709,8 +713,12 @@
 
 <h1 id="powered-by-faust">Powered By Faust</h1>
 <p>This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.</p>
+<h2 id="sttera"><a href="https://github.com/luisArandas/xperimus">Sttera</a></h2>
+<div><a href="https://github.com/luisArandas/xperimus"><img  width="50%" class="mx-auto d-block" src="img/sttera1.png"></a>  </div>
+
+<p>A Software for Audio Recognition and Orchestration as Medium for Music Ritual. Faust WebAssembly library <a href="https://github.com/luisArandas/xperimus/blob/master/static/scripts/main/main.js">is used</a> internally with the <a href="https://github.com/grame-cncm/faust2webaudio">faust2webaudio</a> project.</p>
 <h2 id="xuidesigner"><a href="https://github.com/brummer10/XUiDesigner">XUiDesigner</a></h2>
-<div><a href="https://github.com/brummer10/XUiDesigner"><img  width="40%" class="mx-auto d-block" src="img/XUiDesigner.png"></a>  </div>
+<div><a href="https://github.com/brummer10/XUiDesigner"><img  width="50%" class="mx-auto d-block" src="img/XUiDesigner.png"></a>  </div>
 
 <p>A WYSIWYG LV2 X11UI GUI creator tool.  Provide a easy to use GUI generator tool to create X11 UI's for LV2 plugins. Currently only libxputty is supported, but the generated GUI C file could be used probably with other widget tool-kits as well, just a wrapper file is needed to translate the generated file to the needs of a toolkit.</p>
 <p>XUiDesigner could now parse faust (.dsp) files and generate a full LV2 Bundle for them. A faust (.dsp) file could be given by the command-line parameter -f or simply by drag it on the Designer window. It will create all control widgets which you could then rework to your needs before you save your Bundle.</p>

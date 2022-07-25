@@ -2,6 +2,12 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Sttera](https://github.com/luisArandas/xperimus)
+
+<div><a href="https://github.com/luisArandas/xperimus"><img  width="60%" class="mx-auto d-block" src="img/sttera1.png"></a>  </div>
+
+A Software for Audio Recognition and Orchestration as Medium for Music Ritual. Faust WebAssembly library [is used](https://github.com/luisArandas/xperimus/blob/master/static/scripts/main/main.js) internally with the [faust2webaudio](https://github.com/grame-cncm/faust2webaudio) project.
+
 ## [XUiDesigner](https://github.com/brummer10/XUiDesigner)
 
 <div><a href="https://github.com/brummer10/XUiDesigner"><img  width="50%" class="mx-auto d-block" src="img/XUiDesigner.png"></a>  </div>
