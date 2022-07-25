@@ -2,6 +2,12 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Striso Studio](https://github.com/markmarijnissen/strisostudio)
+
+<div><a href="https://github.com/markmarijnissen/strisostudio"><img  width="40%" class="mx-auto d-block" src="img/virtual-striso.png"></a>  </div>
+
+A virtual Web version of the [Striso](http://www.striso.org) board, using the Faust WebAssembly [compiled sythesizer code](https://github.com/markmarijnissen/strisostudio/tree/main/static). 
+
 ## [Sttera](https://github.com/luisArandas/xperimus)
 
 <div><a href="https://github.com/luisArandas/xperimus"><img  width="60%" class="mx-auto d-block" src="img/sttera1.png"></a>  </div>
