@@ -514,7 +514,7 @@ ALS - Automatic Larsen Suppression algorithms implementing adaptive filtering th
 
 <a href="https://ossia.io"><img  width="55%" class="mx-auto d-block" src="img/ossia-score.png"></a>  
 
-Ossia score is a sequencer for audio-visual artists, designed to enable the creation of interactive shows, museum installations, intermedia digital artworks, interactive music and more in an intuitive user interface. Faust can be used to [create advanced audio processes](https://ossia.io/score/features.html). A demo video of the Faust integration can be [seen here](https://www.youtube.com/watch?time_continue=1&v=yvTjJMrFxR0&feature=emb_logo).
+Ossia score is a sequencer for audio-visual artists, designed to enable the creation of interactive shows, museum installations, intermedia digital artworks, interactive music and more in an intuitive user interface. Faust can be used to [create advanced audio processes](https://ossia.io/score/about.html). A demo video of the Faust integration can be [seen here](https://www.youtube.com/watch?time_continue=1&v=yvTjJMrFxR0&feature=emb_logo).
 
 ## [FASELUNARE Microcosmos](http://www.faselunare.com)
 
