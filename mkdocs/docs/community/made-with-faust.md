@@ -2,6 +2,13 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Faug](https://github.com/t2techno/Faug)
+
+<div><a href="https://github.com/t2techno/Faug"><img  width="60%" class="mx-auto d-block" src="img/faug.png"></a>  </div>
+
+A Minimoog Model D emulation with the DSP portion written in Faust and using [JUCE](https://www.juce.com) framework. Moog + Faust = Faug.
+
+
 ## [Striso Studio](https://github.com/markmarijnissen/strisostudio)
 
 <div><a href="https://github.com/markmarijnissen/strisostudio"><img  width="40%" class="mx-auto d-block" src="img/virtual-striso.png"></a>  </div>
