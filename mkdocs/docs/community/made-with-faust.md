@@ -663,9 +663,13 @@ Making Sound Machines are a duo of makers from Düsseldorf, Germany. We build ki
 
 ## [master_me](https://github.com/trummerschlunk/master_me)
 
-<a href="https://github.com/trummerschlunk/master_me"><img  width="80%" class="mx-auto d-block" src="img/master_me_gui.png"></a>  
+<a href="https://github.com/trummerschlunk/master_me"><img  width="70%" class="mx-auto d-block" src="img/master_me_gui.png"></a>  
 
-master_me is an automatic audio dynamics processor that smoothly balances sound during streaming events and live recordings. Preventing clipping and distortion, the software connects an effective leveling process with a mastering chain modeled after the analog audio path of Berlin-based Mastering Engineer Klaus Scheuermann.
+Automatic audio mastering plugin for live-streaming, podcasting and internet radio stations.
+
+With the first Covid-19 related lock-downs in 2020, many real-life concerts, conferences and festivals were forced into the digital domain - and sounded pretty crappy. Having worked for almost 20 years in audio mastering, Berlin based engineer Klaus Scheuermann started to develop master_me - a word fusion of automatic mastering and mini-me - in order to make open source streaming sound better. After a few weeks of learning and development, master_me was first used at the 'Quarantine Sessions' - a weekly distributed electro-acoustic improvised concert, hosted at Stanford's CCRMA Institute. 
+
+master_me was developed further to be an easy-to-use tool for all live streaming applications. In 2022 it was funded by the Prototype Fund, an open source software funding initiative by the german ministry of education and research. A stable release is available since September 2022.
 
 ## [metaSurface64](http://blanchemain.info/Documents/Programmation/index.php?page=metaSurface)
 
