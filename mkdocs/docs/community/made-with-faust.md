@@ -2,6 +2,15 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [faust-mcp](https://github.com/agraef/faust-mcp)
+
+This package provides a [Pd](http://puredata.info) abstraction mcp.pd (along with some helper abstractions and externals) which lets you control your [Faust](http://faust.grame.fr) instruments and effects more conveniently with control surfaces utilizing the Mackie Control Protocol (MCP).
+
+## [Faust.quark](https://github.com/madskjeldgaard/faust.quark)
+
+This SuperCollider package makes it possible to create SuperCollider packages (Quarks) containing plugins written in Faust code. With this, you can distribute plugins written in Faust and make it easy for others to install, compile or uninstall them. It also contains some simple interfaces for the `faust` and `faust2sc.py` commands used behind the scenes.
+
+
 ## [Komet](https://github.com/madskjeldgaard/komet)
 
 <div><a href="https://github.com/madskjeldgaard/komet"><img  width="80%" class="mx-auto d-block" src="img/komet.png"></a>  </div>
