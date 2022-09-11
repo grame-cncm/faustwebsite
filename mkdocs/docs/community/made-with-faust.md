@@ -2,6 +2,15 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Komet](https://github.com/madskjeldgaard/komet)
+
+<div><a href="https://github.com/madskjeldgaard/komet"><img  width="80%" class="mx-auto d-block" src="img/komet.png"></a>  </div>
+
+Komet is a computer music / sound system by Mads Kjeldgaard written in [SuperCollider](https://github.com/supercollider/supercollider) and [Faust](https://faust.grame.fr).
+
+Komet is a computer music system that makes advanced synthesis operations and composition easier. It auto generates thousands of synthesizer variations from simple recipes and offers a range of DAW-like features such as effect chains (like on channel strips) and other conveniences. It can work natively in stereo, multichannel or high order ambisonics mode with the flick of a switch, allowing the same compositions to be used in different sound systems.
+
+
 ## [Faug](https://github.com/t2techno/Faug)
 
 <div><a href="https://github.com/t2techno/Faug"><img  width="60%" class="mx-auto d-block" src="img/faug.png"></a>  </div>
