@@ -2,6 +2,14 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+
+## [Hypercurve](https://github.com/johannphilippe/hypercurve)
+
+<div><a href="https://github.com/johannphilippe/hypercurve"><img  width="80%" class="mx-auto d-block" src="img/hybrid.png"></a>  </div>
+
+Hypercurve is a library allowing you to combine several curve algorithms into a single 2D envelope. It is designed to be used in audio applications, for people who know how to enjoy a finely shaped curve. As shown above, you can perfectly combine gaussian curve with diocles cissoid curve, and plenty of other curve algorithms. The library can be used in C++, Lua, Csound and [Faust](https://github.com/johannphilippe/hypercurve/tree/main/faust_lib).
+
+
 ## [faust-mcp](https://github.com/agraef/faust-mcp)
 
 This package provides a [Pd](http://puredata.info) abstraction mcp.pd (along with some helper abstractions and externals) which lets you control your [Faust](http://faust.grame.fr) instruments and effects more conveniently with control surfaces utilizing the Mackie Control Protocol (MCP).
