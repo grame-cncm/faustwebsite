@@ -48,7 +48,7 @@ A Minimoog Model D emulation with the DSP portion written in Faust and using [JU
 
 <div><a href="https://github.com/markmarijnissen/strisostudio"><img  width="40%" class="mx-auto d-block" src="img/virtual-striso.png"></a>  </div>
 
-A virtual Web version of the [Striso](http://www.striso.org) board, using the Faust WebAssembly [compiled sythesizer code](https://github.com/markmarijnissen/strisostudio/tree/main/static). 
+A [virtual Web version](https://strisostudio.web.app/board/) of the [Striso](http://www.striso.org) board, using the Faust WebAssembly [compiled sythesizer code](https://github.com/markmarijnissen/strisostudio/tree/main/static). 
 
 ## [Sttera](https://github.com/luisArandas/xperimus)
 
