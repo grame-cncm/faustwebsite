@@ -3,6 +3,15 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
 
+## [Theremotion](https://github.com/plule/theremotion)
+
+<div><a href="https://github.com/plule/theremotion"><img  width="60%" class="mx-auto d-block" src="img/theremotion.png"></a>  </div>
+
+Theremotion is a virtual instrument inspired by the Theremin. Just like a Theremin, the position of your hand in the air controls the pitch and volume of the sound. However, you can also control much more dimensions of the sound with specific motions. With specific hand positions, you can control a low pass filter, a supersaw sound, a guitar sound and more. You can even make the instrument "stick" to a scale, making it much easier to control than a Theremin.
+
+The hand tracking is provided by Ultraleap's [Leap Motion Controller](https://www.ultraleap.com/product/leap-motion-controller/). The sound generation is created with Grame's [Faust](https://faust.grame.fr). The program is built with [Rust](https://www.rust-lang.org).
+
+
 ## [Hypercurve](https://github.com/johannphilippe/hypercurve)
 
 <div><a href="https://github.com/johannphilippe/hypercurve"><img  width="80%" class="mx-auto d-block" src="img/hybrid.png"></a>  </div>
