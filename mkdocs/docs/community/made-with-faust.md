@@ -3,6 +3,17 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
 
+## [DF Zita Rev1](https://github.com/SpotlightKid/dfzitarev1)
+
+<div><a href="https://github.com/SpotlightKid/dfzitarev1"><img  width="35%" class="mx-auto d-block" src="img/dfzitarev1.png"></a>  </div>
+
+A feedback-delay-network reverb plugin built with [DPF](https://github.com/DISTRHO/DPF) and based on a FAUST library demo.  Several other projects are developed using the same DPF/FAUST methothodolgy:
+
+* [FAUST filters](https://github.com/SpotlightKid/faustfilters), a collection of virtual-analog filters from the FAUST standard library packaged as multi-format plugins via the DPF
+* [SendMixer](https://github.com/SpotlightKid/sendmixer), a stereo channel strip plugin with one master gain and two pre/post-fader sends
+* [Stereo Cross Delay](https://github.com/SpotlightKid/stereocrossdelay), a stereo delay plugin with feedback and cross-mixing.
+
+
 ## [Theremotion](https://github.com/plule/theremotion)
 
 <div><a href="https://github.com/plule/theremotion"><img  width="60%" class="mx-auto d-block" src="img/theremotion.png"></a>  </div>
