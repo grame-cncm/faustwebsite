@@ -2,6 +2,11 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [cookiecutter-dpf-faust](https://github.com/SpotlightKid/cookiecutter-dpf-faust)
+
+<div><a href="https://github.com/SpotlightKid/cookiecutter-dpf-faust"><img  width="50%" class="mx-auto d-block" src="img/cookiecutter-dpf-faust.png"></a>  </div>
+
+A [cookiecutter](https://github.com/cookiecutter/cookiecutter) project template for DISTRHO Plugin Framework ([DPF](https://github.com/DISTRHO/DPF)) audio effect plugins using FAUST for the implementation of the DSP pipeline. Look at the [demo video](https://asciinema.org/a/355004?speed=2&&theme=monokai&autoplay=1&size=medium).
 
 ## [DF Zita Rev1](https://github.com/SpotlightKid/dfzitarev1)
 
