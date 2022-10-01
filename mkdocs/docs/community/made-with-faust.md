@@ -2,6 +2,13 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Leslie speaker simulator](https://github.com/miccio-dk/LeslieSim)
+
+<div><a href="https://github.com/miccio-dk/LeslieSim"><img  width="40%" class="mx-auto d-block" src="img/leslie.png"></a>  </div>
+
+This archive presents a virtual simulation of the Leslie Speaker commonly found in Hammond electric organs. The digital effect has been developed using the FAUST programming language, and then ported into a VST-compatible format using the JUCE C++ framework.
+
+
 ## [cookiecutter-dpf-faust](https://github.com/SpotlightKid/cookiecutter-dpf-faust)
 
 <div><a href="https://github.com/SpotlightKid/cookiecutter-dpf-faust"><img  width="50%" class="mx-auto d-block" src="img/cookiecutter-dpf-faust.png"></a>  </div>
