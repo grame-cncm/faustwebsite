@@ -4,7 +4,7 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 ## [Leslie speaker simulator](https://github.com/miccio-dk/LeslieSim)
 
-<div><a href="https://github.com/miccio-dk/LeslieSim"><img  width="40%" class="mx-auto d-block" src="img/leslie.png"></a>  </div>
+<div><a href="https://github.com/miccio-dk/LeslieSim"><img  width="35%" class="mx-auto d-block" src="img/leslie.png"></a>  </div>
 
 This archive presents a virtual simulation of the Leslie Speaker commonly found in Hammond electric organs. The digital effect has been developed using the FAUST programming language, and then ported into a VST-compatible format using the JUCE C++ framework.
 
