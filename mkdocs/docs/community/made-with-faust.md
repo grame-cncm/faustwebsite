@@ -2,6 +2,12 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [LR_Delay](https://github.com/butchwarns/LR_Delay)
+
+<div><a href="https://github.com/butchwarns/LR_Delay"><img  width="20%" class="mx-auto d-block" src="img/LR_Delay.jpg"></a>  </div>
+
+A stereo delay plugin which emphasizes free (non beat-synced) controls for the individual channels. Built with Faust and JUCE.
+
 ## [Leslie speaker simulator](https://github.com/miccio-dk/LeslieSim)
 
 <div><a href="https://github.com/miccio-dk/LeslieSim"><img  width="35%" class="mx-auto d-block" src="img/leslie.png"></a>  </div>
