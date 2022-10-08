@@ -2,6 +2,22 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Audiolab](https://github.com/hrtlacek/audiolab)
+
+A docker based DSP learning/Experimentation environment including:
+
+- Jupyter lab
+- FAUST
+- python 3.7 (at the moment. Depends on miniconda3 docker image)
+- FAUSTpy to run FAUST code inside jupyter
+- faustWidgets (to interactively control FAUST code )
+- librosa (for MIR and feature extraction)
+- scipy, pandas, numpy for general data science
+- sox (encoding, batch processing etc)
+- ffmpeg (encoding batch processing etc)
+- seaborn (more beautiful plots)
+- latex TODO (for exporting jupyter notebooks)
+
 ## [LR_Delay](https://github.com/butchwarns/LR_Delay)
 
 <div><a href="https://github.com/butchwarns/LR_Delay"><img  width="20%" class="mx-auto d-block" src="img/LR_Delay.jpg"></a>  </div>
