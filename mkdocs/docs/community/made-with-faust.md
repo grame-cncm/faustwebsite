@@ -2,6 +2,13 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [MBStereophony](https://github.com/marcecj/faust_mbstereophony)
+
+<div><a href="https://github.com/marcecj/faust_mbstereophony"><img  width="40%" class="mx-auto d-block" src="img/mbstereophony.png"></a>  </div>
+
+This is a simple implementation of a Regalia-Mitra filter bank using 3rd order Cauer low-pass filters as the base designs. There are four filter bank programs available which are described below. MBStereophony itself is a demo effect that down-mixes a stereo signal separately per frequency band.
+
+
 ## [Audiolab](https://github.com/hrtlacek/audiolab)
 
 A docker based DSP learning/Experimentation environment including:
