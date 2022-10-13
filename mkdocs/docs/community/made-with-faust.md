@@ -2,6 +2,13 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [HISE](http://www.hise.audio)
+
+<div><a href="https://github.com/marcecj/faust_hise"><img  width="40%" class="mx-auto d-block" src="img/faust_hise.png"></a>  </div>
+
+HISE is an open source framework for building sample based virtual instruments combining a highly performant Disk-Streaming Engine, a flexible DSP-Audio Module system and a handy Interface Designer. The implementation of the [Faust integration](https://resonant-bytes.de/blog/gsoc-final-submission/) was the result of a Google Summer of Code project done by [Roman Sommer](https://resonant-bytes.de/about/) with the help of [Christoph Hart](https://github.com/christophhart) as mentor. 
+
+
 ## [MBStereophony](https://github.com/marcecj/faust_mbstereophony)
 
 <div><a href="https://github.com/marcecj/faust_mbstereophony"><img  width="40%" class="mx-auto d-block" src="img/mbstereophony.png"></a>  </div>
