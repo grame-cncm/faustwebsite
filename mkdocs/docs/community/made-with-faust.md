@@ -4,7 +4,7 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 ## [HISE](http://www.hise.audio)
 
-<div><a href="http://www.hise.audio"><img  width="40%" class="mx-auto d-block" src="img/faust_hise.png"></a>  </div>
+<div><a href="http://www.hise.audio"><img  width="55%" class="mx-auto d-block" src="img/faust_hise.png"></a>  </div>
 
 HISE is an open source framework for building sample based virtual instruments combining a highly performant Disk-Streaming Engine, a flexible DSP-Audio Module system and a handy Interface Designer. The implementation of the [Faust integration](https://resonant-bytes.de/blog/gsoc-final-submission/) was the result of a Google Summer of Code project done by [Roman Sommer](https://resonant-bytes.de/about/) with the help of [Christoph Hart](https://github.com/christophhart) as mentor. 
 
