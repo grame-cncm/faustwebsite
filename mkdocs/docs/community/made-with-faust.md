@@ -2,6 +2,13 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [GuitarD](https://github.com/TobiasKozel/GuitarD)
+
+<div><a href="https://github.com/TobiasKozel/GuitarD"><img  width="55%" class="mx-auto d-block" src="img/guitarD.png"></a>  </div>
+
+It's a basic multi effects processor which follows a node based approach. Components are developed with Faust.
+
+
 ## [HISE](http://www.hise.audio)
 
 <div><a href="http://www.hise.audio"><img  width="55%" class="mx-auto d-block" src="img/faust_hise.png"></a>  </div>
