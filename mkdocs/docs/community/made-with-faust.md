@@ -2,6 +2,13 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [TR8CK](https://github.com/bigmistqke/tr8ck)
+
+<div><a href="https://github.com/bigmistqke/tr8ck"><img  width="50%" class="mx-auto d-block" src="img/TR8CK.gif"></a>  </div>
+
+TR8CK is an experimental DAW/tracker with Faust live coding via faust2webaudio and UI powered by SolidJS.
+
+
 ## [GuitarD](https://github.com/TobiasKozel/GuitarD)
 
 <div><a href="https://github.com/TobiasKozel/GuitarD"><img  width="55%" class="mx-auto d-block" src="img/guitarD.png"></a>  </div>
