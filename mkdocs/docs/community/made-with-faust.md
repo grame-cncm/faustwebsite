@@ -2,6 +2,16 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [DPF-Fadeli](https://github.com/DISTRHO/Fadeli)
+
+An experiment with Faust Demo Library content as DPF plugins. Basically glueing a few different projects together:
+
+1. [DPF](https://github.com/DISTRHO/DPF)
+2. [faust](https://faust.grame.fr/)
+3. [faustpp](https://github.com/jpcima/faustpp)
+4. [faust examples](https://faustdoc.grame.fr/examples/reverb/)
+
+
 ## [TR8CK](https://github.com/bigmistqke/tr8ck)
 
 <div><a href="https://github.com/bigmistqke/tr8ck"><img  width="50%" class="mx-auto d-block" src="img/TR8CK.gif"></a>  </div>
