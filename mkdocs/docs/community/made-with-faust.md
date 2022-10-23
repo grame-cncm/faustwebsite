@@ -2,6 +2,14 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Vocoder App](https://github.com/Rickr922/mobile-vocoder)
+
+<div><a href="https://github.com/Rickr922/mobile-vocoder"><img  width="40%" class="mx-auto d-block" src="img/vocoderapp.png"></a>  </div>
+
+Vocoder mobile app for Android made with Faust and its Smartkeyboard interface. This app was developed in the context of a project for the the Real Time Interaction and Performance exam (Sound and Music Computing MSc, Aalborg University, Copenhagen, 2020).
+
+The paper A Faust-built Mobile Vocoder Instrument, included in the repo, provides more information on the algorithm, as well as the description of a case prototype.
+
 ## [Echoplex Ep-3 Simulator](https://github.com/Rickr922/echoplex-sim)
 
 <div><a href="https://github.com/Rickr922/echoplex-sim"><img  width="40%" class="mx-auto d-block" src="img/echoplex.png"></a>  </div>
