@@ -2,6 +2,10 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [faust2smartphone](https://github.com/RuolunWeng/faust2smartphone)
+
+faust2smartphone is a tool to generate interactive musical mobile application embeded Faust API.
+
 ## [DPF-Fadeli](https://github.com/DISTRHO/Fadeli)
 
 An experiment with Faust Demo Library content as DPF plugins. Basically glueing a few different projects together, to compile Faust DSP programs in several plugins format: LV2, VST2, VSL3, [clap](https://www.bitwig.com/stories/clap-the-new-audio-plug-in-standard-201/):
