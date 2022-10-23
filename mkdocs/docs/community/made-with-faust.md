@@ -2,6 +2,14 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Echoplex Ep-3 Simulator](https://github.com/Rickr922/echoplex-sim)
+
+<div><a href="https://github.com/Rickr922/echoplex-sim"><img  width="40%" class="mx-auto d-block" src="img/echoplex.png"></a>  </div>
+
+This archive contains a virtual model of the Echoplex Ep-3 tape delay. The effect has been developed using Faust in the context of a project for the Sound Processing exam (Sound and Music Computing MSc, Aalborg University, Copenhagen, 2019).
+
+The paper Faust Model of the Echoplex Tape Delay, included in the repo, provides more information on the algorithm.
+
 ## [faust2smartphone](https://github.com/RuolunWeng/faust2smartphone)
 
 faust2smartphone is a tool to generate interactive musical mobile application embeded Faust API.
