@@ -4,7 +4,7 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 ## [DPF-Fadeli](https://github.com/DISTRHO/Fadeli)
 
-An experiment with Faust Demo Library content as DPF plugins. Basically glueing a few different projects together:
+An experiment with Faust Demo Library content as DPF plugins. Basically glueing a few different projects together, to compile Faust DSP programs in several plugins format: LV2, VST2, VSL3, [clap](https://www.bitwig.com/stories/clap-the-new-audio-plug-in-standard-201/):
 
 1. [DPF](https://github.com/DISTRHO/DPF)
 2. [faust](https://faust.grame.fr/)
@@ -16,7 +16,7 @@ An experiment with Faust Demo Library content as DPF plugins. Basically glueing 
 
 <div><a href="https://github.com/bigmistqke/tr8ck"><img  width="50%" class="mx-auto d-block" src="img/TR8CK.gif"></a>  </div>
 
-TR8CK is an experimental DAW/tracker with Faust live coding via faust2webaudio and UI powered by SolidJS.
+TR8CK is an experimental DAW/tracker with Faust live coding via [faust2webaudio](https://github.com/grame-cncm/faust2webaudio) and UI powered by [SolidJS](https://www.solidjs.com).
 
 
 ## [GuitarD](https://github.com/TobiasKozel/GuitarD)
