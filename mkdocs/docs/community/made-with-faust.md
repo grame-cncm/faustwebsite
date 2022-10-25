@@ -2,6 +2,13 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Slowmo.lv2](https://github.com/brummer10/slowmo.lv2)
+
+<div><a href="https://github.com/brummer10/slowmo.lv2"><img  width="40%" class="mx-auto d-block" src="img/slowmo.png"></a>  </div>
+
+A multiband slow gate with delay/echo. The C++ files for the effect are generated from Faust DSP files: [Bandsplit.cc](https://github.com/brummer10/slowmo.lv2/blob/main/slowmo/Bandsplit.cc), [Delay.cc](https://github.com/brummer10/slowmo.lv2/blob/main/slowmo/Delay.cc) and [Volume.cc](https://github.com/brummer10/slowmo.lv2/blob/main/slowmo/Volume.cc). 
+
+
 ## [Vocoder App](https://github.com/Rickr922/mobile-vocoder)
 
 <div><a href="https://github.com/Rickr922/mobile-vocoder"><img  width="40%" class="mx-auto d-block" src="img/vocoderapp.png"></a>  </div>
