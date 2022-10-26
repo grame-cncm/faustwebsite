@@ -4,7 +4,7 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 ## [Slowmo.lv2](https://github.com/brummer10/slowmo.lv2)
 
-<div><a href="https://github.com/brummer10/slowmo.lv2"><img  width="40%" class="mx-auto d-block" src="img/slowmo.png"></a>  </div>
+<div><a href="https://github.com/brummer10/slowmo.lv2"><img  width="60%" class="mx-auto d-block" src="img/slowmo.png"></a>  </div>
 
 A multiband slow gate with delay/echo. The C++ files for the effect are generated from Faust DSP files: [Bandsplit.cc](https://github.com/brummer10/slowmo.lv2/blob/main/slowmo/Bandsplit.cc), [Delay.cc](https://github.com/brummer10/slowmo.lv2/blob/main/slowmo/Delay.cc) and [Volume.cc](https://github.com/brummer10/slowmo.lv2/blob/main/slowmo/Volume.cc). 
 
