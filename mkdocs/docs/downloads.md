@@ -14,11 +14,11 @@ so we recommend most people to use this tools which doesn't require any installa
 
 ### MacOS
 
-* Look for the most recent `Faust-XXX.dmg` on: <https://github.com/grame-cncm/faust/releases>
+* Look for the most recent `Faust-XXX.dmg` on: <https://github.com/grame-cncm/faust/releases> or use [MacPorts](https://www.macports.org) or [Homebrew](https://brew.sh) package managers
 
 ### Linux
 
-* Look for the most recent `Faust-XXX.tar.gz` on: <https://github.com/grame-cncm/faust/releases>
+* Look for the most recent `Faust-XXX.tar.gz` on: <https://github.com/grame-cncm/faust/releases> or use your favorite package installer depending of your distribution
 
 ### Building Faust from the Source
 
