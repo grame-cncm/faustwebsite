@@ -56,7 +56,7 @@ TR8CK is an experimental DAW/tracker with Faust live coding via [faust2webaudio]
 
 <div><a href="https://github.com/TobiasKozel/GuitarD"><img  width="55%" class="mx-auto d-block" src="img/guitarD.png"></a>  </div>
 
-It's a basic multi effects processor which follows a node based approach. Components are developed with Faust.
+It's a basic multi effects processor which follows a node based approach. Components are [developed with Faust](https://github.com/TobiasKozel/GuitarD/tree/master/src/nodes).
 
 
 ## [HISE](http://www.hise.audio)
