@@ -2,6 +2,12 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Wingie2](https://www.mengqimusic.com/wingie2-introduction)
+
+<div><a href="https://www.mengqimusic.com/wingie2-introduction"><img  width="30%" class="mx-auto d-block" src="img/Wingie2.png"></a>  </div>
+
+[Wingie2](https://www.mengqimusic.com/wingie2-introduction) is a handheld stereo resonator that you can use as a development platform, and can be [programmed with Faust](https://github.com/mengqimusic/Wingie2). 
+
 ## [Slowmo.lv2](https://github.com/brummer10/slowmo.lv2)
 
 <div><a href="https://github.com/brummer10/slowmo.lv2"><img  width="60%" class="mx-auto d-block" src="img/slowmo.png"></a>  </div>
