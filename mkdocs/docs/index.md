@@ -45,6 +45,13 @@ Check out [**the Faust Kadenze course**](https://www.kadenze.com/courses/real-ti
 
 ## Faust News
 
+### **>>** December 03, 2022: Programmable Audio Workshop (PAW-22) 
+
+The 5th edition of Programmable Audio Workshop (PAW) will be held on December 3rd at the CITI laboratory of INSA Lyon on the La Doua campus. It will be organized this year by the [EMERAUDE](https://team.inria.fr/emeraude/) (Embedded Programmable Audio Systems) team created in 2022 and associating INSA-Lyon, INRIA and GRAME. With 7 conferences in the morning and 4 workshops in the afternoon, PAW addresses this year the theme of networked embedded audio systems, with a particular focus on spatialized sound and FPGAs (Field-Programmable Gate Arrays).
+
+Full program, details of the talks and registration on the [PAW website](https://paw.grame.fr).
+
+
 ### **>>** October 13, 2022: Google Summer of Code project finished
 
 <center>
