@@ -4,7 +4,7 @@ hide_toc: true
 
 ## What is Faust?
 
-Faust (Functional Audio Stream) is a functional programming language for sound synthesis and audio processing with a strong focus on the design of synthesizers, musical instruments, audio effects, etc. Faust targets high-performance signal processing applications and audio plug-ins for a variety of platforms and standards.
+Faust (Functional Audio Stream) is a functional programming language for sound synthesis and audio processing with a strong focus on the design of synthesizers, musical instruments, audio effects, etc. created at the [GRAME-CNCM](https://www.grame.fr) computer music [research department](https://www.grame.fr/recherche). Faust targets high-performance signal processing applications and audio plug-ins for a variety of platforms and standards.
 
 The core component of Faust is its compiler. It allows to "translate" any Faust digital signal processing (DSP) specification to a wide range of non-domain specific languages such as C++, C, LLVM bit code, WebAssembly, Rust, etc. In this regard, Faust can be seen as an alternative to C++ but is much simpler and intuitive to learn.
 
