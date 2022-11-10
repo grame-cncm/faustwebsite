@@ -2,6 +2,12 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [ReverbZen](https://github.com/zeloe/ReverbZen)
+
+<div><a href="https://github.com/zeloe/ReverbZen"><img  width="40%" class="mx-auto d-block" src="img/ReverbZen.png"></a>  </div>
+
+A Reverb written with Faust, based on [SchroederReverberators](https://ccrma.stanford.edu/~jos/pasp/Schroeder_Reverberators.html).
+
 ## [Wingie2](https://www.mengqimusic.com/wingie2-introduction)
 
 <div><a href="https://www.mengqimusic.com/wingie2-introduction"><img  width="30%" class="mx-auto d-block" src="img/Wingie2.png"></a>  </div>
