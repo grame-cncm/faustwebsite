@@ -6,7 +6,7 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 <div><a href="https://github.com/zeloe/ReverbZen"><img  width="40%" class="mx-auto d-block" src="img/ReverbZen.png"></a>  </div>
 
-A Reverb written with Faust, based on [SchroederReverberators](https://ccrma.stanford.edu/~jos/pasp/Schroeder_Reverberators.html).
+A Reverb written with Faust and JUCE, based on [SchroederReverberators](https://ccrma.stanford.edu/~jos/pasp/Schroeder_Reverberators.html).
 
 ## [Wingie2](https://www.mengqimusic.com/wingie2-introduction)
 
