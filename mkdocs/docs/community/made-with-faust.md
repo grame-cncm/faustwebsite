@@ -2,12 +2,20 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [tamgamp.lv2](https://github.com/sadko4u/tamgamp.lv2)
+
+<div><a href="https://github.com/sadko4u/tamgamp.lv2"><img  width="55%" class="mx-auto d-block" src="img/tamgamp.png"></a>  </div>
+
+Tamgamp (Rhymes with: "Damage Amp") is a LV2 guitar amp simulator that provides two plugins, with DSP code [developed with Faust](https://github.com/sadko4u/tamgamp.lv2/tree/master/src):
+
+- Tamgamp - a plugin based on Guitarix DK Builder simulated chains.
+- TamgampGX - a plugin based on tuned Guitarix internal amplifiers implementation.
+
 ## [ReverbZen](https://github.com/zeloe/ReverbZen)
 
 <div><a href="https://github.com/zeloe/ReverbZen"><img  width="40%" class="mx-auto d-block" src="img/ReverbZen.png"></a>  </div>
 
 A Reverb written with Faust and JUCE, based on [SchroederReverberators](https://ccrma.stanford.edu/~jos/pasp/Schroeder_Reverberators.html). This reverb effect uses different stages. It splits input signal in parallel and uses different types of delaylines. Different filters are provided to get rid of unwanted resonances. Check out [reverb.dsp](https://github.com/zeloe/ReverbZen/blob/main/Source/reverb.dsp) file to get more detailed insight.
-
 
 
 ## [Wingie2](https://www.mengqimusic.com/wingie2-introduction)
