@@ -14,7 +14,7 @@ nav:
          - 'Faust Playground': https://faustplayground.grame.fr
          - 'Faust Web Editor': https://fausteditor.grame.fr
     - Community:
-        - 'Powered By Faust': community/made-with-faust.md
+        - 'Powered By Faust': community/powered-by-faust.md
         - 'Events': community/events.md
         - 'Getting Help': community/help.md
         - 'Reporting Bugs': community/bugs.md
