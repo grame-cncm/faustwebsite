@@ -2,6 +2,19 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [CollisionDrive.lv2](https://github.com/brummer10/CollisionDrive)
+
+<div><a href="https://github.com/brummer10/CollisionDrive"><img  width="30%" class="mx-auto d-block" src="img/CollisionDrive.png"></a>  </div>
+
+CollisionDrive is modeled after the Horizon Devices Precision Drive, a modern overdrive pedal with a built-in noise gate, with DSP [written in Faust](https://github.com/brummer10/CollisionDrive/tree/main/CollisionDrive/dsp).
+
+
+## [MetalTone.lv2](https://github.com/brummer10/MetalTone)
+
+<div><a href="https://github.com/brummer10/MetalTone"><img  width="30%" class="mx-auto d-block" src="img/MetalTone.png"></a>  </div>
+
+Distortion Pedal simulation. MetalTone is modeled after the renowned BOSS MT-2 Metal Zone, a high gain distortion pedal with an advanced EQ section, with DSP [written in Faust](https://github.com/brummer10/MetalTone/tree/main/MetalTone).
+
 ## [tamgamp.lv2](https://github.com/sadko4u/tamgamp.lv2)
 
 <div><a href="https://github.com/sadko4u/tamgamp.lv2"><img  width="55%" class="mx-auto d-block" src="img/tamgamp.png"></a>  </div>
