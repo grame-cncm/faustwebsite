@@ -8,9 +8,10 @@ In 2018, Yann Orlarey and Romain Michon shot an online course on the [Kadenze pl
 
 Several courses on Faust are given at CCRMA:
 
-* [Julius Smith's Faust tutorial](https://ccrma.stanford.edu/~jos/aspf/)
+* [Julius Smith's Faust tutorial](https://ccrma.stanford.edu/~jos/aspf/), [Writing a Slew Limiter in the Faust Language](https://www.youtube.com/watch?v=3WY0ikTFAe4) and [Make an Eight Channel Mixer in the Faust IDE](https://www.youtube.com/watch?v=W4zyZisuAJ4)
 * [Romain Michon's Faust tutorials](https://ccrma.stanford.edu/~rmichon/faustTutorials/)
-* [Music 250a (Physical Interaction Design for Music) course which hosts various tutorials on Faust and hardware](https://ccrma.stanford.edu/courses/250a-winter-2020/ )
+* [Music 250a (Physical Interaction Design for Music) course which hosts various tutorials on Faust and hardware](https://ccrma.stanford.edu/courses/250a-winter-2020/)
+* [Music 250a 2021](https://www.youtube.com/watch?v=SLjMzf5v4Ho) and related videos
 * [Music 320c (Audio Plugin Development in Faust and C++)](https://ccrma.stanford.edu/courses/320c/)
 * [Embedded DSP With Faust Workshop](https://ccrma.stanford.edu/workshops/faust-embedded-19/)
 
@@ -25,7 +26,6 @@ The class [Data Sonification & Opportunities of Sound](https://hpi.de/studium/im
 ### [Université Paris 8](https://www.univ-paris8.fr)
 A 24 hours introduction to Faust is given by [Alain Bonardi](http://alainbonardi.net) during the first semester to undergraduated students (L3, 3rd year after the french 'baccalauréat') in the framework of the course "Programming Languages in Computer Music 1" offered in the "Music creation with computers" minor.
 
-
 ### [Universidad Nacional de Quilmes](http://www.unq.edu.ar/)
 
 Cursos de Faust / DSP en español, realizados por [Juan Ramos](http://jaoramos.com.ar). Incluyen las clases del "Seminario de Actualización en Sonido, Ciencia y Tecnología II", dictado en la Universidad Nacional de Quilmes (Argentina) en 2021.
@@ -35,13 +35,11 @@ Faust / DSP courses in Spanish, prepared by [Juan Ramos](http://jaoramos.com.ar)
 - An intro video is [available here](https://www.youtube.com/watch?v=DnBI7r273BE)
 - All available classes are [located here](https://www.youtube.com/channel/UCD6aeS3GdkEmt86KUehr8LQ/videos)
 
-
 ### Professional Masters of RIM & RAN
 
 The [Professional RIM & RAN Masters](https://musinf.univ-st-etienne.fr/indexGB.html) are aimed at developing students applied knowledge and understanding of electronic and digital technologies for the creation, prepare them to the professions of *Producer in Computer Music (RIM - Réalisateur en Informatique Musicale) and in Digital Arts (RAN - Réalisateur en Arts Numériques)*. These producers are direct actors in musical and artistic productions, and work at the interface between software developers, applied computer scientists, composers, artists, etc. and all people likely to integrate video, image and sound in their activities.
 
 Most of the courses concerning signal processing are given around the Faust language (M1 Romain Michon 12h / M2 Yann Orlarey 20h).
-
 
 ###  Johannes Gutenberg University of Mainz
 
