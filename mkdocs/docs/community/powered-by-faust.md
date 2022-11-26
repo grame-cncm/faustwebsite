@@ -3,6 +3,14 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
 
+## [201 Musical Synthesizer](https://www.kickstarter.com/projects/critterandguitari/201-musical-synthesizer)
+
+<div><a href="https://www.kickstarter.com/projects/critterandguitari/201-musical-synthesizer"><img  width="60%" class="mx-auto d-block" src="img/201-musical-synthesizer.png"></a>  </div>
+
+We’re Critter & Guitari and we’re happy to announce our newest synthesizer: the 201! If you’re familiar with our other musical instruments such as the Pocket Piano, Organelle, Bolsa Bass, or Kaleidoloop, we hope you’ll see that the 201 fits right in with them: the 201 is fun, portable, and packed with a medley of musical magic!
+
+Inside, the 201 uses a combination of Pure Data and Faust musical programming environments. Users are invited to modify or create new sound engines! 
+
 ## [OneTrick SIMIAN](https://punklabs.com/ot-simian)
 
 <div><a href="https://punklabs.com/ot-simian"><img  width="50%" class="mx-auto d-block" src="img/ot-simian.png"></a>  </div>
