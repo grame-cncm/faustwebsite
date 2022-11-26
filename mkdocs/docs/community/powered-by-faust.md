@@ -2,6 +2,13 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+
+## [OneTrick SIMIAN](https://punklabs.com/ot-simian)
+
+<div><a href="https://punklabs.com/ot-simian"><img  width="60%" class="mx-auto d-block" src="img/ot-simian.png"></a>  </div>
+
+Crash into the 80s with an open source drum synth inspired by hexagonal classics like the Simmons SDS-V. Thumping kicks, punchy snares, and sizzling cymbals coalesce with its clacky claves and crunchy claps. Bring saccharine synthwave sauce to your sublime soundscapes or drop indelable pewww pewww tom toms into your new nu-disco. Get the source code [containing Faust DSP](https://punklabs.com/content/projects/ot-simian/downloads/OneTrick-SIMIAN-1.1.0-Source.zip).
+
 ## [CollisionDrive.lv2](https://github.com/brummer10/CollisionDrive)
 
 <div><a href="https://github.com/brummer10/CollisionDrive"><img  width="30%" class="mx-auto d-block" src="img/CollisionDrive.png"></a>  </div>
