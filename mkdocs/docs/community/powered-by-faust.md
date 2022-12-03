@@ -322,7 +322,7 @@ The BVI was created for two major purposes: on the one hand, to find musical str
 
 ## [Mephisto](https://github.com/aonurdemir/Mephisto)
 
-<div><a href="(https://github.com/aonurdemir/Mephisto"><img  width="40%" class="mx-auto d-block" src="img/mephisto.jpg"></a>  </div>
+<div><a href="https://github.com/aonurdemir/Mephisto"><img  width="40%" class="mx-auto d-block" src="img/mephisto.jpg"></a>  </div>
 
 Mephisto is a transpiler for converting sound patches designed using the graphical computer music environment Pure Data to the functional DSP programming language Faust. Faust itself compiles into highly-optimized C++ code. The aim of the transpiler is to enable creating highly optimized C++ code embeddable in games or other interactive media for sound designers, musicians and sound engineers.
 
