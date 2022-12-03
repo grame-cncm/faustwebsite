@@ -322,6 +322,8 @@ The BVI was created for two major purposes: on the one hand, to find musical str
 
 ## [Mephisto](https://github.com/aonurdemir/Mephisto)
 
+<div><a href="(https://github.com/aonurdemir/Mephisto"><img  width="40%" class="mx-auto d-block" src="img/mephisto.jpg"></a>  </div>
+
 Mephisto is a transpiler for converting sound patches designed using the graphical computer music environment Pure Data to the functional DSP programming language Faust. Faust itself compiles into highly-optimized C++ code. The aim of the transpiler is to enable creating highly optimized C++ code embeddable in games or other interactive media for sound designers, musicians and sound engineers.
 
 ## [weather_organ](https://github.com/myklemykle/weather_organ)
@@ -900,7 +902,7 @@ TD-Faust enables Faust code to run inside [TouchDesigner](https://derivative.ca)
 
 ## [Mephisto LV2](https://open-music-kontrollers.ch/lv2/mephisto/)
 
-<a href="https://open-music-kontrollers.ch/lv2/mephisto/"><img  width="50%" class="mx-auto d-block" src="img/mephisto.png"></a>  
+<a href="https://open-music-kontrollers.ch/lv2/mephisto/"><img  width="40%" class="mx-auto d-block" src="img/mephisto-lv2.png"></a>  
 
 Mephisto LV2 a Just-in-Time Faust compiler embedded in an LV2 plugin. Write LV2 audio/cv instruments/filters directly in your host in Faust DSP language without any need to restart/reload host or plugin upon code changes.
 
