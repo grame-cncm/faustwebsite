@@ -2,6 +2,12 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Drty Drums](https://github.com/noonesimg/drty-drums)
+
+<div><a href="https://github.com/noonesimg/drty-drums"><img  width="50%" class="mx-auto d-block" src="img/drty-drums.png"></a>  </div>
+
+A 4 voices drum machine based on FM synthesis [WIP]. The sound engine is [made in Faust](https://github.com/noonesimg/drty-drums/tree/main/dsp).
+
 
 ## [201 Musical Synthesizer](https://www.kickstarter.com/projects/critterandguitari/201-musical-synthesizer)
 
