@@ -2,6 +2,13 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Stray_virtual-synth](https://github.com/JDCAudio/Stray_virtual-synth)
+
+<div><a href="https://github.com/JDCAudio/Stray_virtual-synth"><img  width="50%" class="mx-auto d-block" src="img/stray.png"></a>  </div>
+
+A typical wavetable synthesizer will have a table of predetermined amplitude values which are read through at the appropriate speed relative to the frequency of the current note, resulting in an audible signal. Stray functions similarly, reading through a table of values, but the amplitude values are not predefined. Instead, these values are modulated with one of four LFO shapes. The [DSP code](https://github.com/JDCAudio/Stray_virtual-synth/blob/main/HowItWorks.md) is written in Faust.
+
+
 ## [Drty Drums](https://github.com/noonesimg/drty-drums)
 
 <div><a href="https://github.com/noonesimg/drty-drums"><img  width="50%" class="mx-auto d-block" src="img/drty-drums.png"></a>  </div>
