@@ -2,6 +2,13 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [REACH](https://github.com/Sinuslabs/Reach)
+
+<div><a href="https://github.com/Sinuslabs/Reach"><img  width="50%" class="mx-auto d-block" src="img/reach-overview.jpg"></a>  </div>
+
+Extraterrestrial Reverb for Electronic Music.  REACH is modern creative Reverb that is made for synthetic sound sources. There are four effects included to transform the Signal. It features modular routing, pre and post filters and over 40 Presets. Part of the DSP code is [writtten in Faust](https://github.com/Sinuslabs/Reach/tree/main/DspNetworks/CodeLibrary/faust).
+
+
 ## [Stray_virtual-synth](https://github.com/JDCAudio/Stray_virtual-synth)
 
 <div><a href="https://github.com/JDCAudio/Stray_virtual-synth"><img  width="50%" class="mx-auto d-block" src="img/stray.png"></a>  </div>
