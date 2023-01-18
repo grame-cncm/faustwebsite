@@ -2,6 +2,12 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [VERBER](https://github.com/itsnestee/Verber)
+
+<div><a href="https://github.com/itsnestee/Verber"><img width="50%"class="mx-auto d-block" src="img/verber.png"></a> </div>
+
+Verber is a simple audio plugin tool with a Sweet, Lushy reverb processor. It is a portolio project built in JUCE and HISE, with the DSP [in Faust](https://github.com/itsnestee/Verber/blob/main/DspNetworks/CodeLibrary/faust/JpRevTest.dsp).
+
 ## [REACH](https://github.com/Sinuslabs/Reach)
 
 <div><a href="https://github.com/Sinuslabs/Reach"><img  width="50%" class="mx-auto d-block" src="img/reach-overview.jpg"></a>  </div>
