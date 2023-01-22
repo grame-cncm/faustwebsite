@@ -2,6 +2,13 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [flatten](https://git.sr.ht/~kdsch/flatten/tree)
+
+<div><a href="https://git.sr.ht/~kdsch/flatten/tree"><img width="30%"class="mx-auto d-block" src="img/flatten.png"></a> </div>
+
+What is an [envelope flattener](https://git.sr.ht/~kdsch/flatten/tree/master/item/notes)? It's similar to an automatic gain control, compressor, or maximizer in that it acts by modifying the gain of the signal according to a control signal. Like these, the control signal is derived from the envelope of the input signal. The DSP is [written in Faust](https://git.sr.ht/~kdsch/flatten/tree/master/item/flatten.dsp).
+
+
 ## [drumvoice](https://git.sr.ht/~kdsch/drumvoice)
 
 <div><a href="https://git.sr.ht/~kdsch/drumvoice"><img width="90%"class="mx-auto d-block" src="img/drumvoice.png"></a> </div>
