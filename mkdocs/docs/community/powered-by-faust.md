@@ -2,6 +2,12 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [drumvoice](https://git.sr.ht/~kdsch/drumvoice)
+
+<div><a href="https://git.sr.ht/~kdsch/drumvoice"><img width="90%"class="mx-auto d-block" src="img/drumvoice.png"></a> </div>
+
+Drumvoice is a percussion instrument LV2 plugin. Drumvoice can also make lots of other percussion sounds, like kick drums, toms, single hand claps, and all kinds of smaps and blinks. The DSP is [written in Faust](https://git.sr.ht/~kdsch/drumvoice/tree/master/item/drumvoice.dsp).
+
 ## [Verber](https://github.com/itsnestee/Verber)
 
 <div><a href="https://github.com/itsnestee/Verber"><img width="35%"class="mx-auto d-block" src="img/verber.png"></a> </div>
