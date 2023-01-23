@@ -25,7 +25,7 @@ Verber is a simple audio plugin tool with a Sweet, Lushy reverb processor. It is
 
 <div><a href="https://github.com/Sinuslabs/Reach"><img  width="50%" class="mx-auto d-block" src="img/reach-overview.jpg"></a>  </div>
 
-Extraterrestrial Reverb for Electronic Music.  REACH is modern creative Reverb that is made for synthetic sound sources. There are four effects included to transform the Signal. It features modular routing, pre and post filters and over 40 Presets. Part of the DSP code is [writtten in Faust](https://github.com/Sinuslabs/Reach/tree/main/DspNetworks/CodeLibrary/faust).
+Extraterrestrial Reverb for Electronic Music.  REACH is modern creative Reverb that is made for synthetic sound sources. There are four effects included to transform the Signal. It features modular routing, pre and post filters and over 40 Presets. Part of the DSP code is [written in Faust](https://github.com/Sinuslabs/Reach/tree/main/DspNetworks/CodeLibrary/faust).
 
 
 ## [Stray_virtual-synth](https://github.com/JDCAudio/Stray_virtual-synth)
