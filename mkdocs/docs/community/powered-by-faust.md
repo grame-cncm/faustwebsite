@@ -283,6 +283,14 @@ This demodulator uses a squaring loop to regenerate the AM carrier from the side
 
 The eurorack-blocks project allows to develop your own custom Eurorack module for either prototyping or fun in the comfort of your day-to-day IDE with the C++ or [Faust language](https://github.com/ohmtech-rdi/eurorack-blocks/tree/main/samples/faust), or using the Cycling '74 Max environment, testing and debugging in a virtual Eurorack environment, and when ready, to auto-magically generate all the needed files to manufacture the eurorack module for you to use in a real Eurorack modular system.
 
+## [AmStramGrame](https://www.amstramgrame.fr/en/)
+
+<div><a href="https://www.amstramgrame.fr/en"><img  width="70%" class="mx-auto d-block" src="img/amstramgrame.png"></a>  </div>
+
+An arts and sciences educational project (STEAM), bringing together services and resources for the educational community. It aims at making abstract scientific concepts more tangible and concrete through musical creation and computer programming. 
+
+The [Gramophone](https://www.amstramgrame.fr/gramophone/about/) is an audio device/musical instrument specifically designed for the AmStramGrame project. Its various sensors and controllers (e.g., accelerometer, gyroscope, light sensor, etc.) make it react to the user's gestures. Its rechargeable battery offering approximately five hours of autonomy and its powerful speaker make it independent from any computer, bringing it closer to traditional acoustic musical instruments. DSP programs are [coded in Faust](https://www.amstramgrame.fr/gramophone/programs/). 
+
 ## [GameLAN](https://github.com/grame-cncm/GameLAN)
 
 <div><a href="https://github.com/grame-cncm/GameLAN"><img  width="25%" class="mx-auto d-block" src="img/Gamelan.png"></a>  </div>
