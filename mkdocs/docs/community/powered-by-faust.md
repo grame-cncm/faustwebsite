@@ -2,6 +2,13 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Crossroad2Effects](https://github.com/SamKouteili/Crossroad2Effects)
+
+<div><a href="https://github.com/SamKouteili/Crossroad2Effects"><img width="70%"class="mx-auto d-block" src="img/Crossroad2Effects.png"></a> </div>
+
+Crossroad2Effects, the functional successor to [@jatinchowdhury's](https://github.com/jatinchowdhury18) [CrossroadsEffects](https://github.com/jatinchowdhury18/CrossroadsEffects), is a genetic algorithm infrastructure for filter exploration. Provided with dry and wet sound file, Crossroad2Effect determines the filter that tampered the dry file and presents it as a Faust program. This allows users to have granular access to analog or VST filters through a programming interface. This project constructs its genetic algorithm search on top of pedalboard, Spotify's new plugin API.
+
+
 ## [flatten](https://git.sr.ht/~kdsch/flatten/tree)
 
 <div><a href="https://git.sr.ht/~kdsch/flatten/tree"><img width="30%"class="mx-auto d-block" src="img/flatten.png"></a> </div>
