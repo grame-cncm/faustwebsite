@@ -1,6 +1,6 @@
 site_name: Faust Programming Language
 site_description: Faust programming language website.
-copyright: Copyright &copy; 2021-2022 <a href="http://www.grame.fr">Grame-CNCM</a>
+copyright: Copyright &copy; 2021-2023 <a href="http://www.grame.fr">Grame-CNCM</a>
 faust_banner: true
 nav:
     - Home: index.md
