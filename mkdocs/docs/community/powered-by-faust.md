@@ -2,6 +2,11 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [pd-remote](https://github.com/agraef/pd-remote)
+
+This is a simplified and unified version of the Pd remote control helpers that I've been distributing with various Pd externals such as [pd-faust](https://github.com/agraef/pure-lang/tree/master/pd-faust) and [pd-lua](https://github.com/agraef/pd-lua) over the years. The present implementation will work with any of these and replaces the more specialized versions. It takes the form of a Pd abstraction pd-remote.pd and an accompanying pd-remote.el elisp file for Emacs.
+
+
 ## [Crossroad2Effects](https://github.com/SamKouteili/Crossroad2Effects)
 
 <div><a href="https://github.com/SamKouteili/Crossroad2Effects"><img width="70%"class="mx-auto d-block" src="img/Crossroad2Effects.png"></a> </div>
