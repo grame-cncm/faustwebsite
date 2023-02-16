@@ -2,6 +2,12 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [teensy-wfs](https://github.com/hatchjaw/teensy-wfs)
+
+<div><a href="https://github.com/hatchjaw/teensy-wfs"><img width="45%"class="mx-auto d-block" src="img/wfs-controller.png"></a> </div>
+
+Distributed Wave Field Synthesis (WFS) implementation for networked Teensies. There is a WFS Controller JUCE app in wfs-controller. This uses JACK's C API to set up ports and connect to any Teensy JackTrip clients. It notifies the clients of their positions in the WFS array, plus the positions of virtual sound sources, via OSC over UDP multicast. The WFS algorithm is [written in Faust](https://github.com/hatchjaw/teensy-wfs/tree/main/src).
+
 ## [pd-remote](https://github.com/agraef/pd-remote)
 
 This is a simplified and unified version of the Pd remote control helpers that I've been distributing with various Pd externals such as [pd-faust](https://github.com/agraef/pure-lang/tree/master/pd-faust) and [pd-lua](https://github.com/agraef/pd-lua) over the years. The present implementation will work with any of these and replaces the more specialized versions. It takes the form of a Pd abstraction pd-remote.pd and an accompanying pd-remote.el elisp file for Emacs.
