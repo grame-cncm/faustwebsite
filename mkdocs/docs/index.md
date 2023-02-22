@@ -45,6 +45,15 @@ Check out [**the Faust Kadenze course**](https://www.kadenze.com/courses/real-ti
 
 ## Faust News
 
+### **>>** February 22, 2023: GRAME has been selected as a Google Summer of Code 2023 mentor organization
+
+<center>
+<div><a href="https://summerofcode.withgoogle.com"><img  width="50%" class="mx-auto d-block" src="img/gsoc-logo.png"></a>  </div>
+</center>
+
+[Google Summer of Code](https://summerofcode.withgoogle.com) is a global, online program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ week programming project under the guidance of mentors. For the second consecutive year, GRAME has been [selected as a  mentor organization](https://summerofcode.withgoogle.com/programs/2022/organizations/grame) for the Faust project. 
+
+
 ### **>>** December 03, 2022: Programmable Audio Workshop (PAW-22) 
 
 The 5th edition of Programmable Audio Workshop (PAW) will be held on December 3rd at the CITI laboratory of INSA Lyon on the La Doua campus. It will be organized this year by the [EMERAUDE](https://team.inria.fr/emeraude/) (Embedded Programmable Audio Systems) team created in 2022 and associating INSA-Lyon, INRIA and GRAME. With 7 conferences in the morning and 4 workshops in the afternoon, PAW addresses this year the theme of networked embedded audio systems, with a particular focus on spatialized sound and FPGAs (Field-Programmable Gate Arrays).
