@@ -51,7 +51,7 @@ Check out [**the Faust Kadenze course**](https://www.kadenze.com/courses/real-ti
 <div><a href="https://summerofcode.withgoogle.com"><img  width="50%" class="mx-auto d-block" src="img/gsoc-logo.png"></a>  </div>
 </center>
 
-[Google Summer of Code](https://summerofcode.withgoogle.com) is a global, online program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ week programming project under the guidance of mentors. For the second consecutive year, GRAME has been [selected as a  mentor organization](https://summerofcode.withgoogle.com/programs/2022/organizations/grame) for the Faust project. 
+[Google Summer of Code](https://summerofcode.withgoogle.com) is a global, online program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ week programming project under the guidance of mentors. For the second consecutive year, GRAME has been [selected as a  mentor organization](https://summerofcode.withgoogle.com/programs/2023/organizations/grame) for the Faust project. 
 
 
 ### **>>** December 03, 2022: Programmable Audio Workshop (PAW-22) 
