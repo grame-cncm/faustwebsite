@@ -67,8 +67,7 @@ Full program, details of the talks and registration on the [PAW website](https:/
 <div><a href="https://summerofcode.withgoogle.com"><img  width="50%" class="mx-auto d-block" src="img/gsoc-logo.png"></a>  </div>
 </center>
 
-**Faust Integration in HISE** aimed at integrating support for the Faust audio programming language into [HISE](http://www.hise.audio), an extensive framework for the creation of sample-based virtual musical instruments. The project has been [successfully finished](https://resonant-bytes.de/blog/gsoc-final-submission/) on by [Roman Sommer](https://resonant-bytes.de/about/) with the help of [Christoph Hart](https://github.com/christophhart) as mentor. 
-
+**Faust Integration in HISE** aimed at integrating support for the Faust audio programming language into HISE, an extensive framework for the creation of sample-based virtual musical instruments. The project has been [completed](https://resonant-bytes.de/blog/gsoc-final-submission/) by [Roman Sommer](https://resonant-bytes.de/about/) with the help of [Christoph Hart](https://github.com/christophhart) as mentor, and announced [here](https://forum.hise.audio/topic/6505/faust-is-here/95).
 
 ### **>>** June 5-12, 2022: Sound Music Computing (SMC-22) at Saint-Etienne (France)
 
