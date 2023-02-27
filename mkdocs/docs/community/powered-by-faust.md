@@ -2,6 +2,14 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Blippoo for Wingie](https://github.com/mengqimusic/bfw)
+
+<div><a href="https://github.com/mengqimusic/bfw"><img width="50%"class="mx-auto d-block" src="img/Blippoo-for-wingie.jpeg"></a> </div>
+
+Blippoo for Wingie is an alternative firmware for Wingie2. The new firmware is inspired by Blippoo Box, a genius instrument created by Rob Hordijk (1958-2022), who contributed a lot to synthesizer design. May his spirit lives on in his instrument designs, thoughts, and influences.
+
+The new firmware could turn your Wingie2 into a self-contained instrument capable of producing a variety of sounds and patterns. As a great companion, it will help you in your music-making practice especially when you want to applicate controlled chaos in your music. The DSP is [written in Faust](https://github.com/mengqimusic/bfw/blob/main/Blippoo.dsp).
+
 ## [6171_reverb](https://github.com/unicornsasfuel/6171_reverb)
 
 <div><a href="https://github.com/unicornsasfuel/6171_reverb"><img width="25%"class="mx-auto d-block" src="img/6171_reverb.png"></a> </div>
