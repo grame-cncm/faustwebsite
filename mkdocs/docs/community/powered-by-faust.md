@@ -2,6 +2,10 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [faustilogue](https://github.com/nick8325/faustilogue)
+
+Convert Faust DSP files to KORG logue custom oscillators, using the [logue SDK]( https://www.korg.com/fr/products/synthesizers/minilogue_xd/sdk.php). 
+
 ## [Blippoo for Wingie](https://github.com/mengqimusic/bfw)
 
 <div><a href="https://github.com/mengqimusic/bfw"><img width="50%" class="mx-auto d-block" src="img/Blippoo-for-wingie.jpeg"></a> </div>
