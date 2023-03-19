@@ -2,6 +2,12 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Satuverb](https://github.com/unicornsasfuel/satuverb)
+
+<div><a href="https://github.com/unicornsasfuel/satuverb"><img width="50%" class="mx-auto d-block" src="img/satuverb.png"></a> </div>
+
+Satuverb is a flexible reverb that has many creative and natural sounding uses, produced by request for FBPM. It has a saturator and EQ controls inside the reverberator, which apply every time the signal is fed back. This causes the effects to grow more extreme as the reverb tail trails off. Satuverb's reverberator is based on Jon Dattorro's 1997 design and [written in Faust](https://github.com/unicornsasfuel/satuverb/blob/main/satuverb.dsp). 
+
 ## [faustilogue](https://github.com/nick8325/faustilogue)
 
 Convert Faust DSP files to KORG logue custom oscillators, using the [logue SDK]( https://www.korg.com/fr/products/synthesizers/minilogue_xd/sdk.php). 
