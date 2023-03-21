@@ -2,6 +2,12 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [GHG (Gruppenhorchgerät)](https://github.com/mygamingaccount/ghg-hydrophone-demo)
+
+<div><a href="https://github.com/mygamingaccount/ghg-hydrophone-demo"><img width="50%" class="mx-auto d-block" src="img/GHG.png"></a> </div>
+
+The project is a demonstration of a technique called delay-sum beamforming  with the aim to replicate the sound heard by operators of passive sonar devices used in the second world war. Listen to the video [here](https://peertube.linuxrocks.online/w/bhwAfSG6F2baCNsUPjcqVq). The simulation code is written in Faust.
+
 ## [Satuverb](https://github.com/unicornsasfuel/satuverb)
 
 <div><a href="https://github.com/unicornsasfuel/satuverb"><img width="50%" class="mx-auto d-block" src="img/satuverb.png"></a> </div>
