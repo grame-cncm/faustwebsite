@@ -2,6 +2,12 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [souffle](https://github.com/CesarChaussinand/souffle)
+
+<div><a href="https://github.com/CesarChaussinand/souffle"><img width="45%" class="mx-auto d-block" src="img/soufle.png"></a> </div>
+
+An electro track [made with Faust](https://github.com/CesarChaussinand/souffle/blob/main/souffle.dsp). You can listen to a recording [here](https://soundcloud.com/cesar3000/souffle).
+
 ## [GHG (Gruppenhorchgerät)](https://github.com/mygamingaccount/ghg-hydrophone-demo)
 
 <div><a href="https://github.com/mygamingaccount/ghg-hydrophone-demo"><img width="50%" class="mx-auto d-block" src="img/GHG.png"></a> </div>
