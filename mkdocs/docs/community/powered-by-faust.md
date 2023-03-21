@@ -345,7 +345,9 @@ The eurorack-blocks project allows to develop your own custom Eurorack module fo
 
 An arts and sciences educational project (STEAM), bringing together services and resources for the educational community. It aims at making abstract scientific concepts more tangible and concrete through musical creation and computer programming.
 
-The [Gramophone](https://www.amstramgrame.fr/gramophone/about/) is an audio device/musical instrument specifically designed for the AmStramGrame project. Its various sensors and controllers (e.g., accelerometer, gyroscope, light sensor, etc.) make it react to the user's gestures. Its rechargeable battery offering approximately five hours of autonomy and its powerful speaker make it independent from any computer, bringing it closer to traditional acoustic musical instruments. DSP programs are [coded in Faust](https://www.amstramgrame.fr/gramophone/programs/).
+The [Gramophone](https://www.amstramgrame.fr/gramophone/about/) is an audio device/musical instrument specifically designed for the AmStramGrame project. Its various sensors and controllers (e.g., accelerometer, gyroscope, light sensor, etc.) make it react to the user's gestures. Its rechargeable battery offering approximately five hours of autonomy and its powerful speaker make it independent from any computer, bringing it closer to traditional acoustic musical instruments. 
+
+DSP programs are [coded in Faust](https://www.amstramgrame.fr/gramophone/programs/). Additional  examples can be found in [GramoCollection](https://github.com/CesarChaussinand/GramoCollection).
 
 ## [GameLAN](https://github.com/grame-cncm/GameLAN)
 
