@@ -4,7 +4,7 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 ## [souffle](https://github.com/CesarChaussinand/souffle)
 
-<div><a href="https://github.com/CesarChaussinand/souffle"><img width="45%" class="mx-auto d-block" src="img/soufle.png"></a> </div>
+<div><a href="https://github.com/CesarChaussinand/souffle"><img width="45%" class="mx-auto d-block" src="img/souffle.png"></a> </div>
 
 An electro track [made with Faust](https://github.com/CesarChaussinand/souffle/blob/main/souffle.dsp). You can listen to a recording [here](https://soundcloud.com/cesar3000/souffle).
 
