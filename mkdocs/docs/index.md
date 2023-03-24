@@ -45,6 +45,16 @@ Check out [**the Faust Kadenze course**](https://www.kadenze.com/courses/real-ti
 
 ## Faust News
 
+### **>>** March 24, 2023: Zen Flute 1° price at Guthman Musical Instrument 2023 Competition, with Faust inside !
+
+<center>
+<div><a href="https://museelectronicinstruments.com/?page_id=210"><img  width="50%" class="mx-auto d-block" src="img/zen-flute.jpg"></a>  </div>
+</center>
+
+The [Guthman Musical Instrument Competition](https://guthman.gatech.edu) is one of the only competitions of its kind - an event dedicated to identifying the newest and greatest ideas in music. Every year, we invite musical inventors from around the world to share their creations and ideas about the future of music.
+
+This year first price is Keith Bexter with the [Zen Flute](https://www.youtube.com/watch?v=f99xQcFA5ZY), with sound is  produced by a physical model of flute [written in Faust](https://museelectronicinstruments.com/?page_id=210), and running on a [Teensy audio board](https://www.pjrc.com/teensy/td_libs_Audio.html).
+
 ### **>>** February 22, 2023: GRAME has been selected as a Google Summer of Code 2023 mentor organization
 
 <center>
