@@ -4,7 +4,7 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 ## [Zen Flute](https://museelectronicinstruments.com/?page_id=210)
 
-<div><a href="https://museelectronicinstruments.com/?page_id=210"><img width="45%" class="mx-auto d-block" src="img/zen-flute.png"></a> </div>
+<div><a href="https://museelectronicinstruments.com/?page_id=210"><img width="45%" class="mx-auto d-block" src="img/zen-flute.jpg"></a> </div>
 
 The [Guthman Musical Instrument Competition](https://guthman.gatech.edu) is one of the only competitions of its kind - an event dedicated to identifying the newest and greatest ideas in music. Every year, we invite musical inventors from around the world to share their creations and ideas about the future of music.
 

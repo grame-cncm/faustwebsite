@@ -48,7 +48,7 @@ Check out [**the Faust Kadenze course**](https://www.kadenze.com/courses/real-ti
 ### **>>** March 24, 2023: Zen Flute 1° price at Guthman Musical Instrument 2023 Competition, with Faust inside !
 
 <center>
-<div><a href="https://museelectronicinstruments.com/?page_id=210"><img  width="30%" class="mx-auto d-block" src="img/zen-flute.png"></a>  </div>
+<div><a href="https://museelectronicinstruments.com/?page_id=210"><img  width="30%" class="mx-auto d-block" src="img/zen-flute.jpg"></a>  </div>
 </center>
 
 The [Guthman Musical Instrument Competition](https://guthman.gatech.edu) is one of the only competitions of its kind - an event dedicated to identifying the newest and greatest ideas in music. Every year, we invite musical inventors from around the world to share their creations and ideas about the future of music.
