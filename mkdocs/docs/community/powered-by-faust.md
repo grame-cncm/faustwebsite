@@ -838,9 +838,9 @@ Ossia score is a sequencer for audio-visual artists, designed to enable the crea
 
 ## [FASELUNARE Microcosmos](http://www.faselunare.com)
 
-<a href="http://www.faselunare.com"><img width="55%" class="mx-auto d-block" src="img/microcosmos.png"></a>
+<a href="http://www.faselunare.com/products/instruments/microcosmos"><img width="55%" class="mx-auto d-block" src="img/microcosmos.png"></a>
 
-Microcosmos is a small open-source electronic board, developed by ​Faselunare (Italy), aimed at prototyping electronic musical instruments and learning electronics, microcontroller programming and audio DSP, and programmable with Faust. A demo video of the project can be [seen here](https://www.youtube.com/watch?v=bsdKUMoJwOM).
+Microcosmos is a small open-source electronic board, developed by ​Faselunare (Italy), aimed at prototyping electronic musical instruments and learning electronics, microcontroller programming and audio DSP, and programmable with Faust. A demo video of the project can be [seen here](https://www.youtube.com/watch?v=bsdKUMoJwOM). The project has been [presented at ADC21](https://www.youtube.com/watch?v=lvg6iM8aBaY).
 
 ## [Audio Anywhere](https://muses-dmi.github.io/audio_anywhere/overview/)
 
