@@ -2,6 +2,15 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Zen Flute](https://museelectronicinstruments.com/?page_id=210)
+
+<div><a href="https://museelectronicinstruments.com/?page_id=210"><img width="45%" class="mx-auto d-block" src="img/zen-flute.png"></a> </div>
+
+The [Guthman Musical Instrument Competition](https://guthman.gatech.edu) is one of the only competitions of its kind - an event dedicated to identifying the newest and greatest ideas in music. Every year, we invite musical inventors from around the world to share their creations and ideas about the future of music.
+
+This year first price is Keith Bexter with the [Zen Flute](https://www.youtube.com/watch?v=f99xQcFA5ZY), which sound is produced by a physical model of flute [written in Faust](https://museelectronicinstruments.com/?page_id=210), and running on a [Teensy audio board](https://www.pjrc.com/teensy/td_libs_Audio.html).
+
+
 ## [souffle](https://github.com/CesarChaussinand/souffle)
 
 <div><a href="https://github.com/CesarChaussinand/souffle"><img width="45%" class="mx-auto d-block" src="img/souffle.png"></a> </div>
