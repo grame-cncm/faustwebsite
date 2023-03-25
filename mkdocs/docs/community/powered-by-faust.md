@@ -2,6 +2,12 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+
+## [fildesoi1_2](https://github.com/alainbonardi/fildesoi1_2)
+
+Software (including [Faust code](https://github.com/alainbonardi/fildesoi1_2/tree/main/faustCodes), Max and PureData patches) to perform Fil de Soi 1 and Fil de Soi 2, mixed music pieces by [Alain Bonardi](http://alainbonardi.net) for acoustic guitar and electronics.
+
+
 ## [Zen Flute](https://museelectronicinstruments.com/?page_id=210)
 
 <div><a href="https://museelectronicinstruments.com/?page_id=210"><img width="45%" class="mx-auto d-block" src="img/zen-flute.jpg"></a> </div>
