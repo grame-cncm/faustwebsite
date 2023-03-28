@@ -13,7 +13,7 @@ If you'd like to follow the development of Faust and of its associated tools and
 
 ## Faust on discord 
 
-* Connnect to the [Faust discord](https://discord.gg/xSjPg4uSAc) server
+* Connnect to the [Faust discord](https://discord.gg/vzh7CggBtj) server
 
 * The [Audio Programmer community](https://theaudioprogrammer.com/community) discord community has a #faust channel.
 
