@@ -2,6 +2,13 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [KandiskyScore](http://blanchemain.info/Documents/Programmation/index.php?page=kandiskyScore)
+
+<div><a href="http://blanchemain.info/Documents/Programmation/index.php?page=kandiskyScore"><img width="50%" class="mx-auto d-block" src="img/kandiskyscore.png"></a> </div>
+
+KandiskyScore is a graphical editor for the analysis and creation of electroacoustic/acousmatic music. It is an html/javascript application. It works perfectly with Firefox, Chrome and Opera and therefore on all Windows, OSX, Linux and other PCs.
+
+It uses the WebAudio API for sound generation and the [Faust language](http://blanchemain.info/Documents/Programmation/index.php?page=kandiskyScore#greffons) of the GRAME for plugins. It also allows you to export a graphic score in SVG format that you can eventually modify with a vector graphics software like Inkscape or LibreOffice-draw.
 
 ## [fildesoi1_2](https://github.com/alainbonardi/fildesoi1_2)
 
