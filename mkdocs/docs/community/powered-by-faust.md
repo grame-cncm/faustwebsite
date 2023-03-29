@@ -2,6 +2,20 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Sardine](https://sardine.raphaelforment.fr/)
+
+<div><a href="https://sardine.raphaelforment.fr/"><img width="40%" class="mx-auto d-block" src="img/sardine.png"></a> </div>
+
+Sardine is a free/open-source software for Python 3.10+. It turns Python into a musical instrument. You can play it alone or with your friends. With Sardine you can:
+
+- Play synthesizers and audio samples using SuperCollider.
+- Control synthesizers through MIDI/OSC messages.
+- Interconnect audio/video softwares and/or sound engines.
+- Play collaboratively with your friends.
+- Extend your musical environment using any Python package.
+
+Faust written DSP [can be used](https://sardine.raphaelforment.fr/configuration/midi_instrument.html?highlight=faust#mapping-example-faust-synthesizer) in Sardine.
+
 ## [KandiskyScore](http://blanchemain.info/Documents/Programmation/index.php?page=kandiskyScore)
 
 <div><a href="http://blanchemain.info/Documents/Programmation/index.php?page=kandiskyScore"><img width="50%" class="mx-auto d-block" src="img/kandiskyscore.png"></a> </div>
