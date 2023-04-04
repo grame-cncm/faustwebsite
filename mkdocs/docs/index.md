@@ -43,7 +43,7 @@ Check out [the Faust Kadenze course](https://www.kadenze.com/courses/real-time-a
 
 ### If You're looking For Papers on Faust
 
-Check out [papers and reports](https://hal.science/search/index/?q=GRAME+FAUST&rows=30&page=3) on Faust on HAL.
+Check out Faust [papers and reports](https://hal.science/search/index/?q=GRAME+FAUST&rows=30&page=3) on [HAL](https://hal.science/).
 
 ---
 
