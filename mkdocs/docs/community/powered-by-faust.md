@@ -2,6 +2,10 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Ambisonics in KMH studios and Lilla salen](https://github.com/friskgit/kmh_ls)
+
+The general idea behind using ambisonics for diffusing sounds in a space is to, in the first stage, encode an audio signal to a representation of a sound field - a B-format signal. This B-format signal is independent of whatever speaker array the signal will later be diffused on. In the second stage the B-format signal is decoded to the layout of a particular speaker array. In between these two stages a number of transformations may be applied, but the sound source specification may conveniently be specified in the encoder. The decoders are written in Faust.
+
 ## [Sardine](https://sardine.raphaelforment.fr/)
 
 <div><a href="https://sardine.raphaelforment.fr/"><img width="40%" class="mx-auto d-block" src="img/sardine.png"></a> </div>
