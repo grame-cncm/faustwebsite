@@ -2,6 +2,10 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Synthesizer-synthesizer](https://gitlab.com/dhuck/synthesis-synthesis)
+
+This is a dual-course project for CS378 NLP and CS393P. The goal is to use language model guided program synthesis to synthesize Faust DSP code to ... automatically program synthesizers. Not guaranteed to work. In the slightest.
+
 ## [Ambisonics in KMH studios and Lilla salen](https://github.com/friskgit/kmh_ls)
 
 The general idea behind using ambisonics for diffusing sounds in a space is to, in the first stage, encode an audio signal to a representation of a sound field - a B-format signal. This B-format signal is independent of whatever speaker array the signal will later be diffused on. In the second stage the B-format signal is decoded to the layout of a particular speaker array. In between these two stages a number of transformations may be applied, but the sound source specification may conveniently be specified in the encoder. The decoders are written in Faust.
