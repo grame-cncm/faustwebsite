@@ -32,10 +32,13 @@ KandiskyScore is a graphical editor for the analysis and creation of electroacou
 
 It uses the WebAudio API for sound generation and the [Faust language](http://blanchemain.info/Documents/Programmation/index.php?page=kandiskyScore#greffons) of the GRAME for plugins. It also allows you to export a graphic score in SVG format that you can eventually modify with a vector graphics software like Inkscape or LibreOffice-draw.
 
-## [fildesoi1_2](https://github.com/alainbonardi/fildesoi1_2)
+## [fildesoi1_2_3](https://github.com/alainbonardi/fildesoi1_2)
 
 Software (including [Faust code](https://github.com/alainbonardi/fildesoi1_2/tree/main/faustCodes), Max and PureData patches) to perform Fil de Soi 1 and Fil de Soi 2, mixed music pieces by [Alain Bonardi](http://alainbonardi.net) for acoustic guitar and electronics.
 
+## [enecho](https://github.com/alainbonardi/enecho)
+
+Faust code for En Echo piece by Manoury for soprano and live electronics.
 
 ## [Zen Flute](https://museelectronicinstruments.com/?page_id=210)
 
