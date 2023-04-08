@@ -2,6 +2,10 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [arco4 - sound synthesis engine and framework](https://github.com/rbdannenberg/arco)
+
+[Roger Dannenberg](https://www.cs.cmu.edu/~rbd/) arco/serpent framework where Arco unit generators can be written in Faust.
+
 ## [Synthesizer-synthesizer](https://gitlab.com/dhuck/synthesis-synthesis)
 
 This is a dual-course project for CS378 NLP and CS393P. The goal is to use language model guided program synthesis to synthesize Faust DSP code to ... automatically program synthesizers. Not guaranteed to work. In the slightest.
