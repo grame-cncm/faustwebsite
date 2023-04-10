@@ -4,7 +4,7 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 ## [arco4 - sound synthesis engine and framework](https://github.com/rbdannenberg/arco)
 
-[Roger Dannenberg](https://www.cs.cmu.edu/~rbd/) arco/serpent framework where Arco unit generators can be written in Faust.
+Arco is a sound synthesis engine that offers dynamic patching of of unit generators. It is designed to operate as a small embedded server, running either in its own process or within an application. In the spirit of "smaller is better," Arco DSP is mainly [delegated to FAUST](https://github.com/rbdannenberg/arco/blob/main/doc/building.md#defining-a-new-ugen-using-faust), leveraging a wide range of existing algorithms. Arco control is delegated to external languages connecting through O2, which supports running Arco within the same application, in a separate process or even on a remote networked host. Arco should be a nice alternative to libpd as an embedded sound engine. The author is mainly using Arco in tandem with Serpent, a real-time Python-like scripting language, but other language bindings are possible.
 
 ## [Synthesizer-synthesizer](https://gitlab.com/dhuck/synthesis-synthesis)
 
