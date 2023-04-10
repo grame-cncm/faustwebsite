@@ -227,7 +227,7 @@ faust2smartphone is a tool to generate interactive musical mobile application em
 
 ## [DPF-Fadeli](https://github.com/DISTRHO/Fadeli)
 
-An experiment with Faust Demo Library content as DPF plugins. Basically glueing a few different projects together, to compile Faust DSP programs in several plugins format: LV2, VST2, VSL3, [clap](https://www.bitwig.com/stories/clap-the-new-audio-plug-in-standard-201/):
+An experiment with Faust Demo Library content as DPF plugins. Basically glueing a few different projects together, to compile Faust DSP programs in several plugins format: LADSPA, LV2, VST2, VST3, [CLAP](https://www.bitwig.com/stories/clap-the-new-audio-plug-in-standard-201/):
 
 1. [DPF](https://github.com/DISTRHO/DPF)
 2. [faust](https://faust.grame.fr/)
