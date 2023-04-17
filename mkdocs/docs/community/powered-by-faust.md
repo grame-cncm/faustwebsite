@@ -2,6 +2,15 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+
+## [lang.faust~ and ui.faust~](https://github.com/uliss/pure-data)
+
+<div><a href="https://github.com/uliss/pure-data"><img width="40%" class="mx-auto d-block" src="img/lang.faust~.jpg"></a> </div>
+
+CEAMMC PureData distribution 2023.02. General purpose Pd distribution and library used for work and education purposes in Centre of electroacoustic music of Moscow Conservatory ([CEAMMC](http://ceammc.com/?lang=en)) and ZIL-electro studio. This repository is an assembly of Puredata that includes the CEAMMC library.
+
+It includes the [lang.faust~](https://ceammc.github.io/pd-help/help-en/lang.faust~.html) and [ui.faust~](https://ceammc.github.io/pd-help/help-en/ui.faust~.html) externals and a lot of [Faust DSP](https://github.com/uliss/pure-data/tree/ceammc/ceammc/faust).
+
 ## [arco4 - sound synthesis engine and framework](https://github.com/rbdannenberg/arco)
 
 Arco is a sound synthesis engine that offers dynamic patching of of unit generators. It is designed to operate as a small embedded server, running either in its own process or within an application. In the spirit of "smaller is better," Arco DSP is mainly [delegated to FAUST](https://github.com/rbdannenberg/arco/blob/main/doc/building.md#defining-a-new-ugen-using-faust), leveraging a wide range of existing algorithms. Arco control is delegated to external languages connecting through O2, which supports running Arco within the same application, in a separate process or even on a remote networked host. Arco should be a nice alternative to libpd as an embedded sound engine. The author is mainly using Arco in tandem with Serpent, a real-time Python-like scripting language, but other language bindings are possible.
