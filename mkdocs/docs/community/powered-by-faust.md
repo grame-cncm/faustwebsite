@@ -3,6 +3,17 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
 
+## [Sentinelle](https://framagit.org/jeromeabel/sentinelle)
+
+[Sentinelle](https://jeromeabel.net/workshop/sentinelle/) is a sound and robotic art installation made by [Jérôme Abel](https://jeromeabel.net/). A robot-probe is placed in a dark place, a cellar. It scans its surroundings with two lasers. The reliefs of the old walls, their imperfections, mold, appear thanks to the perfectly straight lines of the lasers. Its movements are synchronized with a sound program. From these very simple visual and sound choreographies are born an imaginary on its functioning and the origin of its presence. The spectator observes in a mirror a robot which observes and testifies. Does it communicate with other systems? Does it send information? Its energy is precious, like a heartbeat or a breath, it works in a segmented way with periods of silence. Likewise, his movements are slow and relentless.
+
+Faust objects from [https://github.com/grame-cncm/faust/tree/master-dev/examples](https://github.com/grame-cncm/faust/tree/master-dev/examples) included with [pd-faustgen](https://github.com/agraef/pd-faustgen):
+
+- examples/gameaudio/bubble
+- examples/delayEcho/echo
+- examples/gameaudio/rain
+- examples/generator/sawtoothLab
+
 ## [lang.faust~ and ui.faust~](https://github.com/uliss/pure-data)
 
 <div><a href="https://github.com/uliss/pure-data"><img width="40%" class="mx-auto d-block" src="img/lang.faust~.jpg"></a> </div>
