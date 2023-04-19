@@ -3,6 +3,10 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
 
+## [ForceHost](https://gitlab.com/ForceHost)
+
+ForceHost: an open-source toolchain for generating firmware embedding the authoring and rendering of audio and force-feedback haptics, by Christian Frisson, Mathias Kirkegaard, Thomas Pietrzak, and Marcelo M. Wanderley presented at [Nime 2022](https://nime.pubpub.org/pub/jtdpakvp/release/1). The Faust compiler has been modified to support haptics. 
+
 ## [Sentinelle](https://framagit.org/jeromeabel/sentinelle)
 
 [Sentinelle](https://jeromeabel.net/workshop/sentinelle/) is a sound and robotic art installation made by [Jérôme Abel](https://jeromeabel.net/). A robot-probe is placed in a dark place, a cellar. It scans its surroundings with two lasers. The reliefs of the old walls, their imperfections, mold, appear thanks to the perfectly straight lines of the lasers. Its movements are synchronized with a sound program. From these very simple visual and sound choreographies are born an imaginary on its functioning and the origin of its presence. The spectator observes in a mirror a robot which observes and testifies. Does it communicate with other systems? Does it send information? Its energy is precious, like a heartbeat or a breath, it works in a segmented way with periods of silence. Likewise, his movements are slow and relentless.
