@@ -3,6 +3,10 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
 
+## [A Technical Framework for Musical Biofeedback in Stroke Rehabilitation](https://arxiv.org/abs/2012.00323)
+
+We here present work a generalized low-level technical framework aimed to provide musical biofeedback in post-stroke balance and gait rehabilitation, built by an iterative user-centered process. The framework comprises wireless wearable inertial sensors and a software interface developed using inexpensive and open-source tools. The interface enables layered and adjustable music synthesis, real-time control over biofeedback parameters in several training modes, and extensive supplementary functionality. JUCE and FAUST are used  to create a versatile architecture for layered, yet computationally efficient real-time music synthesis. 
+
 ## [ForceHost](https://gitlab.com/ForceHost)
 
 ForceHost: an open-source toolchain for generating firmware embedding the authoring and rendering of audio and force-feedback haptics, by Christian Frisson, Mathias Kirkegaard, Thomas Pietrzak, and Marcelo M. Wanderley presented at [Nime 2022](https://nime.pubpub.org/pub/jtdpakvp/release/1). The Faust compiler has been modified to support haptics. 
