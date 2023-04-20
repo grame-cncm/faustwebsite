@@ -9,7 +9,7 @@ This paper reports on the Audio Anywhere project, a framework for working with a
 
 ## [A Technical Framework for Musical Biofeedback in Stroke Rehabilitation](https://arxiv.org/abs/2012.00323)
 
-We here present work a generalized low-level technical framework aimed to provide musical biofeedback in post-stroke balance and gait rehabilitation, built by an iterative user-centered process. The framework comprises wireless wearable inertial sensors and a software interface developed using inexpensive and open-source tools. The interface enables layered and adjustable music synthesis, real-time control over biofeedback parameters in several training modes, and extensive supplementary functionality. JUCE and FAUST are used  to create a versatile architecture for layered, yet computationally efficient real-time music synthesis. 
+We here present work a generalized low-level technical framework aimed to provide musical biofeedback in post-stroke balance and gait rehabilitation, built by an iterative user-centered process. The framework comprises wireless wearable inertial sensors and a software interface developed using inexpensive and open-source tools. The interface enables layered and adjustable music synthesis, real-time control over biofeedback parameters in several training modes, and extensive supplementary functionality. JUCE and [FAUST](https://github.com/prithviKantanAAU) are used  to create a versatile architecture for layered, yet computationally efficient real-time music synthesis. 
 
 ## [ForceHost](https://gitlab.com/ForceHost)
 
