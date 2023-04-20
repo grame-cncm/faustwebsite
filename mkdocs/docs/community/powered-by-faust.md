@@ -3,6 +3,10 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
 
+## [Bespoke Anywhere](https://nime.pubpub.org/pub/8jaqbl7m/release/1)
+
+This paper reports on the Audio Anywhere project, a framework for working with audio plugins that are compiled once and run anywhere. At the heart of Audio Anywhere is an audio engine whose Digital Signal Processing components are written in Faust and deployed with WebAssembly, by Benedict Gaster and Ryan Challinor, presented at [Nime 2021](https://nime.pubpub.org/nime-2021).
+
 ## [A Technical Framework for Musical Biofeedback in Stroke Rehabilitation](https://arxiv.org/abs/2012.00323)
 
 We here present work a generalized low-level technical framework aimed to provide musical biofeedback in post-stroke balance and gait rehabilitation, built by an iterative user-centered process. The framework comprises wireless wearable inertial sensors and a software interface developed using inexpensive and open-source tools. The interface enables layered and adjustable music synthesis, real-time control over biofeedback parameters in several training modes, and extensive supplementary functionality. JUCE and FAUST are used  to create a versatile architecture for layered, yet computationally efficient real-time music synthesis. 
