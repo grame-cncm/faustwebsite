@@ -2,6 +2,15 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [OneTrick CRYPTID](https://punklabs.com/ot-cryptid)
+
+<div><a href="https://punklabs.com/ot-cryptid"><img width="45%" class="mx-auto d-block" src="img/OneTrick.png"></a> </div>
+
+Whispers of a dreaded drum machine with the cold clanging heart of a DX7 in the fearsome frame of a TR-808 echo in dusty backrooms of backstreet recording studios. A contraption conjured under cover of darkness in the heinous pursuit of chart topping tracks, known only as the DX-808.
+
+It's time to bring the beast out of the shadows! Allow us to present the world's most accurate recreation of an FM drum synth skeptics say never actually existed. Using a DX7 emulator of our own design, we forged each facet of the CRYPTID, reconstructing its wretched inner-workings. From the "Log Drum" Toms to the "Wood Block" Cowbell. Blow that Samba Whistle and hit the Gong! Do you want to believe?
+
+The project is using Rust and the Faust to Rust backend, and the source code [is available](https://punklabs.com/content/projects/ot-cryptid/downloads/OneTrick-CRYPTID-1.0.0-Source.zip). 
 
 ## [Bespoke Anywhere](https://nime.pubpub.org/pub/8jaqbl7m/release/1)
 
