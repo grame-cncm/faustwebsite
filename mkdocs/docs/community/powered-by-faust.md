@@ -2,6 +2,17 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+
+## [mesh2audio](https://github.com/GATech-CSE-6730-Spring-2023-Project/mesh2audio)
+
+<div><a href="https://github.com/GATech-CSE-6730-Spring-2023-Project/mesh2audio"><img width="55%" class="mx-auto d-block" src="img/mesh2audio.png"></a> </div>
+
+Generate axisymmetric 3D models, or import existing 3D models, and transform them into real-time playable physical audio models!
+
+Supports fast DSP generation of physical audio models that sound decently realistic, as well as blazing fast 2D axisymmetric model generation, at the expense of some fidelity. It is an improvement of the [mesh2faust](https://hal.science/hal-03162901) tool.
+
+The generated audio model can be played in real-time by "striking" (clicking) on mesh vertices in the 3D mesh viewer.
+
 ## [OneTrick CRYPTID](https://punklabs.com/ot-cryptid)
 
 <div><a href="https://punklabs.com/ot-cryptid"><img width="45%" class="mx-auto d-block" src="img/OneTrick.png"></a> </div>
