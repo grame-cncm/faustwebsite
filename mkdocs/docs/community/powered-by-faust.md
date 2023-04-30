@@ -3,6 +3,10 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
 
+## [ExternalChugins](https://github.com/celestebetancur/ExternalChugins)
+
+[Chugins](https://chuck.cs.princeton.edu/extend/), short for "ChucK plugins," are plugins for the [ChucK programming language](https://chuck.stanford.edu). ChucK is an audio programming language that allows for real-time synthesis, composition, and performance of music. Chugins extend the functionality of ChucK by providing additional classes, objects, and modules that can be used to create more complex and intricate music and sound designs. ExternalChugins are a set of chugins exported from Faust.
+
 ## [mesh2audio](https://github.com/GATech-CSE-6730-Spring-2023-Project/mesh2audio)
 
 <div><a href="https://github.com/GATech-CSE-6730-Spring-2023-Project/mesh2audio"><img width="55%" class="mx-auto d-block" src="img/mesh2audio.png"></a> </div>
