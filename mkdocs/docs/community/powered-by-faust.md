@@ -4,7 +4,7 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 ## [Joué Music Instruments](https://jouemusic.com)
 
-<div><a href="https://jouemusic.com"><img width="55%" class="mx-auto d-block" src="img/joue.png"></a> </div>
+<div><a href="https://jouemusic.com"><img width="45%" class="mx-auto d-block" src="img/joue.png"></a> </div>
 
 A new way to make music: the Joué Play is a system that combines an expressive multi-instrument, an intuitive app & interactive content, with a range of musical instruments that use touch-sensitive technology to create a unique playing experience. These instruments are designed to be highly expressive, allowing musicians to play with greater nuance and emotion. Part of the audio effects are coded in Faust. 
 
