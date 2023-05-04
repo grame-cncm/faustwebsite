@@ -49,6 +49,22 @@ Check out Faust [papers and reports](https://hal.science/search/index/?q=GRAME+F
 
 ## Faust News
 
+### **>>** May 04, 2023: Two Google Summer of Code projects attributed
+
+<center>
+<div><a href="https://summerofcode.withgoogle.com"><img  width="50%" class="mx-auto d-block" src="img/gsoc-logo.png"></a>  </div>
+</center>
+
+Two projects have finally been attributed to GRAME:
+
+- **Automatic Differentiation in the Faust Compiler** aims at adding Automatic differentiation directly in the compiler,  so that gradient calculation can be carried out natively in Faust, with applications in Machine Learning algorithms.
+The project will be worked on by [Thomas Rushton](https://github.com/hatchjaw).
+
+- **Better Faust on the Web** aims at enhancing Faust’s support for the web platform: transition the Faust web tools to a rewritten TypeScript version, extend the Faust Web IDE, enhance Faust’s online documentation and prototype an experimental platform for sharing Faust code on the web. The project will be worked on by [Ian Clester](https://ijc8.me/).
+
+Welcome to both of you in the Faust community !
+
+
 ### **>>** March 24, 2023: Zen Flute 1° price at Guthman Musical Instrument 2023 Competition, with Faust inside !
 
 <center>
@@ -113,9 +129,9 @@ IFC-22 is organized by [GRAME-CNCM](https://www.grame.fr), [INRIA](https://inria
 
 Two projects have finally been attributed to GRAME:
 
--  **Faust Integration in HISE** aims at integrating support for the Faust audio programming language into [HISE](http://www.hise.audio), an extensive framework for the creation of sample-based virtual musical instruments. The project will be worked on by [Roman Sommer](https://github.com/romsom/).
+- **Faust Integration in HISE** aims at integrating support for the Faust audio programming language into [HISE](http://www.hise.audio), an extensive framework for the creation of sample-based virtual musical instruments. The project will be worked on by [Roman Sommer](https://github.com/romsom/).
 
--  **Integrating Faust Into the Bespoke DAW** aims at extending the modular [Bespoke engine](https://www.bespokesynth.com) with Faust, allowing for both static compilation of modules, and potentially dynamic programming within Bespoke. The project will be worked on by [Drew James](https://protodrew.website/).
+- **Integrating Faust Into the Bespoke DAW** aims at extending the modular [Bespoke engine](https://www.bespokesynth.com) with Faust, allowing for both static compilation of modules, and potentially dynamic programming within Bespoke. The project will be worked on by [Drew James](https://protodrew.website/).
 
 Welcome to both of you in the Faust community !
 
