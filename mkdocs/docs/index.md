@@ -60,7 +60,7 @@ Two projects have finally been attributed to GRAME:
 - **Automatic Differentiation in the Faust Compiler** aims at adding Automatic differentiation directly in the compiler,  so that gradient calculation can be carried out natively in Faust, with applications in Machine Learning algorithms.
 The project will be worked on by [Thomas Rushton](https://github.com/hatchjaw).
 
-- **Better Faust on the Web** aims at enhancing Faust’s support for the web platform: transition the Faust web tools to a rewritten TypeScript version, extend the Faust Web IDE, enhance Faust’s online documentation and prototype an experimental platform for sharing Faust code on the web. The project will be worked on by [Ian Clester](https://ijc8.me/).
+- **Better Faust on the Web** aims at enhancing Faust’s support for the web platform: transition the Faust web tools to a rewritten TypeScript version, extend the Faust Web IDE, enhance Faust’s online documentation, and prototype an experimental platform for sharing Faust code on the web. The project will be worked on by [Ian Clester](https://ijc8.me/).
 
 Welcome to both of you in the Faust community !
 
