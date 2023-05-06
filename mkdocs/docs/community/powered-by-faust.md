@@ -2,6 +2,14 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+
+## [Kuroscillators](https://github.com/nolanlem/Kuroscillators)
+
+<div><a href="https://github.com/nolanlem/Kuroscillators"><img width="40%" class="mx-auto d-block" src="img/kuroscillators.jpg"></a> </div>
+
+Max/MSP objects for audio and rhythmic synthesis using coupled oscillator networks. Coupled Oscillators networks are dynamical systems that describe how ensembles of interacting elements are able to self-organize and synchronize over time. In terms of sensory perception, they have been examined in a wide range of fields including those related to rhythmic entrainment, biomusicology, psychoacoustics, signal processing, and generative music. The DSP is [written in Faust](https://github.com/nolanlem/Kuroscillators/tree/main/Kuroscillators-rhythm/faust-gen-files).
+
+
 ## [Joué Music Instruments](https://jouemusic.com/en)
 
 <div><a href="https://jouemusic.com/en"><img width="45%" class="mx-auto d-block" src="img/joue.png"></a> </div>
