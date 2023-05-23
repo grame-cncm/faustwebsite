@@ -168,6 +168,30 @@
             
             <li class="nav-item" data-level="1"><a href="#events" class="nav-link">Events</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#faust-day-2023" class="nav-link">Faust Day 2023</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#where-is-faust-going-as-a-programming-language-yann-orlarey" class="nav-link">Where is Faust Going as a Programming Language? -- Yann Orlarey</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#overview-of-recent-developments-in-the-faust-general-ecosystem-stephane-letz" class="nav-link">Overview of Recent Developments in the Faust General Ecosystem -- Stéphane Letz</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#faust-and-ai-david-braun" class="nav-link">Faust and AI -- David Braun</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#faust-in-real-time-expressive-virtual-musical-instruments-julius-o-smith" class="nav-link">Faust in Real-Time Expressive Virtual Musical Instruments -- Julius O. Smith</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#real-time-audio-dsp-with-faust-and-fpgas-romain-michon" class="nav-link">Real-Time Audio DSP With Faust and FPGAs -- Romain Michon</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#faust-physical-modeling-workshop" class="nav-link">Faust Physical Modeling Workshop</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="3"><a href="#creating-circuit-bendable-wave-digital-models-of-analog-audio-circuits-in-faust-dirk-roosenburg" class="nav-link">Creating Circuit-Bendable Wave-Digital Models of Analog Audio Circuits in Faust -- Dirk Roosenburg</a>
@@ -204,6 +228,32 @@
                     <div class="col-md-9 main-container" role="main">
 
 <h1 id="events">Events</h1>
+<h2 id="faust-day-2023">Faust Day 2023</h2>
+<p>Faust Day took place at the Center for Computer Research in Music and Acoustics (CCRMA) at Stanford University on May 20th, 2023. It aimed at:</p>
+<ul>
+<li>giving an overview of the most recent developments in the Faust programming language,</li>
+<li>giving an introductory tutorial for those who never used Faust.</li>
+</ul>
+<h3 id="where-is-faust-going-as-a-programming-language-yann-orlarey">Where is Faust Going as a Programming Language? -- Yann Orlarey</h3>
+<p><center></p>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/hVWMn2joEl8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p></center></p>
+<h3 id="overview-of-recent-developments-in-the-faust-general-ecosystem-stephane-letz">Overview of Recent Developments in the Faust General Ecosystem -- Stéphane Letz</h3>
+<p><center></p>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/PqPMEjE86Q8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p></center></p>
+<h3 id="faust-and-ai-david-braun">Faust and AI -- David Braun</h3>
+<p><center></p>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/AnWBSbC8vU8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p></center></p>
+<h3 id="faust-in-real-time-expressive-virtual-musical-instruments-julius-o-smith">Faust in Real-Time Expressive Virtual Musical Instruments -- Julius O. Smith</h3>
+<p><center></p>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/ViXYr4fo4T4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p></center></p>
+<h3 id="real-time-audio-dsp-with-faust-and-fpgas-romain-michon">Real-Time Audio DSP With Faust and FPGAs -- Romain Michon</h3>
+<p><center></p>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/5MNQybLWXSw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p></center></p>
 <h2 id="faust-physical-modeling-workshop">Faust Physical Modeling Workshop</h2>
 <p><center></p>
 <iframe width="800" height="450" src="https://www.youtube.com/embed/xQ8aNgMaR5k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -281,16 +331,13 @@
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             </div>
             <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
+                <p>From here you can search these documents. Enter your search terms below.</p>
                 <form>
                     <div class="form-group">
                         <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
-                <div id="mkdocs-search-results"></div>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
             </div>
             <div class="modal-footer">
             </div>

@@ -1,5 +1,42 @@
 # Events
 
+## Faust Day 2023
+
+Faust Day took place at the Center for Computer Research in Music and Acoustics (CCRMA) at Stanford University on May 20th, 2023. It aimed at:
+
+* giving an overview of the most recent developments in the Faust programming language,
+* giving an introductory tutorial for those who never used Faust.
+
+### Where is Faust Going as a Programming Language? -- Yann Orlarey
+
+<center>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/hVWMn2joEl8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</center>
+
+### Overview of Recent Developments in the Faust General Ecosystem -- Stéphane Letz
+
+<center>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/PqPMEjE86Q8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</center>
+
+### Faust and AI -- David Braun
+
+<center>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/AnWBSbC8vU8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</center>
+
+### Faust in Real-Time Expressive Virtual Musical Instruments -- Julius O. Smith
+
+<center>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/ViXYr4fo4T4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</center>
+
+### Real-Time Audio DSP With Faust and FPGAs -- Romain Michon
+
+<center>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/5MNQybLWXSw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</center>
+
 ## Faust Physical Modeling Workshop
 
 <center>
