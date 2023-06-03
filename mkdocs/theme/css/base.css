@@ -7,6 +7,14 @@
 	margin-bottom: 20px;
 }
 
+.dropdown-menu{
+    display:block;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
 pre {
 	background-color: #e9edf2 !important;
 	margin-top: 4px;
