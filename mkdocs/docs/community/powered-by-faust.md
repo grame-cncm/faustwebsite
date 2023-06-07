@@ -3,6 +3,13 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
 
+## [ESP32 Wrover E/IE audio dev board](https://github.com/joelucedo/ESP32-Wrover-E_IE-audio-dev-board)
+
+<div><a href="https://github.com/joelucedo/ESP32-Wrover-E_IE-audio-dev-board"><img width="40%" class="mx-auto d-block" src="img/Wrover.jpg"></a> </div>
+
+A board to play with FAUST sound synthesis language.
+
+
 ## [Kuroscillators](https://github.com/nolanlem/Kuroscillators)
 
 <div><a href="https://github.com/nolanlem/Kuroscillators"><img width="40%" class="mx-auto d-block" src="img/kuroscillators.jpg"></a> </div>
