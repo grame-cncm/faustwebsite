@@ -59,16 +59,15 @@ Check out Faust [papers and reports](https://hal.science/search/index/?q=GRAME+F
 
 ## Faust News
 
-
 ### **>>** May 15, 2023: ADCx San Francisco Audio Dev Talks
 
 <center>
-<div><a href="https://audio.dev/adcx/adcx-sf-schedule/"><img  width="50%" class="mx-auto d-block" src="img/sf23.png"></a>  </div>
+<div><a href="https://audio.dev/adcx/adcx-sf-schedule/"><img  width="50%" class="mx-auto d-block" src="img/adc-sf23..png"></a>  </div>
 </center>
 
 The Audio Developer Conference San Francisco is a one day meet-up for audio developers by the bay. Two conferences are talking about Faust:
 
-- **High-Level Programming of FPGAs for Audio Real-Time Signal Processing Applications** by Romain Michon, which can be [seen here] (https://www.youtube.com/live/fqWL2Qj5eSQ?feature=share&t=3210).
+- **High-Level Programming of FPGAs for Audio Real-Time Signal Processing Applications** by Romain Michon, which can be [seen here](https://www.youtube.com/live/fqWL2Qj5eSQ?feature=share&t=3210).
 
 - **Using Faust in JUCE Projects** by Julius Smith, which can be [seen here](https://www.youtube.com/live/fqWL2Qj5eSQ?feature=share&t=27614).
 
