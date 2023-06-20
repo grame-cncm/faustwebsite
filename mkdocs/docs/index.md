@@ -59,6 +59,24 @@ Check out Faust [papers and reports](https://hal.science/search/index/?q=GRAME+F
 
 ## Faust News
 
+
+### **>>** May 15, 2023: ADCx San Francisco Audio Dev Talks
+
+<center>
+<div><a href="https://audio.dev/adcx/adcx-sf-schedule/"><img  width="50%" class="mx-auto d-block" src="img/sf23.png"></a>  </div>
+</center>
+
+The Audio Developer Conference San Francisco is a one day meet-up for audio developers by the bay. Two conferences are talking about Faust:
+
+- **High-Level Programming of FPGAs for Audio Real-Time Signal Processing Applications** by Romain Michon, which can be [seen here] (https://www.youtube.com/live/fqWL2Qj5eSQ?feature=share&t=3210).
+
+- **Using Faust in JUCE Projects** by Julius Smith, which can be [seen here](https://www.youtube.com/live/fqWL2Qj5eSQ?feature=share&t=27614).
+
+And even the [following one](https://www.youtube.com/live/fqWL2Qj5eSQ?feature=share&t=31043) with ChatGPT generating running Faust code:
+
+- **Democratization of Audio Dev: How it started, Where it's going** by Aurelius Prochazka.
+
+
 ### **>>** May 04, 2023: Two Google Summer of Code projects attributed
 
 <center>
@@ -73,7 +91,6 @@ The project will be worked on by [Thomas Rushton](https://github.com/hatchjaw).
 - **Better Faust on the Web** aims at enhancing Faust’s support for the web platform: transition the Faust web tools to a rewritten TypeScript version, extend the Faust Web IDE, enhance Faust’s online documentation, and prototype an experimental platform for sharing Faust code on the web. The project will be worked on by [Ian Clester](https://ijc8.me/).
 
 Welcome to both of you in the Faust community !
-
 
 ### **>>** March 24, 2023: Zen Flute 1° price at Guthman Musical Instrument 2023 Competition, with Faust inside !
 
