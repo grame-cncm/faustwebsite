@@ -62,7 +62,7 @@ Check out Faust [papers and reports](https://hal.science/search/index/?q=GRAME+F
 ### **>>** May 15, 2023: ADCx San Francisco Audio Dev Talks
 
 <center>
-<div><a href="https://audio.dev/adcx/adcx-sf-schedule/"><img  width="50%" class="mx-auto d-block" src="img/adc-sf23..png"></a>  </div>
+<div><a href="https://audio.dev/adcx/adcx-sf-schedule/"><img  width="50%" class="mx-auto d-block" src="img/adc-sf23.png"></a>  </div>
 </center>
 
 The Audio Developer Conference San Francisco is a one day meet-up for audio developers by the bay. Two conferences are talking about Faust:
