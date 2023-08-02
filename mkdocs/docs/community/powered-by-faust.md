@@ -3,6 +3,12 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
 
+## [LibreDJM](https://codeberg.org/obsoleszenz/libredjm)
+
+<div><a href="https://codeberg.org/obsoleszenz/libredjm"><img width="50%" class="mx-auto d-block" src="img/LibreDJM.png"></a> </div>
+
+This is a 4 Channel DJ Mixer built on top of JACK. It's EQ is inspired by the Playdifferently Model1 and offers per channel a highpass, lowpass and sculpt eq. The DSP is [written in Faust](https://codeberg.org/obsoleszenz/libredjm/src/branch/main/crates/libredjm-dsp).  
+
 ## [ESP32 Wrover E/IE audio dev board](https://github.com/joelucedo/ESP32-Wrover-E_IE-audio-dev-board)
 
 <div><a href="https://github.com/joelucedo/ESP32-Wrover-E_IE-audio-dev-board"><img width="40%" class="mx-auto d-block" src="img/Wrover.jpg"></a> </div>
