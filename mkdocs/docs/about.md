@@ -10,6 +10,7 @@ reports, ideas, etc. We would like in particular to thank:
 Fons&nbsp;Adriaensen, Karim&nbsp;Barkati,
 Jérôme&nbsp;Barthélemy, Tim&nbsp;Blechmann, 
 Tiziano&nbsp;Bole, Alain&nbsp;Bonardi, 
+Bart&nbsp;Brouns,
 Thomas&nbsp;Charbonnel, Raffaele&nbsp;Ciavarella, 
 Julien&nbsp;Colafrancesco, Damien&nbsp;Cramet, 
 Sarah&nbsp;Denoux, Étienne&nbsp;Gaudrin, 
@@ -22,12 +23,12 @@ Hermann&nbsp;Meyer, Rémy&nbsp;Muller,
 Oleg&nbsp;Nesterov,
 Raphael&nbsp;Panis, Eliott&nbsp;Paris, 
 Reza&nbsp;Payami, Laurent&nbsp;Pottier, 
-Dario&nbsp; Sanfilippo,
+Dirk&nbsp;Roosenburg, Dario&nbsp; Sanfilippo,
 Sampo&nbsp;Savolainen, Nicolas&nbsp;Scaringella, 
 Anne&nbsp;Sedes, Priyanka&nbsp;Shekar, 
 Stephen&nbsp;Sinclair, Travis&nbsp;Skare, 
 Julius&nbsp;Smith, Mike&nbsp;Solomon, 
-Michael&nbsp;Wilson, Bart Brouns, Dirk Roosenburg.
+Michael&nbsp;Wilson.
 </ul>
 
 as well as our colleagues at [GRAME](http://grame.fr):
