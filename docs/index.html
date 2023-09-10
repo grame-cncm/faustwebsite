@@ -199,6 +199,33 @@
 <p>Check out Faust <a href="https://hal.science/search/index/?q=GRAME+FAUST&amp;rows=30&amp;page=3">papers and reports</a> on <a href="https://hal.science/">HAL</a>.</p>
 <hr />
 <h2 id="faust-news">Faust News</h2>
+<h3 id="september-09-2023-faust-web-component-released"><strong>&gt;&gt;</strong> September 09, 2023: faust-web-component released !</h3>
+<p>The <a href="https://github.com/grame-cncm/faust-web-component">faust-web-component</a> package provides two web components for embedding interactive Faust snippets in web pages.</p>
+<ul>
+<li>
+<p><code>&lt;faust-editor&gt;</code> displays an editor (using <a href="https://codemirror.net/">CodeMirror 6</a>) with executable, editable Faust code, along with some bells &amp; whistles (controls, block diagram, plots) in a side pane.
+This component is ideal for demonstrating some code in Faust and allowing the reader to try it out and tweak it themselves without having to leave the page. (For more extensive work, it also includes a button to open the code in the Faust IDE.)</p>
+</li>
+<li>
+<p><code>&lt;faust-widget&gt;</code> just shows the controls and does not allow editing, so it serves simply as a way to embed interactive DSP.</p>
+</li>
+</ul>
+<p>These components are built on top of <a href="https://github.com/grame-cncm/faustwasm">faustwasm</a> and <a href="https://github.com/Fr0stbyteR/faust-ui">faust-ui</a> packages.</p>
+<p><em>Here's an embedded editor!</em></p>
+
+<p><faust-editor></p>
+<!--
+import("stdfaust.lib");
+
+vol = hslider("volume [unit:dB]", -10, -96, 0, 0.1) : ba.db2linear : si.smoo;
+freq1 = hslider("freq1 [unit:Hz]", 1000, 20, 3000, 1);
+freq2 = hslider("freq2 [unit:Hz]", 200, 20, 3000, 1);
+
+process = vgroup("Oscillator", os.osc(freq1) * vol, os.osc(freq2) * vol);
+-->
+<p></faust-editor></p>
+<script src="https://cdn.jsdelivr.net/npm/@grame/faust-web-component@0.2.9/dist/faust-web-component.js"></script>
+
 <h3 id="september-06-2023-faust2rnbo-released"><strong>&gt;&gt;</strong> September 06, 2023: faust2rnbo released !</h3>
 <p><center></p>
 <div><a href="https://faustdoc.grame.fr/tutorials/rnbo/"><img  width="40%" class="mx-auto d-block" src="img/faust-rnbo1.png"></a>  </div>
@@ -420,5 +447,5 @@ Great birthday present for the 20th anniversary of the Faust language! Developed
 
 <!--
 MkDocs version : 1.4.3
-Build Date UTC : 2023-09-09 18:35:22.483758+00:00
+Build Date UTC : 2023-09-10 07:21:10.938604+00:00
 -->
