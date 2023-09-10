@@ -74,7 +74,7 @@ These components are built on top of [faustwasm](https://github.com/grame-cncm/f
 ### **>>** September 06, 2023: faust2rnbo released !
 
 <center>
-<div><a href="https://faustdoc.grame.fr/tutorials/rnbo/"><img  width="40%" class="mx-auto d-block" src="img/faust-rnbo1.png"></a>  </div>
+<div><a href="https://faustdoc.grame.fr/tutorials/rnbo/"><img  width="50%" class="mx-auto d-block" src="img/faust-rnbo1.png"></a>  </div>
 </center>
 
 The [faust2rnbo](https://github.com/grame-cncm/faust/tree/master-dev/architecture/max-msp#faust2rnbo) tool transforms a Faust DSP program into a [RNBO](https://rnbo.cycling74.com) patch containing a rnbo~ object and including the codebox code as a subpatch. The  tool has been deployed on the Faust remote compilation service, to be used from the [Faust Web IDE](https://faustide.grame.fr).
