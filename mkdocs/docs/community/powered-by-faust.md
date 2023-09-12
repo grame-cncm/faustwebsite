@@ -2,6 +2,11 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [RITI: Room Is The Instrument](https://github.com/LucaSpanedda/RITI)
+
+<div><a href="https://github.com/LucaSpanedda/RITI"><img width="50%" class="mx-auto d-block" src="img/rtti.png"></a> </div>
+
+RITI: Room Is The Instrument by [Luca Spanedda](https://conservatoriosantacecilia.academia.edu/LucaSpanedda/CurriculumVitae), is a piece based on a complex system capable of manifesting emergent and chaotic behaviors, where the acoustic personality of an environment (digital or physical) becomes a case of study for the performance and is reflected in terms of variation in the behavior of the system itself. The DSP code is written in Faust. See a video of a "studio" [performance of the system](https://youtu.be/QLzzQpEkWdE?si=PHADoLzECmHjQCmC). 
 
 ## [LibreDJM](https://codeberg.org/obsoleszenz/libredjm)
 
