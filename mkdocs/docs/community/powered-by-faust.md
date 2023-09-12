@@ -2,6 +2,15 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+
+## [MUSS3640 Vocal Synthesiser ](https://github.com/luke1241/MUSS3640_Vocal_Synth)
+
+<div><a href="https://github.com/luke1241/MUSS3640_Vocal_Synth"><img width="50%" class="mx-auto d-block" src="img/MUSS3640.jpg"></a> </div>
+
+The MUSS3640 Vocal Synthesiser is a standalone application/VST3 plugin developed to allow exploratory synthesis of the singing voice. It implements a combination of formant-wave-function and bandpass synthesis techniques. The DSP is wrtitten in Faust.
+
+
+
 ## [RITI: Room Is The Instrument](https://github.com/LucaSpanedda/RITI)
 
 <div><a href="https://github.com/LucaSpanedda/RITI"><img width="50%" class="mx-auto d-block" src="img/rtti.png"></a> </div>
