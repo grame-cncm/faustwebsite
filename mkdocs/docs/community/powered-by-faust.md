@@ -9,8 +9,6 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 The MUSS3640 Vocal Synthesiser is a standalone application/VST3 plugin developed to allow exploratory synthesis of the singing voice. It implements a combination of formant-wave-function and bandpass synthesis techniques. The DSP is wrtitten in Faust.
 
-
-
 ## [RITI: Room Is The Instrument](https://github.com/LucaSpanedda/RITI)
 
 <div><a href="https://github.com/LucaSpanedda/RITI"><img width="50%" class="mx-auto d-block" src="img/rtti.png"></a> </div>
@@ -228,7 +226,7 @@ Verber is a simple audio plugin tool with a Sweet, Lushy reverb processor. It is
 
 <div><a href="https://github.com/Sinuslabs/Reach"><img width="50%" class="mx-auto d-block" src="img/reach-overview.jpg"></a>  </div>
 
-Extraterrestrial Reverb for Electronic Music.  REACH is modern creative Reverb that is made for synthetic sound sources. There are four effects included to transform the Signal. It features modular routing, pre and post filters and over 40 Presets. Part of the DSP code is [written in Faust](https://github.com/Sinuslabs/Reach/tree/main/DspNetworks/CodeLibrary/faust).
+Extraterrestrial Reverb for Electronic Music. REACH is modern creative Reverb that is made for synthetic sound sources. There are four effects included to transform the Signal. It features modular routing, pre and post filters and over 40 Presets. Part of the DSP code is [written in Faust](https://github.com/Sinuslabs/Reach/tree/main/DspNetworks/CodeLibrary/faust).
 
 
 ## [Stray_virtual-synth](https://github.com/JDCAudio/Stray_virtual-synth)
@@ -319,7 +317,7 @@ The paper Faust Model of the Echoplex Tape Delay, included in the repo, provides
 
 ## [faust2smartphone](https://github.com/RuolunWeng/faust2smartphone)
 
-faust2smartphone is a tool to generate interactive musical mobile application embeded Faust API.
+faust2smartphone is a tool to generate interactive musical mobile application embedded Faust API.
 
 ## [DPF-Fadeli](https://github.com/DISTRHO/Fadeli)
 
