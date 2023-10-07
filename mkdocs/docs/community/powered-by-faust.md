@@ -3,6 +3,13 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
 
+## [The Spatbox](https://hal.science/hal-03781074/document)
+
+<div><a href="https://hal.science/hal-03781074/document"><img width="50%" class="mx-auto d-block" src="img/spatbox.jpg"></a> </div>
+
+The Spatbox is an interface to intuitively generate 3D trajectories and to spatialize them in real-time on a loudspeaker array with Ambisonics, developed by [Pierre Lecomte](https://cv.hal.science/pierre-lecomte). Each trajectory is described by a parametric curve, where each of the coordinates varies according to a configurable LFO. Depending on the LFO parameters, many trajectories can be generated. The implementation is done in Faust and the project has [been presented](https://www.youtube.com/watch?app=desktop&v=naxXtvsIyNI) at [PAW 2022](https://paw.grame.fr/2022/).
+
+
 ## [MUSS3640 Vocal Synthesiser ](https://github.com/luke1241/MUSS3640_Vocal_Synth)
 
 <div><a href="https://github.com/luke1241/MUSS3640_Vocal_Synth"><img width="50%" class="mx-auto d-block" src="img/MUSS3640.jpg"></a> </div>
