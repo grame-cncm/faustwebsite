@@ -9,7 +9,6 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 The Spatbox is an interface to intuitively generate 3D trajectories and to spatialize them in real-time on a loudspeaker array with Ambisonics, developed by [Pierre Lecomte](https://cv.hal.science/pierre-lecomte). Each trajectory is described by a parametric curve, where each of the coordinates varies according to a configurable LFO. Depending on the LFO parameters, many trajectories can be generated. The implementation is done in Faust and the project has [been presented](https://www.youtube.com/watch?app=desktop&v=naxXtvsIyNI) at [PAW 2022](https://paw.grame.fr/2022/).
 
-
 ## [MUSS3640 Vocal Synthesiser ](https://github.com/luke1241/MUSS3640_Vocal_Synth)
 
 <div><a href="https://github.com/luke1241/MUSS3640_Vocal_Synth"><img width="50%" class="mx-auto d-block" src="img/MUSS3640.jpg"></a> </div>
@@ -22,11 +21,11 @@ The MUSS3640 Vocal Synthesiser is a standalone application/VST3 plugin developed
 
 RITI: Room Is The Instrument by [Luca Spanedda](https://conservatoriosantacecilia.academia.edu/LucaSpanedda/CurriculumVitae), is a piece based on a complex system capable of manifesting emergent and chaotic behaviors, where the acoustic personality of an environment (digital or physical) becomes a case of study for the performance and is reflected in terms of variation in the behavior of the system itself. The DSP code is written in Faust. See a video of a "studio" [performance of the system](https://youtu.be/QLzzQpEkWdE?si=PHADoLzECmHjQCmC). 
 
-## [LibreDJM](https://codeberg.org/obsoleszenz/libredjm)
+## [EQUIS](https://codeberg.org/obsoleszenz/EQUIS)
 
-<div><a href="https://codeberg.org/obsoleszenz/libredjm"><img width="50%" class="mx-auto d-block" src="img/LibreDJM.png"></a> </div>
+<div><a href="https://codeberg.org/obsoleszenz/EQUIS"><img width="50%" class="mx-auto d-block" src="img/LibreDJM.png"></a> </div>
 
-This is a 4 Channel DJ Mixer built on top of JACK. It's EQ is inspired by the Playdifferently Model1 and offers per channel a highpass, lowpass and sculpt eq. The code is developed in Rust and the DSP is [written in Faust](https://codeberg.org/obsoleszenz/libredjm/src/branch/main/crates/libredjm-dsp).  
+EQUIS is a 4 Channel DJ Mixer built on top of JACK. It's EQ is inspired by the Playdifferently Model1 and offers per channel a highpass, lowpass and sculpt eq. The code is developed in Rust and the DSP is [written in Faust](https://codeberg.org/obsoleszenz/EQUIS/src/branch/main/crates/equis-dsp). See the [presentation video](https://media.ccc.de/v/sonoj2023-23001-equis#t=22).  
 
 ## [ESP32 Wrover E/IE audio dev board](https://github.com/joelucedo/ESP32-Wrover-E_IE-audio-dev-board)
 
@@ -34,13 +33,11 @@ This is a 4 Channel DJ Mixer built on top of JACK. It's EQ is inspired by the Pl
 
 A board to play with FAUST sound synthesis language.
 
-
 ## [Kuroscillators](https://github.com/nolanlem/Kuroscillators)
 
 <div><a href="https://github.com/nolanlem/Kuroscillators"><img width="40%" class="mx-auto d-block" src="img/kuroscillators.jpg"></a> </div>
 
 Max/MSP objects for audio and rhythmic synthesis using coupled oscillator networks. Coupled Oscillators networks are dynamical systems that describe how ensembles of interacting elements are able to self-organize and synchronize over time. In terms of sensory perception, they have been examined in a wide range of fields including those related to rhythmic entrainment, biomusicology, psychoacoustics, signal processing, and generative music. The DSP is [written in Faust](https://github.com/nolanlem/Kuroscillators/tree/main/Kuroscillators-rhythm/faust-gen-files).
-
 
 ## [Joué Music Instruments](https://jouemusic.com/en)
 
