@@ -25,7 +25,7 @@ RITI: Room Is The Instrument by [Luca Spanedda](https://conservatoriosantacecili
 
 <div><a href="https://codeberg.org/obsoleszenz/EQUIS"><img width="50%" class="mx-auto d-block" src="img/LibreDJM.png"></a> </div>
 
-EQUIS is a 4 Channel DJ Mixer built on top of JACK. It's EQ is inspired by the Playdifferently Model1 and offers per channel a highpass, lowpass and sculpt eq. The code is developed in Rust and the DSP is [written in Faust](https://codeberg.org/obsoleszenz/EQUIS/src/branch/main/crates/equis-dsp). See the [presentation video](https://media.ccc.de/v/sonoj2023-23001-equis#t=22).  
+EQUIS is a 4 Channel DJ Mixer built on top of JACK. It's EQ is inspired by the Playdifferently Model1 and offers per channel a highpass, lowpass and sculpt eq. The code is developed in Rust and the DSP is [written in Faust](https://codeberg.org/obsoleszenz/EQUIS/src/branch/main/crates/equis-dsp). See the [video presentation ](https://media.ccc.de/v/sonoj2023-23001-equis#t=22) at [Sonoj convention](https://sonoj.org/).  
 
 ## [ESP32 Wrover E/IE audio dev board](https://github.com/joelucedo/ESP32-Wrover-E_IE-audio-dev-board)
 
