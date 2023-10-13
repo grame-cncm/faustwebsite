@@ -6,7 +6,7 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 <div><a href="https://gitlab.huma-num.fr/bbdmi/bbdmi"><img width="50%" class="mx-auto d-block" src="img/logo-bbdmi.png"></a> </div>
 
-BBDMI project aims at making music from electrical signals of the muscle and the brain using EMG and EEG technologies. Producing instrumental prototypes in an open way (open software and open hardware) and to document them in the framework of open science (FAIR). The modular system is built with Max/MSP and [interfaced with Faust](https://gitlab.huma-num.fr/bbdmi/bbdmi/-/tree/main/faust?ref_type=heads) for the purpose of analyzing, processing and mapping electrophysiological signals to sound. The paper *An Interactive Modular System for Electrophysiological DMIs* received [a best paper ward at Audio mostly 2023](https://audiomostly.com/2023/program/awards/). 
+BBDMI project aims at making music from electrical signals of the muscle and the brain using EMG and EEG technologies. Producing instrumental prototypes in an open way (open software and open hardware) and to document them in the framework of open science (FAIR). The modular system is built with Max/MSP and [interfaced with Faust](https://gitlab.huma-num.fr/bbdmi/bbdmi/-/tree/main/faust?ref_type=heads) for the purpose of analyzing, processing and mapping electrophysiological signals to sound. The paper *An Interactive Modular System for Electrophysiological DMIs* received [a best paper award at Audio mostly 2023](https://audiomostly.com/2023/program/awards/). 
 
 
 ## [The Spatbox](https://hal.science/hal-03781074/document)
