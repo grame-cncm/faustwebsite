@@ -168,6 +168,10 @@
             
             <li class="nav-item" data-level="1"><a href="#powered-by-faust" class="nav-link">Powered By Faust</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#karya" class="nav-link">Karya</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#body-brain-digital-musical-instrument-bbdmi" class="nav-link">Body Brain Digital Musical Instrument (BBDMI)</a>
               <ul class="nav flex-column">
               </ul>
@@ -981,12 +985,16 @@
 
 <h1 id="powered-by-faust">Powered By Faust</h1>
 <p>This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.</p>
+<h2 id="karya"><a href="https://github.com/elaforge/karya">Karya</a></h2>
+<div><a href="https://github.com/elaforge/karya"><img width="40%" class="mx-auto d-block" src="img/evvari.png"></a> </div>
+
+<p>Karya is a score language editor with support for scales, instrumental techniques, and ornaments, with special support for Balinese, Javanese, and Carnatic music. It has backends for MIDI, supercollider OSC, lilypond, and an incremental audio renderer that uses Faust or samples. You can write instruments in Faust and integrate them into a score along with samples and MIDI instruments. Due to incremental rendering, even computationally expensive instruments are not a problem.</p>
 <h2 id="body-brain-digital-musical-instrument-bbdmi"><a href="https://gitlab.huma-num.fr/bbdmi/bbdmi">Body Brain Digital Musical Instrument (BBDMI)</a></h2>
-<div><a href="https://gitlab.huma-num.fr/bbdmi/bbdmi"><img width="50%" class="mx-auto d-block" src="img/logo-bbdmi.png"></a> </div>
+<div><a href="https://gitlab.huma-num.fr/bbdmi/bbdmi"><img width="40%" class="mx-auto d-block" src="img/logo-bbdmi.png"></a> </div>
 
 <p>BBDMI project aims at making music from electrical signals of the muscle and the brain using EMG and EEG technologies. Producing instrumental prototypes in an open way (open software and open hardware) and to document them in the framework of open science (FAIR). The modular system is built with Max/MSP and <a href="https://gitlab.huma-num.fr/bbdmi/bbdmi/-/tree/main/faust?ref_type=heads">interfaced with Faust</a> for the purpose of analyzing, processing and mapping electrophysiological signals to sound. The paper <em>An Interactive Modular System for Electrophysiological DMIs</em> received <a href="https://audiomostly.com/2023/program/awards/">a best paper award at Audio mostly 2023</a>. </p>
 <h2 id="the-spatbox"><a href="https://hal.science/hal-03781074/document">The Spatbox</a></h2>
-<div><a href="https://hal.science/hal-03781074/document"><img width="50%" class="mx-auto d-block" src="img/spatbox.jpg"></a> </div>
+<div><a href="https://hal.science/hal-03781074/document"><img width="40%" class="mx-auto d-block" src="img/spatbox.jpg"></a> </div>
 
 <p>The Spatbox is an interface to intuitively generate 3D trajectories and to spatialize them in real-time on a loudspeaker array with Ambisonics, developed by <a href="https://cv.hal.science/pierre-lecomte">Pierre Lecomte</a>. Each trajectory is described by a parametric curve, where each of the coordinates varies according to a configurable LFO. Depending on the LFO parameters, many trajectories can be generated. The implementation is done in Faust and the project has <a href="https://www.youtube.com/watch?app=desktop&amp;v=naxXtvsIyNI">been presented</a> at <a href="https://paw.grame.fr/2022/">PAW 2022</a>.</p>
 <h2 id="muss3640-vocal-synthesiser"><a href="https://github.com/luke1241/MUSS3640_Vocal_Synth">MUSS3640 Vocal Synthesiser </a></h2>

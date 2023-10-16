@@ -2,16 +2,22 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Karya](https://github.com/elaforge/karya)
+
+<div><a href="https://github.com/elaforge/karya"><img width="40%" class="mx-auto d-block" src="img/evvari.png"></a> </div>
+
+Karya is a score language editor with support for scales, instrumental techniques, and ornaments, with special support for Balinese, Javanese, and Carnatic music. It has backends for MIDI, supercollider OSC, lilypond, and an incremental audio renderer that uses Faust or samples. You can write instruments in Faust and integrate them into a score along with samples and MIDI instruments. Due to incremental rendering, even computationally expensive instruments are not a problem.
+
 ## [Body Brain Digital Musical Instrument (BBDMI)](https://gitlab.huma-num.fr/bbdmi/bbdmi)
 
-<div><a href="https://gitlab.huma-num.fr/bbdmi/bbdmi"><img width="50%" class="mx-auto d-block" src="img/logo-bbdmi.png"></a> </div>
+<div><a href="https://gitlab.huma-num.fr/bbdmi/bbdmi"><img width="40%" class="mx-auto d-block" src="img/logo-bbdmi.png"></a> </div>
 
 BBDMI project aims at making music from electrical signals of the muscle and the brain using EMG and EEG technologies. Producing instrumental prototypes in an open way (open software and open hardware) and to document them in the framework of open science (FAIR). The modular system is built with Max/MSP and [interfaced with Faust](https://gitlab.huma-num.fr/bbdmi/bbdmi/-/tree/main/faust?ref_type=heads) for the purpose of analyzing, processing and mapping electrophysiological signals to sound. The paper *An Interactive Modular System for Electrophysiological DMIs* received [a best paper award at Audio mostly 2023](https://audiomostly.com/2023/program/awards/). 
 
 
 ## [The Spatbox](https://hal.science/hal-03781074/document)
 
-<div><a href="https://hal.science/hal-03781074/document"><img width="50%" class="mx-auto d-block" src="img/spatbox.jpg"></a> </div>
+<div><a href="https://hal.science/hal-03781074/document"><img width="40%" class="mx-auto d-block" src="img/spatbox.jpg"></a> </div>
 
 The Spatbox is an interface to intuitively generate 3D trajectories and to spatialize them in real-time on a loudspeaker array with Ambisonics, developed by [Pierre Lecomte](https://cv.hal.science/pierre-lecomte). Each trajectory is described by a parametric curve, where each of the coordinates varies according to a configurable LFO. Depending on the LFO parameters, many trajectories can be generated. The implementation is done in Faust and the project has [been presented](https://www.youtube.com/watch?app=desktop&v=naxXtvsIyNI) at [PAW 2022](https://paw.grame.fr/2022/).
 
