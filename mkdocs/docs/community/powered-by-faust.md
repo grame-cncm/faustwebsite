@@ -25,7 +25,7 @@ The Spatbox is an interface to intuitively generate 3D trajectories and to spati
 
 <div><a href="https://github.com/luke1241/MUSS3640_Vocal_Synth"><img width="50%" class="mx-auto d-block" src="img/MUSS3640.jpg"></a> </div>
 
-The MUSS3640 Vocal Synthesiser is a standalone application/VST3 plugin developed to allow exploratory synthesis of the singing voice. It implements a combination of formant-wave-function and bandpass synthesis techniques. The DSP is wrtitten in Faust.
+The MUSS3640 Vocal Synthesiser is a standalone application/VST3 plugin developed to allow exploratory synthesis of the singing voice. It implements a combination of formant-wave-function and bandpass synthesis techniques. The DSP is written in Faust.
 
 ## [RITI: Room Is The Instrument](https://github.com/LucaSpanedda/RITI)
 
