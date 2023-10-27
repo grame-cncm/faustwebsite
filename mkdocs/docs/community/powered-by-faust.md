@@ -3,9 +3,9 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
 
-## [Cantor Digitalis and Voks](http://www.lam.jussieu.fr/cantordigitalis/index_fr.php)
+## [Cantor Digitalis](http://www.lam.jussieu.fr/cantordigitalis/index_fr.php)
 
-The Cantor Digitalis is a singing voice synthesiser controlled in real time by chironomy, i.e. by manual gesture, using interfaces such as a stylus or the fingers on a graphics tablet. More generally, it can be controlled using any MIDI interface. The Volks synthesiser part of the project has been reimplemented in Faust by [Grégoire Locqueville](https://www.linkedin.com/in/grégoire-locqueville-8817a883) during his [PhD thesis](
+The Cantor Digitalis is a singing voice synthesiser controlled in real time by chironomy, i.e. by manual gesture, using interfaces such as a stylus or the fingers on a graphics tablet. More generally, it can be controlled using any MIDI interface. The synthesiser has been reimplemented in Faust by [Grégoire Locqueville](https://www.linkedin.com/in/grégoire-locqueville-8817a883) during his [PhD thesis](
 https://www.theses.fr/2022SORUS180) and has received the 2nd prize at [Guthman Musical Instrument Competition](https://guthman.gatech.edu/2022-finalists#tvoks) 2022 session.
 
 
