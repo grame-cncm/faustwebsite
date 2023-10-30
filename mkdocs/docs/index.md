@@ -59,6 +59,13 @@ Check out Faust [papers and reports](https://hal.science/search/index/?q=GRAME+F
 
 ## Faust News
 
+### **>>** December 02, 2023: Programmable Audio Workshop (PAW-23) 
+
+The 6th edition of Programmable Audio Workshop (PAW) will be held on December 2rd at the Marie Curie Library of INSA Lyon (France) on the La Doua campus and is organised by the Emeraude INRIA/INSA/GRAME-CNCM team. This year's theme is "Artificial intelligence and audio programming languages", with a strong focus on computer-aided music languages (Faust, ChucK, and PureData).
+
+Full program, details of the talks and registration on the [PAW website](https://paw.grame.fr).
+
+
 ### **>>** September 09, 2023: faust-web-component released !
 
 <center>
