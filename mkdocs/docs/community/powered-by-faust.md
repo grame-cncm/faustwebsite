@@ -3,10 +3,15 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins, standalone applications, integration in audio programming environments, development tools, research projects (possibly non musical), embedded devices, Web applications, etc.
 
 
+## [phaust](https://github.com/lucretiomsp/phaust)
+
+<div><a href="https://github.com/lucretiomsp/phaust"><img width="45%" class="mx-auto d-block" src="img/pharo.png"></a> </div>
+
+[Pharo](https://pharo.org) is a pure object-oriented programming language and a powerful environment, focused on simplicity and immediate feedback (think IDE and OS rolled into one). Phaust allows to use Faust inside Pharo.
+
 ## [Cantor Digitalis](http://www.lam.jussieu.fr/cantordigitalis/index_fr.php)
 
 The Cantor Digitalis is a singing voice synthesiser controlled in real time by chironomy, i.e. by manual gesture, using interfaces such as a stylus or the fingers on a graphics tablet. More generally, it can be controlled using any MIDI interface. The synthesiser has been [reimplemented in Faust](https://github.com/ChorusDigitalis/CantorDigitalis-faust) by [Grégoire Locqueville](https://www.linkedin.com/in/grégoire-locqueville-8817a883) during his [PhD thesis](https://www.theses.fr/2022SORUS180). 
-
 
 ## [Karya](https://github.com/elaforge/karya)
 
