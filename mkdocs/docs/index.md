@@ -72,7 +72,7 @@ Full program, details of the talks and registration on the [PAW website](https:/
 <div><a href="https://github.com/grame-cncm/faust-web-component"><img  width="75%" class="mx-auto d-block" src="img/faust-editor.png"></a>  </div>
 </center>
 
-Result of [Ian Clester](https://ijc8.me/2023/08/27/gsoc-faust/) Google Summer of Code project, the [faust-web-component](https://github.com/grame-cncm/faust-web-component) package provides two web components for embedding interactive Faust snippets in web pages.
+Result of [Ian Clester](https://ijc8.me/2023/08/27/gsoc-faust/) Google Summer of Code project, the [faust-web-component](https://github.com/grame-cncm/faust-web-component) package provides two web components for embedding interactive Faust snippets in web pages:
 
 - `<faust-editor>` displays an editor (using [CodeMirror 6](https://codemirror.net/)) with executable, editable Faust code, along with some bells & whistles (controls, block diagram, plots) in a side pane.
 This component is ideal for demonstrating some code in Faust and allowing the reader to try it out and tweak it themselves without having to leave the page, and can [been tested here](https://codepen.io/St-phane-Letz/pen/YzdZZoK). 
