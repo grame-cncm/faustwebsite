@@ -17,7 +17,7 @@ Several courses on Faust are given at CCRMA:
 
 ### TU Berlin
 
-The regular [sound synthesis class](https://www.ak.tu-berlin.de/menue/lehre/vergangene_semester/sommersemester_2020/sound_synthesis/) at the Audio Communication Group, TU Berlin, makes use of Faust for exploring the basics of different synthesis algorithms. Student projects based on Faust include Eurorack modules, standalone drum machines and synthesizers, as well as data sonification approaches. The class is taught by [Henrik von Coler](https://hvc.berlin/cv/), who is director of the Electronic Studio at the TU.
+The regular [sound synthesis class](https://www.ak.tu-berlin.de/menue/lehre/vergangene_semester/sommersemester_2020/sound_synthesis/) at the Audio Communication Group, TU Berlin, makes use of Faust for exploring the basics of different synthesis algorithms. Student projects based on Faust include Eurorack modules, standalone drum machines and synthesizers, as well as data sonification approaches. The class is taught by [Henrik von Coler](https://hvc.berlin/cv/), who is director of the Electronic Studio at the TU, with a [Building Instruments in Faust](http://ringbuffer.org/teaching/building-instruments-in-faust/) course.
 
 ### HPI Potsdam
 
