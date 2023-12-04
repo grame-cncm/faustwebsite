@@ -7,7 +7,7 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 <div><a href="https://github.com/peacheym/FAUSTMapper"><img width="40%" class="mx-auto d-block" src="img/faustmapperposter.png"></a> </div>
 
-FAUSTmapper is a tool for binding popular Digital Musical Intrument (DMI) mapping tools to the FAUST ecosystem. The default action for the FAUSTmapper project is establishing a binding to the [libmapper](https://libmapper.github.io/) project. When the script is run, the entire parameter space of an active FAUST project (with HTTP control enabled) will be discovered. Once discovered, a libmapper signal will be created for each of the parameters identified, including appropriate meta data such as min, max & default values.
+[FAUSTmapper](https://mattpeachey.ca/faustmapper/) is a tool for binding popular Digital Musical Intrument (DMI) mapping tools to the FAUST ecosystem. The default action for the FAUSTmapper project is establishing a binding to the [libmapper](https://libmapper.github.io/) project. When the script is run, the entire parameter space of an active FAUST project (with HTTP control enabled) will be discovered. Once discovered, a libmapper signal will be created for each of the parameters identified, including appropriate meta data such as min, max & default values.
 
 The following poster was presented at the [4th Annual International Symposium on the Internet of Sounds](https://internetofsounds.net/is2_2023/) and was awarded the Best Poster Award.
 
