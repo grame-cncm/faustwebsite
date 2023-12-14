@@ -3,6 +3,12 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins or standalone applications, integration in audio programming environments, development tools, commercial applications, research projects (possibly non musical), embedded devices, Web applications, etc.
 
 
+## [KBVerb](https://github.com/sletz/KBVerb)
+
+<div><a href="https://github.com/sletz/KBVerb"><img width="60%" class="mx-auto d-block" src="img/KBVerb.png"></a> </div>
+
+A Faust reverb, based on the [Midiverb architecture by Keith Barr](https://valhalladsp.com/2010/08/25/rip-keith-barr/).
+
 ## [pasfa - Paste Faust code!](https://github.com/Simon-L/pasfa)
 
 <div><a href="https://github.com/Simon-L/pasfa"><img width="60%" class="mx-auto d-block" src="img/pasfa.png"></a> </div>
