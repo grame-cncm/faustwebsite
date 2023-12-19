@@ -2,6 +2,14 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins or standalone applications, integration in audio programming environments, development tools, commercial applications, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [OneTrick URCHIN](https://punklabs.com/ot-urchin)
+
+<div><a href="https://punklabs.com/ot-urchin"><img width="50%" class="mx-auto d-block" src="img/ot-urchin.png"></a> </div>
+
+A hybrid drum synth that models the gritty lo-fi sound of beats from vintage records without sampling. It takes spectral and physically modeled drums, running them through simulated studio reverb, a vinyl or tape player, and finally a digital sampler. The result is a fat and saturated drum machine that creates a vibe of sampling with the control of a synthesizer.
+
+The project is using Rust and the Faust to Rust backend, and the source code [is available](https://punklabs.com/content/projects/ot-urchin/downloads/OneTrickURCHIN-Source-v1.0.0.zip). 
+
 
 ## [KBVerb](https://github.com/sletz/KBVerb)
 
