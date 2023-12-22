@@ -2,6 +2,10 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins or standalone applications, integration in audio programming environments, development tools, commercial applications, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [FaustCGP](https://git.sr.ht/~led/faustcgp)
+
+Generate new audio synthesizers and effect chains in FAUST via Recurrent Cartesian Genetic Programming. Requires either a single audio file or a set of input-output signal pairs as input, and the CGP will return the synthesizer or effect chain, respectively, that best approximates the given signal(s).
+
 ## [OneTrick URCHIN](https://punklabs.com/ot-urchin)
 
 <div><a href="https://punklabs.com/ot-urchin"><img width="50%" class="mx-auto d-block" src="img/ot-urchin.png"></a> </div>
