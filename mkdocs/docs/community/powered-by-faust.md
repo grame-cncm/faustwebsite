@@ -35,11 +35,11 @@ A paste service for Faust code, to be [tested here](https://pasfa.synthe.tiseur.
 
 The following poster was presented at the [4th Annual International Symposium on the Internet of Sounds](https://internetofsounds.net/is2_2023/) and was awarded the Best Poster Award.
 
-## [phaust](https://github.com/lucretiomsp/phaust)
+## [phausto](https://github.com/lucretiomsp/phausto)
 
-<div><a href="https://github.com/lucretiomsp/phaust"><img width="45%" class="mx-auto d-block" src="img/pharo.png"></a> </div>
+<div><a href="https://github.com/lucretiomsp/phausto"><img width="45%" class="mx-auto d-block" src="img/pharo.png"></a> </div>
 
-[Pharo](https://pharo.org) is a pure object-oriented programming language and a powerful environment, focused on simplicity and immediate feedback (think IDE and OS rolled into one). Phaust allows to use Faust inside Pharo.
+[Pharo](https://pharo.org) is a pure object-oriented programming language and a powerful environment, focused on simplicity and immediate feedback (think IDE and OS rolled into one). Phausto allows to use Faust inside Pharo.
 
 ## [Cantor Digitalis](http://www.lam.jussieu.fr/cantordigitalis/index_fr.php)
 
