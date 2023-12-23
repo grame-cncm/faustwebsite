@@ -10,7 +10,7 @@ Reflex-in is a sound installation that uses brain-wave streams to create music c
 
 ## [FaustCGP](https://git.sr.ht/~led/faustcgp)
 
-Generate new audio synthesizers and effect chains in FAUST via Recurrent Cartesian Genetic Programming. Requires either a single audio file or a set of input-output signal pairs as input, and the CGP will return the synthesizer or effect chain, respectively, that best approximates the given signal(s).
+Generate new audio synthesizers and filters in FAUST with Recurrent Cartesian Genetic Programming. Given a target sound or impulse response as input, the RCGP will return a FAUST synthesizer or filter, respectively, that best approximates the given signal or impulse response.
 
 ## [OneTrick URCHIN](https://punklabs.com/ot-urchin)
 
