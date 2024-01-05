@@ -2,6 +2,13 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins or standalone applications, integration in audio programming environments, development tools, commercial applications, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [faust-generative-music](https://github.com/xaviergodart/talks/tree/main/faust-generative-music)
+
+<div><a href="https://github.com/xaviergodart/talks/tree/main/faust-generative-music"><img width="80%" class="mx-auto d-block" src="img/faust-generative-music.png"></a> </div>
+
+Generative music programmed in Faust, and presented at [Talk: Generative music with Faust @ playground #1 meetup](https://www.xaviergodart.com/blog/2023-08-23-generative-music-with-faust-playground-1-meetup/) (in french).
+
+
 ## [Reflex-in](https://inria.hal.science/hal-04093045/document)
 
 <div><a href="https://inria.hal.science/hal-04093045/document"><img width="60%" class="mx-auto d-block" src="img/reflex-in.png"></a> </div>
