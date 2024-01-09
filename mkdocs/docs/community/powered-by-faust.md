@@ -2,6 +2,17 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins or standalone applications, integration in audio programming environments, development tools, commercial applications, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Syfala project](https://github.com/inria-emeraude/syfala)
+
+<div><a href="http://lyva.me/interactive-synth/"><img width="50%" class="mx-auto d-block" src="img/zybo-z20.jpg"></a> </div>
+
+Automatic compilation of Faust audio DSP programs for AMD-Xilinx FPGAs, developed by the [Emeraude team](https://team.inria.fr/emeraude/), and funded by the [FAST](https://fast.grame.fr) ANR project. Supported board models are:
+
+- Digilent **Zybo Z7-10** - Zynq-7000 ARM/FPGA SoC Development Board
+- Digilent **Zybo Z7-20** - Zynq-7000 ARM/FPGA SoC Development Board
+- Digilent **Genesys ZU-3EG** - Zynq UltraScale+ MPSoC Development Board
+
+
 ## [Interactive Granular Texture Synthesiser](http://lyva.me/interactive-synth/)
 
 <div><a href="http://lyva.me/interactive-synth/"><img width="60%" class="mx-auto d-block" src="img/interactive-synth.png"></a> </div>
