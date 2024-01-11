@@ -2,6 +2,13 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins or standalone applications, integration in audio programming environments, development tools, commercial applications, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+
+## [SNES Echo Simulator](https://github.com/nyanpasu64-backup/snes-echo)
+
+<div><a href="https://github.com/nyanpasu64-backup/snes-echo"><img width="70%" class="mx-auto d-block" src="img/snes-echo.png"></a> </div>
+
+SNES Echo is an cross-platform audio processing plugin, written in Faust. It simulates the SNES SPC700 DSP reverb/echo effect. This plugin does not strive for bit-accuracy and overflow handling, but instead being audibly indistinguishable for "normal" SPCs.
+
 ## [Syfala project](https://github.com/inria-emeraude/syfala)
 
 <div><a href="http://lyva.me/interactive-synth/"><img width="50%" class="mx-auto d-block" src="img/zybo-z20.jpg"></a> </div>
