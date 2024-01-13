@@ -3,9 +3,19 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins or standalone applications, integration in audio programming environments, development tools, commercial applications, research projects (possibly non musical), embedded devices, Web applications, etc.
 
 
+## [Wam-Studio](https://github.com/Brotherta/wam-studio)
+
+<div><a href="https://github.com/Brotherta/wam-studio"><img width="60%" class="mx-auto d-block" src="img/wam-studio.jpg"></a> </div>
+
+Wam-Studio’s is an online tool for creating audio projects that you can imagine as multi-track music. Each track corresponds to a different "layer" of audio content that can be recorded, edited, or just integrated (using audio files for example). Some track can be used to control virtual instruments: in that case we record the sound that is generated internally by these virtual instruments (and played using a MIDI piano keyboard, for example). 
+
+Tracks can be added or removed, played isolated or with other tracks. They can also be "armed" for recording, and when the recording starts, all other tracks will play along, while the armed track will record new content. 
+
+Wam-Studio can host [WAM plugins](https://github.com/webaudiomodules) and in particular [Faust ones](https://github.com/webaudiomodules/wam-examples), which can be built following [this tutorial](https://docs.google.com/document/d/1HDEm4m_cD47YBuDilzGYiANYQDktj56Njyv0umGYO6o/edit#heading=h.lhqrbk1zktwy). 
+
 ## [SNES Echo Simulator](https://github.com/nyanpasu64-backup/snes-echo)
 
-<div><a href="https://github.com/nyanpasu64-backup/snes-echo"><img width="70%" class="mx-auto d-block" src="img/snes-echo.png"></a> </div>
+<div><a href="https://github.com/nyanpasu64-backup/snes-echo"><img width="60%" class="mx-auto d-block" src="img/snes-echo.png"></a> </div>
 
 SNES Echo is an cross-platform audio processing plugin, written in Faust. It simulates the SNES SPC700 DSP reverb/echo effect. This plugin does not strive for bit-accuracy and overflow handling, but instead being audibly indistinguishable for "normal" SPCs.
 
