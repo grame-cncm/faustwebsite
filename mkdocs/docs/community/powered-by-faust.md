@@ -3,6 +3,12 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins or standalone applications, integration in audio programming environments, development tools, commercial applications, research projects (possibly non musical), embedded devices, Web applications, etc.
 
 
+## [RCVerb ("ReaClassical Verb")](https://github.com/chmaha/RCverb)
+
+<div><a href="https://github.com/chmaha/RCverb"><img width="80%" class="mx-auto d-block" src="img/RCVerb.png"></a> </div>
+
+A reverb suitable for classical music based on zita-rev1. Available as LV2 and CLAP by default (with optional VST3, VST2 and LADSPA).
+
 ## [Wam-Studio](https://github.com/Brotherta/wam-studio)
 
 <div><a href="https://github.com/Brotherta/wam-studio"><img width="60%" class="mx-auto d-block" src="img/wam-studio.jpg"></a> </div>
