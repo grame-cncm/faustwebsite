@@ -7,7 +7,7 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 <div><a href="https://github.com/chmaha/RCverb"><img width="80%" class="mx-auto d-block" src="img/RCVerb.png"></a> </div>
 
-A reverb suitable for classical music based on zita-rev1. Available as LV2 and CLAP by default (with optional VST3, VST2 and LADSPA).
+A reverb suitable for classical music based on zita-rev1. Available as LV2 and CLAP by default (with optional VST3, VST2 and LADSPA). This plugin is part of the [ReaClassical](https://chmaha.github.io/ReaClassical/) project along with [RCComp ("ReaClassical Compressor")](https://github.com/chmaha/RCComp) and [Enover (RCVerb's big sister)](https://github.com/chmaha/Enover) additionals plugins, also written in Faust. 
 
 ## [Wam-Studio](https://github.com/Brotherta/wam-studio)
 
