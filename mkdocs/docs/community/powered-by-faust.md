@@ -2,6 +2,12 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins or standalone applications, integration in audio programming environments, development tools, commercial applications, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [EnvelopForLive](https://github.com/EnvelopSound/EnvelopForLive)
+
+<div><a href="https://github.com/EnvelopSound/EnvelopForLive"><img width="60%" class="mx-auto d-block" src="img/E4L-banner.png"></a> </div>
+
+The nonprofit mission of [Envelop](http://envelop.us) is to connect and inspire community through immersive listening. Our [listening spaces](https://envelop.us/page/listening-spaces) envelop the audience in pristine 3D sound, amplifying the power of music and nurturing our ability to listen together. Some Max/MSP externals are [written in Faust](https://github.com/EnvelopSound/EnvelopForLive/tree/master/externals).
+
 
 ## [RCVerb ("ReaClassical Verb")](https://github.com/chmaha/RCverb)
 
