@@ -4,7 +4,7 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 ## [FaustSynth](https://github.com/RealAlexZ/FaustSynth)
 
-<div><a href="https://github.com/RealAlexZ/FaustSynth"><img width="50%" class="mx-auto d-block" src="img/FaustSynth.jpg"></a> </div>
+<div><a href="https://github.com/RealAlexZ/FaustSynth"><img width="40%" class="mx-auto d-block" src="img/FaustSynth.jpg"></a> </div>
 
 Welcome to FaustSynth, a AU/VST monophonic synthesizer built with the Faust programming language. This is the project deliverable for PAT 481: Independent Study in Fall 2023.
 
