@@ -2,6 +2,16 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins or standalone applications, integration in audio programming environments, development tools, commercial applications, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [lamb](https://github.com/magnetophon/lamb-rs)
+
+<div><a href="https://github.com/magnetophon/lamb-rs"><img width="20%" class="mx-auto d-block" src="img/lamb.png"></a> </div>
+
+A lookahead compressor/limiter that's soft as a lamb, written in Faust and Rust. Lamb was made with these goals in mind:
+
+- Be as clean as possible
+- Give the user full control over the character with the minimum amount of knobs.
+
+
 ## [FaustSynth](https://github.com/RealAlexZ/FaustSynth)
 
 <div><a href="https://github.com/RealAlexZ/FaustSynth"><img width="40%" class="mx-auto d-block" src="img/FaustSynth.jpg"></a> </div>
