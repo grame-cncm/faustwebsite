@@ -2,6 +2,13 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins or standalone applications, integration in audio programming environments, development tools, commercial applications, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [LICH](https://www.befaco.org/lich/)
+
+<div><a href="https://www.befaco.org/lich/"><img width="25%" class="mx-auto d-block" src="img/lich.png"></a> </div>
+
+Technology OWL platform that allows you to use Pure Data, Max Gen or Faust code into your module!. Lich is a Befaco Rebel collaboration that brings back Owl’s platform with this new hardware iteration. It has stereo in and out, four pot controls summed to cv inputs (like the classic Owl module) And as addition, CV and Gate outputs, patch selection with display and USB MIDI host and device connections.
+
+
 ## [lamb](https://github.com/magnetophon/lamb-rs)
 
 <div><a href="https://github.com/magnetophon/lamb-rs"><img width="20%" class="mx-auto d-block" src="img/lamb.png"></a> </div>
