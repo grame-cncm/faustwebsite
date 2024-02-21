@@ -59,18 +59,47 @@ Check out Faust [papers and reports](https://hal.science/search/index/?q=GRAME+F
 
 ## Faust News
 
+### **>>** February 21, 2024: GRAME has been selected as a Google Summer of Code 2024 mentor organization
+
+<center>
+<div><a href="https://summerofcode.withgoogle.com"><img  width="50%" class="mx-auto d-block" src="img/gsoc-logo.png"></a>  </div>
+</center>
+
+[Google Summer of Code](https://summerofcode.withgoogle.com) is a global, online program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ week programming project under the guidance of mentors. For the third consecutive year, GRAME has been [selected as a  mentor organization](https://summerofcode.withgoogle.com/programs/2024/organizations/grame) for the Faust project. 
+
 ### **>>** December 02, 2023: Programmable Audio Workshop (PAW-23) 
 
 The 6th edition of Programmable Audio Workshop (PAW) will be held on December 2rd at the Marie Curie Library of INSA Lyon (France) on the La Doua campus and is organised by the [Emeraude](https://team.inria.fr/emeraude/) INRIA/INSA/GRAME-CNCM team. This year's theme is "Artificial intelligence and audio programming languages", with a strong focus on computer-aided music languages (Faust, ChucK, and PureData).
 
 Full program, details of the talks and registration on the [PAW website](https://paw.grame.fr).
 
-
 ### **>>** September 09, 2023: faust-web-component released !
 
+<!--
 <center>
 <div><a href="https://github.com/grame-cncm/faust-web-component"><img  width="75%" class="mx-auto d-block" src="img/faust-editor.png"></a>  </div>
 </center>
+-->
+
+<!-- Empty line (spacer) -->
+<div style="height: 20px;"></div>
+
+<div style="width: 80%; margin: auto;">
+<faust-editor style="font-size: 90%;"><!--
+import("stdfaust.lib"); 
+
+vol = hslider("volume [unit:dB]", -10, -96, 0, 0.1) : ba.db2linear : si.smoo; 
+freq1 = hslider("freq1 [unit:Hz]", 800, 20, 3000, 1); 
+freq2 = hslider("freq2 [unit:Hz]", 200, 20, 3000, 1); 
+
+process = vgroup("Oscillator", os.osc(freq1) * vol, os.osc(freq2) * vol);
+--></faust-editor>
+</div>
+
+<!-- Empty line (spacer) -->
+<div style="height: 20px;"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@grame/faust-web-component@0.2.36/dist/faust-web-component.js"></script>
 
 Result of [Ian Clester](https://ijc8.me/2023/08/27/gsoc-faust/) Google Summer of Code project, the [faust-web-component](https://github.com/grame-cncm/faust-web-component) package provides two web components for embedding interactive Faust snippets in web pages:
 
@@ -90,7 +119,6 @@ These components are built on top of [faustwasm](https://github.com/grame-cncm/f
 The [faust2rnbo](https://github.com/grame-cncm/faust/tree/master-dev/architecture/max-msp#faust2rnbo) tool transforms a Faust DSP program into a [RNBO](https://rnbo.cycling74.com) patch containing a rnbo~ object and including the codebox code as a subpatch. The  tool has been deployed on the Faust remote compilation service, to be used from the [Faust Web IDE](https://faustide.grame.fr).
 
 All is explained in [Using Faust in RNBO with codebox~](https://faustdoc.grame.fr/tutorials/rnbo/) tutorial and can be used with the just released [Max 8.5.6 version](https://cycling74.com/forums/max-856-released).
-
 
 ### **>>** August 28, 2023: Google Summer of Code projects finished
 
@@ -153,13 +181,11 @@ This year first price is Keith Bexter with the [Zen Flute](https://www.youtube.c
 
 [Google Summer of Code](https://summerofcode.withgoogle.com) is a global, online program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ week programming project under the guidance of mentors. For the second consecutive year, GRAME has been [selected as a  mentor organization](https://summerofcode.withgoogle.com/programs/2023/organizations/grame) for the Faust project. 
 
-
 ### **>>** December 03, 2022: Programmable Audio Workshop (PAW-22) 
 
 The 5th edition of Programmable Audio Workshop (PAW) will be held on December 3rd at the CITI laboratory of INSA Lyon on the La Doua campus. It will be organized this year by the [EMERAUDE](https://team.inria.fr/emeraude/) (Embedded Programmable Audio Systems) team created in 2022 and associating INSA-Lyon, INRIA and GRAME. With 7 conferences in the morning and 4 workshops in the afternoon, PAW addresses this year the theme of networked embedded audio systems, with a particular focus on spatialized sound and FPGAs (Field-Programmable Gate Arrays).
 
 Full program, details of the talks and registration on the [PAW website](https://paw.grame.fr).
-
 
 ### **>>** October 13, 2022: Google Summer of Code project finished
 

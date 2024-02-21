@@ -199,13 +199,41 @@
 <p>Check out Faust <a href="https://hal.science/search/index/?q=GRAME+FAUST&amp;rows=30&amp;page=3">papers and reports</a> on <a href="https://hal.science/">HAL</a>.</p>
 <hr />
 <h2 id="faust-news">Faust News</h2>
+<h3 id="february-21-2024-grame-has-been-selected-as-a-google-summer-of-code-2024-mentor-organization"><strong>&gt;&gt;</strong> February 21, 2024: GRAME has been selected as a Google Summer of Code 2024 mentor organization</h3>
+<p><center></p>
+<div><a href="https://summerofcode.withgoogle.com"><img  width="50%" class="mx-auto d-block" src="img/gsoc-logo.png"></a>  </div>
+<p></center></p>
+<p><a href="https://summerofcode.withgoogle.com">Google Summer of Code</a> is a global, online program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ week programming project under the guidance of mentors. For the third consecutive year, GRAME has been <a href="https://summerofcode.withgoogle.com/programs/2024/organizations/grame">selected as a  mentor organization</a> for the Faust project. </p>
 <h3 id="december-02-2023-programmable-audio-workshop-paw-23"><strong>&gt;&gt;</strong> December 02, 2023: Programmable Audio Workshop (PAW-23)</h3>
 <p>The 6th edition of Programmable Audio Workshop (PAW) will be held on December 2rd at the Marie Curie Library of INSA Lyon (France) on the La Doua campus and is organised by the <a href="https://team.inria.fr/emeraude/">Emeraude</a> INRIA/INSA/GRAME-CNCM team. This year's theme is "Artificial intelligence and audio programming languages", with a strong focus on computer-aided music languages (Faust, ChucK, and PureData).</p>
 <p>Full program, details of the talks and registration on the <a href="https://paw.grame.fr">PAW website</a>.</p>
 <h3 id="september-09-2023-faust-web-component-released"><strong>&gt;&gt;</strong> September 09, 2023: faust-web-component released !</h3>
-<p><center></p>
+<!--
+<center>
 <div><a href="https://github.com/grame-cncm/faust-web-component"><img  width="75%" class="mx-auto d-block" src="img/faust-editor.png"></a>  </div>
-<p></center></p>
+</center>
+-->
+
+<!-- Empty line (spacer) -->
+<div style="height: 20px;"></div>
+
+<div style="width: 80%; margin: auto;">
+<faust-editor style="font-size: 90%;"><!--
+import("stdfaust.lib"); 
+
+vol = hslider("volume [unit:dB]", -10, -96, 0, 0.1) : ba.db2linear : si.smoo; 
+freq1 = hslider("freq1 [unit:Hz]", 800, 20, 3000, 1); 
+freq2 = hslider("freq2 [unit:Hz]", 200, 20, 3000, 1); 
+
+process = vgroup("Oscillator", os.osc(freq1) * vol, os.osc(freq2) * vol);
+--></faust-editor>
+</div>
+
+<!-- Empty line (spacer) -->
+<div style="height: 20px;"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@grame/faust-web-component@0.2.36/dist/faust-web-component.js"></script>
+
 <p>Result of <a href="https://ijc8.me/2023/08/27/gsoc-faust/">Ian Clester</a> Google Summer of Code project, the <a href="https://github.com/grame-cncm/faust-web-component">faust-web-component</a> package provides two web components for embedding interactive Faust snippets in web pages:</p>
 <ul>
 <li>
@@ -438,5 +466,5 @@ Great birthday present for the 20th anniversary of the Faust language! Developed
 
 <!--
 MkDocs version : 1.4.3
-Build Date UTC : 2024-02-06 19:25:31.467266+00:00
+Build Date UTC : 2024-02-21 16:48:41.873655+00:00
 -->
