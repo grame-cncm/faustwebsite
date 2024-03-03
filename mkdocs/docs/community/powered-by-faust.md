@@ -2,6 +2,24 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins or standalone applications, integration in audio programming environments, development tools, commercial applications, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+
+## [ambient.garden](https://github.com/pac-dev/AmbientGarden)
+
+<div><a href="https://github.com/pac-dev/AmbientGarden"><img width="70%" class="mx-auto d-block" src="img/ambient-garden.jpg"></a> </div>
+
+[ambient.garden](https://ambient.garden/) is a musical landscape in a website, developed using [Teasynth](https://github.com/pac-dev/Teasynth). All the music in ambient.garden is generated from code. The music is then laid out in a landscape which can be explored, either interactively, or automatically when the autopilot is left on. 
+
+
+## [Teasynth](https://github.com/pac-dev/Teasynth)
+
+<div><a href="https://github.com/pac-dev/Teasynth/"><img width="70%" class="mx-auto d-block" src="img/Teasynth.png"></a> </div>
+
+Teasynth is a tool to make music with code in Javascript, [Faust](https://faust.grame.fr/) and [Sporth](https://paulbatchelor.github.io/proj/sporth.html). There are two main ways of using it:
+
+- The **web editor** runs in the browser and provides an instant composition environment.
+- The **command line interface** can render music to audio files, serve the editor locally, and bundle music code.
+
+
 ## [LICH](https://www.befaco.org/lich/)
 
 <div><a href="https://www.befaco.org/lich/"><img width="25%" class="mx-auto d-block" src="img/lich.png"></a> </div>
