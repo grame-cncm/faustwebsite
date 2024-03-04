@@ -3,6 +3,11 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins or standalone applications, integration in audio programming environments, development tools, commercial applications, research projects (possibly non musical), embedded devices, Web applications, etc.
 
 
+## [Nih Faust Stereo Fx Jit](https://github.com/YPares/nih_faust_stereo_fx_jit)
+
+A plugin to load Faust dsp files and JIT-compile them with LLVM. A simple GUI is provided to select which script to load and where to look for the Faust libraries that this script may import. The selected DSP script is saved as part of the plugin state and therefore is saved with your DAW project [WIP].
+
+
 ## [ambient.garden](https://github.com/pac-dev/AmbientGarden)
 
 <div><a href="https://github.com/pac-dev/AmbientGarden"><img width="70%" class="mx-auto d-block" src="img/ambient-garden.jpg"></a> </div>
