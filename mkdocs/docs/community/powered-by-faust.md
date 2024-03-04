@@ -12,7 +12,7 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 ## [Teasynth](https://github.com/pac-dev/Teasynth)
 
-<div><a href="https://github.com/pac-dev/Teasynth/"><img width="70%" class="mx-auto d-block" src="img/Teasynth.png"></a> </div>
+<div><a href="https://github.com/pac-dev/Teasynth/"><img width="60%" class="mx-auto d-block" src="img/Teasynth.png"></a> </div>
 
 Teasynth is a tool to make music with code in Javascript, [Faust](https://faust.grame.fr/) and [Sporth](https://paulbatchelor.github.io/proj/sporth.html). There are two main ways of using it:
 
