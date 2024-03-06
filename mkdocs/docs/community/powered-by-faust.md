@@ -97,7 +97,7 @@ An interactive granular texture synthesiser built in TouchDesigner, utilising re
 
 <div><a href="https://inria.hal.science/hal-04093045/document"><img width="60%" class="mx-auto d-block" src="img/reflex-in.png"></a> </div>
 
-Reflex-in is a sound installation that uses brain-wave streams to create music composition within the Web environment in real time. The work incorporates various state-of-the-art Web technologies, including Web Audio, WebSocket, WebAssembly, and WebGL. The music generated from the algorithm - mapping brain wave signal to musical events - aims to produce a form of furniture music that is relaxing and meditative, possibly therapeutic. The synthesizer part is created from Faust DSP. 
+Reflex-in is a sound installation that uses brain-wave streams to create music composition within the Web environment in real time. The work incorporates various state-of-the-art Web technologies, including Web Audio, WebSocket, WebAssembly, and WebGL. The music generated from the algorithm - mapping brain wave signal to musical events - aims to produce a form of furniture music that is relaxing and meditative, possibly therapeutic. The synthesizer part is created from Faust DSP and the installation can be [tested here](https://jspat.shren.site/dist/?projectZip=https://static.shren.site/reflex-in/project.zip&file=main.jspat&runtime=1). 
 
 ## [FaustCGP](https://git.sr.ht/~led/faustcgp)
 
