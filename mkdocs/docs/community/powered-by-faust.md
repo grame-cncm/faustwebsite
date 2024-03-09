@@ -5,7 +5,7 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 ## [MOD Audio](https://mod.audio/)
 
-<div><a href="https://github.com/pac-dev/AmbientGarden"><img width="50%" class="mx-auto d-block" src="img/mod-audio.jpg"></a> </div>
+<div><a href="https://github.com/pac-dev/AmbientGarden"><img width="60%" class="mx-auto d-block" src="img/mod-audio.jpg"></a> </div>
 
 The compact and powerful standalone guitar effects ecosystem to express your creativity at home, in the studio and on stage, which can be programmed [with Faust](http://builder.mod.audio). 
 
