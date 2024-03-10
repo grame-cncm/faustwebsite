@@ -1499,7 +1499,7 @@ Snd-RT is the realtime extension for the sound editor SND and consists of two pa
 
 <a href="http://guitarix.org/"><img class="mx-auto d-block" src="img/guitarix.jpg" alt="Card image cap"></a>
 
-An audio plug-in for guitar effects who's sound processing engine is written in Faust.
+An audio plug-in for guitar effects whose sound processing engine is written in Faust.
 
 ## [moForte GeoShred](http://www.moforte.com/)
 
