@@ -10,8 +10,7 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 The compact and powerful standalone guitar effects ecosystem to express your creativity at home, in the studio and on stage, which can be programmed [with Faust](http://builder.mod.audio). 
 
 
-
-## [Nih Faust Stereo Fx Jit](https://github.com/YPares/nih_faust_stereo_fx_jit)
+## [nih-faust-jit](https://github.com/YPares/nih-faust-jit)
 
 A plugin to load Faust dsp files and JIT-compile them with LLVM. A simple GUI is provided to select which script to load and where to look for the Faust libraries that this script may import. The selected DSP script is saved as part of the plugin state and therefore is saved with your DAW project [WIP].
 
