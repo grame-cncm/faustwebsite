@@ -2,6 +2,13 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins or standalone applications, integration in audio programming environments, development tools, commercial applications, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [OneTrick KEYS](https://punklabs.com/ot-keys)
+
+<div><a href="https://punklabs.com/ot-keys"><img width="50%" class="mx-auto d-block" src="img/ot-keys.png"></a> </div>
+
+A physically modeled piano synth with a chill lo-fi sound. It uses a vintage algorithm developed at Stanford in 1995 called "Commuted Piano Synthesis", and runs that through studio reverb, vinyl or tape noise, flutter, bitcrushing, and saturation. 
+
+The project is using Rust and the Faust to Rust backend, and the source code [is available](https://punklabs.com/content/projects/ot-keys/downloads/OneTrickKEYS-Source-v1.0.0.zip). 
 
 ## [MOD Audio](https://mod.audio/)
 
