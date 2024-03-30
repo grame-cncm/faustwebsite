@@ -157,7 +157,6 @@ const pubdiv = document.getElementById("publications");
 if (pubdiv) {
     let menu = getMenu("menuholder");
     const url = "https://api.archives-ouvertes.fr/search/FAUST"
-    //const url = "https://api.archives-ouvertes.fr/search/index?q=FAUST"
     const options = "indent=true&wt=json&rows=2000&fl=*&sort=publicationDateY_i%20desc";
     getPublications(url + "?" + options)
         .then((result) => { display(result, pubdiv, menu); })
