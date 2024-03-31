@@ -1322,9 +1322,9 @@ DawDreamer is an audio-processing Python framework supporting core [DAW](https:/
 
 TD-Faust enables Faust code to run inside [TouchDesigner](https://derivative.ca). Follow the [demo here](https://www.youtube.com/watch?v=0qi2lp_TgE0).
 
-## [Mephisto LV2](https://open-music-kontrollers.ch/lv2/mephisto/)
+## [Mephisto LV2](https://git.open-music-kontrollers.ch/~hp/mephisto.lv2)
 
-<a href="https://open-music-kontrollers.ch/lv2/mephisto/"><img width="40%" class="mx-auto d-block" src="img/mephisto-lv2.png"></a>
+<a href="https://git.open-music-kontrollers.ch/~hp/mephisto.lv2"><img width="40%" class="mx-auto d-block" src="img/mephisto-lv2.png"></a>
 
 Mephisto LV2 a Just-in-Time Faust compiler embedded in an LV2 plugin. Write LV2 audio/cv instruments/filters directly in your host in Faust DSP language without any need to restart/reload host or plugin upon code changes.
 
