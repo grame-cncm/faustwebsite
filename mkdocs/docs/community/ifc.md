@@ -14,7 +14,7 @@ The fourth edition of the International Faust Conference ([IFC-24](https://ifc24
 
 ### IFC-22 - June 7-8, 2022 - During SMC-22 at St-Etienne (France)
 
-The third edition of the International Faust Conference (IFC-22) took place during [SMC-22](https://smc22.grame.fr) at St-Etienne (France) on June 7-8, 2022.  
+The third edition of the International Faust Conference (IFC-22) took place during [SMC-22](https://smc22.grame.fr) at St-Etienne (France) on June 7-8, 2022, with [morning recording](https://www.youtube.com/watch?v=F1emcDpbhPU) and [afternoon recording](https://www.youtube.com/watch?v=LVnSSmu5g9g).
 
 ### IFC-20 - MSH Paris Nord Saint-Denis (France)
 
