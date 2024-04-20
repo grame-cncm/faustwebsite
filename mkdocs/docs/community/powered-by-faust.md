@@ -2,6 +2,15 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins or standalone applications, integration in audio programming environments, development tools, commercial applications, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+
+## [polyBLEP HOLE](https://patchstorage.com/polyblep-hole/)
+
+<div><a href="https://patchstorage.com/polyblep-hole/"><img width="50%" class="mx-auto d-block" src="img/polyblep-hole.jpg"></a> </div>
+
+A Faust collection of externals for Pure Data stuck together on the [Organelle](https://www.critterandguitari.com/organelle). The polyBLEPs are the work of Jacek Wieczorek.
+v1.1 triples the oscillators as sounded a bit thin. The greyhold reverb is immense.
+
+
 ## [OneTrick KEYS](https://punklabs.com/ot-keys)
 
 <div><a href="https://punklabs.com/ot-keys"><img width="50%" class="mx-auto d-block" src="img/ot-keys.png"></a> </div>
