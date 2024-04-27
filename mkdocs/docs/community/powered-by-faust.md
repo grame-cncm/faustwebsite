@@ -2,6 +2,11 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins or standalone applications, integration in audio programming environments, development tools, commercial applications, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [Faust in Cables.jl](https://av.tib.eu/media/67445)
+
+<div><a href="https://av.tib.eu/media/67445"><img width="50%" class="mx-auto d-block" src="img/faust-cables.jpg"></a> </div>
+
+Explore the dynamic integration of the Faust audio library within Cables in this video. This segment delves into the intricacies of generating rich audio experiences on the web, leveraging Faust's advanced capabilities for real-time audio synthesis with synthesizers and oscillators. Discover how to seamlessly compile, modify, and visualize audio within Cables, enhancing your projects with intricate audio-visual synchronization and interactive controls, inviting viewers to contribute and experiment with this powerful tool.
 
 ## [polyBLEP HOLE](https://patchstorage.com/polyblep-hole/)
 
