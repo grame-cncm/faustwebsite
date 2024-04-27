@@ -2,7 +2,7 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins or standalone applications, integration in audio programming environments, development tools, commercial applications, research projects (possibly non musical), embedded devices, Web applications, etc.
 
-## [Faust in Cables.jl](https://av.tib.eu/media/67445)
+## [Faust in Cables.gl](https://av.tib.eu/media/67445)
 
 <div><a href="https://av.tib.eu/media/67445"><img width="50%" class="mx-auto d-block" src="img/faust-cables.jpg"></a> </div>
 
