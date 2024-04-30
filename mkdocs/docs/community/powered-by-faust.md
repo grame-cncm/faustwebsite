@@ -4,7 +4,7 @@ This page lists the projects using Faust in different ways: musical pieces or ar
 
 ## [MeshEditor](https://github.com/khiner/MeshEditor)
 
-<div><a href="https://github.com/khiner/MeshEditor"><img width="50%" class="mx-auto d-block" src="img/MeshEditor.png"></a> </div>
+<div><a href="https://github.com/khiner/MeshEditor"><img width="50%" class="mx-auto d-block" src="img/MeshEditor.jpg"></a> </div>
 
 Real-time mesh viewer and editor, using Vulkan and ImGui, and in-progress rigid body audio model, using Faust to render an object audio model to an audio graph.
 
