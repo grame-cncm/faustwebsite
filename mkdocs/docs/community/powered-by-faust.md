@@ -2,6 +2,14 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins or standalone applications, integration in audio programming environments, development tools, commercial applications, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+
+## [elysiera](https://github.com/azur1s/elysiera?tab=readme-ov-file)
+
+<div><a href="https://github.com/azur1s/elysiera?tab=readme-ov-file"><img width="60%" class="mx-auto d-block" src="img/elysiera.png"></a> </div>
+
+(VST3/CLAP) A shimmer reverb plugin. Made with nih-plug, egui and Faust.
+
+
 ## [MeshEditor](https://github.com/khiner/MeshEditor)
 
 <div><a href="https://github.com/khiner/MeshEditor"><img width="50%" class="mx-auto d-block" src="img/MeshEditor.jpg"></a> </div>
