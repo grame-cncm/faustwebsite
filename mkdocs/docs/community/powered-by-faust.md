@@ -2,6 +2,18 @@
 
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins or standalone applications, integration in audio programming environments, development tools, commercial applications, research projects (possibly non musical), embedded devices, Web applications, etc.
 
+## [MeshEditor](https://github.com/khiner/MeshEditor)
+
+<div><a href="https://github.com/khiner/MeshEditor"><img width="50%" class="mx-auto d-block" src="img/MeshEditor.png"></a> </div>
+
+Real-time mesh viewer and editor, using Vulkan and ImGui, and in-progress rigid body audio model, using Faust to render an object audio model to an audio graph.
+
+## [FlowGrid](https://github.com/khiner/flowgrid)
+
+<div><a href="https://github.com/khiner/flowgrid"><img width="50%" class="mx-auto d-block" src="img/flowgrid.png"></a> </div>
+
+FlowGrid is an immediate-mode interface for Faust (functional audio language) programs. The full project state is backed by a persistent (as in persistent data structures) store supporting constant-time navigation to any point in project history.
+
 ## [Faust in Cables.gl](https://av.tib.eu/media/67445)
 
 <div><a href="https://av.tib.eu/media/67445"><img width="50%" class="mx-auto d-block" src="img/faust-cables.jpg"></a> </div>
