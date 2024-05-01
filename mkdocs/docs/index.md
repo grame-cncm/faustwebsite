@@ -67,13 +67,13 @@ Check out Faust [papers and reports](https://hal.science/search/index/?q=GRAME+F
 
 Four projects have finally been attributed to GRAME:
 
-- **FaustNet - DDSP** aims at continuing the work done on adding automatic differentiation in Faust (started in a GSOC 2023 project), to leverage machine learning for audio processing tasks directly within the familiar Faust environment. It will be worked on by **Advik Raj Basani**.
+- **FaustNet - DDSP** aims to continue the work done on adding automatic differentiation in Faust (started in a GSOC 2023 project), to leverage machine learning for audio processing tasks directly within the familiar Faust environment. It will be worked on by **Advik Raj Basani**.
 
-- **Faust in Cables.gl** This project aims to develop a Cables.gl plugin that compiles Faust DSP code into a WASM AudioWorklet in real-time. It will be worked on by **Fay Carsons**.
+- **Faust in Cables.gl** aims to develop a Cables.gl plugin that compiles Faust DSP code into a WASM AudioWorklet in real-time. It will be worked on by **Fay Carsons**.
 
-- **Amati++, a VST/CLAP Plugin embedding the dynamic compiler** Inspired by the pMix and Amati projects, this plugin will be built using the JUCE framework for the interface and libfaust with LLVM and interpreter backend API to compile Faust code. It will be worked on by **Jingge Li**.
+- **Amati++, a VST/CLAP Plugin embedding the dynamic compiler** is inspired by the pMix and Amati projects, this plugin will be built using the JUCE framework for the interface and libfaust with LLVM and interpreter backend API to compile Faust code. It will be worked on by **Jingge Li**.
 
-- **Faust Package Manager** This project aims at adding a packaging system to facilitate the integration of Faust libraries in a DSP project. It will be worked on by **Shehab Khaled Roshdy**.
+- **Faust Package Manager** aims to add a packaging system to facilitate the integration of Faust libraries in a DSP project. It will be worked on by **Shehab Khaled Roshdy**.
 
 Welcome to the Faust Community !
 
