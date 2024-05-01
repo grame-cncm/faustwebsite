@@ -75,7 +75,7 @@ Four projects have finally been attributed to GRAME:
 
 - **Faust Package Manager** This project aims at adding a packaging system to facilitate the integration of Faust libraries in a DSP project. It will be worked on by **Shehab Khaled Roshdy**.
 
-Welcome people in the Faust community !
+Welcome to the Faust Community !
 
 
 ### **>>** February 21, 2024: GRAME has been selected as a Google Summer of Code 2024 mentor organization
