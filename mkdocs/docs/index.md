@@ -59,6 +59,25 @@ Check out Faust [papers and reports](https://hal.science/search/index/?q=GRAME+F
 
 ## Faust News
 
+### **>>** May 01, 2024: Four Google Summer of Code projects attributed
+
+<center>
+<div><a href="https://summerofcode.withgoogle.com"><img  width="50%" class="mx-auto d-block" src="img/gsoc-logo.png"></a>  </div>
+</center>
+
+Four projects have finally been attributed to GRAME:
+
+- **FaustNet - DDSP** aims at continuing the work done on adding automatic differentiation in Faust (started in a GSOC 2023 project), to leverage machine learning for audio processing tasks directly within the familiar Faust environment. It will be worked on by **Advik Raj Basani**.
+
+- **Faust in Cables.gl** This project aims to develop a Cables.gl plugin that compiles Faust DSP code into a WASM AudioWorklet in real-time. It will be worked on by **Fay Carsons**.
+
+- **Amati++, a VST/CLAP Plugin embedding the dynamic compiler** Inspired by the pMix and Amati projects, this plugin will be built using the JUCE framework for the interface and libfaust with LLVM and interpreter backend API to compile Faust code. It will be worked on by **Jingge Li**.
+
+- **Faust Package Manager** This project aims at adding a packaging system to facilitate the integration of Faust libraries in a DSP project. It will be worked on by **Shehab Khaled Roshdy**.
+
+Welcome people in the Faust community !
+
+
 ### **>>** February 21, 2024: GRAME has been selected as a Google Summer of Code 2024 mentor organization
 
 <center>
@@ -126,7 +145,7 @@ All is explained in [Using Faust in RNBO with codebox~](https://faustdoc.grame.f
 <div><a href="https://summerofcode.withgoogle.com"><img  width="50%" class="mx-auto d-block" src="img/gsoc-logo.png"></a>  </div>
 </center>
 
-- **Automatic Differentiation in the Faust Compiler** aimed at adding Automatic differentiation directly in the compiler, so that gradient calculation can be carried out natively in Faust, with applications in Machine Learning algorithms. The project was worked  by [Thomas Rushton](https://github.com/hatchjaw) and completed with this [Pull Request](https://github.com/grame-cncm/faust/pull/939), and finally integrated in the Faust [master-branch](https://github.com/grame-cncm/faust/commit/681a303b8ddc9ef2e67c2cc5d5df83f27323b865). 
+- **Automatic Differentiation in the Faust Compiler** aimed at adding automatic differentiation directly in the compiler, so that gradient calculation can be carried out natively in Faust, with applications in Machine Learning algorithms. The project was worked  by [Thomas Rushton](https://github.com/hatchjaw) and completed with this [Pull Request](https://github.com/grame-cncm/faust/pull/939), and finally integrated in the Faust [master-branch](https://github.com/grame-cncm/faust/commit/681a303b8ddc9ef2e67c2cc5d5df83f27323b865). 
 
 - **Better Faust on the Web** aimed at enhancing Faust’s support for the web platform, and was worked on by [Ian Clester](https://ijc8.me/). Transitioning the Faust web tools to a rewritten TypeScript version has been completed and deployed in updated versions of the [Faust editor](https://fausteditor.grame.fr) and [Faust playground](https://faustplayground.grame.fr) and soon in the [Faust Web IDE](https://faustide.grame.fr) with this [Pull Request](https://github.com/grame-cncm/faustide/pull/72). A Faust web component embedding the libfaust JS/WebAssembly compiler has been [developed](https://github.com/ijc8/faust-web-component) and will be used soon in the [Faust documentation](https://faustdoc.grame.fr). The development is fully detailed in this [blog post](https://ijc8.me/2023/08/27/gsoc-faust/). 
 
@@ -157,7 +176,7 @@ And even the [following one](https://www.youtube.com/live/fqWL2Qj5eSQ?feature=sh
 
 Two projects have finally been attributed to GRAME:
 
-- **Automatic Differentiation in the Faust Compiler** aims at adding Automatic differentiation directly in the compiler, so that gradient calculation can be carried out natively in Faust, with applications in Machine Learning algorithms. The project will be worked on by [Thomas Rushton](https://github.com/hatchjaw).
+- **Automatic Differentiation in the Faust Compiler** aims at adding automatic differentiation directly in the compiler, so that gradient calculation can be carried out natively in Faust, with applications in Machine Learning algorithms. The project will be worked on by [Thomas Rushton](https://github.com/hatchjaw).
 
 - **Better Faust on the Web** aims at enhancing Faust’s support for the web platform: transition the Faust web tools to a rewritten TypeScript version, extend the Faust Web IDE, enhance Faust’s online documentation, and prototype an experimental platform for sharing Faust code on the web. The project will be worked on by [Ian Clester](https://ijc8.me/).
 
