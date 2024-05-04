@@ -84,7 +84,7 @@ Technology OWL platform that allows you to use Pure Data, Max Gen or Faust code 
 
 ## [lamb](https://github.com/magnetophon/lamb-rs)
 
-<div><a href="https://github.com/magnetophon/lamb-rs"><img width="60%" class="mx-auto d-block" src="img/lamb.png"></a> </div>
+<div><a href="https://github.com/magnetophon/lamb-rs"><img width="60%" class="mx-auto d-block" src="https://raw.githubusercontent.com/magnetophon/lamb-rs/main/images/lamb.png"></a> </div>
 
 A lookahead compressor/limiter that's soft as a lamb, written in Faust and Rust. Lamb was made with these goals in mind:
 
