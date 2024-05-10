@@ -3,6 +3,12 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins or standalone applications, integration in audio programming environments, development tools, commercial applications, research projects (possibly non musical), embedded devices, Web applications, etc.
 
 
+## [Noisy2](https://www.expressivee.com/88-noisy-two)
+
+<div><a href="https://www.expressivee.com/88-noisy-two"><img width="55%" class="mx-auto d-block" src="img/Noisy2.png"></a> </div>
+
+Noisy 2 merges acoustic and analog resonators into lively sounds. Built for MPE and expression, this synth makes sound design more fun. Modal synthesis comes to Noisy 2 with four new acoustic resonators. The Noise block has also evolved, offering new, meticulously crafted noise types for broader acoustic horizons. The DSP is written in Faust.
+
 ## [elysiera](https://github.com/azur1s/elysiera?tab=readme-ov-file)
 
 <div><a href="https://github.com/azur1s/elysiera?tab=readme-ov-file"><img width="60%" class="mx-auto d-block" src="img/elysiera.png"></a> </div>
