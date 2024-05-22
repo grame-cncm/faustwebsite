@@ -3,6 +3,13 @@
 This page lists the projects using Faust in different ways: musical pieces or artistic projects, plugins or standalone applications, integration in audio programming environments, development tools, commercial applications, research projects (possibly non musical), embedded devices, Web applications, etc.
 
 
+## [Stratus](https://chaosaudio.com/products/stratus)
+
+<div><a href="hhttps://chaosaudio.com/products/stratus"><img width="55%" class="mx-auto d-block" src="img/Stratus.png"></a> </div>
+
+The compact, all-in-one pedal by [Chaos Audio](https://chaosaudio.com/pages/about-us). Run multiple effects at once, swap between presets, and loop for up to 5 minutes.
+Stratus® features a 5-minute looper, hands-free preset switching, and a wide range of effects options. You can save and load presets, chain up to seven effects, and access new effects through Tone Shop™. Beginners can experiment and learn without breaking the bank. Seasoned performers save space, time, and benefit from advanced options like MIDI control. The pedal can be [programmed with Faust](https://github.com/bassmanitram/faust-stratus/tree/main).
+
 ## [Noisy2](https://www.expressivee.com/88-noisy-two)
 
 <div><a href="https://www.expressivee.com/88-noisy-two"><img width="55%" class="mx-auto d-block" src="img/Noisy2.png"></a> </div>
