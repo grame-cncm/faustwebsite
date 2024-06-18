@@ -71,7 +71,7 @@ Four projects have finally been attributed to GRAME:
 
 - **Faust in Cables.gl** aims to develop a Cables.gl plugin that compiles Faust DSP code into a WASM AudioWorklet in real-time. It will be worked on by **Fay Carsons**.
 
-- **Amati++, a VST/CLAP Plugin embedding the dynamic compiler**, inspired by the pMix and Amati projects, this plugin will be built using the JUCE framework for the interface and libfaust with LLVM and interpreter backend API to compile Faust code. It will be worked on by **Jingge Li**.
+- **Amati++, a VST/CLAP Plugin embedding the dynamic compiler**, inspired by the pMix and Amati projects, this plugin will be built using the JUCE framework for the interface and libfaust with LLVM and interpreter backend API to compile Faust code. It will be worked on by **Tyler Li**.
 
 - **Faust Package Manager** aims to add a packaging system to facilitate the integration of Faust libraries in a DSP project. It will be worked on by **Shehab Khaled Roshdy**.
 
