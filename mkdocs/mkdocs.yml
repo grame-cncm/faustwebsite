@@ -28,7 +28,7 @@ nav:
     - Projects:
         - 'FAST': https://fast.grame.fr
         - 'Amstramgrame': https://amstramgrame.fr/en
-        - 'Progressive Web Applications': https://grame-cncm.github.io/faustpwa/
+        - 'Progressive Web Applications': https://faustpwa.grame.fr
    
     - About: about.md
 
