@@ -26,7 +26,7 @@ Alternatively, you might want to build Faust from scratch. For that you can eith
 
 ## FaustLive
 
-FaustLive is an "on-the-fly" compiler for Faust (see the [overview of the Faust universe](https://faustdoc.grame.fr/manual/overview/) for more information) allowing us to instantly run Faust programs.
+FaustLive is an "on-the-fly" compiler for Faust (see the [overview of the Faust universe](https://faustdoc.grame.fr/manual/overview/) for more information) allowing us to instantly run Faust programs. **Note that FaustLive is regularly recompiled, but is no more developed, so Faust IDE is the recommended tool to use**.  
 
 ### Windows
 
