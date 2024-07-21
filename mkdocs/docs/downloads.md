@@ -58,4 +58,4 @@ Faustgen is a Max/MSP object to compile Faust code dynamically (see the [overvie
 
 ## FaustWorks
 
-FaustWorks is an IDE for the Faust compiler. It is not actively maintained and you should use Faust WEB IDE instead. The source code is available from the [FaustWorks github repository](https://github.com/grame-cncm/faustworks)
+FaustWorks is an IDE for the Faust compiler. **It is not actively maintained and you should use Faust WEB IDE instead**. The source code is available from the [FaustWorks github repository](https://github.com/grame-cncm/faustworks).
