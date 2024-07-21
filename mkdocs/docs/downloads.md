@@ -42,7 +42,7 @@ FaustLive is an "on-the-fly" compiler for Faust (see the [overview of the Faust 
 
 ### Building FaustLive from the Source
 
-Alternatively, you might want to build FaustLive from scratch. For that you can either [get the latest release of the FaustLive source](https://github.com/grame-cncm/faustlive/releases) or [clone it from our GitRepo](https://github.com/grame-cncm/faustlive).
+Alternatively, you might want to build FaustLive from scratch. For that you can either [get the latest release of the FaustLive source](https://github.com/grame-cncm/faustlive/releases) or [clone it here](https://github.com/grame-cncm/faustlive).
 
 ## Faustgen
 
