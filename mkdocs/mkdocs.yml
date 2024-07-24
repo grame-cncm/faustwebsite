@@ -29,7 +29,6 @@ nav:
         - 'FAST': https://fast.grame.fr
         - 'Amstramgrame': https://amstramgrame.fr/en
         - 'Progressive Web Applications': https://faustpwa.grame.fr
-   
     - About: about.md
 
 theme: 
@@ -41,9 +40,15 @@ site_dir: ../docs
 
 extra_css:
    - css/pubs.css
+   - https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css
+   - https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css
+   - https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css
 
 extra_javascript:
    - js/pubs.js
+   - https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js
+   - https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js
+   - js/map.js
 
 extra:
     social:
