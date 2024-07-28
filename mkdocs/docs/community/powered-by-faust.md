@@ -30,6 +30,23 @@ To illustrate the global impact of Faust, a world map showcases all the projects
 
 The following sections provide a detailed list of current projects utilizing Faust. These projects are categorized based on their application areas, showcasing the versatility and wide-reaching impact of Faust in various domains.
 
+### [Accessible musical web applications for individuals with disabilities](https://www.matteoolivo.com/applications_fr.html)
+
+<div><a href="https://www.matteoolivo.com/applications_fr.html"><img width="65%" class="mx-auto d-block" src="img/molivo.jpg"></a> </div>
+
+Series of accessible musical web applications aimed to individuals with intellectual disability and cognitive impairments. The applications are designed for an educational program, based on writing and performing a musical composition evoking a natural soundscape. Their responsive interfaces automatically adapt to all screen sizes; in this way they can be used on all kind of devices (smartphone, laptop, etc.). On mobile devices, some sound parameters of the applications can be controlled by the device movement (through accelerometer mapping). Some applications are also MIDI controllable. 
+
+The applications are developed in JavaScript, using the Web Audio Api, and some DSP are written in Faust and compiled to Web Audio nodes.  
+
+The project, developed by Matteo Olivo, was presented at [SMC 2022](https://smc22.grame.fr) and [SMC 2024](https://smcnetwork.org/smc2024/#programmeOnline). 
+
+                                                            
+
+
+
+
+
+
 
 ### [Stratus](https://chaosaudio.com/products/stratus)
 
