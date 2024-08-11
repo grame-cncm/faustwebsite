@@ -30,6 +30,13 @@ To illustrate the global impact of Faust, a world map showcases all the projects
 
 The following sections provide a detailed list of current projects utilizing Faust. These projects are categorized based on their application areas, showcasing the versatility and wide-reaching impact of Faust in various domains.
 
+### [FaustVST](https://github.com/mikeoliphant/FaustVst)
+
+<div><a href="https://github.com/mikeoliphant/FaustVst"><img width="40%" class="mx-auto d-block" src="img/FaustVST.png"></a> </div>
+
+FaustVst is a VST3 plugin that allows you to dynamically load/compile/edit Faust effects from source dsp files. It is lets you do quick iteration (make a change and reload it nearly instantly), all while running integrated in your DAW. FaustVst uses the faust compiler to create C# code, which is then dynamically compiled into an assembly and run in the plugin.
+
+
 ### [Accessible musical web applications for individuals with disabilities](https://www.matteoolivo.com/applications_fr.html)
 
 <div><a href="https://www.matteoolivo.com/applications_fr.html"><img width="65%" class="mx-auto d-block" src="img/molivo.jpg"></a> </div>
@@ -39,13 +46,6 @@ Series of accessible musical web applications aimed to individuals with intellec
 The applications are developed in JavaScript, using the Web Audio Api, and some DSP are written in Faust and compiled to Web Audio nodes.  
 
 The project, developed by Matteo Olivo, was presented at [SMC 2022](https://smc22.grame.fr) and [SMC 2024](https://smcnetwork.org/smc2024/#programmeOnline). 
-
-                                                            
-
-
-
-
-
 
 
 ### [Stratus](https://chaosaudio.com/products/stratus)

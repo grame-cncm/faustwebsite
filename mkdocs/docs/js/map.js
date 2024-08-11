@@ -44,6 +44,7 @@ addMarker(45.7640, 4.8357, '<a href="https://www.grame.fr">Faust born in GRAME</
 addMarker(37.4213, -122.1694, '<a href="https://ccrma.stanford.edu">CCRMA</a>, Stanford University, CA, USA', redIcon);
 
 // Add project markers
+addMarker(32.7157, -117.1611, '<a href="#faustvst">FaustVST</a>, San Diego, CA, USA', blueIcon);
 addMarker(45.7640, 4.8357, '<a href="#accessible-musical-web-applications-for-individuals-with-disabilities">Accessible musical web applications for individuals with disabilities</a>, Lyon, France', blueIcon);
 addMarker(30.1766, -85.8055, '<a href="#stratus">Stratus</a> from Chaos Audio, Panama City Beach, USA', blueIcon);
 addMarker(43.2965, 5.3698, '<a href="#noisy2">Noisy2</a> from Expressive-E, Marseille, France', blueIcon);
