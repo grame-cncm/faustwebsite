@@ -6,7 +6,7 @@ The following sections provide an overview of the various ways Faust is employed
 Faust is widely used in the creation of musical pieces and artistic projects. Musicians and artists leverage Faust to develop new audio effects and real-time sound synthesis. The language’s flexibility makes it an efficient tool for composing and performing live electronic music.
 
 - **Plugins and Standalone Applications:**
-Faust's code can be compiled into various plugins (VST, JUCE, LV2, etc.) and standalone applications. This capability allows developers to create custom audio processing tools that can be integrated into digital audio workstations (DAWs) or used as independent software for audio manipulation and production.
+Faust's code can be compiled into various plugin formats (VST, JUCE, LV2, etc.) and standalone applications. This capability allows developers to create custom audio processing tools that can be integrated into digital audio workstations (DAWs) or used as independent software for audio manipulation and production.
 
 - **Integration in Audio Programming Environments:**
 Faust seamlessly integrates with several audio programming environments like Pure Data, Max/MSP, SuperCollider, the Web platform and others. This integration enables users to incorporate Faust-generated algorithms into larger multimedia projects, enhancing the scope and quality of audio processing and synthesis.
@@ -28,7 +28,8 @@ To illustrate the global impact of Faust, a world map showcases all the projects
 
 ## Project list
 
-The following sections provide a detailed list of current projects utilizing Faust. These projects are categorized based on their application areas, showcasing the versatility and wide-reaching impact of Faust in various domains.
+The following sections provide a detailed list of current projects utilizing Faust.
+
 
 ### [OneTrick B-BOI](https://punklabs.com/ot-bboi)
 
