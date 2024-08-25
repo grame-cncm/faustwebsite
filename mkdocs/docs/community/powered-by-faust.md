@@ -30,6 +30,15 @@ To illustrate the global impact of Faust, a world map showcases all the projects
 
 The following sections provide a detailed list of current projects utilizing Faust. These projects are categorized based on their application areas, showcasing the versatility and wide-reaching impact of Faust in various domains.
 
+### [OneTrick B-BOI](https://punklabs.com/ot-bboi)
+
+<div><a href="https://punklabs.com/ot-bboi"><img width="35%" class="mx-auto d-block" src="img/ot-bboi.png"></a> </div>
+
+Feel the funky fresh flow of a dope drum machine straight outta the '90s. Inspired by the "World's 1st Rap Keyboard", get down with some phat record scratches, orchestra hits, vocal chops and vocoder stabs that make you wanna jump! It's even got a fly voice changer to help you rap along to the beat.
+
+The project is using Rust and the Faust to Rust backend, and the source code [is available](https://punklabs.com/content/projects/ot-bboi/downloads/OneTrickBBOI-Source-v1.0.0.zip). 
+
+
 ### [FaustVST](https://github.com/mikeoliphant/FaustVst)
 
 <div><a href="https://github.com/mikeoliphant/FaustVst"><img width="40%" class="mx-auto d-block" src="img/FaustVST.png"></a> </div>
