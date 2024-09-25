@@ -30,6 +30,15 @@ To illustrate the global impact of Faust, a world map showcases all the projects
 
 The following sections provide a detailed list of current projects utilizing Faust.
 
+### [formuls](https://github.com/jrdooley/formuls)
+
+<div><a href="https://github.com/jrdooley/formuls"><img width="60%" class="mx-auto d-block" src="img/formuls.png"></a> </div>
+
+*formuls* is an experimental electronic musical instrument for synthesising and sculpting sound live!
+
+Using an intuitive, novel touchscreen-based interface, formuls can sculpt primary sounds into kaleidoscopic meshes of finely tuned timbres and pulsating rhythms. Harnessing the power of simple gestural interactions typically used to operate smartphones and tablets, complex sound synthesis techniques are easy to access, control and explore, reducing the required instrumental technique to finger taps, drags and swipes. formuls aims to make synthesis easy for the beginner, while opening up a plethora of creative sonic possibilities to the seasoned sound designer.
+
+This software uses libpd, Faust, Open Stage Control and Python.
 
 ### [OneTrick B-BOI](https://punklabs.com/ot-bboi)
 
