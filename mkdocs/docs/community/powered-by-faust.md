@@ -30,9 +30,9 @@ To illustrate the global impact of Faust, a world map showcases all the projects
 
 The following sections provide a detailed list of current projects utilizing Faust.
 
-### [SHCdyna](https://www.lisilog.com/shcdyna-fr/)
+### [SHCdyna](https://www.lisilog.com/en/shcdyna-en/)
 
-<div><a href="https://www.lisilog.com/shcdyna-fr/"><img width="60%" class="mx-auto d-block" src="img/shcdyna.jpg"></a> </div>
+<div><a href="https://www.lisilog.com/en/shcdyna-en/"><img width="60%" class="mx-auto d-block" src="img/shcdyna.jpg"></a> </div>
 
 SHCdyna is a dynamic and interactive application for musical performance. It allows compiling and executing code in the Faust programming language dynamically, interacting with motion sensors, and creating custom tactile user interfaces. The application uses the [Interp backend](  https://faustdoc.grame.fr/manual/embedding/#using-libfaust-with-the-interpreter-backend) to be deployed on iOS, where JIT compilation is forbidden by Apple. All [SmartFaust](#smartfaust) applications are available in the application, and new ones can be developed in [Faust IDE](https://faustide.grame.fr) (for instance) and then installed in the application. 
 
