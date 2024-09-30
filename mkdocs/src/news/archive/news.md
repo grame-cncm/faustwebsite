@@ -232,7 +232,7 @@ Conference website: **http://www.ifc18.uni-mainz.de**
 ---
 ## **2017-10-20:** New Faust Editor
 
-We are very happy to announce the online [Faust Editor](../../tools/editor). It can be used to _edit_, _compile_ and _run_ Faust code from any recent Web Browser with [WebAssembly](http://webassembly.org) support. This editor works completely on the client side and it is therefore very convenient for situations with many simultaneous users (workshops, classrooms, etc.). It embeds the latest version of the Faust compiler with an efficient WebAssembly backend and offers polyphonic MIDI support.
+We are very happy to announce the online [Faust Editor](https://fausteditor.grame.fr). It can be used to _edit_, _compile_ and _run_ Faust code from any recent Web Browser with [WebAssembly](http://webassembly.org) support. This editor works completely on the client side and it is therefore very convenient for situations with many simultaneous users (workshops, classrooms, etc.). It embeds the latest version of the Faust compiler with an efficient WebAssembly backend and offers polyphonic MIDI support.
 
 <img src="img/editor-help.png" class="mx-auto d-block" width="60%">
 
@@ -248,7 +248,7 @@ The recommended browsers are the latest versions of Firefox and Chrome. Chrome i
 
 ### Useful links
 
-- [Editor](../../tools/editor): the official link,
+- [Editor](https://fausteditor.grame.fr): the official link,
 - [https://grame-cncm.github.io/fausteditorweb/](https://grame-cncm.github.io/fausteditorweb/): an alternative link on GitHub. Because this is an https address, audio inputs will work (but not the export function),
 - [https://github.com/grame-cncm/fausteditorweb](https://github.com/grame-cncm/fausteditorweb): the GitHub repository.
 
@@ -283,7 +283,7 @@ In both cases, a full description of the DSP state as a JSON string is generated
 
 #### Benchmark of C++, LLVM IR and wast/wasm generated code
 
-Since Faust already generates C++ or LLVM IR code, the performances of those two backends can be compared with the new wasm one. Using the WAVM C++ written machine allows to deploy the [same measuring code](/news/2017/04/26/optimizing-compilation-parameters.html). The first benchmark compares the speed of C++, LLVM IR and wasm backends running a set of DSP, running on a MacBook Pro 2,2 GHz Core I7 with OSX El capitan. The same 4.0 version of LLVM toolchain has been used with the three backend.
+Since Faust already generates C++ or LLVM IR code, the performances of those two backends can be compared with the new wasm one. Using the WAVM C++ written machine allows to deploy the [same measuring code](#2017-04-26-optimizing). The first benchmark compares the speed of C++, LLVM IR and wasm backends running a set of DSP, running on a MacBook Pro 2,2 GHz Core I7 with OSX El capitan. The same 4.0 version of LLVM toolchain has been used with the three backend.
 C++ and LLVM IR code has been compiled with the *-Ofast* optimization flag, the WAVM runtime is the standard version one (without any specific audio optimization, see later):
 
 <img src="img/C++_LLVM_IR_WASM_OSX.png" class="mx-auto d-block" width="80%">
@@ -440,7 +440,7 @@ Note that pages loading an additional .wasm file cannot directly be loaded in Ch
 
 ### Generating Polyphonic WebAudio nodes
 
-Assuming that the compiled Faust DSP file is [polyphonic ready](/news/2016/01/13/polyphonic-instruments.html), a polyphonic ready WebAudio node can be created with the **-poly** parameter, and will generate the following constructor for the node (where the *mydsp* part will be replaced by the actual DSP name): 
+Assuming that the compiled Faust DSP file is [polyphonic ready](#polyphonic-instruments), a polyphonic ready WebAudio node can be created with the **-poly** parameter, and will generate the following constructor for the node (where the *mydsp* part will be replaced by the actual DSP name): 
 
 ```
 /**
@@ -1011,7 +1011,7 @@ will generate the textual WebAssembly output, use binaryen **wasm-as** tool to c
 
 will generate the binary WebAssembly output that can directly be loaded by the produced self-contained html page.
 
-Page containing [polyphonic instruments](/news/2016/01/13/polyphonic-instruments.html) can be generated with the following commands:
+Page containing [polyphonic instruments](#polyphonic-instruments) can be generated with the following commands:
 
     faust2webaudiowast -poly foo.dsp 
 
@@ -1210,7 +1210,7 @@ When no more used, you'll have to explicitly use the following code to deallocat
 
     faust.deleteDSPInstance(dsp);
 
-This instance can be used like the statically compiled one, as previously described in [this page](/news/2014/02/14/faust-and-webaudio-api.html).
+This instance can be used like the statically compiled one, as previously described in [this page](#faust-and-webaudio-api).
 
 #### Polyphonic instruments
  
@@ -1218,7 +1218,7 @@ Polyphonic instruments can be produced. For a given 'factory' the following code
 
     var dsp = faust.createPolyDSPInstance(factory, audio_context, buffer_size, 16);
 
-This instance can be used like the statically compiled one, as previously described in [this page](/news/2014/02/14/faust-and-webaudio-api.html).
+This instance can be used like the statically compiled one, as previously described in [this page](#faust-and-webaudio-api).
 
 #### Using Faust JavaScript library
 
