@@ -30,6 +30,13 @@ To illustrate the global impact of Faust, a world map showcases all the projects
 
 The following sections provide a detailed list of current projects utilizing Faust.
 
+### [Faust DSP Testbench](https://github.com/grame-cncm/Faust-DSP-Testbench)
+
+<div><a href="https://github.com/grame-cncm/Faust-DSP-Testbench/"><img width="60%" class="mx-auto d-block" src="https://raw.githubusercontent.com/grame-cncm/Faust-DSP-Testbench/main/screenshot.png"></a> </div>
+
+As a fork of the [DSP-Testbench](https://github.com/AndrewJJ/DSP-Testbench) project, Faust DSP Testbench is designed to help developers using the [JUCE framework](https://juce.com) to analyse their Faust DSP by providing a test harness for code inheriting from `juce::dsp::ProcessorBase`. The harness provides signal sources, routing, analysis and monitoring functions.
+
+
 ### [SHCdyna](https://www.lisilog.com/en/shcdyna-en/)
 
 <div><a href="https://www.lisilog.com/en/shcdyna-en/"><img width="60%" class="mx-auto d-block" src="img/shcdyna.jpg"></a> </div>
