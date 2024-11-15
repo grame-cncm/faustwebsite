@@ -1,14 +1,14 @@
 # International Faust Conference (IFC)
 
-The International Faust Conference (IFC) takes place every two year. It aims at gathering developers and users of the Faust programming language to present current projects and discuss future directions for Faust and its community.
+The International Faust Conference (IFC) takes place every two years. It aims at gathering developers and users of the Faust programming language to present current projects and discuss future directions for Faust and its community.
 
 Participants share their work through paper presentations. A series of round  tables on various topics serve as a platform to brainstorm on Faust's features, semantics, tools, applications, etc. to determine future directions for this language. Open spaces for demos and workshops are usually available for participants to openly share their ongoing projects with the rest of the community.
 
 <img src="img/ifc0.jpg" class="mx-auto d-block" width="100%">
 
-## Next Edition: IFC-24 - November 21-22, 2024 - Before SoundMit 24 at Turin (Italy)
+## Next Edition: IFC-24 - November 21-22, 2024 in Torino (Italy)
 
-The fourth edition of the International Faust Conference ([IFC-24](https://ifc24.soundmit.com/en)) will take place just before [SoundMit 24](https://www.soundmit.com/en) on November 21-22, 2024 at Turin (Italy).
+The fourth edition of the International Faust Conference ([IFC-24](https://ifc24.soundmit.com/en)) will be held on November 21-22, 2024 in Torino (Italy).
 
 ## Past Editions
 
