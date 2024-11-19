@@ -30,6 +30,15 @@ To illustrate the global impact of Faust, a world map showcases all the projects
 
 The following sections provide a detailed list of current projects utilizing Faust.
 
+### [OneTrick CHONK](https://punklabs.com/ot-chonk)
+
+<div><a href="https://punklabs.com/ot-chonk"><img width="65%" class="mx-auto d-block" src="img/ot-chonk.png"></a> </div>
+
+A physically modeled electric bass monosynth that produces a classic sound perfect for a wide variety of musical genres. It's powered by digital waveguide synthesis to simulate the vibrations of a string. Different play styles like muting, fingering, picking, or slap can be achieved with articulations.
+
+The project is using Rust and the Faust to Rust backend, and the source code [is available](https://punklabs.com/content/projects/ot-chonk/downloads/OneTrickCHONK-Source-v1.0.0.zip). 
+
+
 ### [Faust DSP Testbench](https://github.com/grame-cncm/Faust-DSP-Testbench)
 
 <div><a href="https://github.com/grame-cncm/Faust-DSP-Testbench/"><img width="60%" class="mx-auto d-block" src="https://raw.githubusercontent.com/grame-cncm/Faust-DSP-Testbench/main/screenshot.png"></a> </div>
