@@ -6,11 +6,12 @@ Participants share their work through paper presentations. A series of round  ta
 
 <img src="img/ifc0.jpg" class="mx-auto d-block" width="100%">
 
-## Next Edition: IFC-24 - November 21-22, 2024 in Torino (Italy)
-
-The fourth edition of the International Faust Conference ([IFC-24](https://ifc24.soundmit.com/en)) will be held on November 21-22, 2024 in Torino (Italy).
-
 ## Past Editions
+
+### IFC-24 - November 21-22, 2024 in Turin (Italy)
+
+The fourth edition of the International Faust Conference ([IFC-24](https://ifc24.soundmit.com/en)) took place on November 21-22, 2024 in Turin (Italy).
+
 
 ### IFC-22 - June 7-8, 2022 - During SMC-22 at St-Etienne (France)
 
