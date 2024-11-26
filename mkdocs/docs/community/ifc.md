@@ -31,6 +31,7 @@ Slides from November 22nd:
 - [Widget Modulation in Faust](2024/Widget_Modulation_in_Faust.pdf)
 - [Phausto: Fast and Accessible DSP Programming with Pharo](2024/Phausto_Fast_and_Accessible_DSP_Programming_with_Pharo.pdf)
 - [Faust plugins on the Chaos audio Stratus](2024/Faust_and_Chaos.pdf)
+- [Introduction SHCdyna](2024/Introduction_SHCdyna.pdf)
 - [FAUST-Based Web Audio Modules In (sometimes unexpected) Online Hosts](2024/FAUST-based_Web-Audio_Modules.pdf)
 - [Faust Consortium and AFFA Projects](2024/AFFA_Consortium.pdf)
 
