@@ -18,7 +18,7 @@ Slides from November 21nd:
 - [Differentiable DSP in Faust](2024/Differentiable_DSP_in_Faust.pdf)
 - [λmmm: the Intermediate Representation for Synchronous Signal Processing Language Based on Lambda Calculus](2024/Intermediate_Representation_for_Synchronous_Signal_Processing_Language.pdf)
 - [What’s new in the Faust Ecosystem un 2024?](2024/Whats_new_in_the_Faust_ecosystem_in_2024.pdf)
-- [abc.lib - News from Multichannel Audio Processing In Mixed Music]
+- [abc.lib - News from Multichannel Audio Processing In Mixed Music](2024/abc_lib.pdf)
 - [Experiences with Rust + Faust](2024/Experiences_with_Rust_Faust.pdf)
 - [Faust Tools and Ecosystem](2024/Faust_Tools_and_Ecosystem.pdf)
 - [Discussion on Evolution of the Faust Compiler (ondemand)](2024/Ondemand.pdf)
