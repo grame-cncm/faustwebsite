@@ -39,7 +39,7 @@ Slides from November 22nd:
 
 The third edition of the International Faust Conference (IFC-22) took place during [SMC-22](https://smc22.grame.fr) at St-Etienne (France) on June 7-8, 2022, with [morning recording](https://www.youtube.com/watch?v=F1emcDpbhPU) and [afternoon recording](https://www.youtube.com/watch?v=LVnSSmu5g9g).
 
-### IFC-20 - MSH Paris Nord Saint-Denis (France)
+### IFC-20 - December 1-2, 2020 - MSH Paris Nord Saint-Denis (France)
 
 The [second edition of the International Faust Conference (IFC-20)](https://ifc20.sciencesconf.org/) 
 took place at the [Maison des Sciences de l’Homme Paris Nord](https://www.mshparisnord.fr/contacts/plan-telephone-adresse/) on December 1-2, 2020.  
