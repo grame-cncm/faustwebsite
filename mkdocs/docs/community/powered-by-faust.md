@@ -717,7 +717,7 @@ A feedback-delay-network reverb plugin built with [DPF](https://github.com/DISTR
 * [FAUST filters](https://github.com/SpotlightKid/faustfilters), a collection of virtual-analog filters from the FAUST standard library packaged as multi-format plugins via the DPF
 * [SendMixer](https://github.com/SpotlightKid/sendmixer), a stereo channel strip plugin with one master gain and two pre/post-fader sends
 * [Stereo Cross Delay](https://github.com/SpotlightKid/stereocrossdelay), a stereo delay plugin with feedback and cross-mixing.
-* [DF JPverb](https://github.com/SpotlightKid/dfjpverb), A lush algorithmic reverb designed to sound great with synthetic sound sources, built with DPF and based on [re.jpverb](https://faustlibraries.grame.fr/libs/reverbs/#rejpverb) from the FAUST standard library.
+* [DF JPverb](https://github.com/SpotlightKid/dfjpverb), a lush algorithmic reverb designed to sound great with synthetic sound sources, built with DPF and based on [re.jpverb](https://faustlibraries.grame.fr/libs/reverbs/#rejpverb) from the FAUST standard library.
 
 
 ### [Theremotion](https://github.com/plule/theremotion)
