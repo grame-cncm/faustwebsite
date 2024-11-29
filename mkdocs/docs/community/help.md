@@ -11,15 +11,12 @@ If you'd like to follow the development of Faust and of its associated tools and
 * [the Faust Developers Mailing List](https://sourceforge.net/projects/faudiostream/lists/faudiostream-devel) 
 
 
-## Faust on discord 
+## Faust on Discord 
 
-* Connect to the [Faust discord](https://discord.gg/vzh7CggBtj) server.
+* Connect to the [Faust Discord](https://discord.gg/vzh7CggBtj) server.
 
-* The [Audio Programmer community](https://theaudioprogrammer.com/community) discord community has a #faust channel.
+* The [Audio Programmer community](https://theaudioprogrammer.com/community) Discord community has a #faust channel.
 
-## Faust slack channel
-
-Slack can also be used to get help with Faust: <https://faustaudio.slack.com> or [this link](https://join.slack.com/t/faustaudio/shared_invite/zt-a624szlz-fL4v2DTR~ZGlI7wARryT7g), but [Faust on discord](https://faust.grame.fr/community/help/#faust-on-discord) is the preferably way to go.
 
 ## Faust GitHub discussion
 
