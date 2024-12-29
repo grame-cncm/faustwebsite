@@ -26,9 +26,9 @@ To illustrate the global impact of Faust, a world map showcases all the projects
 
 <div id="map" style="height: 400px;"> </div>
 
-## Project list
+## Commercial applications 
 
-The following sections provide a detailed list of current projects utilizing Faust.
+The following sections provide a detailed list of commercial applications utilizing Faust.
 
 ### [OneTrick CHONK](https://punklabs.com/ot-chonk)
 
@@ -39,29 +39,6 @@ A physically modeled electric bass monosynth that produces a classic sound perfe
 The project is using Rust and the Faust to Rust backend, and the source code [is available](https://punklabs.com/content/projects/ot-chonk/downloads/OneTrickCHONK-Source-v1.0.0.zip). 
 
 
-### [Faust DSP Testbench](https://github.com/grame-cncm/Faust-DSP-Testbench)
-
-<div><a href="https://github.com/grame-cncm/Faust-DSP-Testbench/"><img width="60%" class="mx-auto d-block" src="https://raw.githubusercontent.com/grame-cncm/Faust-DSP-Testbench/main/screenshot.png"></a> </div>
-
-As a fork of the [DSP-Testbench](https://github.com/AndrewJJ/DSP-Testbench) project, Faust DSP Testbench is designed to help developers using the [JUCE framework](https://juce.com) to analyse their Faust DSP by providing a test harness for code inheriting from `juce::dsp::ProcessorBase`. The harness provides signal sources, routing, analysis and monitoring functions.
-
-
-### [SHCdyna](https://www.lisilog.com/en/shcdyna-en/)
-
-<div><a href="https://www.lisilog.com/en/shcdyna-en/"><img width="60%" class="mx-auto d-block" src="img/shcdyna.jpg"></a> </div>
-
-SHCdyna is a dynamic and interactive application for musical performance. It allows compiling and executing code in the Faust programming language dynamically, interacting with motion sensors, and creating custom tactile user interfaces. The application uses the [Interp backend](  https://faustdoc.grame.fr/manual/embedding/#using-libfaust-with-the-interpreter-backend) to be deployed on iOS, where JIT compilation is forbidden by Apple. All [SmartFaust](#smartfaust) applications are available in the application, and new ones can be developed in [Faust IDE](https://faustide.grame.fr) (for instance) and then installed in the application. 
-
-### [formuls](https://github.com/jrdooley/formuls)
-
-<div><a href="https://github.com/jrdooley/formuls"><img width="60%" class="mx-auto d-block" src="img/formuls.png"></a> </div>
-
-*formuls* is an experimental electronic musical instrument for synthesising and sculpting sound live!
-
-Using an intuitive, novel touchscreen-based interface, formuls can sculpt primary sounds into kaleidoscopic meshes of finely tuned timbres and pulsating rhythms. Harnessing the power of simple gestural interactions typically used to operate smartphones and tablets, complex sound synthesis techniques are easy to access, control and explore, reducing the required instrumental technique to finger taps, drags and swipes. formuls aims to make synthesis easy for the beginner, while opening up a plethora of creative sonic possibilities to the seasoned sound designer.
-
-This software uses libpd, Faust, Open Stage Control and Python.
-
 ### [OneTrick B-BOI](https://punklabs.com/ot-bboi)
 
 <div><a href="https://punklabs.com/ot-bboi"><img width="35%" class="mx-auto d-block" src="img/ot-bboi.png"></a> </div>
@@ -71,22 +48,40 @@ Feel the funky fresh flow of a dope drum machine straight outta the '90s. Inspir
 The project is using Rust and the Faust to Rust backend, and the source code [is available](https://punklabs.com/content/projects/ot-bboi/downloads/OneTrickBBOI-Source-v1.0.0.zip). 
 
 
-### [FaustVST](https://github.com/mikeoliphant/FaustVst)
+### [OneTrick KEYS](https://punklabs.com/ot-keys)
 
-<div><a href="https://github.com/mikeoliphant/FaustVst"><img width="40%" class="mx-auto d-block" src="img/FaustVST.png"></a> </div>
+<div><a href="https://punklabs.com/ot-keys"><img width="50%" class="mx-auto d-block" src="img/ot-keys.png"></a> </div>
 
-FaustVst is a VST3 plugin that allows you to dynamically load/compile/edit Faust effects from source dsp files. It is lets you do quick iteration (make a change and reload it nearly instantly), all while running integrated in your DAW. FaustVst uses the faust compiler to create C# code, which is then dynamically compiled into an assembly and run in the plugin.
+A physically modeled piano synth with a chill lo-fi sound. It uses a vintage algorithm developed at Stanford in 1995 called "Commuted Piano Synthesis", and runs that through studio reverb, vinyl or tape noise, flutter, bitcrushing, and saturation. 
+
+The project is using Rust and the Faust to Rust backend, and the source code [is available](https://punklabs.com/content/projects/ot-keys/downloads/OneTrickKEYS-Source-v1.0.0.zip). 
 
 
-### [Accessible musical web applications for individuals with disabilities](https://www.matteoolivo.com/applications_fr.html)
+### [OneTrick URCHIN](https://punklabs.com/ot-urchin)
 
-<div><a href="https://www.matteoolivo.com/applications_fr.html"><img width="65%" class="mx-auto d-block" src="img/molivo.jpg"></a> </div>
+<div><a href="https://punklabs.com/ot-urchin"><img width="50%" class="mx-auto d-block" src="img/ot-urchin.png"></a> </div>
 
-Series of accessible musical web applications aimed to individuals with intellectual disability and cognitive impairments. The applications are designed for an educational program, based on writing and performing a musical composition evoking a natural soundscape. Their responsive interfaces automatically adapt to all screen sizes; in this way they can be used on all kind of devices (smartphone, laptop, etc.). On mobile devices, some sound parameters of the applications can be controlled by the device movement (through accelerometer mapping). Some applications are also MIDI controllable. 
+A hybrid drum synth that models the gritty lo-fi sound of beats from vintage records without sampling. It takes spectral and physically modeled drums, running them through simulated studio reverb, a vinyl or tape player, and finally a digital sampler. The result is a fat and saturated drum machine that creates a vibe of sampling with the control of a synthesizer.
 
-The applications are developed in JavaScript, using the Web Audio Api, and some DSP are written in Faust and compiled to Web Audio nodes.  
+The project is using Rust and the Faust to Rust backend, and the source code [is available](https://punklabs.com/content/projects/ot-urchin/downloads/OneTrickURCHIN-Source-v1.0.0.zip). 
 
-The project, developed by Matteo Olivo, was presented at [SMC 2022](https://smc22.grame.fr) and [SMC 2024](https://smcnetwork.org/smc2024/#programmeOnline). 
+
+### [OneTrick CRYPTID](https://punklabs.com/ot-cryptid)
+
+<div><a href="https://punklabs.com/ot-cryptid"><img width="45%" class="mx-auto d-block" src="img/OneTrick.png"></a> </div>
+
+Whispers of a dreaded drum machine with the cold clanging heart of a DX7 in the fearsome frame of a TR-808 echo in dusty backrooms of backstreet recording studios. A contraption conjured under cover of darkness in the heinous pursuit of chart topping tracks, known only as the DX-808.
+
+It's time to bring the beast out of the shadows! Allow us to present the world's most accurate recreation of an FM drum synth skeptics say never actually existed. Using a DX7 emulator of our own design, we forged each facet of the CRYPTID, reconstructing its wretched inner-workings. From the "Log Drum" Toms to the "Wood Block" Cowbell. Blow that Samba Whistle and hit the Gong! Do you want to believe?
+
+The project is using Rust and the Faust to Rust backend, and the source code [is available](https://punklabs.com/content/projects/ot-cryptid/downloads/OneTrick-CRYPTID-1.0.0-Source.zip). 
+
+
+### [OneTrick SIMIAN](https://punklabs.com/ot-simian)
+
+<div><a href="https://punklabs.com/ot-simian"><img width="50%" class="mx-auto d-block" src="img/ot-simian.png"></a>  </div>
+
+**Crash into the 80s** with an *open source drum synth* inspired by **hexagonal classics** like the [Simmons SDS-V](https://en.wikipedia.org/wiki/Simmons_SDS-V). *Thumping* **kicks**, *punchy* **snares**, and *sizzling* **cymbals** coalesce with its *clacky* **claves** and *crunchy* **claps**. Bring saccharine **synthwave** sauce to your sublime soundscapes or drop indelable *pewww pewww* **tom toms** into your new **nu-disco**. Get the source code [containing Faust DSP](https://punklabs.com/content/projects/ot-simian/downloads/OneTrick-SIMIAN-1.1.0-Source.zip), using the Dlang backend.
 
 
 ### [Stratus](https://chaosaudio.com/products/stratus)
@@ -104,12 +99,147 @@ Stratus® features a 5-minute looper, hands-free preset switching, and a wide ra
 Noisy 2 merges acoustic and analog resonators into lively sounds. Built for MPE and expression, this synth makes sound design more fun. Modal synthesis comes to Noisy 2 with four new acoustic resonators. The Noise block has also evolved, offering new, meticulously crafted noise types for broader acoustic horizons. The DSP is written in Faust.
 
 
+### [MOD Audio](https://mod.audio/)
+
+<div><a href="https://mod.audio/"><img width="60%" class="mx-auto d-block" src="img/mod-audio.jpg"></a> </div>
+
+The compact and powerful standalone guitar effects ecosystem to express your creativity at home, in the studio and on stage, which can be programmed [with Faust](http://builder.mod.audio). 
+
+
+### [LICH](https://www.befaco.org/lich/)
+
+<div><a href="https://www.befaco.org/lich/"><img width="25%" class="mx-auto d-block" src="img/lich.png"></a> </div>
+
+Technology OWL platform that allows you to use Pure Data, Max Gen or Faust code into your module!. Lich is a Befaco Rebel collaboration that brings back Owl’s platform with this new hardware iteration. It has stereo in and out, four pot controls summed to cv inputs (like the classic Owl module) And as addition, CV and Gate outputs, patch selection with display and USB MIDI host and device connections.
+
+
+### [Joué Music Instruments](https://jouemusic.com/en)
+
+<div><a href="https://jouemusic.com/en"><img width="45%" class="mx-auto d-block" src="img/joue.png"></a> </div>
+
+A new way to make music: the Joué Play is a system that combines an expressive multi-instrument, an intuitive app & interactive content, with a range of musical instruments that use touch-sensitive technology to create a unique playing experience. These instruments are designed to be highly expressive, allowing musicians to play with greater nuance and emotion. Part of the audio effects are coded in Faust. 
+
+
+### [HISE](http://www.hise.audio)
+
+<div><a href="http://www.hise.audio"><img width="55%" class="mx-auto d-block" src="img/faust_hise.png"></a>  </div>
+
+HISE is an open source framework for building sample based virtual instruments combining a highly performant Disk-Streaming Engine, a flexible DSP-Audio Module system and a handy Interface Designer. The implementation of the [Faust integration](https://resonant-bytes.de/blog/gsoc-final-submission/) was the result of a Google Summer of Code project done by [Roman Sommer](https://resonant-bytes.de/about/) with the help of [Christoph Hart](https://github.com/christophhart) as mentor.
+
+
+### [Genius Eurorack Module](https://www.rebeltech.org/product/genius/)
+
+<div><a href="https://www.rebeltech.org/product/genius/"><img width="20%" class="mx-auto d-block" src="img/genius.jpg"></a>  </div>
+
+The Genius is the next evolutionary step for the OWL platform, and the first product released based on a Cortex M7 microcontroller. It runs the OWL firmware and so can be programmed with Faust. A demo running bells from thee [physical library](https://faustlibraries.grame.fr/libs/physmodels/) can be [listened to here](https://www.youtube.com/watch?v=AnytPyN9mLE&feature=emb_imp_woyt).
+
+
+### [drumbox](https://drumbox.app/)
+
+<div><a href="https://drumbox.app/"><img width="30%" class="mx-auto d-block" src="img/drumbox.png"></a>  </div>
+
+drumbox is a fun and powerful drum synthesizer for your Android device. Start from a preset and tweak the sounds and appearance to make it your own.
+Freestyle on the drum pads, record a sequence or both...it's up to you!
+
+
+### [Daisy based audio boards](https://www.electro-smith.com/daisy)
+
+<div><a href="https://www.electro-smith.com/daisy"><img width="35%" class="mx-auto d-block" src="img/daisy.png"></a>  </div>
+
+Daisy is an embedded platform for music. It features everything you need for creating high fidelity audio hardware devices. Just plug in a USB cable and start making sound! No soldering required. It can be programed with Faust using the [faust2daisy](https://github.com/grame-cncm/faust/tree/master-dev/architecture/daisy) tool.
+
+
+### [Elk Audio OS](https://elk.audio/audio-os/)
+
+<div><a href="https://elk.audio/audio-os/"><img width="55%" class="mx-auto d-block" src="img/elk-audio.jpg"></a>  </div>
+
+Elk is an Audio Operating System developed from the ground up to deliver real time audio performances in embedded systems and remote networks. It can run on [several hardware](https://elk.audio/store/). Faust can be used to [generate VST2 plugins](https://forum.elk.audio/t/writing-plugins-for-elk-using-faust/175) to run on the plaform.
+
+
+### [Motion Vox](https://motionvox.app/)
+
+<div><a href="https://motionvox.app/"><img width="35%" class="mx-auto d-block" src="img/motionvox.png"></a>  </div>
+
+A mobile music creation and performance workstation with a built-in motion-based controller, sequencer and synthesis engine. The controller unites XY pad, accelerometer and gyroscope events with complex data ﬁltering engine. Performance process consists of touching the active area on the screen with the index finger and moving the cursor while moving the device in space. Smartphone position in space and finger movement on a screen affect various parameters of sound or generate realtime MIDI output. The app was inspired by the SmartFaust project of GRAME. The audio engine of the app is made with Faust.
+
+
+### [PICO DSP](https://www.crowdsupply.com/ohmic/pico-dsp)
+
+<a href="https://www.crowdsupply.com/ohmic/pico-dsp"><img width="60%" class="mx-auto d-block" src="img/pico-dsp.png"></a>
+
+PICO DSP is an open-source, Arduino-compatible ESP32 development board for audio and digital signal processing (DSP) applications. It offers an expansive audio-processing feature set on a small-format, breadboard-friendly device that provides audio inputs, audio outputs, a low-noise microphone array, an integrated test-speaker option, additional memory, battery-charge management, and ESD protection all on one tiny PCB. The board can be programmed [using Faust](https://github.com/ohmic-net/pico_dsp).
+
+
+### [FASELUNARE Microcosmos](http://www.faselunare.com)
+
+<a href="http://www.faselunare.com/products/instruments/microcosmos"><img width="55%" class="mx-auto d-block" src="img/microcosmos.png"></a>
+
+Microcosmos is a small open-source electronic board, developed by ​Faselunare (Italy), aimed at prototyping electronic musical instruments and learning electronics, microcontroller programming and audio DSP, and programmable with Faust. A demo video of the project can be [seen here](https://www.youtube.com/watch?v=bsdKUMoJwOM). The project has been [presented at ADC21](https://www.youtube.com/watch?v=lvg6iM8aBaY).
+
+
+### [BELA](http://bela.io/)
+
+<a href="http://bela.io/"><img class="mx-auto d-block" src="img/bela.jpg"></a>
+
+Bela is a maker platform for creating beautifully responsive audio and interactive applications. Designed for artists, musicians, researchers and makers, Bela brings the power of ultra-low latency interactive audio and sensors to your digital projects. It can be [programmed with Faust](https://learn.bela.io/using-bela/languages/faust-experimental/).
+
+
+### [moForte GeoShred](http://www.moforte.com/)
+
+<a href="http://www.moforte.com/"><img class="mx-auto d-block" src="img/geo.jpg" alt="Card image cap"></a>
+
+An electric guitar app using physical modeling. Faust was used to implement its sound synthesis/processing engine.
+
+
+## Other projects
+
+### [ExternalChugins](https://github.com/celestebetancur/ExternalChugins)
+
+[Chugins](https://chuck.cs.princeton.edu/extend/), short for "ChucK plugins," are plugins for the [ChucK programming language](https://chuck.stanford.edu). ChucK is an audio programming language that allows for real-time synthesis, composition, and performance of music. Chugins extend the functionality of ChucK by providing additional classes, objects, and modules that can be used to create more complex and intricate music and sound designs. ExternalChugins are a set of chugins exported from Faust.
+
+### [Faust DSP Testbench](https://github.com/grame-cncm/Faust-DSP-Testbench)
+
+<div><a href="https://github.com/grame-cncm/Faust-DSP-Testbench/"><img width="60%" class="mx-auto d-block" src="https://raw.githubusercontent.com/grame-cncm/Faust-DSP-Testbench/main/screenshot.png"></a> </div>
+
+As a fork of the [DSP-Testbench](https://github.com/AndrewJJ/DSP-Testbench) project, Faust DSP Testbench is designed to help developers using the [JUCE framework](https://juce.com) to analyse their Faust DSP by providing a test harness for code inheriting from `juce::dsp::ProcessorBase`. The harness provides signal sources, routing, analysis and monitoring functions.
+
+### [SHCdyna](https://www.lisilog.com/en/shcdyna-en/)
+
+<div><a href="https://www.lisilog.com/en/shcdyna-en/"><img width="60%" class="mx-auto d-block" src="img/shcdyna.jpg"></a> </div>
+
+SHCdyna is a dynamic and interactive application for musical performance. It allows compiling and executing code in the Faust programming language dynamically, interacting with motion sensors, and creating custom tactile user interfaces. The application uses the [Interp backend](  https://faustdoc.grame.fr/manual/embedding/#using-libfaust-with-the-interpreter-backend) to be deployed on iOS, where JIT compilation is forbidden by Apple. All [SmartFaust](#smartfaust) applications are available in the application, and new ones can be developed in [Faust IDE](https://faustide.grame.fr) (for instance) and then installed in the application. 
+
+### [formuls](https://github.com/jrdooley/formuls)
+
+<div><a href="https://github.com/jrdooley/formuls"><img width="60%" class="mx-auto d-block" src="img/formuls.png"></a> </div>
+
+*formuls* is an experimental electronic musical instrument for synthesising and sculpting sound live!
+
+Using an intuitive, novel touchscreen-based interface, formuls can sculpt primary sounds into kaleidoscopic meshes of finely tuned timbres and pulsating rhythms. Harnessing the power of simple gestural interactions typically used to operate smartphones and tablets, complex sound synthesis techniques are easy to access, control and explore, reducing the required instrumental technique to finger taps, drags and swipes. formuls aims to make synthesis easy for the beginner, while opening up a plethora of creative sonic possibilities to the seasoned sound designer.
+
+This software uses libpd, Faust, Open Stage Control and Python.
+
+### [FaustVST](https://github.com/mikeoliphant/FaustVst)
+
+<div><a href="https://github.com/mikeoliphant/FaustVst"><img width="40%" class="mx-auto d-block" src="img/FaustVST.png"></a> </div>
+
+FaustVst is a VST3 plugin that allows you to dynamically load/compile/edit Faust effects from source dsp files. It is lets you do quick iteration (make a change and reload it nearly instantly), all while running integrated in your DAW. FaustVst uses the faust compiler to create C# code, which is then dynamically compiled into an assembly and run in the plugin.
+
+### [Accessible musical web applications for individuals with disabilities](https://www.matteoolivo.com/applications_fr.html)
+
+<div><a href="https://www.matteoolivo.com/applications_fr.html"><img width="65%" class="mx-auto d-block" src="img/molivo.jpg"></a> </div>
+
+Series of accessible musical web applications aimed to individuals with intellectual disability and cognitive impairments. The applications are designed for an educational program, based on writing and performing a musical composition evoking a natural soundscape. Their responsive interfaces automatically adapt to all screen sizes; in this way they can be used on all kind of devices (smartphone, laptop, etc.). On mobile devices, some sound parameters of the applications can be controlled by the device movement (through accelerometer mapping). Some applications are also MIDI controllable. 
+
+The applications are developed in JavaScript, using the Web Audio Api, and some DSP are written in Faust and compiled to Web Audio nodes.  
+
+The project, developed by Matteo Olivo, was presented at [SMC 2022](https://smc22.grame.fr) and [SMC 2024](https://smcnetwork.org/smc2024/#programmeOnline). 
+
 ### [elysiera](https://github.com/azur1s/elysiera?tab=readme-ov-file)
 
 <div><a href="https://github.com/azur1s/elysiera?tab=readme-ov-file"><img width="60%" class="mx-auto d-block" src="img/elysiera.png"></a> </div>
 
 (VST3/CLAP) A shimmer reverb plugin. Made with nih-plug, egui and Faust.
-
 
 ### [MeshEditor](https://github.com/khiner/MeshEditor)
 
@@ -117,20 +247,17 @@ Noisy 2 merges acoustic and analog resonators into lively sounds. Built for MPE 
 
 Real-time mesh viewer and editor, using Vulkan and ImGui, and in-progress rigid body audio model, using Faust to render an object audio model to an audio graph.
 
-
 ### [FlowGrid](https://github.com/khiner/flowgrid)
 
 <div><a href="https://github.com/khiner/flowgrid"><img width="50%" class="mx-auto d-block" src="img/flowgrid.png"></a> </div>
 
 FlowGrid is an immediate-mode interface for Faust (functional audio language) programs. The full project state is backed by a persistent (as in persistent data structures) store supporting constant-time navigation to any point in project history.
 
-
 ### [Faust in Cables.gl](https://av.tib.eu/media/67445)
 
 <div><a href="https://av.tib.eu/media/67445"><img width="50%" class="mx-auto d-block" src="img/faust-cables.jpg"></a> </div>
 
 Explore the dynamic integration of the Faust audio library within Cables in this video. This segment delves into the intricacies of generating rich audio experiences on the web, leveraging Faust's advanced capabilities for real-time audio synthesis with synthesizers and oscillators. Discover how to seamlessly compile, modify, and visualize audio within Cables, enhancing your projects with intricate audio-visual synchronization and interactive controls, inviting viewers to contribute and experiment with this powerful tool.
-
 
 ### [polyBLEP HOLE](https://patchstorage.com/polyblep-hole/)
 
@@ -139,36 +266,17 @@ Explore the dynamic integration of the Faust audio library within Cables in this
 A Faust collection of externals for Pure Data stuck together on the [Organelle](https://www.critterandguitari.com/organelle). The polyBLEPs are the work of Jacek Wieczorek.
 v1.1 triples the oscillators as sounded a bit thin. The greyhold reverb is immense.
 
-
-### [OneTrick KEYS](https://punklabs.com/ot-keys)
-
-<div><a href="https://punklabs.com/ot-keys"><img width="50%" class="mx-auto d-block" src="img/ot-keys.png"></a> </div>
-
-A physically modeled piano synth with a chill lo-fi sound. It uses a vintage algorithm developed at Stanford in 1995 called "Commuted Piano Synthesis", and runs that through studio reverb, vinyl or tape noise, flutter, bitcrushing, and saturation. 
-
-The project is using Rust and the Faust to Rust backend, and the source code [is available](https://punklabs.com/content/projects/ot-keys/downloads/OneTrickKEYS-Source-v1.0.0.zip). 
-
-
-### [MOD Audio](https://mod.audio/)
-
-<div><a href="https://mod.audio/"><img width="60%" class="mx-auto d-block" src="img/mod-audio.jpg"></a> </div>
-
-The compact and powerful standalone guitar effects ecosystem to express your creativity at home, in the studio and on stage, which can be programmed [with Faust](http://builder.mod.audio). 
-
-
 ### [nih-faust-jit](https://github.com/YPares/nih-faust-jit)
 
 <div><a href="https://github.com/YPares/nih-faust-jit"><img width="55%" class="mx-auto d-block" src="img/nih-faust-jit.png"></a> </div>
 
 A plugin to load Faust dsp files and JIT-compile them with LLVM. A simple GUI is provided to select which script to load and where to look for the Faust libraries that this script may import. The selected DSP script is saved as part of the plugin state and therefore is saved with your DAW project.
 
-
 ### [ambient.garden](https://github.com/pac-dev/AmbientGarden)
 
 <div><a href="https://github.com/pac-dev/AmbientGarden"><img width="70%" class="mx-auto d-block" src="img/ambient-garden.jpg"></a> </div>
 
 [ambient.garden](https://ambient.garden/) is a musical landscape in a website, developed using [Teasynth](https://github.com/pac-dev/Teasynth) with these [Faust codes](https://github.com/pac-dev/AmbientGarden/tree/master/MusicSource). All the music in ambient.garden is generated from code. The music is then laid out in a landscape which can be explored, either interactively, or automatically when the autopilot is left on. 
-
 
 ### [Teasynth](https://github.com/pac-dev/Teasynth)
 
@@ -179,14 +287,6 @@ Teasynth is a tool to make music with code in Javascript, [Faust](https://faust.
 - The **web editor** runs in the browser and provides an instant composition environment.
 - The **command line interface** can render music to audio files, serve the editor locally, and bundle music code.
 
-
-### [LICH](https://www.befaco.org/lich/)
-
-<div><a href="https://www.befaco.org/lich/"><img width="25%" class="mx-auto d-block" src="img/lich.png"></a> </div>
-
-Technology OWL platform that allows you to use Pure Data, Max Gen or Faust code into your module!. Lich is a Befaco Rebel collaboration that brings back Owl’s platform with this new hardware iteration. It has stereo in and out, four pot controls summed to cv inputs (like the classic Owl module) And as addition, CV and Gate outputs, patch selection with display and USB MIDI host and device connections.
-
-
 ### [lamb](https://github.com/magnetophon/lamb-rs)
 
 <div><a href="https://github.com/magnetophon/lamb-rs"><img width="60%" class="mx-auto d-block" src="https://raw.githubusercontent.com/magnetophon/lamb-rs/main/images/lamb.png"></a> </div>
@@ -195,7 +295,6 @@ A lookahead compressor/limiter that's soft as a lamb, written in Faust and Rust.
 
 - Be as clean as possible
 - Give the user full control over the character with the minimum amount of knobs.
-
 
 ### [FaustSynth](https://github.com/RealAlexZ/FaustSynth)
 
@@ -209,13 +308,11 @@ Welcome to FaustSynth, a AU/VST monophonic synthesizer built with the Faust prog
 
 The nonprofit mission of [Envelop](http://envelop.us) is to connect and inspire community through immersive listening. Our [listening spaces](https://envelop.us/page/listening-spaces) envelop the audience in pristine 3D sound, amplifying the power of music and nurturing our ability to listen together. Some Max/MSP externals are [written in Faust](https://github.com/EnvelopSound/EnvelopForLive/tree/master/externals).
 
-
 ### [RCVerb ("ReaClassical Verb")](https://github.com/chmaha/RCverb)
 
 <div><a href="https://github.com/chmaha/RCverb"><img width="80%" class="mx-auto d-block" src="img/RCVerb.png"></a> </div>
 
 A reverb suitable for classical music based on zita-rev1. Available as LV2 and CLAP by default (with optional VST3, VST2 and LADSPA). This plugin is part of the [ReaClassical](https://chmaha.github.io/ReaClassical/) project along with [RCComp ("ReaClassical Compressor")](https://github.com/chmaha/RCComp) and [Enover (RCVerb's big sister)](https://github.com/chmaha/Enover) additionals plugins, also written in Faust. 
-
 
 ### [Wam-Studio](https://github.com/Brotherta/wam-studio)
 
@@ -227,13 +324,11 @@ Tracks can be added or removed, played isolated or with other tracks. They can a
 
 Wam-Studio can host [WAM plugins](https://github.com/webaudiomodules) and in particular [Faust ones](https://github.com/webaudiomodules/wam-examples), which can be built following [this tutorial](https://docs.google.com/document/d/1HDEm4m_cD47YBuDilzGYiANYQDktj56Njyv0umGYO6o/edit#heading=h.lhqrbk1zktwy). 
 
-
 ### [SNES Echo Simulator](https://github.com/nyanpasu64-backup/snes-echo)
 
 <div><a href="https://github.com/nyanpasu64-backup/snes-echo"><img width="60%" class="mx-auto d-block" src="img/snes-echo.png"></a> </div>
 
 SNES Echo is an cross-platform audio processing plugin, written in Faust. It simulates the SNES SPC700 DSP reverb/echo effect. This plugin does not strive for bit-accuracy and overflow handling, but instead being audibly indistinguishable for "normal" SPCs.
-
 
 ### [Syfala project](https://github.com/inria-emeraude/syfala)
 
@@ -245,13 +340,11 @@ Automatic compilation of Faust audio DSP programs for AMD-Xilinx FPGAs, develope
 - Digilent **Zybo Z7-20** - Zynq-7000 ARM/FPGA SoC Development Board
 - Digilent **Genesys ZU-3EG** - Zynq UltraScale+ MPSoC Development Board
 
-
 ### [Interactive Granular Texture Synthesiser](http://lyva.me/interactive-synth/)
 
 <div><a href="http://lyva.me/interactive-synth/"><img width="60%" class="mx-auto d-block" src="img/interactive-synth.png"></a> </div>
 
 An interactive granular texture synthesiser built in TouchDesigner, utilising real time signal processing of the domain-specific language Faust (functional audiostream), and the corresponding TD_Faust operator.
-
 
 ### [Reflex-in](https://inria.hal.science/hal-04093045/document)
 
@@ -262,15 +355,6 @@ Reflex-in is a sound installation that uses brain-wave streams to create music c
 ### [FaustCGP](https://git.sr.ht/~led/faustcgp)
 
 Generate new audio synthesizers and filters in FAUST with Recurrent Cartesian Genetic Programming. Given a target sound or impulse response as input, the RCGP will return a FAUST synthesizer or filter, respectively, that best approximates the given signal or impulse response. Samples for an early version of the software can be found [here](https://onkyo.u-aizu.ac.jp/faustcgp-demo).
-
-### [OneTrick URCHIN](https://punklabs.com/ot-urchin)
-
-<div><a href="https://punklabs.com/ot-urchin"><img width="50%" class="mx-auto d-block" src="img/ot-urchin.png"></a> </div>
-
-A hybrid drum synth that models the gritty lo-fi sound of beats from vintage records without sampling. It takes spectral and physically modeled drums, running them through simulated studio reverb, a vinyl or tape player, and finally a digital sampler. The result is a fat and saturated drum machine that creates a vibe of sampling with the control of a synthesizer.
-
-The project is using Rust and the Faust to Rust backend, and the source code [is available](https://punklabs.com/content/projects/ot-urchin/downloads/OneTrickURCHIN-Source-v1.0.0.zip). 
-
 
 ### [KBVerb](https://github.com/sletz/KBVerb)
 
@@ -314,7 +398,6 @@ Karya is a score language editor with support for scales, instrumental technique
 
 BBDMI project aims at making music from electrical signals of the muscle and the brain using EMG and EEG technologies. Producing instrumental prototypes in an open way (open software and open hardware) and to document them in the framework of open science (FAIR). The modular system is built with Max/MSP and [interfaced with Faust](https://gitlab.huma-num.fr/bbdmi/bbdmi/-/tree/main/faust?ref_type=heads) for the purpose of analyzing, processing and mapping electrophysiological signals to sound. The paper *An Interactive Modular System for Electrophysiological DMIs* received [a best paper award at Audio mostly 2023](https://audiomostly.com/2023/program/awards/). 
 
-
 ### [The Spatbox](https://hal.science/hal-03781074/document)
 
 <div><a href="https://hal.science/hal-03781074/document"><img width="40%" class="mx-auto d-block" src="img/spatbox.jpg"></a> </div>
@@ -351,16 +434,6 @@ A board to play with FAUST sound synthesis language.
 
 Max/MSP objects for audio and rhythmic synthesis using coupled oscillator networks. Coupled Oscillators networks are dynamical systems that describe how ensembles of interacting elements are able to self-organize and synchronize over time. In terms of sensory perception, they have been examined in a wide range of fields including those related to rhythmic entrainment, biomusicology, psychoacoustics, signal processing, and generative music. The DSP is [written in Faust](https://github.com/nolanlem/Kuroscillators/tree/main/Kuroscillators-rhythm/faust-gen-files).
 
-### [Joué Music Instruments](https://jouemusic.com/en)
-
-<div><a href="https://jouemusic.com/en"><img width="45%" class="mx-auto d-block" src="img/joue.png"></a> </div>
-
-A new way to make music: the Joué Play is a system that combines an expressive multi-instrument, an intuitive app & interactive content, with a range of musical instruments that use touch-sensitive technology to create a unique playing experience. These instruments are designed to be highly expressive, allowing musicians to play with greater nuance and emotion. Part of the audio effects are coded in Faust. 
-
-### [ExternalChugins](https://github.com/celestebetancur/ExternalChugins)
-
-[Chugins](https://chuck.cs.princeton.edu/extend/), short for "ChucK plugins," are plugins for the [ChucK programming language](https://chuck.stanford.edu). ChucK is an audio programming language that allows for real-time synthesis, composition, and performance of music. Chugins extend the functionality of ChucK by providing additional classes, objects, and modules that can be used to create more complex and intricate music and sound designs. ExternalChugins are a set of chugins exported from Faust.
-
 ### [mesh2audio](https://github.com/GATech-CSE-6730-Spring-2023-Project/mesh2audio)
 
 <div><a href="https://github.com/GATech-CSE-6730-Spring-2023-Project/mesh2audio"><img width="55%" class="mx-auto d-block" src="img/mesh2audio.png"></a> </div>
@@ -370,16 +443,6 @@ Generate axisymmetric 3D models, or import existing 3D models, and transform the
 Supports fast DSP generation of physical audio models that sound decently realistic, as well as blazing fast 2D axisymmetric model generation, at the expense of some fidelity. It is an improvement of the [mesh2faust](https://hal.science/hal-03162901) tool.
 
 The generated audio model can be played in real-time by "striking" (clicking) on mesh vertices in the 3D mesh viewer.
-
-### [OneTrick CRYPTID](https://punklabs.com/ot-cryptid)
-
-<div><a href="https://punklabs.com/ot-cryptid"><img width="45%" class="mx-auto d-block" src="img/OneTrick.png"></a> </div>
-
-Whispers of a dreaded drum machine with the cold clanging heart of a DX7 in the fearsome frame of a TR-808 echo in dusty backrooms of backstreet recording studios. A contraption conjured under cover of darkness in the heinous pursuit of chart topping tracks, known only as the DX-808.
-
-It's time to bring the beast out of the shadows! Allow us to present the world's most accurate recreation of an FM drum synth skeptics say never actually existed. Using a DX7 emulator of our own design, we forged each facet of the CRYPTID, reconstructing its wretched inner-workings. From the "Log Drum" Toms to the "Wood Block" Cowbell. Blow that Samba Whistle and hit the Gong! Do you want to believe?
-
-The project is using Rust and the Faust to Rust backend, and the source code [is available](https://punklabs.com/content/projects/ot-cryptid/downloads/OneTrick-CRYPTID-1.0.0-Source.zip). 
 
 ### [Bespoke Anywhere](https://nime.pubpub.org/pub/8jaqbl7m/release/1)
 
@@ -462,7 +525,6 @@ The [Guthman Musical Instrument Competition](https://guthman.gatech.edu) is one 
 
 This year first price is Keith Bexter with the [Zen Flute](https://www.youtube.com/watch?v=f99xQcFA5ZY), which sound is produced by a physical model of flute [written in Faust](https://museelectronicinstruments.com/?page_id=210), and running on a [Teensy audio board](https://www.pjrc.com/teensy/td_libs_Audio.html).
 
-
 ### [souffle](https://github.com/CesarChaussinand/souffle)
 
 <div><a href="https://github.com/CesarChaussinand/souffle"><img width="45%" class="mx-auto d-block" src="img/souffle.png"></a> </div>
@@ -499,18 +561,15 @@ The new firmware could turn your Wingie2 into a self-contained instrument capabl
 
 A vintage reverb based on designs from 1961 and 1971, [written in Faust](https://github.com/unicornsasfuel/6171_reverb/blob/main/6171_reverb.dsp).
 
-
 ### [teensy-wfs](https://github.com/hatchjaw/teensy-wfs)
 
 <div><a href="https://github.com/hatchjaw/teensy-wfs"><img width="45%" class="mx-auto d-block" src="img/wfs-controller.png"></a> </div>
 
 Distributed Wave Field Synthesis (WFS) implementation for networked Teensies. There is a WFS Controller JUCE app in wfs-controller. This uses JACK's C API to set up ports and connect to any Teensy JackTrip clients. It notifies the clients of their positions in the WFS array, plus the positions of virtual sound sources, via OSC over UDP multicast. The WFS algorithm is [written in Faust](https://github.com/hatchjaw/teensy-wfs/tree/main/src).
 
-
 ### [pd-remote](https://github.com/agraef/pd-remote)
 
 This is a simplified and unified version of the Pd remote control helpers that I've been distributing with various Pd externals such as [pd-faust](https://github.com/agraef/pure-lang/tree/master/pd-faust) and [pd-lua](https://github.com/agraef/pd-lua) over the years. The present implementation will work with any of these and replaces the more specialized versions. It takes the form of a Pd abstraction pd-remote.pd and an accompanying pd-remote.el elisp file for Emacs.
-
 
 ### [Crossroad2Effects](https://github.com/SamKouteili/Crossroad2Effects)
 
@@ -518,13 +577,11 @@ This is a simplified and unified version of the Pd remote control helpers that I
 
 Crossroad2Effects, the functional successor to [@jatinchowdhury's](https://github.com/jatinchowdhury18) [CrossroadsEffects](https://github.com/jatinchowdhury18/CrossroadsEffects), is a genetic algorithm infrastructure for filter exploration. Provided with dry and wet sound file, Crossroad2Effect determines the filter that tampered the dry file and presents it as a Faust program. This allows users to have granular access to analog or VST filters through a programming interface. This project constructs its genetic algorithm search on top of pedalboard, Spotify's new plugin API.
 
-
 ### [flatten](https://git.sr.ht/~kdsch/flatten/tree)
 
 <div><a href="https://git.sr.ht/~kdsch/flatten/tree"><img width="30%" class="mx-auto d-block" src="img/flatten.png"></a> </div>
 
 What is an [envelope flattener](https://git.sr.ht/~kdsch/flatten/tree/master/item/notes)? It's similar to an automatic gain control, compressor, or maximizer in that it acts by modifying the gain of the signal according to a control signal. Like these, the control signal is derived from the envelope of the input signal. The DSP is [written in Faust](https://git.sr.ht/~kdsch/flatten/tree/master/item/flatten.dsp).
-
 
 ### [drumvoice](https://git.sr.ht/~kdsch/drumvoice)
 
@@ -544,20 +601,17 @@ Verber is a simple audio plugin tool with a Sweet, Lushy reverb processor. It is
 
 Extraterrestrial Reverb for Electronic Music. REACH is modern creative Reverb that is made for synthetic sound sources. There are four effects included to transform the Signal. It features modular routing, pre and post filters and over 40 Presets. Part of the DSP code is [written in Faust](https://github.com/Sinuslabs/Reach/tree/main/DspNetworks/CodeLibrary/faust).
 
-
 ### [Stray_virtual-synth](https://github.com/JDCAudio/Stray_virtual-synth)
 
 <div><a href="https://github.com/JDCAudio/Stray_virtual-synth"><img width="50%" class="mx-auto d-block" src="img/stray.png"></a>  </div>
 
 A typical wavetable synthesizer will have a table of predetermined amplitude values which are read through at the appropriate speed relative to the frequency of the current note, resulting in an audible signal. Stray functions similarly, reading through a table of values, but the amplitude values are not predefined. Instead, these values are modulated with one of four LFO shapes. The [DSP code](https://github.com/JDCAudio/Stray_virtual-synth/blob/main/HowItWorks.md) is written in Faust.
 
-
 ### [Drty Drums](https://github.com/noonesimg/drty-drums)
 
 <div><a href="https://github.com/noonesimg/drty-drums"><img width="50%" class="mx-auto d-block" src="img/drty-drums.png"></a>  </div>
 
 A 4 voices drum machine based on FM synthesis [WIP]. The sound engine is [made in Faust](https://github.com/noonesimg/drty-drums/tree/main/dsp).
-
 
 ### [201 Musical Synthesizer](https://www.kickstarter.com/projects/critterandguitari/201-musical-synthesizer)
 
@@ -567,18 +621,11 @@ We’re Critter & Guitari and we’re happy to announce our newest synthesizer: 
 
 Inside, the 201 uses a combination of Pure Data and Faust musical programming environments. Users are invited to modify or create new sound engines!
 
-### [OneTrick SIMIAN](https://punklabs.com/ot-simian)
-
-<div><a href="https://punklabs.com/ot-simian"><img width="50%" class="mx-auto d-block" src="img/ot-simian.png"></a>  </div>
-
-**Crash into the 80s** with an *open source drum synth* inspired by **hexagonal classics** like the [Simmons SDS-V](https://en.wikipedia.org/wiki/Simmons_SDS-V). *Thumping* **kicks**, *punchy* **snares**, and *sizzling* **cymbals** coalesce with its *clacky* **claves** and *crunchy* **claps**. Bring saccharine **synthwave** sauce to your sublime soundscapes or drop indelable *pewww pewww* **tom toms** into your new **nu-disco**. Get the source code [containing Faust DSP](https://punklabs.com/content/projects/ot-simian/downloads/OneTrick-SIMIAN-1.1.0-Source.zip), using the Dlang backend.
-
 ### [CollisionDrive.lv2](https://github.com/brummer10/CollisionDrive)
 
 <div><a href="https://github.com/brummer10/CollisionDrive"><img width="30%" class="mx-auto d-block" src="img/CollisionDrive.png"></a>  </div>
 
 CollisionDrive is modeled after the Horizon Devices Precision Drive, a modern overdrive pedal with a built-in noise gate, with DSP [written in Faust](https://github.com/brummer10/CollisionDrive/tree/main/CollisionDrive/dsp).
-
 
 ### [MetalTone.lv2](https://github.com/brummer10/MetalTone)
 
@@ -601,7 +648,6 @@ Tamgamp (Rhymes with: "Damage Amp") is a LV2 guitar amp simulator that provides 
 
 A Reverb written with Faust and JUCE, based on [SchroederReverberators](https://ccrma.stanford.edu/~jos/pasp/Schroeder_Reverberators.html). This reverb effect uses different stages. It splits input signal in parallel and uses different types of delaylines. Different filters are provided to get rid of unwanted resonances. Check out [reverb.dsp](https://github.com/zeloe/ReverbZen/blob/main/Source/reverb.dsp) file to get more detailed insight.
 
-
 ### [Wingie2](https://www.mengqimusic.com/wingie2-introduction)
 
 <div><a href="https://www.mengqimusic.com/wingie2-introduction"><img width="30%" class="mx-auto d-block" src="img/Wingie2.png"></a>  </div>
@@ -613,7 +659,6 @@ A Reverb written with Faust and JUCE, based on [SchroederReverberators](https://
 <div><a href="https://github.com/brummer10/slowmo.lv2"><img width="60%" class="mx-auto d-block" src="img/slowmo.png"></a>  </div>
 
 A multiband slow gate with delay/echo. The C++ files for the effect are generated from Faust DSP files: [Bandsplit.cc](https://github.com/brummer10/slowmo.lv2/blob/main/slowmo/Bandsplit.cc), [Delay.cc](https://github.com/brummer10/slowmo.lv2/blob/main/slowmo/Delay.cc) and [Volume.cc](https://github.com/brummer10/slowmo.lv2/blob/main/slowmo/Volume.cc).
-
 
 ### [Vocoder App](https://github.com/Rickr922/mobile-vocoder)
 
@@ -644,13 +689,11 @@ An experiment with Faust Demo Library content as DPF plugins. Basically glueing 
 3. [faustpp](https://github.com/jpcima/faustpp)
 4. [faust examples](https://faustdoc.grame.fr/examples/reverb/)
 
-
 ### [TR8CK](https://github.com/bigmistqke/tr8ck)
 
 <div><a href="https://github.com/bigmistqke/tr8ck"><img width="50%" class="mx-auto d-block" src="img/TR8CK.apng"></a>  </div>
 
 TR8CK is an experimental DAW/tracker with Faust live coding via [faust2webaudio](https://github.com/grame-cncm/faust2webaudio) and UI powered by [SolidJS](https://www.solidjs.com).
-
 
 ### [GuitarD](https://github.com/TobiasKozel/GuitarD)
 
@@ -658,20 +701,11 @@ TR8CK is an experimental DAW/tracker with Faust live coding via [faust2webaudio]
 
 It's a basic multi effects processor which follows a node based approach. Components are [developed with Faust](https://github.com/TobiasKozel/GuitarD/tree/master/src/nodes).
 
-
-### [HISE](http://www.hise.audio)
-
-<div><a href="http://www.hise.audio"><img width="55%" class="mx-auto d-block" src="img/faust_hise.png"></a>  </div>
-
-HISE is an open source framework for building sample based virtual instruments combining a highly performant Disk-Streaming Engine, a flexible DSP-Audio Module system and a handy Interface Designer. The implementation of the [Faust integration](https://resonant-bytes.de/blog/gsoc-final-submission/) was the result of a Google Summer of Code project done by [Roman Sommer](https://resonant-bytes.de/about/) with the help of [Christoph Hart](https://github.com/christophhart) as mentor.
-
-
 ### [MBStereophony](https://github.com/marcecj/faust_mbstereophony)
 
 <div><a href="https://github.com/marcecj/faust_mbstereophony"><img width="40%" class="mx-auto d-block" src="img/mbstereophony.png"></a>  </div>
 
 This is a simple implementation of a Regalia-Mitra filter bank using 3rd order Cauer low-pass filters as the base designs. There are four filter bank programs available which are described below. MBStereophony itself is a demo effect that down-mixes a stereo signal separately per frequency band.
-
 
 ### [Audiolab](https://github.com/hrtlacek/audiolab)
 
@@ -701,7 +735,6 @@ A stereo delay plugin which emphasizes free (non beat-synced) controls for the i
 
 This archive presents a virtual simulation of the Leslie Speaker commonly found in Hammond electric organs. The digital effect has been developed using the FAUST programming language, and then ported into a VST-compatible format using the JUCE C++ framework.
 
-
 ### [cookiecutter-dpf-faust](https://github.com/SpotlightKid/cookiecutter-dpf-faust)
 
 <div><a href="https://github.com/SpotlightKid/cookiecutter-dpf-faust"><img width="50%" class="mx-auto d-block" src="img/cookiecutter-dpf-faust.png"></a>  </div>
@@ -719,7 +752,6 @@ A feedback-delay-network reverb plugin built with [DPF](https://github.com/DISTR
 * [Stereo Cross Delay](https://github.com/SpotlightKid/stereocrossdelay), a stereo delay plugin with feedback and cross-mixing.
 * [DF JPverb](https://github.com/SpotlightKid/dfjpverb), a lush algorithmic reverb designed to sound great with synthetic sound sources, built with DPF and based on [re.jpverb](https://faustlibraries.grame.fr/libs/reverbs/#rejpverb) from the FAUST standard library.
 
-
 ### [Theremotion](https://github.com/plule/theremotion)
 
 <div><a href="https://github.com/plule/theremotion"><img width="55%" class="mx-auto d-block" src="img/theremotion.png"></a>  </div>
@@ -728,13 +760,11 @@ Theremotion is a virtual instrument inspired by the Theremin. Just like a Therem
 
 The hand tracking is provided by Ultraleap's [Leap Motion Controller](https://www.ultraleap.com/product/leap-motion-controller/). The sound generation is created with Grame's [Faust](https://faust.grame.fr). The program is built with [Rust](https://www.rust-lang.org).
 
-
 ### [Hypercurve](https://github.com/johannphilippe/hypercurve)
 
 <div><a href="https://github.com/johannphilippe/hypercurve"><img width="80%" class="mx-auto d-block" src="img/hybrid.png"></a>  </div>
 
 Hypercurve is a library allowing you to combine several curve algorithms into a single 2D envelope. It is designed to be used in audio applications, for people who know how to enjoy a finely shaped curve. As shown above, you can perfectly combine gaussian curve with diocles cissoid curve, and plenty of other curve algorithms. The library can be used in C++, Lua, Csound and [Faust](https://github.com/johannphilippe/hypercurve/tree/main/faust_lib).
-
 
 ### [faust-mcp](https://github.com/agraef/faust-mcp)
 
@@ -744,7 +774,6 @@ This package provides a [Pd](http://puredata.info) abstraction mcp.pd (along wit
 
 This SuperCollider package makes it possible to create SuperCollider packages (Quarks) containing plugins written in Faust code. With this, you can distribute plugins written in Faust and make it easy for others to install, compile or uninstall them. It also contains some simple interfaces for the `faust` and `faust2sc.py` commands used behind the scenes.
 
-
 ### [Komet](https://github.com/madskjeldgaard/komet)
 
 <div><a href="https://github.com/madskjeldgaard/komet"><img width="80%" class="mx-auto d-block" src="img/komet.png"></a>  </div>
@@ -753,13 +782,11 @@ Komet is a computer music / sound system by Mads Kjeldgaard written in [SuperCol
 
 Komet is a computer music system that makes advanced synthesis operations and composition easier. It auto generates thousands of synthesizer variations from simple recipes and offers a range of DAW-like features such as effect chains (like on channel strips) and other conveniences. It can work natively in stereo, multichannel or high order ambisonics mode with the flick of a switch, allowing the same compositions to be used in different sound systems.
 
-
 ### [Faug](https://github.com/t2techno/Faug)
 
 <div><a href="https://github.com/t2techno/Faug"><img width="60%" class="mx-auto d-block" src="img/faug.png"></a>  </div>
 
 A Minimoog Model D emulation with the DSP portion written in Faust and using [JUCE](https://www.juce.com) framework. Moog + Faust = Faug.
-
 
 ### [Striso Studio](https://github.com/markmarijnissen/strisostudio)
 
@@ -774,7 +801,6 @@ A [virtual Web version](https://strisostudio.web.app/board/) of the [Striso](htt
 A WYSIWYG LV2 X11UI GUI creator tool.  Provide a easy to use GUI generator tool to create X11 UI's for LV2 plugins. Currently only libxputty is supported, but the generated GUI C file could be used probably with other widget tool-kits as well, just a wrapper file is needed to translate the generated file to the needs of a toolkit.
 
 XUiDesigner could now parse faust (.dsp) files and generate a full LV2 Bundle for them. A faust (.dsp) file could be given by the command-line parameter -f or simply by drag it on the Designer window. It will create all control widgets which you could then rework to your needs before you save your Bundle.
-
 
 ### [eurorack-blocks](https://github.com/ohmtech-rdi/eurorack-blocks)
 
@@ -814,9 +840,11 @@ This signal mangler features a weird kind of overdrive (see source code for exac
 
 Typebeat is a virtual groovebox that’s entirely keyboard-operated. Typebeat draws inspiration from two computing environments. Effects are developped in Faust then generated as [Rust modules](https://github.com/kofigumbs/typebeat/tree/main/src/effects).
 
+
 ### [AFDN-reverb](https://github.com/nickgang/AFDN-reverb)
 
 (High-Order) Ambisonics Feedback Delay Network Reverb. Code is [developed in Faust](https://github.com/nickgang/AFDN-reverb/tree/master/Source/Faust) and Max.
+
 
 ### [Karpsichord](https://github.com/spaskalev/karpsichord/)
 
@@ -824,9 +852,11 @@ Typebeat is a virtual groovebox that’s entirely keyboard-operated. Typebeat dr
 
 A virtual harpsichord based on Karplus-Strong string synthesis, implemented [in Faust](https://github.com/spaskalev/karpsichord/blob/main/karpsichord.dsp) and [running in the Web](https://spaskalev.com/Karpsichord/ ).
 
+
 ### [Arduino Audio Tools](https://github.com/pschatzmann/arduino-audio-tools)
 
 Some basic header-only C++ classes that can be used for Audio Processing provided as Arduino Library. A simple Interface class to use Faust with Arduino Audio Tools [is provided](https://www.pschatzmann.ch/home/2022/04/22/using-faust-dsp-with-my-arduino-audio-tools/). Code can be written [using Faust](https://github.com/pschatzmann/arduino-audio-tools/wiki/Examples#faust-dsp).
+
 
 ### [Organelle](https://www.critterandguitari.com/organelle)
 
@@ -838,15 +868,18 @@ At the heart of the Organelle's sound engine is a robust computer that runs patc
 
 The Organelle can be programed with Faust as explained [here](https://forum.critterandguitari.com/t/faustgen-for-max7/1586) and with this [PD external using Faust](https://forum.critterandguitari.com/t/playing-patching-with-pd-and-organelle/8260/7).
 
+
 ### [Zrythm](https://github.com/zrythm/zrythm)
 
 <div><a href="https://github.com/zrythm/zrythm"><img width="60%" class="mx-auto d-block" src="img/zrythm.png"></a>  </div>
 
 Zrythm is a digital audio workstation designed to be featureful and easy to use. It offers streamlined editing workflows with flexible tools, limitless automation capabilities, powerful mixing features, chord assistance and support for various plugin and file formats. A set of [Faust effects](https://github.com/zrythm/zrythm/tree/master/data/plugins) are compiled as [LV2 plugins](https://github.com/zrythm/zrythm/tree/master/data/plugins/generated) and included in the application.
 
+
 ### [Patches for the OWL Pedal/Eurorack Module](https://github.com/olilarkin/OL-OWLPatches)
 
 This is a collection of patches written or ported specifically for the OWL. Most of them were written using Faust and if you want to modify them you'll need to have a working FAUST installation. C++ source code (the .hpp files) for the OWL can be generated by running the "updateFaustPatches.py" python script. Then you will need to rebuild the OWL firmware and upload it to the device.
+
 
 ### [Kiwi](https://github.com/Musicoll/Kiwi)
 
@@ -858,6 +891,7 @@ Kiwi is part of the French ANR-funded MUSICOLL project that unites the CICM and 
 
 Faust DSP programs can be dynamically compiled as objects included in the patch. An extended presentation of the system can be found in this [IFC 2020 paper](https://ifc20.sciencesconf.org/332586/document).
 
+
 ### [Brainwave Virtual Instrument](https://github.com/nicodaleman/brainwave_virtual_instrument)
 
 <div><a href="https://github.com/nicodaleman/brainwave_virtual_instrument"><img width="40%" class="mx-auto d-block" src="img/BVIGUI.png"></a>  </div>
@@ -868,11 +902,13 @@ The instrument can easily be distributed and compiled to different targets thank
 
 The BVI was created for two major purposes: on the one hand, to find musical structures that relate to each other in order to present an aesthetic proposal, and on the other, to create a tool that familiarizes scientists and researchers in the field of neuroscience with sonification techniques, and the exploration of brain activity through sound. An extended presentation of the system can be found in this [IFC 2020 paper](https://ifc20.sciencesconf.org/332720/document).
 
+
 ### [Mephisto](https://github.com/aonurdemir/Mephisto)
 
 <div><a href="https://github.com/aonurdemir/Mephisto"><img width="40%" class="mx-auto d-block" src="img/mephisto.jpg"></a>  </div>
 
 Mephisto is a transpiler for converting sound patches designed using the graphical computer music environment Pure Data to the functional DSP programming language Faust. Faust itself compiles into highly-optimized C++ code. The aim of the transpiler is to enable creating highly optimized C++ code embeddable in games or other interactive media for sound designers, musicians and sound engineers.
+
 
 ### [weather_organ](https://github.com/myklemykle/weather_organ)
 
@@ -880,18 +916,13 @@ Mephisto is a transpiler for converting sound patches designed using the graphic
 
 Weather Organ is a Faust instrument for manipulating sparse noise to imitate slowly-changing natural sound sources such as rain, wind, surf, fire, Geiger counters and volcanic activity, and to create interesting new textures of sound. It is the product of various discoveries made while using Faust to explore the definition, synthesis and experience of acoustic noise while, simultaneously using the exploration of noise as as focus for learning Faust.
 
-### [Genius Eurorack Module](https://www.rebeltech.org/product/genius/)
-
-<div><a href="https://www.rebeltech.org/product/genius/"><img width="20%" class="mx-auto d-block" src="img/genius.jpg"></a>  </div>
-
-The Genius is the next evolutionary step for the OWL platform, and the first product released based on a Cortex M7 microcontroller. It runs the OWL firmware and so can be programmed with Faust. A demo running bells from thee [physical library](https://faustlibraries.grame.fr/libs/physmodels/) can be [listened to here](https://www.youtube.com/watch?v=AnytPyN9mLE&feature=emb_imp_woyt).
-
 
 ### [Dataflow Based FPGA Program Synthesis](https://github.com/jgelfman/Dataflow-Based-FPGA-Program-Synthesis-Capstone)
 
 <div><a href="https://github.com/jgelfman/Dataflow-Based-FPGA-Program-Synthesis-Capstone"><img width="70%" class="mx-auto d-block" src="img/Dataflow-FPGA.png"></a>  </div>
 
 A Yale-NUS BSc. (Hons) in Mathematical, Computational, and Statistical Sciences Capstone: an FPGA Program Generator written in Python that takes dsp-sig XML Dataflow Graphs created using Faust to produce FPGA programs in VHDL.
+
 
 ### [DSPedal](https://github.com/jmiskovic/DSPedal)
 
@@ -901,6 +932,7 @@ DSPedal is a custom hardware platform for real-time sound effects. It is operate
 
 Processing effect is written in Faust programming language and compiled into C code. So far the Cortex M4 core clocked at 204 MHz has proven to be capable of executing relatively complex effects like wah, but effect-chaining quickly reaches the limits of processing power.
 
+
 ### [Tambura](https://github.com/olilarkin/Tambura)
 
 <div><a href="https://github.com/olilarkin/Tambura"><img width="50%" class="mx-auto d-block" src="img/Tambura.png"></a>  </div>
@@ -909,18 +941,13 @@ Waveguide physical model of an Indian Tambura/Tanpura. This is a Faust patch ins
 
 The model uses a few tricks to produce a Tambura-like sound, and should probably be referred to as a "pseudo" physical model, because it does not attempt to accurately recreate the physics of the string-bridge interaction. It includes a range of parameters selected to allow control of the qualities of the excitation/pluck, string behavior and sympathetic resonance. It can produce some beautiful evolving drones, which can vary from very synthetic to quite natural. The model can be [tested here](https://olilarkin.github.io/Tambura/).
 
-### [drumbox](https://drumbox.app/)
-
-<div><a href="https://drumbox.app/"><img width="30%" class="mx-auto d-block" src="img/drumbox.png"></a>  </div>
-
-drumbox is a fun and powerful drum synthesizer for your Android device. Start from a preset and tweak the sounds and appearance to make it your own.
-Freestyle on the drum pads, record a sequence or both...it's up to you!
 
 ### [Granola](https://github.com/jlp6k/faust-things)
 
 <div><a href="https://github.com/jlp6k/faust-things"><img width="50%" class="mx-auto d-block" src="img/Granola.png"></a>  </div>
 
 Granola is a monophonic granular live feed processor. The grain processor is inspired by the Mutable Instruments Beads. The grain window shape control is inspired by the GR-1 Granular synthesizer from Tasty Chips Electronics. The DSP code is written in Faust.
+
 
 ### [fverb](https://github.com/jpcima/fverb)
 
@@ -934,15 +961,18 @@ A stereo variant of the reverberator by Jon Dattorro coded in Faust.
 
 This study has been developed as a proof-of-concept for data pattern sonification. We've implemented data pattern sonification using FM synthesis coded in Faust. Air pollution data, which is temporal, is retrieved from the server and is done pattern mining. Then  pattern data sonification is done.
 
+
 ### [GULA Plugins](https://github.com/steveb/gula-plugins)
 
 A collection of guitar effect LV2 plugins ([The Vibey](https://github.com/steveb/gula-plugins#the-vibey), [The Splits](https://github.com/steveb/gula-plugins#the-splits), [The Fades](https://github.com/steveb/gula-plugins#the-fades), [SSaP Tone](https://github.com/steveb/gula-plugins#ssap-tone), [Sweabed](https://github.com/steveb/gula-plugins#sweabed), [Pequed](https://github.com/steveb/gula-plugins#pequed), [Peak audio to CV](https://github.com/steveb/gula-plugins#peak-audio-to-cv), [LFO CV](https://github.com/steveb/gula-plugins#lfo-cv)) with [MOD Devices](https://www.moddevices.com) user interfaces.
+
 
 ### [limiterStereo](https://github.com/dariosanfilippo/limiterStereo)
 
 <div><a href="https://github.com/dariosanfilippo/limiterStereo"><img width="50%" class="mx-auto d-block" src="img/limiterStereo.png"></a>  </div>
 
 Yet another look-ahead limiter code in Faust. The novel aspect of this limiter is that it uses N cascaded one-pole filters for amplitude profiling, which improves smoothness in the first to N-1 order derivatives and reduces total harmonic distortion. This design uses four cascaded one-pole lowpass filters, following the cut-off correction formula (8.9) found in [Zavalishin 2012].
+
 
 ### [Web Audio Modules](https://github.com/webaudiomodules)
 
@@ -951,11 +981,13 @@ Yet another look-ahead limiter code in Faust. The novel aspect of this limiter i
 Web Audio Modules are an open source framework facilitating the development of high-performance Web Audio plugins (instruments, realtime audio effects and MIDI processors). They can be developed using JavaScript and Web standards or compiled from C, C++ code, and domain-specific languages such as Faust or Csound.
 The [Faust Web IDE](https://faustide.grame.fr) contains an integrated GUI builder, read a [tutorial here](https://docs.google.com/document/d/1HDEm4m_cD47YBuDilzGYiANYQDktj56Njyv0umGYO6o/edit?usp=sharing).
 
+
 ### [Kapitonov Plugins Pack](https://github.com/olegkapitonov/Kapitonov-Plugins-Pack)
 
 <div><a href="https://github.com/olegkapitonov/Kapitonov-Plugins-Pack"><img width="45%" class="mx-auto d-block" src="img/Kapitonov.jpg"></a>  </div>
 
 Set of 7 plugins for guitar sound processing, compiled in LADSPA and LV2 formats. Compatible with hosts such as Ardour, Qtractor, Carla, guitarix, jack-rack. The DSP of all of them is written in Faust.
+
 
 ### [tubeAmp Designer](https://github.com/olegkapitonov/tubeAmp-Designer)
 
@@ -963,11 +995,13 @@ Set of 7 plugins for guitar sound processing, compiled in LADSPA and LV2 formats
 
 Standalone software guitar processor, editor of *.tapf profile files for tubeAmp (KPP) and guitar amp profiler.
 
+
 ### [BioSignals](https://github.com/pingdynasty/BioSignals)
 
 <div><a href="https://github.com/pingdynasty/BioSignals"><img width="50%" class="mx-auto d-block" src="img/BioSignalsTop.png"></a>  </div>
 
 BioSignals is a data aquisition and processing device for EMG, ECG and EEG signals. Since it is using the [OpenWare](https://github.com/pingdynasty/OpenWare) firmware, it can be programmed with Faust.
+
 
 ### [Scale it](https://github.com/pavelhusa/Scaleit)
 
@@ -977,11 +1011,13 @@ BioSignals is a data aquisition and processing device for EMG, ECG and EEG signa
 
 *Scale it*  is being developed primarily for neurofeedback purposes. To allow straightforward and customizable instruments to carry sonic feedback about EEG activity in specific regions of the neocortex.
 
+
 ### [JackTrip](https://www.jacktrip.com)
 
 <div><a href="https://www.jacktrip.com"><img width="40%" class="mx-auto d-block" src="img/jacktrip.png"></a>  </div>
 
 [JackTrip](https://github.com/jacktrip/jacktrip) is a Linux, macOS, or Windows multi-machine audio system used for network music performance over the Internet. It supports any number of channels (as many as the computer/network can handle) of bidirectional, high quality, uncompressed audio signal streaming. Several DSP effects ([compressor](https://github.com/jacktrip/jacktrip/blob/main/faust-src/compressordsp.dsp), [freeverb](https://github.com/jacktrip/jacktrip/blob/main/faust-src/freeverbdsp.dsp), [zitarev](https://github.com/jacktrip/jacktrip/blob/main/faust-src/zitarevdsp.dsp), [limiter](https://github.com/jacktrip/jacktrip/blob/main/faust-src/limiterdsp.dsp)) are written in Faust,  compiled as C++ code, and included in [project sources](https://github.com/jacktrip/jacktrip/tree/main/src).
+
 
 ### [Level Rider](https://github.com/unicornsasfuel/levelrider)
 
@@ -991,6 +1027,7 @@ This is an audio plugin [written in Faust](https://github.com/unicornsasfuel/lev
 
 This plugin is comparable to Waves Vocal Rider or Waves Bass Rider in its functionality, but is free and open-source.
 
+
 ### [Whetstone Transient Shaper](https://github.com/unicornsasfuel/whetstone)
 
 <div><a href="https://github.com/unicornsasfuel/whetstone"><img width="30%" class="mx-auto d-block" src="img/whetstone.png"></a>  </div>
@@ -999,11 +1036,13 @@ A free, open source transient shaping audio plugin that operates on a specified 
 
 This plugin is meant to be comparable to the excellent Spiff plugin in its core functionality, but lacks many of the nice features and polished UI. The DSP is [coded in Faust](https://github.com/unicornsasfuel/whetstone/blob/main/whetstone.dsp).
 
+
 ### [Reverb Trickery](https://github.com/unicornsasfuel/reverb_trickery)
 
 <div><a href="https://github.com/unicornsasfuel/reverb_trickery"><img width="35%" class="mx-auto d-block" src="img/reverb-trickery.png"></a>  </div>
 
 A free, open source audio plugin implementing various creative reverb effects, including octave-shifted, distorted, hi-pass/low-passed, gated, and narrowing reverb, [coded in Faust](https://github.com/unicornsasfuel/reverb_trickery/blob/main/reverbtrickery.dsp).
+
 
 ### [b259wf](https://github.com/yorgoszachos/b259wf)
 
@@ -1018,11 +1057,13 @@ clipping.
 
 The user interface consists of the controls **fold** for the folding amount, **offset** for offseting the signal before folding, and **lowpass** as a final stage one-pole filtering to control the character (too much folding might introduce unwanted higher harmonics for certain signals). The final output is dc-blocked.
 
+
 ### [string-machine](https://github.com/jpcima/string-machine)
 
 <div><a href="https://github.com/jpcima/string-machine"><img width="70%" class="mx-auto d-block" src="img/string-machine.png"></a>  </div>
 
 This is a virtual-analog string ensemble synthesizer. The implementation is based on a digital model designed by Peter Whiting. The improvement of the model adds various abilities, in particular a virtual-analog emulation of the bucket brigade delay circuit. Most of the [DSP code](https://github.com/jpcima/string-machine/tree/master/sources/dsp) is developed using Faust. Three VST or LV2 are generated: **string-machine**, **string-machine-chorus** and **string-machine-chorus-stereo**.
+
 
 ### [metaFx](https://github.com/dblanchemain/metaFx)
 
@@ -1033,6 +1074,7 @@ The [metaFx](http://blanchemain.info/Documents/Programmation/index.php?page=meta
 Like [metaSurface64](https://faust.grame.fr/community/made-with-faust/#metasurface64), it has both its own loop generator and a multi-effects FX engine, but its operation is different, especially for the management of plugin chains and pads.
 
 Each mixer on this surface can directly control the gain and the attached plug-ins. It is also possible to control the tracks of an external sequencer (Ardour or Reaper). To do this, the application uses OSC controllable modules that come from the Faust language library that is embedded in the application. Its interest lies in the construction of a parallel sound processing chain in the form of a graph.
+
 
 ### [Kymatica.com](http://kymatica.com)
 
@@ -1048,11 +1090,13 @@ Jonatan Liljedahl at [Kymatica AB](http://kymatica.com) makes iOS music apps, el
 
 - [AUFX:PeakQ](http://kymatica.com/apps/aufx_peakq): A versatile 4-band parametric stereo equalizer for everything between subtle frequency enhancements and agressive boosting/cutting or special resonator effects.
 
+
 ### [Nemesis](https://github.com/modularev/Nemesis)
 
 <div><a href="https://github.com/modularev/Nemesis"><img width="50%" class="mx-auto d-block" src="img/nemesis.jpg"></a>  </div>
 
 Nemesis is multichannel dsp platform for eurorack. It can be [programmed with Faust](https://github.com/modularev/Nemesis/tree/main/software).
+
 
 ### [Sonobus](https://sonobus.net)
 
@@ -1060,11 +1104,13 @@ Nemesis is multichannel dsp platform for eurorack. It can be [programmed with Fa
 
 SonoBus is an easy to use application for streaming high-quality, low-latency peer-to-peer audio between devices over the internet or a local network. Several DSP effects ([Compressor](https://github.com/sonosaurus/sonobus/blob/main/Source/faustCompressor.h), [Expander](https://github.com/sonosaurus/sonobus/blob/main/Source/faustExpander.h), [Limiter](https://github.com/sonosaurus/sonobus/blob/main/Source/faustLimiter.h), [ParametricEQ](https://github.com/sonosaurus/sonobus/blob/main/Source/faustParametricEQ.h), [Reverb](https://github.com/sonosaurus/sonobus/blob/main/Source/zitaRev.h)) have been [written in Faust](https://github.com/sonosaurus/sonobus/tree/main/scripts), compiled as C++ code, and included in the [JUCE project](https://github.com/sonosaurus/sonobus).
 
+
 ### [XPlugs.lv2](https://github.com/brummer10/XPlugs.lv2)
 
 <div><a href="https://github.com/brummer10/XPlugs.lv2"><img width="45%" class="mx-auto d-block" src="img/HarmonicExciter.png"></a>  </div>
 
 This repository contain the LV2 plugins developed using libxputty/XUidesigner. The included makfile allows the build of all plugins against a single checkout of libxputty. Each plugin exists as its own submodule under this repository. Some of the DSP code has been written with Faust.
+
 
 ### [Bass Preamp Drive](https://github.com/jujudusud/BPD)
 
@@ -1072,24 +1118,13 @@ This repository contain the LV2 plugins developed using libxputty/XUidesigner. T
 
 The goal of this project is to digitally reproduce the behavior of a well-known electric bass preamp: Ampeg SVT3 Pro. This preamp has been copied by several manufacturers. So we have an almost perfect copy with the Bugera BVP5500 which has four preamplifier tubes. An analog copy is also available as a pedal, the Tech 21 BDDI. The project is based on advances in the simulation of analog circuits made available by the Guitarix project and the excellent Faust from Grame cncm.
 
+
 ### [Drum Module](https://github.com/andreaco/miosix-drum)
 
 <div><a href="https://github.com/andreaco/miosix-drum"><img width="50%" class="mx-auto d-block" src="img/drum-module.jpeg"></a>  </div>
 
 This project aims at integrating a digital drum synthesizer [using Faust](https://andreaco.github.io/miosix-drum/) and Miosix real time OS on an STM32F407VG Discovery Board. To do this, a user interface by means of buttons, sliders, encoders, and an LCD has been implemented to control the synthesizer. Moreover, a serial MIDI input port has been added in order to control the synthesizer externally by using an external sequencer or controller.
 
-### [Daisy based audio boards](https://www.electro-smith.com/daisy)
-
-<div><a href="https://www.electro-smith.com/daisy"><img width="35%" class="mx-auto d-block" src="img/daisy.png"></a>  </div>
-
-Daisy is an embedded platform for music. It features everything you need for creating high fidelity audio hardware devices. Just plug in a USB cable and start making sound! No soldering required. It can be programed with Faust using the [faust2daisy](https://github.com/grame-cncm/faust/tree/master-dev/architecture/daisy) tool.
-
-
-### [Elk Audio OS](https://elk.audio/audio-os/)
-
-<div><a href="https://elk.audio/audio-os/"><img width="55%" class="mx-auto d-block" src="img/elk-audio.jpg"></a>  </div>
-
-Elk is an Audio Operating System developed from the ground up to deliver real time audio performances in embedded systems and remote networks. It can run on [several hardware](https://elk.audio/store/). Faust can be used to [generate VST2 plugins](https://forum.elk.audio/t/writing-plugins-for-elk-using-faust/175) to run on the plaform.
 
 ### [ER-301 Sound Computer](http://www.orthogonaldevices.com/er-301.html)
 
@@ -1097,11 +1132,13 @@ Elk is an Audio Operating System developed from the ground up to deliver real ti
 
 The ER-301 is a voltage-controllable canvas for digital signal processing algorithms. It can be programed with Faust using the [faust2er301]( https://github.com/ljwall/faust2er301) tool and some units [are developed here](https://github.com/ljwall/er-301-units). Note that it is still a WIP, read the [discussion here](https://forum.orthogonaldevices.com/t/using-faust-for-er-301-dsp-development/5890).
 
+
 ### [Zynthian platform](https://zynthian.org)
 
 <div><a href="https://zynthian.org"><img width="50%" class="mx-auto d-block" src="img/Zynthian.png"></a>  </div>
 
 Zynthian is a new class of musical device. A powerful multitimbral synthesizer and audio processor, capable of managing up to 16 audio chains simultaneously. Also, it's a MIDI processor and router, equipped with standard MIDI ports, USB, WIFI & wired networks. Zynthian is a community-driven project and it's 100% open source. The Zynthian platform can be [programmed with Faust](https://francescoganassin.files.wordpress.com/2021/03/the-tale-of-faust-and-zynthian.pdf) with some [DSP examples here](https://github.com/francescoganassin/FaustDSP-synths).
+
 
 ### [GxPlugins.lv2](https://github.com/brummer10/GxPlugins.lv2)
 
@@ -1109,11 +1146,13 @@ Zynthian is a new class of musical device. A powerful multitimbral synthesizer a
 
 GxPlugins.lv2 is a set of more than 40 extra standalone lv2 plugins designed to compliment the Guitarix project. Each plugin exists as its own submodule under this repository. The DSP code has been written with Faust.
 
+
 ### [Stone phaser](https://github.com/jpcima/stone-phaser)
 
 <div><a href="https://github.com/jpcima/stone-phaser"><img width="35%" class="mx-auto d-block" src="img/stone-phaser.png"></a>  </div>
 
 A classic analog phaser effect. This is an analog phaser with similarity to the Small Stone. It has a color switch, which makes the phasing stronger when on, and adds some feedback controls. A stereo variant of the phaser is included. This effect is supported on MOD devices. The DSP code is [developed in Faust](https://github.com/jpcima/stone-phaser/tree/master/dsp).
+
 
 ### [sfizz](https://sfz.tools/sfizz/)
 
@@ -1123,17 +1162,12 @@ A classic analog phaser effect. This is an analog phaser with similarity to the 
 
 The sfizz project uses the SFZ parser and synth C++ library, providing AU/LV2/VST3 plugins and JACK standalone client. Some effects are [developed in Faust](https://github.com/sfztools/sfizz/tree/master/src/sfizz/effects/dsp) are well as [several filters](https://github.com/sfztools/sfizz/tree/master/src/sfizz/dsp/filters).
 
+
 ### [Antescofo](https://antescofo-doc.ircam.fr/UserGuide/intro/)
 
 <div><a href="https://antescofo-doc.ircam.fr/UserGuide/intro"><img width="55%" class="mx-auto d-block" src="img/antescofo.png"></a>  </div>
 
 Antescofo is a coupling of a real-time listening machine with a reactive and timed synchronous language developed at [IRCAM](https://www.ircam.fr). The language is used for authoring of music pieces involving live musicians and computer processes, and the real-time system assures its correct performance and synchronization despite listening or performance errors. Antescofo audio DSP processes [can be described with Faust](https://hal.archives-ouvertes.fr/hal-01257524/document), using libfaust dynamic version of the Faust compiler.
-
-### [Motion Vox](https://motionvox.app/)
-
-<div><a href="https://motionvox.app/"><img width="35%" class="mx-auto d-block" src="img/motionvox.png"></a>  </div>
-
-A mobile music creation and performance workstation with a built-in motion-based controller, sequencer and synthesis engine. The controller unites XY pad, accelerometer and gyroscope events with complex data ﬁltering engine. Performance process consists of touching the active area on the screen with the index finger and moving the cursor while moving the device in space. Smartphone position in space and finger movement on a screen affect various parameters of sound or generate realtime MIDI output. The app was inspired by the SmartFaust project of GRAME. The audio engine of the app is made with Faust.
 
 
 ### [INScore](https://inscore.grame.fr)
@@ -1142,6 +1176,7 @@ A mobile music creation and performance workstation with a built-in motion-based
 
 INScore is an open source framework for the design of interactive, augmented, live music scores. Augmented music scores are graphic spaces providing representation, composition and manipulation of heterogeneous and arbitrary music objects (music scores but also images, text, signals...), both in the graphic and time domains. Audio DSP processes and effects can be described using Faust.
 The environment runs as a native application but also in the Web. Faust programs are only supported by the [online version](https://inscoreweb.grame.fr).
+
 
 ### [Virtual Rhizome](https://www.vrcarinola.com/virtual-rhizome)
 
@@ -1152,6 +1187,7 @@ By [Vincent Carinola](https://www.vrcarinola.com). [Virtual Rhizome](https://www
 The work takes the form of a labyrinth, a kind of virtual architecture that could be compared to Borges' "garden of branching paths", within which the musician evolves by adapting his gestures to the constraints of different types of situations. Each situation is characterized by an autonomous functioning of the system, that the musician must apprehend in order to find the key allowing him to modify it and to move towards another situation. But in order to orientate himself well, he must create a mental representation of the structure of the work. The performer then becomes an explorer of a world that he unveils, but isn't that what he has always been?
 
 Virtual rhizome owes much to the availability and enthusiasm of Jean Geoffroy and Christophe Lebreton. It is amicably dedicated to them.
+
 
 ### [SmartFaust](https://www.grame.fr/articles/smartfaust-5d839e9c3a877)
 
@@ -1166,6 +1202,7 @@ The SmartFaust applications were first used for the creation of the pieces Mephi
 From this same technology were later created the applications "Geek Bagatelles" (2016) and "GameLan" (2019).
 
 Download here: [Android](https://play.google.com/store/search?q=smartfaust&c=apps) & [iOS](https://www.apple.com/fr/search/smartfaust?src=globalnav)
+
 
 ### [Trombone Simulator](https://nuchi.github.io/trombone/)
 
@@ -1182,6 +1219,7 @@ The audio simulation is written in Faust, which conveniently compiles to WebAsse
 
 By [Mathias Kirkegaard](http://www-new.idmil.org/people/mathias-kirkegaard/). This thesis presents a system for designers of Digital Musical Instruments (DMIs) to explore the integration of 1 degree of freedom (DoF) force feedback interactions in new self-contained instruments. The system developed consists of an open-source graphical tool and a rotary force-feedback device made from commercially available components to facilitate the authoring of audio-haptic applications. Implementing an early prototype is used to inform the development of the graphical editing tool and its integration in an embedded audio-haptic environment using the functional programming language Faust for real-time signal processing.
 
+
 ### [Beyond Key Velocity: Continuous Sensing for Expressive Control on the Hammond Organ and Digital Keyboards](http://instrumentslab.org/data/giulio/giulioMoroThesis.pdf)
 
 <div><a href="http://instrumentslab.org/data/giulio/giulioMoroThesis.pdf"><img width="50%" class="mx-auto d-block" src="img/thesis-moro.png"></a>  </div>
@@ -1197,12 +1235,6 @@ By [Sebastien Clara](https://sebastienclara.wordpress.com/). In this guide, I tr
 
 Most of the sound examples are written in Faust and run in the web pages. This guide is currently only in french.
 
-### [PICO DSP](https://www.crowdsupply.com/ohmic/pico-dsp)
-
-<a href="https://www.crowdsupply.com/ohmic/pico-dsp"><img width="60%" class="mx-auto d-block" src="img/pico-dsp.png"></a>
-
-PICO DSP is an open-source, Arduino-compatible ESP32 development board for audio and digital signal processing (DSP) applications. It offers an expansive audio-processing feature set on a small-format, breadboard-friendly device that provides audio inputs, audio outputs, a low-noise microphone array, an integrated test-speaker option, additional memory, battery-charge management, and ESD protection all on one tiny PCB. The board can be programmed [using Faust](https://github.com/ohmic-net/pico_dsp).
-
 
 ### [Soundjack](https://www.soundjack.eu)
 
@@ -1210,17 +1242,20 @@ PICO DSP is an open-source, Arduino-compatible ESP32 development board for audio
 
 The Soundjack realtime communication application is extended by a server cloud to handle up to 60 musicians of an orchestra, developed with the Faust programming language.  Each musician is connected to a Soundjack UDP client. An individual stereo mix of the multiple audio streams originating from the multiple Soundjack clients has to be provided to each listening musician. An extended presentation of the system can be found in this [IFC 2018 paper](http://www.ifc18.uni-mainz.de/papers/kuhr.pdf).
 
+
 ### [studiox-switcher](https://github.com/Frando/studiox-switcher)
 
 <a href="https://github.com/Frando/studiox-switcher"><img width="22%" class="mx-auto d-block" src="img/studiox-switcher.png"></a>
 
  Studiox-switcher is an input switcher and silence detector for JACK. It can switch between 3 stereo inputs, a fallback channel is activated if the active input is below a volume threshold for some amount of seconds, and channels may be switched via OSC and HTTP. The core DSP engine is done via Faust for switching, silence detection and level metering.
 
+
 ### [SynthSpace](https://synthspace.rocks)
 
 <a href="https://synthspace.rocks"><img width="60%" class="mx-auto d-block" src="img/synthspace.png"></a>
 
 Synthspace is the ultimate virtual synthesizer. It combines the familiarity of real instruments with the possibilities of virtual worlds. Nodes for  Synthspace [can be developed in Faust](https://github.com/brightlightrx/synthspace-audio-layer).
+
 
 ### [Bass21](https://github.com/jpcima/Bass21)
 
@@ -1229,11 +1264,13 @@ Synthspace is the ultimate virtual synthesizer. It combines the familiarity of r
 This VST3 is a virtual-analog simulation of the famous Bass Driver DI Version 1 preamp pedal from Tech21. The discretization, while far from being exact, is moderately close to the original.
 The potentiometers are identical to these physically present on the BDDI pedal, apart from the pregain which is specific to this digital version. The DSP code is written in Faust.
 
+
 ### [EchoMatrix](https://improvoid.github.io)
 
 <a href="https://improvoid.github.io"><img width="40%" class="mx-auto d-block" src="img/echomatrix.png"></a>
 
 The EchoMatrix was designed to provide some of the functionality of the Yamaha UD Stomp pedal as used be Alan Holdsworth. This project will be submitted to the KVR Developer Challenge 2021 contest to highlight the power of the Faust DSP development environment and the JUCE framework to create a non-trivial effect VST3 using a managable amount of [Faust DSP code](https://github.com/improvoid/EchoMatrix).
+
 
 ### [The Striso board](https://www.striso.org)
 
@@ -1252,11 +1289,13 @@ This algorithm addresses signal discontinuity and concatenation artefacts in rea
 
 The resulting open-source algorithm, implemented in the Faust language, provides a versatile real-time software for dynamical looping, wavetable oscillation, and granulation with reduced artefacts due to rectangular windowing and no artefacts from overlap-add-to-one techniques commonly deployed in granular processing.
 
+
 ### [fb_suppression](https://github.com/dariosanfilippo/automatic_larsen_suppression)
 
 <a href="https://github.com/dariosanfilippo/automatic_larsen_suppression"><img width="40%" class="mx-auto d-block" src="img/automatic-larsen.png"></a>
 
 ALS - Automatic Larsen Suppression algorithms implementing adaptive filtering through spectral centroid calculation, and adaptive frequency shifting through RMS calculation.
+
 
 ### [ossia score](https://ossia.io)
 
@@ -1264,11 +1303,6 @@ ALS - Automatic Larsen Suppression algorithms implementing adaptive filtering th
 
 Ossia score is a sequencer for audio-visual artists, designed to enable the creation of interactive shows, museum installations, intermedia digital artworks, interactive music and more in an intuitive user interface. Faust can be used to [create advanced audio processes](https://ossia.io/score/about.html). A demo video of the Faust integration can be [seen here](https://www.youtube.com/watch?time_continue=1&v=yvTjJMrFxR0&feature=emb_logo).
 
-### [FASELUNARE Microcosmos](http://www.faselunare.com)
-
-<a href="http://www.faselunare.com/products/instruments/microcosmos"><img width="55%" class="mx-auto d-block" src="img/microcosmos.png"></a>
-
-Microcosmos is a small open-source electronic board, developed by ​Faselunare (Italy), aimed at prototyping electronic musical instruments and learning electronics, microcontroller programming and audio DSP, and programmable with Faust. A demo video of the project can be [seen here](https://www.youtube.com/watch?v=bsdKUMoJwOM). The project has been [presented at ADC21](https://www.youtube.com/watch?v=lvg6iM8aBaY).
 
 ### [Audio Anywhere](https://muses-dmi.github.io/audio_anywhere/overview/)
 
@@ -1280,17 +1314,20 @@ The goal of Audio Anywhere is to explore the idea of compile once, run anywhere 
 - [AA standalone app](https://github.com/bgaster/aa_standalone)
 - [AA Wasmtime runtime](https://github.com/bgaster/aa_wasmtime)
 
+
 ### [The KeyWi](https://ccrma.stanford.edu/~mcaren/keyWI/)
 
 <a href="https://ccrma.stanford.edu/~mcaren/keyWI/"><img width="60%" class="mx-auto d-block" src="img/keywi-image-transparent.jpg"></a>
 
 An Expressive and Accessible Electronic Wind Instrument, where the sound is synthesized with Faust running on the Bela Mini processing board.
 
+
 ### [React Web Audio Guitar Studio](https://github.com/Kutalia/react-webaudio-5150)
 
 <a href="https://github.com/Kutalia/react-webaudio-5150"><img width="65%" class="mx-auto d-block" src="img/reactwebaudio5150.png"></a>
 
 React Web Audio Guitar Studio is an online real-time Web Audio based all-in-one guitar studio, using native plugins written on Faust, compiled on-demand, and ran in a browser.
+
 
 ### [JSPatcher](https://github.com/Fr0stbyteR/jspatcher)
 
@@ -1303,14 +1340,15 @@ JSPatcher is a Visual Programming Language (VPL) in Max/PureData style on the we
 - Import and patch external JavaScript modules
 - Customize AudioWorklet DSPs with Faust
 
-
 A presentation video can be [seen here]( https://www.youtube.com/watch?v=ttdXz_hjbAM).
+
 
 ### [Gwion](https://github.com/Gwion/Gwion)
 
 <a href="https://github.com/Gwion/gwion-plug/tree/master/Faust"><img width="80%" class="mx-auto d-block" src="img/gwion.png"></a>
 
 Gwion is a programming language aimed at making music. It is strongly inspired by [ChucK](http://chuck.stanford.edu) and can use a set of [plugins for Gwion](https://github.com/Gwion/gwion-plug). One allows to use the [libfaust](https://github.com/Gwion/gwion-plug/tree/master/Faust) library to JIT compile and run DSP code on the fly. The [faust2gw](https://github.com/Gwion/gwion-plug/tree/master/faust2gw) tool allows to produce statically compiled modules.
+
 
 ## sonejostudios
 
@@ -1364,11 +1402,13 @@ Sample-accurate Looper/Delay with free mode and midi-clock sync mode.
 
 XY Surround Matrix for one Source (Mono Input) with 4 Outputs (Left, Right, Surround Left, Surround Right) and Position Lock.
 
+
 ### [stm32-faust-synth](https://github.com/Jacajack/stm32-faust-synth)
 
 <a href="https://github.com/Jacajack/stm32-faust-synth"><img width="70%" class="mx-auto d-block" src="img/stm32synth.png"></a>
 
 [STM32 synthesizer video](https://www.youtube.com/watch?v=7w-DwwoFKhU) is a short presentation of a polyphonic synthesizer based on STM32F405 µC. Faust is used for signal processing and a TLV320AIC23B stereo codec serves as DAC. Another more recent video is [here](https://www.youtube.com/watch?v=sdmgSUM9pkg).
+
 
 ### [faustgen2~](https://github.com/agraef/pd-faustgen)
 
@@ -1376,11 +1416,13 @@ XY Surround Matrix for one Source (Mono Input) with 4 Outputs (Left, Right, Surr
 
 The faustgen2~ object is a Faust external for Pd a.k.a. [Pure Data](http://msp.ucsd.edu/software.html), Miller Puckette's interactive multimedia programming environment.
 
+
 ### [Amati](https://github.com/glocq/Amati)
 
 <a href="https://github.com/glocq/Amati"><img width="70%" class="mx-auto d-block" src="img/amati.png"></a>
 
 Amati is a VST plugin for live-coding effects in the Faust programming language. As of now it only provides basic functionality.
+
 
 ### [PureTones](https://puretones.sadharani.com)
 
@@ -1396,11 +1438,13 @@ The [Ragatronics project](https://ragatronics.sadharani.com) combines Ragas from
 
 All applications [have been developed](https://github.com/aravind-sadharani/puretones-music-room) using Faust and WebAudio tools.
 
+
 ### [Making Sound Machines](https://makingsoundmachines.com)
 
 <a href="https://makingsoundmachines.com"><img width="60%" class="mx-auto d-block" src="img/makingsoundmachines.png"></a>
 
 Making Sound Machines are a duo of makers from Düsseldorf, Germany. We build kits, modules and DIY projects, and use the projects we’ve built to make music. Faust is used in several projects.
+
 
 ### [master_me](https://github.com/trummerschlunk/master_me)
 
@@ -1412,11 +1456,13 @@ With the first Covid-19 related lock-downs in 2020, many real-life concerts, con
 
 master_me was developed further to be an easy-to-use tool for all live streaming applications. In 2022 it was funded by the Prototype Fund, an open source software funding initiative by the german ministry of education and research. A stable release is available since September 2022.
 
+
 ### [metaSurface64](http://blanchemain.info/Documents/Programmation/index.php?page=metaSurface)
 
 <a href="http://blanchemain.info/Documents/Programmation/index.php?page=metaSurface"><img width="60%" class="mx-auto d-block" src="img/metaSurface.png"></a>
 
 metaSurface64 is a real-time continuous sound transformation control surface that features both its own loop generator for up to 64 voices and a multi-effects FX engine. The application embeds the libfaust dynamic version of the Faust compiler.
+
 
 ### [Fragment Audio Server](https://github.com/grz0zrg/fas) and Fragment
 
@@ -1424,11 +1470,13 @@ metaSurface64 is a real-time continuous sound transformation control surface tha
 
 Fragment Audio Server (FAS) is a high performance pixels-based graphical audio synthesizer implemented as a WebSocket server with the C language (C11). [Faust](https://faust.grame.fr/), is embedded (when compiled with `WITH_FAUST`) and allow to dynamically extend FAS bank generators and effects with custom one written with the Faust DSP specification language. FAS is the audio engine used in [Fragment](https://github.com/grz0zrg/fsynth) , the Collaborative Graphical Audio Synthesizer. Follow the [demo here](https://www.youtube.com/watch?v=Tm6TkQdTYPk).
 
+
 ### [Swanky Amp](https://github.com/resonantdsp/swankyamp)
 
 <a href="https://github.com/resonantdsp/swankyamp"><img width="70%" class="mx-auto d-block" src="img/swankyamp.png"></a>
 
 Swanky Amp is a tube amplifier simulation DSP plugin which aims to capture the details in the dynamics of tube amplifiers. The DSP is primarily written in [Faust](https://faust.grame.fr/), whereas the UI is written in C++ using the [JUCE](https://www.juce.com). Follow the [demo here](https://www.youtube.com/watch?v=pz3v87VMQfk). A commercial version is [available here](https://www.resonantdsp.com/swankyamp/).
+
 
 ### [Web Synth](https://github.com/Ameobea/web-synth)
 
@@ -1436,11 +1484,13 @@ Swanky Amp is a tube amplifier simulation DSP plugin which aims to capture the d
 
 This is a web-based DAW (Digital Audio Workstation) written in Rust/WebAssembly and TypeScript with extensive Faust language integration with dynamic remote code compilation and executing via WebAssembly. Follow the [demo here](https://www.youtube.com/watch?v=DDWYhueiqOc).
 
+
 ### [DawDreamer](https://github.com/DBraun/DawDreamer/)
 
 <a href="https://github.com/DBraun/DawDreamer/"><img width="80%" class="mx-auto d-block" src="img/dawdreamer.png"></a>
 
 DawDreamer is an audio-processing Python framework supporting core [DAW](https://en.wikipedia.org/wiki/Digital_audio_workstation) features such as audio playback, VST MIDI instruments, VST effects, [Faust](http://faust.grame.fr/), and parameter automation. DawDreamer is written with [JUCE](https://github.com/julianstorer/JUCE), with a user-friendly Python interface thanks to [pybind11](https://github.com/pybind/pybind11). DawDreamer draws from an earlier VSTi audio "renderer", [RenderMan](https://github.com/fedden/RenderMan).
+
 
 ### [TD-Faust](https://github.com/DBraun/TD-Faust/)
 
@@ -1448,11 +1498,13 @@ DawDreamer is an audio-processing Python framework supporting core [DAW](https:/
 
 TD-Faust enables Faust code to run inside [TouchDesigner](https://derivative.ca). Follow the [demo here](https://www.youtube.com/watch?v=0qi2lp_TgE0).
 
+
 ### [Mephisto LV2](https://git.open-music-kontrollers.ch/~hp/mephisto.lv2)
 
 <a href="https://git.open-music-kontrollers.ch/~hp/mephisto.lv2"><img width="40%" class="mx-auto d-block" src="img/mephisto-lv2.png"></a>
 
 Mephisto LV2 a Just-in-Time Faust compiler embedded in an LV2 plugin. Write LV2 audio/cv instruments/filters directly in your host in Faust DSP language without any need to restart/reload host or plugin upon code changes.
+
 
 ### [iPlug2](https://iplug2.github.io)
 
@@ -1460,17 +1512,20 @@ Mephisto LV2 a Just-in-Time Faust compiler embedded in an LV2 plugin. Write LV2 
 
 iPlug 2 is a simple-to-use C++ framework for developing cross platform audio plug-ins/apps and targeting multiple plug-in APIs with the same minimalistic code, support for the Faust programming language, and the libfaust JIT compiler.
 
+
 ### [pMix](https://github.com/olilarkin/pMix2)
 
 <a href="https://github.com/olilarkin/pMix2"><img width="60%" class="mx-auto d-block" src="img/pmix.jpg"></a>
 
 pMix (short for preset mixer) is a sound design, composition and performance tool that facilitates the control of multiple parameters using an intuitive graphical interface. It includes a graphical patcher for creating a network of audio synthesis or processing nodes. A node could be a VST2, VST3, AU or LADSPA plug-in or it could a JIT compiled Faust script. Faust is a first class citizen in pMix and an integrated code editor and SVG display makes it a nice environment for Faust development.
 
+
 ### [Temper JUCE plugin](https://github.com/creativeintent/temper)
 
 <a href="https://github.com/creativeintent/temper"><img width="60%" class="mx-auto d-block" src="img/temper.jpg"></a>
 
 Temper is a digital distortion audio plugin targeting VST, VST3, and AU for OS X and Windows. It builds upon traditional waveshaping techniques using modulated filter coefficients to produce a unique phase distortion. The primary signal processing loop is written with Faust, and compiled with JUCE for the various build targets.
+
 
 ### [Faust Mass-Interaction](http://mi-creative.eu/tool_miFaust.html)
 
@@ -1480,11 +1535,13 @@ mi_faust implements 1D mass-interaction models in the Faust programming language
 
 Head over to the FAUST community page to see examples of a series of instruments created in mi_faust, and available as web-apps !
 
+
 ### [Dynamic PedalBoard](https://wasabi.i3s.unice.fr/dynamicPedalboard/)
 
 <a href="https://wasabi.i3s.unice.fr/dynamicPedalboard/"><img width="70%" class="mx-auto d-block" src="img/wasabi.jpg"></a>
 
 Dynamic PedalBoard allows users to plug different stompboxes together in a web browser.
+
 
 ### [SHARC DSP Board](https://wiki.analog.com/resources/tools-software/sharc-audio-module/faust)
 
@@ -1492,11 +1549,13 @@ Dynamic PedalBoard allows users to plug different stompboxes together in a web b
 
 The ADI SHARC DSP board fully supports Faust.
 
+
 ### [Nuance](https://ccrma.stanford.edu/~rmichon/nuance/)
 
 <a href="https://ccrma.stanford.edu/~rmichon/nuance/"><img class="mx-auto d-block" src="img/nuance.jpg"></a>
 
 Nuance is a pressure sensitive music controller that uses Faust for sound synthesis and processing.
+
 
 ### [The PlateAxe](https://ccrma.stanford.edu/~rmichon/bladeaxe/)
 
@@ -1504,11 +1563,13 @@ Nuance is a pressure sensitive music controller that uses Faust for sound synthe
 
 The PlateAxe is a percussion instrument physical model controller using Faust for sound synthesis and processing.
 
+
 ### [The BladeAxe](https://ccrma.stanford.edu/~rmichon/bladeaxe/)
 
 <a href="https://ccrma.stanford.edu/~rmichon/bladeaxe/"><img class="mx-auto d-block" src="img/ba.jpg"></a>
 
 The BladeAxe is an electric guitar physical model controller using Faust for sound synthesis and processing.
+
 
 ### [Bart Brouns' Projects](https://github.com/magnetophon)
 
@@ -1516,17 +1577,20 @@ The BladeAxe is an electric guitar physical model controller using Faust for sou
 
 A collection of projects by Bart Brouns and based on Faust.
 
+
 ### [EarTone Toolbox](https://ccrma.stanford.edu/~chechile/eartonetoolbox/main.html)
 
 <a href="https://ccrma.stanford.edu/~chechile/eartonetoolbox/main.html"><img class="mx-auto d-block" src="img/eartone.jpg"></a>
 
 The Ear Tone Toolbox is a collection of unit generators for the production of auditory distortion product synthesis.
 
+
 ### [AudioKit](https://audiokit.io/)
 
 <a href="https://audiokit.io/"><img class="mx-auto d-block" src="img/audiokit.jpg"></a>
 
 AudioKit allows developers to quickly add professional audio functionality to iOS, macOS, and Apple Watch apps.
+
 
 ### [Radium](http://users.notam02.no/~kjetism/radium/)
 
@@ -1538,11 +1602,6 @@ Radium is a music editor with a new type of interface. It includes a Faust audio
 - Compared to trackers, note positions and effects are edited graphically, which should be quicker, provide more vertical space and give a better musically overview. (Everything can also be edited by text, like in a normal tracker)
 - Radium can also be used as a normal multitracker to mix and record audio.
 
-### [BELA](http://bela.io/)
-
-<a href="http://bela.io/"><img class="mx-auto d-block" src="img/bela.jpg"></a>
-
-Bela is a maker platform for creating beautifully responsive audio and interactive applications. Designed for artists, musicians, researchers and makers, Bela brings the power of ultra-low latency interactive audio and sensors to your digital projects. It can be [programmed with Faust](https://learn.bela.io/using-bela/languages/faust-experimental/).
 
 ### [HOA Library](http://hoalibrary.mshparisnord.fr/en)
 
@@ -1550,6 +1609,7 @@ Bela is a maker platform for creating beautifully responsive audio and interacti
 
 HOA Library allows musicians and composers to synthesize, transform and render sound fields in a creative and artistic way. This library facilitates the understanding and the appropriation of key concepts of ambisonics. Thanks to original graphical interfaces a lot of new signal processings are allowed like diffuse sound field synthesis, perspective distorsion or spatial filtering. HOA library is open-source and free and offers a set of C++ and [FAUST classes](http://hoalibrary.mshparisnord.fr/en/downloads/faust/) and implementation for Max, PureData and Unity.
 
+s
 ### [Ambitools](http://www.sekisushai.net/ambitools/)
 
 <a href="http://www.sekisushai.net/ambitools/"><img width="50%" class="mx-auto d-block" src="img/ambitools.jpg"></a>
@@ -1558,11 +1618,13 @@ Ambitools is a collection of plug-ins and  tools for 3D sound field synthesis us
 
 Moreover, the code is written in a scalable way: there is no limit to the maximum Ambisonic order! Other tools are also available, such as a 3D Visualizer written in the Processing language.
 
+
 ### [Ambisonic Decoder Toolbox](https://bitbucket.org/ambidecodertoolbox/adt.git)
 
 <a href="https://bitbucket.org/ambidecodertoolbox/adt.git"><img class="mx-auto d-block" src="img/ambbox.jpg"></a>
 
 The Ambisonic Decoder Toolbox is a collection of MATLAB and GNU Octave functions for creating Ambisonic Decoders.  Currently, it implements: (1) the AllRAD design technique, (2) inversion or mode-matching, (3) truncated mode-matching, constant energy, (4) linear combinations of 2 and 3, and (5) Slepian function basis (EPAD). The DSP code is written in  MATLAB and Faust.
+
 
 ### [Ambisonic.xyz](http://ambisonic.xyz/)
 
@@ -1570,11 +1632,13 @@ The Ambisonic Decoder Toolbox is a collection of MATLAB and GNU Octave functions
 
 A set of tools around Ambisonics.
 
+
 ### [FaustPy](https://github.com/marcecj/faust_python)
 
 <a href="https://github.com/marcecj/faust_python"><img class="mx-auto d-block" src="img/python.jpg"></a>
 
 FaustPy is a Python wrapper for Faust. It is implemented using the CFFI and hence creates the wrapper dynamically at run-time.
+
 
 ### [Rebel Technology](https://www.rebeltech.org/)
 
@@ -1582,11 +1646,13 @@ FaustPy is a Python wrapper for Faust. It is implemented using the CFFI and henc
 
 The OWL Pedal is an open source, programmable stage effects pedal, made for guitarists, musicians, hackers and programmers. Users can program their own effects, or download ready-made patches from our growing online patch library.
 
+
 ### [faust-vst](https://bitbucket.org/agraef/faust-vst)
 
 <a href="https://bitbucket.org/agraef/faust-vst"><img width="70%" class="mx-auto d-block" src="img/vst.svg" alt="Card image cap"></a>
 
 This project provides a VST plugin architecture for the Faust programming language. The package contains the Faust architecture, faustvst.cpp, the faust2faustvst helper script which provides a quick way to compile a plugin, a collection of sample plugins written in Faust, and a generic GNU Makefile for compiling and installing the plugins.
+
 
 ### [faust-lv2](https://bitbucket.org/agraef/faust-lv2)
 
@@ -1594,11 +1660,13 @@ This project provides a VST plugin architecture for the Faust programming langua
 
 This project provides an LV2 plugin architecture for the Faust programming language. The package contains the Faust architecture and templates for the needed LV2 manifest (ttl) files, a collection of sample plugins written in Faust, and a generic GNU Makefile as well as a shell script to compile plugins using the architecture.
 
+
 ### [RDK](http://chiselapp.com/user/jcage/repository/rdk/doc/www/www/revdev.html)
 
 <a href="http://chiselapp.com/user/jcage/repository/rdk/doc/www/www/revdev.html"><img width="40%" class="mx-auto d-block" src="img/reverb.jpg"></a>
 
 Reverb Design is about creating a spacial impression aimed at sweetening the listening experience for a given context. The ambiguity of auditory and visual cues in reproduced sound makes it necessary to create an auditory illusion: To make this illusion work, I propose an aesthetic concept of simplicity and intelligibility based on psychoacoustic facts and recording practice as professional producer.
+
 
 ### [Foo YC20](http://foo-yc20.codeforcode.com/)
 
@@ -1606,11 +1674,13 @@ Reverb Design is about creating a spacial impression aimed at sweetening the lis
 
 The Foo YC20 is an open source implementation of the Yamaha YC-20 combo organ from 1969. Processing for the organ is based on original schematics and measurements from a working specimen. This instrument simulates the circutry as a whole to realisticly reproduce the features and flaws of the real deal.
 
+
 ### [FaucK](https://ccrma.stanford.edu/~rmichon/fauck/)
 
 <a href="https://ccrma.stanford.edu/~rmichon/fauck/"><img class="mx-auto d-block" src="img/fauck.jpg" alt="Card image cap"></a>
 
 FaucK is a Chugin allowing to combine the powerful, succinct Functional AUdio STream (Faust) language with the strongly-timed ChucK audio programming language. FaucK allows programmers to on-the-fly evaluate Faust code directly from ChucK code and control Faust signal processors using ChucK's sample-precise timing and concurrency mechanisms. The goal is to create an amalgam that plays to the strengths of each language, giving rise to new possibilities for rapid prototyping, interaction design and controller mapping, pedagogy, and new ways of working with both Faust and ChucK.
+
 
 ### [Snd-RT](https://github.com/kmatheussen/snd-rt)
 
@@ -1621,6 +1691,7 @@ Snd-RT is the realtime extension for the sound editor SND and consists of two pa
 - the RT Engine - An engine for doing realtime signal processing.
 - the RT Compiler - A compiler for a scheme-like programming language to generate realtime-safe code understood by the RT Engine.
 
+
 ### [Pure Language](https://agraef.github.io/pure-lang/)
 
 <a href="https://agraef.github.io/pure-lang/"><img width="60%" class="mx-auto d-block" src="img/pure.jpg" alt="Card image cap"></a>
@@ -1629,17 +1700,13 @@ Pure is a modern-style functional programming language based on term rewriting. 
 
 [pd-faust](https://github.com/agraef/pure-lang/wiki/Addons#pd-faust) is a collection of Pd objects written using pd-pure which lets you run Faust programs inside Pd. It combines the functionality of pure-faust and faust2pd in a single package, and also features dynamic reloading of Faust plugins, automatic generation of controller GUIs and MIDI/OSC controller mappings, as well as OSC-based controller automation. It thus provides a complete solution for interactively developing Faust dsps in Pd.
 
+
 ### [Guitarix](http://guitarix.org/)
 
 <a href="http://guitarix.org/"><img class="mx-auto d-block" src="img/guitarix.jpg" alt="Card image cap"></a>
 
 An audio plug-in for guitar effects whose sound processing engine is written in Faust.
 
-### [moForte GeoShred](http://www.moforte.com/)
-
-<a href="http://www.moforte.com/"><img class="mx-auto d-block" src="img/geo.jpg" alt="Card image cap"></a>
-
-An electric guitar app using physical modeling. Faust was used to implement its sound synthesis/processing engine.
 
 ### [moForte PowerStomp](http://www.moforte.com/powerstomp-fall-2016/)
 
@@ -1647,11 +1714,13 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 An app implementing various guitar effects to be used on stage.
 
+
 ### [moForte Guitar](http://www.moforte.com/moforte-guitar-app/)
 
 <a href="http://www.moforte.com/moforte-guitar-app/"><img class="mx-auto d-block" src="img/moforteg.jpg"></a>
 
 An app that can be used as an electric guitar and whose sound synthesis engine is implemented in Faust.
+
 
 ### [FaustWorks](https://github.com/grame-cncm/faustworks)
 
@@ -1659,6 +1728,7 @@ An app that can be used as an electric guitar and whose sound synthesis engine i
 
 FaustWorks is an IDE (Integrated Development Environment) for the Faust dsp programming language. You must have Faust installed to
 be able to use FaustWorks. Platforms supported are Linux and OSX.
+
 
 ### [FaustLive](https://github.com/grame-cncm/faustlive)
 
