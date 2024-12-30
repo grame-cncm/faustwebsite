@@ -30,6 +30,18 @@ To illustrate the global impact of Faust, a world map showcases all the projects
 
 The following sections provide a detailed list of commercial applications utilizing Faust.
 
+### [fourtrack.fm](https://fourtrack.fm)
+
+<div><a href="https://fourtrack.fm"><img width="60%" class="mx-auto d-block" src="img/fourtrack.png"></a> </div>
+
+fourtrack.fm is the newest web-based DAW on the block, focusing on lyrics-driven songwriting and arrangement.
+at its heart is a four track looper with support for mic, line in, virtual synth, and virtual drum machines, plus a handful of effects.
+
+Faust was instrumental in prototyping the virtual instruments and effects, including the 8 voice polysynth, the 8 voice FM drum machine, the tape delay, chorus, and amp sim.
+
+Faust IDE generated WASM audio worklets which were integrated into the React frontend. Here is [our intro video.](https://www.youtube.com/watch?v=kHc_u2o9FAE)
+
+
 ### [OneTrick CHONK](https://punklabs.com/ot-chonk)
 
 <div><a href="https://punklabs.com/ot-chonk"><img width="65%" class="mx-auto d-block" src="img/ot-chonk.png"></a> </div>
