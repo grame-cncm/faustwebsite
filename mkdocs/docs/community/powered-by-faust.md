@@ -34,7 +34,7 @@ The following sections provide a detailed list of commercial applications utiliz
 
 <div><a href="https://clevelandmusicco.com/hothouse-diy-digital-signal-processing-platform-kit/"><img width="40%" class="mx-auto d-block" src="img/hothouse.png"></a> </div>
 
-The Hothouse DSP Platform Kit by Cleveland Music Co. is a DIY kit designed for creating custom digital audio effects pedals. It features a powerful ARM Cortex-M7 processor, stereo I/O, MIDI compatibility, and support for custom code development. This open-source platform is ideal for hobbyists and developers seeking to experiment with DSP algorithms. Thanks fo the [faust2hothouse](https://github.com/grame-cncm/faust/tree/master-dev/architecture/hothouse) script, the pedal can be programmed with Faust.
+The Hothouse DSP Platform Kit by Cleveland Music Co. is a DIY kit designed for creating custom digital audio effects pedals. It embeds the Electrosmith [Daisy Seed](https://electro-smith.com/products/daisy-seed) processor and has stereo I/O, MIDI compatibility, and support for custom code development. This open-source platform is ideal for hobbyists and developers seeking to experiment with DSP algorithms. Thanks fo the [faust2hothouse](https://github.com/grame-cncm/faust/tree/master-dev/architecture/hothouse) script, the pedal can be programmed with Faust.
 
 
 ### [fourtrack.fm](https://fourtrack.fm)
