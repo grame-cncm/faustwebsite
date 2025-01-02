@@ -44,6 +44,7 @@ addMarker(45.7640, 4.8357, '<a href="https://www.grame.fr">Faust born in GRAME</
 addMarker(37.4213, -122.1694, '<a href="https://ccrma.stanford.edu">CCRMA</a>, Stanford University, CA, USA', redIcon);
 
 // Add project markers
+addMarker(41.4993, -81.6944, '<a href="#hothouse-dsp-pedal-kit">Hothouse DSP Pedal Kit</a>, Cleveland, OH, USA', blueIcon);
 addMarker(42.3601, -71.0589, '<a href="#fourtrackfm">fourtrack.fm</a>, Boston, MA, USA', blueIcon);
 addMarker(32.7157, -117.1611, '<a href="#onetrick-chonk">OneTrick CHONK</a>, San Diego, CA, USA', blueIcon);
 addMarker(45.7640, 4.8357, '<a href="#faust-dsp-testbench">Faust DSP Testbench</a>, Lyon, France', blueIcon);

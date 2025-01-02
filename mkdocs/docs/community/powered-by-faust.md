@@ -30,6 +30,13 @@ To illustrate the global impact of Faust, a world map showcases all the projects
 
 The following sections provide a detailed list of commercial applications utilizing Faust.
 
+### [Hothouse DSP Pedal Kit](https://clevelandmusicco.com/hothouse-diy-digital-signal-processing-platform-kit/)
+
+<div><a href="https://clevelandmusicco.com/hothouse-diy-digital-signal-processing-platform-kit/"><img width="40%" class="mx-auto d-block" src="img/hothouse.png"></a> </div>
+
+The Hothouse DSP Platform Kit by Cleveland Music Co. is a DIY kit designed for creating custom digital audio effects pedals. It features a powerful ARM Cortex-M7 processor, stereo I/O, MIDI compatibility, and support for custom code development. This open-source platform is ideal for hobbyists and developers seeking to experiment with DSP algorithms. Thanks fo the [faust2hothouse](https://github.com/grame-cncm/faust/tree/master-dev/architecture/hothouse) script, the pedal can be programmed with Faust.
+
+
 ### [fourtrack.fm](https://fourtrack.fm)
 
 <div><a href="https://fourtrack.fm"><img width="60%" class="mx-auto d-block" src="img/fourtrack.png"></a> </div>
