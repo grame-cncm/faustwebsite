@@ -30,6 +30,18 @@ To illustrate the global impact of Faust, a world map showcases all the projects
 
 The following sections provide a detailed list of commercial applications utilizing Faust.
 
+### [TRONIC](https://sampleson.com/tronic.html)
+
+<div><a href="https://sampleson.com/tronic.html"><img width="50%" class="mx-auto d-block" src="img/tronic.jpg"></a> </div>
+
+Tronic is a generative analog drum synthesizer that creates rich, hypnotic, and party-pumping beats with just one click.
+
+Equipped with a unique Beat Generator, Tronic delivers production-ready beats that can be fine-tuned with precision.
+
+Powered by two analog oscillators, a 16-step sequencer, half-ladder filters, and fixed semi-modular connectors to modulate sound in an easy yet deep way.
+
+Faust was used for the VCO, VCA AND VFC dsp.
+
 ### [Hothouse DSP Pedal Kit](https://clevelandmusicco.com/hothouse-diy-digital-signal-processing-platform-kit/)
 
 <div><a href="https://clevelandmusicco.com/hothouse-diy-digital-signal-processing-platform-kit/"><img width="40%" class="mx-auto d-block" src="img/hothouse.png"></a> </div>
