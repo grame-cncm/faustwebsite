@@ -180,11 +180,11 @@ Freestyle on the drum pads, record a sequence or both...it's up to you!
 Daisy is an embedded platform for music. It features everything you need for creating high fidelity audio hardware devices. Just plug in a USB cable and start making sound! No soldering required. It can be programed with Faust using the [faust2daisy](https://github.com/grame-cncm/faust/tree/master-dev/architecture/daisy) tool.
 
 
-### [Elk Audio OS](https://elk.audio/audio-os/)
+### [Elk Audio OS](https://www.elk.audio)
 
-<div><a href="https://elk.audio/audio-os/"><img width="55%" class="mx-auto d-block" src="img/elk-audio.jpg"></a>  </div>
+<div><a href="https://www.elk.audio"><img width="55%" class="mx-auto d-block" src="img/elk-audio.jpg"></a>  </div>
 
-Elk is an Audio Operating System developed from the ground up to deliver real time audio performances in embedded systems and remote networks. It can run on [several hardware](https://elk.audio/store/). Faust can be used to [generate VST2 plugins](https://forum.elk.audio/t/writing-plugins-for-elk-using-faust/175) to run on the plaform.
+Elk is an Audio Operating System developed from the ground up to deliver real time audio performances in embedded systems and remote networks. It can run on [several hardware](https://www.elk.audio/the-architecture). Faust can be used to [generate VST2 plugins](https://forum.elk.audio/t/writing-plugins-for-elk-using-faust/175) to run on the plaform.
 
 
 ### [Motion Vox](https://motionvox.app/)
