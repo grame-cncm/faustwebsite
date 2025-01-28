@@ -59,6 +59,22 @@ Check out Faust [papers and reports](https://hal.science/search/index/?q=GRAME+F
 
 ## Faust News
 
+
+### **>>** September 01, 2024: Google Summer of Code projects finished
+
+<center>
+<div><a href="https://summerofcode.withgoogle.com"><img  width="50%" class="mx-auto d-block" src="img/gsoc-logo.png"></a>  </div>
+</center>
+
+- **FaustNet - DDSP** aimed to continue the work done on adding automatic differentiation in Faust (started in a GSOC 2023 project), to leverage machine learning for audio processing tasks directly within the familiar Faust environment. It was worked on by [Advik Raj Basani](https://github.com/FloofCat) and contributed as a [Pull Request](https://github.com/hatchjaw/faust-ddsp/pull/1) on Thomas Rushton [faust-ddsp](https://github.com/hatchjaw/faust-ddsp) library. 
+
+- **Faust in Cables.gl** aimed to develop a Cables.gl plugin that compiles Faust DSP code into a WASM AudioWorklet in real-time. It was worked on by [Fay Carsons](https://github.com/FayCarsons) and contributed as a separated [Faust Cables plugin](https://github.com/FayCarsons/Cables-Faust-Plugin) project.
+
+ - **Amati++, a VST/CLAP Plugin embedding the dynamic compiler**, inspired by the pMix and Amati projects, this plugin has been built using the JUCE framework for the interface and libfaust with LLVM and interpreter backend API to compile Faust code. It was  worked on by [Tyler Li](https://github.com/Orisu179) and is still a [work-in-progress](https://github.com/Orisu179/AmatiPP).
+
+- **Faust Package Manager** aimed to add a packaging system to facilitate the integration of Faust libraries in a DSP project. It was worked on by [Shehab Khaled Roshdy](https://github.com/shehab299) and a was contributed as a [Pull Request](https://github.com/grame-cncm/faust/pull/1049) that is still in test in a [master-dev-pacman](https://github.com/grame-cncm/faust/tree/master-dev-pacman) branch.
+
+
 ### **>>** May 01, 2024: Four Google Summer of Code projects attributed
 
 <center>
