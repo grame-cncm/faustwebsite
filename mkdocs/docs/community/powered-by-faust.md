@@ -224,6 +224,12 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [superclav](https://github.com/akjmicro/superclav_code)
+
+<div><a href="https://github.com/akjmicro/superclav_code"><img width="30%" class="mx-auto d-block" src="img/superclav.png"></a> </div>
+
+Coded in Faust, Superclav captures the spirit of an 18th century instrument, albeit in digital form. At heart, it's based on the well-known Karplus-Strong algorithm for a plucked string sound. [Aaron Krister Johanson](https://en.wikipedia.org/wiki/Aaron_Krister_Johnson) from the [UnTwelve](https://untwelve.org) group worked hard to develop an overall natural-feeling instrument using filtering, spatialization, reverb, and EQ.
+
 ### [ExternalChugins](https://github.com/celestebetancur/ExternalChugins)
 
 [Chugins](https://chuck.cs.princeton.edu/extend/), short for "ChucK plugins," are plugins for the [ChucK programming language](https://chuck.stanford.edu). ChucK is an audio programming language that allows for real-time synthesis, composition, and performance of music. Chugins extend the functionality of ChucK by providing additional classes, objects, and modules that can be used to create more complex and intricate music and sound designs. ExternalChugins are a set of chugins exported from Faust.
