@@ -228,7 +228,7 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 <div><a href="https://github.com/akjmicro/superclav_code"><img width="30%" class="mx-auto d-block" src="img/superclav.png"></a> </div>
 
-Coded in Faust, Superclav captures the spirit of an 18th century instrument, albeit in digital form. At heart, it's based on the well-known Karplus-Strong algorithm for a plucked string sound. [Aaron Krister Johanson](https://en.wikipedia.org/wiki/Aaron_Krister_Johnson) from the [UnTwelve](https://untwelve.org) group worked hard to develop an overall natural-feeling instrument using filtering, spatialization, reverb, and EQ. Several videos of Bach pieces are available to listen to [here](https://www.youtube.com/@AaronKristerJohnson).
+Coded in Faust, Superclav captures the spirit of an 18th century instrument, albeit in digital form. At heart, it's based on the well-known Karplus-Strong algorithm for a plucked string sound. [Aaron Krister Johanson](https://en.wikipedia.org/wiki/Aaron_Krister_Johnson) from the [UnTwelve](https://untwelve.org) group worked hard to develop an overall natural-feeling instrument using filtering, spatialization, reverb, and EQ. Several videos of Bach pieces played on Superclav are available to listen to [here](https://www.youtube.com/@AaronKristerJohnson).
 
 ### [ExternalChugins](https://github.com/celestebetancur/ExternalChugins)
 
