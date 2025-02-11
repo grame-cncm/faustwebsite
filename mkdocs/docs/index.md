@@ -61,7 +61,7 @@ Check out Faust [papers and reports](https://hal.science/search/index/?q=GRAME+F
 
 ### **>>** December 01, 2024: Site for Progressive Web Application for Faust is now online  
 
-The [Faust Progressive Web Applications (PWA)](https://faustpwa.grame.fr) platform enables users to run Faust DSP programs directly in web browsers and possibly on smartphones and tablets, offering an app-like experience without the need for traditional installations. Applications can use the sensors (espcially on smartphones) to control differents aspect of the sound generation. The [GameLAN](https://faustpwa.grame.fr/gamelan/) and  [Smartfaust](https://faustpwa.grame.fr/smartfaust/) projects have been ported to use this new architecture.
+The [Faust Progressive Web Applications (PWA)](https://faustpwa.grame.fr) platform enables users to run Faust DSP programs directly in web browsers and possibly on smartphones and tablets, offering an app-like experience without the need for traditional installations. Applications can use the sensors (espcially on smartphones) to control differents aspect of the sound generation. The [GameLAN](https://faustpwa.grame.fr/gamelan/) and  [SmartFaust](https://faustpwa.grame.fr/smartfaust/) projects have been ported to use this new architecture.
 
 
 ### **>>** November 21-22, 2024: Fourth International Faust Conference (IFC-24) at Turin (Italy)
