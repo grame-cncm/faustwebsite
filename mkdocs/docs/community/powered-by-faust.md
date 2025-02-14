@@ -772,22 +772,22 @@ A stereo delay plugin which emphasizes free (non beat-synced) controls for the i
 
 This archive presents a virtual simulation of the Leslie Speaker commonly found in Hammond electric organs. The digital effect has been developed using the FAUST programming language, and then ported into a VST-compatible format using the JUCE C++ framework.
 
-### [cookiecutter-dpf-faust](https://github.com/SpotlightKid/cookiecutter-dpf-faust)
+### [dpf-faust-project-template](https://github.com/SpotlightKid/dpf-faust-project-template)
 
-<div><a href="https://github.com/SpotlightKid/cookiecutter-dpf-faust"><img width="50%" class="mx-auto d-block" src="img/cookiecutter-dpf-faust.png"></a>  </div>
+<div><a href="https://github.com/SpotlightKid/dpf-faust-project-template"><img width="50%" class="mx-auto d-block" src="img/dpf-faust-project-template.png"></a>  </div>
 
-A [cookiecutter](https://github.com/cookiecutter/cookiecutter) project template for DISTRHO Plugin Framework ([DPF](https://github.com/DISTRHO/DPF)) audio effect plugins using FAUST for the implementation of the DSP pipeline. Look at the [demo video](https://asciinema.org/a/355004?speed=2&&theme=monokai&autoplay=1&size=medium).
+[dpf-faust-project-template](https://github.com/SpotlightKid/dpf-faust-project-template) is a [copier](https://github.com/copier-org/copier) project template for DISTRHO Plugin Framework ([DPF](https://github.com/DISTRHO/DPF)) audio effect plugins using FAUST for the implementation of the DSP pipeline.
 
-### [DF Zita Rev1](https://github.com/SpotlightKid/dfzitarev1)
+Using it, a list of project written with Faust developed by [Christopher Arndt](https://github.com/SpotlightKid): 
 
-<div><a href="https://github.com/SpotlightKid/dfzitarev1"><img width="35%" class="mx-auto d-block" src="img/dfzitarev1.png"></a>  </div>
-
-A feedback-delay-network reverb plugin built with [DPF](https://github.com/DISTRHO/DPF) and based on a FAUST library demo.  Several other projects are developed using the same DPF/FAUST methothodolgy:
-
+* [Automatic double-tracking](https://github.com/SpotlightKid/adt?tab=readme-ov-file) (ADT) is an analogue recording technique designed to enhance the sound of voices or instruments during the mixing process.  
+* [CChorus](https://github.com/SpotlightKid/cchorus), a versatile stereo chorus effect.
+* [DF JPverb](https://github.com/SpotlightKid/dfjpverb), a lush algorithmic reverb designed to sound great with synthetic sound sources, built with DPF and based on [re.jpverb](https://faustlibraries.grame.fr/libs/reverbs/#rejpverb) from the FAUST standard library.
+* [DF Zita Rev1](https://github.com/SpotlightKid/dfzitarev1), a feedback-delay-network reverb plugin built with [DPF](https://github.com/DISTRHO/DPF) and based on a FAUST library demo. Several other projects are developed using the same DPF/FAUST methothodolgy:
 * [FAUST filters](https://github.com/SpotlightKid/faustfilters), a collection of virtual-analog filters from the FAUST standard library packaged as multi-format plugins via the DPF
 * [SendMixer](https://github.com/SpotlightKid/sendmixer), a stereo channel strip plugin with one master gain and two pre/post-fader sends
 * [Stereo Cross Delay](https://github.com/SpotlightKid/stereocrossdelay), a stereo delay plugin with feedback and cross-mixing.
-* [DF JPverb](https://github.com/SpotlightKid/dfjpverb), a lush algorithmic reverb designed to sound great with synthetic sound sources, built with DPF and based on [re.jpverb](https://faustlibraries.grame.fr/libs/reverbs/#rejpverb) from the FAUST standard library.
+* [Waxman](https://github.com/SpotlightKid/waxman), a virtual guitar pre-amp and tone-stack comprising of a compressor, distortion and equalizer stage. 
 
 ### [Theremotion](https://github.com/plule/theremotion)
 
