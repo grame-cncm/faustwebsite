@@ -224,6 +224,12 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [Acidwerk](https://tristanwhitehill.com/acidwerk)
+
+<div><a href="https://tristanwhitehill.com/acidwerk"><img width="50%" class="mx-auto d-block" src="img/acidwerk.png"></a> </div> 
+
+Acidwerk is an open source generative acid techno generator that lives in the web. Features randomized patterns, polyrhythmic meters, and generative drum breaks. It is powered by Faust and P5js and the code can be found [here](https://github.com/stanybebe/acidwerk). 
+
 ### [superclav](https://github.com/akjmicro/superclav_code)
 
 <div><a href="https://github.com/akjmicro/superclav_code"><img width="30%" class="mx-auto d-block" src="img/superclav.png"></a> </div>
