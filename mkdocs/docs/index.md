@@ -59,6 +59,16 @@ Check out Faust [papers and reports](https://hal.science/search/index/?q=GRAME+F
 
 ## Faust News
 
+
+### **>>** February 27, 2025: GRAME has been selected as a Google Summer of Code 2025 mentor organization
+
+<center>
+<div><a href="https://summerofcode.withgoogle.com"><img  width="50%" class="mx-auto d-block" src="img/gsoc-logo.png"></a>  </div>
+</center>
+
+[Google Summer of Code](https://summerofcode.withgoogle.com) is a global, online program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ weeks programming project under the guidance of mentors. For the fourth consecutive year, GRAME has been [selected as a  mentor organization](https://summerofcode.withgoogle.com/programs/2025/organizations/grame) for the Faust project. 
+
+
 ### **>>** December 01, 2024: Site for Progressive Web Application for Faust is now online  
 
 The [Faust Progressive Web Applications (PWA)](https://faustpwa.grame.fr) platform enables users to run Faust DSP programs directly in web browsers and possibly on smartphones and tablets, offering an app-like experience without the need for traditional installations. Applications can use the sensors (espcially on smartphones) to control differents aspect of the sound generation. The [GameLAN](https://faustpwa.grame.fr/gamelan/) and  [SmartFaust](https://faustpwa.grame.fr/smartfaust/) projects have been ported to use this new architecture.
@@ -109,7 +119,7 @@ Welcome to the Faust Community !
 <div><a href="https://summerofcode.withgoogle.com"><img  width="50%" class="mx-auto d-block" src="img/gsoc-logo.png"></a>  </div>
 </center>
 
-[Google Summer of Code](https://summerofcode.withgoogle.com) is a global, online program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ week programming project under the guidance of mentors. For the third consecutive year, GRAME has been [selected as a  mentor organization](https://summerofcode.withgoogle.com/programs/2024/organizations/grame) for the Faust project. 
+[Google Summer of Code](https://summerofcode.withgoogle.com) is a global, online program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ weeks programming project under the guidance of mentors. For the third consecutive year, GRAME has been [selected as a  mentor organization](https://summerofcode.withgoogle.com/programs/2024/organizations/grame) for the Faust project. 
 
 ### **>>** December 02, 2023: Programmable Audio Workshop (PAW-23) 
 
@@ -223,7 +233,7 @@ This year first price is Keith Bexter with the [Zen Flute](https://www.youtube.c
 <div><a href="https://summerofcode.withgoogle.com"><img  width="50%" class="mx-auto d-block" src="img/gsoc-logo.png"></a>  </div>
 </center>
 
-[Google Summer of Code](https://summerofcode.withgoogle.com) is a global, online program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ week programming project under the guidance of mentors. For the second consecutive year, GRAME has been [selected as a  mentor organization](https://summerofcode.withgoogle.com/programs/2023/organizations/grame) for the Faust project. 
+[Google Summer of Code](https://summerofcode.withgoogle.com) is a global, online program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ weeks programming project under the guidance of mentors. For the second consecutive year, GRAME has been [selected as a  mentor organization](https://summerofcode.withgoogle.com/programs/2023/organizations/grame) for the Faust project. 
 
 ### **>>** December 03, 2022: Programmable Audio Workshop (PAW-22) 
 
@@ -281,7 +291,7 @@ Welcome to both of you in the Faust community !
 <div><a href="https://summerofcode.withgoogle.com"><img  width="50%" class="mx-auto d-block" src="img/gsoc-logo.png"></a>  </div>
 </center>
 
-[Google Summer of Code](https://summerofcode.withgoogle.com) is a global, online program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ week programming project under the guidance of mentors. GRAME has been [selected as a  mentor organization](https://summerofcode.withgoogle.com/programs/2022/organizations/grame) for the Faust project. 
+[Google Summer of Code](https://summerofcode.withgoogle.com) is a global, online program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ weeks programming project under the guidance of mentors. GRAME has been [selected as a  mentor organization](https://summerofcode.withgoogle.com/programs/2022/organizations/grame) for the Faust project. 
 
 ### **>>** February 5, 2022: Open Science Award for Open Source Research Software for Faust
 
