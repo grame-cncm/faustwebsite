@@ -2,7 +2,7 @@
 
 Dear Sir or Madam,  
 
-After more than twenty years of research and development led by Grame, the National Center for Music Creation in Lyon, the Faust programming language has become a mature and stable software, widely used by an international community of developers, industry professionals, and academic researchers, particularly in the field of electronic musical instruments and audio software. Additionally, Faust is taught at prestigious universities, further strengthening its academic recognition and global influence.  
+After more than twenty years of research and development led by [Grame](https://www.grame.fr), the National Center for Music Creation in Lyon, the [Faust programming language](https://faust.grame.fr) has become a mature and stable software, widely used by an international community of developers, industry professionals, and academic researchers, particularly in the field of electronic musical instruments and audio software. Additionally, Faust is taught at prestigious universities, further strengthening its academic recognition and global influence.  
 Faust stands out due to several key qualities:  
 
 - **A high-level language**, designed to express complex digital audio processing in a concise and efficient manner.  
