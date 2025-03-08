@@ -224,6 +224,14 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+
+### [PodcastPlugins](https://github.com/trummerschlunk/PodcastPlugins)
+
+<div><a href="https://github.com/trummerschlunk/PodcastPlugins"><img width="50%" class="mx-auto d-block" src="img/PodcastPluginTrack.png"></a> </div> 
+
+Podcast Plugins are easy-to-use plugins for speech enhancement, specifically designed for podcasters who can't or don't want to dig deeper into the craft of sound engineering. The bundle consists of two plugins: [PodcastPlugins TRACK](https://github.com/trummerschlunk/PodcastPlugins#podcastplugins-track) and [PodcastPlugins MASTER](https://github.com/trummerschlunk/PodcastPlugins#podcastplugins-master). The DSP is written in Faust by [Klaus Scheuermann](https://github.com/trummerschlunk).
+
+
 ### [Acidwerk](https://tristanwhitehill.com/acidwerk)
 
 <div><a href="https://tristanwhitehill.com/acidwerk"><img width="50%" class="mx-auto d-block" src="img/acidwerk.png"></a> </div> 
