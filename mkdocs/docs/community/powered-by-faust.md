@@ -224,6 +224,14 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [folia-faust](https://github.com/johannphilippe/folia-faust)
+
+<div><a href="https://github.com/johannphilippe/folia-faust"><img width="35%" class="mx-auto d-block" src="img/folia.png"></a> </div> 
+
+This project is a Faust port from the original program of Folia (by Kaija Saariaho) electronic part originally made by Jean-Baptiste Barrière. The original (and still well sustained) project is a Max MSP program, and can be found on [Kaiha Saariaho website](http://jb.barriere.free.fr/KS-pieces/Folia-electronics.html). 
+
+This project is a proof of concept : porting Max patches to Faust is not only possible, it is also much more sustainable and it brings electronic works to the free software world. 
+
 
 ### [PodcastPlugins](https://github.com/trummerschlunk/PodcastPlugins)
 
