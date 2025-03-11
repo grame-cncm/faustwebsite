@@ -224,6 +224,12 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [Ambience](https://github.com/xaviergodart/xaviergodartcom)
+
+<div><a href="https://github.com/xaviergodart/xaviergodartcom"><img width="30%" class="mx-auto d-block" src="img/ambience.png"></a> </div> 
+
+[Xavier Godart](https://www.xaviergodart.com) ambient track [coded in Faust](https://github.com/xaviergodart/xaviergodartcom/blob/main/audio/ambience.dsp), with a [presentation talk in french](https://www.xaviergodart.com/blog/2023-08-23-generative-music-with-faust-playground-1-meetup/). 
+
 ### [folia-faust](https://github.com/johannphilippe/folia-faust)
 
 <div><a href="https://github.com/johannphilippe/folia-faust"><img width="35%" class="mx-auto d-block" src="img/folia.png"></a> </div> 
