@@ -224,6 +224,14 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+
+### [QLFAUST](https://github.com/njazz/QLFAUST)
+
+<div><a href="https://github.com/njazz/QLFAUST"><img width="50%" class="mx-auto d-block" src="img/qlfaust.png"></a> </div> 
+
+QuickLook plugin for FAUST Programming Language using the [FaustSwiftUI](https://github.com/njazz/FaustSwiftUI) project, a SwiftUI-based dynamic UI renderer for Faust DSP JSON metadata. It parses the Faust UI JSON structure and displays corresponding SwiftUI controls like sliders, toggles, buttons, bargraphs etc.
+
+
 ### [Ambience](https://github.com/xaviergodart/xaviergodartcom)
 
 <div><a href="https://github.com/xaviergodart/xaviergodartcom"><img width="30%" class="mx-auto d-block" src="img/ambience.png"></a> </div> 
