@@ -194,11 +194,11 @@ Elk is an Audio Operating System developed from the ground up to deliver real ti
 A mobile music creation and performance workstation with a built-in motion-based controller, sequencer and synthesis engine. The controller unites XY pad, accelerometer and gyroscope events with complex data ﬁltering engine. Performance process consists of touching the active area on the screen with the index finger and moving the cursor while moving the device in space. Smartphone position in space and finger movement on a screen affect various parameters of sound or generate realtime MIDI output. The app was inspired by the SmartFaust project of GRAME. The audio engine of the app is made with Faust.
 
 
-### [PICO DSP](https://www.crowdsupply.com/ohmic/pico-dsp)
+### [PUCA DSP](https://www.crowdsupply.com/ohmic/puca-dsp)
 
-<a href="https://www.crowdsupply.com/ohmic/pico-dsp"><img width="60%" class="mx-auto d-block" src="img/pico-dsp.png"></a>
+<a href="https://www.crowdsupply.com/ohmic/puca-dsp"><img width="60%" class="mx-auto d-block" src="img/pico-dsp.png"></a>
 
-PICO DSP is an open-source, Arduino-compatible ESP32 development board for audio and digital signal processing (DSP) applications. It offers an expansive audio-processing feature set on a small-format, breadboard-friendly device that provides audio inputs, audio outputs, a low-noise microphone array, an integrated test-speaker option, additional memory, battery-charge management, and ESD protection all on one tiny PCB. The board can be programmed [using Faust](https://github.com/ohmic-net/pico_dsp).
+PUCA DSP is an open-source, Arduino-compatible ESP32 development board for audio and digital signal processing (DSP) applications. It offers an expansive audio-processing feature set on a small-format, breadboard-friendly device that provides audio inputs, audio outputs, a low-noise microphone array, an integrated test-speaker option, additional memory, battery-charge management, and ESD protection all on one tiny PCB. The board can be programmed [using Faust](https://github.com/ohmic-net/puca_dsp).
 
 
 ### [FASELUNARE Microcosmos](http://www.faselunare.com)
