@@ -224,6 +224,13 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [MFP: music for programmers](https://github.com/bgribble/mfp)
+
+<div><a href="https://github.com/bgribble/mfp"><img width="60%" class="mx-auto d-block" src="img/mfp.png"></a> </div> 
+
+MFP is an environment for visually composing computer programs, with an emphasis on music and real-time audio synthesis and analysis. It's very much inspired by Miller Puckette's Pure Data (pd) and Cycling 74's MAX/MSP, with a bit of LabView and TouchOSC for good measure. Live coding is possible with embedded Faust with the `faust~` processor. 
+
+A couple of YouTube videos [1](https://www.youtube.com/watch?v=1bIXcOFw4t0) and [2](https://www.youtube.com/watch?v=4Q14GiwKx6k&feature=youtu.be) show pre-release versions of it in action. The first of those videos focuses on the live-coding capabilities.
 
 ### [QLFAUST](https://github.com/njazz/QLFAUST)
 
