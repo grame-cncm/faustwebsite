@@ -3,6 +3,14 @@
 	padding-right: 20px;
 }
 
+.dropdown-menu{
+    display:block;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
 .btn {
 	margin-bottom: 20px;
 }
