@@ -30,6 +30,13 @@ To illustrate the global impact of Faust, a world map showcases all the projects
 
 The following sections provide a detailed list of commercial applications utilizing Faust.
 
+### [Sputter Music Sequencer](https://casualcomputing.info/sputter/)
+
+<div><a href="https://casualcomputing.info/sputter/"><img width="50%" class="mx-auto d-block" src="img/sputter.png"></a> </div>
+
+[Sputter](https://play.google.com/store/apps/details?id=info.casualcomputing.sputter) is an easy to use but capable mobile music making app. It has a mobile friendly user interface and does not require previous knowledge of music to create great tracks. Sputter is proudly built using a number of open source technologies, including Pure Data and Faust for the audio engine, and LibGDX for the graphics and user interface.
+
+
 ### [TRONIC](https://sampleson.com/tronic.html)
 
 <div><a href="https://sampleson.com/tronic.html"><img width="50%" class="mx-auto d-block" src="img/tronic.jpg"></a> </div>
