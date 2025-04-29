@@ -34,7 +34,7 @@ The following sections provide a detailed list of commercial applications utiliz
 
 <div><a href="https://www.morphoice.com/unstable"><img width="60%" class="mx-auto d-block" src="img/unstable.jpg"></a> </div>
 
-UNSTABLE features two synthesis layers, each offering a noise, sawtooth, and pulse wave oscillator, with adjustable pulse width and variable speed pulse width modulation. Unlike the Yamaha CS-80, the level of each oscillator is adjustable, allowing for free mixing of the waveforms, which are closely modelled after the original. Everything is done in Faust: oscillators, filters, envelopes. Other plugins like [DARKSTAR](https://www.morphoice.com/plugins/darkstar), [WINGMEN](https://www.morphoice.com/plugins/wingmen), [TAPEWAV](https://www.morphoice.com/plugins/tapewow), [MQP-1A Vintage Equalizer](https://www.morphoice.com/plugins/mqp-1a) are also coded with Faust. 
+UNSTABLE features two synthesis layers, each offering a noise, sawtooth, and pulse wave oscillator, with adjustable pulse width and variable speed pulse width modulation. Unlike the Yamaha CS-80, the level of each oscillator is adjustable, allowing for free mixing of the waveforms, which are closely modelled after the original. Everything is written in Faust: oscillators, filters, envelopes... in the [HISE](https://hise.dev) platform. Other plugins like [DARKSTAR](https://www.morphoice.com/plugins/darkstar), [WINGMEN](https://www.morphoice.com/plugins/wingmen), [TAPEWAV](https://www.morphoice.com/plugins/tapewow), [MQP-1A Vintage Equalizer](https://www.morphoice.com/plugins/mqp-1a) are also coded with Faust. 
 
 ### [Sputter Music Sequencer](https://casualcomputing.info/sputter/)
 
