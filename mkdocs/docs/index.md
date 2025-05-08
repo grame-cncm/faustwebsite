@@ -68,7 +68,7 @@ Check out Faust [papers and reports](https://hal.science/search/index/?q=GRAME+F
 
 Three projects have finally been attributed to GRAME:
 
-- **Faust LSP** aims to develop a Language Server Protocol (LSP for the Faust language), providing features like real-time code diagnostics, autocompletion, and symbol navigation in editors. A formatting extension for VS Code will also be developed. It will be worked on by **Ryan Biju Varghese**.
+- **Faust LSP** aims to develop a Language Server Protocol (LSP) for the Faust language, providing features like real-time code diagnostics, autocompletion, and symbol navigation in editors. A formatting extension for VS Code will also be developed. It will be worked on by **Ryan Biju Varghese**.
 
 - **faust2clap: Support for CLAP format**  focuses on adding support for the [CLAP plugin format](https://u-he.com/community/clap/), an open and modern alternative to VST, enabling Faust DSP programs to be compiled directly as CLAP plugins. It will be worked on by **Facundo Franchino**.
 
