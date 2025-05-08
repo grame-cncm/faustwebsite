@@ -60,6 +60,22 @@ Check out Faust [papers and reports](https://hal.science/search/index/?q=GRAME+F
 ## Faust News
 
 
+### **>>** May 08, 2025: Three Google Summer of Code projects attributed
+
+<center>
+<div><a href="https://summerofcode.withgoogle.com"><img  width="50%" class="mx-auto d-block" src="img/gsoc-logo.png"></a>  </div>
+</center>
+
+Three projects have finally been attributed to GRAME:
+
+- **Faust LSP** aims to develop a Language Server Protocol (LSP for the Faust language), providing features like real-time code diagnostics, autocompletion, and symbol navigation in editors. A formatting extension for VS Code will also be developed. It will be worked on by **Ryan Biju Varghese**.
+
+- **faust2clap: Support for CLAP format**  focuses on adding support for the [CLAP plugin format](https://u-he.com/community/clap/), an open and modern alternative to VST, enabling Faust DSP programs to be compiled directly as CLAP plugins. It will be worked on by **Facundo Franchino**.
+
+- **Integration in Audiokinetic Wwise** aims to bring Faust into Wwise](https://www.audiokinetic.com/en/wwise/overview/), a leading middleware for interactive audio, making it possible to author and embed Faust-generated audio effects in video games and real-time media. It will be worked on by **Paschalis Melissas**.
+
+Welcome in the Faust Community !
+
 ### **>>** February 27, 2025: GRAME has been selected as a Google Summer of Code 2025 mentor organization
 
 <center>
@@ -71,7 +87,7 @@ Check out Faust [papers and reports](https://hal.science/search/index/?q=GRAME+F
 
 ### **>>** December 01, 2024: Site for Progressive Web Application for Faust is now online  
 
-The [Faust Progressive Web Applications (PWA)](https://faustpwa.grame.fr) platform enables users to run Faust DSP programs directly in web browsers and possibly on smartphones and tablets, offering an app-like experience without the need for traditional installations. Applications can use the sensors (espcially on smartphones) to control differents aspect of the sound generation. The [GameLAN](https://faustpwa.grame.fr/gamelan/) and  [SmartFaust](https://faustpwa.grame.fr/smartfaust/) projects have been ported to use this new architecture.
+The [Faust Progressive Web Applications (PWA)](https://faustpwa.grame.fr) platform enables users to run Faust DSP programs directly in web browsers and possibly on smartphones and tablets, offering an app-like experience without the need for traditional installations. Applications can use the sensors (espcially on smartphones) to control differents aspect of the sound generation. The [GameLAN](https://faustpwa.grame.fr/gamelan/) and [SmartFaust](https://faustpwa.grame.fr/smartfaust/) projects have been ported to use this new architecture.
 
 
 ### **>>** November 21-22, 2024: Fourth International Faust Conference (IFC-24) at Turin (Italy)
@@ -93,7 +109,6 @@ The [Fourth International Faust Conference (IFC-24)](https://ifc24.soundmit.com/
 
 - **Faust Package Manager** aimed to add a packaging system to facilitate the integration of Faust libraries in a DSP project. It was worked on by [Shehab Khaled Roshdy](https://github.com/shehab299) and a was contributed as a [Pull Request](https://github.com/grame-cncm/faust/pull/1049) that is still in test in a [master-dev-pacman](https://github.com/grame-cncm/faust/tree/master-dev-pacman) branch.
 
-
 ### **>>** May 01, 2024: Four Google Summer of Code projects attributed
 
 <center>
@@ -110,8 +125,7 @@ Four projects have finally been attributed to GRAME:
 
 - **Faust Package Manager** aims to add a packaging system to facilitate the integration of Faust libraries in a DSP project. It will be worked on by **Shehab Khaled Roshdy**.
 
-Welcome to the Faust Community !
-
+Welcome in the Faust Community !
 
 ### **>>** February 21, 2024: GRAME has been selected as a Google Summer of Code 2024 mentor organization
 
@@ -201,7 +215,6 @@ The Audio Developer Conference San Francisco is a one day meet-up for audio deve
 And even the [following one](https://www.youtube.com/live/fqWL2Qj5eSQ?feature=share&t=31043) with ChatGPT generating running Faust code:
 
 - **Democratization of Audio Dev: How it started, Where it's going** by Aurelius Prochazka.
-
 
 ### **>>** May 04, 2023: Two Google Summer of Code projects attributed
 
