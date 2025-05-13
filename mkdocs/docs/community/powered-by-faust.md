@@ -30,6 +30,12 @@ To illustrate the global impact of Faust, a world map showcases all the projects
 
 The following sections provide a detailed list of commercial applications utilizing Faust.
 
+### [M0SS-101 virtual analog monosynth](https://www.kickstarter.com/projects/andrewjohnmarch/m0ss-101-a-virtual-analog-monosynth)
+
+<div><a href="https://www.kickstarter.com/projects/andrewjohnmarch/m0ss-101-a-virtual-analog-monosynth"><img width="40%" class="mx-auto d-block" src="img/moss101.png"></a> </div>
+
+The M0SS-101 is a compact virtual analog monosynth in a rugged guitar pedal enclosure, designed for hands-on subtractive synthesis. It features 26 buttons and one encoder for intuitive control of 42 parameters, with RGB LEDs providing visual feedback. Parameter selection and editing are simple: press a button, turn the encoder, and monitor signal flow through LEDs. It supports MIDI learn for easy integration and stores up to 17 presets for quick recall. Built to be affordable and fun, the M0SS-101 balances depth, usability, and playability in a small form factor. The DSP engine is designed in Faust. 
+
 ### [UNSTABLE Polyphonic Synthesizer](https://www.morphoice.com/unstable)
 
 <div><a href="https://www.morphoice.com/unstable"><img width="60%" class="mx-auto d-block" src="img/unstable.jpg"></a> </div>

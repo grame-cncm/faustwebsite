@@ -44,6 +44,7 @@ addMarker(45.7640, 4.8357, '<a href="https://www.grame.fr">Faust born in GRAME</
 addMarker(37.4213, -122.1694, '<a href="https://ccrma.stanford.edu">CCRMA</a>, Stanford University, CA, USA', redIcon);
 
 // Add project markers
+addMarker(48.4284, -123.3656, '<a href="#m0ss-101-virtual-analog-monosynth">M0SS-101 virtual analog monosynth</a>, Victoria, Canada', blueIcon);
 addMarker(48.7758, 9.1829, '<a href="#unstable-polyphonic-synthesizer">UNSTABLE Polyphonic Synthesizer</a>, Stuttgart, Germany', blueIcon);
 addMarker(60.3913, 5.3221, '<a href="#sputter-music-sequencer">Sputter Music Sequencer</a>, Bergen, Norway', blueIcon);
 addMarker(40.7128, -74.0060, '<a href="#mfp-music-for-programmers">MFP: music for programmers</a>, New York, NY, USA', blueIcon);
