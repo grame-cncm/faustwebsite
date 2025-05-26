@@ -243,6 +243,13 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+
+### [MarteauFX](https://github.com/Simon-L/MfxFaust.lua)
+
+<div><a href="https://github.com/Simon-L/MfxFaust.lua"><img width="60%" class="mx-auto d-block" src="img/marteaufx.png"></a> </div> 
+
+An Lua environment to prototype Faust dsp, with live recompiling, oscilloscope view, hot reloading, soundfile and MIDI.
+
 ### [MFP: music for programmers](https://github.com/bgribble/mfp)
 
 <div><a href="https://github.com/bgribble/mfp"><img width="60%" class="mx-auto d-block" src="img/mfp.png"></a> </div> 
@@ -256,7 +263,6 @@ A couple of YouTube videos [1](https://www.youtube.com/watch?v=1bIXcOFw4t0) and 
 <div><a href="https://github.com/njazz/QLFAUST"><img width="50%" class="mx-auto d-block" src="img/qlfaust.png"></a> </div> 
 
 QuickLook plugin for FAUST Programming Language using the [FaustSwiftUI](https://github.com/njazz/FaustSwiftUI) project, a SwiftUI-based dynamic UI renderer for Faust DSP JSON metadata. It parses the Faust UI JSON structure and displays corresponding SwiftUI controls like sliders, toggles, buttons, bargraphs etc.
-
 
 ### [Ambience](https://github.com/xaviergodart/xaviergodartcom)
 
