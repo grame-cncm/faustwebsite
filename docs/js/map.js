@@ -44,6 +44,7 @@ addMarker(45.7640, 4.8357, '<a href="https://www.grame.fr">Faust born in GRAME</
 addMarker(37.4213, -122.1694, '<a href="https://ccrma.stanford.edu">CCRMA</a>, Stanford University, CA, USA', redIcon);
 
 // Add project markers
+addMarker(40.7128, -74.0060, '<a href="#23tape-analog-tape-emulation">[23Tape - Analog Tape Emulation</a>, New York, NY, USA', blueIcon);
 addMarker(48.8566, 2.3522, '<a href="#marteaufx">MarteauFX</a>, Paris, France', blueIcon);
 addMarker(48.4284, -123.3656, '<a href="#m0ss-101-virtual-analog-monosynth">M0SS-101 virtual analog monosynth</a>, Victoria, Canada', blueIcon);
 addMarker(48.7758, 9.1829, '<a href="#unstable-polyphonic-synthesizer">UNSTABLE Polyphonic Synthesizer</a>, Stuttgart, Germany', blueIcon);

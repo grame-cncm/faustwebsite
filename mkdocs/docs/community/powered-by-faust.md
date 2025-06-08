@@ -30,6 +30,12 @@ To illustrate the global impact of Faust, a world map showcases all the projects
 
 The following sections provide a detailed list of commercial applications utilizing Faust.
 
+### [23Tape - Analog Tape Emulation](https://23dsp.gumroad.com/l/23Tape)
+
+<div><a href="https://23dsp.gumroad.com/l/23Tape"><img width="55%" class="mx-auto d-block" src="img/mediumtape.png"></a> </div>
+
+Bring your mixes to life with 23Tape, a high-fidelity analog tape emulation designed for surgical control or wild, lo-fi destruction. Built in FAUST and powered by a deep DSP architecture, 23Tape goes beyond typical saturation plugins—offering a complete, dynamic simulation of magnetic tape behavior.
+
 ### [M0SS-101 virtual analog monosynth](https://www.kickstarter.com/projects/andrewjohnmarch/m0ss-101-a-virtual-analog-monosynth)
 
 <div><a href="https://www.kickstarter.com/projects/andrewjohnmarch/m0ss-101-a-virtual-analog-monosynth"><img width="40%" class="mx-auto d-block" src="img/moss101.png"></a> </div>
