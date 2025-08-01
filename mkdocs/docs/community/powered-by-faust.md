@@ -255,6 +255,12 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [Pult EQ](https://github.com/consint/Pult-EQ)
+
+<div><a href="https://github.com/consint/Pult-EQ"><img width="60%" class="mx-auto d-block" src="img/pulteq.png"></a> </div> 
+
+Pult EQ is a free and open source Pultec style tube EQ VST3 plugin (64bit) for Linux and Windows. Pult EQ is not made for fine detailed work, but for adding mojo and sound coloration. Pult EQ is based on the Pultec EQ example of the [Wave Digital Filter](https://faustlibraries.grame.fr/libs/wdmodels/) model library in FAUST and on the airwindows Tube2 saturation.
+
 
 ### [MarteauFX](https://github.com/Simon-L/MfxFaust.lua)
 
