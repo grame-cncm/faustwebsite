@@ -44,6 +44,7 @@ addMarker(45.7640, 4.8357, '<a href="https://www.grame.fr">Faust born in GRAME</
 addMarker(37.4213, -122.1694, '<a href="https://ccrma.stanford.edu">CCRMA</a>, Stanford University, CA, USA', redIcon);
 
 // Add project markers
+addMarker(55.953251, -3.188267, '<a href="#expert-sleepers-disting-nt">Expert Sleepers — disting NT</a> Edinburgh, Scotland, UK', blueIcon);
 addMarker(50.9787, 11.0328, '<a href="#pult-eq">Pult EQ</a> Erfurt, Germany', blueIcon);
 addMarker(43.2965, 5.3698, '<a href="#soliste">Soliste from Expressive-E</a>, Marseille, France', blueIcon);
 addMarker(40.7128, -74.0060, '<a href="#23tape-analog-tape-emulation">[23Tape - Analog Tape Emulation</a>, New York, NY, USA', blueIcon);
