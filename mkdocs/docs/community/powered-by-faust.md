@@ -34,7 +34,7 @@ The following sections provide a detailed list of commercial applications utiliz
 
 <div><a href="https://www.expert-sleepers.co.uk/distingNTfirmwareupdates.html"><img width="35%" class="mx-auto d-block" src="img/distingNT.jpg"></a> </div>
 
-The disting NT Eurorack module now supports native C++ plug-ins and includes a toolchain to convert Faust programs into disting NT plug-ins (added in firmware v1.7.0). [Public demos show Faust DSP](https://www.youtube.com/watch?v=ZYjecU0lOyw&t=317s) (e.g., the “Greyhole” reverb) running on the module, opening a path for fast prototyping and deployment of Faust effects/instruments in hardware.
+The disting NT Eurorack module now supports native C++ plug-ins and includes a toolchain to convert Faust programs into disting NT plug-ins (added in firmware v1.7.0). [Public demos show Faust DSP](https://www.youtube.com/watch?v=ZYjecU0lOyw) (e.g., the “Greyhole” reverb) running on the module, opening a path for fast prototyping and deployment of Faust effects/instruments in hardware.
 
 ### [Soliste](https://www.expressivee.com/139-soliste)
 
