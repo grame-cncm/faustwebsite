@@ -59,6 +59,18 @@ Check out Faust [papers and reports](https://hal.science/search/index/?q=GRAME+F
 
 ## Faust News
 
+### **>>** September 09, 2025: Google Summer of Code projects finished
+
+<center>
+<div><a href="https://summerofcode.withgoogle.com"><img  width="50%" class="mx-auto d-block" src="img/gsoc-logo.png"></a>  </div>
+</center>
+
+- **Faust LSP** aimed to develop a [Language Server Protocol](https://en.wikipedia.org/wiki/Language_Server_Protocol) (LSP) for the Faust language, providing features like real-time code diagnostics, autocompletion, and symbol navigation in editors and was worked on by [Ryan Biju Varghese](https://github.com/carn181). The [faustlsp](https://github.com/grame-cncm/faustlsp) and [faustfmt](https://github.com/grame-cncm/faustfmt) projects have been contributed and the [vscode-faust](https://github.com/carn181/vscode-faust) project will be soon finalized. 
+
+- **faust2clap: Support for CLAP format** focused on adding support for the [CLAP plugin format](https://u-he.com/community/clap/), an open and modern alternative to VST, enabling Faust DSP programs to be compiled directly as CLAP plugins. It was worked on by [Facundo Franchino](https://github.com/cucuwritescode). The result is  presented [here](https://github.com/cucuwritescode/faust2clap) and has been merged in the Faust main repository.  
+
+- **Integration in Audiokinetic Wwise** aimed to bring [Faust into Wwise](https://www.audiokinetic.com/en/wwise/overview/), a leading middleware for interactive audio, making it possible to author and embed Faust-generated audio effects in video games and real-time media. It was worked on by [Paschalis Melissas](https://github.com/pasquale90). The result is presented [here](https://github.com/grame-cncm/faust/pull/1167) and has been merged in the Faust main repository.
+
 
 ### **>>** May 08, 2025: Three Google Summer of Code projects attributed
 
