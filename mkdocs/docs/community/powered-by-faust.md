@@ -38,7 +38,7 @@ The disting NT Eurorack module now supports native C++ plug-ins and includes a t
 
 ### [Soliste](https://www.expressivee.com/139-soliste)
 
-<div><a href="https://www.expressivee.com/139-soliste"><img width="55%" class="mx-auto d-block" src="img/Soliste.jpg"></a> </div>
+<div><a href="https://www.expressivee.com/139-soliste"><img width="40%" class="mx-auto d-block" src="img/Soliste.jpg"></a> </div>
 
 Physically modeled solo strings, VLN 356, the violin, VLA 419, the viola, CLO 759 the cello and DBS 1130, the double bass, designed for MPE and MIDI controllers, offering intuitive real-time control over articulation, bowing, vibrato, and dynamics. Faust is used for the physical simulation of strummed strings and modulation signals.
 
