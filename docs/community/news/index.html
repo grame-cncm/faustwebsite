@@ -759,7 +759,7 @@ Participants will be able to share their work through paper presentations. A ser
 <hr />
 <h2 id="2017-10-20-new-editor"><strong>2017-10-20:</strong> New Editor</h2>
 <h3 id="new-faust-editor">New Faust Editor</h3>
-<p>We are very happy to announce the online <a href="https://fausteditor.grame.fr">Faust Editor</a>. It can be used to <em>edit</em>, <em>compile</em> and <em>run</em> Faust code from any recent Web Browser with <a href="http://webassembly.org">WebAssembly</a> support. This editor works completely on the client side and it is therefore very convenient for situations with many simultaneous users (workshops, classrooms, etc.). It embeds the latest version of the Faust compiler with an efficient WebAssembly backend and offers polyphonic MIDI support.</p>
+<p>We are very happy to announce the online <a href="../../tools/editor">Faust Editor</a>. It can be used to <em>edit</em>, <em>compile</em> and <em>run</em> Faust code from any recent Web Browser with <a href="http://webassembly.org">WebAssembly</a> support. This editor works completely on the client side and it is therefore very convenient for situations with many simultaneous users (workshops, classrooms, etc.). It embeds the latest version of the Faust compiler with an efficient WebAssembly backend and offers polyphonic MIDI support.</p>
 <p><img src="img/editor-help.png" class="mx-auto d-block" width="60%"></p>
 <h3 id="features">Features</h3>
 <p>The editor engine is based on <a href="https://codemirror.net/">codemirror</a>. It offers <em>syntax highlighting</em>, <em>auto completion</em> and direct access to the <em>online documentation</em>. The documentation command (ctrl-d) uses the function name at the cursor position to locate to the relevant information.</p>
@@ -768,7 +768,7 @@ Participants will be able to share their work through paper presentations. A ser
 <p>The recommended browsers are the latest versions of Firefox and Chrome. Chrome is recommended for MIDI, but it requires an https connexion to use the audio inputs. On the other hand MIDI is not supported by Firefox.</p>
 <h3 id="useful-links">Useful links</h3>
 <ul>
-<li><a href="https://fausteditor.grame.fr">Editor</a>: the official link,</li>
+<li><a href="../../tools/editor">Editor</a>: the official link,</li>
 <li><a href="https://grame-cncm.github.io/fausteditorweb/">https://grame-cncm.github.io/fausteditorweb/</a>: an alternative link on GitHub. Because this is an https address, audio inputs will work (but not the export function),</li>
 <li><a href="https://github.com/grame-cncm/fausteditorweb">https://github.com/grame-cncm/fausteditorweb</a>: the GitHub repository.</li>
 </ul>
@@ -795,7 +795,7 @@ Participants will be able to share their work through paper presentations. A ser
 </ul>
 <p>In both cases, a full description of the DSP state as a JSON string is generated in the <a href="http://webassembly.org/docs/modules/#data-section">module data segment</a> (including memory indexes of all controllers). Loader code will get and decode this JSON description, and use whatever parts of the description it needs to run the DSP code. In particular, control memory zones (corresponding to the UI items like buttons, sliders, bargraph...) can be directly read/written by the wrapper code.     </p>
 <h4 id="benchmark-of-c-llvm-ir-and-wastwasm-generated-code">Benchmark of C++, LLVM IR and wast/wasm generated code</h4>
-<p>Since Faust already generates C++ or LLVM IR code, the performances of those two backends can be compared with the new wasm one. Using the WAVM C++ written machine allows to deploy the <a href="#2017-04-26-optimizing">same measuring code</a>. The first benchmark compares the speed of C++, LLVM IR and wasm backends running a set of DSP, running on a MacBook Pro 2,2 GHz Core I7 with OSX El capitan. The same 4.0 version of LLVM toolchain has been used with the three backend.
+<p>Since Faust already generates C++ or LLVM IR code, the performances of those two backends can be compared with the new wasm one. Using the WAVM C++ written machine allows to deploy the <a href="/news/2017/04/26/optimizing-compilation-parameters.html">same measuring code</a>. The first benchmark compares the speed of C++, LLVM IR and wasm backends running a set of DSP, running on a MacBook Pro 2,2 GHz Core I7 with OSX El capitan. The same 4.0 version of LLVM toolchain has been used with the three backend.
 C++ and LLVM IR code has been compiled with the <em>-Ofast</em> optimization flag, the WAVM runtime is the standard version one (without any specific audio optimization, see later):</p>
 <p><img src="img/C++_LLVM_IR_WASM_OSX.png" class="mx-auto d-block" width="80%"></p>
 <p>The diagrams clearly shows that the wasm code is still slower than C++ or LLVM IR code, but speed difference is not so high in most cases. Some DSP behaviours  need  to be understood in more details.   </p>
@@ -906,7 +906,7 @@ function changeVolume(event)
 <p>Look at the <a href="/modules/noise-wasm.html">Noise</a> and <a href="/modules/osc-wasm.html">OSC</a> online pages for the complete code. </p>
 <p>Note that pages loading an additional .wasm file cannot directly be loaded in Chrome. You'll have to start a local server (using the <em>python -m SimpleHTTPServer</em> command for instance) and access them with their <em>http://</em> based URL.  </p>
 <h3 id="generating-polyphonic-webaudio-nodes">Generating Polyphonic WebAudio nodes</h3>
-<p>Assuming that the compiled Faust DSP file is <a href="#polyphonic-instruments">polyphonic ready</a>, a polyphonic ready WebAudio node can be created with the <strong>-poly</strong> parameter, and will generate the following constructor for the node (where the <em>mydsp</em> part will be replaced by the actual DSP name): </p>
+<p>Assuming that the compiled Faust DSP file is <a href="/news/2016/01/13/polyphonic-instruments.html">polyphonic ready</a>, a polyphonic ready WebAudio node can be created with the <strong>-poly</strong> parameter, and will generate the following constructor for the node (where the <em>mydsp</em> part will be replaced by the actual DSP name): </p>
 <pre><code>/**
 * Create a 'polyphonic' ScriptProcessorNode Web Audio object 
 * by loading and compiling the Faust wasm file 
@@ -1361,7 +1361,7 @@ Best value is for 'karplus32.dsp' is : 142.473 with -vec -lv 0 -vs 256 -dfs -mcd
 <pre><code>faust2webaudiowasm foo.dsp
 </code></pre>
 <p>will generate the binary WebAssembly output that can directly be loaded by the produced self-contained html page.</p>
-<p>Page containing <a href="#polyphonic-instruments">polyphonic instruments</a> can be generated with the following commands:</p>
+<p>Page containing <a href="/news/2016/01/13/polyphonic-instruments.html">polyphonic instruments</a> can be generated with the following commands:</p>
 <pre><code>faust2webaudiowast -poly foo.dsp
 </code></pre>
 <p>to use the 'wast' backend and a polyphonic ready foo.dsp, and create a self-contained html page ready to be used with a MIDI instrument. </p>
@@ -1504,12 +1504,12 @@ implemented. </p>
 <p>When no more used, you'll have to explicitly use the following code to deallocate the instance: </p>
 <pre><code>faust.deleteDSPInstance(dsp);
 </code></pre>
-<p>This instance can be used like the statically compiled one, as previously described in <a href="#faust-and-webaudio-api">this page</a>.</p>
+<p>This instance can be used like the statically compiled one, as previously described in <a href="/news/2014/02/14/faust-and-webaudio-api.html">this page</a>.</p>
 <h4 id="polyphonic-instruments">Polyphonic instruments</h4>
 <p>Polyphonic instruments can be produced. For a given 'factory' the following code will create a 16 voices polyphonic instance:</p>
 <pre><code>var dsp = faust.createPolyDSPInstance(factory, audio_context, buffer_size, 16);
 </code></pre>
-<p>This instance can be used like the statically compiled one, as previously described in <a href="#faust-and-webaudio-api">this page</a>.</p>
+<p>This instance can be used like the statically compiled one, as previously described in <a href="/news/2014/02/14/faust-and-webaudio-api.html">this page</a>.</p>
 <h4 id="using-faust-javascript-library">Using Faust JavaScript library</h4>
 <p>The Emscripten compiled Faust library can be used in two ways. Either using the 'libfaust.js' library:</p>
 <pre><code>&lt;script src="libfaust.js"&gt;&lt;/script&gt;
