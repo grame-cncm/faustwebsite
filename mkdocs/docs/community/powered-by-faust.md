@@ -263,7 +263,7 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ### [The Theremin, Reborn in Mixed Reality](https://www.meta.com/fr-fr/experiences/theremin/29752287957695971/)
 
-<div><a href="https://www.meta.com/fr-fr/experiences/theremin/29752287957695971/"><img width="60%" class="mx-auto d-block" src="img/theremin.png"></a> </div> 
+<div><a href="https://www.meta.com/fr-fr/experiences/theremin/29752287957695971/"><img width="60%" class="mx-auto d-block" src="img/theremin.jpg"></a> </div> 
 
 Put on your headset, flip the switch, and play. A real instrument floats before you — responsive, expressive, and endlessly tunable. Adjust with intuitive knobs. Turn knobs from a distance: point your controller, pull the trigger, then turn your controller or pull out radially and orbit for more precision. The audio is synthesized using Faust via [faust2unity](https://github.com/grame-cncm/faust/tree/master-dev/architecture/unity).   
 
