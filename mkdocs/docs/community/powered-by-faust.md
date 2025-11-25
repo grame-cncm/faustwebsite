@@ -22,7 +22,7 @@ Several commercial applications incorporate Faust for high-performance audio pro
 
 ## Project World Map
 
-To illustrate the global impact of Faust, a world map showcases all the projects using the language. This map highlights the geographical distribution and diversity of applications, reflecting the widespread adoption and influence of Faust in the audio processing community.
+To illustrate the global impact of Faust, a world map showcases all the significant projects using the language. This map highlights the geographical distribution and diversity of applications, reflecting the widespread adoption and influence of Faust in the audio processing community.
 
 <div id="map" style="height: 400px;"> </div>
 
