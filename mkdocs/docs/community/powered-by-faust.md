@@ -261,6 +261,12 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [Genetic Programming to Creative Sound Synthesis](https://github.com/barnabycollins/MEng-Project)
+
+<div><a href="https://github.com/barnabycollins/MEng-Project/"><img width="70%" class="mx-auto d-block" src="img/barnabycollins.jpg"></a> </div> 
+
+This [paper](https://www.researchgate.net/publication/360298528_Application_of_Genetic_Programming_to_Creative_Sound_Synthesis_in_Web_Audio) and project explores how genetic programming (GP) can be applied to creative sound synthesis in the browser using the Web Audio API. It presents a system that automatically evolves synthesizer structures and parameters through mutation and selection, allowing users to discover novel and complex sounds without manually designing synthesis patches. The goal is to combine algorithmic creativity, modular synthesis, and real-time web audio in an accessible environment. Faust is the synthesis description language used to define all sound-generating and processing modules (oscillators, filters, effects, FM, subtractive, etc.). The system can be [tested here](https://explorer.barnabycollins.com). 
+
 ### [The Theremin, Reborn in Mixed Reality](https://www.meta.com/fr-fr/experiences/theremin/29752287957695971/)
 
 <div><a href="https://www.meta.com/fr-fr/experiences/theremin/29752287957695971/"><img width="60%" class="mx-auto d-block" src="img/theremin.jpg"></a> </div> 
