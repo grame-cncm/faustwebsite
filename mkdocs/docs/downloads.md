@@ -12,7 +12,7 @@ so we recommend most people to use this tools which doesn't require any installa
 
 * Look for the most recent `Faust-XXX-win64.exe` on: <https://github.com/grame-cncm/faust/releases>
 
-### MacOS
+### macOS
 
 * Look for the most recent `Faust-XXX.dmg` on: <https://github.com/grame-cncm/faust/releases> or use [MacPorts](https://www.macports.org) or [Homebrew](https://brew.sh) package managers
 
@@ -32,7 +32,7 @@ FaustLive is an "on-the-fly" compiler for Faust (see the [overview of the Faust 
 
 * Look for the most recent `FaustLive-XXX-win64.exe` on: <https://github.com/grame-cncm/faustlive/releases>
 
-### MacOS
+### macOS
 
 * Look for the most recent `FaustLive-XXX.dmg` on: <https://github.com/grame-cncm/faustlive/releases>
 
@@ -52,7 +52,7 @@ Faustgen is a Max/MSP object to compile Faust code dynamically (see the [overvie
 
 * Look for the most recent `faustgen-XXX-win64.zip` on: <https://github.com/grame-cncm/faust/releases>
 
-### MacOS
+### macOS
 
 * Look for the most recent `faustgen-XXX-macosx.dmg` on: <https://github.com/grame-cncm/faust/releases>
 
