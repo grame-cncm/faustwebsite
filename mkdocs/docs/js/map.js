@@ -44,6 +44,7 @@ addMarker(45.7640, 4.8357, '<a href="https://www.grame.fr">Faust born in GRAME</
 addMarker(37.4213, -122.1694, '<a href="https://ccrma.stanford.edu">CCRMA</a>, Stanford University, CA, USA', redIcon);
 
 // Add project markers
+addMarker(45.8150, 15.9819, '<a href="#zorakaudio-experimental-plugins">ZorakAudio Experimental Plugins</a>, Zagreb, Croatia', blueIcon);
 addMarker(51.5074, -0.1278, '<a href="#genetic-programming-to-creative-sound-synthesis">Genetic Programming to Creative Sound Synthesis</a>, London, England', blueIcon);
 addMarker(40.7128, -74.0060, '<a href="#the-theremin-reborn-in-mixed-reality">The Theremin, Reborn in Mixed Reality</a>, New York, NY, USA', blueIcon);
 addMarker(55.953251, -3.188267, '<a href="#expert-sleepers-disting-nt">Expert Sleepers — disting NT</a> Edinburgh, Scotland, UK', blueIcon);
