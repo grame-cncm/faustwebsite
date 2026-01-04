@@ -1,6 +1,13 @@
 .publications {
     padding-top: 0;
 }
+.dropdown-menu{
+    display:block;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
 
 .pub_year { 
     padding-left: 15px; 
