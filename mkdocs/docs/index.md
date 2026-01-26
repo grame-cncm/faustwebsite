@@ -59,6 +59,15 @@ Check out Faust [papers and reports](https://hal.science/search/index/?q=GRAME+F
 
 ## Faust News
 
+### **>>** January 26, 2026: faustbrowser-mcp project released
+
+<center>
+<div><a href="https://summerofcode.withgoogle.com"><img  width="50%" class="mx-auto d-block" src="img/faust-browser.jpg"></a>  </div>
+</center>
+
+**faustbrowser-mcp** is a browser-first MCP server for Faust DSP. It runs a tiny Python MCP proxy locally, serves a static browser UI, and delegates all audio/MIDI compilation and playback to the browser runtime. This lets MCP clients control Faust DSP without any native audio runtime on the server side. When connected to the Claude Desktop LLM, it enables a powerful *plan / act / observe / refine* workflow for programming and iterating on FAust DSP code.
+
+
 ### **>>** September 09, 2025: Google Summer of Code projects finished
 
 <center>
