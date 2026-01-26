@@ -148,7 +148,15 @@ The project is using Rust and the Faust to Rust backend, and the source code [is
 <div><a href="https://chaosaudio.com/products/stratus"><img width="55%" class="mx-auto d-block" src="img/Stratus.png"></a> </div>
 
 The compact, all-in-one pedal by [Chaos Audio](https://chaosaudio.com/pages/about-us). Run multiple effects at once, swap between presets, and loop for up to 5 minutes.
-Stratus® features a 5-minute looper, hands-free preset switching, and a wide range of effects options. You can save and load presets, chain up to seven effects, and access new effects through Tone Shop™. Beginners can experiment and learn without breaking the bank. Seasoned performers save space, time, and benefit from advanced options like MIDI control. The pedal can be [programmed with Faust](https://chaosaudio.com/pages/developer-portal), see also the [faust-stratus](https://github.com/bassmanitram/faust-stratus/tree/main) project.
+Stratus® features a 5-minute looper, hands-free preset switching, and a wide range of effects options. You can save and load presets, chain up to seven effects, and access new effects through Tone Shop™. Beginners can experiment and learn without breaking the bank. Seasoned performers save space, time, and benefit from advanced options like MIDI control. The pedal can be [programmed with Faust](https://chaosaudio.com/pages/developer-portal), see also the [faust-stratus](https://github.com/bassmanitram/faust-stratus/tree/main) project. Here are some examples: 
+
+<div><a href="https://chaosaudio.com/collections/dynamics/products/the-leveler-by-magnetophon"><img width="25%" class="mx-auto d-block" src="img/the_leveler.jpg"></a> </div>
+
+- **The Leveler** is a compressor, using  a custom algorithm that evens out dynamics and lifts the overall level, while leaving the character of the sound.
+
+<div><a href="https://chaosaudio.com/collections/reverb/products/spring-reverb-60s-surf-tank"><img width="25%" class="mx-auto d-block" src="img/spring_reverb.jpg"></a> </div>
+
+- **Spring Reverb** delivers the iconic sound of classic spring tanks, a staple in countless recordings. Infuse your tone with instant retro character, from subtle ambience to bold and over-the-top
 
 ### [Noisy2](https://www.expressivee.com/88-noisy-two)
 
