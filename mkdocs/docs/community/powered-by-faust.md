@@ -152,11 +152,11 @@ Stratus® features a 5-minute looper, hands-free preset switching, and a wide ra
 
 <div><a href="https://chaosaudio.com/collections/dynamics/products/the-leveler-by-magnetophon"><img width="25%" class="mx-auto d-block" src="img/the_leveler.jpg"></a> </div>
 
-- **The Leveler** is a compressor, using  a custom algorithm that evens out dynamics and lifts the overall level, while leaving the character of the sound.
+- **The Leveler** is a compressor, using  a custom algorithm that evens out dynamics and lifts the overall level, while leaving the character of the sound, written by [magnetophon](https://github.com/magnetophon).
 
 <div><a href="https://chaosaudio.com/collections/reverb/products/spring-reverb-60s-surf-tank"><img width="25%" class="mx-auto d-block" src="img/spring_reverb.jpg"></a> </div>
 
-- **Spring Reverb** delivers the iconic sound of classic spring tanks, a staple in countless recordings. Infuse your tone with instant retro character, from subtle ambience to bold and over-the-top
+- **Spring Reverb** delivers the iconic sound of classic spring tanks, a staple in countless recordings. Infuse your tone with instant retro character, from subtle ambience to bold and over-the-top, written by [Daniel Leonov](https://github.com/daleonov).
 
 ### [Noisy2](https://www.expressivee.com/88-noisy-two)
 
