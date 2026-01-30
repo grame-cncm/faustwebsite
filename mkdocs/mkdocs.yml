@@ -37,7 +37,7 @@ theme:
   custom_dir: 'theme'
   navigation_depth: 4
 
-site_dir: ../docs
+site_dir: ../site
 
 extra_css:
    - css/pubs.css

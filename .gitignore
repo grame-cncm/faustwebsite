@@ -1,6 +1,9 @@
 .sass-cache
-site
+/docs
+/site
 .DS_Store
+mkdocs/.vscode
+mkdocs/mkdocs
 src/community/news/news.html
 src/doc/examples/examples.html
 src/doc/manual/manual.html

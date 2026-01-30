@@ -17,7 +17,7 @@ To generate the web site, type:
 ~~~~~~~~~~~~~~~~
 $ make build
 ~~~~~~~~~~~~~~~~
-You'll find the web site in the ./docs folder.
+You'll find the web site in the ./site folder.
 
 ### Testing and generating
 
@@ -33,8 +33,8 @@ $ make help
 
 ### Publishing 
 
-The docs folder at rool level contains all files that will be published. To make the current version publicly available:
-- add all the new files using `git add docs`
-- commit using `git commit -am "message"` (so new files and deleted files will be commited, except docs/CNAME file) 
-- and push the commit
+Publishing is handled by GitHub Actions. Pushing to the main branch will build and deploy the site.
 
+### WARNING!!
+
+- never delete the **mkdocs/docs/CNAME** file (which is mandatory for the final generated site to work)
