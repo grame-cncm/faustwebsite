@@ -1,8 +1,6 @@
 # Faust Downloads
 
-Faust comes in many different forms and it can be confusing to know what to install to start using this tool. We recommend you to have a look at the [overview of the Faust universe section of the Faust manual](https://faustdoc.grame.fr/manual/overview/). That being said, most of the features of Faust are accessible through the: [**>> Faust Web IDE <<**](https://faustide.grame.fr)
-
-so we recommend most people to use this tools which doesn't require any installation. Now, if you really wish to have a local version of Faust on your system, this page should give you an overview of the options that you have.
+Faust comes in many different forms and it can be confusing to know what to install to start using this tool. We recommend you to have a look at the [overview of the Faust universe section of the Faust manual](https://faustdoc.grame.fr/manual/overview/). That being said, most of the features of Faust are accessible through the [**>> Faust Web IDE <<**](https://faustide.grame.fr), so we recommend most people to use this tools which doesn't require any installation. Now, if you really wish to have a local version of Faust on your system, this page should give you an overview of the options that you have.
 
 ## Faust Compiler &amp; libfaust
 
