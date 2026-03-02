@@ -10,7 +10,7 @@ Participants share their work through paper presentations. A series of round  ta
 
 ### IFC-24 - November 21-22, 2024 in Turin (Italy)
 
-The fourth edition of the International Faust Conference ([IFC-24](https://ifc24.soundmit.com/en)) took place on November 21-22, 2024 in Turin (Italy).
+The fourth edition of the International Faust Conference ([IFC-24](https://ifc24.soundmit.com/en)) took place on November 21-22, 2024 in Turin (Italy). The Proceedings are available [here](https://hal.science/hal-04846518).
 
 Slides from November 21nd:
 
@@ -34,6 +34,7 @@ Slides from November 22nd:
 - [Introduction SHCdyna](2024/Introduction_SHCdyna.pdf)
 - [FAUST-Based Web Audio Modules In (sometimes unexpected) Online Hosts](2024/FAUST-based_Web-Audio_Modules.pdf)
 - [Faust Consortium and AFFA Projects](2024/AFFA_Consortium.pdf)
+
 
 
 ### IFC-22 - June 7-8, 2022 - During SMC-22 at St-Etienne (France)
