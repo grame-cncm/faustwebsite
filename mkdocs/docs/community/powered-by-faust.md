@@ -34,7 +34,7 @@ The following sections provide a detailed list of commercial applications utiliz
 
 <div><a href="https://www.pluginmaker.ai"><img width="60%" class="mx-auto d-block" src="img/Pluginmaker.jpg"></a> </div>
 
-Pluginmaker.ai is an AI-powered platform that creates audio plugins (VST/AU) from simple text descriptions. It runs entirely in the browser, requiring no coding or setup. Users can prototype synthesizers and effects quickly and preview them online. The generated plugins can be compiled as AU and VST3 format and used in DAWs like Ableton Live or Logic Pro. The palform is using Faust and [iPlug2](https://iplug2.github.io). 
+Pluginmaker.ai is an AI-powered platform that creates audio plugins (VST/AU) from simple text descriptions. It runs entirely in the browser, requiring no coding or setup. Users can prototype synthesizers and effects quickly and preview them online. The generated plugins can be compiled as AU and VST3 format and used in DAWs like Ableton Live or Logic Pro. The platform is using Faust and [iPlug2](https://iplug2.github.io). 
 
 
 ### [Expert Sleepers — disting NT](https://www.expert-sleepers.co.uk/distingNTfirmwareupdates.html)
