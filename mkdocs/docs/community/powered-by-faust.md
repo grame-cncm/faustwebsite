@@ -158,6 +158,8 @@ Stratus® features a 5-minute looper, hands-free preset switching, and a wide ra
 
 - **Spring Reverb** delivers the iconic sound of classic spring tanks, a staple in countless recordings. Infuse your tone with instant retro character, from subtle ambience to bold and over-the-top, written by [Daniel Leonov](https://github.com/daleonov).
 
+Starting march 2026, the [AI FX Builder](https://chaosaudio.com/blogs/whats-new/introducing-ai-fx-builder-create-any-effect-you-can-imagine) directly allows to prompt effects, possibly combinig it with a [NAM model](https://www.neuralampmodeler.com) automatically translated to Faust code.    
+
 ### [Noisy2](https://www.expressivee.com/88-noisy-two)
 
 <div><a href="https://www.expressivee.com/88-noisy-two"><img width="55%" class="mx-auto d-block" src="img/Noisy2.png"></a> </div>
