@@ -813,7 +813,7 @@ The paper Faust Model of the Echoplex Tape Delay, included in the repo, provides
 
 ### [faust2smartphone](https://github.com/RuolunWeng/faust2smartphone)
 
-faust2smartphone is a tool to generate interactive musical mobile application embedded Faust API.
+faust2smartphone is a tool that generates complete iOS and Android mobile audio applications from Faust programs, bridging DSP design and interactive app development. It compiles Faust code into a C++ DSP engine, wraps it in a portable API, and produces edit-ready native projects for Xcode or Android Studio. Its architecture integrates real-time audio, UI control (MIDI/OSC), and smartphone sensors, with a notable “motion mode” enabling gesture-to-sound mapping directly in Faust. It allows rapid prototyping of fully customizable, sensor-aware mobile instruments and applications.
 
 ### [DPF-Fadeli](https://github.com/DISTRHO/Fadeli)
 
