@@ -44,6 +44,7 @@ addMarker(45.7640, 4.8357, '<a href="https://www.grame.fr">Faust born in GRAME</
 addMarker(37.4213, -122.1694, '<a href="https://ccrma.stanford.edu">CCRMA</a>, Stanford University, CA, USA', redIcon);
 
 // Add project markers
+addMarker(48.8566, 2.3522, '<a href="#abcliblibrary">abclib library] AI</a>, Paris, France', blueIcon);
 addMarker(52.5200, 13.4050, '<a href="#pluginmakerai">Pluginmaker AI</a>, Berlin, Germany', blueIcon);
 addMarker(45.8150, 15.9819, '<a href="#zorakaudio-experimental-plugins">ZorakAudio Experimental Plugins</a>, Zagreb, Croatia', blueIcon);
 addMarker(51.5074, -0.1278, '<a href="#genetic-programming-to-creative-sound-synthesis">Genetic Programming to Creative Sound Synthesis</a>, London, England', blueIcon);

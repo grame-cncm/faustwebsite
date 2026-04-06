@@ -254,6 +254,12 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [abclib library](https://github.com/alainbonardi/abclib)
+
+<div><a href="https://github.com/alainbonardi/abclib/"><img width="60%" class="mx-auto d-block" src="img/abclib.png"></a> </div>
+
+abclib library is released by the CICM / MUSIDANSE (Centre de Recherches Informatique et Création Musicale, Paris 8 University) and is the result of 20 years of research, teaching and creation in mixed music, expressed as a set of codes in Faust language. The main topics addressed are: spatial sound processing and synthesis using ambisonics, multi-channel sound processing and utility objects for mixed music.
+
 ### [ZorakAudio Experimental Plugins](https://github.com/ZorakAudio/ZorakAudio-Experimental-Plugins)
 
 A collection of experimental open-source audio plugins by ZorakAudio. Each plugin is a standalone exploration of perceptual and psychoacoustic DSP ideas, focused on safe behavior, minimal controls, and unconventional solutions to real-world audio problems.
@@ -1420,7 +1426,7 @@ A presentation video can be [seen here](https://www.youtube.com/watch?v=ttdXz_hj
 
 Gwion is a programming language aimed at making music. It is strongly inspired by [ChucK](http://chuck.stanford.edu) and can use a set of [plugins for Gwion](https://github.com/Gwion/gwion-plug). One allows to use the [libfaust](https://github.com/Gwion/gwion-plug/tree/master/Faust) library to JIT compile and run DSP code on the fly. The [faust2gw](https://github.com/Gwion/gwion-plug/tree/master/faust2gw) tool allows to produce statically compiled modules.
 
-## sonejostudios
+### sonejostudios
 
 A set of tools written using Faust.
 
