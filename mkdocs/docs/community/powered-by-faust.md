@@ -254,6 +254,16 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+
+### [BigBlueBetterAudio](https://github.com/trummerschlunk/BigBlueBetterAudio)
+
+<div><a href="https://github.com/trummerschlunk/BigBlueBetterAudio/"><img width="80%" class="mx-auto d-block" src="img/BBBA.jpg"></a> </div>
+
+BigBlueButton is one of the most popular free and open-source video conferencing systems. It is widely used in education settings, by NGOs, government and business units.
+
+BigBlueBetterAudio enhances speech quality in BigBlueButton by making voices sound more natural and less fatiguing in real time. The DSP chain is written in Faust, compiled to WebAssembly, and runs in the browser as an AudioWorklet. It combines EQ, dynamics, and RNNoise-based voice enhancement—entirely client-side with no server load.
+
+
 ### [abclib library](https://github.com/alainbonardi/abclib)
 
 <div><a href="https://github.com/alainbonardi/abclib/"><img width="60%" class="mx-auto d-block" src="img/abclib.png"></a> </div>
