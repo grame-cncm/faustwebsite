@@ -59,6 +59,21 @@ Check out Faust [papers and reports](https://hal.science/search/index/?q=GRAME+F
 
 ## Faust News
 
+### **>>** May 05, 2026: Two Google Summer of Code projects attributed
+
+<center>
+<div><a href="https://summerofcode.withgoogle.com"><img  width="50%" class="mx-auto d-block" src="img/gsoc-logo.png"></a>  </div>
+</center>
+
+Two projects have finally been attributed to GRAME:
+
+- **Faust Integration in Godot Game Engine** proposes integrating Faust into [Godot](https://godotengine.org/) via a GDExtension, using libfaust and the JIT compiler to enable dynamic DSP updates without recompiling or restarting. A static version (`faust2godot`) could also broaden integration, giving game developers and audio engineers access to Faust’s real-time audio processing in a game-oriented context.
+
+- **Faust Integration in BespokeSynth** aims to integrate a real-time Faust editor into [BespokeSynth](https://www.bespokesynth.com), enabling developers to write and run DSP code interactively. It will serve as both an IDE for Faust and a flexible way for BespokeSynth users to modify audio processing without recompilation, using C++ and the Faust embedded compiler.
+
+Welcome in the Faust Community !
+
+
 ### **>>** January 26, 2026: faustbrowser-mcp project released
 
 <center>
