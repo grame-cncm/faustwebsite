@@ -255,9 +255,16 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 ## Other projects
 
 
+### [MAGDA](https://github.com/Conceptual-Machines/magda-core)
+
+<div><a href="https://github.com/Conceptual-Machines/magda-core/"><img width="70%" class="mx-auto d-block" src="img/magda.png"></a> </div>
+
+[MAGDA](https://magda.land) is a free, open source, cross-platform DAW (macOS / Windows / Linux, GPLv3, built on JUCE and Tracktion Engine). It includes an AI layer that operates the DAW symbolically through a small DSL: create tracks, load plugins, edit clips, build modulators, set up sidechains, etc. Every AI action becomes a normal DAW operation that is visible, editable, and undoable by the user. Almost every built-in effect in the FX bank is written in Faust and compiled to native C++ at build time using the FAUST compiler. There is also a dedicated Faust device that lets users write .dsp code directly inside the app. It currently runs through libfaust in interpreter mode, and also includes an AI panel that can generate FAUST code from a natural language prompt.
+
+
 ### [BigBlueBetterAudio](https://github.com/trummerschlunk/BigBlueBetterAudio)
 
-<div><a href="https://github.com/trummerschlunk/BigBlueBetterAudio/"><img width="80%" class="mx-auto d-block" src="img/BBBA.jpg"></a> </div>
+<div><a href="https://github.com/trummerschlunk/BigBlueBetterAudio/"><img width="90%" class="mx-auto d-block" src="img/BBBA.jpg"></a> </div>
 
 BigBlueButton is one of the most popular free and open-source video conferencing systems. It is widely used in education settings, by NGOs, government and business units.
 
