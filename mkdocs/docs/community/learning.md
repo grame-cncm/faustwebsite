@@ -41,6 +41,11 @@ The [Professional RIM & RAN Masters](https://musinf.univ-st-etienne.fr/indexGB.h
 
 Most of the courses concerning signal processing are given around the Faust language (M1 Romain Michon 12h / M2 Yann Orlarey 20h).
 
+
+### Music Engineering Department at Shanghai Conservatory of Music
+
+A comprehensive [collection of Digital Audio Processing tutorials](https://github.com/Fr0stbyteR/dsp-course-faust) using the Faust programming language. This is an educational resource for the 32-week Digital Audio course in the Music Engineering Department at Shanghai Conservatory of Music.
+
 ###  Johannes Gutenberg University of Mainz
 
 To complete...
