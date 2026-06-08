@@ -8,6 +8,16 @@ Participants share their work through paper presentations. A series of round  ta
 
 ## Past Editions
 
+### IFC-26 - June 4-5, 2026 in Cannes (France)
+
+The fifth edition of the International Faust Conference ([IFC-26](https://ifc26.i3s.univ-cotedazur.fr/)) took place on June 4-5, 2026 at the Campus Georges Méliès, University Côte d'Azur, Cannes (France). The event was organized by the University Côte d'Azur and hosted two days of talks, workshops, demonstrations, and community discussions around Faust.
+
+IFC-26 continued the conference's role as a meeting point for researchers, developers, musicians, computer artists, and industrial users of Faust. The call for contributions included research papers, practitioner talks, performances, artworks and demos, and technology tutorials. 
+
+The [keynote program](https://ifc26.i3s.univ-cotedazur.fr/docs/keynotes/) reflected current directions in the Faust ecosystem. The complete progam with slides is [available here](https://ifc26.i3s.univ-cotedazur.fr/docs/program/). IFC-26 also marked the first time an International Faust Conference included a concert as part of its program. The concert took place at 18:00 on the Campus Georges Méliès and focused on augmented lutherie, with a duplex connection to Elektronizza.
+
+<img src="img/ifc2026.jpeg" class="mx-auto d-block" width="55%">
+
 ### IFC-24 - November 21-22, 2024 in Turin (Italy)
 
 The fourth edition of the International Faust Conference ([IFC-24](https://ifc24.soundmit.com/en)) took place on November 21-22, 2024 in Turin (Italy). The Proceedings are available [here](https://hal.science/hal-04846518).
@@ -34,7 +44,6 @@ Slides from November 22nd:
 - [Introduction SHCdyna](2024/Introduction_SHCdyna.pdf)
 - [FAUST-Based Web Audio Modules In (sometimes unexpected) Online Hosts](2024/FAUST-based_Web-Audio_Modules.pdf)
 - [Faust Consortium and AFFA Projects](2024/AFFA_Consortium.pdf)
-
 
 
 ### IFC-22 - June 7-8, 2022 - During SMC-22 at St-Etienne (France)
