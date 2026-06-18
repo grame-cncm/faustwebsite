@@ -256,6 +256,11 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [Persistent Faust ](http://kageproduction.com/persistent_faust_free)
+
+<div><a href="http://kageproduction.com/persistent_faust_free"><img width="60%" class="mx-auto d-block" src="img/persistent-faust.png"></a> </div>
+
+[Persistent Faust](https://www.youtube.com/watch?v=pBuUHxbp9Nk) by [KageProduction](https://kageproduction.com) is a programmable DSP platform, not a fixed single-purpose audio effect. It can transform in real time into many kinds of plugins depending on the user’s needs. Users can create EQs, compressors, modulation effects, hybrid effects, and experimental audio tools. A built-in web GPT Assistant helps generate and improve Faust DSP code, even for non-programmers.
 
 ### [MAGDA](https://github.com/Conceptual-Machines/magda-core)
 
