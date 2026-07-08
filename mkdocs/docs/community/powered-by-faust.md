@@ -256,9 +256,15 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [CDP-wasm-suite](https://github.com/cdp-wasm-suite)
+
+<div><a href="https://github.com/cdp-wasm-suite"><img width="55%" class="mx-auto d-block" src="img/cdp-wasm-suite.jpg"></a> </div>
+
+The [legendary CDP](https://www.composersdesktop.com/) - hundreds of esoteric spectral, granular and waveset programs for offline audio processing - ported to run in node.js, as a plug-in, in Ableton Live and [in the browser](https://cdp-wasm-suite.github.io) with a retro node graph interface. Integrates the Faust compiler, for custom DSP development. 
+
 ### [Persistent Faust ](http://kageproduction.com/persistent_faust_free)
 
-<div><a href="http://kageproduction.com/persistent_faust_free"><img width="60%" class="mx-auto d-block" src="img/persistent-faust.png"></a> </div>
+<div><a href="http://kageproduction.com/persistent_faust_free"><img width="55%" class="mx-auto d-block" src="img/persistent-faust.png"></a> </div>
 
 [Persistent Faust](https://www.youtube.com/watch?v=pBuUHxbp9Nk) by [KageProduction](https://kageproduction.com) is a programmable DSP platform, not a fixed single-purpose audio effect. It can transform in real time into many kinds of plugins depending on the user’s needs. Users can create EQs, compressors, modulation effects, hybrid effects, and experimental audio tools. A built-in web GPT Assistant helps generate and improve Faust DSP code, even for non-programmers.
 
