@@ -256,6 +256,11 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [Clausters](https://github.com/smrg-lm/clausters)
+
+Clausters is a port of SuperCollider's scsynth audio server to Rust: a real-time audio synthesis server controlled over OSC, with the same node-tree model and command set. Its main addition over scsynth is the FaustDef — a synth definition written in Faust and JIT-compiled by the server with LLVM — as an alternative to SuperCollider's UGen graphs, which Clausters also supports through its own JSON SynthDef format.
+
+
 ### [CDP-wasm-suite](https://github.com/cdp-wasm-suite)
 
 <div><a href="https://github.com/cdp-wasm-suite"><img width="55%" class="mx-auto d-block" src="img/cdp-wasm-suite.jpg"></a> </div>
