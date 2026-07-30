@@ -59,6 +59,26 @@ Check out Faust [papers and reports](https://hal.science/search/index/?q=GRAME+F
 
 ## Faust News
 
+### **>>** July 22, 2026: Publication of the faust-rs project
+
+[faust-rs](https://github.com/grame-cncm/faust-rs) is an experimental Faust compiler port and research project in Rust, developed with the assistance of ChatGPT Codex and Claude.
+
+The project is still a work in progress. Its first objective is to explore how the Faust compiler could be progressively reimplemented in Rust while preserving compatibility with the existing C++ compiler. It also provides a platform for experimenting with new language and compiler ideas.
+
+Current experiments include new clock-domain primitives:
+
+- **ondemand** (OD), for conditionally evaluated DSP blocks
+- **upsampling** (US) and **downsampling** (DS), for explicit local sample-rate changes
+
+The project also explores automatic differentiation directly within Faust programs:
+
+- forward-mode automatic differentiation with **fad**
+- reverse-mode automatic differentiation with **rad**
+
+These primitives open up possibilities such as adaptive filters, parameter estimation, differentiable DSP, embedded optimization, and multi-rate or frame-rate processing.
+
+Because much of the port was produced through human–AI collaboration, some internal parts will likely be revisited and rewritten to make them easier for human contributors to understand and maintain. The current implementation should therefore be considered exploratory rather than production-ready.
+
 ### **>>** June 4-5, 2026: Fifth International Faust Conference (IFC-26) in Cannes (France)
 
 The [Fifth International Faust Conference (IFC-26)](https://ifc26.i3s.univ-cotedazur.fr) took place on June 4-5, 2026 in Cannes (Italy). More info [here](https://faust.grame.fr/community/ifc/#ifc-26-june-4-5-2026-in-cannes-france). 
