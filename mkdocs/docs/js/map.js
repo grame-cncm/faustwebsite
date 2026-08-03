@@ -44,6 +44,7 @@ addMarker(45.7640, 4.8357, '<a href="https://www.grame.fr">Faust born in GRAME</
 addMarker(37.4213, -122.1694, '<a href="https://ccrma.stanford.edu">CCRMA</a>, Stanford University, CA, USA', redIcon);
 
 // Add project markers
+addMarker(52.5200, 13.4050,  '<a href="#faustwaveai">FaustWave.ai</a>, Berlin, Germany', blueIcon);
 addMarker(-34.6037, -58.3816, '<a href="#clausters">Clausters</a>, Buenos Aires, Argentina', blueIcon);
 addMarker(52.5200, 13.4050, '<a href="#cdp-wasm-suite">CDP-wasm-suite</a>, Berlin, Germany', blueIcon);
 addMarker(37.5665, 126.9780, '<a href="#persistent-faust">Persistent Faust</a>, Seoul, South Korea', blueIcon);

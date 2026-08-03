@@ -30,6 +30,12 @@ To illustrate the global impact of Faust, a world map showcases all the signific
 
 The following sections provide a detailed list of commercial applications utilizing Faust.
 
+### [FaustWave.ai](https://faustwave.io)
+
+<div><a href="https://faustwave.io"><img width="55%" class="mx-auto d-block" src="img/faustwave.png"></a> </div>
+
+FaustWave IDE is a local-first audio DSP IDE built around Faust — a visual node graph and raw Faust source side by side, live audio through a shared master bus, a step sequencer, MIDI, a mixer with per-track FX, an on-device knowledge base, and a Hub for sharing patches, libraries and packs.
+
 ### [Pluginmaker.ai](https://www.pluginmaker.ai)
 
 <div><a href="https://www.pluginmaker.ai"><img width="60%" class="mx-auto d-block" src="img/Pluginmaker.jpg"></a> </div>
