@@ -262,6 +262,13 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [FaustX](https://github.com/roomi-fields/faustx)
+
+FaustX is a textual superset of Faust for live coding. In Faust a name is a macro, replaced by its body at evaluation, so writing it twice builds two circuits and no expression can point at an instance that already exists. FaustX adds that address, and the gestures that follow from it: replacing a module's body while its memory stays, bypassing it while its tail rings out, rewiring or removing it, driving a control with a signal.
+
+It translates to plain Faust — the compiler is untouched and no architecture file is modified — and ships with a catalogue of the 998 public library functions generated from the faustlibraries documentation: parameter names, starting values, bounds, and measured input and output counts.
+
+
 ### [Clausters](https://github.com/smrg-lm/clausters)
 
 Clausters is a port of SuperCollider's scsynth audio server to Rust: a real-time audio synthesis server controlled over OSC, with the same node-tree model and command set. Its main addition over scsynth is the FaustDef — a synth definition written in Faust and JIT-compiled by the server with LLVM — as an alternative to SuperCollider's UGen graphs, which Clausters also supports through its own JSON SynthDef format.
