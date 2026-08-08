@@ -262,6 +262,13 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [FaustMod](https://github.com/thepacket/faustmod)
+
+<div><a href="https://github.com/thepacket/faustmod"><img width="60%" class="mx-auto d-block" src="img/faustmod.png"></a> </div>
+
+[FaustMod](https://faustmod.fly.dev/) is a browser-based modular audio synthesis IDE: patch DSP components together on a node canvas (built with rete.js), hear the result live, and write your own DSP in a built-in Faust editor. DSP is written in Faust and compiled to WebAssembly AudioWorklets running directly in the browser, with a searchable palette of nearly 700 precompiled Faust DSP blocks — oscillators, filters, sequencers, meters, and more.
+
+
 ### [FaustX](https://github.com/roomi-fields/faustx)
 
 FaustX is a textual superset of Faust for live coding. In Faust a name is a macro, replaced by its body at evaluation, so writing it twice builds two circuits and no expression can point at an instance that already exists. FaustX adds that address, and the gestures that follow from it: replacing a module's body while its memory stays, bypassing it while its tail rings out, rewiring or removing it, driving a control with a signal.
