@@ -262,9 +262,16 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [unimcom](https://github.com/materializepath/unimcom)
+
+<div><a href="https://github.com/materializepath/unimcom"><img width="55%" class="mx-auto d-block" src="img/unimcom.jpeg"></a> </div>
+
+[unimcom](https://unimcom.materialize.fun) is an experimental, motion-modulated Faust DSP control surface: a buildless static PWA that turns an ambient Faust/WebAssembly DSP into a dense, tactile control surface for shaping drone states through presets, device-motion modulation, and shareable preset transfer codes. It exposes a 61-parameter control grid generated directly from the DSP's UI descriptor, with a monochrome, CRT/HUD-inspired interface.
+
+
 ### [FaustMod](https://github.com/thepacket/faustmod)
 
-<div><a href="https://github.com/thepacket/faustmod"><img width="60%" class="mx-auto d-block" src="img/faustmod.png"></a> </div>
+<div><a href="https://github.com/thepacket/faustmod"><img width="55%" class="mx-auto d-block" src="img/faustmod.png"></a> </div>
 
 [FaustMod](https://faustmod.fly.dev/) is a browser-based modular audio synthesis IDE: patch DSP components together on a node canvas (built with rete.js), hear the result live, and write your own DSP in a built-in Faust editor. DSP is written in Faust and compiled to WebAssembly AudioWorklets running directly in the browser, with a searchable palette of nearly 700 precompiled Faust DSP blocks — oscillators, filters, sequencers, meters, and more.
 
