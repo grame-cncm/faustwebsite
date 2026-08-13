@@ -262,6 +262,10 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [blech](https://codeberg.org/crop/blech)
+
+A DSP engine inspired by SuperNova, written in Rust, with digital signal processors generated using Faust. The monorepo organizes FAUST build tools, UI code generation, and the blech framework itself, including crates for building Faust DSPs, generating type-safe parameter access through enums from Faust's JSON metadata, creating plugin wrappers, and managing multiple interconnected DSP processes through a node-graph architecture.
+
 ### [unimcom](https://github.com/materializepath/unimcom)
 
 <div><a href="https://github.com/materializepath/unimcom"><img width="55%" class="mx-auto d-block" src="img/unimcom.jpeg"></a> </div>
