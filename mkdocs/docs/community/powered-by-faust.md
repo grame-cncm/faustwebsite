@@ -262,6 +262,13 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [Cagire](https://git.raphaelforment.fr/BuboBubo/Cagire)
+
+<div><a href="https://git.raphaelforment.fr/BuboBubo/Cagire"><img width="55%" class="mx-auto d-block" src="img/Cagire.png"></a> </div>
+
+[Cagire](https://cagire.raphaelforment.fr) is a terminal step sequencer for live coding, where every step in a pattern is a small Forth program that is compiled and played in real time. It bundles a complete synthesis and sampling engine, so nothing else is needed to make sound: oscillators, FM, Karplus-Strong, drum models, samplers, filters, effects, and bus sends are all built in and controlled from the same stack-based, generative language. It runs in the terminal or as a desktop window on macOS, Linux, and Windows, and synchronises with other software and hardware over MIDI and Ableton Link. The audio engine is [Doux](https://git.raphaelforment.fr/BuboBubo/doux), a Rust port of Dough, where every filter and most of the effects are written in Faust.
+
+
 ### [blech](https://codeberg.org/crop/blech)
 
 A DSP engine inspired by SuperNova, written in Rust, with digital signal processors generated using Faust. The monorepo organizes FAUST build tools, UI code generation, and the blech framework itself, including crates for building Faust DSPs, generating type-safe parameter access through enums from Faust's JSON metadata, creating plugin wrappers, and managing multiple interconnected DSP processes through a node-graph architecture.
