@@ -40,8 +40,7 @@ The following sections provide a detailed list of commercial applications utiliz
 
 <div><a href="https://www.pluginmaker.ai"><img width="60%" class="mx-auto d-block" src="img/Pluginmaker.jpg"></a> </div>
 
-Pluginmaker.ai is an AI-powered platform that creates audio plugins (VST/AU) from simple text descriptions. It runs entirely in the browser, requiring no coding or setup. Users can prototype synthesizers and effects quickly and preview them online. The generated plugins can be compiled as AU and VST3 format and used in DAWs like Ableton Live or Logic Pro. The platform is using Faust and [iPlug2](https://iplug2.github.io). 
-
+Pluginmaker.ai is an AI-powered platform that creates audio plugins (VST/AU) from simple text descriptions. It runs entirely in the browser, requiring no coding or setup. Users can prototype synthesizers and effects quickly and preview them online. The generated plugins can be compiled as AU and VST3 format and used in DAWs like Ableton Live or Logic Pro. The platform is using Faust and [iPlug2](https://iplug2.github.io).
 
 ### [Expert Sleepers — disting NT](https://www.expert-sleepers.co.uk/distingNTfirmwareupdates.html)
 
@@ -71,7 +70,7 @@ The M0SS-101 is a compact virtual analog monosynth in a rugged guitar pedal encl
 
 <div><a href="https://www.morphoice.com/unstable"><img width="60%" class="mx-auto d-block" src="img/unstable.jpg"></a> </div>
 
-UNSTABLE features two synthesis layers, each offering a noise, sawtooth, and pulse wave oscillator, 
+UNSTABLE features two synthesis layers, each offering a noise, sawtooth, and pulse wave oscillator,
 with adjustable pulse width and variable speed pulse width modulation. Unlike the Yamaha CS-80, the level of each oscillator is adjustable, allowing for free mixing of the waveforms, which are closely modelled after the original. Everything is written in Faust: oscillators, filters, envelopes... in the [HISE](https://hise.dev) platform. Other plugins like [DARKSTAR](https://www.morphoice.com/plugins/darkstar), [WINGMEN](https://www.morphoice.com/plugins/wingmen), [TAPEWAV](https://www.morphoice.com/plugins/tapewow), [MQP-1A Vintage Equalizer](https://www.morphoice.com/plugins/mqp-1a), [EightySix](https://www.morphoice.com/eightysix), [EightyEight](https://www.morphoice.com/eightyeight) and [EightyTen](https://www.morphoice.com/eightyten) are also coded with Faust.
 
 ### [Sputter Music Sequencer](https://casualcomputing.info/sputter/)
@@ -162,17 +161,17 @@ The project is using Rust and the Faust to Rust backend, and the source code [is
 <div><a href="https://chaosaudio.com/products/stratus"><img width="55%" class="mx-auto d-block" src="img/Stratus.png"></a> </div>
 
 The compact, all-in-one pedal by [Chaos Audio](https://chaosaudio.com/pages/about-us). Run multiple effects at once, swap between presets, and loop for up to 5 minutes.
-Stratus® features a 5-minute looper, hands-free preset switching, and a wide range of effects options. You can save and load presets, chain up to seven effects, and access new effects through Tone Shop™. Beginners can experiment and learn without breaking the bank. Seasoned performers save space, time, and benefit from advanced options like MIDI control. The pedal can be [programmed with Faust](https://chaosaudio.com/pages/developer-portal), see also the [faust-stratus](https://github.com/bassmanitram/faust-stratus/tree/main) project. Here are some examples: 
+Stratus® features a 5-minute looper, hands-free preset switching, and a wide range of effects options. You can save and load presets, chain up to seven effects, and access new effects through Tone Shop™. Beginners can experiment and learn without breaking the bank. Seasoned performers save space, time, and benefit from advanced options like MIDI control. The pedal can be [programmed with Faust](https://chaosaudio.com/pages/developer-portal), see also the [faust-stratus](https://github.com/bassmanitram/faust-stratus/tree/main) project. Here are some examples:
 
 <div><a href="https://chaosaudio.com/collections/dynamics/products/the-leveler-by-magnetophon"><img width="25%" class="mx-auto d-block" src="img/the_leveler.jpg"></a> </div>
 
-- **The Leveler** is a compressor, using  a custom algorithm that evens out dynamics and lifts the overall level, while leaving the character of the sound, written by [magnetophon](https://github.com/magnetophon).
+- **The Leveler** is a compressor, using a custom algorithm that evens out dynamics and lifts the overall level, while leaving the character of the sound, written by [magnetophon](https://github.com/magnetophon).
 
 <div><a href="https://chaosaudio.com/collections/reverb/products/spring-reverb-60s-surf-tank"><img width="25%" class="mx-auto d-block" src="img/spring_reverb.jpg"></a> </div>
 
 - **Spring Reverb** delivers the iconic sound of classic spring tanks, a staple in countless recordings. Infuse your tone with instant retro character, from subtle ambience to bold and over-the-top, written by [Daniel Leonov](https://github.com/daleonov).
 
-Starting march 2026, the [AI FX Builder](https://chaosaudio.com/blogs/whats-new/introducing-ai-fx-builder-create-any-effect-you-can-imagine) directly allows to prompt effects, possibly combining it with a [NAM model](https://www.neuralampmodeler.com) automatically translated to Faust code.    
+Starting march 2026, the [AI FX Builder](https://chaosaudio.com/blogs/whats-new/introducing-ai-fx-builder-create-any-effect-you-can-imagine) directly allows to prompt effects, possibly combining it with a [NAM model](https://www.neuralampmodeler.com) automatically translated to Faust code.
 
 ### [Noisy2](https://www.expressivee.com/88-noisy-two)
 
@@ -261,12 +260,15 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [bevy-faust](https://codeberg.org/il0vemilktea/bevy-faust)
+
+bevy-faust brings Faust DSPs to the Rust-based [Bevy](https://bevy.org/) game engine. Its recommended `bevy-faust-seedling` crate compiles Faust programs into Rust at build time, then uses a macro to generate audio nodes, typed parameter configurations, and plugins that can be spawned and controlled through Bevy's ECS. It supports continuously generated sounds, DSP effects applied to other sources, and pre-baked samples; parameter names and ordering are validated against the Faust program when the application starts.
+
 ### [Cagire](https://git.raphaelforment.fr/BuboBubo/Cagire)
 
 <div><a href="https://git.raphaelforment.fr/BuboBubo/Cagire"><img width="55%" class="mx-auto d-block" src="img/Cagire.png"></a> </div>
 
 [Cagire](https://cagire.raphaelforment.fr) is a terminal step sequencer for live coding, where every step in a pattern is a small Forth program that is compiled and played in real time. It bundles a complete synthesis and sampling engine, so nothing else is needed to make sound: oscillators, FM, Karplus-Strong, drum models, samplers, filters, effects, and bus sends are all built in and controlled from the same stack-based, generative language. It runs in the terminal or as a desktop window on macOS, Linux, and Windows, and synchronises with other software and hardware over MIDI and Ableton Link. The audio engine is [Doux](https://git.raphaelforment.fr/BuboBubo/doux), a Rust port of Dough, where every filter and most of the effects are written in Faust.
-
 
 ### [blech](https://codeberg.org/crop/blech)
 
@@ -278,13 +280,11 @@ A DSP engine inspired by SuperNova, written in Rust, with digital signal process
 
 [unimcom](https://unimcom.materialize.fun) is an experimental, motion-modulated Faust DSP control surface: a buildless static PWA that turns an ambient Faust/WebAssembly DSP into a dense, tactile control surface for shaping drone states through presets, device-motion modulation, and shareable preset transfer codes. It exposes a 61-parameter control grid generated directly from the DSP's UI descriptor, with a monochrome, CRT/HUD-inspired interface.
 
-
 ### [FaustMod](https://github.com/thepacket/faustmod)
 
 <div><a href="https://github.com/thepacket/faustmod"><img width="55%" class="mx-auto d-block" src="img/faustmod.png"></a> </div>
 
 [FaustMod](https://faustmod.fly.dev/) is a browser-based modular audio synthesis IDE: patch DSP components together on a node canvas (built with rete.js), hear the result live, and write your own DSP in a built-in Faust editor. DSP is written in Faust and compiled to WebAssembly AudioWorklets running directly in the browser, with a searchable palette of nearly 700 precompiled Faust DSP blocks — oscillators, filters, sequencers, meters, and more.
-
 
 ### [FaustX](https://github.com/roomi-fields/faustx)
 
@@ -292,17 +292,15 @@ FaustX is a textual superset of Faust for live coding. In Faust a name is a macr
 
 It translates to plain Faust — the compiler is untouched and no architecture file is modified — and ships with a catalogue of the 998 public library functions generated from the faustlibraries documentation: parameter names, starting values, bounds, and measured input and output counts.
 
-
 ### [Clausters](https://github.com/smrg-lm/clausters)
 
 Clausters is a port of SuperCollider's scsynth audio server to Rust: a real-time audio synthesis server controlled over OSC, with the same node-tree model and command set. Its main addition over scsynth is the FaustDef — a synth definition written in Faust and JIT-compiled by the server with LLVM — as an alternative to SuperCollider's UGen graphs, which Clausters also supports through its own JSON SynthDef format.
-
 
 ### [CDP-wasm-suite](https://github.com/cdp-wasm-suite)
 
 <div><a href="https://github.com/cdp-wasm-suite"><img width="55%" class="mx-auto d-block" src="img/cdp-wasm-suite.jpg"></a> </div>
 
-The [legendary CDP](https://www.composersdesktop.com/) - hundreds of esoteric spectral, granular and waveset programs for offline audio processing - ported to run in node.js, as a plug-in, in Ableton Live and [in the browser](https://cdp-wasm-suite.github.io) with a retro node graph interface. Integrates the Faust compiler, for custom DSP development. 
+The [legendary CDP](https://www.composersdesktop.com/) - hundreds of esoteric spectral, granular and waveset programs for offline audio processing - ported to run in node.js, as a plug-in, in Ableton Live and [in the browser](https://cdp-wasm-suite.github.io) with a retro node graph interface. Integrates the Faust compiler, for custom DSP development.
 
 ### [Persistent Faust ](http://kageproduction.com/persistent_faust_free)
 
@@ -314,10 +312,9 @@ The [legendary CDP](https://www.composersdesktop.com/) - hundreds of esoteric sp
 
 <div><a href="https://github.com/Conceptual-Machines/magda-core/"><img width="70%" class="mx-auto d-block" src="img/magda.png"></a> </div>
 
-[MAGDA](https://magda.land) is a free, open source, cross-platform DAW (macOS / Windows / Linux, GPLv3, built on JUCE and Tracktion Engine). It includes an AI layer that operates the DAW symbolically through a small DSL: create tracks, load plugins, edit clips, build modulators, set up sidechains, etc. Every AI action becomes a normal DAW operation that is visible, editable, and undoable by the user. 
+[MAGDA](https://magda.land) is a free, open source, cross-platform DAW (macOS / Windows / Linux, GPLv3, built on JUCE and Tracktion Engine). It includes an AI layer that operates the DAW symbolically through a small DSL: create tracks, load plugins, edit clips, build modulators, set up sidechains, etc. Every AI action becomes a normal DAW operation that is visible, editable, and undoable by the user.
 
 Almost every built-in effect in the FX bank is written in Faust and compiled to native C++ at build time using the Faust compiler. There is also a dedicated Faust device that lets users write .dsp code directly inside the app. It currently runs through libfaust in interpreter mode, and also includes an AI panel that can generate Faust code from a natural language prompt.
-
 
 ### [BigBlueBetterAudio](https://github.com/trummerschlunk/BigBlueBetterAudio)
 
@@ -326,7 +323,6 @@ Almost every built-in effect in the FX bank is written in Faust and compiled to 
 BigBlueButton is one of the most popular free and open-source video conferencing systems. It is widely used in education settings, by NGOs, government and business units.
 
 BigBlueBetterAudio enhances speech quality in BigBlueButton by making voices sound more natural and less fatiguing in real time. The DSP chain is written in Faust, compiled to WebAssembly, and runs in the browser as an AudioWorklet. It combines EQ, dynamics, and RNNoise-based voice enhancement—entirely client-side with no server load.
-
 
 ### [abclib library](https://github.com/alainbonardi/abclib)
 
