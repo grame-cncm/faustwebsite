@@ -48,11 +48,11 @@ test:
 ####################################################################
 build:
 	$(MAKE) all
-	cd $(MKDIR) && mkdocs build
+	cd $(MKDIR) && python3 -m mkdocs build
 	
 serve:
 	@echo "you can browse the site at http://localhost:8000"
-	cd $(MKDIR) && mkdocs serve
+	cd $(MKDIR) && python3 -m mkdocs serve
 
 all:
 	$(MAKE) news
