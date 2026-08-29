@@ -314,7 +314,7 @@ The [legendary CDP](https://www.composersdesktop.com/) - hundreds of esoteric sp
 
 [MAGDA](https://magda.land) is a free, open source, cross-platform DAW (macOS / Windows / Linux, GPLv3, built on JUCE and Tracktion Engine). It includes an AI layer that operates the DAW symbolically through a small DSL: create tracks, load plugins, edit clips, build modulators, set up sidechains, etc. Every AI action becomes a normal DAW operation that is visible, editable, and undoable by the user.
 
-Almost every built-in effect in the FX bank is written in Faust and compiled to native C++ at build time using the Faust compiler. TThere is also a dedicated Faust device that lets users write .dsp code directly inside the app. It runs through a WASM JIT compiler for live DSP execution, and includes an AI panel that can generate Faust code from a natural language prompt.
+Almost every built-in effect in the FX bank is written in Faust and compiled to native C++ at build time using the Faust compiler. There is also a dedicated Faust device that lets users write .dsp code directly inside the app. It runs through a WASM JIT compiler for live DSP execution, and includes an AI panel that can generate Faust code from a natural language prompt.
 
 ### [BigBlueBetterAudio](https://github.com/trummerschlunk/BigBlueBetterAudio)
 
