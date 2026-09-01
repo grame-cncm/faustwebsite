@@ -260,6 +260,14 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [FaustGodot](https://github.com/grame-cncm/FaustGodot)
+
+A GDExtension that adds Faust as a live script type inside the Godot editor: DSP scripts are written and edited directly in Godot's script editor, with syntax highlighting, and JIT-compiled through Faust's LLVM backend. A Faust script can back an `AudioStreamPlayer` (as an `AudioStreamFaust` generator) or an `AudioEffect` (as an `AudioEffectFaust`), with parameters editable live from the editor or from other scripts, and MIDI support through a dedicated `MidiHandlerFaust` node. It targets real-time audio inside a game, not gameplay logic. See also [Faust2Godot](#faust2godot) below, its ahead-of-time-compiled counterpart.
+
+### [Faust2Godot](https://github.com/grame-cncm/Faust2Godot)
+
+`faust2godot` is a command-line tool, distributed with Faust under `tools/faust2appls`, that converts a `.dsp` file into a ready-to-use Godot project: a statically compiled counterpart to [FaustGodot](#faustgodot) above, trading in-editor live editing for compiled performance. It supports polyphonic instruments (`-nvoices`) wired to MIDI, and effect chains (`-effect`) driven by MIDI or OSC, on Linux, macOS and Windows.
+
 ### [moveforge](https://github.com/m-dwyer/moveforge)
 
 <div><a href="https://m-dwyer.github.io/moveforge/"><img width="60%" class="mx-auto d-block" src="img/moveforge.png"></a> </div>
