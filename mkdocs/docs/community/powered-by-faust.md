@@ -260,6 +260,12 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [dronmakr](https://github.com/nafeu/dronmakr)
+
+<div><a href="https://github.com/nafeu/dronmakr"><img width="55%" class="mx-auto d-block" src="img/dronmakr.png"></a> </div>
+
+An offline sample-generation and drum-sequencing toolkit: render drones, sweeps and washes from your own VST/AU presets or from a built-in library of over 100 Faust `.dsp` instruments and effects (oscillators, pads, bells, granular textures, reverbs, filters...), compiled at runtime through [DawDreamer](https://github.com/DBraun/DawDreamer). Also bundles a drum sequencer (beatbuildr) and a sample splitter (folysplitr). [Watch the demo](https://www.youtube.com/watch?v=BYjLCXZWaMY).
+
 ### [FaustGodot](https://github.com/grame-cncm/FaustGodot)
 
 A GDExtension that adds Faust as a live script type inside the Godot editor: DSP scripts are written and edited directly in Godot's script editor, with syntax highlighting, and JIT-compiled through Faust's LLVM backend. A Faust script can back an `AudioStreamPlayer` (as an `AudioStreamFaust` generator) or an `AudioEffect` (as an `AudioEffectFaust`), with parameters editable live from the editor or from other scripts, and MIDI support through a dedicated `MidiHandlerFaust` node. It targets real-time audio inside a game, not gameplay logic. See also [Faust2Godot](#faust2godot) below, its ahead-of-time-compiled counterpart.
