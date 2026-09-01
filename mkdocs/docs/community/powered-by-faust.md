@@ -260,6 +260,10 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [moveforge](https://github.com/m-dwyer/moveforge)
+
+A local development harness for building custom Schwung modules for the Ableton Move groovebox. Each module compiles from the same DSP source to both a `.so` for the device (aarch64 Linux) and a `.wasm` for the browser via Emscripten, using the same int16 conversion as Move so local auditioning matches the hardware. Modules can be authored in plain C or in Faust: the Faust ones, a reference synth voice, a stereo delay, a morphing state-variable filter, and a drive/tone FX, compile to checked-in C, so cloning and building the repo needs no Faust toolchain, only editing the `.dsp` sources does.
+
 ### [bevy-faust](https://codeberg.org/il0vemilktea/bevy-faust)
 
 bevy-faust brings Faust DSPs to the Rust-based [Bevy](https://bevy.org/) game engine. Its recommended `bevy-faust-seedling` crate compiles Faust programs into Rust at build time, then uses a macro to generate audio nodes, typed parameter configurations, and plugins that can be spawned and controlled through Bevy's ECS. It supports continuously generated sounds, DSP effects applied to other sources, and pre-baked samples; parameter names and ordering are validated against the Faust program when the application starts.
