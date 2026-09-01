@@ -30,7 +30,7 @@ To illustrate the global impact of Faust, a world map showcases all the signific
 
 The following sections provide a detailed list of commercial applications utilizing Faust.
 
-### [FaustWave.ai](https://faustwave.io)
+### [FaustWave](https://faustwave.io)
 
 <div><a href="https://faustwave.io"><img width="55%" class="mx-auto d-block" src="img/faustwave.png"></a> </div>
 
