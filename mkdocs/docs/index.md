@@ -59,6 +59,17 @@ Check out Faust [papers and reports](https://hal.science/search/index/?q=GRAME+F
 
 ## Faust News
 
+### **>>** September 02, 2026: Google Summer of Code projects finalized
+
+<center>
+<div><a href="https://summerofcode.withgoogle.com"><img  width="50%" class="mx-auto d-block" src="img/gsoc-logo.png"></a>  </div>
+</center>
+
+- **Faust Integration in Godot Game Engine** aimed at integrating Faust into the [Godot](https://godotengine.org/) game engine, so that game developers and audio designers can use Faust's real-time audio processing directly in a game-oriented context. It was worked on by [Mithaniel Villard](https://github.com/MithanielVillard). Two complementary results have been contributed: [FaustGodot](https://github.com/grame-cncm/FaustGodot), a GDExtension that adds Faust as a live script type inside the Godot editor, with DSP scripts JIT-compiled through Faust's LLVM backend and usable either as an `AudioStreamFaust` generator or an `AudioEffectFaust` effect, with live-editable parameters and MIDI support; and [Faust2Godot](https://github.com/grame-cncm/Faust2Godot), its ahead-of-time-compiled counterpart, a `faust2godot` command-line tool distributed with Faust that turns a `.dsp` file into a ready-to-use Godot project, with support for polyphonic instruments and MIDI or OSC driven effect chains.
+
+- **Faust Integration in BespokeSynth** aimed to integrate a real-time Faust editor into [BespokeSynth](https://www.bespokesynth.com), so that DSP code can be written, compiled and run interactively inside the modular environment, without recompiling the host. It was worked on by [Blake North](https://github.com/PowerUser64). The work is available on the [faust branch](https://github.com/PowerUser64/BespokeSynth/tree/faust) of his BespokeSynth fork, and is fully detailed in this [blog post](https://blake.ly/blog/gsoc26/).
+
+
 ### **>>** July 22, 2026: Publication of the faust-rs project
 
 [faust-rs](https://github.com/grame-cncm/faust-rs) is an experimental Faust compiler port and research project in Rust, developed with the assistance of ChatGPT Codex and Claude.
