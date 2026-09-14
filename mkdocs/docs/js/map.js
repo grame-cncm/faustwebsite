@@ -309,3 +309,4 @@ addMarker(37.7749, -122.4194, '<a href="#moforte-powerstomp">moForte PowerStomp<
 addMarker(37.7749, -122.4194, '<a href="#moforte-guitar">moForte Guitar</a>, San Francisco, CA, USA', blueIcon);
 addMarker(45.7640, 4.8357, '<a href="#faustworks">FaustWorks</a>, Lyon, France', blueIcon);
 addMarker(45.7640, 4.8357, '<a href="#faustlive">FaustLive</a>, Lyon, France', blueIcon);
+addMarker(40.7128, -74.0060, '<a href="#incant-audio">Incant Audio</a>, New York, NY, USA', blueIcon);

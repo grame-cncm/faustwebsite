@@ -260,6 +260,13 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [Incant Audio](https://github.com/Losera/incant-audio)
+
+<div><a href="https://github.com/Losera/incant-audio"><img width="50%" class="mx-auto d-block" src="img/incant-audio.png"></a> </div>
+
+Incant Audio turns natural language descriptions into real-time VST3 audio effects and polyphonic synthesizers. A prompt is sent to an LLM (Gemini, Groq, OpenRouter, Ollama or Claude), which generates Faust DSP code; the code is validated, JIT-compiled through `libfaust`/LLVM and swapped into the live audio plugin without stopping playback, with generated parameters instantly exposed as host-automatable controls. If compilation fails, the compiler error is fed back to the LLM for automatic repair, up to three retries.
+
+
 ### [dronmakr](https://github.com/nafeu/dronmakr)
 
 <div><a href="https://github.com/nafeu/dronmakr"><img width="55%" class="mx-auto d-block" src="img/dronmakr.png"></a> </div>
