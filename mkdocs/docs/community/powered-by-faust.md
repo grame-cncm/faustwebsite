@@ -30,6 +30,12 @@ To illustrate the global impact of Faust, a world map showcases all the signific
 
 The following sections provide a detailed list of commercial applications utilizing Faust.
 
+### [nagi](https://nagi.minimal-instruments.com)
+
+<div><a href="https://nagi.minimal-instruments.com"><img width="60%" class="mx-auto d-block" src="img/nagi.png"></a> </div>
+
+nagi is a local-first application for designing native audio plug-ins with a visual node graph and Faust DSP source. It provides live browser preview and builds signed VST3 and CLAP binaries for Windows, Linux, and macOS without requiring users to assemble a toolchain.
+
 ### [FaustWave](https://faustwave.io)
 
 <div><a href="https://faustwave.io"><img width="55%" class="mx-auto d-block" src="img/faustwave.png"></a> </div>
