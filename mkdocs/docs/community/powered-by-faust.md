@@ -365,7 +365,13 @@ abclib library is released by the CICM / MUSIDANSE (Centre de Recherches Informa
 
 ### [ZorakAudio Experimental Plugins](https://github.com/ZorakAudio/ZorakAudio-Experimental-Plugins)
 
+<div><a href="https://github.com/ZorakAudio/ZorakAudio-Experimental-Plugins"><img width="70%" class="mx-auto d-block" src="img/zorakaudio-studio-channel.gif" alt="ZorakAudio Studio Channel combining a JSFX/EEL2 interface with Faust DSP" loading="lazy"></a> </div>
+
 A collection of experimental open-source audio plugins by ZorakAudio. Each plugin is a standalone exploration of perceptual and psychoacoustic DSP ideas, focused on safe behavior, minimal controls, and unconventional solutions to real-world audio problems.
+
+Its [DSP-JSFX toolchain](https://github.com/ZorakAudio/ZorakAudio-Experimental-Plugins/blob/main/docs/DSP-JSFX-Guide.md) combines JSFX/EEL2 and Faust in a single program, with shared parameters and support for AOT and JIT compilation workflows. EEL2 handles setup, controls and GFX drawing, while embedded `@faust` sections provide the audio processing. The bridge imports sliders and setup values into Faust automatically and can export Faust signals back to EEL2 for metering. The project packages plugins as VST3 and CLAP through JUCE; built plugins require no Faust installation or compilation during playback.
+
+The [Studio Channel example](https://github.com/ZorakAudio/ZorakAudio-Experimental-Plugins/issues/5#issuecomment-6051208598), shown above, pairs an EEL2 interface with a Faust processing chain: EQ, saturation, linked stereo compression, wet/dry mixing and output gain. Its twelve controls remain host-automatable, and Faust supplies the input/output levels and gain-reduction meters displayed by GFX. ZorakAudio reports performance improvements in some existing JSFX/EEL2 plugins by moving selected DSP work into Faust.
 
 ### [Genetic Programming to Creative Sound Synthesis](https://github.com/barnabycollins/MEng-Project)
 
