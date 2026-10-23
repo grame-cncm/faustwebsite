@@ -48,9 +48,9 @@ nagi is a local-first application for designing native audio plug-ins with a vis
 
 Pluginmaker.ai is an AI-powered platform that creates audio plugins (VST/AU) from simple text descriptions. It runs entirely in the browser, requiring no coding or setup. Users can prototype synthesizers and effects quickly and preview them online. The generated plugins can be compiled as AU and VST3 format and used in DAWs like Ableton Live or Logic Pro. The platform is using Faust and [iPlug2](https://iplug2.github.io).
 
-### [Expert Sleepers — disting NT](https://www.expert-sleepers.co.uk/distingNTfirmwareupdates.html)
+### [Expert Sleepers — disting NT](https://www.expert-sleepers.co.uk/distingNT.html)
 
-<div><a href="https://www.expert-sleepers.co.uk/distingNTfirmwareupdates.html"><img width="35%" class="mx-auto d-block" src="img/distingNT.jpg"></a> </div>
+<div><a href="https://www.expert-sleepers.co.uk/distingNT.html"><img width="35%" class="mx-auto d-block" src="img/distingNT.jpg"></a> </div>
 
 The disting NT Eurorack module now supports native C++ plug-ins and includes a toolchain to convert Faust programs into disting NT plug-ins (added in firmware v1.7.0). [Public demos show Faust DSP](https://www.youtube.com/watch?v=ZYjecU0lOyw) (e.g., the “Greyhole” reverb) running on the module, opening a path for fast prototyping and deployment of Faust effects/instruments in hardware. Another example with this [CZ Dual Oscillator](https://github.com/thorinside/czd_osc) program.
 
@@ -266,12 +266,15 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [Nardwahl](https://git.toilville.dev/peterswimm/nardwahl)
+
+Nardwahl is an open-source toolkit for inspecting and editing Nord Modular Classic `.pch` patches. It exports supported patch graphs to Faust source and can compile them into ARM plug-ins for the [Expert Sleepers disting NT](https://www.expert-sleepers.co.uk/distingNT.html) using the official disting NT API and an ARM GNU toolchain. Its DSP implementation aims for compatibility rather than cycle-accurate Nord Modular emulation.
+
 ### [Incant Audio](https://github.com/Losera/incant-audio)
 
 <div><a href="https://github.com/Losera/incant-audio"><img width="50%" class="mx-auto d-block" src="img/incant-audio.png"></a> </div>
 
 Incant Audio turns natural language descriptions into real-time VST3 audio effects and polyphonic synthesizers. A prompt is sent to an LLM (Gemini, Groq, OpenRouter, Ollama or Claude), which generates Faust DSP code; the code is validated, JIT-compiled through `libfaust`/LLVM and swapped into the live audio plugin without stopping playback, with generated parameters instantly exposed as host-automatable controls. If compilation fails, the compiler error is fed back to the LLM for automatic repair, up to three retries.
-
 
 ### [dronmakr](https://github.com/nafeu/dronmakr)
 
