@@ -266,6 +266,12 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [Sourdaw](https://github.com/jcosta33/sourdaw/tree/main)
+
+<div><a href="https://app.sourdaw.studio/"><img width="65%" class="mx-auto d-block" src="img/sourdaw.png" alt="Sourdaw showing the Nebula Drift demo arrangement, instrument browser and track inspector"></a> </div>
+
+[Sourdaw](https://www.sourdaw.studio/) is an open-source digital audio workstation for desktop Chromium browsers, with an Electron desktop shell. It combines multitrack recording and arrangement, MIDI editing, a mixer, routing, automation, built-in instruments and effects, and peer-to-peer collaboration. An integrated AI agent can assist with production tasks through natural-language requests. Its Faust instruments and effects, including FM synthesis, electric piano, reverbs, delays and dynamics processors, are compiled on demand to WebAssembly AudioWorklets using [faustwasm](https://github.com/grame-cncm/faustwasm).
+
 ### [Nardwahl](https://git.toilville.dev/peterswimm/nardwahl)
 
 Nardwahl is an open-source toolkit for inspecting and editing Nord Modular Classic `.pch` patches. It exports supported patch graphs to Faust source and can compile them into ARM plug-ins for the [Expert Sleepers disting NT](https://www.expert-sleepers.co.uk/distingNT.html) using the official disting NT API and an ARM GNU toolchain. Its DSP implementation aims for compatibility rather than cycle-accurate Nord Modular emulation.
