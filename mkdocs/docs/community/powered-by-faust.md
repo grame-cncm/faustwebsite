@@ -266,6 +266,12 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [faustmodular](https://github.com/orlarey/faustmodular)
+
+<div><a href="https://orlarey.github.io/faustmodular/"><img width="65%" class="mx-auto d-block" src="img/faustmodular.png" alt="A sequenced voice in faustmodular: Clock, Sequencer, Quantizer, VCO, LFO, VCF, ADSR and VCA modules connected with cables"></a> </div>
+
+[faustmodular](https://orlarey.github.io/faustmodular/) is a modular synthesizer that runs in the browser, with no installation or account. Each of its more than 200 modules is a small Faust program: oscillators, filters, envelopes, sequencers, effects, reverbs and physical models, taken from a Modular family, from the [Faust Playground](https://faustplayground.grame.fr) and from the Faust libraries. Modules are connected with cables channel by channel, and any setting can be modulated by any signal, using the [widget modulation](https://faustdoc.grame.fr/manual/syntax/#widget-modulation) mechanism of the Faust language. A module's code can be opened and edited in [faustcode](https://orlarey.github.io/faustcode/), the module being updated in place each time it is saved. New modules can also be written or imported from `.dsp` files, everything being compiled in the browser.
+
 ### [Sourdaw](https://github.com/jcosta33/sourdaw)
 
 <div><a href="https://github.com/jcosta33/sourdaw"><img width="65%" class="mx-auto d-block" src="img/sourdaw.png" alt="Sourdaw showing the Nebula Drift demo arrangement, instrument browser and track inspector"></a> </div>
