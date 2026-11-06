@@ -266,6 +266,12 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [AquaSynth](https://github.com/GameCult/AquaSynth)
+
+<div><a href="https://github.com/GameCult/AquaSynth"><img width="30%" class="mx-auto d-block" src="img/aquasynth.png" alt="The AquaSynth icon: a goldfish wearing headphones in an aquarium"></a> </div>
+
+[AquaSynth](https://github.com/GameCult/AquaSynth) is the open-source sound engine of the [GameCult](https://gamecult.org) studio, meant to be the audio engine of its science-fiction game Aetheria. Sounds are written as patches in `.aqua`, a terse text language, parsed by a C# library into a patch graph and emitted as Faust source code: oscillators, envelopes, SFXR-style sound effects, FM, subtractive and additive voices, drums and layered patches. AquaSynth then owns the whole Faust toolchain: it validates the generated code with the Faust compiler, compiles it with the C#, WebAssembly or native backends, or live with `libfaust`, and records each compiled product with a manifest of its parameters and buses, for the engine to host and schedule. Its current work uses compiled Faust speech controls in a speech-learning harness, where synth automation is fitted to rendered speech references.
+
 ### [ssp](https://github.com/shakfu/ssp)
 
 <div><a href="https://www.percussa.com"><img width="65%" class="mx-auto d-block" src="img/ssp.jpg" alt="The Percussa SSP Eurorack module, with its screen, four encoders and buttons"></a> </div>
