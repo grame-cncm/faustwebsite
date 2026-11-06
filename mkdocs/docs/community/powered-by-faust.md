@@ -266,6 +266,12 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [ssp](https://github.com/shakfu/ssp)
+
+<div><a href="https://www.percussa.com"><img width="65%" class="mx-auto d-block" src="img/ssp.jpg" alt="The Percussa SSP Eurorack module, with its screen, four encoders and buttons"></a> </div>
+
+[ssp](https://github.com/shakfu/ssp) is a collection of 20 open-source modules for the [Percussa SSP](https://www.percussa.com/), a Eurorack module whose host software, Synthor, loads plugins: loopers, synths, drum machines, sequencers and live-coding environments. Faust reaches the SSP in two ways. The `fstr` module loads Faust programs (`.dsp`) from the SD card and compiles them on the SSP itself with the LLVM backend of libfaust, so a program can be edited, including from a USB keyboard, and reloaded with no rebuild. Its first 16 controls become the SSP's encoders, `[cv:N]` metadata attaches a CV input to a control, the program's inputs and outputs map to the module's eight audio/CV jacks, and `declare options "[nvoices:N]"` makes a program polyphonic, played over MIDI. A Faust program can also be compiled to C++ with [cyfaust](https://github.com/shakfu/cyfaust) and built into a module of its own, like the `chrs` stereo chorus; a [guide](https://github.com/shakfu/ssp/blob/master/docs/FAUST_PLUGINS.md) walks through both routes.
+
 ### [faustmodular](https://github.com/orlarey/faustmodular)
 
 <div><a href="https://orlarey.github.io/faustmodular/"><img width="65%" class="mx-auto d-block" src="img/faustmodular.png" alt="A sequenced voice in faustmodular: Clock, Sequencer, Quantizer, VCO, LFO, VCF, ADSR and VCA modules connected with cables"></a> </div>
