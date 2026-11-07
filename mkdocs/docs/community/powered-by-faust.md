@@ -266,6 +266,12 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [BlackDog](https://zer0state.com/products/blackdog.html)
+
+<div><a href="https://zer0state.com/products/blackdog.html"><img width="20%" class="mx-auto d-block" src="img/blackdog.png" alt="The BlackDog mark: a cream sine waveform with one green sample point on a black background"></a> </div>
+
+[BlackDog](https://zer0state.com/products/blackdog.html), formerly FaustCoder, is a work in progress by [Zero State LLC](https://zer0state.com) ([repository](https://github.com/Zero-State-LLC/BlackDog)): a small language model specialized in writing, repairing, explaining and optimizing Faust programs, adapted from an open code model on an NVIDIA DGX Spark. Generated code is never trusted on the model's word: each candidate goes through the Faust compiler, run in a sandbox with [faustwasm](https://github.com/grame-cncm/faustwasm) and cross-checked with the native compiler, then through offline signal tests in the style of the Faust impulse tests, which reject silent, DC, NaN or clipping output. The same checks are planned as the reward of a compiler-feedback reinforcement-learning phase, and later lanes would verify the code produced by Faust's language backends, `faust2*` plugins and embedded boards. The training corpus is built from the Faust examples and libraries with a per-file and per-function license inventory. The compiler and signal harnesses are implemented; no model has been trained yet.
+
 ### [kromosynth](https://github.com/synth-is/kromosynth)
 
 <div><a href="https://github.com/synth-is"><img width="20%" class="mx-auto d-block" src="img/kromosynth.png" alt="The kromosynth icon: white horizontal bars on a black background"></a> </div>
