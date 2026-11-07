@@ -266,6 +266,12 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [waveform-playlist](https://naomiaro.github.io/waveform-playlist/)
+
+<div><a href="https://github.com/naomiaro/waveform-playlist"><img width="70%" class="mx-auto d-block" src="img/waveform-playlist.png" alt="waveform-playlist: four tracks with their waveforms, mute, solo and volume controls, and a time selection"></a> </div>
+
+[waveform-playlist](https://github.com/naomiaro/waveform-playlist) by [Naomi](https://naomiaro.com) is a widely used open-source multitrack audio editor and player for the browser (MIT), built with React, Tone.js and the Web Audio API: canvas waveforms, clip editing, effects, recording, annotations, MIDI playback and WAV export. Its family of web components, dawcore, includes `@dawcore/faust`, which compiles Faust code in the browser to WAM 2.0 plugins with [faust2wam](https://github.com/Fr0stbyteR/faust2wam): `addFaustEffect()` on the editor or on a track inserts the compiled effect in the master or track chain, and every slider and checkbox of the program becomes a WAM parameter, with an automatically generated interface.
+
 ### [Wiggle Room](https://github.com/timini/wiggleroom)
 
 <div><a href="https://github.com/timini/wiggleroom"><img width="80%" class="mx-auto d-block" src="img/wiggleroom.jpg" alt="Panels of eight Wiggle Room modules for VCV Rack: SpaceCello, TheAbyss, ChaosFlute, Matter, ModalBell, Cycloid, ACID9Voice and BigReverb"></a> </div>
