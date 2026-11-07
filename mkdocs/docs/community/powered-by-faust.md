@@ -270,6 +270,10 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [norns](https://monome.org/norns)
+
+[norns](https://github.com/monome/norns) by [monome](https://monome.org) (GPL-3.0) is a sound computer, built around a Raspberry Pi, that is "many sound instruments": scripts in Lua and DSP engines define its behavior, and it connects to grids, MIDI and other controllers. In its audio system, crone, the system mixer's Zita-Rev1 reverb and stereo compressor are Faust programs (`crone/dsp/ZitaReverb.dsp`, `StereoCompressor.dsp`), compiled to C++ with the Faust compiler and built into the mixer.
+
 ### [Stompbox](https://github.com/mikeoliphant/Stompbox)
 
 <div><a href="https://github.com/mikeoliphant/Stompbox"><img width="60%" class="mx-auto d-block" src="img/stompbox.png" alt="Stompbox's pedalboard interface: an amplifier, effect pedals and their knobs"></a> </div>
