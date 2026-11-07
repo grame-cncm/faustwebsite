@@ -44,6 +44,7 @@ addMarker(45.7640, 4.8357, '<a href="https://www.grame.fr">Faust born in GRAME</
 addMarker(37.4213, -122.1694, '<a href="https://ccrma.stanford.edu">CCRMA</a>, Stanford University, CA, USA', redIcon);
 
 // Add project markers
+addMarker(52.5200, 13.4050, '<a href="#juce_faustllvm">juce_faustllvm</a>, Berlin, Germany', blueIcon);
 addMarker(45.5019, -73.5674, '<a href="#sc-hoa">SC-HOA</a>, Montreal, Canada', blueIcon);
 addMarker(32.3199, -106.7637, '<a href="#keyer">keyer</a>, Las Cruces, NM, USA', blueIcon);
 addMarker(45.7640, 4.8357, '<a href="#faustforge">FaustForge</a>, Lyon, France', blueIcon);

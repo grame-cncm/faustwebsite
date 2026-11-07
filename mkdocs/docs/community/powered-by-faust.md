@@ -270,6 +270,10 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [juce_faustllvm](https://github.com/olilarkin/juce_faustllvm)
+
+[juce_faustllvm](https://github.com/olilarkin/juce_faustllvm) by [Oli Larkin](https://olilarkin.com), author of iPlug2, is a JUCE module that embeds the libfaust LLVM JIT compiler as a JUCE AudioProcessor and AudioPluginInstance, with supporting classes such as a Faust syntax highlighter for the JUCE code editor and a watcher that recompiles a `.dsp` file when it changes. Its core is based on the faustgen~ Max external by GRAME.
+
 ### [SC-HOA](https://github.com/florian-grond/SC-HOA)
 
 [SC-HOA](https://github.com/florian-grond/SC-HOA) by [Florian Grond](http://www.grond.at) (GPL-3.0) is a library of classes to encode, transform and decode higher-order Ambisonics in [SuperCollider](https://supercollider.github.io), up to order 5. It is built on the HOAUGens of [sc3-plugins](#supercollider-sc3-plugins), compiled from the Faust code of Pierre Lecomte's [ambitools](https://github.com/sekisushai/ambitools); its frontend classes select the right low-level UGen for the chosen order. It was developed at CIRMMT and includes soundfield recordings made with an Eigenmike.
