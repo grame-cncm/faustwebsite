@@ -270,6 +270,12 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [FaustForge](https://github.com/orlarey/faustforge)
+
+<div><a href="https://github.com/orlarey/faustforge"><img width="60%" class="mx-auto d-block" src="img/faustforge.png" alt="FaustForge's run view: a Faust program's regular interface, its Orbit interface with one point per parameter, and a spectrum display"></a> </div>
+
+[FaustForge](https://github.com/orlarey/faustforge) by Yann Orlarey (MIT) is a web-based environment for prototyping audio applications with Faust, which runs entirely in Docker. A session is a Faust program shown in several views: the source, the block diagram, the generated C++, the task-level parallelism graph, the internal signal graph, and a run view where the program plays with its regular interface or with the Orbit UI, a 2D control space in which each slider is a point whose distance to the center sets its value, next to a spectrum or waveform display and a virtual MIDI keyboard. Programs can be dropped or pasted into the page, or edited with any local tool in a watched workspace, where saving a file recompiles it. FaustForge is also an MCP server: an AI assistant such as Claude Desktop works on the same sessions as the web interface, submitting Faust code, inspecting the generated outputs, playing the program, setting its parameters and reading spectrum snapshots to judge the effect of each change.
+
 ### [MusicSpace](https://fpachet.github.io/musicspace/)
 
 <div><a href="https://fpachet.github.io/musicspace/"><img width="50%" class="mx-auto d-block" src="img/musicspace.png" alt="A MusicSpace patch: sources mapped to sound parameters around a listener, linked by sum, ratio, limit and distance constraints"></a> </div>
