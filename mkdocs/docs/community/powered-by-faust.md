@@ -266,6 +266,10 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [TangNano Faust](https://github.com/pschatzmann/TangNanoFaust)
+
+[TangNano Faust](https://github.com/pschatzmann/TangNanoFaust) by [Phil Schatzmann](https://www.pschatzmann.ch) (Apache-2.0) runs Faust programs on the Sipeed Tang Nano 20K FPGA board. One generic bitstream implements a floating-point DSP core with all of Faust's math functions, and delay lines and tables in block RAM or SDRAM; `faust2tang` turns the bytecode produced by the Faust compiler into a program for this core, which is loaded at run time, without rebuilding the FPGA, and plays on the board's I2S amplifier. `faust2tang` is header-only C++ that also runs on a microcontroller (ESP32, RP2040) or as a compile server over WiFi, an Arduino library discovers the program's parameters and controls them over SPI or a UART, including from MIDI, and a computer can load and control programs over the board's USB port.
+
 ### [faustax](http://dirt.design/faustax/)
 
 [faustax](https://github.com/DBraun/faustax) by David Braun, author of [DawDreamer](#dawdreamer), provides batched, differentiable audio effects for JAX (MIT), for parameter estimation, style transfer, automatic mixing and data augmentation. Each effect is a small Faust program, mostly built from the Faust libraries, compiled ahead of time by Faust's NNX backend into a Flax NNX module that works with `jax.jit` and `jax.vmap`; the generated modules are shipped, so users need no Faust compiler.

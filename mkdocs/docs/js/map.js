@@ -44,6 +44,7 @@ addMarker(45.7640, 4.8357, '<a href="https://www.grame.fr">Faust born in GRAME</
 addMarker(37.4213, -122.1694, '<a href="https://ccrma.stanford.edu">CCRMA</a>, Stanford University, CA, USA', redIcon);
 
 // Add project markers
+addMarker(46.2331, 7.3606, '<a href="#tangnano-faust">TangNano Faust</a>, Valais, Switzerland', blueIcon);
 addMarker(42.3736, -71.1097, '<a href="#adac">ADAC</a>, Cambridge, MA, USA', blueIcon);
 addMarker(52.5200, 13.4050, '<a href="#libre-audio-suite">Libre Audio Suite</a>, Berlin, Germany', blueIcon);
 addMarker(37.7749, -122.4194, '<a href="#blackdog">BlackDog</a>, San Francisco, CA, USA', blueIcon);
