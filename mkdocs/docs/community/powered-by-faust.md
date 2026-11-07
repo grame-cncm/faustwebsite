@@ -266,6 +266,12 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [Wiggle Room](https://github.com/timini/wiggleroom)
+
+<div><a href="https://github.com/timini/wiggleroom"><img width="80%" class="mx-auto d-block" src="img/wiggleroom.jpg" alt="Panels of eight Wiggle Room modules for VCV Rack: SpaceCello, TheAbyss, ChaosFlute, Matter, ModalBell, Cycloid, ACID9Voice and BigReverb"></a> </div>
+
+[Wiggle Room](https://github.com/timini/wiggleroom) by Tim Richardson is a collection of 45 modules for [VCV Rack 2](https://vcvrack.com) (GPL-3.0), many of them with their DSP written in Faust: physical models (a chaotic flute, a struck metal bar, a waterphone-inspired percussion, a bowed string coupled to a spring reverb after the Yaybahar, a choir, a Karplus-Strong string), filters and effects (Zita-Rev1 reverb, wavefolder, ladder filter, tape echo, BBD string ensemble, spectral resonator) and synthesizer voices (a TB-303-inspired voice, a 12-voice analog drum machine, chaotic oscillators), next to sequencers and utilities. Pre-generated headers let the modules build without Faust, and tests render the Faust output.
+
 ### [Chameleon Studio](https://chameleon-studio-iota.vercel.app)
 
 [Chameleon Studio](https://chameleon-studio-iota.vercel.app) by Allen Sulzen ([repository](https://github.com/allensulzen/chameleon-studio)) is a browser-based patch builder, Faust effect library and WebUSB firmware flasher for the Chameleon guitar and drum machine multi-effects pedal, built on the Electro-Smith Daisy Seed. Every effect is a mono Faust program: 269 of them, among which 31 written for the pedal, including a Klon Centaur model, and about 160 circuit simulations ported from [guitarix](https://github.com/brummer10/guitarix). A patch chains up to seven effects, three of whose parameters go to the pedal's knobs. The same Faust code is compiled in the browser with [faustwasm](https://github.com/grame-cncm/faustwasm) for the preview, read for its sliders to build the effect catalog, and compiled to C++ for libDaisy with Faust's Daisy architecture for the firmware, which the page flashes over WebUSB.
