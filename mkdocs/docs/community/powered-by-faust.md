@@ -270,6 +270,10 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [VoiceOfFaust](https://magnetophon.github.io/VoiceOfFaust)
+
+[VoiceOfFaust](https://github.com/magnetophon/VoiceOfFaust) by [Bart Brouns](https://magnetophon.nl) (AGPL-3.0) turns any monophonic sound into a synthesizer, preserving the pitch and spectral dynamics of the input; its author mostly uses it to turn a voice into a singing robot. Driven by an external pitch tracker, it offers seven synthesizer and two effect algorithms written in Faust: a channel vocoder with a super-saw that crossfades to a super-pulse and an elaborate feedback and distortion matrix around its filters, and vocoders built on oscillators with controllable formants, CZ resonant, PAF, FM and FOF, ported from Pure Data patches by Mike Moser-Booth and Miller Puckette and from code by Chris Chafe and Michael Jørgen Olsen, with a compressor/expander after Katja Vetter.
+
 ### [Tumult](https://github.com/consint/Tumult)
 
 <div><a href="https://github.com/consint/Tumult"><img width="35%" class="mx-auto d-block" src="img/tumult.png" alt="The Tumult plugin's interface: noise selection, mode, mix, gain and equalizer controls"></a> </div>
