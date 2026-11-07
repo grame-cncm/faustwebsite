@@ -266,6 +266,12 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [kromosynth](https://github.com/synth-is/kromosynth)
+
+<div><a href="https://github.com/synth-is"><img width="20%" class="mx-auto d-block" src="img/kromosynth.png" alt="The kromosynth icon: white horizontal bars on a black background"></a> </div>
+
+[kromosynth](https://github.com/synth-is/kromosynth) is a system for sonic exploration with evolutionary algorithms by [Björn Þór Jónsson](https://github.com/bthj), the engine behind [synth.is](https://kromo.synth.is) ([JAES paper](https://doi.org/10.17743/jaes.2022.0137)): a quality-diversity search breeds sounds and keeps the most diverse and best ones. Besides its original substrate, pattern-producing networks driving audio graphs, it now also evolves Faust programs: a genome becomes a self-contained Faust voice declaring `freq`, `gain` and `gate` plus its evolved sliders, which stay playable. These voices are played live, with no samples, by [kromosynth-plugin](https://github.com/synth-is/kromosynth-plugin), an AU/VST3 plugin running the Faust programs compiled to WebAssembly with one wasmtime instance per voice, also ported to WebCLAP with bit-identical output, and from [Strudel](https://strudel.cc) patterns by [strudel-faust](https://github.com/synth-is/kromosynth-composing/tree/main/packages/strudel-faust), built on faustwasm, where the note length and per-note slider values come from the pattern. The Faust substrate is recent and still in progress.
+
 ### [AquaSynth](https://github.com/GameCult/AquaSynth)
 
 <div><a href="https://github.com/GameCult/AquaSynth"><img width="30%" class="mx-auto d-block" src="img/aquasynth.png" alt="The AquaSynth icon: a goldfish wearing headphones in an aquarium"></a> </div>
