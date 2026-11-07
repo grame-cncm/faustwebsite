@@ -266,6 +266,10 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [faust64](https://github.com/Mehdalon/faust64)
+
+[faust64](https://github.com/Mehdalon/faust64) compiles Faust programs for old game hardware. On the Nintendo 64 (`faust2n64`), the GameCube and Wii (`faust2gc`) and MS-DOS with a Sound Blaster 16 (`faust2dos`), the DSP runs live, and on the N64 and under DOS every Faust control becomes an on-screen fader, played with the controller or the keyboard. For the ZX Spectrum (`faust2zx`) and the Game Boy (`faust2gb`), the sound is rendered on the computer and played back by small hand-written players, through the Spectrum's 1-bit speaker or the Game Boy's master volume register; on the Game Boy, a second Faust program can draw the pictures. Ready-built ROMs are included. A companion project, [faust-beyond-audio](https://github.com/Mehdalon/faust-beyond-audio), uses Faust programs to generate pictures, terrain, creatures and fonts.
+
 ### [DigiDrie](https://github.com/magnetophon/DigiDrie)
 
 <div><a href="https://github.com/magnetophon/DigiDrie"><img width="65%" class="mx-auto d-block" src="img/digidrie.jpg" alt="The DigiDrie synthesizer's interface, with its oscillator, filter, macro and modulation controls"></a> </div>
