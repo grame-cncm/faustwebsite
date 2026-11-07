@@ -270,6 +270,12 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [WebAssembly Music](https://webassemblymusic.pages.dev/)
+
+<div><a href="https://github.com/petersalomonsen/javascriptmusic"><img width="60%" class="mx-auto d-block" src="img/javascriptmusic.jpg" alt="WebAssembly Music in the browser: a Faust organ program in the editor, and the studio agent's conversation that wrote it"></a> </div>
+
+[WebAssembly Music](https://github.com/petersalomonsen/javascriptmusic) by [Peter Salomonsen](https://petersalomonsen.com) (GPL-3.0) is a live-coding environment for music that runs entirely in the browser, synthesizing in WebAssembly with instruments written in AssemblyScript. Instruments can also be written in Faust: `faust2as` turns Faust physical models into AssemblyScript voices for its MIDI synthesizer, from the C output of the Faust compiler, and in the browser the app transpiles Faust code to AssemblyScript with faust-rs compiled to WebAssembly. A studio agent can author Faust instruments from a sentence and fold them into a song, and projects are git repositories that can be pushed to GitHub. The [IFC 2026](https://webassemblymusic.pages.dev/?gitrepo=ifc2026-faust2as.gitfactory.testnet) talk projects load directly in the app.
+
 ### [VCV Prototype](https://github.com/VCVRack/VCV-Prototype)
 
 [VCV Prototype](https://github.com/VCVRack/VCV-Prototype) is the official scripting module of [VCV Rack](https://vcvrack.com): a panel with six inputs, outputs, knobs, lights and switches whose behavior is given by a script in JavaScript, Lua, Vult, Pure Data, SuperCollider or Faust. The Faust engine, contributed by GRAME, embeds libfaust with its interpreter backend: a `.dsp` file loaded in the module and edited in an external editor is recompiled each time it is saved. Metadata such as `[knob:N]`, `[switch:N]` or `[light_red:N]` connect the program's sliders, buttons and bargraphs to the panel, and a `rack.lib` library helps convert control voltages.
