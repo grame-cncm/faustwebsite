@@ -270,6 +270,12 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [MusicSpace](https://fpachet.github.io/musicspace/)
+
+<div><a href="https://fpachet.github.io/musicspace/"><img width="50%" class="mx-auto d-block" src="img/musicspace.png" alt="A MusicSpace patch: sources mapped to sound parameters around a listener, linked by sum, ratio, limit and distance constraints"></a> </div>
+
+[MusicSpace](https://github.com/fpachet/musicspace) by [François Pachet](https://www.francoispachet.fr) (MIT) brings back to life, in the browser, a system first developed at Sony CSL in Java and the subject of Olivier Delerue's PhD: an interface that combines constraint propagation with spatialization and parameter control. Sources, listeners, movers, trajectories and constraints are 2D objects on a canvas, and moving one propagates through the constraint graph in real time; the positions of the sources can drive audio files, MIDI ostinatos or sound parameters. Its [Orbit / Faust demos](https://fpachet.github.io/musicspace/examples/orbit-musicspace/) couple the controls of Yann Orlarey's Faust Orbit UI through the MusicSpace engine to play Faust instruments compiled to WebAssembly, with linked controls, springs and a constellation of nineteen constraints, and a three-body gravity patch drives three Faust voices, height setting the pitch, horizontal position the pan, and distance the brightness and loudness.
+
 ### [Ananas](https://github.com/hatchjaw/ananas-client)
 
 [Ananas](https://github.com/hatchjaw/ananas-client) by Tommy Rushton, author of [teensy-wfs](#teensy-wfs), is a lightweight system for time-sensitive networked audio (GPL-3.0): Teensy 4.1 boards with Ethernet and audio add-ons, synchronized to under a microsecond by the IEEE 1588 Precision Time Protocol over a wired network, and fed by an [audio server](https://github.com/hatchjaw/ananas-server) and DAW plugins. Audio processing on the boards can be written in Faust: a `faust2ananas` script compiles a Faust program to a class of the client's audio processor interface, and the distributed wave field synthesis module chains the network client with a Faust WFS program in which each board renders the sources for its own pair of loudspeakers.
