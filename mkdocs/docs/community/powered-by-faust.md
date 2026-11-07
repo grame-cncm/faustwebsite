@@ -266,6 +266,10 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [sk-engines](https://github.com/shakfu/sk-engines)
+
+[sk-engines](https://github.com/shakfu/sk-engines) by Shakeeb Alireza, author of [ssp](#ssp) and cyfaust, is an alternative firmware for the [Spotykach](https://synthux.academy/store/spotykach), a Daisy-based instrument by Synthux Academy (MIT). The panel, pads, clock, CV and SD card stay the same, and the DSP engine underneath is swapped by flashing another build, among some twenty engines. Four of them are Faust: a reverb with three algorithms generated from Faust sources (Dattorro plate, Zita-Rev1 hall and Greyhole), and a chorus, a filter and a synthesizer voice generated from a Faust program and a small JSON manifest, with no hand-written C++. Other engines host Csound and ChucK.
+
 ### [odo](https://github.com/PatrickReynoldsCoding/odo)
 
 [odo](https://github.com/PatrickReynoldsCoding/odo) by Patrick Reynolds is an Android app (MPL-2.0) that plays Faust instruments from an MPE controller such as the Seaboard BLOCK, over USB or Bluetooth LE, with about 25 ms from note to sound measured on a phone. Its 62 instruments, in six packs (classical; keys and organs; plucked and struck; winds, brass and voices; synthesizers; percussion), come from [mpe-instruments](https://github.com/PatrickReynoldsCoding/faust-mpe-instruments), a set of Faust physical models and synthesizers, one file per sound, which also play on Linux with a host program. Every finger is its own voice: pitch glides, pressure swells and slide shapes the tone, and each instrument declares in its Faust code how it should be heard (reverb and delay sends, tone, drive, touch curve). The app adds split and layer, an MPE arpeggiator, and plays the Faust voices through Oboe.
