@@ -266,6 +266,10 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [odo](https://github.com/PatrickReynoldsCoding/odo)
+
+[odo](https://github.com/PatrickReynoldsCoding/odo) by Patrick Reynolds is an Android app (MPL-2.0) that plays Faust instruments from an MPE controller such as the Seaboard BLOCK, over USB or Bluetooth LE, with about 25 ms from note to sound measured on a phone. Its 62 instruments, in six packs (classical; keys and organs; plucked and struck; winds, brass and voices; synthesizers; percussion), come from [mpe-instruments](https://github.com/PatrickReynoldsCoding/faust-mpe-instruments), a set of Faust physical models and synthesizers, one file per sound, which also play on Linux with a host program. Every finger is its own voice: pitch glides, pressure swells and slide shapes the tone, and each instrument declares in its Faust code how it should be heard (reverb and delay sends, tone, drive, touch curve). The app adds split and layer, an MPE arpeggiator, and plays the Faust voices through Oboe.
+
 ### [PS-3100 simulation](https://github.com/be-ez/ps3100-sim)
 
 <div><a href="https://blog.xn--4qe.com/ps3100-sim/panel/"><img width="50%" class="mx-auto d-block" src="img/ps3100-sim.png" alt="The full panel of the simulated Korg PS-3100, with all its boards and a keyboard"></a> </div>
