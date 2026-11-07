@@ -270,6 +270,10 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [faustCompressors](https://github.com/magnetophon/faustCompressors)
+
+[faustCompressors](https://github.com/magnetophon/faustCompressors) by [Bart Brouns](https://magnetophon.nl) (GPL-3.0) is a Faust library of compressor building blocks, compressors and general utilities: any number of channels, adjustable link from multi-mono to fully linked, adjustable knee, a true RMS detector with an optimized algorithm, feed-forward, feedback and hybrid topologies, and attack and release that can be placed before or after the gain computer.
+
 ### [LazyLimiter](https://magnetophon.github.io/LazyLimiter/)
 
 [LazyLimiter](https://github.com/magnetophon/LazyLimiter) by [Bart Brouns](https://magnetophon.nl) (GPL-2.0) is a clean yet fast lookahead brick-wall limiter written in Faust. It starts fading down before each peak, with a fade between linear and strongly exponential, does not fade up if it must soon go down again, and has an elaborate automatic release that sets a musical trade-off between clean and loud, so that sine waves have no distortion even in the low bass. The price is heavy CPU use and 186 ms of latency by default.
