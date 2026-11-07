@@ -266,6 +266,10 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [Chameleon Studio](https://chameleon-studio-iota.vercel.app)
+
+[Chameleon Studio](https://chameleon-studio-iota.vercel.app) by Allen Sulzen ([repository](https://github.com/allensulzen/chameleon-studio)) is a browser-based patch builder, Faust effect library and WebUSB firmware flasher for the Chameleon guitar and drum machine multi-effects pedal, built on the Electro-Smith Daisy Seed. Every effect is a mono Faust program: 269 of them, among which 31 written for the pedal, including a Klon Centaur model, and about 160 circuit simulations ported from [guitarix](https://github.com/brummer10/guitarix). A patch chains up to seven effects, three of whose parameters go to the pedal's knobs. The same Faust code is compiled in the browser with [faustwasm](https://github.com/grame-cncm/faustwasm) for the preview, read for its sliders to build the effect catalog, and compiled to C++ for libDaisy with Faust's Daisy architecture for the firmware, which the page flashes over WebUSB.
+
 ### [TangNano Faust](https://github.com/pschatzmann/TangNanoFaust)
 
 [TangNano Faust](https://github.com/pschatzmann/TangNanoFaust) by [Phil Schatzmann](https://www.pschatzmann.ch) (Apache-2.0) runs Faust programs on the Sipeed Tang Nano 20K FPGA board. One generic bitstream implements a floating-point DSP core with all of Faust's math functions, and delay lines and tables in block RAM or SDRAM; `faust2tang` turns the bytecode produced by the Faust compiler into a program for this core, which is loaded at run time, without rebuilding the FPGA, and plays on the board's I2S amplifier. `faust2tang` is header-only C++ that also runs on a microcontroller (ESP32, RP2040) or as a compile server over WiFi, an Arduino library discovers the program's parameters and controls them over SPI or a UART, including from MIDI, and a computer can load and control programs over the board's USB port.
