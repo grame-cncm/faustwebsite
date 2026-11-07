@@ -266,6 +266,10 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [ADAC](https://adac.readthedocs.io)
+
+[ADAC](https://github.com/cucuwritescode/adac) (Automatic Differentiable Audio Compilation, MIT, [paper](https://arxiv.org/abs/2606.21277)) by Facundo Franchino compiles audio processors designed and trained in differentiable frameworks such as [FLAMO](https://github.com/gdalsanto/flamo) into Faust code. It walks the model graph, extracts the delays, gains, matrices and filters into a JSON intermediate representation, and generates a Faust program, from which the Faust tools build plugins, web, embedded or FPGA versions. It can also republish the model to a running Faust plugin during training, so that the optimization can be heard as it runs, add macro controls such as RT60, dry/wet and pre-delay without touching the trained parameters, and compute a stability certificate for every feedback loop before export.
+
 ### [sk-engines](https://github.com/shakfu/sk-engines)
 
 [sk-engines](https://github.com/shakfu/sk-engines) by Shakeeb Alireza, author of [ssp](#ssp) and cyfaust, is an alternative firmware for the [Spotykach](https://synthux.academy/store/spotykach), a Daisy-based instrument by Synthux Academy (MIT). The panel, pads, clock, CV and SD card stay the same, and the DSP engine underneath is swapped by flashing another build, among some twenty engines. Four of them are Faust: a reverb with three algorithms generated from Faust sources (Dattorro plate, Zita-Rev1 hall and Greyhole), and a chorus, a filter and a synthesizer voice generated from a Faust program and a small JSON manifest, with no hand-written C++. Other engines host Csound and ChucK.
