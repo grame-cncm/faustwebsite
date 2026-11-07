@@ -30,6 +30,10 @@ To illustrate the global impact of Faust, a world map showcases all the signific
 
 The following sections provide a detailed list of commercial applications utilizing Faust.
 
+### [Valve Steam Deck](https://www.steamdeck.com)
+
+[Valve](https://www.valvesoftware.com)'s Steam Deck handheld gaming PC tunes its built-in speakers and microphone with Faust. The SteamOS package that holds the device's audio configuration ([public mirror of the repository](https://github.com/evlaV/valve-hardware-audio-processing)) contains Faust programs compiled to LV2 plugins with the faust-lv2 architecture and loaded in PipeWire filter chains: `valve_deck_speakers.dsp` for the speaker tuning, `valve_deck_microphone.dsp` for the microphone chain, and `valve_binaural.dsp`, a binaural hardware tuning meant for headphones or speakers close to the ears such as the Valve Index. They share a generic speaker-tuning library, written with the Faust standard libraries, with equalizers, band splitting and compression.
+
 ### [nagi](https://nagi.minimal-instruments.com)
 
 <div><a href="https://nagi.minimal-instruments.com"><img width="60%" class="mx-auto d-block" src="img/nagi.png"></a> </div>
