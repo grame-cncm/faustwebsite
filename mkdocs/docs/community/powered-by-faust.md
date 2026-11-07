@@ -634,6 +634,10 @@ Real-time mesh viewer and editor, using Vulkan and ImGui, and in-progress rigid 
 
 FlowGrid is an immediate-mode interface for Faust (functional audio language) programs. The full project state is backed by a persistent (as in persistent data structures) store supporting constant-time navigation to any point in project history.
 
+### [FaustLens](https://github.com/khiner/faustlens)
+
+[FaustLens](https://github.com/khiner/faustlens) by Karl Hiner, author of [FlowGrid](#flowgrid) and [MeshEditor](#mesheditor), is a lightweight Faust compiler and editing library (GPL-3.0). On ARM64, it compiles Faust programs to native code with its own compact backend, without LLVM: a command-line compiler produces a file holding the machine code, the controls and the instance layout, which a host loads without the source, recompilation or a JIT entitlement. On other platforms, programs are lowered to a plan of DSP instructions run by an interpreter. FaustLens also provides the editing side of a bidirectional editor: source snapshots, occurrence queries, structural edits and scope-aware materialization, for an editor that works on both the text and the block diagram.
+
 ### [Faust in Cables.gl](https://av.tib.eu/media/67445)
 
 <div><a href="https://av.tib.eu/media/67445"><img width="50%" class="mx-auto d-block" src="img/faust-cables.jpg"></a> </div>

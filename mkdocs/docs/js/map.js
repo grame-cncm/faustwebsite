@@ -44,6 +44,7 @@ addMarker(45.7640, 4.8357, '<a href="https://www.grame.fr">Faust born in GRAME</
 addMarker(37.4213, -122.1694, '<a href="https://ccrma.stanford.edu">CCRMA</a>, Stanford University, CA, USA', redIcon);
 
 // Add project markers
+addMarker(33.7490, -84.3880, '<a href="#faustlens">FaustLens</a>, Atlanta, GA, USA', blueIcon);
 addMarker(47.6101, -122.2015, '<a href="#valve-steam-deck">Valve Steam Deck</a>, Bellevue, WA, USA', blueIcon);
 addMarker(48.4284, -123.3656, '<a href="#waveform-playlist">waveform-playlist</a>, Victoria, BC, Canada', blueIcon);
 addMarker(51.5074, -0.1278, '<a href="#wiggle-room">Wiggle Room</a>, London, UK', blueIcon);
