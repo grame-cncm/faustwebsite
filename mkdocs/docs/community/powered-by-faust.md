@@ -266,6 +266,10 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [Faust Pedal Kit](https://joe-heffer.github.io/faust-pedalkit/)
+
+[Faust Pedal Kit](https://joe-heffer.github.io/faust-pedalkit/) by Joe Heffer ([repository](https://github.com/Joe-Heffer/faust-pedalkit), MIT) is a workshop for designing guitar and bass effects in Faust. Each effect is compiled to native Linux LV2, VST3 and CLAP plugins and checked by offline measurement tests, and the same Faust code runs in a [browser demo](https://joe-heffer.github.io/faust-pedalkit/demo/). Some effects are clean-room models of classic pedals, documented in circuit notes and used to calibrate the measurement tools; the others are original or circuit-inspired designs, such as a bass distortion that keeps the low band clean or an overdrive with a bias-shift control the original circuit lacks. Downloads with an installer are published.
+
 ### [Corrente](https://corrente.cloud)
 
 <div><a href="https://github.com/alden12/corrente"><img width="50%" class="mx-auto d-block" src="img/corrente.png" alt="Corrente in a desktop browser: the patch browser, a piano roll with an on-screen keyboard, a synthesizer's controls and the arrangement timeline"></a> </div>
