@@ -270,6 +270,10 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [VCV Prototype](https://github.com/VCVRack/VCV-Prototype)
+
+[VCV Prototype](https://github.com/VCVRack/VCV-Prototype) is the official scripting module of [VCV Rack](https://vcvrack.com): a panel with six inputs, outputs, knobs, lights and switches whose behavior is given by a script in JavaScript, Lua, Vult, Pure Data, SuperCollider or Faust. The Faust engine, contributed by GRAME, embeds libfaust with its interpreter backend: a `.dsp` file loaded in the module and edited in an external editor is recompiled each time it is saved. Metadata such as `[knob:N]`, `[switch:N]` or `[light_red:N]` connect the program's sliders, buttons and bargraphs to the panel, and a `rack.lib` library helps convert control voltages.
+
 ### [VoiceOfFaust](https://magnetophon.github.io/VoiceOfFaust)
 
 [VoiceOfFaust](https://github.com/magnetophon/VoiceOfFaust) by [Bart Brouns](https://magnetophon.nl) (AGPL-3.0) turns any monophonic sound into a synthesizer, preserving the pitch and spectral dynamics of the input; its author mostly uses it to turn a voice into a singing robot. Driven by an external pitch tracker, it offers seven synthesizer and two effect algorithms written in Faust: a channel vocoder with a super-saw that crossfades to a super-pulse and an elaborate feedback and distortion matrix around its filters, and vocoders built on oscillators with controllable formants, CZ resonant, PAF, FM and FOF, ported from Pure Data patches by Mike Moser-Booth and Miller Puckette and from code by Chris Chafe and Michael Jørgen Olsen, with a compressor/expander after Katja Vetter.
