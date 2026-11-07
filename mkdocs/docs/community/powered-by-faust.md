@@ -270,6 +270,10 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [bitDSP](https://github.com/rottingsounds/bitDSP-faust)
+
+[bitDSP](https://github.com/rottingsounds/bitDSP-faust) by Till Bovermann and [Dario Sanfilippo](https://www.dariosanfilippo.com) for the [rottingsounds](http://rottingsounds.org) project (MIT) is a set of Faust library functions to explore the artistic possibilities of bit-based algorithms. It handles 1-bit streams as integers, as bit buses or packed in 32-bit integers, and implements bit operations, delta-sigma modulation and more experimental approaches such as cellular automata, recursive Boolean networks and linear feedback shift registers. The paper *Creative use of bit-stream DSP in Faust* was presented at the [IFC 2020](https://ifc20.sciencesconf.org/332745/document).
+
 ### [Maths](https://github.com/spluta/Maths)
 
 [Maths](https://github.com/spluta/Maths) by Sam Pluta is an emulation of the Make Noise Maths Eurorack module for [SuperCollider](https://supercollider.github.io): a logarithmic-to-exponential function generator that can be triggered or can oscillate. The more efficient of its two versions is written in Faust and compiled to a SuperCollider UGen; its Faust source can also be compiled for Pure Data, Max or other environments.
