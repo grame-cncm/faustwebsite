@@ -270,6 +270,12 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [Sorcer](https://github.com/openAVproductions/openAV-Sorcer)
+
+<div><a href="https://github.com/openAVproductions/openAV-Sorcer"><img width="35%" class="mx-auto d-block" src="img/sorcer.png" alt="The Sorcer wavetable synthesizer's interface"></a> </div>
+
+[Sorcer](https://github.com/openAVproductions/openAV-Sorcer) by [OpenAV Productions](http://www.openavproductions.com) (GPL-3.0) is a wavetable synthesizer in LV2 format, aimed at electronic and dubstep music. Its DSP is a Faust program, `faust/main.dsp`, compiled to C++ with a custom wavetable reader; the generated code is kept in the repository, so building the plugin does not need Faust.
+
 ### [Soundpipe](https://github.com/PaulBatchelor/Soundpipe)
 
 [Soundpipe](https://github.com/PaulBatchelor/Soundpipe) by [Paul Batchelor](https://paulbatchelor.github.io) (MIT) is a lightweight music DSP library written in C, for composers, sound designers and creative coders, which has been used by projects such as AudioKit. Part of its modules are ported from Csound and Faust: the autowah, compressor, pink noise, band-limited saw, square and triangle oscillators, vocoder and Zita-Rev1 reverb are generated from Faust programs by a script that wraps the Faust compiler's output in Soundpipe's module template.
