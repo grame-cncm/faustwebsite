@@ -270,6 +270,12 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [ProtoFaust](https://github.com/mzuther/ProtoFaust)
+
+<div><a href="https://github.com/mzuther/ProtoFaust"><img width="35%" class="mx-auto d-block" src="img/protofaust.png" alt="The ProtoFaust module in VCV Rack, with its inputs, outputs, knobs and switches"></a> </div>
+
+[ProtoFaust](https://github.com/mzuther/ProtoFaust) by [Martin Zuther](http://www.mzuther.de) (GPL-3.0) is a module for DSP prototyping in Faust in [VCV Rack](https://vcvrack.com). The module's DSP is the Faust program `src/faust/main.dsp`, by default a three-oscillator synthesizer with a resonant filter: editing it and rebuilding the module turns it into a new one.
+
 ### [juce_faustllvm](https://github.com/olilarkin/juce_faustllvm)
 
 [juce_faustllvm](https://github.com/olilarkin/juce_faustllvm) by [Oli Larkin](https://olilarkin.com), author of iPlug2, is a JUCE module that embeds the libfaust LLVM JIT compiler as a JUCE AudioProcessor and AudioPluginInstance, with supporting classes such as a Faust syntax highlighter for the JUCE code editor and a watcher that recompiles a `.dsp` file when it changes. Its core is based on the faustgen~ Max external by GRAME.
