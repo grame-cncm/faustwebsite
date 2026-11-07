@@ -266,6 +266,12 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [DigiDrie](https://github.com/magnetophon/DigiDrie)
+
+<div><a href="https://github.com/magnetophon/DigiDrie"><img width="65%" class="mx-auto d-block" src="img/digidrie.jpg" alt="The DigiDrie synthesizer's interface, with its oscillator, filter, macro and modulation controls"></a> </div>
+
+[DigiDrie](https://github.com/magnetophon/DigiDrie) by [Bart Brouns](https://magnetophon.nl) is a "monster" monophonic synthesizer written in Faust (AGPL-3.0), also built as a plugin with DPF. Four CZ-style phase-distortion oscillators, each with nine waveforms and phase-locked to a master oscillator, are crossfaded for vector synthesis, and the phase signal can go through a mix of Moog, Oberheim and MS-20 style lowpass filters before reaching the oscillators. The synthesizer is fully stereo, every parameter having a left-right difference control, and each parameter can be morphed between eight macro settings arranged as a cube, the macros being modulated by envelopes and LFOs.
+
 ### [ADAC](https://adac.readthedocs.io)
 
 [ADAC](https://github.com/cucuwritescode/adac) (Automatic Differentiable Audio Compilation, MIT, [paper](https://arxiv.org/abs/2606.21277)) by Facundo Franchino compiles audio processors designed and trained in differentiable frameworks such as [FLAMO](https://github.com/gdalsanto/flamo) into Faust code. It walks the model graph, extracts the delays, gains, matrices and filters into a JSON intermediate representation, and generates a Faust program, from which the Faust tools build plugins, web, embedded or FPGA versions. It can also republish the model to a running Faust plugin during training, so that the optimization can be heard as it runs, add macro controls such as RT60, dry/wet and pre-delay without touching the trained parameters, and compute a stability certificate for every feedback loop before export.
