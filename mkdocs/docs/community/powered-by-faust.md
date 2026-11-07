@@ -266,6 +266,14 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [Corrente](https://corrente.cloud)
+
+<div><a href="https://github.com/alden12/corrente"><img width="50%" class="mx-auto d-block" src="img/corrente.png" alt="Corrente in a desktop browser: the patch browser, a piano roll with an on-screen keyboard, a synthesizer's controls and the arrangement timeline"></a> </div>
+
+[Corrente](https://corrente.cloud) ([repository](https://github.com/alden12/corrente), AGPL-3.0) is an open-source music studio that runs in the browser, on a desktop, a tablet or a phone, by Alden Laslett. It has an arrangement timeline, a piano roll and a drum roll, recording from the computer keyboard, a MIDI controller, on-screen pads or a microphone, live collaboration between devices and people, and a local MCP server through which AI agents edit a project the same way a user does. Its instruments and effects are also available as a VST3 plugin, in beta.
+
+Its audio engine is built from 36 small Faust blocks: oscillators, noise, envelopes, LFOs, biquad, state-variable and Moog ladder filters, waveshaper, bitcrusher, chorus, compressor, Zita-Rev1 reverb, mixing and arithmetic blocks, each declaring its ports in Faust metadata. The project builds the Faust compiler with only its Rust backend, compiles every block to Rust, and a Rust router runs them following the plan of each device, an instrument or effect described as data: a graph of blocks with the controls it exposes, which an AI agent can also write. The engine runs as WebAssembly in an AudioWorklet in the browser, and natively in the plugin. A credits file listing the authors and licenses of the Faust library functions each block uses is generated at build time.
+
 ### [Libre Audio Suite](https://libreaudio.org)
 
 <div><a href="https://github.com/LibreAudio/Suite"><img width="90%" class="mx-auto d-block" src="img/libreaudio-suite.png" alt="Five Libre Audio Suite plugins side by side: limiter, equalizer, five-band mid/side compressor, delay and vocal processor"></a> </div>
