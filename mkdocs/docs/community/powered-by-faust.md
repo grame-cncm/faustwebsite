@@ -270,6 +270,10 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [Maths](https://github.com/spluta/Maths)
+
+[Maths](https://github.com/spluta/Maths) by Sam Pluta is an emulation of the Make Noise Maths Eurorack module for [SuperCollider](https://supercollider.github.io): a logarithmic-to-exponential function generator that can be triggered or can oscillate. The more efficient of its two versions is written in Faust and compiled to a SuperCollider UGen; its Faust source can also be compiled for Pure Data, Max or other environments.
+
 ### [keyer](https://github.com/recri/keyer)
 
 [keyer](https://github.com/recri/keyer) by Roger E Critchlow Jr (GPL-3.0) is a kit for building software-defined radios with the JACK audio connection kit and Tcl/Tk, started as an iambic Morse code keyer. Its signal processing components run as JACK plugins, and a Faust architecture file, `jacktcltk`, turns Faust programs into Tcl-loadable JACK modules with a Tk interface: the kit uses it for a collection of instruments from the Faust physical modeling and STK libraries.
