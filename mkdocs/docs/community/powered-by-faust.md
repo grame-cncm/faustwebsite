@@ -266,6 +266,14 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [Libre Audio Suite](https://libreaudio.org)
+
+<div><a href="https://github.com/LibreAudio/Suite"><img width="90%" class="mx-auto d-block" src="img/libreaudio-suite.png" alt="Five Libre Audio Suite plugins side by side: limiter, equalizer, five-band mid/side compressor, delay and vocal processor"></a> </div>
+
+[Libre Audio Suite](https://libreaudio.org) ([repository](https://github.com/LibreAudio/Suite)) is a collection of more than 20 free and open-source audio plugins (GPL-3.0) for content creators, musicians and sound engineers, in CLAP, VST3 and LV2 formats for Linux, macOS and Windows. It is made in Berlin by mastering engineer Klaus Scheuermann ([4ohm](https://4ohm.de)), author of [master_me](#master_me), and audio developer Filipe Coelho ([falkTX](https://falktx.berlin)), author of the [DISTRHO Plugin Framework](https://github.com/DISTRHO/DPF), with the support of the [Prototype Fund](https://www.prototypefund.de/).
+
+Every processor is a Faust program: a loudness leveler following BS.1770, limiter, clipper, compressors (among them a five-band mid/side compressor and an upward compressor), gate, de-esser, transient shaper, equalizers, saturator, chorus, flanger, phaser, delay, reverbs including a spring reverb, vocal doublers and pseudo-stereo. At build time, each `.dsp` file is compiled by the Faust compiler, through the [faustdoctor](https://github.com/SpotlightKid/faustdoctor) post-processor, into a C++ class and a plugin description for DPF; input and output stages, also written in Faust, are shared by all the plugins. Each plugin has an Easy mode with a handful of controls and an Expert mode that exposes the whole engine, with one interface language across the suite. The first release is planned for November 27, 2026.
+
 ### [BlackDog](https://zer0state.com/products/blackdog.html)
 
 <div><a href="https://zer0state.com/products/blackdog.html"><img width="20%" class="mx-auto d-block" src="img/blackdog.png" alt="The BlackDog mark: a cream sine waveform with one green sample point on a black background"></a> </div>
