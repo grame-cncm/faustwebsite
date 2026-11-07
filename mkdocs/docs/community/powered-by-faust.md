@@ -270,6 +270,12 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [Tumult](https://github.com/consint/Tumult)
+
+<div><a href="https://github.com/consint/Tumult"><img width="35%" class="mx-auto d-block" src="img/tumult.png" alt="The Tumult plugin's interface: noise selection, mode, mix, gain and equalizer controls"></a> </div>
+
+[Tumult](https://github.com/consint/Tumult) by [Consistent Interruption](https://www.consint.net) (GPL-3.0) is a VST3 effect that makes noise: it adds one of 100 hand-picked noises, or imported samples, to the signal, played raw, ducked by the signal or following it, to texturize a sound and add warmth and age. It is built with [HISE](#hise) with Faust enabled, and its equalizer filters and noise generator are Faust programs.
+
 ### [Sorcer](https://github.com/openAVproductions/openAV-Sorcer)
 
 <div><a href="https://github.com/openAVproductions/openAV-Sorcer"><img width="35%" class="mx-auto d-block" src="img/sorcer.png" alt="The Sorcer wavetable synthesizer's interface"></a> </div>
