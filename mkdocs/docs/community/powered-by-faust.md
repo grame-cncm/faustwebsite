@@ -270,6 +270,10 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [keyer](https://github.com/recri/keyer)
+
+[keyer](https://github.com/recri/keyer) by Roger E Critchlow Jr (GPL-3.0) is a kit for building software-defined radios with the JACK audio connection kit and Tcl/Tk, started as an iambic Morse code keyer. Its signal processing components run as JACK plugins, and a Faust architecture file, `jacktcltk`, turns Faust programs into Tcl-loadable JACK modules with a Tk interface: the kit uses it for a collection of instruments from the Faust physical modeling and STK libraries.
+
 ### [faustCompressors](https://github.com/magnetophon/faustCompressors)
 
 [faustCompressors](https://github.com/magnetophon/faustCompressors) by [Bart Brouns](https://magnetophon.nl) (GPL-3.0) is a Faust library of compressor building blocks, compressors and general utilities: any number of channels, adjustable link from multi-mono to fully linked, adjustable knee, a true RMS detector with an optimized algorithm, feed-forward, feedback and hybrid topologies, and attack and release that can be placed before or after the gain computer.
