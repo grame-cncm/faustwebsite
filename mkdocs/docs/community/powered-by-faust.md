@@ -266,6 +266,12 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [faustax](http://dirt.design/faustax/)
+
+[faustax](https://github.com/DBraun/faustax) by David Braun, author of [DawDreamer](#dawdreamer), provides batched, differentiable audio effects for JAX (MIT), for parameter estimation, style transfer, automatic mixing and data augmentation. Each effect is a small Faust program, mostly built from the Faust libraries, compiled ahead of time by Faust's NNX backend into a Flax NNX module that works with `jax.jit` and `jax.vmap`; the generated modules are shipped, so users need no Faust compiler.
+
+With Adam Finkelstein, the same author wrote [PEACE](https://github.com/DBraun/PEACE) ([ISMIR 2026 paper](https://arxiv.org/abs/2610.03405)), a joint embedding of effect code and audio. It ranks a gallery of Faust programs by how well each explains a processed recording, identifies an effect chain without its settings, and renders the retrieved programs on new audio with the bundled Faust sources of 21 effects; programs are parsed with tree-sitter-faust. An [embedding explorer](https://dbraun.github.io/PEACE-map/) is online.
+
 ### [faust64](https://github.com/Mehdalon/faust64)
 
 [faust64](https://github.com/Mehdalon/faust64) compiles Faust programs for old game hardware. On the Nintendo 64 (`faust2n64`), the GameCube and Wii (`faust2gc`) and MS-DOS with a Sound Blaster 16 (`faust2dos`), the DSP runs live, and on the N64 and under DOS every Faust control becomes an on-screen fader, played with the controller or the keyboard. For the ZX Spectrum (`faust2zx`) and the Game Boy (`faust2gb`), the sound is rendered on the computer and played back by small hand-written players, through the Spectrum's 1-bit speaker or the Game Boy's master volume register; on the Game Boy, a second Faust program can draw the pictures. Ready-built ROMs are included. A companion project, [faust-beyond-audio](https://github.com/Mehdalon/faust-beyond-audio), uses Faust programs to generate pictures, terrain, creatures and fonts.
