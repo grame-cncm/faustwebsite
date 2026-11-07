@@ -266,6 +266,10 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [CHONK for Schwung](https://github.com/legsmechanical/schwung-chonk)
+
+[CHONK for Schwung](https://github.com/legsmechanical/schwung-chonk) (GPL-3.0) brings the Faust physical model of an electric bass from Punk Labs' [OneTrick CHONK](#onetrick-chonk) to the Ableton Move, through Schwung. The bass model is Punk Labs' Faust code: one modeled string with bridge and nut terminations, a pickup partway along it, a finger pluck and a noise transient, regenerated to C++ by the Faust compiler and cross-compiled for the Move. A hard note rings differently because the string is hit harder, and very hard notes slap. The port asks players to buy the original plugin.
+
 ### [Faust Pedal Kit](https://joe-heffer.github.io/faust-pedalkit/)
 
 [Faust Pedal Kit](https://joe-heffer.github.io/faust-pedalkit/) by Joe Heffer ([repository](https://github.com/Joe-Heffer/faust-pedalkit), MIT) is a workshop for designing guitar and bass effects in Faust. Each effect is compiled to native Linux LV2, VST3 and CLAP plugins and checked by offline measurement tests, and the same Faust code runs in a [browser demo](https://joe-heffer.github.io/faust-pedalkit/demo/). Some effects are clean-room models of classic pedals, documented in circuit notes and used to calibrate the measurement tools; the others are original or circuit-inspired designs, such as a bass distortion that keeps the low band clean or an overdrive with a bias-shift control the original circuit lacks. Downloads with an installer are published.
