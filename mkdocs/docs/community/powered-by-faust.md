@@ -270,6 +270,12 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [Stompbox](https://github.com/mikeoliphant/Stompbox)
+
+<div><a href="https://github.com/mikeoliphant/Stompbox"><img width="60%" class="mx-auto d-block" src="img/stompbox.png" alt="Stompbox's pedalboard interface: an amplifier, effect pedals and their knobs"></a> </div>
+
+[Stompbox](https://github.com/mikeoliphant/Stompbox) by Mike Oliphant, author of [FaustVST](#faustvst) (GPL-3.0), is a guitar amplification and effects application arranged as a digital pedalboard. It runs as a VST3 plugin, or as a headless JACK client with a remote user interface on desktop or Android, which its author uses on a Raspberry Pi 4 pedalboard. Many of its effects, such as the wah, delay and reverb, are generated with Faust, some of them based on [guitarix](https://github.com/brummer10/guitarix).
+
 ### [WebAssembly Music](https://webassemblymusic.pages.dev/)
 
 <div><a href="https://github.com/petersalomonsen/javascriptmusic"><img width="60%" class="mx-auto d-block" src="img/javascriptmusic.jpg" alt="WebAssembly Music in the browser: a Faust organ program in the editor, and the studio agent's conversation that wrote it"></a> </div>
