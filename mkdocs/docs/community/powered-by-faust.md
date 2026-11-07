@@ -270,6 +270,10 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [LazyLimiter](https://magnetophon.github.io/LazyLimiter/)
+
+[LazyLimiter](https://github.com/magnetophon/LazyLimiter) by [Bart Brouns](https://magnetophon.nl) (GPL-2.0) is a clean yet fast lookahead brick-wall limiter written in Faust. It starts fading down before each peak, with a fade between linear and strongly exponential, does not fade up if it must soon go down again, and has an elaborate automatic release that sets a musical trade-off between clean and loud, so that sine waves have no distortion even in the low bass. The price is heavy CPU use and 186 ms of latency by default.
+
 ### [FaustForge](https://github.com/orlarey/faustforge)
 
 <div><a href="https://github.com/orlarey/faustforge"><img width="60%" class="mx-auto d-block" src="img/faustforge.png" alt="FaustForge's run view: a Faust program's regular interface, its Orbit interface with one point per parameter, and a spectrum display"></a> </div>
