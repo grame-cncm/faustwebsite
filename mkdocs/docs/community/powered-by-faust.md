@@ -266,6 +266,12 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [PS-3100 simulation](https://github.com/be-ez/ps3100-sim)
+
+<div><a href="https://blog.xn--4qe.com/ps3100-sim/panel/"><img width="50%" class="mx-auto d-block" src="img/ps3100-sim.png" alt="The full panel of the simulated Korg PS-3100, with all its boards and a keyboard"></a> </div>
+
+[ps3100-sim](https://github.com/be-ez/ps3100-sim) (MIT) is an open simulation of the Korg PS-3100 polyphonic synthesizer. Each board is transcribed from the service-manual schematics into a SPICE netlist, then turned into a real-time Faust model fitted to the circuit's response and checked against ngspice, so that the fast model cannot drift from the circuit: resonators, signal generators, gate and KORG35 low-pass, BBD ensemble and the other sound and modulation boards, composed into a 48-voice instrument. The Faust models are built as a JUCE VST3/AU plugin and compiled to WebAssembly for playable pages in the browser, among them the [full panel](https://blog.xn--4qe.com/ps3100-sim/panel/).
+
 ### [CHONK for Schwung](https://github.com/legsmechanical/schwung-chonk)
 
 [CHONK for Schwung](https://github.com/legsmechanical/schwung-chonk) (GPL-3.0) brings the Faust physical model of an electric bass from Punk Labs' [OneTrick CHONK](#onetrick-chonk) to the Ableton Move, through Schwung. The bass model is Punk Labs' Faust code: one modeled string with bridge and nut terminations, a pickup partway along it, a finger pluck and a noise transient, regenerated to C++ by the Faust compiler and cross-compiled for the Move. A hard note rings differently because the string is hit harder, and very hard notes slap. The port asks players to buy the original plugin.
