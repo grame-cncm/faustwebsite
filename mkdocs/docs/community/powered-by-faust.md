@@ -270,6 +270,10 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [SC-HOA](https://github.com/florian-grond/SC-HOA)
+
+[SC-HOA](https://github.com/florian-grond/SC-HOA) by [Florian Grond](http://www.grond.at) (GPL-3.0) is a library of classes to encode, transform and decode higher-order Ambisonics in [SuperCollider](https://supercollider.github.io), up to order 5. It is built on the HOAUGens of [sc3-plugins](#supercollider-sc3-plugins), compiled from the Faust code of Pierre Lecomte's [ambitools](https://github.com/sekisushai/ambitools); its frontend classes select the right low-level UGen for the chosen order. It was developed at CIRMMT and includes soundfield recordings made with an Eigenmike.
+
 ### [bitDSP](https://github.com/rottingsounds/bitDSP-faust)
 
 [bitDSP](https://github.com/rottingsounds/bitDSP-faust) by Till Bovermann and [Dario Sanfilippo](https://www.dariosanfilippo.com) for the [rottingsounds](http://rottingsounds.org) project (MIT) is a set of Faust library functions to explore the artistic possibilities of bit-based algorithms. It handles 1-bit streams as integers, as bit buses or packed in 32-bit integers, and implements bit operations, delta-sigma modulation and more experimental approaches such as cellular automata, recursive Boolean networks and linear feedback shift registers. The paper *Creative use of bit-stream DSP in Faust* was presented at the [IFC 2020](https://ifc20.sciencesconf.org/332745/document).
