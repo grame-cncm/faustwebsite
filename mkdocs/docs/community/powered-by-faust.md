@@ -270,6 +270,10 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [Soundpipe](https://github.com/PaulBatchelor/Soundpipe)
+
+[Soundpipe](https://github.com/PaulBatchelor/Soundpipe) by [Paul Batchelor](https://paulbatchelor.github.io) (MIT) is a lightweight music DSP library written in C, for composers, sound designers and creative coders, which has been used by projects such as AudioKit. Part of its modules are ported from Csound and Faust: the autowah, compressor, pink noise, band-limited saw, square and triangle oscillators, vocoder and Zita-Rev1 reverb are generated from Faust programs by a script that wraps the Faust compiler's output in Soundpipe's module template.
+
 ### [ProtoFaust](https://github.com/mzuther/ProtoFaust)
 
 <div><a href="https://github.com/mzuther/ProtoFaust"><img width="35%" class="mx-auto d-block" src="img/protofaust.png" alt="The ProtoFaust module in VCV Rack, with its inputs, outputs, knobs and switches"></a> </div>
