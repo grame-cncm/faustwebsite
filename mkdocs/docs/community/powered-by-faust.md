@@ -26,6 +26,8 @@ To illustrate the global impact of Faust, a world map showcases all the signific
 
 <div id="map" style="height: 400px;"> </div>
 
+<p id="map-stats"></p>
+
 ## Commercial applications
 
 The following sections provide a detailed list of commercial applications utilizing Faust.

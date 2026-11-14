@@ -372,3 +372,52 @@ addMarker(37.7749, -122.4194, '<a href="#moforte-guitar">moForte Guitar</a>, San
 addMarker(45.7640, 4.8357, '<a href="#faustworks">FaustWorks</a>, Lyon, France', blueIcon);
 addMarker(45.7640, 4.8357, '<a href="#faustlive">FaustLive</a>, Lyon, France', blueIcon);
 addMarker(40.7128, -74.0060, '<a href="#incant-audio">Incant Audio</a>, New York, NY, USA', blueIcon);
+
+// Project statistics shown under the map, computed from the page itself:
+// a project is an h3/h4 section after the map (an h3 that only groups h4
+// sub-projects does not count), and it is located when a marker links to it.
+(function () {
+    var stats = document.getElementById('map-stats');
+    var mapEl = document.getElementById('map');
+    if (!stats || !mapEl) return;
+
+    function nextHeading(el) {
+        for (var n = el.nextElementSibling; n; n = n.nextElementSibling) {
+            if (/^H[1-6]$/.test(n.tagName)) return n;
+        }
+        return null;
+    }
+
+    var projects = Array.prototype.filter.call(mapEl.parentNode.querySelectorAll('h3[id], h4[id]'), function (h) {
+        if (h.parentNode !== mapEl.parentNode) return false;
+        if (!(mapEl.compareDocumentPosition(h) & Node.DOCUMENT_POSITION_FOLLOWING)) return false;
+        var next = nextHeading(h);
+        return !(h.tagName === 'H3' && next && next.tagName === 'H4');
+    });
+
+    var located = {};
+    markers.getLayers().forEach(function (marker) {
+        var popup = marker.getPopup();
+        var match = popup && /href="#([^"]+)"/.exec(popup.getContent());
+        if (match) located[match[1]] = true;
+    });
+
+    var missing = projects.filter(function (h) { return !located[h.id]; });
+    var known = {};
+    projects.forEach(function (h) { known[h.id] = true; });
+    var broken = Object.keys(located).filter(function (id) { return !known[id]; });
+
+    var html = '<strong>' + projects.length + '</strong> projects: <strong>' +
+        (projects.length - missing.length) + '</strong> on the map, <strong>' +
+        missing.length + '</strong> not located yet.';
+    if (missing.length) {
+        html += '<details><summary>Projects not located yet</summary><ul>' +
+            missing.map(function (h) {
+                return '<li><a href="#' + h.id + '">' + h.textContent.trim() + '</a></li>';
+            }).join('') + '</ul></details>';
+    }
+    if (broken.length) {
+        html += '<p>Markers linking to a missing section: ' + broken.join(', ') + '</p>';
+    }
+    stats.innerHTML = html;
+})();
