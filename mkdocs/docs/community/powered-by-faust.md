@@ -270,6 +270,12 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [Halden 6](https://thorstenweberger.github.io/halden6/)
+
+<div><a href="https://github.com/ThorstenWeberGER/halden6"><img width="60%" class="mx-auto d-block" src="img/halden6.jpg" alt="The Halden 6 panel in its Studio skin: LFO, DCO, filter, envelope and chorus sections above a keyboard"></a> </div>
+
+[Halden 6](https://github.com/ThorstenWeberGER/halden6) by [Thorsten Weber](https://github.com/ThorstenWeberGER) (AGPL-3.0) is a six-voice polyphonic synthesizer modeled on the Roland Juno-60, with a chorus, 100 presets, a 16-step arpeggiator and three skins. It runs as a single web page in any browser, phones included, and as a VST3 plugin built with JUCE for Ableton Live on Windows. Both share one Faust program, `dsp/halden6.dsp`: the voice (band-limited oscillators, PWM, sub-oscillator, noise, a 4-pole filter and an envelope written out in Faust, an LFO) and the effect after the voices (high-pass filter, Juno-60 chorus and a limiter), built from the Faust standard libraries and fitted to recordings of a real Juno-60 by Andy Harman. The web version compiles it to WebAssembly with faustwasm in polyphonic mode, the plugin to C++.
+
 ### [norns](https://monome.org/norns)
 
 [norns](https://github.com/monome/norns) by [monome](https://monome.org) (GPL-3.0) is a sound computer, built around a Raspberry Pi, that is "many sound instruments": scripts in Lua and DSP engines define its behavior, and it connects to grids, MIDI and other controllers. In its audio system, crone, the system mixer's Zita-Rev1 reverb and stereo compressor are Faust programs (`crone/dsp/ZitaReverb.dsp`, `StereoCompressor.dsp`), compiled to C++ with the Faust compiler and built into the mixer.

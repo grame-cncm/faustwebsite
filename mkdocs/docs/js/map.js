@@ -44,6 +44,7 @@ addMarker(45.7640, 4.8357, '<a href="https://www.grame.fr">Faust born in GRAME</
 addMarker(37.4213, -122.1694, '<a href="https://ccrma.stanford.edu">CCRMA</a>, Stanford University, CA, USA', redIcon);
 
 // Add project markers
+addMarker(50.2268, 8.6182, '<a href="#halden-6">Halden 6</a>, Bad Homburg, Germany', blueIcon);
 addMarker(42.2781, -74.9157, '<a href="#norns">norns</a>, upstate New York, USA', blueIcon);
 addMarker(60.4720, 8.4689, '<a href="#webassembly-music">WebAssembly Music</a>, Norway', blueIcon);
 addMarker(45.7640, 4.8357, '<a href="#vcv-prototype">VCV Prototype (Faust engine by GRAME)</a>, Lyon, France', blueIcon);
