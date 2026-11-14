@@ -44,6 +44,14 @@ addMarker(45.7640, 4.8357, '<a href="https://www.grame.fr">Faust born in GRAME</
 addMarker(37.4213, -122.1694, '<a href="https://ccrma.stanford.edu">CCRMA</a>, Stanford University, CA, USA', redIcon);
 
 // Add project markers
+addMarker(37.4419, -122.1430, '<a href="#babyears">BabyEars</a>, Palo Alto, CA, USA', blueIcon);
+addMarker(52.5200, 13.4050, '<a href="#ripple">Ripple</a>, Berlin, Germany', blueIcon);
+addMarker(20.5937, 78.9629, '<a href="#faust-icc">faust-icc</a>, India', blueIcon);
+addMarker(31.0461, 34.8516, '<a href="#pulsar">Pulsar</a>, Israel', blueIcon);
+addMarker(42.3709, -72.5981, '<a href="#counter">Counter</a>, Hatfield, MA, USA', blueIcon);
+addMarker(50.5039, 4.4699, '<a href="#fxbox">FXBox</a>, Belgium', blueIcon);
+addMarker(56.2639, 9.5018, '<a href="#isospin">isospin</a>, Denmark', blueIcon);
+addMarker(52.5200, 13.4050, '<a href="#nylon">Nylon</a>, Berlin, Germany', blueIcon);
 addMarker(50.2268, 8.6182, '<a href="#halden-6">Halden 6</a>, Bad Homburg, Germany', blueIcon);
 addMarker(42.2781, -74.9157, '<a href="#norns">norns</a>, upstate New York, USA', blueIcon);
 addMarker(60.4720, 8.4689, '<a href="#webassembly-music">WebAssembly Music</a>, Norway', blueIcon);

@@ -270,6 +270,92 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [BabyEars](https://github.com/josmithiii/BabyEars)
+
+<div><a href="https://github.com/josmithiii/BabyEars"><img width="60%" class="mx-auto d-block" src="img/babyears.jpg" alt="The BabyEars main screen, with Mute and Bypass buttons and a maximum level slider"></a> </div>
+
+[BabyEars](https://github.com/josmithiii/BabyEars) by [Julius Smith](https://ccrma.stanford.edu/~jos/) (AGPL-3.0) is a personal sound amplifier for macOS and iOS, "like pharmacy reading glasses, but for your ears". It listens through the microphone, boosts the frequency bands where hearing is weaker, compresses each band so loud sounds stay comfortable, and limits the output. The correction comes from age and sex (ISO 7029), or from an 11-band threshold measurement made in the app after a 1 kHz calibration. The app is built with JUCE 8, and its DSP is written in Faust: the filter bank, compressor, limiter and test signals. It is not a medical device.
+
+### [Ripple](https://charlesvestal.github.io/fm1-ripple)
+
+[Ripple](https://github.com/charlesvestal/fm1-ripple) by [Charles Vestal](https://charles.pizza) (MPL-2.0) is a firmware for the M-VAVE FM-1 synthesizer, inspired by monome's [norns](#norns). It runs droplets, instruments written in Lua, over currents, the sounds they play, written in Faust, Pure Data or C. In disk mode the FM-1 shows up as a USB drive: copying a droplet or a current onto it installs it, with nothing to reflash. The built-in currents written in Faust are a two-operator FM voice, a small feedback-delay reverb, a Karplus-Strong plucked string and a two-saw synth voice, and an emulator on the project's site runs a Faust current in the browser as it is written.
+
+### [Jali](https://github.com/hergezod/Jali)
+
+<div><a href="https://github.com/hergezod/Jali"><img width="60%" class="mx-auto d-block" src="img/jali.jpg" alt="The Jali plugin's interface, with its ten knobs"></a> </div>
+
+[Jali](https://github.com/hergezod/Jali) (MIT) is a VST3 instrument inspired by the Malian kora, with no samples: each note is a Karplus-Strong string, played through a three-resonance model of the calabash body, the buzz of the bridge and sympathetic strings tuned to the kora's F Silaba scale, or Sauta. The keyboard is chromatic, so it fits a DAW. The whole voice is two Faust files, `jali_voice.dsp` and `jali_effect.dsp`, written so that the tuning constants at their top can be edited to change the sound; the CMake build fetches Faust.
+
+### [faust-icc](https://github.com/Dhwaani/In-CarCommunication)
+
+[faust-icc](https://github.com/Dhwaani/In-CarCommunication) by Ashmita Chakraborty (MIT) is a Faust library for in-car communication (ITU-T P.1150), where a microphone near the driver is amplified into the rear loudspeakers and back. The cabin closes the acoustic loop, so the problem is keeping it from howling while giving away as little gain as possible. The library combines a gain ceiling, a cascade of adaptive notches that allocate themselves to the howling frequencies, found by a 32-band filter bank rather than an FFT, and a few Hz of frequency shift to decorrelate the loop. Its demonstration runs in the Faust IDE.
+
+### [Kiln](https://github.com/ALH477/kiln)
+
+[Kiln](https://github.com/ALH477/kiln) by [Asher](https://demod.ltd) (MIT) is a Nix build system for Nintendo 64, Analogue 3D and ModRetro M64 software, with a pinned MIPS cross toolchain, libdragon and the Ares emulator. Its Faust bridge compiles a `.dsp` into a live voice for the console's VR4300 processor, mixed with the RSP mixer, or renders it offline into a VADPCM instrument. Its checks enforce the console's limits at build time: they fail when a Faust voice calls a libm function such as `tanhf` or `powf`, pointing to `ba.tabulate`, when a double-precision instruction reaches the ROM, or when a baked instrument is silent or clips.
+
+### [FaustScript](https://roomi-fields.github.io/faustscript/)
+
+[FaustScript](https://github.com/roomi-fields/faustscript) by [roomi-fields](https://www.roomi-fields.com) (MIT) is a live-coding language on top of Faust. In Faust a name is a macro, so no expression can point at an instance that is already running; FaustScript adds the two things live performance needs: naming one instance, and acting on it while it plays. `let lpf1 fi.lowpass(fc=800)` places one filter, which can then be rewired, bypassed, replaced with its memory kept, or removed. A FaustScript program computes nothing itself: it is translated into Faust, with sliders and their real bounds taken from the declarations of the Faust libraries, and Faust compiles it.
+
+### [Pulsar](https://ronreiter.github.io/pulsar/)
+
+<div><a href="https://github.com/ronreiter/pulsar"><img width="60%" class="mx-auto d-block" src="img/pulsar.jpg" alt="Pulsar Studio: a song's code on the left, an arrangement view on the right"></a> </div>
+
+[Pulsar](https://github.com/ronreiter/pulsar) by Ron Reiter (GPL-3.0) is "electronic music as code, built for AI": a small music language, a synthesis engine and a mix report on loudness, tonal balance, energy and masking, so that an AI model can write a song, render it, read the report and revise it. Its voices, effects and mastering chain are written in Faust and compiled to native code through [DawDreamer](#dawdreamer). Pulsar Studio, a macOS application, shows the code beside an arrangement.
+
+### [Counter](https://github.com/jeffehobbs/counter)
+
+[Counter](https://github.com/jeffehobbs/counter) by [Jeff Hobbs](https://jeffehobbs.github.io/) (MIT) is a Mac application that builds canons out of fourteen physically modeled string instruments, after the devices of Steve Reich's *Electric Counterpoint*: canon at the unison, voices built up by substitution, resulting patterns and metric ambiguity. The loops are written by the app, and offsets, loop lengths, key, metre and the material of the strings can be changed while it plays. Each string is `Faust/string.dsp`, a dual-polarization plucked-string waveguide; its generated C++ is checked in, so the app builds without Faust installed.
+
+### [ESP32-S3 SuperMini Audio Kit](https://github.com/willbearfruits/esp32-s3-supermini-kit)
+
+[ESP32-S3 SuperMini Audio Kit](https://github.com/willbearfruits/esp32-s3-supermini-kit) (MIT) is an open-source, solderless, 3D-printable handheld built around the ESP32-S3 SuperMini, with a microphone, stereo line output, an OLED display, an encoder and a joystick, and an illustrated assembly guide. Its firmware applications include a step sequencer and sampler, a looper, and a Faust showcase that sends the microphone through seven Faust programs: Zita reverb, pitch shifter, wah, amp simulation, flanger, compressor and a pitch-following synth. The effects and the sequencer's synth voice are written in Faust and compiled to C++ classes for the chip.
+
+### [FXBox](https://github.com/Sreekmans/fxbox)
+
+<div><a href="https://github.com/Sreekmans/fxbox"><img width="60%" class="mx-auto d-block" src="img/fxbox.jpg" alt="The FXBox screen showing the tape echo settings"></a> </div>
+
+[FXBox](https://github.com/Sreekmans/fxbox) by [Steven Reekmans](https://www.stevenreekmans.be) (GPL-3.0) turns a Zynthian Kit V4, built on a Raspberry Pi 4, into a standalone multi-effect unit for external instruments, which needs neither the [Zynthian](#zynthian-platform) software nor a computer while playing. A fixed chain of eight switchable effects (filter, saturation, distortion, chorus, phaser, tape echo, reverb and compressor) is controlled from the kit's four encoders, with VU meters, MIDI clock and presets. The effects are written in Faust with the Faust libraries and run in a C++ JACK engine.
+
+### [isospin](https://github.com/aeskildsen/isospin)
+
+[isospin](https://github.com/aeskildsen/isospin) by [Anders Eskildsen](https://anderseskildsen.eu) (AGPL-3.0) is a set of instruments written in Faust, one source each, to be built for several hosts: SuperCollider UGens first, then Pure Data externals and CLAP plugins. Its first instrument, `woodbar.dsp`, is a struck wooden bar (claves, xylophone or marimba) modeled with modes, the damping law of wood and a mallet timed by Hertz contact theory. A script runs Faust with the `supercollider.cpp` architecture to make UGens linked statically into the server, as SuperSonic, SuperCollider in the browser, requires.
+
+### [Kairotic](https://bonuoq.github.io/kairotic/)
+
+[Kairotic](https://github.com/bonuoq/kairotic) (MPL-2.0) is a collaborative visual-acoustic space for musical improvisation, composition and performance, running in the browser: a patcher where code and patch are the same work, with a branching shared history, an EDN tree for musical notation and Verovio scores. It is written in ClojureScript, interpreted without a compiler, and its `faust~` boxes hold Faust code, which can use the Faust libraries, compiled in the page by faustwasm.
+
+### [Volume Booster](https://github.com/LisandroNahuelH/volume-booster)
+
+<div><a href="https://github.com/LisandroNahuelH/volume-booster"><img width="60%" class="mx-auto d-block" src="img/volume-booster.jpg" alt="The Volume Booster popup in Chrome"></a> </div>
+
+[Volume Booster](https://github.com/LisandroNahuelH/volume-booster) (MIT) is a Chrome extension that makes a tab louder than the page allows, processing its audio locally. It captures the tab on request and plays it back through a WebAudio graph built around a Faust AudioWorklet, compiled to WebAssembly at build time from the mono and stereo `.dsp` files of the project. It also has an optional lane that boosts all sites automatically and remembers settings per site, and it is published on the Chrome Web Store.
+
+### [Plant orchestra](https://github.com/quentinorh/biodata-pico)
+
+<div><a href="https://github.com/quentinorh/biodata-pico"><img width="60%" class="mx-auto d-block" src="img/biodata-pico.jpg" alt="The sensor clipped to a plant, and its signal displayed on a phone"></a> </div>
+
+[RPI Pico Sylvestre Orchestre](https://github.com/quentinorh/biodata-pico), by [Quentin Orhant](https://quentino.io) for the [CC Lab](https://climatechangelab.org) association, makes music from the electrical micro-variations of a plant. A sensor based on Sam Cusumano's MIDI Sprout measures the conductivity of a leaf; a Raspberry Pi Pico 2 W times its pulses, opens a Wi-Fi access point and serves a web page to a phone, which draws the signal and sonifies it. The instruments are precompiled Faust patches in WebAssembly, from [Ambient Garden](https://ambient.garden), played by the [Teasynth](#teasynth) engine.
+
+### [lcrmeter.dsp](https://github.com/twonoise/lcrmeter.dsp)
+
+[lcrmeter.dsp](https://github.com/twonoise/lcrmeter.dsp) by twonoise (MIT) is an LCR meter, which measures inductance, capacitance and resistance, made of a Linux PC, its sound card, two resistors and a Faust program. The program is compiled to an LV2 plugin and run in Carla with JACK: it sends a test signal through the headphone output, measures what comes back on the line input across the device under test, and shows the result on its displays, after an open-circuit and reference-resistor calibration. Its author also wrote [schmitt_trigger.dsp](https://github.com/twonoise/schmitt_trigger.dsp), a Faust LV2 Schmitt trigger to recover data from old computer tapes.
+
+### [Nylon](https://github.com/eulervoid/nylon)
+
+<div><a href="https://github.com/eulervoid/nylon"><img width="60%" class="mx-auto d-block" src="img/nylon.jpg" alt="The Nylon synthesizer plugin"></a> </div>
+
+[Nylon](https://github.com/eulervoid/nylon) by [eulervoid](https://eulervoid.com) is a synthesizer plugin (AU, VST3 and standalone) that makes sound from cyclic Bézier paths, with subtractive synthesis and some FM. It was developed and sold at Wave Casual, and released as open source by one of its developers after the company closed, with its licensing removed. Its DSP is written in Faust: the geometric oscillator, ladder filter, amplifiers, modulators, delay and chorus are `.dsp` files compiled to the C++ headers of the JUCE plugin.
+
+### [Oroboro Modular](https://www.oroboro.space)
+
+[Oroboro Modular](https://www.oroboro.space) is a modular synthesizer plugin whose modules can be written in Faust. With its [SDK](https://github.com/OroboroModular/OroboroModularSDK) (MIT), a Faust module is a single `.dsp` file that the plugin compiles on the fly, or a compiled module built from a Faust file with `oromod faust build`; compiled modules can also come from Rust, C or VCV Rack 2 plugins. Among [Oroboro's own modules](https://github.com/OroboroModular/OroboroModularModules), the ping-pong delay is written in Faust.
+
+### [SIMIAN for Schwung](https://github.com/legsmechanical/schwung-simian)
+
+[SIMIAN for Schwung](https://github.com/legsmechanical/schwung-simian) (GPL-3.0) brings the Faust drum synthesizer of Punk Labs' [OneTrick SIMIAN](#onetrick-simian) to the Ableton Move, through Schwung, as the same developer did with [CHONK](#chonk-for-schwung). Ten drums on sixteen pads are built from one voice, an oscillator that morphs from a triangle to a struck cymbal, filtered noise and a click, swept by an envelope, so that a whole kit is 190 values and no samples. The drum engine is Punk Labs' Faust code, and the port asks players to buy the original plugin.
+
 ### [Halden 6](https://thorstenweberger.github.io/halden6/)
 
 <div><a href="https://github.com/ThorstenWeberGER/halden6"><img width="60%" class="mx-auto d-block" src="img/halden6.jpg" alt="The Halden 6 panel in its Studio skin: LFO, DCO, filter, envelope and chorus sections above a keyboard"></a> </div>
