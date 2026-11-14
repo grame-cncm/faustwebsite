@@ -244,8 +244,7 @@ addMarker(52.5200, 13.4050, '<a href="#eurorack-blocks">eurorack-blocks</a>, Ber
 addMarker(45.7640, 4.8357, '<a href="#amstramgrame">AmStramGrame</a>, Lyon, France', blueIcon);
 addMarker(45.7640, 4.8357, '<a href="#gamelan">GameLAN</a>, Lyon, France', blueIcon);
 addMarker(52.5200, 13.4050, '<a href="#screamer">Screamer</a>, Berlin, Germany', blueIcon);
-addMarker(39.2904, -76.6122, '<a href="#typebeat">Typebeat</a>, Baltimore, MD, USA', blueIcon);
-addMarker(39.2904, -76.6122, '<a href = "#typebeat">Typebeat</a>, Baltimore, Maryland, USA', blueIcon);
+addMarker(39.2904, -76.6122, '<a href="#typebeat">Typebeat</a>, Baltimore, Maryland, USA', blueIcon);
 addMarker(37.4213, -122.1694, '<a href="#afdn-reverb">AFDN-reverb</a>,Stanford University, CA, USA', blueIcon);
 addMarker(42.6977, 23.3219, '<a href="#karpsichord">Karpsichord</a>,Sofia, Bulgaria', blueIcon);
 addMarker(46.1870, 7.5456, '<a href="#arduino-audio-tools">Arduino Audio Tools</a>, Valais, Switzerland', blueIcon);
@@ -309,7 +308,6 @@ addMarker(37.7749, -122.4194, '<a href="#echomatrix">EchoMatrix</a>, San Francis
 addMarker(52.0928, 5.1045, '<a href="#the-striso-board">The Striso board</a>, Utrecht, Netherlands', blueIcon);
 addMarker(41.9028, 12.4964, '<a href="#live-concatenative-granular-processing">Live concatenative granular processing</a>, Rome, Italy', blueIcon);
 addMarker(41.9028, 12.4964, '<a href="#fb_suppression">fb_suppression</a>, Rome, Italy', blueIcon);
-addMarker(41.9028, 12.4964, '<a href="#limiterstereo">limiterStereo</a>, Rome, Italy', blueIcon);
 addMarker(44.8378, -0.5792, '<a href="#ossia-score">ossia score</a>, Bordeaux, France', blueIcon);
 addMarker(45.0703, 7.6869, '<a href="#faselunare-microcosmos">FASELUNARE Microcosmos</a>, Turin, Italy', blueIcon);
 addMarker(37.7749, -122.4194, '<a href="#audio-anywhere">Audio Anywhere</a>, San Francisco, CA, USA', blueIcon);
@@ -396,10 +394,11 @@ addMarker(40.7128, -74.0060, '<a href="#incant-audio">Incant Audio</a>, New York
     });
 
     var located = {};
+    var projectMarkers = 0, siteMarkers = 0;
     markers.getLayers().forEach(function (marker) {
         var popup = marker.getPopup();
-        var match = popup && /href="#([^"]+)"/.exec(popup.getContent());
-        if (match) located[match[1]] = true;
+        var match = popup && /href\s*=\s*"#([^"]+)"/.exec(popup.getContent());
+        if (match) { located[match[1]] = true; projectMarkers++; } else { siteMarkers++; }
     });
 
     var missing = projects.filter(function (h) { return !located[h.id]; });
@@ -410,6 +409,10 @@ addMarker(40.7128, -74.0060, '<a href="#incant-audio">Incant Audio</a>, New York
     var html = '<strong>' + projects.length + '</strong> projects: <strong>' +
         (projects.length - missing.length) + '</strong> on the map, <strong>' +
         missing.length + '</strong> not located yet.';
+    var extra = projectMarkers - Object.keys(located).length;
+    html += '<br>The map bubbles add up to ' + (projectMarkers + siteMarkers) + ' markers: ' +
+        Object.keys(located).length + ' projects, ' + siteMarkers + ' sites (GRAME, CCRMA)' +
+        (extra ? ' and ' + extra + ' extra marker' + (extra > 1 ? 's' : '') + ' for projects sharing a section' : '') + '.';
     if (missing.length) {
         html += '<details><summary>Projects not located yet</summary><ul>' +
             missing.map(function (h) {
