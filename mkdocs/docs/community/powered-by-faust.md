@@ -272,6 +272,48 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [Rack](https://github.com/CptCaptain/rack)
+
+[Rack](https://github.com/CptCaptain/rack) by CptCaptain (MIT) is a modular synthesizer in the browser where every module is a Faust program. The page compiles each one with faustwasm into an AudioWorklet, and a cable is a Web Audio connection between two worklets. It comes with 53 modules, from oscillators, filters and envelopes to sequencers, a sampler and a drum grid, and its four-voice polyphony spreads along the cables: every module behind the Poly Keyboard runs once per voice. An editor in the page changes a module's Faust code while it plays, or adds a new module, which is two files: a `.dsp` whose inputs and outputs are the jacks, and a JSON description. The site is static files, with no bundler and no backend, and its interface is in German.
+
+### [faustdaw](https://orlarey.github.io/faustdaw/)
+
+<div><a href="https://orlarey.github.io/faustdaw/"><img width="60%" class="mx-auto d-block" src="img/faustdaw.jpg" alt="An empty faustdaw session: eight tracks, each with an FX button, volume and pan"></a> </div>
+
+[faustdaw](https://github.com/orlarey/faustdaw) by Yann Orlarey at [GRAME](https://www.grame.fr) is a DAW in the browser, under development, built on a formal domain model: eight audio tracks whose clips can be split, merged, crossfaded and duplicated, volume, pan, mute and solo per track, undo and redo, sessions saved as ZIP archives and a WAV mixdown. Each track has a chain of Faust effects: a `.dsp` file dropped on it is compiled in the page by faustwasm and shown with its parameter controls.
+
+### [RenkySum](https://github.com/mark-renker/renky_denk_sum)
+
+<div><a href="https://github.com/mark-renker/renky_denk_sum"><img width="60%" class="mx-auto d-block" src="img/renkysum.jpg" alt="The RenkySum editor, with its Console, Colour and Output sections"></a> </div>
+
+[RenkySum](https://github.com/mark-renker/renky_denk_sum) by Mark Renker (MIT) is a vintage console summing plugin (AU, VST3 and standalone), with one instance on every track and one on the master. Its Channel number seeds a deterministic spread of component tolerances (gain trim, high-frequency pole, transformer asymmetry, crosstalk and noise), so that 32 instances are 32 slightly different strips, the same in every session. Channel instances encode their output with `sin()` and the mix bus instance decodes the DAW's sum with `asin()`, so that channels interact at the sum, and a 3D Depth knob scales phase rotation, programme-dependent harmonics, rail sag, crosstalk and the noise floor. It has three console models and 2x or 4x oversampling. The DSP is written in Faust and compiled into a JUCE 8 plugin with a custom editor.
+
+### [Designing DSP](https://dsp.materialize.fun/)
+
+<div><a href="https://dsp.materialize.fun/"><img width="60%" class="mx-auto d-block" src="img/designing-dsp.jpg" alt="The index page of Designing DSP, which lists the demonstrations by part"></a> </div>
+
+[Designing DSP](https://github.com/materializepath/designing-sound-experiments) by [P.A.T.H.](https://materialize.fun) (MIT) is a set of 40 interactive sound-design demonstrations, a work in progress, after the procedural audio techniques of Andy Farnell's *Designing Sound* (MIT Press, 2010): synthesis techniques, DSP concepts such as aliasing and masking, then telephones, alarm bells and sirens, bouncing balls and breaking glass, fire, rain and wind, motors and helicopters, footsteps and explosions. Each demonstration is a self-contained page with sliders and its Faust source, shown and copyable, compiled with `faust -lang wasm` to a WebAssembly module of a few kilobytes: no server and no samples.
+
+### [MC-420](https://anentrypoint.github.io/mc-420/)
+
+[MC-420](https://github.com/AnEntrypoint/mc-420) (MIT) is a right-to-repair live workstation for punch-in musicians, on a Raspberry Pi 4 running Alpine Linux and played from an APC Key 25 class grid controller: 20 loopers quantized with Ableton Link, a six-voice polyphonic pitch-lock, a modal-resonator synth, a granulator and swappable effects. Its DSP is Faust source rather than a firmware blob: the loop engine, the effects chain, the pitch-lock and the Resonode synth are `.dsp` files that a repair technician or a musician can open, change and recompile; only the granulator is C++. The user's own effect is an LV2 bundle dropped on the flash storage, which can be written in Faust too.
+
+### [faust_min](https://pub.dev/packages/faust_min)
+
+[faust_min](https://github.com/shashankkhare/faust_min) (MIT) is a physical modeling synthesis plugin and sequencing engine for Flutter. It ships more than 50 instruments written in Faust and compiled to C++: guitars, pianos, saxophones and flutes, Indian instruments such as the sitar, sarod, santoor, bansuri, tanpura and tabla, Chinese ones such as the guzheng and erhu, singing bowls and synths. A mixer renders them on a thread pool, with tracks, mute and effects per track, and a sequencer plays plain-text scores written in Western notation, in sargam or in percussion strokes.
+
+### [Abdicant instruments](https://github.com/JRice/abdication)
+
+<div><a href="https://github.com/JRice/abdication"><img width="60%" class="mx-auto d-block" src="img/abdication.jpg" alt="The panel of the Abdication polysynth: oscillators, noise, transient, mix, drive, filter, envelope and modulators"></a> </div>
+
+[Abdicant instruments](https://github.com/JRice/abdication) by Jeremy Rice (MIT) is a set of eleven personal synthesizers and effects, built as CLAP and VST3 plugins on nih-plug and published as they are, with no support. Four of them are written in Faust and compiled to Rust, the generated code being committed so that building needs no Faust: Abdication, a polysynth with dual and wavetable oscillators, a saturating morphing filter and per-voice modulators; ABDrum, a drum voice per instance; and two effects, Alternatives and Calls, which add random bumps and holes in the spectrum, or whistles, on the harmonics of the notes played. The other seven are hand-written Rust.
+
+### [mightymic](https://github.com/twonoise/mightymic)
+
+<div><a href="https://github.com/twonoise/mightymic"><img width="90%" class="mx-auto d-block" src="img/mightymic.jpg" alt="The MightyMic LV2 plugin in Carla, with its ratio, notch, mains frequency and filter controls"></a> </div>
+
+[mightymic](https://github.com/twonoise/mightymic) by twonoise (MIT), the author of [lcrmeter.dsp](#lcrmeterdsp), is a high dynamic range passive microphone: a dynamic microphone with two 600 Ω transformers fitted in its body, wired to the stereo line input of a PC sound card under Linux. The two channels are subtracted to make a differential input, and a second output taken at a lower level, read by a second stereo ADC, takes over on the peaks that overload the first. The plugin that does it is a Faust program compiled with `faust2lv2` and run with JACK: a per-sample comparator switches between the main and the peak inputs, followed by filters, among them a mains hum remover. A second Faust program is the test signal source used for the measurements.
+
 ### [BabyEars](https://github.com/josmithiii/BabyEars)
 
 <div><a href="https://github.com/josmithiii/BabyEars"><img width="60%" class="mx-auto d-block" src="img/babyears.jpg" alt="The BabyEars main screen, with Mute and Bypass buttons and a maximum level slider"></a> </div>
@@ -672,9 +714,9 @@ BigBlueButton is one of the most popular free and open-source video conferencing
 
 BigBlueBetterAudio enhances speech quality in BigBlueButton by making voices sound more natural and less fatiguing in real time. The DSP chain is written in Faust, compiled to WebAssembly, and runs in the browser as an AudioWorklet. It combines EQ, dynamics, and RNNoise-based voice enhancement—entirely client-side with no server load.
 
-### [abclib library](https://github.com/alainbonardi/abclib)
+### [abclib library](https://github.com/CICM/abclib)
 
-<div><a href="https://github.com/alainbonardi/abclib/"><img width="60%" class="mx-auto d-block" src="img/abclib.png"></a> </div>
+<div><a href="https://github.com/CICM/abclib"><img width="60%" class="mx-auto d-block" src="img/abclib.png"></a> </div>
 
 abclib library is released by the CICM / MUSIDANSE (Centre de Recherches Informatique et Création Musicale, Paris 8 University) and is the result of 20 years of research, teaching and creation in mixed music, expressed as a set of codes in Faust language. The main topics addressed are: spatial sound processing and synthesis using ambisonics, multi-channel sound processing and utility objects for mixed music.
 
