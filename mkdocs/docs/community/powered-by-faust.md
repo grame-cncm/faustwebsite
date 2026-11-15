@@ -290,9 +290,9 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ### [Designing DSP](https://dsp.materialize.fun/)
 
-<div><a href="https://dsp.materialize.fun/"><img width="60%" class="mx-auto d-block" src="img/designing-dsp.jpg" alt="The index page of Designing DSP, which lists the demonstrations by part"></a> </div>
+<div><a href="https://dsp.materialize.fun/"><img width="50%" class="mx-auto d-block" src="img/designing-dsp.jpg" alt="The Fire &amp; Crackling demonstration of Designing DSP, with its intensity, density, pitch and gain sliders"></a> </div>
 
-[Designing DSP](https://github.com/materializepath/designing-sound-experiments) by [P.A.T.H.](https://materialize.fun) (MIT) is a set of 40 interactive sound-design demonstrations, a work in progress, after the procedural audio techniques of Andy Farnell's *Designing Sound* (MIT Press, 2010): synthesis techniques, DSP concepts such as aliasing and masking, then telephones, alarm bells and sirens, bouncing balls and breaking glass, fire, rain and wind, motors and helicopters, footsteps and explosions. Each demonstration is a self-contained page with sliders and its Faust source, shown and copyable, compiled with `faust -lang wasm` to a WebAssembly module of a few kilobytes: no server and no samples.
+[Designing DSP](https://github.com/materializepath/designing-sound-experiments) by [P.A.T.H.](https://materialize.fun) (MIT) is a set of 40 interactive sound-design demonstrations, a work in progress, after the procedural audio techniques of Andy Farnell's _Designing Sound_ (MIT Press, 2010): synthesis techniques, DSP concepts such as aliasing and masking, then telephones, alarm bells and sirens, bouncing balls and breaking glass, fire, rain and wind, motors and helicopters, footsteps and explosions. Each demonstration is a self-contained page with sliders and its Faust source, shown and copyable, compiled with `faust -lang wasm` to a WebAssembly module of a few kilobytes: no server and no samples.
 
 ### [MC-420](https://anentrypoint.github.io/mc-420/)
 
@@ -350,7 +350,7 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ### [Counter](https://github.com/jeffehobbs/counter)
 
-[Counter](https://github.com/jeffehobbs/counter) by [Jeff Hobbs](https://jeffehobbs.github.io/) (MIT) is a Mac application that builds canons out of fourteen physically modeled string instruments, after the devices of Steve Reich's *Electric Counterpoint*: canon at the unison, voices built up by substitution, resulting patterns and metric ambiguity. The loops are written by the app, and offsets, loop lengths, key, metre and the material of the strings can be changed while it plays. Each string is `Faust/string.dsp`, a dual-polarization plucked-string waveguide; its generated C++ is checked in, so the app builds without Faust installed.
+[Counter](https://github.com/jeffehobbs/counter) by [Jeff Hobbs](https://jeffehobbs.github.io/) (MIT) is a Mac application that builds canons out of fourteen physically modeled string instruments, after the devices of Steve Reich's _Electric Counterpoint_: canon at the unison, voices built up by substitution, resulting patterns and metric ambiguity. The loops are written by the app, and offsets, loop lengths, key, metre and the material of the strings can be changed while it plays. Each string is `Faust/string.dsp`, a dual-polarization plucked-string waveguide; its generated C++ is checked in, so the app builds without Faust installed.
 
 ### [ESP32-S3 SuperMini Audio Kit](https://github.com/willbearfruits/esp32-s3-supermini-kit)
 
@@ -462,7 +462,7 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ### [bitDSP](https://github.com/rottingsounds/bitDSP-faust)
 
-[bitDSP](https://github.com/rottingsounds/bitDSP-faust) by Till Bovermann and [Dario Sanfilippo](https://www.dariosanfilippo.com) for the [rottingsounds](http://rottingsounds.org) project (MIT) is a set of Faust library functions to explore the artistic possibilities of bit-based algorithms. It handles 1-bit streams as integers, as bit buses or packed in 32-bit integers, and implements bit operations, delta-sigma modulation and more experimental approaches such as cellular automata, recursive Boolean networks and linear feedback shift registers. The paper *Creative use of bit-stream DSP in Faust* was presented at the [IFC 2020](https://ifc20.sciencesconf.org/332745/document).
+[bitDSP](https://github.com/rottingsounds/bitDSP-faust) by Till Bovermann and [Dario Sanfilippo](https://www.dariosanfilippo.com) for the [rottingsounds](http://rottingsounds.org) project (MIT) is a set of Faust library functions to explore the artistic possibilities of bit-based algorithms. It handles 1-bit streams as integers, as bit buses or packed in 32-bit integers, and implements bit operations, delta-sigma modulation and more experimental approaches such as cellular automata, recursive Boolean networks and linear feedback shift registers. The paper _Creative use of bit-stream DSP in Faust_ was presented at the [IFC 2020](https://ifc20.sciencesconf.org/332745/document).
 
 ### [Maths](https://github.com/spluta/Maths)
 
