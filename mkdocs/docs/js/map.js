@@ -44,6 +44,17 @@ addMarker(45.7640, 4.8357, '<a href="https://www.grame.fr">Faust born in GRAME</
 addMarker(37.4213, -122.1694, '<a href="https://ccrma.stanford.edu">CCRMA</a>, Stanford University, CA, USA', redIcon);
 
 // Add project markers
+addMarker(36.8529, -75.9780, '<a href="#objecttalk">ObjectTalk</a>, Virginia Beach, VA, USA', blueIcon);
+addMarker(37.3891, -5.9845, '<a href="#synthlet">Synthlet</a>, Seville, Spain', blueIcon);
+addMarker(39.8283, -98.5795, '<a href="#stellate">Stellate</a>, USA', blueIcon);
+addMarker(48.7758, 9.1829, '<a href="#faust-runner-for-vs-code">Faust Runner for VS Code</a>, Stuttgart, Germany', blueIcon);
+addMarker(51.5074, -0.1278, '<a href="#faust2rnaa">faust2rnaa</a>, London, UK', blueIcon);
+addMarker(37.7749, -122.4194, '<a href="#goethe">Goethe</a>, San Francisco, CA, USA', blueIcon);
+addMarker(55.1694, 23.8813, '<a href="#gars">Garsæ</a>, Lithuania', blueIcon);
+addMarker(50.5039, 4.4699, '<a href="#modulab">Modulab</a>, Belgium', blueIcon);
+addMarker(60.1282, 18.6435, '<a href="#arcturus">Arcturus</a>, Sweden', blueIcon);
+addMarker(53.3498, -6.2603, '<a href="#cognition">Cognition</a>, Dublin, Ireland', blueIcon);
+addMarker(60.4720, 8.4689, '<a href="#internet-of-sounds-2026-performance">Internet of Sounds 2026 performance</a>, Norway', blueIcon);
 addMarker(51.1657, 10.4515, '<a href="#nyxmix">NyxMix</a>, Germany', blueIcon);
 addMarker(45.7640, 4.8357, '<a href="#faustdaw">faustdaw</a>, Lyon, France', blueIcon);
 addMarker(42.3601, -71.0589, '<a href="#abdicant-instruments">Abdicant instruments</a>, Boston, MA, USA', blueIcon);

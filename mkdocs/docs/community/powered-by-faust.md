@@ -272,6 +272,88 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [squares-and-circles](https://github.com/eh2k/squares-and-circles)
+
+<div><a href="https://github.com/eh2k/squares-and-circles"><img width="25%" class="mx-auto d-block" src="img/squares-and-circles.jpg" alt="The front panel of an Ornament &amp; Crime module running squares-and-circles: a small display, two buttons, two encoders, and the trigger, CV and output jacks"></a> </div>
+
+[squares-and-circles](https://github.com/eh2k/squares-and-circles) by [eh2k](https://github.com/eh2k) is an alternate firmware for the Ornament & Crime (O_C) Eurorack module on the Teensy 4.0. In the manner of the Monomachine and Machinedrum, it has four engine slots, each holding a synthesizer, drum, effect or sequencer engine controlled by the trigger inputs, the CV inputs or a clock, and the signal of one engine can be routed into the next. Many engines reuse open-source algorithms, notably those of Mutable Instruments, and two come from the Faust libraries: the Djembe drum is `pm.djembe` and the Rev-Dattorro plate reverb is `re.dattorro_rev`, each compiled to C with `faust -lang c` and included as a header, the six sliders of the reverb becoming its knobs. The firmware also carries a C++ port of `aanl.lib`, the antialiased nonlinearities of the Faust libraries.
+
+### [Weft Loom](https://weftloom.dev)
+
+<div><a href="https://weftloom.dev"><img width="60%" class="mx-auto d-block" src="img/weftloom.jpg" alt="The Weft Loom window while a song plays: the sounds on the left, the song laid out bar by bar and a drum grid in the middle, the song's Strudel code on the right"></a> </div>
+
+[Weft Loom](https://weftloom.dev) by [Ante Laća](https://github.com/alaca) (AGPL-3.0, [source](https://github.com/alaca/weft-loom)) is a free desktop app for making music with [Strudel](https://strudel.cc). Every pattern of a song is shown twice, as controls and as Strudel code: step grids for drums, piano rolls for notes and a knob for every number in the code, which the controls read and rewrite. A song panel lays the patterns out bar by bar, scenes play a song live, a mixer and several export formats come with it, and in a jam two people work on one song, each on their own machine. The plugins that come with the app are written in Faust: nine `.dsp` files (pluck, epiano, ladder, mallets, hall, flanger, wah, tape and shift) compiled ahead of time into WebAssembly modules with the `faust2wasm` script of faustwasm. A plugin sound is played with `s("name")`, a plugin effect is put on a pattern with `.fx("name")`, and each slider of the Faust code is a knob in the app.
+
+### [ObjectTalk](https://github.com/goossens/ObjectTalk)
+
+<div><a href="https://github.com/goossens/ObjectTalk"><img width="60%" class="mx-auto d-block" src="img/objecttalk.jpg" alt="The ObjectTalk audio editor: two oscillators, a noise source, a mixer, an envelope, a ladder filter, a phaser and a reverb wired together, with a MIDI keyboard input"></a> </div>
+
+[ObjectTalk](https://github.com/goossens/ObjectTalk) by [Johan Goossens](https://goossens.github.io) (MIT) is a single executable for macOS, Linux and Windows that combines an object-oriented scripting language, a 2D/3D graphics engine, node-based programming, an entity component system, an audio engine and its own development environment, made as a playground to learn with. The audio engine is a node editor in which circuits are wired together into modular synthesizers and effects that run in real time. 38 of these circuits are Faust programs, compiled to C++ headers by a build script: oscillator, filters, envelope and LFO, chorus, flanger, phaser, tremolo, vibrato, reverb, compressor and equalizers, and the parts of a guitar amplifier, with tube preamps, power amps, ten tone stacks, a fuzz and a tube screamer.
+
+### [Synthlet](https://github.com/danigb/synthlet)
+
+[Synthlet](https://github.com/danigb/synthlet) by [danigb](https://github.com/danigb) (MIT, [documentation](https://danigb.github.io/synthlet/docs/quick-start)) is a collection of audio modules for the browser, implemented as AudioWorklets and published on npm, as one package or module by module. Each module is a node that is connected into an existing Web Audio graph with `connect()` and automated through its `AudioParam`s: envelopes, oscillators, filters and effects that the Web Audio API does not have. Two packages are built on the Faust libraries: the reverb-delay module is generated from `re.greyhole`, and the virtual analog filters (Korg 35 low-pass and high-pass, diode ladder, Oberheim, and two Moog ladders) start from `vaeffects.lib`, the two Moog ladders with a nonlinear feedback path of their own.
+
+### [Stellate](https://stellate.app)
+
+[Stellate](https://stellate.app) by [Aboard](https://github.com/aboard-io) ([source](https://github.com/aboard-io/stellate)) is a generative music instrument in the browser: 274 genres are points in a deterministic vector space, drawn as a star map, and a path drawn across the map plays the music of wherever it is, rendered live. The synthesis models of its engine, first written in Csound, were ported to Faust: the repository holds 96 `.dsp` files, for the drums, the basses, the other voices and the per-voice effects, precompiled to WebAssembly modules and checked voice by voice against the Csound engine.
+
+### [krach](https://krach.io)
+
+[krach](https://krach.io) (GPL-2.0, [source](https://github.com/krachio/noise)) is a live coding audio system in Python. A synth or an effect is a Python function built from DSP primitives: it is compiled to Faust, then to native code by the Faust LLVM JIT compiler, inside an audio engine written in Rust. Synths are the nodes of a graph, where `>>` routes a signal and `@` plays a pattern, and patterns are composable in the manner of TidalCycles, with rational time. A change is heard at once, with hot reload and a crossfade when the graph is swapped. The Python wheel bundles the engine, the Faust compiler and LLVM, for macOS on Apple Silicon and Linux on x86_64.
+
+### [Faust Runner for VS Code](https://github.com/morphoice/vscode-faust-runner)
+
+[Faust Runner](https://github.com/morphoice/vscode-faust-runner) by [Morphoice](https://www.morphoice.com) (MIT), the author of [UNSTABLE](#unstable-polyphonic-synthesizer), is a VS Code extension that compiles, plays and analyzes Faust programs in the bottom panel of the editor. The panel compiles with `libfaust.wasm` and so needs no Faust installation, and it recompiles a `.dsp` file each time it is saved, swapping the AudioWorklet node in place. It has test signals (noise, sine, sweep, impulses, the microphone or any audio file), hardware and on-screen MIDI input, a triggered oscilloscope, and a spectrum analyzer with an input/output overlay and a frequency-response mode. Block diagrams and an optional lint for Faust code written for [HISE](#hise) complete it.
+
+### [faust2rnaa](https://github.com/tamlyn/faust2rnaa)
+
+[faust2rnaa](https://github.com/tamlyn/faust2rnaa) by [Tamlyn Rhodes](http://tamlyn.org) compiles Faust `.dsp` files into a complete custom node package for [react-native-audio-api](https://github.com/software-mansion/react-native-audio-api), Software Mansion's audio library for React Native, with Expo CNG support. One file gives a package with one node, a directory or a list of files gives one package with several nodes, and the tool is tested in CI against the current version of the library.
+
+### [Goethe](https://github.com/cmk/goethe)
+
+[Goethe](https://github.com/cmk/goethe) by [Chris McKinlay](https://github.com/cmk) (MIT) is a library of category-theoretic abstractions for Faust. It reads the block-diagram algebra of Faust as a delay-guarded feedback symmetric monoidal category, after the paper *Monoidal Streams for Dataflow Programming* (Di Lavore, de Felice and Román, 2022), and makes that structure explicit with named combinators such as `id`, `compose`, `first`, `second`, `braid`, `dimap` and `fbk`, each documented with its categorical role and with its reading as a Faust block diagram. A concept map relates the constructs of the paper to those of Faust (`,` is the tensor, `:` the composition, `mem` the delay and `~` the feedback operator), and the library comes with worked examples and tests.
+
+### [FaustCollision](https://github.com/vanderaalle/faustcollision)
+
+[FaustCollision](https://github.com/vanderaalle/faustcollision) by [vanderaalle](https://github.com/vanderaalle) (GPL-3.0) translates SuperCollider SynthDefs into Faust programs, so that SuperCollider can be used as a specification language for any Faust target: embedded boards, plugins or the web. It goes in the opposite direction of `faust2sc`. Each SuperCollider UGen is ported to a Faust function of its `sc.lib` library, from the C++ source of scsynth, and every port has a regression case rendered both by scsynth and by the Faust code, through DawDreamer, and compared sample by sample: most match to 1e-7 or better, and where they cannot, the measured floor and its cause are recorded. The controls of a SynthDef become sliders, with the range of their `ControlSpec`.
+
+### [bevy-faust-seedling](https://github.com/il0vemilktea/bevy-faust)
+
+[bevy-faust-seedling](https://github.com/il0vemilktea/bevy-faust) by [erika milktea](https://github.com/il0vemilktea) (Apache-2.0) brings DSP nodes written in Faust to the [Bevy](https://bevy.org) game engine. The Faust code is compiled to a Rust struct by `faust-build` in the `build.rs` of the game, a macro generates the types that integrate it into the [Firewheel](https://github.com/BillyDM/firewheel) audio engine through `bevy_seedling`, and the node is then spawned, and its parameters changed, from Bevy's entity component system. The demo plays the rain example of the Faust documentation, and a second crate works with the stock `bevy_audio` engine.
+
+### [AutoReaper](https://github.com/onliner10/AutoReaper)
+
+[AutoReaper](https://github.com/onliner10/AutoReaper) by [Mateusz Urban](https://github.com/onliner10) (MIT) is a Claude Code plugin for the [REAPER](https://www.reaper.fm) DAW: Claude reads the open project (tracks, FX, items, MIDI, routing, tempo map), makes the requested edits with ReaScript, and renders parts of the song to measure them, since it cannot listen. When no installed plugin does a job simply, such as a ducker keyed by the drums or a custom filter, Claude writes the effect in Faust. The effect runs in a CLAP plugin that embeds libfaust and the Faust libraries and keeps the code as its own state, so that the project stores it and Undo restores earlier code. The plugin window is a code editor with a Compile button, where the errors of Faust show on their lines, and an effect can listen to a sidechain and follow REAPER's transport.
+
+### [Garsæ](https://garsae.ranonis.lt/)
+
+<div><a href="https://garsae.ranonis.lt/"><img width="60%" class="mx-auto d-block" src="img/garsae.jpg" alt="Garsæ on desktop: instrument tiles for pads, bass, drums and textures, a few of them switched on with their level sliders, and the player controls in the sidebar"></a> </div>
+
+[Garsæ](https://garsae.ranonis.lt/) by [Pijus Ranonis](https://github.com/PijusRan) ([source](https://github.com/PijusRan/garsae)) is endless generative focus music in the browser: 38 instrument tiles are switched on and mixed, and everything is synthesized live, so that nothing repeats. One slider sets how far the music drifts, tempo and key can be set, a whole mix lives in a share link, and the app can be installed and run offline. A set of tiles plays on Faust voices, compiled to WebAssembly and run in an AudioWorklet: physical models of a tape flute, a string ensemble, a choir of FOF formant voices, a felt piano, glass bells, and plucked, muted and 808 basses, and drum kits made of modal membranes and bars, wired snares, a shaker and models of the TR-808 and TR-909 circuits. The repository states that its code was written by AI, under human design and direction.
+
+### [Modulab](https://modulab.dev)
+
+[Modulab](https://modulab.dev) by [BenDS1984](https://github.com/BenDS1984) (GPL-3.0, [source](https://github.com/BenDS1984/modulab)) is a modular DAW that runs in the browser, online and, once installed as a Progressive Web App, offline: modules are patched together with cables, and arranging the result on a timeline is planned. The interface is written in Svelte and TypeScript, and the DSP in Faust, compiled to WebAssembly at build time and hosted by a single engine in an AudioWorklet, where modules that are not heard are not computed. The project is in early development: it has its first modules, and notes on writing a module in Faust.
+
+### [Arcturus](https://arcturus.lef.fyi/)
+
+[Arcturus](https://arcturus.lef.fyi/) by [Lef Filippakis](https://github.com/Lef-F) (MIT, [source](https://github.com/Lef-F/arcturus)) is a virtual analog synthesizer in the browser designed around Arturia hardware: the 16 encoders of a BeatStep set the synthesis parameters and its 16 pads select modules and programs, while a KeyStep or any MIDI keyboard plays the notes. It can also be played with the computer keyboard and the mouse alone. Inspired by the Prophet-5, Juno-106, JP-8000, Oberheim SEM and Buchla 208, its synthesizer and its effects are two Faust programs, compiled to WebAssembly and run in an AudioWorklet with 8-voice polyphony, with Web MIDI for the hardware and a soft takeover when programs are switched.
+
+### [Vici](https://dj.woundup.org/)
+
+[Vici](https://dj.woundup.org/) by [Ryan N](https://github.com/ryanncode) (AGPL-3.0, [source](https://github.com/ryanncode/vici)) is a dual-deck DJ auto-mixing application in the browser. It reads local music folders without uploading them, organizes playlists, and crossfades by itself from one track to the next when a track reaches its outro marker. Each deck has a 3-band EQ, a DJ filter, an FX unit (tape echo, FDN reverb, phaser, beat roll and dub siren), a pitch fader and tempo sync. The two decks are AudioWorklet nodes routed into a master DSP graph written in Faust and run with `@grame/faustwasm`.
+
+### [Cognition](https://github.com/Cruisercc3/cognition)
+
+<div><a href="https://github.com/Cruisercc3/cognition"><img width="40%" class="mx-auto d-block" src="img/cognition.jpg" alt="The main screen of Cognition blending from Deep Work into Acid Drift, with the list of variations and the kind of work each one is made for"></a> </div>
+
+[Cognition](https://github.com/Cruisercc3/cognition) by [Conor Cruise](https://github.com/Cruisercc3) is a desktop app (Electron, on Windows) that plays generative music for focused work. It has ten variations on one minimal techno family and seven beatless worlds, each tuned for a kind of thinking such as reading, deep focus, short sprints or letting a problem sit. A variation builds up one element at a time and can move to a neighbour by itself. The DSP is written in Faust, compiled to WebAssembly and run in an AudioWorklet inside a hidden Electron window, and an offline renderer produces the same audio bit for bit, on which the tests of the project measure loudness, peaks and the mix.
+
+### [Internet of Sounds 2026 performance](https://github.com/petersalomonsen/internet-of-sounds-2026-performance)
+
+A piece by [Peter Salomonsen](https://github.com/petersalomonsen), composed on stage at the Internet of Sounds 2026 conference in Cannes with [WebAssembly Music](#webassembly-music), where the notes, the arrangement and the instruments are all code that compiles to WebAssembly in the page ([video](https://youtu.be/KmjlzGetLDo)). It started from an empty part at 90 BPM: takes played on a MIDI keyboard, and prompts to the studio agent of the browser DAW, which built the structure around them. Two more prompts after the show arranged the sections into a song of 74 bars. The piece received the Best Music Award of the 2026 IEEE International Workshop on the Musical Metaverse. Its instruments are written in Faust: physical models of waveguide strings, piano, flute, choir, brass and drums, first written in AssemblyScript and ported to Faust for this piece, each port compared sample by sample with its original.
+
 ### [NyxMix](https://github.com/Open-Cosmic-Software/nyxmix)
 
 <div><a href="https://github.com/Open-Cosmic-Software/nyxmix"><img width="60%" class="mx-auto d-block" src="img/nyxmix.jpg" alt="A NyxMix podcast session with host and music tracks, the mixer open and an agent's suggestion to accept or reject"></a> </div>
