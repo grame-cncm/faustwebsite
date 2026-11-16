@@ -272,6 +272,12 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [NyxMix](https://github.com/Open-Cosmic-Software/nyxmix)
+
+<div><a href="https://github.com/Open-Cosmic-Software/nyxmix"><img width="60%" class="mx-auto d-block" src="img/nyxmix.jpg" alt="A NyxMix podcast session with host and music tracks, the mixer open and an agent's suggestion to accept or reject"></a> </div>
+
+[NyxMix](https://github.com/Open-Cosmic-Software/nyxmix) by [Open Cosmic Software](https://github.com/Open-Cosmic-Software) (MIT) is a multitrack audio editor in the browser, for people and AI agents together, started with `npx nyxmix`: editing, mixing with buses, sends and automation, restoration and a spectral editor, transcript-based editing of speech, loudness mastering and podcast delivery checks. An agent does everything the interface does, through an MCP server or a REST API, and each of its edits is labelled with its author, can be undone, or waits as a proposal that the user previews and accepts or rejects. The same audio graph plays in the browser's `AudioContext` and renders on the server in an `OfflineAudioContext`, so that what is heard is what is exported. Faust programs are one kind of its plugins: `POST /api/plugins/faust` compiles a `.dsp` with faustwasm and the Faust libraries, in a worker thread with a time limit, wraps the WebAssembly module in a self-contained AudioWorklet whose parameters come from the program's sliders, buttons and checkboxes, and installs it as a track effect that sounds the same in preview and export. A compressor, a stereo phaser and the `re.zita_rev1_stereo` reverb are given as examples.
+
 ### [Rack](https://github.com/CptCaptain/rack)
 
 [Rack](https://github.com/CptCaptain/rack) by CptCaptain (MIT) is a modular synthesizer in the browser where every module is a Faust program. The page compiles each one with faustwasm into an AudioWorklet, and a cable is a Web Audio connection between two worklets. It comes with 53 modules, from oscillators, filters and envelopes to sequencers, a sampler and a drum grid, and its four-voice polyphony spreads along the cables: every module behind the Poly Keyboard runs once per voice. An editor in the page changes a module's Faust code while it plays, or adds a new module, which is two files: a `.dsp` whose inputs and outputs are the jacks, and a JSON description. The site is static files, with no bundler and no backend, and its interface is in German.
