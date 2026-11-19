@@ -44,6 +44,15 @@ addMarker(45.7640, 4.8357, '<a href="https://www.grame.fr">Faust born in GRAME</
 addMarker(37.4213, -122.1694, '<a href="https://ccrma.stanford.edu">CCRMA</a>, Stanford University, CA, USA', redIcon);
 
 // Add project markers
+addMarker(31.7683, 35.2137, '<a href="#sota-daw">SOTA DAW</a>, Jerusalem, Israel', blueIcon);
+addMarker(41.9028, 12.4964, '<a href="#seam-faust-libraries-and-seam-ltm">SEAM Faust libraries and SEAM-LTM</a>, Rome, Italy', blueIcon);
+addMarker(41.9536, 12.0750, '<a href="#listen-local-instrument-environment">LISTEN</a>, Ladispoli, Italy', blueIcon);
+addMarker(41.9536, 12.0750, '<a href="#infinite">In/Finite</a>, Ladispoli, Italy', blueIcon);
+addMarker(41.9536, 12.0750, '<a href="#audible-ecosystemics-n2">Audible Ecosystemics n.2</a>, Ladispoli, Italy', blueIcon);
+addMarker(45.7640, 4.8357, '<a href="#fpga-based-spherical-speaker-arrays">FPGA-Based Spherical Speaker Arrays</a>, Lyon, France', blueIcon);
+addMarker(45.5152, -122.6784, '<a href="#pdast2faust">pdast2faust</a>, Portland, OR, USA', blueIcon);
+addMarker(27.7676, -82.6403, '<a href="#tailwind-scomeotrope-and-optomotrist">Tailwind, Scomeotrope and Optomotrist</a>, St. Petersburg, FL, USA', blueIcon);
+addMarker(36.7783, -119.4179, '<a href="#synth-d">SYNTH-D</a>, California, USA', blueIcon);
 addMarker(36.8529, -75.9780, '<a href="#objecttalk">ObjectTalk</a>, Virginia Beach, VA, USA', blueIcon);
 addMarker(37.3891, -5.9845, '<a href="#synthlet">Synthlet</a>, Seville, Spain', blueIcon);
 addMarker(39.8283, -98.5795, '<a href="#stellate">Stellate</a>, USA', blueIcon);
