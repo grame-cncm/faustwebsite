@@ -58,7 +58,7 @@ Pluginmaker.ai is an AI-powered platform that creates audio plugins (VST/AU) fro
 
 <div><a href="https://www.expert-sleepers.co.uk/distingNT.html"><img width="35%" class="mx-auto d-block" src="img/distingNT.jpg"></a> </div>
 
-The disting NT Eurorack module now supports native C++ plug-ins and includes a toolchain to convert Faust programs into disting NT plug-ins (added in firmware v1.7.0). [Public demos show Faust DSP](https://www.youtube.com/watch?v=ZYjecU0lOyw) (e.g., the “Greyhole” reverb) running on the module, opening a path for fast prototyping and deployment of Faust effects/instruments in hardware. Another example with this [CZ Dual Oscillator](https://github.com/thorinside/czd_osc) program.
+The disting NT Eurorack module now supports native C++ plug-ins and includes a toolchain to convert Faust programs into disting NT plug-ins (added in firmware v1.7.0). [Public demos show Faust DSP](https://www.youtube.com/watch?v=ZYjecU0lOyw) (e.g., the “Greyhole” reverb) running on the module, opening a path for fast prototyping and deployment of Faust effects/instruments in hardware. Other examples are the [CZ Dual Oscillator](https://github.com/thorinside/czd_osc) and [HCl](https://github.com/thorinside/hcl), a resonant lowpass filter inspired by the TB-303 and written in a single Faust file, both by [Neal Sanche](https://nosuch.dev).
 
 ### [Soliste](https://www.expressivee.com/139-soliste)
 
@@ -424,9 +424,9 @@ The [SEAM Faust libraries](https://s-e-a-m.github.io/faust-libraries/) of [SEAM]
 
 [Garsæ](https://garsae.ranonis.lt/) by [Pijus Ranonis](https://github.com/PijusRan) ([source](https://github.com/PijusRan/garsae)) is endless generative focus music in the browser: 38 instrument tiles are switched on and mixed, and everything is synthesized live, so that nothing repeats. One slider sets how far the music drifts, tempo and key can be set, a whole mix lives in a share link, and the app can be installed and run offline. A set of tiles plays on Faust voices, compiled to WebAssembly and run in an AudioWorklet: physical models of a tape flute, a string ensemble, a choir of FOF formant voices, a felt piano, glass bells, and plucked, muted and 808 basses, and drum kits made of modal membranes and bars, wired snares, a shaker and models of the TR-808 and TR-909 circuits. The repository states that its code was written by AI, under human design and direction.
 
-### [Modulab](https://modulab.dev)
+### [Sonular](https://sonular.app)
 
-[Modulab](https://modulab.dev) by [BenDS1984](https://github.com/BenDS1984) (GPL-3.0, [source](https://github.com/BenDS1984/modulab)) is a modular DAW that runs in the browser, online and, once installed as a Progressive Web App, offline: modules are patched together with cables, and arranging the result on a timeline is planned. The interface is written in Svelte and TypeScript, and the DSP in Faust, compiled to WebAssembly at build time and hosted by a single engine in an AudioWorklet, where modules that are not heard are not computed. The project is in early development: it has its first modules, and notes on writing a module in Faust.
+[Sonular](https://sonular.app) by [BenDS1984](https://github.com/BenDS1984) (GPL-3.0, [source](https://github.com/BenDS1984/sonular)) is a modular DAW that runs in the browser, online and, once installed as a Progressive Web App, offline: modules are patched together with cables, and arranging the result on a timeline is planned. The interface is written in Svelte and TypeScript, and the DSP in Faust, compiled to WebAssembly at build time and hosted by a single engine in an AudioWorklet, where modules that are not heard are not computed. The project is in early development: it has its first modules, and notes on writing a module in Faust.
 
 ### [Arcturus](https://arcturus.lef.fyi/)
 
@@ -2174,7 +2174,7 @@ Automatic audio mastering plugin for live-streaming, podcasting and internet rad
 
 With the first Covid-19 related lock-downs in 2020, many real-life concerts, conferences and festivals were forced into the digital domain - and sounded pretty crappy. Having worked for almost 20 years in audio mastering, Berlin based engineer Klaus Scheuermann started to develop master_me - a word fusion of automatic mastering and mini-me - in order to make open source streaming sound better. After a few weeks of learning and development, master_me was first used at the 'Quarantine Sessions' - a weekly distributed electro-acoustic improvised concert, hosted at Stanford's CCRMA Institute.
 
-master_me was developed further to be an easy-to-use tool for all live streaming applications. In 2022 it was funded by the Prototype Fund, an open source software funding initiative by the german ministry of education and research. A stable release is available since September 2022.
+master_me was developed further to be an easy-to-use tool for all live streaming applications. In 2022 it was funded by the Prototype Fund, an open source software funding initiative by the german ministry of education and research. A stable release is available since September 2022. [ohos_master_me](https://github.com/xiaopeng-126/ohos_master_me) is a native port to HarmonyOS PC that keeps the Faust DSP of master_me and replaces its desktop interface with an ArkUI application.
 
 ### [metaSurface64](http://blanchemain.info/Documents/Programmation/index.php?page=metaSurface)
 
