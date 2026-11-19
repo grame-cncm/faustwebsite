@@ -272,6 +272,64 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [Satori](https://github.com/cephasteom/Satori)
+
+<div><a href="https://satori.cephasteom.co.uk"><img width="60%" class="mx-auto d-block" src="img/satori.jpg" alt="The Satori editor with a pattern of breakbeat samples, beside its console listing the sample banks"></a> </div>
+
+[Satori](https://github.com/cephasteom/Satori) by [Cephas Teom](https://cephasteom.co.uk) ([source](https://github.com/cephasteom/Satori)) is a live coding language for pattern interference, the successor of his Zen: timing is fully flexible, and parameters of any musical layer can control or transform those of any other. The language, the editor and the synthesis engine, Oto, can also be used as separate modules, and a fork exploring partitioned quantum cellular automata runs at [satori.cephasteom.co.uk](https://satori.cephasteom.co.uk). Oto plays the instruments of his [ct-synths](https://github.com/cephasteom/ct-synths) library, built with RNBO and with Faust: the FM synthesizer, pad, Karplus-Strong string, noise resonator, kick, snare, hi-hat, distortion and tape effects are `.dsp` files compiled to WebAssembly and loaded in the page with `@grame/faustwasm`.
+
+### [Resonance Lab](https://github.com/KTForce/resonance-lab)
+
+[Resonance Lab](https://github.com/KTForce/resonance-lab) by [KTForce](https://github.com/KTForce) (MIT) is a set of interactive physical models in the browser. Strings drawn on a canvas are plucked or strummed, their length setting the pitch through Mersenne's law; bars, tuned marimba bars, circular membranes and square plates are struck at a chosen position, and a live spectrum lays the measured output over the predicted partials. Both models are written in Faust: `strings.dsp` is an extended Karplus-Strong waveguide with a pluck-position comb filter, a frequency-dependent loss filter, all-pass dispersion for stiffness and Lagrange fractional-delay tuning, and `struck.dsp` a bank of modal resonators whose mode ratios come from the analytic solutions for beams, membranes and plates. They are compiled ahead of time with `faust2wasm-ts` and run in AudioWorklet nodes.
+
+### [Melofably](https://github.com/AboubakarArisar/Melofably)
+
+[Melofably](https://github.com/AboubakarArisar/Melofably) by [Abou Bakar](https://aboubakarisar.tech) ([source](https://github.com/AboubakarArisar/Melofably)) is a browser studio for designing and playing physically modeled instruments: a plucked string whose pitch follows from its length, tension and density, struck metal bars, thin-walled glass vessels, and wooden bars over tube resonators, each played from the keyboard with sliders for the physical dimensions and for brightness, attack and body resonance. Each instrument is a Faust program (`string.dsp`, a digital waveguide; `bar.dsp`, `glass.dsp` and `wood.dsp`, modal models from beam and shell theory) compiled to WebAssembly and run in an AudioWorklet under a React interface. The repository documents every model and its approximations, and an experimental engine of coupled parts (strings, bars, a soundboard) is being built beside them.
+
+### [modalsynth](https://modalsynth.mofei.me/)
+
+<div><a href="https://modalsynth.mofei.me/"><img width="60%" class="mx-auto d-block" src="img/modalsynth.jpg" alt="The modalsynth material editor: the parameters of a steel plate and of a mallet on each side, the contact simulation and the cross-damping in the middle"></a> </div>
+
+[modalsynth](https://modalsynth.mofei.me/) by [Mofei Li](https://github.com/MofeiL1) ([source](https://github.com/MofeiL1/modalsynth)) is a browser playground for the parametric modal resonator of SoundEngineVR, the author's sound engine for virtual reality: seven material parameters are tweaked in real time, a pair of resonator banks coupled by cross-damping is auditioned, and presets are saved in the browser. The resonator is a single Faust program of about 300 lines, `modal-resonator.dsp`, compiled to WebAssembly for this page and to native libraries for Windows, macOS and Android for the Unity and Quest 3 version, so the web and VR demos play the same algorithm.
+
+### [DSPDemo-Web](https://boux.github.io/DSPDemo-Web/)
+
+<div><a href="https://boux.github.io/DSPDemo-Web/"><img width="60%" class="mx-auto d-block" src="img/dspdemo-web.jpg" alt="The reverberation module of DSPDemo-Web: the audio source, the controls of a Schroeder reverb, a spectrum and an oscilloscope"></a> </div>
+
+[DSPDemo-Web](https://boux.github.io/DSPDemo-Web/) by [Boux](https://github.com/Boux) (GPL-3.0, [source](https://github.com/Boux/DSPDemo-Web)) rewrites for the web [DSPDemo](https://github.com/belangeo/dspdemo), Olivier Bélanger's application for exploring audio signal processing techniques, so that it runs on any device. Its effects are Faust programs compiled to WebAssembly by a script: distortion, phaser, fixed and variable delays, a vocoder, Freeverb, two Schroeder reverbs and a feedback delay network.
+
+### [DSPCLAW](https://dspclaw.vercel.app/)
+
+<div><a href="https://dspclaw.vercel.app/"><img width="60%" class="mx-auto d-block" src="img/dspclaw.jpg" alt="DSPCLAW: the sessions, the knobs of a synthesizer generated from Faust code, and the chat panel of the agent"></a> </div>
+
+[DSPCLAW](https://dspclaw.vercel.app/) by [Li Xian](https://lmaxwell.github.io) (MIT, [source](https://github.com/lmaxwell/dspclaw)) is a Faust programming environment with an embedded AI agent, in the browser and as an Electron application for macOS and Windows. Synthesizers and effects are described in natural language; the agent, driven by OpenAI, Anthropic, Moonshot or any compatible model, reads, writes and compiles the Faust code with `@grame/faustwasm`, and the program appears as a VST-style control surface with radial knobs and grouping, played from a MIDI controller or the computer keyboard, or fed with a WAV loop to test an effect.
+
+### [Nodeaa](https://nodeaa.pages.dev)
+
+<div><a href="https://nodeaa.pages.dev"><img width="60%" class="mx-auto d-block" src="img/nodeaa.jpg" alt="A Nodeaa patch: a MIDI keyboard and scale feeding a polyphonic synthesizer, through a delay and a gain to the audio output"></a> </div>
+
+[Nodeaa](https://nodeaa.pages.dev) by [August](https://github.com/a200xeaf) (AGPL-3.0, [source](https://github.com/a200xeaf/nodeaa2)) is a modular digital audio workstation in the browser, after Pure Data and Max: nodes are connected by drag and drop, with documentation of each parameter in the interface. It was developed with an accompanying written report and a user survey, both in the repository. Several of its nodes are Faust programs precompiled to WebAssembly: a polyphonic synthesizer, a Karplus-Strong string, a low-pass filter, a delay, an amplifier and a gain.
+
+### [Zither](https://zither.elf.org)
+
+<div><a href="https://zither.elf.org"><img width="60%" class="mx-auto d-block" src="img/zither.jpg" alt="The Zither playing surface: rows of note keys, one row per string"></a> </div>
+
+[Zither](https://zither.elf.org) by [Roger E Critchlow Jr](https://elf.org) (MIT, [source](https://github.com/recri/zither-pwa)), the author of [keyer](#keyer), is a stringed instrument for any device with a touchscreen and a web browser, installable as a Progressive Web App. Its instruments are Faust programs compiled with faustwasm by a Makefile: Karplus-Strong and extended Karplus-Strong strings, nylon, steel and electric guitars, a bass and a sitar, built on the physical models of the Faust libraries.
+
+### [I am sitting in a room](https://s-e-a-m.github.io/fc1969lais/)
+
+<div><a href="https://s-e-a-m.github.io/fc1969lais/"><img width="50%" class="mx-auto d-block" src="img/i-am-sitting-in-a-room.jpg" alt="The window of the stereo version: the start checkboxes, the input channel selector, the input meters and the pre-section controls"></a> </div>
+
+[I am sitting in a room](https://s-e-a-m.github.io/fc1969lais/) by [SEAM](https://github.com/s-e-a-m), the group of the [SEAM Faust libraries](#seam-faust-libraries-and-seam-ltm) (GPL-3.0, [source](https://github.com/s-e-a-m/fc1969lais)), is a realisation in Faust of Alvin Lucier's 1969 piece, in which a recorded voice is played back into the room and recorded again, over and over, until the resonances of the room replace the speech. Lucier gave only instructions, with the equipment of his time; this software is designed for the live electronic interpretation of the score. It comes in three versions, `1969lais.dsp`, `1969lais_LR.dsp` for stereo and `1969lais_WXYZ.dsp` for first-order Ambisonics, and runs in the browser on its project page.
+
+### [Synth School](https://github.com/eetu-n/synth-school)
+
+[Synth School](https://github.com/eetu-n/synth-school) by [Eetu Närhi](https://github.com/eetu-n) ([source](https://github.com/eetu-n/synth-school)) is an interactive web platform for learning sound synthesis, built with SvelteKit: lessons and tutorials with playable demonstrations, and a modular learning path where modules are connected with patch cables. Its sound comes from thirteen Faust programs compiled to WebAssembly, among them a sine synthesizer, additive harmonics, a subtractive synthesizer, a filter demonstration, noise, a resampling oscillator and a master mixer.
+
+### [node-web-audio-api](https://github.com/ircam-ismm/node-web-audio-api)
+
+[node-web-audio-api](https://github.com/ircam-ismm/node-web-audio-api) by the [Sound Music Movement Interaction team](https://www.stms-lab.fr/team/interaction-son-musique-mouvement/) of IRCAM (BSD-3-Clause) is an implementation of the Web Audio API for Node.js, with Node bindings to the Rust library [web-audio-api-rs](https://github.com/orottier/web-audio-api-rs). Its examples run Faust outside the browser: `@grame/faustwasm` compiles a Faust program, such as the French church bell model of the Faust examples, and plays it in an `AudioWorkletNode` of Node.js, with its parameters set from JavaScript.
+
 ### [SOTA DAW](https://github.com/Ezekeiel32/sotadaw)
 
 <div><a href="https://github.com/Ezekeiel32/sotadaw"><img width="60%" class="mx-auto d-block" src="img/sota-daw.jpg" alt="The performance view of SOTA DAW: scenes and clip slots built from an imported song"></a> </div>

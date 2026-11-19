@@ -44,6 +44,12 @@ addMarker(45.7640, 4.8357, '<a href="https://www.grame.fr">Faust born in GRAME</
 addMarker(37.4213, -122.1694, '<a href="https://ccrma.stanford.edu">CCRMA</a>, Stanford University, CA, USA', redIcon);
 
 // Add project markers
+addMarker(27.7052, 68.8574, '<a href="#melofably">Melofably</a>, Sukkur, Pakistan', blueIcon);
+addMarker(30.2741, 120.1551, '<a href="#dspclaw">DSPCLAW</a>, Hangzhou, China', blueIcon);
+addMarker(34.0522, -118.2437, '<a href="#nodeaa">Nodeaa</a>, Los Angeles, CA, USA', blueIcon);
+addMarker(32.3199, -106.7637, '<a href="#zither">Zither</a>, Las Cruces, NM, USA', blueIcon);
+addMarker(41.9028, 12.4964, '<a href="#i-am-sitting-in-a-room">I am sitting in a room</a>, Rome, Italy', blueIcon);
+addMarker(48.8597, 2.3518, '<a href="#node-web-audio-api">node-web-audio-api</a>, Paris, France', blueIcon);
 addMarker(31.7683, 35.2137, '<a href="#sota-daw">SOTA DAW</a>, Jerusalem, Israel', blueIcon);
 addMarker(41.9028, 12.4964, '<a href="#seam-faust-libraries-and-seam-ltm">SEAM Faust libraries and SEAM-LTM</a>, Rome, Italy', blueIcon);
 addMarker(41.9536, 12.0750, '<a href="#listen-local-instrument-environment">LISTEN</a>, Ladispoli, Italy', blueIcon);
