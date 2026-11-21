@@ -76,7 +76,7 @@ Bring your mixes to life with 23Tape, a high-fidelity analog tape emulation desi
 
 <div><a href="https://www.kickstarter.com/projects/andrewjohnmarch/m0ss-101-a-virtual-analog-monosynth"><img width="40%" class="mx-auto d-block" src="img/moss101.png"></a> </div>
 
-The M0SS-101 is a compact virtual analog monosynth in a rugged guitar pedal enclosure, designed for hands-on subtractive synthesis. It features 26 buttons and one encoder for intuitive control of 42 parameters, with RGB LEDs providing visual feedback. Parameter selection and editing are simple: press a button, turn the encoder, and monitor signal flow through LEDs. It supports MIDI learn for easy integration and stores up to 17 presets for quick recall. Built to be affordable and fun, the M0SS-101 balances depth, usability, and playability in a small form factor. The DSP engine is designed in Faust.
+The M0SS-101 is a compact virtual analog monosynth in a rugged guitar pedal enclosure, designed for hands-on subtractive synthesis. It features 26 buttons and one encoder for intuitive control of 42 parameters, with RGB LEDs providing visual feedback. Parameter selection and editing are simple: press a button, turn the encoder, and monitor signal flow through LEDs. It supports MIDI learn for easy integration and stores up to 17 presets for quick recall. Built to be affordable and fun, the M0SS-101 balances depth, usability, and playability in a small form factor. The DSP engine is designed in Faust. Its firmware, by [Andrew March](https://github.com/marchingband), is [open source](https://github.com/marchingband/M0SS-101) (GPL-3.0), with the Faust program `m0ss.dsp` and the C++ it generates. His [M0SS-309](https://github.com/marchingband/M0SS-309) is a bare-metal firmware built with the Circle library for the Raspberry Pi, whose three-voice synthesizer and chorus, delay and reverb master effects are also Faust programs.
 
 ### [UNSTABLE Polyphonic Synthesizer](https://www.morphoice.com/unstable)
 
@@ -271,6 +271,88 @@ Bela is a maker platform for creating beautifully responsive audio and interacti
 An electric guitar app using physical modeling. Faust was used to implement its sound synthesis/processing engine.
 
 ## Other projects
+
+### [ShallowGroove](https://github.com/zmk5566/shallowgroove)
+
+<div><a href="https://github.com/zmk5566/shallowgroove"><img width="60%" class="mx-auto d-block" src="img/shallowgroove.jpg" alt="ShallowGroove playing Korobeiniki: the arrangement, the mixer, the device chain and the piano roll, with the HexBlocks panel and the sound assistant on the right"></a> </div>
+
+[ShallowGroove](https://github.com/zmk5566/shallowgroove) by [Zhengyang Kenny Ma](https://zmk5566.github.io/) (MIT, [source](https://github.com/zmk5566/shallowgroove)) is a DAW for macOS and Windows built on the idea that everything is a plugin, the DAW included. It records and edits MIDI in a piano roll, launches clips and scenes in a session view, arranges them on a timeline, and can be played from HexBlocks, the author's hexagonal hardware modules of knobs, buttons and sensors; an optional DeepSeek assistant edits notes, arranges clips and helps write patches. Its instruments and effects are Faust programs (the voices of the *Daisy Bell* and *Korobeiniki* examples, and a chorus, compressor, delay, EQ, filter, reverb and saturator), compiled with faustwasm: a device's DSP panel opens its Faust source for editing, and the change is heard in the mix, with its waveform, spectrum and spectrogram.
+
+### [Moodscore](https://github.com/JavierBaal/Moodscore)
+
+[Moodscore](https://github.com/JavierBaal/Moodscore) by [Fran Barbero](https://github.com/JavierBaal) (Apache-2.0) is a drone and ambient synthesizer played by conversation, for live mood sessions and film scoring: a mood described to an AI agent connected over the Model Context Protocol ("colder", "something is getting closer") becomes slow musical gestures, a filter closing over forty seconds or a voice fading in, on six drone voices that walk chord progressions with smooth voice leading. The sound engine is a Faust program, `moodscore.dsp`, compiled to Rust: six voices of two detuned sawtooths with slow analog-style drift, a sub sine under the first, a stereo Moog-style ladder low-pass and a reverb whose room can be moved near or far; it knows nothing of moods, which are handled by the Rust director that drives its parameters.
+
+### [OpenJammer](https://openjammer.app)
+
+[OpenJammer](https://openjammer.app) by [Milo Presedo](https://github.com/ponderingBGI) (AGPL-3.0, [source](https://github.com/ponderingBGI/openjammer)) is an instrument patched on a canvas and played live, with layer-based looping: its real-time Rust core runs natively in a desktop app, which also hosts VST3, AU and CLAP plugins, and compiled to WebAssembly in the browser. Sounds come from samples, SoundFonts, plugins and code nodes, whose DSP can be written in Faust, also by an AI author built into the app: the `ojfaust` crate compiles the Faust source to a WebAssembly module and builds the node's ports and parameters from the compiler's JSON description, in a compile, error and repair loop.
+
+### [f3-recomp](https://github.com/ansxor/f3-recomp)
+
+<div><a href="https://github.com/ansxor/f3-recomp"><img width="50%" class="mx-auto d-block" src="img/f3-recomp.jpg" alt="The player select screen of Land Maker, running natively in the f3-recomp runtime"></a> </div>
+
+[f3-recomp](https://github.com/ansxor/f3-recomp) by [answer](https://darien.rs) is a static recompiler that turns Taito F3 arcade games into native C, with a modern runtime to play them; Land Maker is its first target. The runtime emulates the games' sound system, an Ensoniq design, at a high level, and the effect programs of its ES5510 signal processor are rewritten in Faust: reverb, hall, chorus, echo, overdrive and DC blocker are `.dsp` files built on a shared `es5510.lib`, compiled to Rust with an architecture file of the project.
+
+### [FieldAssist](https://github.com/ngwese/FieldAssist)
+
+<div><a href="https://github.com/ngwese/FieldAssist"><img width="60%" class="mx-auto d-block" src="img/fieldassist.jpg" alt="FieldAssist reviewing an AmbiX recording: the W, Y, Z and X waveforms, and the monitor panel with its orientation, yaw and gain controls"></a> </div>
+
+[FieldAssist](https://github.com/ngwese/FieldAssist) by [Greg Wuller](https://afofo.com) (MIT) is a desktop application, in development, for reviewing, editing and processing audio recorded in the field, written in Rust with a GPUI interface and a Lua scripting layer, for Linux, macOS and Windows. Its listening path is written in Faust: the `field-audio-monitor` crate has five monitor programs, for mono, stereo and mid-side recordings and for first-order Ambisonics in the AmbiX and FuMa conventions, decoded to stereo, each with input and output meters.
+
+### [playr](https://github.com/shakfu/playr)
+
+<div><a href="https://github.com/shakfu/playr"><img width="50%" class="mx-auto d-block" src="img/playr.jpg" alt="The playr terminal app: an album in the library, the track playing, and its position, loudness and volume"></a> </div>
+
+[playr](https://github.com/shakfu/playr) by Shakeeb Alireza, author of [ssp](#ssp) (MIT), is a local music player for active listeners, as a terminal app, a desktop window and a server driven from a web page or OSC, with a library, a sampler that slices tracks into kits for hardware samplers, a four-voice tape looper and two DJ decks. The delay and reverb that the looper and the decks send to are Faust programs compiled to Rust: a tape delay, a ping-pong delay, and the zita, plate and jp reverb models, the last after Julian Parker's jpverb.
+
+### [Verdandi](https://eugenschott.de/verdandi/)
+
+<div><a href="https://eugenschott.de/verdandi/"><img width="45%" class="mx-auto d-block" src="img/verdandi.jpg" alt="The norns device drawn by Verdandi: its screen, keys K1 to K3, encoders E1 to E3, output fader and view buttons"></a> </div>
+
+[Verdandi](https://eugenschott.de/verdandi/) (GPL-3.0, [source](https://github.com/ha1dcre/verdandi)) is an unofficial port of [norns](#norns) to macOS: the community's norns scripts, engines, softcut and the maiden editor run unchanged in a window that shows the device, as a standalone app and as an AUv3 plugin in a DAW track, with virtual or real grids, arcs and MIDI devices, and a builder that makes scripts from blocks without Lua. Like norns, its audio system, crone, runs Faust programs in the mixer: the EQ section, the stereo compressor and the Zita-Rev1 reverb.
+
+### [VultureTracker](https://github.com/shadoh420/VultureTracker)
+
+<div><a href="https://github.com/shadoh420/VultureTracker"><img width="60%" class="mx-auto d-block" src="img/vulturetracker.jpg" alt="The VultureTracker pattern view: drum, bass, arpeggio and pad channels, with the tabs of the other views, among them FAUST, at the top"></a> </div>
+
+[VultureTracker](https://github.com/shadoh420/VultureTracker) (MIT) is a music tracker for Windows with pattern, score and tablature views, whose songs are readable YAML files compiled to Impulse Tracker modules and played through libopenmpt; an optional agent panel works on the open song. Its sounds can be generated in Faust: the compiler, as the faustwasm package, is fetched on demand, a FAUST tab plays the code live, and `faust:` sample recipes render notes offline into samples, with examples of an acid bass, kick, marimba, nylon guitar, organ, pluck and OPL2-style voice.
+
+### [masterblaster-rs](https://github.com/evanlh/masterblaster-rs)
+
+[masterblaster-rs](https://github.com/evanlh/masterblaster-rs) by [Evan Lawrence-Hurt](https://evanlh.com) is a tracker and DAW engine in Rust that plays, renders and edits MOD files and the BMX songs of the Buzz tracker, with a GUI and a command-line player. Buzz songs are built from machines, and some of them are reimplemented in Faust (the Jeskola Filter 2, Reverb 2 and Freeverb, and a wah): with the default `faust` feature they are compiled at load time by libfaust, so these machines process the sound instead of passing it through.
+
+### [AskompX](https://github.com/xUnD3athx/AskompX)
+
+[AskompX](https://github.com/xUnD3athx/AskompX) by [UnD3ath](https://github.com/xUnD3athx) (GPL-3.0) is an asymmetrical compressor, in VST3 and CLAP for Windows, Linux and macOS: the positive and negative halves of the signal are compressed separately, which keeps the audio centred and, with the two thresholds unlinked, adds even harmonics with a tube-like tone. It is a Rust rewrite with nih-plug of [Askomp](https://github.com/AquaSounds/Askomp) by AquaSounds (GPL-2.0), a VST3 plugin in C#. Both are built on the same Faust program, `askomp_dsp.dsp`, compiled by the C# backend for Askomp and by the Rust backend (`faust -lang rust -double`) for AskompX, and wrapped with a waveform display, draggable threshold lines and meters.
+
+### [live-mix](https://kieranklaassen.github.io/live-mix/)
+
+<div><a href="https://kieranklaassen.github.io/live-mix/"><img width="60%" class="mx-auto d-block" src="img/live-mix.jpg" alt="Ten live-mix effects drawn as pedals with their knobs and displays: Shimmer, Tape Echo, Underwater, Seasons, Constellation, Prism, Rotary, Fog, Howl and Octaves"></a> </div>
+
+[live-mix](https://kieranklaassen.github.io/live-mix/) by [Kieran Klaassen](http://www.kieranklaassen.com) (MIT, [source](https://github.com/kieranklaassen/live-mix)) is a mixing engine for the browser, a TypeScript library on Web Audio and AudioWorklet: tracks, groups, sends and returns feed a master with a limiter and LUFS meters, a transport schedules clips, automation lanes and modulators move any parameter, and every capability is a tool that an AI agent can call. Its devices can be native Web Audio nodes, WAM 2.0 plugins, or WebAssembly modules built from C++ or Faust behind one flat C interface in an AudioWorklet; among its stock devices, the hall reverb and the FET limiter are Faust programs compiled to C++ and then to WebAssembly.
+
+### [keysynth](https://github.com/max31000/keysynth)
+
+[keysynth](https://github.com/max31000/keysynth) by [Maxim V](https://github.com/max31000) (AGPL-3.0) is a software synthesizer for MIDI keyboards, with a C++ and JUCE engine and a web interface, for Windows and macOS: virtual analog, DX7-style FM, tonewheel and combo organs, electric piano, SFZ sampler and drum synth engines, effects, layers and splits. Its DSP plugins, written in Faust or C++, are reloaded while it plays: Faust plugins, such as a pluck, a Moog filter, a string machine and a tremolo, are compiled at run time with the LLVM backend of libfaust.
+
+### [Aizana](https://github.com/OmniLightX/Aizana-DAW)
+
+[Aizana](https://github.com/OmniLightX/Aizana-DAW) is an open-source DAW for macOS focused on mixing, made by an audio engineer with the help of AI: recording, audio and MIDI editing, comping, buses, effect sends, and VST3, Audio Unit and CLAP hosting. Its plugin generator turns Faust into CLAP plugins: effects are composed from Faust templates (compressor, delay, drive, three-band EQ, reverb), or new Faust code is written by an agent such as Claude Code or Codex through MCP, compiled with a local Faust installation, and inserted on a track.
+
+### [AAW](https://github.com/wesleyLaurence/AAW)
+
+<div><a href="https://github.com/wesleyLaurence/AAW"><img width="60%" class="mx-auto d-block" src="img/aaw.jpg" alt="The AAW window: a song's tracks and clips, a drum rack below them, and the agent panel on the right reporting the edit it has just made"></a> </div>
+
+[AAW](https://github.com/wesleyLaurence/AAW), the Agentic Audio Workspace by [Wesley Laurence](https://github.com/wesleyLaurence) (MIT), is a DAW for the Mac, with tracks, clips, instruments, a mixer, effects and automation, that an AI agent can operate in the same project as the musician, every change being shown, heard and undoable. Users write their own effects, instruments and MIDI effects in Python, Rust or Faust, and the app draws their controls: a device's `device.dsp` is compiled by the WebAssembly backend of the Faust compiler, its controls are bound to the device's fields by name, and the engine runs it like a module built from Rust.
+
+### [Web Continuator](https://github.com/fpachet/continuator_front)
+
+[Web Continuator](https://github.com/fpachet/continuator_front) by [François Pachet](https://www.francoispachet.fr), author of [MusicSpace](#musicspace), brings his Continuator to the browser: a phrase played on a MIDI keyboard is sent to the Python Continuator engine, which answers with a continuation in the player's style, played back at once. Its instruments are Faust programs compiled in the page with faustwasm, such as the 24-voice polyphonic Continuator Clavier, and a template for other polyphonic instruments.
+
+### [Field 4](https://openendedgroup.com/field4)
+
+<div><a href="https://openendedgroup.com/field4/faust/"><img width="60%" class="mx-auto d-block" src="img/field-4.jpg" alt="A Faust program in a Field 4 box, with the compiler's undefined symbol error shown on its line"></a> </div>
+
+[Field 4](https://openendedgroup.com/field4) by [OpenEndedGroup](http://openendedgroup.com) (AGPL-3.0, [source](https://github.com/OpenEndedGroup/Field4)) is a live-coding environment for graphics, sound, data visualization and new media art, written in Kotlin, for macOS, Linux and Windows. It embeds the Faust compiler, as WebAssembly, so nothing has to be installed: a `#faust` region in a Kotlin string is compiled and played through Field's audio engine, its sliders become Field controls, errors are shown on their line, completion knows the standard libraries, and patterns play polyphonic Faust instruments, live or rendered offline.
 
 ### [Satori](https://github.com/cephasteom/Satori)
 
@@ -486,7 +568,7 @@ The [SEAM Faust libraries](https://s-e-a-m.github.io/faust-libraries/) of [SEAM]
 
 ### [Sonular](https://sonular.app)
 
-[Sonular](https://sonular.app) by [BenDS1984](https://github.com/BenDS1984) (GPL-3.0, [source](https://github.com/BenDS1984/sonular)) is a modular DAW that runs in the browser, online and, once installed as a Progressive Web App, offline: modules are patched together with cables, and arranging the result on a timeline is planned. The interface is written in Svelte and TypeScript, and the DSP in Faust, compiled to WebAssembly at build time and hosted by a single engine in an AudioWorklet, where modules that are not heard are not computed. The project is in early development: it has its first modules, and notes on writing a module in Faust.
+[Sonular](https://sonular.app) by [BenDS1984](https://github.com/BenDS1984) (GPL-3.0, [source](https://github.com/BenDS1984/sonular)) is a modular DAW that runs in the browser, online and, once installed as a Progressive Web App, offline: modules are patched together with cables, and arranging the result on a timeline is planned. The interface is written in Svelte and TypeScript, and the DSP in Faust, compiled to WebAssembly at build time and hosted by a single engine in an AudioWorklet, where modules that are not heard are not computed. The project is in early development: it has its first modules, and notes on writing a module in Faust. The same author's [Project X](https://github.com/BenDS1984/ProjectX) (GPL-3.0) is an Android synthesizer for tablets, also early, with two wavetable oscillators: its sound engine is a Faust program, `voice.dsp`, with audio output through Oboe and an interface in Jetpack Compose.
 
 ### [Arcturus](https://arcturus.lef.fyi/)
 
@@ -526,7 +608,7 @@ A piece by [Peter Salomonsen](https://github.com/petersalomonsen), composed on s
 
 <div><a href="https://github.com/mark-renker/renky_denk_sum"><img width="60%" class="mx-auto d-block" src="img/renkysum.jpg" alt="The RenkySum editor, with its Console, Colour and Output sections"></a> </div>
 
-[RenkySum](https://github.com/mark-renker/renky_denk_sum) by Mark Renker (MIT) is a vintage console summing plugin (AU, VST3 and standalone), with one instance on every track and one on the master. Its Channel number seeds a deterministic spread of component tolerances (gain trim, high-frequency pole, transformer asymmetry, crosstalk and noise), so that 32 instances are 32 slightly different strips, the same in every session. Channel instances encode their output with `sin()` and the mix bus instance decodes the DAW's sum with `asin()`, so that channels interact at the sum, and a 3D Depth knob scales phase rotation, programme-dependent harmonics, rail sag, crosstalk and the noise floor. It has three console models and 2x or 4x oversampling. The DSP is written in Faust and compiled into a JUCE 8 plugin with a custom editor.
+[RenkySum](https://github.com/mark-renker/renky_denk_sum) by Mark Renker (MIT) is a vintage console summing plugin (AU, VST3 and standalone), with one instance on every track and one on the master. Its Channel number seeds a deterministic spread of component tolerances (gain trim, high-frequency pole, transformer asymmetry, crosstalk and noise), so that 32 instances are 32 slightly different strips, the same in every session. Channel instances encode their output with `sin()` and the mix bus instance decodes the DAW's sum with `asin()`, so that channels interact at the sum, and a 3D Depth knob scales phase rotation, programme-dependent harmonics, rail sag, crosstalk and the noise floor. It has three console models and 2x or 4x oversampling. The DSP is written in Faust and compiled into a JUCE 8 plugin with a custom editor. Mark Renker's other plugins also start in Faust: the five engines of [TOPOS](https://github.com/mark-renker/topos) (MIT), a modular filter matrix of six slots in three parallel lanes, each have a Faust prototype beside their C++ implementation; [Foresight TD-1](https://github.com/mark-renker/foresight-td1), an anticipatory transient designer, and [Resonant Matter Field](https://github.com/mark-renker/resonant-matter-field), a modal and microtonal synthesizer, keep Faust ports or companions of their DSP; and the first version of [Serge Animal TKB](https://github.com/mark-renker/serge-animal-tkb) (AGPL-3.0), a patchable Serge-style modular voice, was a Faust plugin.
 
 ### [Designing DSP](https://dsp.materialize.fun/)
 
@@ -800,7 +882,7 @@ With Adam Finkelstein, the same author wrote [PEACE](https://github.com/DBraun/P
 
 ### [Faust Pedal Kit](https://joe-heffer.github.io/faust-pedalkit/)
 
-[Faust Pedal Kit](https://joe-heffer.github.io/faust-pedalkit/) by Joe Heffer ([repository](https://github.com/Joe-Heffer/faust-pedalkit), MIT) is a workshop for designing guitar and bass effects in Faust. Each effect is compiled to native Linux LV2, VST3 and CLAP plugins and checked by offline measurement tests, and the same Faust code runs in a [browser demo](https://joe-heffer.github.io/faust-pedalkit/demo/). Some effects are clean-room models of classic pedals, documented in circuit notes and used to calibrate the measurement tools; the others are original or circuit-inspired designs, such as a bass distortion that keeps the low band clean or an overdrive with a bias-shift control the original circuit lacks. Downloads with an installer are published.
+[Faust Pedal Kit](https://joe-heffer.github.io/faust-pedalkit/) by Joe Heffer ([repository](https://github.com/Joe-Heffer/faust-pedalkit), MIT) is a workshop for designing guitar and bass effects in Faust. Each effect is compiled to native Linux LV2, VST3 and CLAP plugins and checked by offline measurement tests, and the same Faust code runs in a [browser demo](https://joe-heffer.github.io/faust-pedalkit/demo/). Some effects are clean-room models of classic pedals, documented in circuit notes and used to calibrate the measurement tools; the others are original or circuit-inspired designs, such as a bass distortion that keeps the low band clean or an overdrive with a bias-shift control the original circuit lacks. Downloads with an installer are published. His [Stemma](https://github.com/Joe-Heffer/stemma) (MIT) is command-line tooling that lets an AI agent produce music from a written brief, with no DAW: among its renderers, Faust synthesizers are compiled with a C++ architecture of the project that plays each note of a part on its own instance, offline.
 
 ### [Corrente](https://corrente.cloud)
 

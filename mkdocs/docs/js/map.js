@@ -44,6 +44,15 @@ addMarker(45.7640, 4.8357, '<a href="https://www.grame.fr">Faust born in GRAME</
 addMarker(37.4213, -122.1694, '<a href="https://ccrma.stanford.edu">CCRMA</a>, Stanford University, CA, USA', redIcon);
 
 // Add project markers
+addMarker(22.3193, 114.1694, '<a href="#shallowgroove">ShallowGroove</a>, Hong Kong', blueIcon);
+addMarker(37.5443, -4.7278, '<a href="#moodscore">Moodscore</a>, Andalusia, Spain', blueIcon);
+addMarker(56.1304, -106.3468, '<a href="#f3-recomp">f3-recomp</a>, Canada', blueIcon);
+addMarker(36.7783, -119.4179, '<a href="#fieldassist">FieldAssist</a>, California, USA', blueIcon);
+addMarker(29.3759, 47.9774, '<a href="#playr">playr</a>, Kuwait City, Kuwait', blueIcon);
+addMarker(40.6782, -73.9442, '<a href="#masterblaster-rs">masterblaster-rs</a>, Brooklyn, NY, USA', blueIcon);
+addMarker(32.7157, -117.1611, '<a href="#live-mix">live-mix</a>, San Diego, CA, USA', blueIcon);
+addMarker(61.5240, 105.3188, '<a href="#keysynth">keysynth</a>, Russia', blueIcon);
+addMarker(48.8566, 2.3522, '<a href="#web-continuator">Web Continuator</a>, Paris, France', blueIcon);
 addMarker(27.7052, 68.8574, '<a href="#melofably">Melofably</a>, Sukkur, Pakistan', blueIcon);
 addMarker(30.2741, 120.1551, '<a href="#dspclaw">DSPCLAW</a>, Hangzhou, China', blueIcon);
 addMarker(34.0522, -118.2437, '<a href="#nodeaa">Nodeaa</a>, Los Angeles, CA, USA', blueIcon);
