@@ -34,7 +34,7 @@ faust-gh-search.sh [MODE] [LIMIT] [DAYS] [pushed|created]
 
 | argument | values |
 | :--- | :--- |
-| `MODE` | `repos`: GitHub topics, `language:Faust`, keywords in name, description and README (about 2 min); `code`: GitHub code search for `.dsp` files, generated code, faustwasm, libfaust, architectures, faust2xxx, `pkg:faust` imports, Cmajor patches, CI and build files... (15 to 20 min, code search quota); `ext`: everything the GitHub search API does not see, `forges` + `pkgs` + Sourcegraph (about 5 min); `all` (default): `repos` + `code` + `ext`; `forges`: GitLab instances (gitlab.com, framagit, Inria, IEM, CCRMA), Gitea/Forgejo (Codeberg, gitea.com) and SourceHut; `pkgs`: npm, crates.io, ecosyste.ms (packages with the `faust` keyword on every registry, and repositories of any forge that depend on a Faust package), the "Used by" pages of GitHub, AUR and Arch Linux packages built with faust; `wasm`: web and npm projects only; `deep`: wide code queries split by file size (30 to 60 min); `papers`: articles that cite the Faust reference publications (OpenAlex), its own table `DATE CIT TITLE SOURCE` then the URL |
+| `MODE` | `repos`: GitHub topics, `language:Faust`, keywords in name, description and README (about 2 min); `code`: GitHub code search for `.dsp` files, generated code, faustwasm, libfaust, architectures, faust2xxx, `pkg:faust` imports, Cmajor patches, CI and build files... (15 to 20 min, code search quota); `ext`: everything the GitHub search API does not see, `forges` + `pkgs` + Sourcegraph (about 5 min); `all` (default): `repos` + `code` + `ext`; `forges`: GitLab instances (gitlab.com, framagit, Inria, IEM, CCRMA), Gitea/Forgejo (Codeberg, gitea.com) and SourceHut; `pkgs`: npm, crates.io, ecosyste.ms (packages with the `faust` keyword on every registry, and repositories of any forge that depend on a Faust package), the "Used by" pages of GitHub, AUR and Arch Linux packages built with faust; `wasm`: web and npm projects only; `deep`: wide code queries split by file size (30 to 60 min); `papers`: articles that cite the Faust reference publications, from OpenAlex and Semantic Scholar merged by DOI or title (about 4 min), its own table `DATE CIT VIA TITLE SOURCE` then the URL, `VIA` saying which index found it (`oa`, `s2`) |
 | `LIMIT` | results per query, default 300, at most 1000 |
 | `DAYS` | recency window in days, default 365, `0` for no limit |
 | `SORT` | `pushed` (default): repositories with recent commits; `created`: new repositories |
@@ -73,7 +73,7 @@ Several sources make a more reliable hit. Useful environment variables:
 `FAUST_GH_ARCHIVED=0`, `FAUST_GH_WEAK=1`, `FAUST_GH_TSV=1`, `FAUST_GH_NEW=1`
 (only the projects marked `+`), `FAUST_GL_TOKEN` (a gitlab.com token:
 without it, gitlab.com allows only a few dozen anonymous requests per hour
-and is skipped once they are spent). Codeberg and gitea.com sometimes refuse
+and is skipped once they are spent), `FAUST_S2_KEY` (a Semantic Scholar API key, for a quota of its own instead of the shared anonymous one). Codeberg and gitea.com sometimes refuse
 anonymous search; the script then skips them and says so.
 
 ### 2. Remove the projects already on the page
