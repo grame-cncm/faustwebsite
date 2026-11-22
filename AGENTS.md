@@ -23,8 +23,10 @@ and a map marker are added whenever they are available.
 ### 1. Find candidates with `faust-gh-search.sh`
 
 `faust-gh-search.sh` (installed in `/usr/local/bin`, not in this repository)
-lists the GitHub repositories that use Faust, most recent first. It needs an
-authenticated `gh` CLI. `faust-gh-search.sh --help` prints the full usage:
+lists the projects that use Faust, most recent first: GitHub repositories,
+but also projects on other forges, in package registries and in Linux
+distributions. It needs an authenticated `gh` CLI, and `curl` and `jq` for
+the other sources. `faust-gh-search.sh --help` prints the full usage:
 
 ```
 faust-gh-search.sh [MODE] [LIMIT] [DAYS] [pushed|created]
@@ -32,7 +34,7 @@ faust-gh-search.sh [MODE] [LIMIT] [DAYS] [pushed|created]
 
 | argument | values |
 | :--- | :--- |
-| `MODE` | `repos`: topics, `language:Faust`, keywords in name, description and README (about 2 min); `code`: code search for `.dsp` files, generated code, faustwasm, libfaust, architectures... (10 to 15 min, code search quota); `all` (default): both; `deep`: wide queries split by file size (30 to 60 min) |
+| `MODE` | `repos`: GitHub topics, `language:Faust`, keywords in name, description and README (about 2 min); `code`: GitHub code search for `.dsp` files, generated code, faustwasm, libfaust, architectures, faust2xxx, `pkg:faust` imports, Cmajor patches, CI and build files... (15 to 20 min, code search quota); `ext`: everything the GitHub search API does not see, `forges` + `pkgs` + Sourcegraph (about 5 min); `all` (default): `repos` + `code` + `ext`; `forges`: GitLab instances (gitlab.com, framagit, Inria, IEM, CCRMA), Gitea/Forgejo (Codeberg, gitea.com) and SourceHut; `pkgs`: npm, crates.io, ecosyste.ms (packages with the `faust` keyword on every registry, and repositories of any forge that depend on a Faust package), the "Used by" pages of GitHub, AUR and Arch Linux packages built with faust; `wasm`: web and npm projects only; `deep`: wide code queries split by file size (30 to 60 min); `papers`: articles that cite the Faust reference publications (OpenAlex), its own table `DATE CIT TITLE SOURCE` then the URL |
 | `LIMIT` | results per query, default 300, at most 1000 |
 | `DAYS` | recency window in days, default 365, `0` for no limit |
 | `SORT` | `pushed` (default): repositories with recent commits; `created`: new repositories |
@@ -40,27 +42,50 @@ faust-gh-search.sh [MODE] [LIMIT] [DAYS] [pushed|created]
 Typical runs, saving the table to a file outside this repository:
 
 ```sh
-faust-gh-search.sh repos 300 365 > ~/FAUST_GH.txt          # active in the last year
-faust-gh-search.sh all 300 120 created > ~/FAUST_GH.txt    # created in the last 120 days
+FAUST_GH_NEW=1 faust-gh-search.sh all 300 30 > ~/FAUST_GH.txt   # new projects active in the last 30 days
+faust-gh-search.sh ext 300 0 > ~/FAUST_GH.txt                    # other forges and registries, no time limit
+faust-gh-search.sh papers 300 365 > ~/FAUST_PAPERS.txt           # articles of the last year
 ```
 
-Each repository takes two lines: `REPO STARS PUSHED CREATED LANG F% SRC
-DESCRIPTION`, then its URL. `F%` is the share of the code that GitHub
-classifies as Faust. `SRC` says how the repository was found: `dsp`, `fau`,
-`lib`, `emb`, `cgf`, `wasm`, `lfa`, `arch`, `gen`, `f2x`, `bld`, `dd`, `rs` are
-Faust code or tooling detected in the repository; `top`, `lng`, `kw`, `rdm`,
-`url` are weaker signals (topic, main language, keyword, README, link).
+Each project takes two lines: `+ REPO STARS PUSHED CREATED LANG F% SRC
+DESCRIPTION`, then its URL. Outside GitHub, `REPO` carries the host
+(`gitlab.com/owner/name`), or is a website or a package page when that is all
+a registry gives. `F%` is the share of the code that the forge classifies as
+Faust (GitHub, GitLab and Gitea measure it; `-` elsewhere). `SRC` says how
+the project was found:
+
+- Faust code or tooling detected in a GitHub repository: `dsp`, `fau`,
+  `old`, `lib`, `emb`, `cgf`, `ffl`, `wasm`, `cdn`, `lfa`, `arch`, `gen`,
+  `cs`, `f2x`, `bld`, `dd`, `rs`, `fpk` (`import("pkg:faust/...")`), `cmj`
+  (Cmajor patch loading a `.dsp`);
+- dependencies: `use` (depends on a Faust package, from ecosyste.ms), `dep`
+  (GitHub "Used by"), `aur` and `pac` (Arch packages built with or depending
+  on faust), `npm`, `crt`, `reg` (packages that mention Faust and audio);
+- other indexes and forges: `sg` (Sourcegraph code search), `gl` and `gt`
+  (GitLab and Gitea projects whose name or description speaks of Faust and
+  audio), `srht` (SourceHut);
+- weaker signals: `top`, `lng`, `kw`, `rdm`, `url` (topic, main language,
+  keyword, README, link).
+
 Several sources make a more reliable hit. Useful environment variables:
 `FAUST_GH_SKIP` (owners or repositories left out; the default leaves out
 `grame-cncm` and the package trees of the distributions), `FAUST_GH_FORKS=1`,
-`FAUST_GH_ARCHIVED=0`, `FAUST_GH_WEAK=1`, `FAUST_GH_TSV=1`.
+`FAUST_GH_ARCHIVED=0`, `FAUST_GH_WEAK=1`, `FAUST_GH_TSV=1`, `FAUST_GH_NEW=1`
+(only the projects marked `+`), `FAUST_GL_TOKEN` (a gitlab.com token:
+without it, gitlab.com allows only a few dozen anonymous requests per hour
+and is skipped once they are spent). Codeberg and gitea.com sometimes refuse
+anonymous search; the script then skips them and says so.
 
 ### 2. Remove the projects already on the page
 
-Compare every `github.com/owner/repo` of the list with the page, case
-insensitively, then look for the project name: many entries link to the
-project's website instead of its repository, or to the repository of a
-related project of the same author.
+The script marks with `+` the projects it has never shown before (history in
+`~/.cache/faust-gh-search/seen.tsv`) and whose URL is not on this page
+(`FAUST_GH_KNOWN`, which defaults to this page when the repository sits in
+`~/Developpements/faustwebsite`). A project shown once is no longer marked:
+keep the output of a run until its candidates are vetted. The URL
+comparison does not catch everything: look for the project name too, since
+many entries link to the project's website instead of its repository, or to
+the repository of a related project of the same author.
 
 ### 3. Vet each candidate
 
