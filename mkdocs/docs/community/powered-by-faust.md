@@ -272,6 +272,30 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [Faust Studio](https://plugins.jetbrains.com/plugin/32628-faust-studio)
+
+<div><a href="https://plugins.jetbrains.com/plugin/32628-faust-studio"><img width="60%" class="mx-auto d-block" src="img/faust-studio.jpg" alt="Faust Studio in a JetBrains IDE: the Faust source in the editor, the live panel with the oscilloscope, the spectrogram and the generated controls, and a frequency response in the Faust Analysis panel"></a> </div>
+
+[Faust Studio](https://plugins.jetbrains.com/plugin/32628-faust-studio) by [Lucas Perron](https://gitlab.com/lperron) (Apache-2.0, [source](https://gitlab.com/lperron/faust-extension)) is a plugin for the JetBrains IDEs, IntelliJ IDEA, PyCharm, CLion and the others, published on the JetBrains Marketplace. It adds language support for `.dsp` and `.lib` files, with highlighting, completion, navigation, signature help drawn from the installed Faust libraries, inlay hints, quick fixes and error annotations, and a live panel with an oscilloscope, a spectroscope, a spectrogram, the generated controls, MIDI and a virtual keyboard. Every save recompiles the program, either with the libfaust WebAssembly compiler of faustwasm or with the installed `faust` binary, and runs it in an AudioWorklet, with polyphony when the program declares `nvoices`; an analysis bench measures frequency, impulse, distortion and transfer responses offline, and an export panel calls `faust` for its other backends and for the JUCE plugin and standalone architectures.
+
+### [DuckingSpace](https://www.sonicskunk.com/)
+
+<div><a href="https://www.sonicskunk.com/"><img width="60%" class="mx-auto d-block" src="img/duckingspace.jpg" alt="The DuckingSpace window: the ducking amount, speed and sensitivity on the left, the decay, size, modulation, damping, diffusion and color knobs of the HALL reverb on the right"></a> </div>
+
+[DuckingSpace](https://www.sonicskunk.com/) by [Sonic Skunk](https://github.com/SonicSkunk) (GPL-3.0, [source](https://github.com/SonicSkunk/DuckingSpace)) is a free reverb plugin, VST3 on Windows and VST3 or AU on macOS, with ducking built in: the reverb drops while the input plays and fills the gaps when it stops, with no sidechain to set up. It adds a stereo chorus modulation, thirteen presets and a zoomable interface. It is built with [HISE](#hise), and both of its reverb engines are Faust programs compiled into HISE's scriptnode network: HALL (`VerbHall.dsp`) is an eight-line feedback delay network with allpass diffusers and a Hadamard matrix, adapted from `re.zita_rev_fdn` and `re.dattorro_rev`, and CLASSIC (`VerbScript.dsp`) is built on `re.jpverb` with a `de.fdelay` chorus.
+
+### [Neural Master Pro](https://github.com/Prophetic-Helgy/neural-master-pro)
+
+<div><a href="https://github.com/Prophetic-Helgy/neural-master-pro"><img width="60%" class="mx-auto d-block" src="img/neural-master-pro.jpg" alt="The Pro mixer of Neural Master Pro: the processing chain on the left, the ten-band graphic equalizer and the effect sliders in the middle, the track metadata and export settings on the right"></a> </div>
+
+[Neural Master Pro](https://github.com/Prophetic-Helgy/neural-master-pro) by Oleg Abezov (source available, free for personal use) is a Windows application that masters music offline, AI-generated or not: one-click loudness and true-peak presets for the streaming platforms, BS.1770-4 metering, A/B comparison, batch processing, stem audition, vocal alignment and export to WAV, MP3, FLAC and AAC. Its realtime Pro mixer is a Faust program, `mastering.dsp`, with gain, shelving filters, a ten-band graphic equalizer, a compressor, a limiter, saturation, an exciter, a Haas effect and stereo width, compiled in the application by the WebAssembly Faust compiler of faustwasm.
+
+### [Xmonk.lv2](https://github.com/brummer10/Xmonk.lv2)
+
+<div><a href="https://github.com/brummer10/Xmonk.lv2"><img width="30%" class="mx-auto d-block" src="img/xmonk.jpg" alt="The Xmonk window: a meditating figure on a mandala background, between the Gain and Sustain sliders"></a> </div>
+
+[Xmonk.lv2](https://github.com/brummer10/Xmonk.lv2) by Hermann Meyer, author of [Guitarix](#guitarix) (0BSD), is a small LV2 formant synthesizer for Linux and Windows, "an LV2 toy" with a mandala-like control surface drawn with libxputty. Its whole DSP comes from Faust: the voice is `pm.SFFormantModelBP` of `physmodels.lib`, a sawtooth through resonant bandpass formant filters with vowel interpolation, followed by a stereo reverb and a stereo delay, all converted to C++ by the dsp2cc script of Guitarix.
+
 ### [ShallowGroove](https://github.com/zmk5566/shallowgroove)
 
 <div><a href="https://github.com/zmk5566/shallowgroove"><img width="60%" class="mx-auto d-block" src="img/shallowgroove.jpg" alt="ShallowGroove playing Korobeiniki: the arrangement, the mixer, the device chain and the piano roll, with the HexBlocks panel and the sound assistant on the right"></a> </div>
@@ -864,7 +888,7 @@ With Adam Finkelstein, the same author wrote [PEACE](https://github.com/DBraun/P
 
 ### [sk-engines](https://github.com/shakfu/sk-engines)
 
-[sk-engines](https://github.com/shakfu/sk-engines) by Shakeeb Alireza, author of [ssp](#ssp) and cyfaust, is an alternative firmware for the [Spotykach](https://synthux.academy/store/spotykach), a Daisy-based instrument by Synthux Academy (MIT). The panel, pads, clock, CV and SD card stay the same, and the DSP engine underneath is swapped by flashing another build, among some twenty engines. Four of them are Faust: a reverb with three algorithms generated from Faust sources (Dattorro plate, Zita-Rev1 hall and Greyhole), and a chorus, a filter and a synthesizer voice generated from a Faust program and a small JSON manifest, with no hand-written C++. Other engines host Csound and ChucK.
+[sk-engines](https://github.com/shakfu/sk-engines) by Shakeeb Alireza, author of [ssp](#ssp) and cyfaust, is an alternative firmware for the [Spotykach](https://synthux.academy/store/spotykach), a Daisy-based instrument by Synthux Academy (MIT). The panel, pads, clock, CV and SD card stay the same, and the DSP engine underneath is swapped by flashing another build, among some twenty engines. Four of them are Faust: a reverb with three algorithms generated from Faust sources (Dattorro plate, Zita-Rev1 hall and Greyhole), and a chorus, a filter and a synthesizer voice generated from a Faust program and a small JSON manifest, with no hand-written C++. Other engines host Csound and ChucK. The same author's [daisy-apps](https://github.com/shakfu/daisy-apps) (MIT) runs these engines on bare Daisy hardware, the Pod, the Patch and the patch.init() module, with an OLED parameter interface generated from the parameters each engine declares. Its Faust kernels, the chorus, the filter, the three reverbs, the voice and a tape effect with wow, flutter and Jiles-Atherton saturation from `hysteresis.lib`, are generated with cyfaust and a small architecture file of the project.
 
 ### [odo](https://github.com/PatrickReynoldsCoding/odo)
 
