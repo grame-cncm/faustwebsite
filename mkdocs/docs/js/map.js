@@ -44,6 +44,15 @@ addMarker(45.7640, 4.8357, '<a href="https://www.grame.fr">Faust born in GRAME</
 addMarker(37.4213, -122.1694, '<a href="https://ccrma.stanford.edu">CCRMA</a>, Stanford University, CA, USA', redIcon);
 
 // Add project markers
+addMarker(48.8566, 2.3522, '<a href="#synchromy">Synchromy</a>, Paris, France', blueIcon);
+addMarker(55.6759, 12.5655, '<a href="#zoom-faust-fx">zoom-faust-fx</a>, Copenhagen, Denmark', blueIcon);
+addMarker(51.1657, 10.4515, '<a href="#dawg">DAWg</a>, Germany', blueIcon);
+addMarker(45.7640, 4.8357, '<a href="#faust-gen-patches">faust-gen-patches</a>, Lyon, France', blueIcon);
+addMarker(42.8333, 12.8333, '<a href="#coral-ensemble">Coral Ensemble</a>, Italy', blueIcon);
+addMarker(42.8333, 12.8333, '<a href="#bluesfuse-preamp">BluesFuse Preamp</a>, Italy', blueIcon);
+addMarker(42.8333, 12.8333, '<a href="#eclectic-mistress">Eclectic Mistress</a>, Italy', blueIcon);
+addMarker(64.1466, -21.9426, '<a href="#wclap-rack">wclap-rack</a>, Reykjavík, Iceland', blueIcon);
+addMarker(45.7640, 4.8357, '<a href="#audio-dsl-bench">Audio DSL Bench</a>, Lyon, France', blueIcon);
 addMarker(45.7640, 4.8357, '<a href="#faust-studio">Faust Studio</a>, Lyon, France', blueIcon);
 addMarker(51.1657, 10.4515, '<a href="#xmonklv2">Xmonk.lv2</a>, Germany', blueIcon);
 addMarker(22.3193, 114.1694, '<a href="#shallowgroove">ShallowGroove</a>, Hong Kong', blueIcon);

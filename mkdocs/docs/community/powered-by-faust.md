@@ -272,6 +272,92 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [Synchromy](https://etienne.design/tools/synchromy/en/)
+
+<div><a href="https://etienne.design/tools/synchromy/en/"><img width="60%" class="mx-auto d-block" src="img/synchromy.jpg" alt="Colorful patterned shapes on the Synchromy canvas next to the drawing controls"></a> </div>
+
+[Synchromy](https://etienne.design/tools/synchromy/en/) by [Étienne Mineur](https://etienne.design/) (MIT, [source](https://github.com/etiennemineur/synchromy)) is a browser instrument for generative drawing and music, inspired by Norman McLaren’s film of the same name. Each stroke produces a shape and a sound. Its mastering chain, `maitre.dsp`, uses Faust compiled to WebAssembly for send reverb, multiband compression, soft clipping and a look-ahead limiter.
+
+### [zoom-faust-fx](https://github.com/nealstewart/zoom-faust-fx)
+
+[zoom-faust-fx](https://github.com/nealstewart/zoom-faust-fx) by [Neal Stewart](https://github.com/nealstewart) (MIT) is a toolchain for writing custom effects for the Zoom MS-70CDR+ and compatible MultiStomp Plus pedals. It builds `.ZD2` effects from Faust sources, maps their controls to pedal parameters and includes a browser auditioner that runs the DSP in WebAssembly.
+
+### [DAWg](https://github.com/OliverLeenders/DAWg-public)
+
+[DAWg](https://github.com/OliverLeenders/DAWg-public) by [Oliver Leenders](https://github.com/OliverLeenders) (AGPL-3.0-or-later) is a digital audio workstation with modular audio graphs, MIDI editing and mixing. Its Faust nodes compile and run scripts through libfaust’s LLVM backend or interpreter, including per-note polyphonic voice graphs and effects such as chorus, tremolo and delay.
+
+### [Phrasing Dojo](https://cellish.github.io/phrasing-dojo/)
+
+<div><a href="https://cellish.github.io/phrasing-dojo/"><img width="60%" class="mx-auto d-block" src="img/phrasing-dojo.jpg" alt="Phrasing Dojo showing a score for a cello listening exercise"></a> </div>
+
+[Phrasing Dojo](https://cellish.github.io/phrasing-dojo/) by [jun](https://github.com/cellish) (source available, [source](https://github.com/cellish/phrasing-dojo)) is a browser tool for practising expressive phrasing through scores and listening comparisons. Its cello voice, `cello.dsp`, adapts `violinModel` from `physmodels.lib` to the cello range, adds body and open-string resonance, and runs in the browser as WebAssembly.
+
+### [faust-gen-patches](https://sletz.github.io/faust-gen-patches/web/)
+
+<div><a href="https://sletz.github.io/faust-gen-patches/web/"><img width="45%" class="mx-auto d-block" src="img/faust-gen-patches.jpg" alt="Browser player for Lorenz–Rössler chaos with model controls and signal plots"></a> </div>
+
+[faust-gen-patches](https://sletz.github.io/faust-gen-patches/web/) by [Stéphane Letz](https://github.com/sletz) (MIT for the Faust programs and scripts, [source](https://github.com/sletz/faust-gen-patches)) ports 35 of Max Bruckert’s Max/MSP `gen~` patches to Faust, including reverbs, spatializers and synthesis models. The project compares each port sample by sample against Max’s C++ export. The examples run in Max through `faustgen~` and in the browser as WebAssembly.
+
+### [Coral Ensemble](https://github.com/tristantarrant/coral-ensemble)
+
+<div><a href="https://github.com/tristantarrant/coral-ensemble"><img width="35%" class="mx-auto d-block" src="img/coral-ensemble.jpg" alt="Coral Ensemble chorus plugin with rate, depth, mix and model controls"></a> </div>
+
+[Coral Ensemble](https://github.com/tristantarrant/coral-ensemble) by [Tristan Tarrant (Dataforte)](https://github.com/tristantarrant) (GPL-2.0-or-later) emulates the BOSS CE-2 and CE-2B chorus pedals as LV2, VST3 and CLAP plugins and as a standalone JACK app. Its Faust DSP, `coralensemble.dsp`, models the modulated bucket-brigade delay, the filters around it and the dry/wet mix.
+
+### [BluesFuse Preamp](https://github.com/tristantarrant/bluesfuse-preamp)
+
+<div><a href="https://github.com/tristantarrant/bluesfuse-preamp"><img width="30%" class="mx-auto d-block" src="img/bluesfuse-preamp.jpg" alt="BluesFuse Preamp plugin with gain, tone, model and compression controls"></a> </div>
+
+[BluesFuse Preamp](https://github.com/tristantarrant/bluesfuse-preamp) by [Tristan Tarrant (Dataforte)](https://github.com/tristantarrant) (GPL-2.0-or-later) emulates five variants of the Xotic BB Preamp overdrive for LV2, VST3, CLAP and standalone JACK use. The Faust program `bluesfuse.dsp` implements the overdrive and tone shaping for the guitar and bass variants.
+
+### [Eclectic Mistress](https://github.com/tristantarrant/eclectic-mistress)
+
+<div><a href="https://github.com/tristantarrant/eclectic-mistress"><img width="35%" class="mx-auto d-block" src="img/eclectic-mistress.jpg" alt="Eclectic Mistress plugin with rate, range, color and filter matrix controls"></a> </div>
+
+[Eclectic Mistress](https://github.com/tristantarrant/eclectic-mistress) by [Tristan Tarrant (Dataforte)](https://github.com/tristantarrant) (GPL-2.0-or-later) emulates the Electro-Harmonix Electric Mistress flanger as LV2, VST3 and CLAP plugins and as a standalone JACK app. Its Faust program `eclecticmistress.dsp` implements the modulated bucket-brigade delay, feedback and filter matrix mode.
+
+### [LA500A](https://github.com/Slowbass/LA500A)
+
+<div><a href="https://github.com/Slowbass/LA500A"><img width="60%" class="mx-auto d-block" src="img/la500a.jpg" alt="LA500A compressor interface with an analog-style meter and compression controls"></a> </div>
+
+[LA500A](https://github.com/Slowbass/LA500A) by [Slowbass](https://github.com/Slowbass) is a JUCE plugin that simulates the JLM Audio LA500A optical compressor and its BIO500v2 input/output board. The audio processing is written in Faust in `dsp/la500a.dsp` and compiled to C++ for the plugin.
+
+### [CalrecEQ](https://github.com/Slowbass/CalrecEQ)
+
+<div><a href="https://github.com/Slowbass/CalrecEQ"><img width="60%" class="mx-auto d-block" src="img/calreceq.jpg" alt="CalrecEQ interface with separate equalizer controls for the two channels"></a> </div>
+
+[CalrecEQ](https://github.com/Slowbass/CalrecEQ) by [Slowbass](https://github.com/Slowbass) is a JUCE VST3 plugin that simulates the DIY version of the Calrec P1549 equalizer. Its Faust program `dsp/calrec_p1549.dsp` implements the four-band EQ independently for each channel.
+
+### [ToneScope](https://github.com/siddsan7/ToneScope)
+
+[ToneScope](https://github.com/siddsan7/ToneScope) by [Siddharth Sanjay](https://github.com/siddsan7) is a Windows guitar-effects workbench for comparing renders, inspecting gain reduction and auditioning RMS-matched passages. Its C++ audio engine hosts Faust-generated processing. The Faust stereo RMS compressor handles detection, attack and release, and gain application, and the project also includes Faust implementations of drive and EQ components.
+
+### [wclap-rack](https://github.com/synth-is/wclap-rack)
+
+[wclap-rack](https://github.com/synth-is/wclap-rack) by [synth.is](https://synth.is/) (MIT for the specification and reference tools) defines a format and reference host for distributing chains of WebCLAP plugins. It includes a generic Faust graph engine, `faust-runner`, example racks that use it and Faust-generated DSP templates for its `cppn-engine`.
+
+### [pbrAudioShaders](https://github.com/Malcom3D/pbrAudioShaders)
+
+[pbrAudioShaders](https://github.com/Malcom3D/pbrAudioShaders) by [Malcom3D](https://github.com/Malcom3D) (GPL-3.0-or-later) explores sound for rigid-body simulations, including impacts, scraping and sliding. It uses Faust’s physical-modeling tools to derive modal models from 3D meshes and integrates Faust DSP into its C++ sound renderer.
+
+### [Dungeon of the Mecard](https://jempasam.github.io/sequence_roguelike/)
+
+<div><a href="https://jempasam.github.io/sequence_roguelike/"><img width="60%" class="mx-auto d-block" src="img/sequence-roguelike.jpg" alt="Dungeon of the Mecard showing the cave route, encounter icons and an elite encounter tooltip"></a> </div>
+
+[Dungeon of the Mecard](https://jempasam.github.io/sequence_roguelike/) by [Sam (Jempasam)](https://github.com/Jempasam) ([source](https://github.com/Jempasam/sequence_roguelike)) is a real-time roguelike playable in the browser or on the desktop. Its source repository, `sequence_roguelike`, contains Faust programs for game sounds such as card plays, impacts and encounter cues. The build renders those programs to WAV assets used by the game.
+
+### [KRUPP-NEURAL](https://github.com/CaptainChronosis/KRUPP-NEURAL)
+
+<div><a href="https://github.com/CaptainChronosis/KRUPP-NEURAL"><img width="45%" class="mx-auto d-block" src="img/krupp-neural.jpg" alt="KRUPP-NEURAL acoustic instrument atlas showing the positions of its reference timbres"></a> </div>
+
+[KRUPP-NEURAL](https://github.com/CaptainChronosis/KRUPP-NEURAL) by [CaptainChronosis](https://github.com/CaptainChronosis) is a neural synthesizer for the FM-1 that moves between struck, plucked and bowed timbres. Its Faust models in `lab/teacher/` generated reference sounds for training the neural engine that runs on the hardware.
+
+### [Audio DSL Bench](https://github.com/sletz/audio-dsl-bench)
+
+<div><a href="https://github.com/sletz/audio-dsl-bench"><img width="50%" class="mx-auto d-block" src="img/audio-dsl-bench.jpg" alt="Benchmark chart comparing audio DSP languages against the fastest Faust build across 38 programs"></a> </div>
+
+[Audio DSL Bench](https://github.com/sletz/audio-dsl-bench) by [Stéphane Letz](https://github.com/sletz) compares 38 DSP programs implemented in Faust, onda, Cmajor, YDSP and hand-written C++. The benchmark checks outputs and measures performance in the same harness using Faust’s C++, LLVM JIT and `ocpp` backends. The fastest Faust build for each program serves as the reference in the charts.
+
 ### [Faust Studio](https://plugins.jetbrains.com/plugin/32628-faust-studio)
 
 <div><a href="https://plugins.jetbrains.com/plugin/32628-faust-studio"><img width="60%" class="mx-auto d-block" src="img/faust-studio.jpg" alt="Faust Studio in a JetBrains IDE: the Faust source in the editor, the live panel with the oscilloscope, the spectrogram and the generated controls, and a frequency response in the Faust Analysis panel"></a> </div>
