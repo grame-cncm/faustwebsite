@@ -272,6 +272,22 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [Iron Lung](https://github.com/tristantarrant/iron-lung)
+
+<div><a href="https://github.com/tristantarrant/iron-lung"><img width="30%" class="mx-auto d-block" src="img/iron-lung.png" alt="Iron Lung pedal interface with LEVEL, TONE, ATTACK and SUSTAIN knobs and a 1986/later VCA switch"></a> </div>
+
+[Iron Lung](https://github.com/tristantarrant/iron-lung) by [Tristan Tarrant](https://github.com/tristantarrant) (GPL-2.0-or-later) is an LV2, VST3, CLAP and JACK emulation of the 1986 BOSS CS-3 Compression Sustainer, the first version with the NEC uPC1252H2 (dbx 1252) VCA. It models the circuit stage by stage from the service schematic: the input buffer, the current-mode VCA and its 8.8 kHz I/V pole, the active tone stage, the class-A output buffer, and the full-wave transistor rectifier of the feedback sidechain, whose 339 Hz highpass makes bass compress less than treble. A switch selects the original VCA or the later production part. The DSP is written in Faust in `src/ironlung.dsp` and built with [DPF](https://github.com/DISTRHO/DPF), with a scalable GUI and a MOD Devices modgui drawn from the same artwork.
+
+### [1176A](https://github.com/Slowbass/1176A)
+
+<div><a href="https://github.com/Slowbass/1176A"><img width="80%" class="mx-auto d-block" src="img/1176a.jpg" alt="1176LN double interface with two channels of attack, release, input, output, ratio and meter controls, each with a VU meter"></a> </div>
+
+[1176A](https://github.com/Slowbass/1176A) by [Slowbass](https://github.com/Slowbass), the author of [LA500A](#la500a) and [CalrecEQ](#calreceq), is a JUCE VST3 plugin and standalone application that simulates a specific two-channel UREI 1176LN FET limiter (REV-J front panel), so that a mix can be prepared in Cubase and the settings copied by hand to the hardware. Each channel models the electronic or transformer input, the BF245A FET used as a variable resistor, the push-pull line amplifier, the Lundahl output transformer and the feedback peak detector, with the front-panel ratios up to the all-buttons-in SPANK mode and a DUAL/LINK switch. The audio processing is written in Faust in `dsp/u1176ln.dsp`, with its own `dsp/c1176.lib`, and compiled to C++ for the plugin.
+
+### [Loomsong](https://github.com/hagopjay/x3d.music)
+
+[Loomsong](https://github.com/hagopjay/x3d.music), part of [x3d.music](https://hagopjay.github.io/x3d.music/) by [hagopjay](https://github.com/hagopjay) (MIT), turns two pieces of music into X3D worlds where every thread, pin, tile and light is a note of the score: Beethoven's *Ode to Joy* woven by a Jacquard loom, and Mozart's *Rondo alla Turca* played by a pinned brass barrel and a clockwork Janissary band. The audio is rendered in code from the same score cards as the pictures: its 19 synthesized voices (strings, brass, choir, pad, bass, timpani, davul, drums...) are Faust programs sharing a `common.lib`, rendered at 48 kHz through [DawDreamer](https://github.com/DBraun/DawDreamer) next to a sampled grand piano.
+
 ### [RSGP](https://rsgp.raphaelforment.fr/)
 
 <div><a href="https://rsgp.raphaelforment.fr/"><img width="60%" class="mx-auto d-block" src="img/rsgp.jpg" alt="RSGP showing a grid of eight waveform variations of its four-operator FM engine, next to the list of engines"></a> </div>
