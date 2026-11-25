@@ -272,6 +272,10 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [FM1 Mix](https://github.com/RichAldana/FM1-Studio)
+
+[FM1 Mix](https://github.com/RichAldana/FM1-Studio) by [RichAldana](https://github.com/RichAldana) (GPL-3.0-only) is an Android app built around the M-VAVE FM-1 pocket FM synthesizer. It runs the FM-1 and its community firmwares in an emulator (the [fm1-emu](https://github.com/joakimeriksson/fm1-emu) core), mixes that emulated FM-1 with the USB audio of a real one plugged into the phone, and follows the real FM-1's MIDI clock. Around them it adds a mixer with EQ, a recorder and slicer, motion recording, and an XY performance pad with 26 effects. Nine of these effects (Moog filter, echo, two reverbs, phaser, flanger, overdrive, pitch shifter and a pumping compressor) are written in Faust in `native/fx/faust/` and compiled to C++, which the app's Rust audio engine calls through a small C interface.
+
 ### [Iron Lung](https://github.com/tristantarrant/iron-lung)
 
 <div><a href="https://github.com/tristantarrant/iron-lung"><img width="30%" class="mx-auto d-block" src="img/iron-lung.png" alt="Iron Lung pedal interface with LEVEL, TONE, ATTACK and SUSTAIN knobs and a 1986/later VCA switch"></a> </div>
