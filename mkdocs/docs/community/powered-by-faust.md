@@ -272,6 +272,14 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [Pangea](https://pangea.audio)
+
+[Pangea](https://pangea.audio) by [Conduit AI](https://github.com/conduit-ai) (AGPL-3.0-or-later, [source](https://github.com/conduit-ai/pangea-desktop)) is a community where music makers build audio plugins by describing them in plain words, audition them on their own loop in the browser, and push each version to their DAW. The sound of every Pangea plugin is a Faust program, sometimes with a small C++ logic module that plays notes, and a description of its panel. The published repository holds the parts that run on the member's Mac: a Tauri desktop app that installs Faust, JUCE, CMake and Ninja and builds the member's plugins, and a JUCE 8 plugin shell that compiles the Faust code to C++ and wraps the generated `mydsp` class for effects, or `mydsp_poly` for polyphonic instruments, into an Audio Unit and a VST3. Its 17 examples, among them a tape drift effect, a polyphonic saw, a dub keyboard with a shared echo, a fuzz pedal and a sidechain ducker, are each a `dsp.dsp` file.
+
+### [Greek Freq](https://github.com/suburbbeat-hub/Greek-Freq-3-skins-beta)
+
+[Greek Freq](https://github.com/suburbbeat-hub/Greek-Freq-3-skins-beta) by [+/Minus](https://github.com/suburbbeat-hub) is an Audio Unit and VST3 filter plugin for Logic, in beta, whose web interface has three skins: Classic, Vice City and Streetball. It combines a resonant analog-style filter, with a single Prophet-6 style resonance peak and a colored or a transparent mode, a passive band-pass octave filter, an envelope follower for auto-wah, a tempo-synced LFO with six shapes, tape and passive EQ coloring, and emulations of the sampling chain of the MPC1000, the MPC3000 and the Game Boy. The whole engine is a single Faust program, `greek_freak.dsp`, built on `fi.svf`, `fi.lowpass`, `an.amp_follower_ar` and `ma.tanh` saturation, which the build compiles to C++ with `faust -cn FaustDSP` for a JUCE plugin.
+
 ### [FM1 Mix](https://github.com/RichAldana/FM1-Studio)
 
 [FM1 Mix](https://github.com/RichAldana/FM1-Studio) by [RichAldana](https://github.com/RichAldana) (GPL-3.0-only) is an Android app built around the M-VAVE FM-1 pocket FM synthesizer. It runs the FM-1 and its community firmwares in an emulator (the [fm1-emu](https://github.com/joakimeriksson/fm1-emu) core), mixes that emulated FM-1 with the USB audio of a real one plugged into the phone, and follows the real FM-1's MIDI clock. Around them it adds a mixer with EQ, a recorder and slicer, motion recording, and an XY performance pad with 26 effects. Nine of these effects (Moog filter, echo, two reverbs, phaser, flanger, overdrive, pitch shifter and a pumping compressor) are written in Faust in `native/fx/faust/` and compiled to C++, which the app's Rust audio engine calls through a small C interface.
