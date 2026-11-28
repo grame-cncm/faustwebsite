@@ -272,6 +272,18 @@ An electric guitar app using physical modeling. Faust was used to implement its 
 
 ## Other projects
 
+### [DigiPhrase '96](https://theguen.github.io/digiphrase96/)
+
+<div><a href="https://theguen.github.io/digiphrase96/"><img width="50%" class="mx-auto d-block" src="img/digiphrase-96.jpg" alt="DigiPhrase '96 interface with a waveform view, a seven-segment frame display, trim, loop, pitch and beat loop buttons, and a grid of 16 pads"></a> </div>
+
+[DigiPhrase '96](https://theguen.github.io/digiphrase96/) by [theGuen](https://github.com/theGuen) (MIT, [source](https://github.com/theGuen/digiphrase96)) is a 16-pad phrase sampler for the browser, inspired by the workflow of the Akai S20. It samples from any input at 32 kHz down to 8 kHz, trims and loops on a zoomable waveform, matches tempos with a beat-loop function, plays the pads from the keyboard or from Web MIDI, and records pad performances into a four-track sequencer with free timing, all within a selectable 1, 4 or 16 MB of memory like the original. Its offline effects (a reverb on `re.zita_rev1_stereo`, a delay, a phaser, a vinyl simulator ported from the nbtbl VinylSim plugin, and a four-band "sub control" compressor) are written in Faust in `fx/*.dsp` and compiled to WebAssembly with `faust -lang wasm`, the same effects as in its sibling [Digitrack 96](#digitrack-96).
+
+### [Digitrack 96](https://theguen.github.io/digitrack96/)
+
+<div><a href="https://theguen.github.io/digitrack96/"><img width="60%" class="mx-auto d-block" src="img/digitrack-96.jpg" alt="Digitrack 96 interface with four tracks named Drums, Bass, Sample and Vox, each with volume, pan and filter sliders, a timeline and a red seven-segment time display"></a> </div>
+
+[Digitrack 96](https://theguen.github.io/digitrack96/) by [theGuen](https://github.com/theGuen) (MIT, [source](https://github.com/theGuen/digitrack96)) is a four-track wave editor for the browser, a homage to the pre-DAW era, that installs as an app and works offline. Pieces of audio are dragged, trimmed, faded, stretched like tape and placed by ear, with no tempo grid, under deliberate 1990s limits: 64 MB of 16-bit sample memory and editing locked during playback. Its FX dialog renders an effect into a new sample: the reverb, delay, phaser, vinyl and multiband compressor are Faust programs in `fx/*.dsp`, compiled to WebAssembly with `faust -lang wasm` by `scripts/build-fx.sh`, and the compiled modules are committed so that building the app needs no Faust.
+
 ### [Pangea](https://pangea.audio)
 
 [Pangea](https://pangea.audio) by [Conduit AI](https://github.com/conduit-ai) (AGPL-3.0-or-later, [source](https://github.com/conduit-ai/pangea-desktop)) is a community where music makers build audio plugins by describing them in plain words, audition them on their own loop in the browser, and push each version to their DAW. The sound of every Pangea plugin is a Faust program, sometimes with a small C++ logic module that plays notes, and a description of its panel. The published repository holds the parts that run on the member's Mac: a Tauri desktop app that installs Faust, JUCE, CMake and Ninja and builds the member's plugins, and a JUCE 8 plugin shell that compiles the Faust code to C++ and wraps the generated `mydsp` class for effects, or `mydsp_poly` for polyphonic instruments, into an Audio Unit and a VST3. Its 17 examples, among them a tape drift effect, a polyphonic saw, a dub keyboard with a shared echo, a fuzz pedal and a sidechain ducker, are each a `dsp.dsp` file.
